@@ -30,7 +30,7 @@ export const HeroSection = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 items-center pt-6">
             <Button variant="cta" size="xl" className="group">
-              Apply Now
+              Request Invite
               <ArrowRight className="group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button variant="outline" size="xl" className="border-primary/30 hover:bg-primary/10">
