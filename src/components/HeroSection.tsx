@@ -44,7 +44,7 @@ export const HeroSection = () => {
           
           {/* AI Coding Tools */}
           <div className="flex items-center gap-4 flex-wrap">
-            <span className="text-sm text-muted-foreground">Powered by:</span>
+            <span className="text-sm text-muted-foreground">Learn tools like</span>
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-1.5 text-sm text-foreground/70">
                 <Sparkles className="w-4 h-4 text-primary" />
