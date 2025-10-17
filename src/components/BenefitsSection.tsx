@@ -8,8 +8,8 @@ const benefits = [
   },
   {
     icon: Zap,
-    title: "Bi-Weekly Live Sessions",
-    description: "Join live vibe coding sessions twice a week where we build, learn, and problem-solve together in real-time.",
+    title: "Access Recordings",
+    description: "Get lifetime access to all session recordings so you can learn at your own pace and revisit key concepts anytime.",
   },
   {
     icon: Code2,
