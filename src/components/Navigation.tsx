@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Code2, Sparkles, Bot, Cpu, Zap } from "lucide-react";
+import { Code2 } from "lucide-react";
 
 export const Navigation = () => {
   return (
@@ -29,31 +29,6 @@ export const Navigation = () => {
           <Button variant="cta" size="sm">
             Apply Now
           </Button>
-        </div>
-        
-        {/* AI Coding Tools Section */}
-        <div className="border-t border-border/40 py-3">
-          <div className="flex items-center justify-center gap-8">
-            <span className="text-xs text-muted-foreground font-medium">AI Coding Tools:</span>
-            <div className="flex items-center gap-6">
-              <div className="flex items-center gap-2 text-sm text-foreground/80 hover:text-primary transition-colors cursor-pointer">
-                <Sparkles className="w-4 h-4" />
-                <span className="hidden sm:inline">Cursor</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm text-foreground/80 hover:text-primary transition-colors cursor-pointer">
-                <Bot className="w-4 h-4" />
-                <span className="hidden sm:inline">Lovable</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm text-foreground/80 hover:text-primary transition-colors cursor-pointer">
-                <Cpu className="w-4 h-4" />
-                <span className="hidden sm:inline">v0</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm text-foreground/80 hover:text-primary transition-colors cursor-pointer">
-                <Zap className="w-4 h-4" />
-                <span className="hidden sm:inline">Bolt</span>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </nav>

@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Sparkles, Bot, Cpu, Zap } from "lucide-react";
 import { ParticleSphere } from "@/components/ParticleSphere";
+
 export const HeroSection = () => {
-  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Gradient */}
       <div className="absolute inset-0 z-0 bg-background" />
       
@@ -13,7 +15,32 @@ export const HeroSection = () => {
       <div className="container relative z-10 px-4 py-20 md:py-32">
         <div className="max-w-4xl text-left space-y-8 animate-fade-in">
           <div className="inline-block">
-            <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary border border-primary/20">Invite Only For Cohort Members </span>
+            <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary border border-primary/20">
+              Invite Only For Cohort Members
+            </span>
+          </div>
+          
+          {/* AI Coding Tools */}
+          <div className="flex items-center gap-4 flex-wrap">
+            <span className="text-sm text-muted-foreground">Powered by:</span>
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-1.5 text-sm text-foreground/70">
+                <Sparkles className="w-4 h-4 text-primary" />
+                <span>Cursor</span>
+              </div>
+              <div className="flex items-center gap-1.5 text-sm text-foreground/70">
+                <Bot className="w-4 h-4 text-primary" />
+                <span>Lovable</span>
+              </div>
+              <div className="flex items-center gap-1.5 text-sm text-foreground/70">
+                <Cpu className="w-4 h-4 text-primary" />
+                <span>v0</span>
+              </div>
+              <div className="flex items-center gap-1.5 text-sm text-foreground/70">
+                <Zap className="w-4 h-4 text-primary" />
+                <span>Bolt</span>
+              </div>
+            </div>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-semibold tracking-tight">
@@ -42,5 +69,6 @@ export const HeroSection = () => {
       
       {/* Bottom Gradient Fade */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
-    </section>;
+    </section>
+  );
 };
