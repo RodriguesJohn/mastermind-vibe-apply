@@ -36,7 +36,7 @@ function ParticleCloud() {
   const groupRef = useRef<THREE.Group>(null);
   
   const particles = useMemo(() => {
-    const particlesCount = 130;
+    const particlesCount = 200;
     const particlesArray = [];
     
     for (let i = 0; i < particlesCount; i++) {
