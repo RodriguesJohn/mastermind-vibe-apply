@@ -21,7 +21,7 @@ export const Navigation = () => {
             <a href="#playbook" className="text-sm font-medium hover:text-primary transition-colors">
               AI Design Playbook
             </a>
-            <a href="#crash-course" className="text-sm font-medium hover:text-primary transition-colors">
+            <a href="/ai-crash-course" className="text-sm font-medium hover:text-primary transition-colors">
               AI Crash Course
             </a>
           </div>
