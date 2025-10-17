@@ -16,7 +16,7 @@ export const HeroSection = () => {
             <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary border border-primary/20">Invite Only For Cohort Members </span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
+          <h1 className="text-5xl md:text-7xl font-semibold tracking-tight">
             Vibe Coding
             <span className="block bg-gradient-to-r from-primary via-primary-glow to-accent bg-clip-text text-transparent">
               Mastermind
