@@ -20,6 +20,28 @@ export const HeroSection = () => {
             </span>
           </div>
           
+          <h1 className="text-5xl md:text-7xl font-semibold tracking-tight">
+            Vibe Coding
+            <span className="block bg-gradient-to-r from-primary via-primary-glow to-accent bg-clip-text text-transparent">
+              Mastermind
+            </span>
+          </h1>
+          
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed">
+            Elevate your coding skills and join an elite community of developers
+            building the future. Transform your potential into mastery.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 items-center pt-6">
+            <Button variant="cta" size="xl" className="group">
+              Request Invite
+              <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+            </Button>
+            <Button variant="outline" size="xl" className="border-primary/30 hover:bg-primary/10">
+              Learn More
+            </Button>
+          </div>
+          
           {/* AI Coding Tools */}
           <div className="flex items-center gap-4 flex-wrap">
             <span className="text-sm text-muted-foreground">Powered by:</span>
@@ -41,28 +63,6 @@ export const HeroSection = () => {
                 <span>Bolt</span>
               </div>
             </div>
-          </div>
-          
-          <h1 className="text-5xl md:text-7xl font-semibold tracking-tight">
-            Vibe Coding
-            <span className="block bg-gradient-to-r from-primary via-primary-glow to-accent bg-clip-text text-transparent">
-              Mastermind
-            </span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed">
-            Elevate your coding skills and join an elite community of developers
-            building the future. Transform your potential into mastery.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 items-center pt-6">
-            <Button variant="cta" size="xl" className="group">
-              Request Invite
-              <ArrowRight className="group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button variant="outline" size="xl" className="border-primary/30 hover:bg-primary/10">
-              Learn More
-            </Button>
           </div>
         </div>
       </div>
