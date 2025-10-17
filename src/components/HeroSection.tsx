@@ -1,22 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import heroBackground from "@/assets/hero-background.jpg";
 import { ParticleSphere } from "@/components/ParticleSphere";
 
 export const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: `url(${heroBackground})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/85 to-background" />
-      </div>
+      {/* Background Gradient */}
+      <div className="absolute inset-0 z-0 bg-background" />
       
       {/* Particle Sphere */}
       <ParticleSphere />
