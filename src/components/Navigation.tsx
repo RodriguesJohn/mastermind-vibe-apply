@@ -12,11 +12,11 @@ export const Navigation = () => {
           </div>
           
           <div className="hidden md:flex items-center gap-8">
-            <a href="/" className="text-sm font-medium hover:text-primary transition-colors">
-              Vibe Coding Mastermind
-            </a>
             <a href="/cohort" className="text-sm font-medium hover:text-primary transition-colors">
               Cohort
+            </a>
+            <a href="/" className="text-sm font-medium hover:text-primary transition-colors">
+              Vibe Coding Mastermind
             </a>
             <a href="#playbook" className="text-sm font-medium hover:text-primary transition-colors">
               AI Design Playbook
