@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
+import { ParticleSphere } from "@/components/ParticleSphere";
 
 export const HeroSection = () => {
   return (
@@ -16,6 +17,9 @@ export const HeroSection = () => {
       >
         <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/85 to-background" />
       </div>
+      
+      {/* Particle Sphere */}
+      <ParticleSphere />
       
       {/* Content */}
       <div className="container relative z-10 px-4 py-20 md:py-32">
