@@ -1,6 +1,6 @@
 import { useRef, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Text } from '@react-three/drei';
+import { Text, Line } from '@react-three/drei';
 import * as THREE from 'three';
 
 const CODE_CHARS = ['<', '>', '{', '}', '(', ')', '[', ']', '/', '*', '+', '=', ';', ':', '.', ',', 'function', 'const', 'let', 'if', 'for', '0', '1', '&&', '||'];
@@ -58,6 +58,30 @@ function ParticleCloud() {
     return particlesArray;
   }, []);
 
+  const connections = useMemo(() => {
+    const connectionsArray = [];
+    const maxDistance = 0.8;
+    
+    for (let i = 0; i < particles.length; i++) {
+      for (let j = i + 1; j < particles.length; j++) {
+        const dx = particles[i].position[0] - particles[j].position[0];
+        const dy = particles[i].position[1] - particles[j].position[1];
+        const dz = particles[i].position[2] - particles[j].position[2];
+        const distance = Math.sqrt(dx * dx + dy * dy + dz * dz);
+        
+        if (distance < maxDistance) {
+          connectionsArray.push({
+            start: particles[i].position,
+            end: particles[j].position,
+            opacity: 1 - (distance / maxDistance)
+          });
+        }
+      }
+    }
+    
+    return connectionsArray;
+  }, [particles]);
+
   useFrame((state) => {
     if (groupRef.current) {
       groupRef.current.rotation.y = state.clock.getElapsedTime() * 0.05;
@@ -67,6 +91,16 @@ function ParticleCloud() {
 
   return (
     <group ref={groupRef}>
+      {connections.map((connection, i) => (
+        <Line
+          key={`line-${i}`}
+          points={[connection.start, connection.end]}
+          color="#ffffff"
+          lineWidth={0.5}
+          transparent
+          opacity={connection.opacity * 0.3}
+        />
+      ))}
       {particles.map((particle, i) => (
         <CodeParticle
           key={i}
