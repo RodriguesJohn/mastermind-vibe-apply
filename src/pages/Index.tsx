@@ -1,13 +1,45 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Navigation } from "@/components/Navigation";
+import { HeroSection } from "@/components/HeroSection";
+import { BenefitsSection } from "@/components/BenefitsSection";
+import { OutcomesSection } from "@/components/OutcomesSection";
+import { TestimonialsSection } from "@/components/TestimonialsSection";
+import { CTASection } from "@/components/CTASection";
+import { Helmet } from "react-helmet";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <>
+      <Helmet>
+        <title>Vibe Coding Mastermind - Elite Developer Community</title>
+        <meta 
+          name="description" 
+          content="Join an elite community of developers. Transform your coding skills through hands-on projects, expert mentorship, and exclusive networking opportunities." 
+        />
+      </Helmet>
+      
+      <div className="min-h-screen">
+        <Navigation />
+        <main>
+          <HeroSection />
+          <section id="benefits">
+            <BenefitsSection />
+          </section>
+          <section id="outcomes">
+            <OutcomesSection />
+          </section>
+          <section id="testimonials">
+            <TestimonialsSection />
+          </section>
+          <CTASection />
+        </main>
+        
+        <footer className="border-t border-border py-12 bg-card/30">
+          <div className="container px-4 text-center text-sm text-muted-foreground">
+            <p>© 2025 Vibe Coding Mastermind. All rights reserved.</p>
+          </div>
+        </footer>
       </div>
-    </div>
+    </>
   );
 };
 
