@@ -1,10 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { ParticleSphere } from "@/components/ParticleSphere";
-
 export const HeroSection = () => {
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Gradient */}
       <div className="absolute inset-0 z-0 bg-background" />
       
@@ -15,9 +13,7 @@ export const HeroSection = () => {
       <div className="container relative z-10 px-4 py-20 md:py-32">
         <div className="max-w-4xl text-left space-y-8 animate-fade-in">
           <div className="inline-block">
-            <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary border border-primary/20">
-              Invite Only
-            </span>
+            <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary border border-primary/20">Invite Only For Cohort Members </span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
@@ -33,19 +29,11 @@ export const HeroSection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 items-center pt-6">
-            <Button 
-              variant="cta" 
-              size="xl"
-              className="group"
-            >
+            <Button variant="cta" size="xl" className="group">
               Apply Now
               <ArrowRight className="group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button 
-              variant="outline" 
-              size="xl"
-              className="border-primary/30 hover:bg-primary/10"
-            >
+            <Button variant="outline" size="xl" className="border-primary/30 hover:bg-primary/10">
               Learn More
             </Button>
           </div>
@@ -54,6 +42,5 @@ export const HeroSection = () => {
       
       {/* Bottom Gradient Fade */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
-    </section>
-  );
+    </section>;
 };
