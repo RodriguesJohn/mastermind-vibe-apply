@@ -2,24 +2,24 @@ import { Code2, Users, Zap, Trophy } from "lucide-react";
 
 const benefits = [
   {
-    icon: Code2,
-    title: "Advanced Curriculum",
-    description: "Master cutting-edge technologies and frameworks through hands-on projects and real-world applications.",
-  },
-  {
     icon: Users,
-    title: "Elite Community",
-    description: "Connect with top developers, share knowledge, and build lasting relationships in an exclusive network.",
+    title: "Guest Speakers",
+    description: "Get exclusive access to industry leaders and experts who share real-world insights and experiences.",
   },
   {
     icon: Zap,
-    title: "Accelerated Growth",
-    description: "Fast-track your development journey with personalized mentorship and weekly live sessions.",
+    title: "Bi-Weekly Live Sessions",
+    description: "Join live vibe coding sessions twice a week where we build, learn, and problem-solve together in real-time.",
+  },
+  {
+    icon: Code2,
+    title: "AI Development Tools",
+    description: "Master cutting-edge tools like Cursor and Lovable to build powerful AI applications faster than ever.",
   },
   {
     icon: Trophy,
-    title: "Career Advancement",
-    description: "Position yourself for premium opportunities and level up your career with industry-recognized skills.",
+    title: "Join the Community",
+    description: "Become part of an elite network of developers learning, growing, and supporting each other every day.",
   },
 ];
 
