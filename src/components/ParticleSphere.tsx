@@ -20,11 +20,11 @@ function CodeParticle({ position, char, delay }: { position: [number, number, nu
     <group ref={ref} position={position}>
       <Text
         fontSize={0.08}
-        color="#2254F6"
+        color="#ffffff"
         anchorX="center"
         anchorY="middle"
         outlineWidth={0.001}
-        outlineColor="#5ba3ff"
+        outlineColor="#ffffff"
       >
         {char}
       </Text>
@@ -36,7 +36,7 @@ function ParticleCloud() {
   const groupRef = useRef<THREE.Group>(null);
   
   const particles = useMemo(() => {
-    const particlesCount = 80;
+    const particlesCount = 130;
     const particlesArray = [];
     
     for (let i = 0; i < particlesCount; i++) {
