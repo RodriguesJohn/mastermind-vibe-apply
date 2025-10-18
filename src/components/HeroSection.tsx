@@ -32,8 +32,7 @@ export const HeroSection = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed">
-            Elevate your coding skills and join an elite community of developers
-            building the future. Transform your potential into mastery.
+            Don't just create static products, create functional prototypes, demos and delightful interactions.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 items-center pt-6">
