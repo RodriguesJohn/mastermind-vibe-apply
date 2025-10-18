@@ -31,7 +31,7 @@ export const HeroSection = () => {
               </span>
             </h1>
             
-            <ul className="text-lg text-muted-foreground max-w-2xl space-y-3">
+            <ul className="text-lg text-foreground max-w-2xl space-y-3">
               <li>✅ Build functional prototypes and interactive demos</li>
               <li>✅ Master AI-powered coding tools and workflows</li>
               <li>✅ Create delightful user experiences with modern tech</li>
