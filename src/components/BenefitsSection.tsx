@@ -13,8 +13,8 @@ const benefits = [
   },
   {
     icon: Code2,
-    title: "AI Development Tools",
-    description: "Master cutting-edge tools like Cursor and Lovable to build powerful AI applications faster than ever.",
+    title: "Learn Latest AI Tools",
+    description: "Master cutting-edge AI tools like Cursor, Lovable, v0, and Bolt to future proof your career and stay ahead in the industry.",
   },
   {
     icon: Trophy,
