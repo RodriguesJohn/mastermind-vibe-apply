@@ -51,7 +51,7 @@ export const BenefitsSection = () => {
                 {benefit.title}
               </h3>
               
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-white leading-relaxed">
                 {benefit.description}
               </p>
             </div>
