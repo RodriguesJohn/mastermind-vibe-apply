@@ -2,7 +2,7 @@ import { Navigation } from "@/components/Navigation";
 import { HeroSection } from "@/components/HeroSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { OutcomesSection } from "@/components/OutcomesSection";
-import { TestimonialsSection } from "@/components/TestimonialsSection";
+import { WhoIsThisFor } from "@/components/WhoIsThisFor";
 import { CTASection } from "@/components/CTASection";
 import { Helmet } from "react-helmet";
 
@@ -27,8 +27,8 @@ const Index = () => {
           <section id="outcomes">
             <OutcomesSection />
           </section>
-          <section id="testimonials">
-            <TestimonialsSection />
+          <section id="who-is-this-for">
+            <WhoIsThisFor />
           </section>
           <CTASection />
         </main>
