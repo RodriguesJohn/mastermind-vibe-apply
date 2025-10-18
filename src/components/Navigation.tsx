@@ -38,11 +38,11 @@ export const Navigation = () => {
                     Vibe Coding Mastermind
                   </a>
                 </DropdownMenuItem>
-                <DropdownMenuItem asChild>
+                {/* <DropdownMenuItem asChild>
                   <a href="/projects" className="cursor-pointer">
                     Projects
                   </a>
-                </DropdownMenuItem>
+                </DropdownMenuItem> */}
                 <DropdownMenuItem asChild>
                   <a href="/consulting" className="cursor-pointer">
                     1:1 Consulting
