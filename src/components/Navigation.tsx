@@ -21,6 +21,12 @@ export const Navigation = () => {
             <a href="/cohort" className="text-sm font-medium hover:text-primary transition-colors">
               Cohort
             </a>
+            <a href="#playbook" className="text-sm font-medium hover:text-primary transition-colors">
+              AI Design Playbook
+            </a>
+            <a href="/ai-crash-course" className="text-sm font-medium hover:text-primary transition-colors">
+              AI Crash Course
+            </a>
             <DropdownMenu>
               <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium hover:text-primary transition-colors">
                 Programs
@@ -39,12 +45,6 @@ export const Navigation = () => {
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
-            <a href="#playbook" className="text-sm font-medium hover:text-primary transition-colors">
-              AI Design Playbook
-            </a>
-            <a href="/ai-crash-course" className="text-sm font-medium hover:text-primary transition-colors">
-              AI Crash Course
-            </a>
           </div>
           
           <Button variant="cta" size="sm">
