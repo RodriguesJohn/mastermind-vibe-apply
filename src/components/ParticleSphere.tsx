@@ -16,7 +16,7 @@ function DotParticle({ position, delay }: { position: [number, number, number], 
   return (
     <mesh ref={ref} position={position}>
       <sphereGeometry args={[0.025, 8, 8]} />
-      <meshBasicMaterial color="#22a4f6" />
+      <meshBasicMaterial color="#ffffff" />
     </mesh>
   );
 }
@@ -88,7 +88,7 @@ function ParticleCloud() {
         <Line
           key={`line-${i}`}
           points={[connection.start, connection.end]}
-          color="#22a4f6"
+          color="#ffffff"
           lineWidth={1}
           transparent
           opacity={connection.opacity * 0.4}
