@@ -1,4 +1,6 @@
 import { ParticleSphere } from "@/components/ParticleSphere";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 export const AIHeaderSection = () => {
   return (
@@ -23,6 +25,13 @@ export const AIHeaderSection = () => {
             <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed">
               Stay ahead and upskill today. Design AI products and systems through a structured learning program.
             </p>
+            
+            <div className="pt-6">
+              <Button variant="cta" size="xl" className="group">
+                Enroll Today
+                <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </div>
           </div>
 
           {/* Right Column - Particle Sphere */}
