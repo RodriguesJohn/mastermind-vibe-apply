@@ -5,9 +5,10 @@ import playbookCover from "@/assets/ai-playbook-cover.jpg";
 
 export const PlaybookSection = () => {
   return (
-    <section className="py-20 md:py-32 bg-background">
-      <div className="container px-4">
-        <Card className="max-w-6xl mx-auto p-8 md:p-12 bg-card/50 border-border/40">
+    <section className="py-24 md:py-32 bg-background">
+      <div className="px-4 md:px-10 lg:px-[120px]">
+        <div className="max-w-[1200px] mx-auto">
+          <Card className="p-8 md:p-12 bg-card/50 border-border/40">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div>
@@ -62,7 +63,8 @@ export const PlaybookSection = () => {
               </div>
             </div>
           </div>
-        </Card>
+          </Card>
+        </div>
       </div>
     </section>
   );

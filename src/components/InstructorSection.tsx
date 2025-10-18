@@ -4,13 +4,14 @@ import instructorImage from "@/assets/john-rodrigues.jpg";
 
 export const InstructorSection = () => {
   return (
-    <section className="py-20 md:py-32 bg-background">
-      <div className="container px-4">
-        <h2 className="text-4xl md:text-5xl font-semibold text-center mb-16 tracking-tight">
-          Know Your Instructor
-        </h2>
-        
-        <Card className="max-w-6xl mx-auto p-8 md:p-12 bg-card/50 border-border/40">
+    <section className="py-24 md:py-32 bg-background">
+      <div className="px-4 md:px-10 lg:px-[120px]">
+        <div className="max-w-[1200px] mx-auto">
+          <h2 className="text-4xl md:text-5xl font-semibold text-center mb-16 tracking-tight">
+            Know Your Instructor
+          </h2>
+          
+          <Card className="p-8 md:p-12 bg-card/50 border-border/40">
           <div className="flex items-start gap-2 mb-8">
             <UserCheck className="w-6 h-6 text-muted-foreground" />
             <div className="flex-1 flex gap-2 justify-end">
@@ -51,7 +52,8 @@ export const InstructorSection = () => {
               </div>
             </div>
           </div>
-        </Card>
+          </Card>
+        </div>
       </div>
     </section>
   );

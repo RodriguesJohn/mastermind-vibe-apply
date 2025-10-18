@@ -9,8 +9,8 @@ export const AIHeaderSection = () => {
       <div className="absolute inset-0 z-0 bg-background" />
       
       {/* Content */}
-      <div className="container relative z-10 px-4 py-20 md:py-32">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="relative z-10 px-4 md:px-10 lg:px-[120px] py-24 md:py-32">
+        <div className="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left Column - Text Content */}
           <div className="space-y-8 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-semibold tracking-tight">

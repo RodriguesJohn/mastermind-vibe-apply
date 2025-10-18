@@ -36,13 +36,14 @@ const modules = [
 
 export const CohortModulesSection = () => {
   return (
-    <section className="py-20 md:py-32 bg-background">
-      <div className="container px-4">
-        <h2 className="text-4xl md:text-5xl font-semibold text-center mb-16 tracking-tight">
-          What We Have for You
-        </h2>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+    <section className="py-24 md:py-32 bg-background">
+      <div className="px-4 md:px-10 lg:px-[120px]">
+        <div className="max-w-[1200px] mx-auto">
+          <h2 className="text-4xl md:text-5xl font-semibold text-center mb-16 tracking-tight">
+            What We Have for You
+          </h2>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {modules.map((module, index) => {
             const IconComponent = module.icon;
             return (
@@ -67,6 +68,7 @@ export const CohortModulesSection = () => {
               </Card>
             );
           })}
+          </div>
         </div>
       </div>
     </section>

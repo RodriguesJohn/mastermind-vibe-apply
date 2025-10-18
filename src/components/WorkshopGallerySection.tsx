@@ -6,7 +6,7 @@ const images = [workshop1, workshop2, workshop3, workshop1, workshop2];
 
 export const WorkshopGallerySection = () => {
   return (
-    <section className="py-20 md:py-32 bg-background overflow-hidden">
+    <section className="py-24 md:py-32 bg-background overflow-hidden">
       <div className="relative">
         <div className="flex gap-6 animate-scroll-left hover:[animation-play-state:paused]">
           {images.concat(images).map((image, index) => (
