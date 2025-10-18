@@ -19,8 +19,8 @@ const AICrashCourse = () => {
         
         <main>
           {/* Hero Section */}
-          <section className="pt-32 pb-20 px-4 md:px-10 lg:px-[120px]">
-            <div className="container mx-auto max-w-[1200px]">
+          <section className="min-h-screen flex items-center px-4 md:px-10 lg:px-[120px] py-20">
+            <div className="container mx-auto max-w-[1200px] w-full">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 {/* Left Column - Text Content */}
                 <div className="space-y-8">
