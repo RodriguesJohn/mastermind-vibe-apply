@@ -1,6 +1,7 @@
 import { Navigation } from "@/components/Navigation";
 import { AIHeaderSection } from "@/components/AIHeaderSection";
 import { CohortOverviewSection } from "@/components/CohortOverviewSection";
+import { CohortTestimonialsSection } from "@/components/CohortTestimonialsSection";
 import { Helmet } from "react-helmet";
 
 const Cohort = () => {
@@ -19,6 +20,7 @@ const Cohort = () => {
         <main>
           <AIHeaderSection />
           <CohortOverviewSection />
+          <CohortTestimonialsSection />
         </main>
       </div>
     </>
