@@ -5,6 +5,7 @@ import { CohortModulesSection } from "@/components/CohortModulesSection";
 import { CohortTestimonialsSection } from "@/components/CohortTestimonialsSection";
 import { InstructorSection } from "@/components/InstructorSection";
 import { PlaybookSection } from "@/components/PlaybookSection";
+import { WorkshopGallerySection } from "@/components/WorkshopGallerySection";
 import { Helmet } from "react-helmet";
 
 const Cohort = () => {
@@ -27,6 +28,7 @@ const Cohort = () => {
           <CohortModulesSection />
           <InstructorSection />
           <PlaybookSection />
+          <WorkshopGallerySection />
         </main>
       </div>
     </>
