@@ -26,7 +26,7 @@ export const HeroSection = () => {
             
             <h1 className="text-5xl md:text-7xl font-semibold tracking-tight">
               Vibe Coding
-              <span className="block bg-gradient-to-r from-primary via-primary-glow to-accent bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-primary via-primary-glow to-accent bg-clip-text text-transparent animate-gradient-shift bg-[length:200%_auto]">
                 Mastermind
               </span>
             </h1>
