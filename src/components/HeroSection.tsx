@@ -75,40 +75,9 @@ export const HeroSection = () => {
             </div>
           </div>
 
-          {/* Right Column - Video */}
+          {/* Right Column - Particle Sphere */}
           <div className="flex items-center justify-center">
-            <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-primary/20 shadow-2xl bg-gradient-to-br from-primary/10 via-accent/10 to-primary-glow/10">
-              {/* Placeholder for video - replace with actual video URL or upload video to public/video/hero-video.mp4 */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center space-y-4">
-                  <div className="w-20 h-20 mx-auto rounded-full bg-primary/20 flex items-center justify-center">
-                    <svg className="w-10 h-10 text-primary" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z"/>
-                    </svg>
-                  </div>
-                  <p className="text-sm text-muted-foreground">Video Coming Soon</p>
-                </div>
-              </div>
-              {/* Uncomment and add your video URL below */}
-              {/* <video
-                className="w-full h-full object-cover"
-                autoPlay
-                loop
-                muted
-                playsInline
-              >
-                <source src="/video/hero-video.mp4" type="video/mp4" />
-              </video> */}
-              
-              {/* Or use YouTube/Vimeo embed: */}
-              {/* <iframe
-                className="w-full h-full"
-                src="YOUR_YOUTUBE_EMBED_URL"
-                title="Hero Video"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe> */}
-            </div>
+            <ParticleSphere />
           </div>
         </div>
       </div>
