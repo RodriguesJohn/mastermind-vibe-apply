@@ -10,7 +10,7 @@ export const FlyingButterfly = () => {
     let sparkleId = 0;
 
     const animate = () => {
-      time += 0.01;
+      time += 0.003;
       
       // Create random flying path using sine waves
       const x = 30 + Math.sin(time) * 25 + Math.sin(time * 2) * 15;
@@ -19,7 +19,7 @@ export const FlyingButterfly = () => {
       setPosition({ x, y });
 
       // Add sparkles to the trail
-      if (Math.random() > 0.7) {
+      if (Math.random() > 0.3) {
         const newSparkle = {
           id: sparkleId++,
           x,
@@ -30,7 +30,7 @@ export const FlyingButterfly = () => {
         // Remove sparkle after animation
         setTimeout(() => {
           setSparkles((prev) => prev.filter((s) => s.id !== newSparkle.id));
-        }, 1000);
+        }, 1500);
       }
 
       frameId = requestAnimationFrame(animate);
@@ -89,13 +89,13 @@ export const FlyingButterfly = () => {
       {sparkles.map((sparkle) => (
         <div
           key={sparkle.id}
-          className="absolute animate-[sparkle_1s_ease-out_forwards]"
+          className="absolute animate-[sparkle_1.5s_ease-out_forwards]"
           style={{
             left: `${sparkle.x}%`,
             top: `${sparkle.y}%`,
           }}
         >
-          <div className="w-2 h-2 bg-gradient-to-br from-primary via-accent to-primary-glow rounded-full blur-[1px]" />
+          <div className="w-2 h-2 bg-white rounded-full blur-[1px]" />
         </div>
       ))}
     </div>
