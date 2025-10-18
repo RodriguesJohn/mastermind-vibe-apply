@@ -39,9 +39,11 @@ export const HeroSection = () => {
             </ul>
             
             <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center pt-6">
-              <Button variant="cta" size="xl" className="group">
-                Request Invite
-                <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+              <Button variant="cta" size="xl" className="group" asChild>
+                <a href="https://tally.so/r/wLQokj" target="_blank" rel="noopener noreferrer">
+                  Request Invite
+                  <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+                </a>
               </Button>
             </div>
             
