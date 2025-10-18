@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
-import { Users } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Users, ArrowRight } from "lucide-react";
 import playbookCover from "@/assets/ai-playbook-cover.jpg";
 
 export const PlaybookSection = () => {
@@ -22,9 +23,13 @@ export const PlaybookSection = () => {
                 <h2 className="text-4xl md:text-5xl font-semibold tracking-tight mb-4">
                   Get Free AI Design Playbook
                 </h2>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed mb-6">
                   Join 1,000+ design leaders and frontiers staying ahead in the age of AI. Each week, you'll get access to curated insights.
                 </p>
+                <Button variant="cta" size="lg" className="group">
+                  Get Your Free Copy
+                  <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+                </Button>
               </div>
 
               <div className="grid grid-cols-2 gap-4">
