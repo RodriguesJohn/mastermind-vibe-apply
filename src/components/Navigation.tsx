@@ -48,6 +48,11 @@ export const Navigation = () => {
                     1:1 Consulting
                   </a>
                 </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <a href="#tools" className="cursor-pointer">
+                    Tools
+                  </a>
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
