@@ -18,7 +18,7 @@ const targetAudience = [
   },
   {
     icon: Target,
-    title: "Aspiring Developers",
+    title: "Aspiring Design Engineers",
     description: "Fast-track your coding journey with AI tools. Learn modern development practices and build real projects from day one.",
   },
 ];
