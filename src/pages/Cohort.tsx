@@ -1,4 +1,5 @@
 import { Navigation } from "@/components/Navigation";
+import { AIHeaderSection } from "@/components/AIHeaderSection";
 import { Helmet } from "react-helmet";
 
 const Cohort = () => {
@@ -14,9 +15,12 @@ const Cohort = () => {
       
       <div className="min-h-screen">
         <Navigation />
-        <main className="pt-24 container px-4">
-          <h1 className="text-4xl font-bold mb-4">Cohort</h1>
-          <p className="text-muted-foreground">Content coming soon...</p>
+        <main>
+          <AIHeaderSection />
+          <div className="pt-24 container px-4">
+            <h1 className="text-4xl font-bold mb-4">Cohort</h1>
+            <p className="text-muted-foreground">Content coming soon...</p>
+          </div>
         </main>
       </div>
     </>
