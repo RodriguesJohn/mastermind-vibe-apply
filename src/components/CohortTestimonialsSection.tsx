@@ -50,7 +50,7 @@ export const CohortTestimonialsSection = () => {
               className="p-8 bg-card/50 border-border/40 hover:border-border transition-all duration-300 animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <p className="text-muted-foreground leading-relaxed mb-6">
+              <p className="text-white leading-relaxed mb-6">
                 {testimonial.content}
               </p>
               
