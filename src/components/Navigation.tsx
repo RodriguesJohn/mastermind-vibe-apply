@@ -1,5 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { Code2 } from "lucide-react";
+import { Code2, ChevronDown } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 export const Navigation = () => {
   return (
@@ -15,9 +21,24 @@ export const Navigation = () => {
             <a href="/cohort" className="text-sm font-medium hover:text-primary transition-colors">
               Cohort
             </a>
-            <a href="/" className="text-sm font-medium hover:text-primary transition-colors">
-              Vibe Coding Mastermind
-            </a>
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium hover:text-primary transition-colors">
+                Programs
+                <ChevronDown className="w-4 h-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start" className="w-56">
+                <DropdownMenuItem asChild>
+                  <a href="/" className="cursor-pointer">
+                    Vibe Coding Mastermind
+                  </a>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <a href="#projects" className="cursor-pointer">
+                    Projects
+                  </a>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
             <a href="#playbook" className="text-sm font-medium hover:text-primary transition-colors">
               AI Design Playbook
             </a>
