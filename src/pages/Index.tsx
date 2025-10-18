@@ -1,4 +1,5 @@
 import { Navigation } from "@/components/Navigation";
+import { HeroSection } from "@/components/HeroSection";
 import { AIHeaderSection } from "@/components/AIHeaderSection";
 import { CohortOverviewSection } from "@/components/CohortOverviewSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
@@ -21,6 +22,7 @@ const Index = () => {
       <div className="min-h-screen">
         <Navigation />
         <main>
+          <HeroSection />
           <AIHeaderSection />
           <CohortOverviewSection />
           <section id="benefits">
