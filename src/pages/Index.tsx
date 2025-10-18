@@ -1,6 +1,5 @@
 import { Navigation } from "@/components/Navigation";
 import { HeroSection } from "@/components/HeroSection";
-import { FlyingButterfly } from "@/components/FlyingButterfly";
 import { Helmet } from "react-helmet";
 
 const Index = () => {
@@ -15,7 +14,6 @@ const Index = () => {
       </Helmet>
       
       <div className="min-h-screen">
-        <FlyingButterfly />
         <Navigation />
         <main>
           <HeroSection />
