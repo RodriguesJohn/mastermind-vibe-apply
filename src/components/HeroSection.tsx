@@ -1,6 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles, Bot, Cpu, Zap } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { ParticleSphere } from "@/components/ParticleSphere";
+import cursorLogo from "@/assets/logos/cursor.png";
+import lovableLogo from "@/assets/logos/lovable.png";
+import v0Logo from "@/assets/logos/v0.png";
+import boltLogo from "@/assets/logos/bolt.png";
 
 export const HeroSection = () => {
   return (
@@ -47,19 +51,19 @@ export const HeroSection = () => {
             <span className="text-sm text-muted-foreground">Learn tools like</span>
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-1.5 text-sm text-foreground/70">
-                <Sparkles className="w-4 h-4 text-primary" />
+                <img src={cursorLogo} alt="Cursor" className="w-5 h-5" />
                 <span>Cursor</span>
               </div>
               <div className="flex items-center gap-1.5 text-sm text-foreground/70">
-                <Bot className="w-4 h-4 text-primary" />
+                <img src={lovableLogo} alt="Lovable" className="w-5 h-5" />
                 <span>Lovable</span>
               </div>
               <div className="flex items-center gap-1.5 text-sm text-foreground/70">
-                <Cpu className="w-4 h-4 text-primary" />
+                <img src={v0Logo} alt="v0" className="w-5 h-5" />
                 <span>v0</span>
               </div>
               <div className="flex items-center gap-1.5 text-sm text-foreground/70">
-                <Zap className="w-4 h-4 text-primary" />
+                <img src={boltLogo} alt="Bolt" className="w-5 h-5" />
                 <span>Bolt</span>
               </div>
             </div>
