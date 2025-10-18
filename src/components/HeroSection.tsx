@@ -43,9 +43,6 @@ export const HeroSection = () => {
                 Request Invite
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button variant="outline" size="xl" className="border-primary/30 hover:bg-primary/10">
-                Learn More
-              </Button>
             </div>
             
             {/* AI Coding Tools */}
