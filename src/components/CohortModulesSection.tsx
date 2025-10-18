@@ -24,7 +24,7 @@ const modules = [
   },
   {
     icon: Target,
-    title: "Final Presentation & Stortelling Week",
+    title: "Get 1:1 Coaching and Consulting",
     description: "Master storytelling to effectively communicate your ideas, and use AI presentation tools to complement your storytelling."
   },
   {
