@@ -15,7 +15,7 @@ export const AIHeaderSection = () => {
           <div className="space-y-8 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-semibold tracking-tight">
               <span className="text-white">
-                AI Mastery for Designers
+                Master Vibe code and build AI Apps
               </span>
               <span className="block mt-2 text-4xl md:text-5xl">
                 5-Week Cohort
