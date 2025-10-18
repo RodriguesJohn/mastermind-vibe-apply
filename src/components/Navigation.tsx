@@ -19,7 +19,7 @@ export const Navigation = () => {
           
           <div className="hidden md:flex items-center gap-8">
             <a href="/cohort" className="text-sm font-medium hover:text-primary transition-colors">
-              Cohort
+              AI Design Academy
             </a>
             <a href="#playbook" className="text-sm font-medium hover:text-primary transition-colors">
               AI Design Playbook
