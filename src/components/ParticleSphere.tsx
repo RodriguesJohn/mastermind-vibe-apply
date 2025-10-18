@@ -15,8 +15,12 @@ function DotParticle({ position, delay }: { position: [number, number, number], 
 
   return (
     <mesh ref={ref} position={position}>
-      <sphereGeometry args={[0.025, 8, 8]} />
-      <meshBasicMaterial color="#ffffff" />
+      <sphereGeometry args={[0.015, 8, 8]} />
+      <meshStandardMaterial 
+        color="#ffffff" 
+        emissive="#ffffff"
+        emissiveIntensity={0.5}
+      />
     </mesh>
   );
 }
@@ -25,7 +29,7 @@ function ParticleCloud() {
   const groupRef = useRef<THREE.Group>(null);
   
   const particles = useMemo(() => {
-    const particlesCount = 800;
+    const particlesCount = 1500;
     const particlesArray = [];
     
     for (let i = 0; i < particlesCount; i++) {
@@ -48,33 +52,6 @@ function ParticleCloud() {
     return particlesArray;
   }, []);
 
-  const connections = useMemo(() => {
-    const connectionsArray = [];
-    const maxDistance = 0.5;
-    
-    // Create horizontal wave-like connections
-    for (let i = 0; i < particles.length; i++) {
-      for (let j = i + 1; j < particles.length; j++) {
-        const dx = particles[i].position[0] - particles[j].position[0];
-        const dy = particles[i].position[1] - particles[j].position[1];
-        const dz = particles[i].position[2] - particles[j].position[2];
-        const distance = Math.sqrt(dx * dx + dy * dy + dz * dz);
-        
-        // Connect particles that are close and at similar heights (for horizontal lines)
-        const heightDiff = Math.abs(particles[i].position[1] - particles[j].position[1]);
-        if (distance < maxDistance && heightDiff < 0.3) {
-          connectionsArray.push({
-            start: particles[i].position,
-            end: particles[j].position,
-            opacity: 1 - (distance / maxDistance)
-          });
-        }
-      }
-    }
-    
-    return connectionsArray;
-  }, [particles]);
-
   useFrame((state) => {
     if (groupRef.current) {
       groupRef.current.rotation.y = state.clock.getElapsedTime() * 0.05;
@@ -84,16 +61,6 @@ function ParticleCloud() {
 
   return (
     <group ref={groupRef}>
-      {connections.map((connection, i) => (
-        <Line
-          key={`line-${i}`}
-          points={[connection.start, connection.end]}
-          color="#ffffff"
-          lineWidth={1}
-          transparent
-          opacity={connection.opacity * 0.4}
-        />
-      ))}
       {particles.map((particle, i) => (
         <DotParticle
           key={i}
