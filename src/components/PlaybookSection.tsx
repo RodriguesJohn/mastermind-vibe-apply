@@ -27,7 +27,7 @@ export const PlaybookSection = () => {
                   Join 1,000+ design leaders and frontiers staying ahead in the age of AI. Each week, you'll get access to curated insights.
                 </p>
                 <Button variant="cta" size="lg" className="group">
-                  Get Your Free Copy
+                  Get the Playbook
                   <ArrowRight className="group-hover:translate-x-1 transition-transform" />
                 </Button>
               </div>
