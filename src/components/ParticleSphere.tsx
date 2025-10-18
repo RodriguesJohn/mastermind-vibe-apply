@@ -19,7 +19,7 @@ function DotParticle({ position, delay }: { position: [number, number, number], 
       <meshStandardMaterial 
         color="#ffffff" 
         emissive="#ffffff"
-        emissiveIntensity={0.5}
+        emissiveIntensity={1.2}
       />
     </mesh>
   );
