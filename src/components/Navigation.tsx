@@ -49,7 +49,7 @@ export const Navigation = () => {
                   </a>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <a href="#tools" className="cursor-pointer">
+                  <a href="/tools" className="cursor-pointer">
                     Tools
                   </a>
                 </DropdownMenuItem>
