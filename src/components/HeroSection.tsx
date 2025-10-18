@@ -35,7 +35,7 @@ export const HeroSection = () => {
             Don't just create static products, create functional prototypes, demos and delightful interactions while learning coding with AI.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 items-center pt-6">
+          <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center pt-6">
             <Button variant="cta" size="xl" className="group">
               Request Invite
               <ArrowRight className="group-hover:translate-x-1 transition-transform" />
