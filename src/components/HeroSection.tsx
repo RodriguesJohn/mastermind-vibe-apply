@@ -75,9 +75,22 @@ export const HeroSection = () => {
             </div>
           </div>
 
-          {/* Right Column - Particle Sphere */}
+          {/* Right Column - Video */}
           <div className="flex items-center justify-center">
-            <ParticleSphere />
+            <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-border/40 shadow-2xl">
+              <video
+                className="w-full h-full object-cover"
+                autoPlay
+                loop
+                muted
+                playsInline
+              >
+                <source src="/video/hero-video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              {/* Fallback gradient if no video */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-accent/20 to-primary-glow/20 -z-10" />
+            </div>
           </div>
         </div>
       </div>
