@@ -9,7 +9,7 @@ export const CohortOverviewSection = () => {
         className="absolute inset-0 z-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${goldenGateBridge})` }}
       />
-      <div className="absolute inset-0 z-0 bg-black/70" />
+      <div className="absolute inset-0 z-0 bg-black/85" />
       
       {/* Content */}
       <div className="container relative z-10 px-4 py-20 md:py-32">
