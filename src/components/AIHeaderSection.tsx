@@ -15,10 +15,10 @@ export const AIHeaderSection = () => {
           <div className="space-y-8 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-semibold tracking-tight">
               <span className="bg-gradient-to-r from-primary via-primary-glow to-accent bg-clip-text text-transparent">
-                AI Mastery
+                AI Mastery for Designers
               </span>
               <span className="block mt-2 text-4xl md:text-5xl">
-                for Product Designers
+                5-Week Cohort
               </span>
             </h2>
             
