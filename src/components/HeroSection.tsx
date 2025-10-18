@@ -31,9 +31,12 @@ export const HeroSection = () => {
               </span>
             </h1>
             
-            <p className="text-lg text-muted-foreground max-w-2xl">
-              Don't just create static products, create functional prototypes, demos and delightful interactions while learning coding with AI.
-            </p>
+            <ul className="text-lg text-muted-foreground max-w-2xl space-y-3 list-disc list-inside">
+              <li>Build functional prototypes and interactive demos</li>
+              <li>Master AI-powered coding tools and workflows</li>
+              <li>Create delightful user experiences with modern tech</li>
+              <li>Transform ideas into working applications quickly</li>
+            </ul>
             
             <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center pt-6">
               <Button variant="cta" size="xl" className="group">
