@@ -8,6 +8,11 @@ export const AIHeaderSection = () => {
       {/* Background */}
       <div className="absolute inset-0 z-0 bg-background" />
       
+      {/* Subtle Glow */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px]" />
+      </div>
+      
       {/* Content */}
       <div className="container relative z-10 px-4 py-20 md:py-32">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
