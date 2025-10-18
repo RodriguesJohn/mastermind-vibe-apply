@@ -74,7 +74,7 @@ function ParticleCloud() {
 
 export const ParticleSphere = () => {
   return (
-    <div className="relative w-full h-[700px] opacity-100 pointer-events-none">
+    <div className="relative w-full h-[700px] opacity-100 pointer-events-none animate-fade-in">
       <Canvas
         camera={{ position: [0, 0, 4], fov: 75 }}
         className="w-full h-full"
