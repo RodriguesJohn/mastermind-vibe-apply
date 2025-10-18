@@ -29,7 +29,7 @@ export const BenefitsSection = () => {
       <div className="container px-4">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold">
-            Why Join the Mastermind?
+            What Will You Get
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Everything you need to become an exceptional developer
