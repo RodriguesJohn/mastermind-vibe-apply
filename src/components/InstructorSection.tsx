@@ -6,6 +6,10 @@ export const InstructorSection = () => {
   return (
     <section className="py-20 md:py-32 bg-background">
       <div className="container px-4">
+        <h2 className="text-4xl md:text-5xl font-semibold text-center mb-16 tracking-tight">
+          Know Your Instructor
+        </h2>
+        
         <Card className="max-w-6xl mx-auto p-8 md:p-12 bg-card/50 border-border/40">
           <div className="flex items-start gap-2 mb-8">
             <UserCheck className="w-6 h-6 text-muted-foreground" />
