@@ -1,12 +1,10 @@
 import { useRef, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Text } from '@react-three/drei';
+import { Line } from '@react-three/drei';
 import * as THREE from 'three';
 
-const codeSymbols = ['{', '}', '(', ')', '[', ']', '<', '>', '/', '*', '=', '+', '-', ';', ':', '.', ','];
-
-function CodeParticle({ position, delay, symbol }: { position: [number, number, number], delay: number, symbol: string }) {
-  const ref = useRef<THREE.Group>(null);
+function DotParticle({ position, delay }: { position: [number, number, number], delay: number }) {
+  const ref = useRef<THREE.Mesh>(null);
   
   useFrame((state) => {
     if (ref.current) {
@@ -16,64 +14,14 @@ function CodeParticle({ position, delay, symbol }: { position: [number, number, 
   });
 
   return (
-    <group ref={ref} position={position}>
-      <Text
-        fontSize={0.1}
-        color="#2254F6"
-        anchorX="center"
-        anchorY="middle"
-      >
-        {symbol}
-      </Text>
-    </group>
-  );
-}
-
-function ConnectionLines({ particles }: { particles: Array<{ position: [number, number, number] }> }) {
-  const lines = useMemo(() => {
-    const connections = [];
-    const maxDistance = 0.4; // Only connect particles within this distance
-    
-    for (let i = 0; i < particles.length; i++) {
-      for (let j = i + 1; j < particles.length; j++) {
-        const dx = particles[i].position[0] - particles[j].position[0];
-        const dy = particles[i].position[1] - particles[j].position[1];
-        const dz = particles[i].position[2] - particles[j].position[2];
-        const distance = Math.sqrt(dx * dx + dy * dy + dz * dz);
-        
-        if (distance < maxDistance) {
-          connections.push({
-            start: particles[i].position,
-            end: particles[j].position,
-            opacity: 1 - (distance / maxDistance)
-          });
-        }
-      }
-    }
-    
-    return connections;
-  }, [particles]);
-
-  return (
-    <>
-      {lines.map((line, i) => (
-        <line key={i}>
-          <bufferGeometry>
-            <bufferAttribute
-              attach="attributes-position"
-              count={2}
-              array={new Float32Array([...line.start, ...line.end])}
-              itemSize={3}
-            />
-          </bufferGeometry>
-          <lineBasicMaterial 
-            color="#2254F6" 
-            opacity={line.opacity * 0.3}
-            transparent
-          />
-        </line>
-      ))}
-    </>
+    <mesh ref={ref} position={position}>
+      <sphereGeometry args={[0.015, 8, 8]} />
+      <meshStandardMaterial 
+        color="#ffffff" 
+        emissive="#ffffff"
+        emissiveIntensity={1.2}
+      />
+    </mesh>
   );
 }
 
@@ -81,11 +29,11 @@ function ParticleCloud() {
   const groupRef = useRef<THREE.Group>(null);
   
   const particles = useMemo(() => {
-    const particlesCount = 100; // Reduced count for better performance with text
+    const particlesCount = 1500;
     const particlesArray = [];
     
     for (let i = 0; i < particlesCount; i++) {
-      const radius = 1.5 + Math.random() * 0.3;
+      const radius = 1.5 + Math.random() * 0.2;
       const theta = Math.random() * Math.PI * 2;
       const phi = Math.acos(2 * Math.random() - 1);
       
@@ -96,7 +44,8 @@ function ParticleCloud() {
       particlesArray.push({
         position: [x, y, z] as [number, number, number],
         delay: Math.random() * Math.PI * 2,
-        symbol: codeSymbols[Math.floor(Math.random() * codeSymbols.length)]
+        theta: theta,
+        phi: phi
       });
     }
     
@@ -112,13 +61,11 @@ function ParticleCloud() {
 
   return (
     <group ref={groupRef}>
-      <ConnectionLines particles={particles} />
       {particles.map((particle, i) => (
-        <CodeParticle
+        <DotParticle
           key={i}
           position={particle.position}
           delay={particle.delay}
-          symbol={particle.symbol}
         />
       ))}
     </group>
