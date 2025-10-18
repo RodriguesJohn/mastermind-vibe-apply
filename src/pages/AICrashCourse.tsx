@@ -19,29 +19,67 @@ const AICrashCourse = () => {
         
         <main>
           {/* Hero Section */}
-          <section className="pt-32 pb-20 px-4">
-            <div className="container mx-auto max-w-4xl text-center">
-              <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-2 mb-8">
-                <Sparkles className="w-4 h-4 text-primary" />
-                <span className="text-sm font-medium text-primary">AI Crash Course</span>
-              </div>
-              
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
-                Master AI Development in Weeks, Not Years
-              </h1>
-              
-              <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Learn to build powerful AI applications with cutting-edge tools and frameworks. 
-                From fundamentals to deployment, we've got you covered.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="cta" size="lg">
-                  Enroll Now
-                </Button>
-                <Button variant="outline" size="lg">
-                  View Curriculum
-                </Button>
+          <section className="pt-32 pb-20 px-4 md:px-10 lg:px-[120px]">
+            <div className="container mx-auto max-w-[1200px]">
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+                {/* Left Column - Text Content */}
+                <div className="space-y-8">
+                  <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-2">
+                    <Sparkles className="w-4 h-4 text-primary" />
+                    <span className="text-sm font-medium text-primary">AI Crash Course</span>
+                  </div>
+                  
+                  <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+                    Master AI Development in Weeks, Not Years
+                  </h1>
+                  
+                  <p className="text-xl text-muted-foreground">
+                    Learn to build powerful AI applications with cutting-edge tools and frameworks. 
+                    From fundamentals to deployment, we've got you covered.
+                  </p>
+                  
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <Button variant="cta" size="lg">
+                      Enroll Now
+                    </Button>
+                    <Button variant="outline" size="lg">
+                      View Curriculum
+                    </Button>
+                  </div>
+                </div>
+
+                {/* Right Column - Video */}
+                <div className="relative aspect-video rounded-lg overflow-hidden bg-card border border-border">
+                  {/* Video placeholder - replace with actual video */}
+                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-primary/20 to-accent/20">
+                    <div className="text-center space-y-4">
+                      <div className="w-20 h-20 mx-auto rounded-full bg-primary/20 flex items-center justify-center">
+                        <div className="w-0 h-0 border-t-8 border-t-transparent border-l-12 border-l-primary border-b-8 border-b-transparent ml-1" />
+                      </div>
+                      <p className="text-muted-foreground">Video Coming Soon</p>
+                    </div>
+                  </div>
+                  
+                  {/* Uncomment and add your video source */}
+                  {/* <video 
+                    className="w-full h-full object-cover"
+                    autoPlay 
+                    loop 
+                    muted 
+                    playsInline
+                  >
+                    <source src="/video/crash-course.mp4" type="video/mp4" />
+                  </video> */}
+                  
+                  {/* Or use an embedded video */}
+                  {/* <iframe
+                    className="w-full h-full"
+                    src="YOUR_VIDEO_URL"
+                    title="AI Crash Course Preview"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  /> */}
+                </div>
               </div>
             </div>
           </section>
