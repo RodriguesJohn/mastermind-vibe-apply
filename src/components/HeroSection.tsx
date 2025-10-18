@@ -32,7 +32,7 @@ export const HeroSection = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed">
-            Don't just create static products, create functional prototypes, demos and delightful interactions.
+            Don't just create static products, create functional prototypes, demos and delightful interactions while learning coding with AI.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 items-center pt-6">
