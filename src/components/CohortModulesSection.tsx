@@ -25,7 +25,7 @@ const modules = [
   {
     icon: Target,
     title: "Get 1:1 Coaching and Consulting",
-    description: "Master storytelling to effectively communicate your ideas, and use AI presentation tools to complement your storytelling."
+    description: "Get one-on-one coaching with John to overcome challenges, personalize your learning goals, ask any questions, and get clear guidance to unlock your next step."
   },
   {
     icon: Users,
