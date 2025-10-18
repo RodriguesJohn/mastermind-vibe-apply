@@ -76,7 +76,7 @@ export const HeroSection = () => {
           </div>
 
           {/* Right Column - Particle Sphere */}
-          <div className="hidden lg:flex items-center justify-center">
+          <div className="flex items-center justify-center">
             <ParticleSphere />
           </div>
         </div>
