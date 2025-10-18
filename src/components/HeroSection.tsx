@@ -5,6 +5,7 @@ import cursorLogo from "@/assets/logos/cursor.png";
 import lovableLogo from "@/assets/logos/lovable.png";
 import v0Logo from "@/assets/logos/v0.png";
 import boltLogo from "@/assets/logos/bolt.png";
+import claudeLogo from "@/assets/logos/claude.png";
 
 export const HeroSection = () => {
   return (
@@ -63,6 +64,10 @@ export const HeroSection = () => {
                 <div className="flex items-center gap-1.5 text-sm text-foreground/70">
                   <img src={boltLogo} alt="Bolt" className="w-5 h-5" />
                   <span>Bolt</span>
+                </div>
+                <div className="flex items-center gap-1.5 text-sm text-foreground/70">
+                  <img src={claudeLogo} alt="Claude" className="w-5 h-5" />
+                  <span>Claude</span>
                 </div>
               </div>
             </div>
