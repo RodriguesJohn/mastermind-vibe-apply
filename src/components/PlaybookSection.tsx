@@ -8,14 +8,6 @@ export const PlaybookSection = () => {
     <section className="py-20 md:py-32 bg-background">
       <div className="container px-4">
         <Card className="max-w-6xl mx-auto p-8 md:p-12 bg-card/50 border-border/40">
-          <div className="flex items-start gap-2 mb-8">
-            <div className="flex-1 flex gap-2 justify-end">
-              <div className="w-3 h-3 rounded-full bg-muted-foreground/30" />
-              <div className="w-3 h-3 rounded-full bg-muted-foreground/30" />
-              <div className="w-3 h-3 rounded-full bg-muted-foreground/30" />
-            </div>
-          </div>
-
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div>
