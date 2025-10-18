@@ -21,8 +21,8 @@ const Cohort = () => {
         <main>
           <AIHeaderSection />
           <CohortOverviewSection />
-          <CohortModulesSection />
           <CohortTestimonialsSection />
+          <CohortModulesSection />
         </main>
       </div>
     </>
