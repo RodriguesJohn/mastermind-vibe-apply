@@ -3,7 +3,7 @@ import { Check } from "lucide-react";
 const outcomes = [
   "Build functional AI apps and prototypes",
   "Develop advanced problem-solving and architectural thinking",
-  "Learn how to vibe code with Design system and style guides",
+  "Learn vibe coding techniques",
   "Create an impressive portfolio that stands out",
   "Gain exclusive access to job opportunities and projects",
   "Receive personalized code reviews and mentorship",
