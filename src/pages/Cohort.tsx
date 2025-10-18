@@ -12,13 +12,10 @@ const Cohort = () => {
   return (
     <>
       <Helmet>
-        <title>Cohort - Vibe Coding Mastermind</title>
-        <meta 
-          name="description" 
-          content="Join our coding cohort and learn with a community of developers." 
-        />
+        <title>AI Mastery for Product Designers 5-Week Cohort</title>
+        <meta name="description" content="Join our coding cohort and learn with a community of developers." />
       </Helmet>
-      
+
       <div className="min-h-screen">
         <Navigation />
         <main>
