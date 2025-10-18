@@ -33,7 +33,7 @@ export const HeroSection = () => {
             
             <ul className="text-lg text-foreground max-w-2xl space-y-3">
               <li>✅ Live sessions with industry experts building cutting-edge AI experiences.</li>
-              <li>✅ Bi-weekly Saturday vibe coding masterclasses (1.5 hours) with access to growing recorded lessons.</li>
+              <li>✅ Bi-weekly Saturday vibe coding masterclasses (1.5 hours) with access to growing recorded library.</li>
               <li>✅ Showcase your projects, get feedback, and learn from peers.</li>
               <li>✅ Join a community building the next wave of AI-powered apps.</li>
             </ul>
