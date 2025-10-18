@@ -26,10 +26,13 @@ export const AIHeaderSection = () => {
               Stay ahead and upskill today. Design AI products and systems through a structured learning program.
             </p>
             
-            <div className="pt-6">
+            <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center pt-6">
               <Button variant="cta" size="xl" className="group">
                 Enroll Today
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+              </Button>
+              <Button variant="outline" size="xl" className="border-primary/30 hover:bg-primary/10">
+                Talk to our AI Agent
               </Button>
             </div>
           </div>
