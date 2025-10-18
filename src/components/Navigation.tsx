@@ -44,7 +44,7 @@ export const Navigation = () => {
                   </a>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <a href="#consulting" className="cursor-pointer">
+                  <a href="/consulting" className="cursor-pointer">
                     1:1 Consulting
                   </a>
                 </DropdownMenuItem>
