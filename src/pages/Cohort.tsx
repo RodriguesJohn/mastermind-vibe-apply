@@ -1,5 +1,6 @@
 import { Navigation } from "@/components/Navigation";
 import { AIHeaderSection } from "@/components/AIHeaderSection";
+import { CohortOverviewSection } from "@/components/CohortOverviewSection";
 import { Helmet } from "react-helmet";
 
 const Cohort = () => {
@@ -17,10 +18,7 @@ const Cohort = () => {
         <Navigation />
         <main>
           <AIHeaderSection />
-          <div className="pt-24 container px-4">
-            <h1 className="text-4xl font-bold mb-4">Cohort</h1>
-            <p className="text-muted-foreground">Content coming soon...</p>
-          </div>
+          <CohortOverviewSection />
         </main>
       </div>
     </>
