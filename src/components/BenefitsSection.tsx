@@ -19,7 +19,7 @@ const benefits = [
   {
     icon: Trophy,
     title: "Join the Community",
-    description: "Become part of an elite network of developers learning, growing, and supporting each other every day.",
+    description: "Join a community of designers, product managers, agency owners, and developers learning how to code together.",
   },
 ];
 
