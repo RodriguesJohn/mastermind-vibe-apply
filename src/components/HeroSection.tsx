@@ -32,10 +32,10 @@ export const HeroSection = () => {
             </h1>
             
             <ul className="text-lg text-foreground max-w-2xl space-y-3">
-              <li>✅ Build functional prototypes and interactive demos</li>
-              <li>✅ Master AI-powered coding tools and workflows</li>
-              <li>✅ Create delightful user experiences with modern tech</li>
-              <li>✅ Transform ideas into working applications quickly</li>
+              <li>✅ Join live guest sessions featuring industry experts and creators building cutting-edge AI experiences.</li>
+              <li>✅ Meet every Saturday (bi-weekly) for hands-on live coding sessions — plus get access to a growing library of recorded vibe coding lessons.</li>
+              <li>✅ Showcase your projects, get feedback, and learn from how others are building.</li>
+              <li>✅ Become part of a community of designers and developers building the next wave of AI-powered apps.</li>
             </ul>
             
             <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center pt-6">
