@@ -41,11 +41,6 @@ export const Navigation = () => {
                   </a>
                  </DropdownMenuItem> */}
                 <DropdownMenuItem asChild>
-                  <a href="/consulting" className="cursor-pointer">
-                    1:1 Consulting
-                  </a>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
                   <a href="/tools" className="cursor-pointer">
                     Tools
                   </a>
@@ -88,9 +83,6 @@ export const Navigation = () => {
                   <p className="text-sm text-muted-foreground mb-3">More</p>
                   <a href="/" className="text-base font-medium hover:text-primary transition-colors py-2 block" onClick={() => setMobileMenuOpen(false)}>
                     Vibe Coding Mastermind
-                  </a>
-                  <a href="/consulting" className="text-base font-medium hover:text-primary transition-colors py-2 block" onClick={() => setMobileMenuOpen(false)}>
-                    1:1 Consulting
                   </a>
                   <a href="/tools" className="text-base font-medium hover:text-primary transition-colors py-2 block" onClick={() => setMobileMenuOpen(false)}>
                     Tools
