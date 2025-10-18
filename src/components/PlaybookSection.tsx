@@ -9,7 +9,6 @@ export const PlaybookSection = () => {
       <div className="container px-4">
         <Card className="max-w-6xl mx-auto p-8 md:p-12 bg-card/50 border-border/40">
           <div className="flex items-start gap-2 mb-8">
-            <Users className="w-6 h-6 text-muted-foreground" />
             <div className="flex-1 flex gap-2 justify-end">
               <div className="w-3 h-3 rounded-full bg-muted-foreground/30" />
               <div className="w-3 h-3 rounded-full bg-muted-foreground/30" />
