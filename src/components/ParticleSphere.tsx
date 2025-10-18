@@ -33,7 +33,7 @@ function ParticleCloud() {
     const particlesArray = [];
     
     for (let i = 0; i < particlesCount; i++) {
-      const radius = 2 + Math.random() * 0.3;
+      const radius = 1.5 + Math.random() * 0.2;
       const theta = Math.random() * Math.PI * 2;
       const phi = Math.acos(2 * Math.random() - 1);
       
