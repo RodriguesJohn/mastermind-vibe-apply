@@ -55,7 +55,7 @@ export const Navigation = () => {
           </div>
           
           <Button variant="cta" size="sm" className="hidden md:flex">
-            Apply Now
+            Join the Cohort
           </Button>
 
           {/* Mobile Menu */}
