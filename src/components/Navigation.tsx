@@ -29,7 +29,7 @@ export const Navigation = () => {
             </a>
             <DropdownMenu>
               <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium hover:text-primary transition-colors">
-                Programs
+                More
                 <ChevronDown className="w-4 h-4" />
               </DropdownMenuTrigger>
               <DropdownMenuContent align="start" className="w-56">
