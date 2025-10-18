@@ -32,7 +32,7 @@ export const AIHeaderSection = () => {
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button variant="outline" size="xl" className="border-primary/30 hover:bg-primary/10">
-                Talk to our AI Agent
+                Book a Call
               </Button>
             </div>
           </div>
