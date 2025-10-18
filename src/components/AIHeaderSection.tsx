@@ -13,7 +13,7 @@ export const AIHeaderSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Text Content */}
           <div className="space-y-8 animate-fade-in">
-            <h2 className="text-5xl md:text-7xl font-semibold tracking-tight">
+            <h2 className="text-4xl md:text-5xl font-semibold tracking-tight">
               <span className="bg-gradient-to-r from-primary via-primary-glow to-accent bg-clip-text text-transparent">
                 AI Mastery
               </span>
