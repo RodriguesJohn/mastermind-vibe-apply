@@ -22,7 +22,7 @@ export const Navigation = () => {
               AI Design Academy
             </a>
             <a href="#playbook" className="text-sm font-medium hover:text-primary transition-colors">
-              AI Design Playbook
+              Blog
             </a>
             <a href="/ai-crash-course" className="text-sm font-medium hover:text-primary transition-colors">
               AI Crash Course
