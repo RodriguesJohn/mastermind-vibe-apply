@@ -1,30 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Code2, ChevronDown, Menu } from "lucide-react";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { useState } from "react";
-
 export const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/40 bg-background/80 backdrop-blur-lg">
+  return <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/40 bg-background/80 backdrop-blur-lg">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-14">
           <div className="flex items-center gap-2">
             <Code2 className="w-6 h-6 text-primary" />
-            <span className="font-bold text-lg">Vibe Coding</span>
+            <span className="font-bold text-lg">AI Design Academy</span>
           </div>
           
           {/* Desktop Navigation */}
@@ -53,7 +39,7 @@ export const Navigation = () => {
                   <a href="/projects" className="cursor-pointer">
                     Projects
                   </a>
-                </DropdownMenuItem> */}
+                 </DropdownMenuItem> */}
                 <DropdownMenuItem asChild>
                   <a href="/consulting" className="cursor-pointer">
                     1:1 Consulting
@@ -88,59 +74,30 @@ export const Navigation = () => {
               </SheetHeader>
               
               <nav className="flex flex-col gap-4 mt-8">
-                <a 
-                  href="/cohort" 
-                  className="text-base font-medium hover:text-primary transition-colors py-2"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
+                <a href="/cohort" className="text-base font-medium hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
                   Cohort
                 </a>
-                <a 
-                  href="#playbook" 
-                  className="text-base font-medium hover:text-primary transition-colors py-2"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
+                <a href="#playbook" className="text-base font-medium hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
                   Blog
                 </a>
-                <a 
-                  href="/ai-crash-course" 
-                  className="text-base font-medium hover:text-primary transition-colors py-2"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
+                <a href="/ai-crash-course" className="text-base font-medium hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
                   AI Crash Course
                 </a>
                 
                 <div className="border-t border-border pt-4 mt-2">
                   <p className="text-sm text-muted-foreground mb-3">More</p>
-                  <a 
-                    href="/" 
-                    className="text-base font-medium hover:text-primary transition-colors py-2 block"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
+                  <a href="/" className="text-base font-medium hover:text-primary transition-colors py-2 block" onClick={() => setMobileMenuOpen(false)}>
                     Vibe Coding Mastermind
                   </a>
-                  <a 
-                    href="/consulting" 
-                    className="text-base font-medium hover:text-primary transition-colors py-2 block"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
+                  <a href="/consulting" className="text-base font-medium hover:text-primary transition-colors py-2 block" onClick={() => setMobileMenuOpen(false)}>
                     1:1 Consulting
                   </a>
-                  <a 
-                    href="/tools" 
-                    className="text-base font-medium hover:text-primary transition-colors py-2 block"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
+                  <a href="/tools" className="text-base font-medium hover:text-primary transition-colors py-2 block" onClick={() => setMobileMenuOpen(false)}>
                     Tools
                   </a>
                 </div>
 
-                <Button 
-                  variant="cta" 
-                  size="lg" 
-                  className="mt-6"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
+                <Button variant="cta" size="lg" className="mt-6" onClick={() => setMobileMenuOpen(false)}>
                   Apply Now
                 </Button>
               </nav>
@@ -148,6 +105,5 @@ export const Navigation = () => {
           </Sheet>
         </div>
       </div>
-    </nav>
-  );
+    </nav>;
 };
