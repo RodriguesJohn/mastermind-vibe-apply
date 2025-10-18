@@ -21,7 +21,7 @@ export const AIHeaderSection = () => {
             </h2>
             
             <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed">
-              Transform your design workflow with cutting-edge AI tools and techniques.
+              Stay ahead and upskill today. Design AI products and systems through a structured learning program.
             </p>
           </div>
 
