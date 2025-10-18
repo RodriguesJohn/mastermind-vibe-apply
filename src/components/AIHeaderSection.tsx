@@ -17,7 +17,7 @@ export const AIHeaderSection = () => {
               <span className="bg-gradient-to-r from-primary via-primary-glow to-accent bg-clip-text text-transparent">
                 AI Mastery
               </span>
-              <span className="block mt-2">
+              <span className="block mt-2 text-4xl md:text-5xl">
                 for Product Designers
               </span>
             </h2>
