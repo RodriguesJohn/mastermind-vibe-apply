@@ -15,8 +15,8 @@ function DotParticle({ position, delay }: { position: [number, number, number], 
 
   return (
     <mesh ref={ref} position={position}>
-      <sphereGeometry args={[0.02, 8, 8]} />
-      <meshBasicMaterial color="#ffffff" />
+      <sphereGeometry args={[0.025, 8, 8]} />
+      <meshBasicMaterial color="#22a4f6" />
     </mesh>
   );
 }
@@ -25,11 +25,11 @@ function ParticleCloud() {
   const groupRef = useRef<THREE.Group>(null);
   
   const particles = useMemo(() => {
-    const particlesCount = 300;
+    const particlesCount = 800;
     const particlesArray = [];
     
     for (let i = 0; i < particlesCount; i++) {
-      const radius = 2 + Math.random() * 0.8;
+      const radius = 2 + Math.random() * 0.3;
       const theta = Math.random() * Math.PI * 2;
       const phi = Math.acos(2 * Math.random() - 1);
       
@@ -39,7 +39,9 @@ function ParticleCloud() {
       
       particlesArray.push({
         position: [x, y, z] as [number, number, number],
-        delay: Math.random() * Math.PI * 2
+        delay: Math.random() * Math.PI * 2,
+        theta: theta,
+        phi: phi
       });
     }
     
@@ -48,8 +50,9 @@ function ParticleCloud() {
 
   const connections = useMemo(() => {
     const connectionsArray = [];
-    const maxDistance = 0.8;
+    const maxDistance = 0.5;
     
+    // Create horizontal wave-like connections
     for (let i = 0; i < particles.length; i++) {
       for (let j = i + 1; j < particles.length; j++) {
         const dx = particles[i].position[0] - particles[j].position[0];
@@ -57,7 +60,9 @@ function ParticleCloud() {
         const dz = particles[i].position[2] - particles[j].position[2];
         const distance = Math.sqrt(dx * dx + dy * dy + dz * dz);
         
-        if (distance < maxDistance) {
+        // Connect particles that are close and at similar heights (for horizontal lines)
+        const heightDiff = Math.abs(particles[i].position[1] - particles[j].position[1]);
+        if (distance < maxDistance && heightDiff < 0.3) {
           connectionsArray.push({
             start: particles[i].position,
             end: particles[j].position,
@@ -83,10 +88,10 @@ function ParticleCloud() {
         <Line
           key={`line-${i}`}
           points={[connection.start, connection.end]}
-          color="#ffffff"
-          lineWidth={0.5}
+          color="#22a4f6"
+          lineWidth={1}
           transparent
-          opacity={connection.opacity * 0.3}
+          opacity={connection.opacity * 0.4}
         />
       ))}
       {particles.map((particle, i) => (
