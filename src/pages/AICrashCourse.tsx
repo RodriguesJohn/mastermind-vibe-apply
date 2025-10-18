@@ -49,7 +49,7 @@ const AICrashCourse = () => {
                 </div>
 
                 {/* Right Column - Video */}
-                <div className="relative aspect-video rounded-lg overflow-hidden bg-card border border-border">
+                <div className="relative aspect-[9/16] rounded-lg overflow-hidden bg-card border border-border max-w-md mx-auto lg:mx-0">
                   {/* Video placeholder - replace with actual video */}
                   <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-primary/20 to-accent/20">
                     <div className="text-center space-y-4">
