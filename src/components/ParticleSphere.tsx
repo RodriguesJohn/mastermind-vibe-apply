@@ -1,34 +1,23 @@
 import { useRef, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Text, Line } from '@react-three/drei';
+import { Line } from '@react-three/drei';
 import * as THREE from 'three';
 
-const CODE_CHARS = ['<', '>', '{', '}', '(', ')', '[', ']', '/', '*', '+', '=', ';', ':', '.', ',', 'function', 'const', 'let', 'if', 'for', '0', '1', '&&', '||'];
-
-function CodeParticle({ position, char, delay }: { position: [number, number, number], char: string, delay: number }) {
-  const ref = useRef<THREE.Group>(null);
+function DotParticle({ position, delay }: { position: [number, number, number], delay: number }) {
+  const ref = useRef<THREE.Mesh>(null);
   
   useFrame((state) => {
     if (ref.current) {
       const time = state.clock.getElapsedTime();
-      ref.current.rotation.y = time * 0.3 + delay;
       ref.current.position.y = position[1] + Math.sin(time * 0.5 + delay) * 0.1;
     }
   });
 
   return (
-    <group ref={ref} position={position}>
-      <Text
-        fontSize={0.08}
-        color="#ffffff"
-        anchorX="center"
-        anchorY="middle"
-        outlineWidth={0.001}
-        outlineColor="#ffffff"
-      >
-        {char}
-      </Text>
-    </group>
+    <mesh ref={ref} position={position}>
+      <sphereGeometry args={[0.02, 8, 8]} />
+      <meshBasicMaterial color="#ffffff" />
+    </mesh>
   );
 }
 
@@ -50,7 +39,6 @@ function ParticleCloud() {
       
       particlesArray.push({
         position: [x, y, z] as [number, number, number],
-        char: CODE_CHARS[Math.floor(Math.random() * CODE_CHARS.length)],
         delay: Math.random() * Math.PI * 2
       });
     }
@@ -102,10 +90,9 @@ function ParticleCloud() {
         />
       ))}
       {particles.map((particle, i) => (
-        <CodeParticle
+        <DotParticle
           key={i}
           position={particle.position}
-          char={particle.char}
           delay={particle.delay}
         />
       ))}
