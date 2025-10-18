@@ -17,9 +17,6 @@ export const AIHeaderSection = () => {
               <span className="text-white">
                 Master Vibe code and build AI Apps
               </span>
-              <span className="block mt-2 text-4xl md:text-5xl">
-                5-Week Cohort
-              </span>
             </h2>
             
             <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed">
