@@ -1,7 +1,7 @@
 import { Check } from "lucide-react";
 
 const outcomes = [
-  "Build functional AI apps and prototypes",
+  "Build AI mobile and web apps",
   "Develop advanced problem-solving and architectural thinking",
   "Learn vibe coding techniques",
   "Create an impressive portfolio that stands out",
