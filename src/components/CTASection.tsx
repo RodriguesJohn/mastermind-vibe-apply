@@ -7,8 +7,8 @@ export const CTASection = () => {
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-accent/10 to-transparent" />
       
-      <div className="container px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
+      <div className="px-4 md:px-10 lg:px-[120px] relative z-10">
+        <div className="max-w-[1200px] mx-auto text-center space-y-8">
           <h2 className="text-4xl md:text-6xl font-bold">
             Ready to Level Up?
           </h2>

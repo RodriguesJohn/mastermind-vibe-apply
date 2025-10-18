@@ -15,8 +15,8 @@ export const OutcomesSection = () => {
       {/* Background Accent */}
       <div className="absolute inset-0 bg-gradient-hero opacity-50" />
       
-      <div className="container px-4 relative z-10">
-        <div className="max-w-4xl mx-auto">
+      <div className="px-4 md:px-10 lg:px-[120px] relative z-10">
+        <div className="max-w-[1200px] mx-auto">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-4xl md:text-5xl font-bold">
               What You'll Achieve

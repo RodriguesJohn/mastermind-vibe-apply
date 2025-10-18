@@ -26,7 +26,8 @@ const benefits = [
 export const BenefitsSection = () => {
   return (
     <section className="py-16 md:py-24 relative">
-      <div className="container px-4">
+      <div className="px-4 md:px-10 lg:px-[120px]">
+        <div className="max-w-[1200px] mx-auto">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold">
             What Will You Get
@@ -55,6 +56,7 @@ export const BenefitsSection = () => {
               </p>
             </div>
           ))}
+        </div>
         </div>
       </div>
     </section>

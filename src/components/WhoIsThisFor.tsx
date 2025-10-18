@@ -26,7 +26,8 @@ const targetAudience = [
 export const WhoIsThisFor = () => {
   return (
     <section className="py-24 md:py-32 relative">
-      <div className="container px-4">
+      <div className="px-4 md:px-10 lg:px-[120px]">
+        <div className="max-w-[1200px] mx-auto">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold">
             Who Is This For?
@@ -36,7 +37,7 @@ export const WhoIsThisFor = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8">
           {targetAudience.map((audience, index) => (
             <div
               key={index}
@@ -55,6 +56,7 @@ export const WhoIsThisFor = () => {
               </p>
             </div>
           ))}
+        </div>
         </div>
       </div>
     </section>

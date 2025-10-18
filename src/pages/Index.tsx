@@ -34,8 +34,10 @@ const Index = () => {
         </main>
         
         <footer className="border-t border-border py-12 bg-card/30">
-          <div className="container px-4 text-center text-sm text-muted-foreground">
+          <div className="px-4 md:px-10 lg:px-[120px] text-center text-sm text-muted-foreground">
+            <div className="max-w-[1200px] mx-auto">
             <p>© 2025 Vibe Coding Mastermind. All rights reserved.</p>
+            </div>
           </div>
         </footer>
       </div>
