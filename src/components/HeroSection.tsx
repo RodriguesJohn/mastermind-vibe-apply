@@ -30,7 +30,7 @@ export const HeroSection = () => {
               </span>
             </h1>
             
-            <p className="text-base text-muted-foreground max-w-2xl">
+            <p className="text-lg text-muted-foreground max-w-2xl">
               Don't just create static products, create functional prototypes, demos and delightful interactions while learning coding with AI.
             </p>
             
