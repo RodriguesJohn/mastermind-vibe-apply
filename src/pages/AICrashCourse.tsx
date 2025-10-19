@@ -155,15 +155,15 @@ const AICrashCourse = () => {
         
         <main>
               {/* Course Header */}
-              <section className="py-24 px-4 bg-gradient-to-br from-primary/5 to-accent/5 backdrop-blur-sm">
+              <section className="py-32 px-4 bg-gradient-to-br from-primary/5 to-accent/5 backdrop-blur-sm">
             <div className="container mx-auto max-w-6xl">
-              <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
-                <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-2 mb-10">
+              <div className="text-center animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
+                <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-2 mb-8">
                   <Sparkles className="w-4 h-4 text-primary" />
                   <span className="text-sm font-medium text-primary">AI for Designers & Product Leaders</span>
                 </div>
                 
-                    <div className="mb-10">
+                    <div className="mb-12">
                       <SparklesText
                         text="AI for Designers 101"
                         className="text-4xl md:text-5xl font-bold text-white"
@@ -175,20 +175,20 @@ const AICrashCourse = () => {
                       />
                     </div>
                 
-                    <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-12">
+                    <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-16">
                       Master AI development with our comprehensive course designed for designers and product leaders.
                       Learn to build AI-powered applications from scratch.
                     </p>
 
                     {/* CTA Button */}
-                    <div className="text-center mb-16">
+                    <div className="text-center mb-20">
                       <RainbowButton className="text-lg">
                         Enroll Today for $99
                       </RainbowButton>
                     </div>
 
                     {/* YouTube Video */}
-                    <div className="max-w-4xl mx-auto mb-16">
+                    <div className="max-w-4xl mx-auto">
                       <div className="relative aspect-video rounded-xl overflow-hidden bg-card border border-border">
                         <iframe
                           src="https://www.youtube.com/embed/8UwrcVIyvWA"
@@ -206,13 +206,13 @@ const AICrashCourse = () => {
 
 
           {/* What You'll Learn */}
-          <section className="py-20 px-4 bg-card/30">
+          <section className="py-24 px-4 bg-card/30">
             <div className="container mx-auto max-w-6xl">
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-600">
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-600">
                 What You'll Learn
               </h2>
               
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {[
                   {
                     icon: Sparkles,
@@ -237,11 +237,11 @@ const AICrashCourse = () => {
                 ].map((item, index) => (
                   <div 
                     key={index}
-                    className="bg-card border border-border rounded-lg p-6 hover:border-primary/50 transition-colors animate-in fade-in slide-in-from-bottom-8 duration-1000"
+                    className="bg-card border border-border rounded-lg p-8 hover:border-primary/50 transition-colors animate-in fade-in slide-in-from-bottom-8 duration-1000"
                     style={{ animationDelay: `${800 + index * 100}ms` }}
                   >
-                    <item.icon className="w-10 h-10 text-primary mb-4" />
-                    <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
+                    <item.icon className="w-10 h-10 text-primary mb-6" />
+                    <h3 className="text-lg font-semibold mb-3">{item.title}</h3>
                     <p className="text-sm text-muted-foreground">{item.description}</p>
                   </div>
                 ))}
@@ -250,10 +250,10 @@ const AICrashCourse = () => {
           </section>
 
           {/* Interactive Modules Section */}
-          <section className="py-20 px-4">
+          <section className="py-24 px-4">
             <div className="container mx-auto max-w-6xl">
-              <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-800">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <div className="text-center mb-20 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-800">
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">
                   Course Modules
                 </h2>
                 <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -261,32 +261,32 @@ const AICrashCourse = () => {
                 </p>
               </div>
 
-              <div className="space-y-6">
+              <div className="space-y-8">
                 {modules.map((module, index) => {
                   const moduleNumber = index + 1;
 
                   return (
                     <div 
                       key={index}
-                      className="bg-card border border-border rounded-xl p-6 hover:border-primary/50 hover:shadow-lg transition-all duration-300 cursor-pointer animate-in fade-in slide-in-from-bottom-8 duration-1000"
+                      className="bg-card border border-border rounded-xl p-8 hover:border-primary/50 hover:shadow-lg transition-all duration-300 cursor-pointer animate-in fade-in slide-in-from-bottom-8 duration-1000"
                       style={{ animationDelay: `${1000 + index * 100}ms` }}
                       onClick={() => handleModuleClick(moduleNumber)}
                     >
-                      <div className="flex items-start gap-4">
+                      <div className="flex items-start gap-6">
                         {/* Module Icon */}
-                        <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                          <module.icon className="w-6 h-6 text-primary" />
+                        <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center">
+                          <module.icon className="w-7 h-7 text-primary" />
                         </div>
 
                         {/* Module Content */}
                         <div className="flex-1">
-                          <div className="flex items-center gap-3 mb-2">
+                          <div className="flex items-center gap-3 mb-3">
                             <span className="text-sm font-medium text-muted-foreground">
                               {module.module}
                             </span>
                           </div>
                           
-                          <h3 className="text-xl font-bold mb-2 text-foreground">
+                          <h3 className="text-xl font-bold mb-3 text-foreground">
                             {module.title}
                           </h3>
                           
@@ -301,28 +301,28 @@ const AICrashCourse = () => {
               </div>
 
               {/* Course Benefits */}
-              <div className="mt-16 bg-gradient-to-r from-primary/5 to-accent/5 rounded-2xl p-8 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-1800">
-                <h3 className="text-2xl font-bold text-center mb-8">Why This Course Works</h3>
-                <div className="grid md:grid-cols-3 gap-6">
+              <div className="mt-20 bg-gradient-to-r from-primary/5 to-accent/5 rounded-2xl p-10 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-1800">
+                <h3 className="text-2xl font-bold text-center mb-10">Why This Course Works</h3>
+                <div className="grid md:grid-cols-3 gap-8">
                   <div className="text-center">
-                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <BookOpen className="w-6 h-6 text-primary" />
+                    <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-6">
+                      <BookOpen className="w-7 h-7 text-primary" />
                     </div>
-                    <h4 className="font-semibold mb-2">Progressive Learning</h4>
+                    <h4 className="font-semibold mb-3">Progressive Learning</h4>
                     <p className="text-sm text-muted-foreground">Each module builds on the previous one, ensuring steady skill development</p>
                   </div>
                   <div className="text-center">
-                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <Zap className="w-6 h-6 text-primary" />
+                    <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-6">
+                      <Zap className="w-7 h-7 text-primary" />
                     </div>
-                    <h4 className="font-semibold mb-2">Hands-on Projects</h4>
+                    <h4 className="font-semibold mb-3">Hands-on Projects</h4>
                     <p className="text-sm text-muted-foreground">Real-world projects in every module to reinforce learning</p>
                   </div>
                   <div className="text-center">
-                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <Award className="w-6 h-6 text-primary" />
+                    <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-6">
+                      <Award className="w-7 h-7 text-primary" />
                     </div>
-                    <h4 className="font-semibold mb-2">Industry Ready</h4>
+                    <h4 className="font-semibold mb-3">Industry Ready</h4>
                     <p className="text-sm text-muted-foreground">Skills that directly apply to professional AI development</p>
                   </div>
                 </div>
@@ -331,16 +331,16 @@ const AICrashCourse = () => {
           </section>
 
               {/* CTA Section */}
-              <section className="py-20 px-4">
+              <section className="py-24 px-4">
                 <div className="container mx-auto max-w-3xl text-center">
-                  <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                  <h2 className="text-3xl md:text-4xl font-bold mb-8">
                     Ready to Start Your AI Journey?
                   </h2>
-                  <p className="text-lg text-muted-foreground mb-8">
+                  <p className="text-lg text-muted-foreground mb-12">
                     Join hundreds of developers who are already building the future with AI.
                   </p>
                   
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                  <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                     {/* Primary CTA */}
                     <Button variant="cta" size="lg" className="w-full sm:w-auto">
                       Enroll Now - $99
