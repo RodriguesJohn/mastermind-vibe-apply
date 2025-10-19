@@ -3,19 +3,23 @@ import { Code2, ChevronDown, Menu } from "lucide-react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { useState } from "react";
+
 export const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  return <nav className="sticky top-0 left-0 right-0 z-50 border-b border-border/40 bg-background/95 backdrop-blur-lg">
+  
+  return (
+    <nav className="sticky top-0 left-0 right-0 z-50 border-b border-border/40 bg-background/98 backdrop-blur-xl">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-12">
-          <div className="flex items-center gap-2">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo/Brand */}
+          <a href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
             <Code2 className="w-6 h-6 text-primary" />
             <span className="font-bold text-lg">AI Design Academy</span>
-          </div>
+          </a>
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6">
-            <a href="/cohort" className="text-sm font-medium hover:text-primary transition-colors">
+            <a href="/" className="text-sm font-medium hover:text-primary transition-colors">
               Cohort
             </a>
             <a href="#playbook" className="text-sm font-medium hover:text-primary transition-colors">
@@ -35,11 +39,6 @@ export const Navigation = () => {
                     Vibe Coding Mastermind
                   </a>
                 </DropdownMenuItem>
-                {/* <DropdownMenuItem asChild>
-                  <a href="/projects" className="cursor-pointer">
-                    Projects
-                  </a>
-                 </DropdownMenuItem> */}
                 <DropdownMenuItem asChild>
                   <a href="/tools" className="cursor-pointer">
                     Tools
@@ -64,12 +63,12 @@ export const Navigation = () => {
               <SheetHeader>
                 <SheetTitle className="flex items-center gap-2">
                   <Code2 className="w-5 h-5 text-primary" />
-                  Vibe Coding
+                  AI Design Academy
                 </SheetTitle>
               </SheetHeader>
               
               <nav className="flex flex-col gap-4 mt-8">
-                <a href="/cohort" className="text-base font-medium hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
+                <a href="/" className="text-base font-medium hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
                   Cohort
                 </a>
                 <a href="#playbook" className="text-base font-medium hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
@@ -97,5 +96,6 @@ export const Navigation = () => {
           </Sheet>
         </div>
       </div>
-    </nav>;
+    </nav>
+  );
 };

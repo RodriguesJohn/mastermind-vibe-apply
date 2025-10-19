@@ -1,5 +1,6 @@
-import { Navigation } from "@/components/Navigation";
-import { HeroSection } from "@/components/HeroSection";
+import React from "react";
+import { Navigation } from "../components/Navigation";
+import { HeroSection } from "../components/HeroSection";
 import { Helmet } from "react-helmet";
 
 const Index = () => {

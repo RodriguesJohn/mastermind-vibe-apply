@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Rainbow animation for buttons */
+@keyframes rainbow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-rainbow {
+  animation: rainbow 3s ease-in-out infinite;
+}
+
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */
@@ -18,6 +35,13 @@ All colors MUST be HSL.
     --popover-foreground: 0 0% 100%;
 
     --primary: 226 92% 55%;
+
+    /* Rainbow colors */
+    --color-1: 0 84% 60%;
+    --color-2: 30 84% 60%;
+    --color-3: 60 84% 60%;
+    --color-4: 120 84% 60%;
+    --color-5: 240 84% 60%;
     --primary-foreground: 0 0% 100%;
     
     --primary-glow: 226 92% 65%;

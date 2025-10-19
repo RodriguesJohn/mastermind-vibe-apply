@@ -4,22 +4,18 @@ import { ArrowRight } from "lucide-react";
 
 export const AIHeaderSection = () => {
   return (
-    <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden border-b border-border/40">
+    <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden border-b border-border/40">
       {/* Background */}
       <div className="absolute inset-0 z-0 bg-background" />
       
       {/* Content */}
-      <div className="relative z-10 px-4 md:px-10 lg:px-[120px] py-24 md:py-32">
-        <div className="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+      <div className="relative z-10 px-4 md:px-10 lg:px-[120px] py-16 md:py-20">
+        <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left Column - Text Content */}
-          <div className="space-y-8 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-semibold tracking-tight">
-              <span className="text-white">
-                AI Mastery for Product Designers
-              </span>
-              <br />
-              <span className="text-white">
-                4-Week Cohort
+          <div className="space-y-6 animate-fade-in order-2 lg:order-1">
+            <h2 className="text-4xl md:text-4.5xl font-semibold tracking-tight">
+              <span className="text-white block">
+                AI Mastery for Designers & Product Leaders 5-Week Cohort
               </span>
             </h2>
             
@@ -28,18 +24,18 @@ export const AIHeaderSection = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center pt-6">
-              <Button variant="cta" size="xl" className="group">
+              <Button variant="default" size="xl" className="group bg-blue-600 hover:bg-blue-700 text-white">
                 Enroll Today
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button variant="outline" size="xl" className="border-primary/30 hover:bg-primary/10">
-                Book a Call
+                Login
               </Button>
             </div>
           </div>
 
           {/* Right Column - Particle Sphere */}
-          <div className="hidden lg:flex items-center justify-center">
+          <div className="flex items-center justify-center order-1 lg:order-2">
             <ParticleSphere />
           </div>
         </div>
