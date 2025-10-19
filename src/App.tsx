@@ -19,8 +19,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Cohort />} />
-          <Route path="/index" element={<Index />} />
+          <Route path="/" element={<Index />} />
           <Route path="/cohort" element={<Cohort />} />
           <Route path="/ai-crash-course" element={<AICrashCourse />} />
           <Route path="/projects" element={<Projects />} />
