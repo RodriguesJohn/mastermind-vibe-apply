@@ -49,6 +49,10 @@ export const InstructorSection = () => {
                   alt="John Rodrigues - Senior Product Designer"
                   className="w-full h-full object-cover"
                 />
+                {/* Edge blur and fade overlay */}
+                <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-black/20" />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/20" />
+                <div className="absolute inset-0 backdrop-blur-[0.5px]" />
               </div>
             </div>
           </div>
