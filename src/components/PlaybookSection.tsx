@@ -18,9 +18,11 @@ export const PlaybookSection = () => {
                 <p className="text-muted-foreground leading-relaxed mb-6">
                   Join 1,000+ design leaders and frontiers staying ahead in the age of AI. Each week, you'll get access to curated insights.
                 </p>
-                <Button variant="cta" size="lg" className="group">
-                  Get the Playbook
-                  <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+                <Button variant="cta" size="lg" className="group" asChild>
+                  <a href="https://johnrodrigues.substack.com/" target="_blank" rel="noopener noreferrer">
+                    Get the Playbook
+                    <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+                  </a>
                 </Button>
               </div>
 
