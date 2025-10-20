@@ -2,13 +2,15 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Users, ArrowRight } from "lucide-react";
 import playbookCover from "@/assets/Playbook.webp";
+import { BlurFade } from "@/components/BlurFade";
 
 export const PlaybookSection = () => {
   return (
     <section className="py-24 md:py-32 bg-background">
       <div className="px-4 md:px-10 lg:px-[120px]">
         <div className="max-w-[1200px] mx-auto">
-          <Card className="p-8 md:p-12 bg-card/50 border-border/40">
+          <BlurFade delay={0.2} duration={0.8} yOffset={20} blur="8px">
+            <Card className="p-8 md:p-12 bg-card/50 border-border/40">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div>
@@ -63,9 +65,10 @@ export const PlaybookSection = () => {
                   className="w-full h-auto rounded-lg shadow-2xl"
                 />
               </div>
+              </div>
             </div>
-          </div>
-          </Card>
+            </Card>
+          </BlurFade>
         </div>
       </div>
     </section>

@@ -1,16 +1,20 @@
 import { Card } from "@/components/ui/card";
 import instructorImage from "@/assets/John.png";
+import { BlurFade } from "@/components/BlurFade";
 
 export const InstructorSection = () => {
   return (
     <section className="py-24 md:py-32 bg-background">
       <div className="px-4 md:px-10 lg:px-[120px]">
         <div className="max-w-[1200px] mx-auto">
-          <h2 className="text-4xl md:text-5xl font-semibold text-center mb-16 tracking-tight">
-            Know Your Instructor
-          </h2>
+          <BlurFade delay={0.2} duration={0.8} yOffset={20} blur="8px">
+            <h2 className="text-4xl md:text-5xl font-semibold text-center mb-16 tracking-tight">
+              Know Your Instructor
+            </h2>
+          </BlurFade>
           
-          <Card className="p-8 md:p-12 bg-card/50 border-border/40">
+          <BlurFade delay={0.4} duration={0.8} yOffset={15} blur="6px">
+            <Card className="p-8 md:p-12 bg-card/50 border-border/40">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h2 className="text-4xl md:text-5xl font-semibold tracking-tight">
@@ -40,9 +44,10 @@ export const InstructorSection = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
+              </div>
             </div>
-          </div>
-          </Card>
+            </Card>
+          </BlurFade>
         </div>
       </div>
     </section>

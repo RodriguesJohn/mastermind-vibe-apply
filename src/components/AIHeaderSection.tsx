@@ -16,7 +16,7 @@ export const AIHeaderSection = () => {
               {/* Left Column - Text Content */}
               <div className="space-y-6 animate-fade-in order-2 lg:order-1">
                 <BlurFade delay={0.2} duration={0.8} yOffset={20} blur="8px">
-                  <h2 className="text-4xl md:text-4.5xl font-semibold tracking-tight leading-[1.1]">
+                  <h2 className="text-4xl md:text-4.5xl font-semibold tracking-tight leading-[1.4]">
                     <span className="text-white block">
                       AI Mastery for Designers & Product Leaders 5-Week Cohort
                     </span>

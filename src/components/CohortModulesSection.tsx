@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Diamond, Target, Sparkles, Users } from "lucide-react";
+import { BlurFade } from "@/components/BlurFade";
 
 const modules = [
   {
@@ -39,19 +40,20 @@ export const CohortModulesSection = () => {
     <section className="py-24 md:py-32 bg-background">
       <div className="px-4 md:px-10 lg:px-[120px]">
         <div className="max-w-[1200px] mx-auto">
-          <h2 className="text-4xl md:text-5xl font-semibold text-center mb-16 tracking-tight">
-            What We Have for You
-          </h2>
+          <BlurFade delay={0.2} duration={0.8} yOffset={20} blur="8px">
+            <h2 className="text-4xl md:text-5xl font-semibold text-center mb-16 tracking-tight">
+              What We Have for You
+            </h2>
+          </BlurFade>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {modules.map((module, index) => {
             const IconComponent = module.icon;
             return (
-              <Card 
-                key={index}
-                className="p-8 bg-card/50 border-border/40 hover:border-primary/30 transition-all duration-300 animate-fade-in group"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
+              <BlurFade key={index} delay={0.4 + (index * 0.1)} duration={0.8} yOffset={15} blur="6px">
+                <Card 
+                  className="p-8 bg-card/50 border-border/40 hover:border-primary/30 transition-all duration-300 group"
+                >
                 <div className="mb-6">
                   <div className="w-14 h-14 rounded-full border-2 border-border/40 flex items-center justify-center group-hover:border-primary/50 transition-colors">
                     <IconComponent className="w-6 h-6 text-foreground" />
@@ -66,6 +68,7 @@ export const CohortModulesSection = () => {
                   {module.description}
                 </p>
               </Card>
+              </BlurFade>
             );
           })}
           </div>
