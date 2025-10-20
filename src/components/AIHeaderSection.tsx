@@ -26,9 +26,11 @@ export const AIHeaderSection = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center pt-6">
-              <Button variant="default" size="xl" className="group bg-white/10 text-white backdrop-blur-sm hover:bg-white/20 border border-white/10">
-                Enroll Today
-                <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+              <Button variant="default" size="xl" className="group bg-white/10 text-white backdrop-blur-sm hover:bg-white/20 border border-white/10" asChild>
+                <a href="https://maven.com/productlearnio/aiproductdesignmasterycohort" target="_blank" rel="noopener noreferrer">
+                  Enroll Today
+                  <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+                </a>
               </Button>
               <Button variant="outline" size="xl" className="border-white/10 text-white/80 hover:bg-white/5" asChild>
                 <a href="https://cal.com/aidesignacademy/15min?overlayCalendar=true" target="_blank" rel="noopener noreferrer">
