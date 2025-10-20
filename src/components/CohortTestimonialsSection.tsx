@@ -65,7 +65,7 @@ export const CohortTestimonialsSection = () => {
               </p>
               
               <div className="flex items-center gap-4 pt-4 border-t border-border/40">
-                <Avatar className="w-12 h-12">
+                <Avatar className="w-16 h-16">
                   {testimonial.image ? (
                     <AvatarImage src={testimonial.image} alt={testimonial.name} />
                   ) : null}
