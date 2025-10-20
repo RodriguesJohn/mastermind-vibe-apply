@@ -41,6 +41,12 @@ const testimonials = [
     content: "John delivered everything he listed and more. Always accessible, he creates additional tutorials on demand and is ready to help, explain, and mentor with patience and care.",
     initials: "A",
     image: AviadImage
+  },
+  {
+    name: "ÌníOlúwa",
+    role: "Senior Product Designer at Intercom",
+    content: "There's so much I could say about this course, but the biggest takeaway has been how much it's pushed me to explore and grow. John has put in an incredible amount of effort and it shows. Every session has been engaging, interactive, and deeply impactful. I've gone from not knowing how to code to building my own AI agent and now creating an app. WHAT?! Thank you, John, for being such a generous teacher and for expanding my horizons!",
+    initials: "Ì"
   }
 ];
 
