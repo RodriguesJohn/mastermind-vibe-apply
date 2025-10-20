@@ -9,7 +9,7 @@ export const Navigation = () => {
   
   return (
     <nav className="sticky top-0 left-0 right-0 z-50 border-b border-border/40 bg-background/98 backdrop-blur-xl">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo/Brand */}
           <a href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
@@ -22,9 +22,7 @@ export const Navigation = () => {
             <a href="/" className="text-sm font-medium hover:text-primary transition-colors">
               Cohort
             </a>
-            <a href="#playbook" className="text-sm font-medium hover:text-primary transition-colors">
-              Blog
-            </a>
+           
             <a href="/ai-crash-course" className="text-sm font-medium hover:text-primary transition-colors">
               AI Crash Course
             </a>
@@ -35,7 +33,7 @@ export const Navigation = () => {
               <DropdownMenuContent align="start" className="w-56">
                 <DropdownMenuItem asChild>
                   <a href="/index" className="cursor-pointer">
-                    Vibe Coding Mastermind
+                    Membership
                   </a>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
@@ -80,7 +78,7 @@ export const Navigation = () => {
                 <div className="border-t border-border pt-4 mt-2">
                   <p className="text-sm text-muted-foreground mb-3">More</p>
                   <a href="/index" className="text-base font-medium hover:text-primary transition-colors py-2 block" onClick={() => setMobileMenuOpen(false)}>
-                    Vibe Coding Mastermind
+                    Membership
                   </a>
                   <a href="/tools" className="text-base font-medium hover:text-primary transition-colors py-2 block" onClick={() => setMobileMenuOpen(false)}>
                     Tools

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { ParticleSphere } from "@/components/ParticleSphere";
+import { BlurFade } from "@/components/BlurFade";
 import cursorLogo from "@/assets/logos/cursor.png";
 import lovableLogo from "@/assets/logos/lovable.png";
 import v0Logo from "@/assets/logos/v0.png";
@@ -24,55 +25,36 @@ export const HeroSection = () => {
               </span>
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-semibold tracking-tight">
-              Vibe Coding
-              <span className="block bg-gradient-to-r from-primary via-primary-glow to-accent bg-clip-text text-transparent animate-gradient-shift bg-[length:200%_auto]">
-                Mastermind
-              </span>
-            </h1>
+            <BlurFade delay={0.1} duration={0.8} yOffset={14} blur="10px">
+              <h1 className="text-3xl md:text-6xl font-semibold tracking-tight">
+                AI Academy
+                <span className="block bg-gradient-to-r from-primary via-primary-glow to-accent bg-clip-text text-transparent animate-gradient-shift bg-[length:200%_auto]">
+                  Membership.
+                </span>
+              </h1>
+            </BlurFade>
             
-            <ul className="text-lg text-foreground max-w-2xl space-y-3">
-              <li>✅ Live sessions with industry experts building cutting-edge AI experiences.</li>
-              <li>✅ Bi-weekly Saturday vibe coding masterclasses (1.5 hours) with access to growing recorded library.</li>
-              <li>✅ Showcase your projects, get feedback, and learn from peers.</li>
-              <li>✅ Join a community building the next wave of AI-powered apps.</li>
-            </ul>
+            <BlurFade delay={0.25} duration={0.8} yOffset={12} blur="8px">
+              <ul className="text-lg text-foreground max-w-2xl space-y-3">
+                <li>✅ Live sessions with industry experts & access recorded library.</li>
+                <li>✅ Bi-weekly live Q&A and office hours. See behind the scenes and unlock your next steps</li>
+                <li>✅ Showcase your projects, get feedback, and learn from peers.</li>
+                <li>✅ Join a community building the next wave of AI-powered services & products.</li>
+                <li>✅ Briefing on the latest tools, updates, and industry trends</li>
+              </ul>
+            </BlurFade>
             
-            <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center pt-6">
-              <Button variant="cta" size="xl" className="group" asChild>
-                <a href="https://tally.so/r/wLQokj" target="_blank" rel="noopener noreferrer">
-                  Request Invite
-                  <ArrowRight className="group-hover:translate-x-1 transition-transform" />
-                </a>
-              </Button>
-            </div>
-            
-            {/* AI Coding Tools */}
-            <div className="flex items-center gap-4 flex-wrap">
-              <span className="text-sm text-muted-foreground">Learn tools like</span>
-              <div className="flex items-center gap-4">
-                <div className="flex items-center gap-1.5 text-sm text-foreground/70">
-                  <img src={cursorLogo} alt="Cursor" className="w-5 h-5" />
-                  <span>Cursor</span>
-                </div>
-                <div className="flex items-center gap-1.5 text-sm text-foreground/70">
-                  <img src={lovableLogo} alt="Lovable" className="w-5 h-5" />
-                  <span>Lovable</span>
-                </div>
-                <div className="flex items-center gap-1.5 text-sm text-foreground/70">
-                  <img src={v0Logo} alt="v0" className="w-5 h-5" />
-                  <span>v0</span>
-                </div>
-                <div className="flex items-center gap-1.5 text-sm text-foreground/70">
-                  <img src={boltLogo} alt="Bolt" className="w-5 h-5" />
-                  <span>Bolt</span>
-                </div>
-                <div className="flex items-center gap-1.5 text-sm text-foreground/70">
-                  <img src={claudeLogo} alt="Claude" className="w-5 h-5" />
-                  <span>Claude</span>
-                </div>
+            <BlurFade delay={0.35} duration={0.8} yOffset={10} blur="6px">
+              <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center pt-6">
+                <Button variant="cta" size="xl" className="group" asChild>
+                  <a href="https://tally.so/r/wLQokj" target="_blank" rel="noopener noreferrer">
+                    Request Invite
+                    <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+                  </a>
+                </Button>
               </div>
-            </div>
+            </BlurFade>
+            
           </div>
 
           {/* Right Column - Particle Sphere */}
