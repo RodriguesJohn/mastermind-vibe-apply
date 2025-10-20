@@ -27,11 +27,11 @@ export const PlaybookSection = () => {
               </div>
 
               <div className="grid grid-cols-2 gap-4">
-                <Card className="p-6 bg-card/30 border-border/40 text-center">
+                <Card className="p-6 bg-card/30 border-border/40 text-center animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300">
                   <div className="text-4xl font-bold mb-2">1,400</div>
                   <div className="text-sm text-muted-foreground">Ready by</div>
                 </Card>
-                <Card className="p-6 bg-card/30 border-border/40 text-center">
+                <Card className="p-6 bg-card/30 border-border/40 text-center animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500">
                   <div className="text-4xl font-bold mb-2">5,000</div>
                   <div className="text-sm text-muted-foreground">Views</div>
                 </Card>
