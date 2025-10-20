@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Users, ArrowRight } from "lucide-react";
-import playbookCover from "@/assets/ai-playbook-cover.jpg";
+import playbookCover from "@/assets/Playbook.webp";
 
 export const PlaybookSection = () => {
   return (
