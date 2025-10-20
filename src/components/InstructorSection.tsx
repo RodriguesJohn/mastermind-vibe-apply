@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { UserCheck } from "lucide-react";
-import instructorImage from "@/assets/john-rodrigues.jpg";
+import instructorImage from "@/assets/John.png";
 
 export const InstructorSection = () => {
   return (
