@@ -5,6 +5,7 @@ import SnehImage from "@/assets/Sneh.webp";
 import SonaliImage from "@/assets/Sonali.jpeg";
 import KennyImage from "@/assets/Kenny.jpeg";
 import AviadImage from "@/assets/Avaid.jpeg";
+import IniImage from "@/assets/Indi.jpeg";
 
 const testimonials = [
   {
@@ -46,7 +47,8 @@ const testimonials = [
     name: "ÌníOlúwa",
     role: "Senior Product Designer at Intercom",
     content: "There's so much I could say about this course, but the biggest takeaway has been how much it's pushed me to explore and grow. John has put in an incredible amount of effort and it shows. Every session has been engaging, interactive, and deeply impactful. I've gone from not knowing how to code to building my own AI agent and now creating an app. WHAT?! Thank you, John, for being such a generous teacher and for expanding my horizons!",
-    initials: "Ì"
+    initials: "Ì",
+    image: IniImage
   }
 ];
 
