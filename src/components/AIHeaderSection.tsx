@@ -14,13 +14,11 @@ export const AIHeaderSection = () => {
         <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left Column - Text Content */}
           <div className="space-y-6 animate-fade-in order-2 lg:order-1">
-            <h2 className="text-4xl md:text-5xl font-semibold tracking-tight leading-[1.1]">
+            <h2 className="text-4xl md:text-4.5xl font-semibold tracking-tight leading-[1.1]">
               <span className="text-white block">
-                AI Mastery for Designers & Product Leaders
+                AI Mastery for Designers & Product Leaders 5-Week Cohort
               </span>
-              <span className="text-white block">
-                5-Week Cohort
-              </span>
+            
             </h2>
             
             <p className="text-xl md:text-2xl text-white/75 max-w-2xl leading-relaxed">
@@ -32,8 +30,10 @@ export const AIHeaderSection = () => {
                 Enroll Today
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button variant="outline" size="xl" className="border-white/10 text-white/80 hover:bg-white/5">
-                Login
+              <Button variant="outline" size="xl" className="border-white/10 text-white/80 hover:bg-white/5" asChild>
+                <a href="https://cal.com/aidesignacademy/15min?overlayCalendar=true" target="_blank" rel="noopener noreferrer">
+                  Book a Call
+                </a>
               </Button>
             </div>
           </div>
