@@ -1,8 +1,6 @@
 import { ParticleSphere } from "@/components/ParticleSphere";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { Canvas } from "@react-three/fiber";
-import { ShaderPlane, EnergyRing } from "@/components/ShaderBackground";
 
 export const AIHeaderSection = () => {
   return (
@@ -10,24 +8,18 @@ export const AIHeaderSection = () => {
       {/* Background */}
       <div className="absolute inset-0 z-0 bg-background" />
       
-      {/* Shader Background */}
-      <div className="absolute inset-0 z-1">
-        <Canvas camera={{ position: [0, 0, 2], fov: 75 }}>
-          <ShaderPlane position={[0, 0, -1]} color1="#3B82F6" color2="#8B5CF6" />
-          <EnergyRing radius={1.5} position={[0, 0, -0.5]} />
-        </Canvas>
-      </div>
-      
       {/* Content */}
       <div className="relative z-10 px-4 md:px-10 lg:px-[120px] py-16 md:py-20">
         <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left Column - Text Content */}
           <div className="space-y-6 animate-fade-in order-2 lg:order-1">
-            <h2 className="text-4xl md:text-4.5xl font-medium tracking-tight leading-[1.4]">
+            <h2 className="text-4xl md:text-5xl font-semibold tracking-tight leading-[1.1]">
               <span className="text-white block">
-                AI Mastery for Designers & Product Leaders 5-Week Cohort
+                AI Mastery for Designers & Product Leaders
               </span>
-    
+              <span className="text-white block">
+                5-Week Cohort
+              </span>
             </h2>
             
             <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed">
