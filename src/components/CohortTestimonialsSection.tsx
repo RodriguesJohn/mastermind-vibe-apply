@@ -1,6 +1,10 @@
 import { Card } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import LindaImage from "@/assets/Linda.jpeg";
+import SnehImage from "@/assets/Sneh.webp";
+import SonaliImage from "@/assets/Sonali.jpeg";
+import KennyImage from "@/assets/Kenny.jpeg";
+import AviadImage from "@/assets/Avaid.jpeg";
 
 const testimonials = [
   {
@@ -14,25 +18,29 @@ const testimonials = [
     name: "Sneh",
     role: "UX Designer",
     content: "Taking the AI Design Masterclass with John Rodrigues has been an incredibly inspiring experience. John is calm, insightful, and deeply attuned to emerging design trends. I joined this cohort to understand the foundations of AI, and his strategic frameworks and live sessions helped me think like both a strategist and a solutionist. The theory was never dull—concise, clear, and the perfect nudge to explore further. From hands-on agent-building sessions to creative lab-style explorations of the latest AI tools, every session felt like a collaborative discovery. The small cohort offered meaningful one-on-one attention and genuine discussions that often ran overtime (and no one minded!). I came here to learn, but left with motivation, clarity, and a supportive community of designers to grow with.",
-    initials: "S"
+    initials: "S",
+    image: SnehImage
   },
   {
     name: "Sonali",
     role: "Sr.Product Designer at JPMorgan Chase",
     content: "The most valuable part of this cohort was the hands-on experience with new AI tools. John emphasizes practical application over lectures, which made the material immediately useful. I'm more confident in the subject and excited to deepen my expertise. I'm eager to apply this foundation to my career as a growth opportunity.",
-    initials: "So"
+    initials: "So",
+    image: SonaliImage
   },
   {
     name: "Kenneth (Ken) Hargrove",
     role: "Product Designer @CoStar",
     content: "As a Product Designer moving into the fast-moving AI space, this cohort has given me the foundation to understand AI at a high level. I've learned about more tools to leverage in my design process. I also walked away with a foundational understanding of how to design human-centered AI experiences. I highly recommend this course",
-    initials: "KH"
+    initials: "KH",
+    image: KennyImage
   },
   {
     name: "Aviad",
     role: "Product Designer",
     content: "John delivered everything he listed and more. Always accessible, he creates additional tutorials on demand and is ready to help, explain, and mentor with patience and care.",
-    initials: "A"
+    initials: "A",
+    image: AviadImage
   }
 ];
 
