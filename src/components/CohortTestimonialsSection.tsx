@@ -1,12 +1,14 @@
 import { Card } from "@/components/ui/card";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import LindaImage from "@/assets/Linda.jpeg";
 
 const testimonials = [
   {
     name: "Linda",
     role: "Principal Product Designer, Accessibility Specialist JPMorgan Chase",
     content: "This is the second AI course I've taken this year. My first course was more strategy-focused and geared toward business and product owners, which was helpful for understanding AI at a high level. John's course is different—it's practical, with demos and real encouragement to explore different AI tools specifically for designers. John genuinely cares about whether we're getting value out of this. His enthusiasm for AI design feels authentic, and it's contagious. I've actually used what I learned here—creating content with AI and exploring how to build a Figma plugin with AI assistance. That hands-on approach made all the difference. One of the highlights was when John brought in well-known AI design experts to talk with us directly. Getting to ask them questions and hear their real-world insights was unexpected and incredibly valuable. Our Slack channel has been surprisingly active—people sharing what they're building, which really speaks to the supportive environment John's created. He's managed to pack in a ton of practical content while keeping everything approachable and encouraging. If you're a UX professional who wants to actually use AI tools in your work, this is the course to take.",
-    initials: "L"
+    initials: "L",
+    image: LindaImage
   },
   {
     name: "Sneh",
@@ -56,6 +58,9 @@ export const CohortTestimonialsSection = () => {
               
               <div className="flex items-center gap-4 pt-4 border-t border-border/40">
                 <Avatar className="w-12 h-12">
+                  {testimonial.image ? (
+                    <AvatarImage src={testimonial.image} alt={testimonial.name} />
+                  ) : null}
                   <AvatarFallback className="bg-primary/10 text-primary font-semibold">
                     {testimonial.initials}
                   </AvatarFallback>
