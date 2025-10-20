@@ -150,23 +150,7 @@ const fragmentShader = `
   
   void main() {
     vec2 uv = vUv * 2.0 - 1.0; uv.y *= -1.0;
-    vec4 pattern = cppn_fn(uv, 0.1 * sin(0.3 * iTime), 0.1 * sin(0.69 * iTime), 0.1 * sin(0.44 * iTime));
-    
-    // Map neural network output to blue gradient
-    float intensity = (pattern.r + pattern.g + pattern.b) / 3.0;
-    
-    // Create blue gradient: deep blue to bright blue to cyan
-    vec3 blue1 = vec3(0.0, 0.2, 0.8);  // Deep blue
-    vec3 blue2 = vec3(0.2, 0.6, 1.0);  // Bright blue  
-    vec3 blue3 = vec3(0.0, 0.8, 1.0);  // Cyan
-    
-    vec3 color = mix(blue1, blue2, intensity);
-    color = mix(color, blue3, intensity * intensity);
-    
-    // Add some white highlights for depth
-    color = mix(color, vec3(1.0), pattern.r * 0.3);
-    
-    gl_FragColor = vec4(color, pattern.a);
+    gl_FragColor = cppn_fn(uv, 0.1 * sin(0.3 * iTime), 0.1 * sin(0.69 * iTime), 0.1 * sin(0.44 * iTime));
   }
 `;
 
