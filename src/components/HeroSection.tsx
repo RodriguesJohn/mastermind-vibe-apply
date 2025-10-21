@@ -26,7 +26,7 @@ export const HeroSection = () => {
             </div>
             
             <BlurFade delay={0.1} duration={0.8} yOffset={14} blur="10px">
-              <h1 className="text-3xl md:text-6xl font-semibold tracking-tight">
+              <h1 className="text-2xl md:text-4xl font-semibold tracking-tight">
                 AI Academy
                 <span className="block bg-gradient-to-r from-primary via-primary-glow to-accent bg-clip-text text-transparent animate-gradient-shift bg-[length:200%_auto]">
                   Membership.
