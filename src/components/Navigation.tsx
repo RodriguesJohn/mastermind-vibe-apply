@@ -41,6 +41,11 @@ export const Navigation = () => {
                     Tools
                   </a>
                 </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <a href="/talent-pool" className="cursor-pointer">
+                    Talent Hub
+                  </a>
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
@@ -82,6 +87,9 @@ export const Navigation = () => {
                   </a>
                   <a href="/tools" className="text-base font-medium hover:text-primary transition-colors py-2 block" onClick={() => setMobileMenuOpen(false)}>
                     Tools
+                  </a>
+                  <a href="/talent-pool" className="text-base font-medium hover:text-primary transition-colors py-2 block" onClick={() => setMobileMenuOpen(false)}>
+                    Talent Hub
                   </a>
                 </div>
 

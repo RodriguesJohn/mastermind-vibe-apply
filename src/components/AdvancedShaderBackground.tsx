@@ -209,7 +209,7 @@ function ShaderBackground() {
   );
   
   return (
-    <div ref={canvasRef} className="bg-black absolute inset-0 -z-10 w-full h-full" aria-hidden>
+    <div ref={canvasRef} className="bg-black fixed inset-0 -z-10 w-screen h-screen" aria-hidden>
       <Canvas
         camera={camera}
         gl={{ antialias: true, alpha: false }}

@@ -6,7 +6,7 @@ import { BlurFade } from "@/components/BlurFade";
 
 export const AIHeaderSection = () => {
   return (
-    <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden border-b border-border/40">
+    <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden border-b border-border/40 w-full">
       {/* Advanced Shader Background */}
       <ShaderBackground />
       

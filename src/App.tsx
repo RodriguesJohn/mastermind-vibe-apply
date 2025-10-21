@@ -8,6 +8,7 @@ import Cohort from "./pages/Cohort";
 import AICrashCourse from "./pages/AICrashCourse";
 import Projects from "./pages/Projects";
 import Tools from "./pages/Tools";
+import TalentPool from "./pages/TalentPool";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/ai-crash-course" element={<AICrashCourse />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/tools" element={<Tools />} />
+          <Route path="/talent-pool" element={<TalentPool />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

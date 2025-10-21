@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import { Sparkles, Zap, BookOpen, Award, Code, Database, Cpu, Globe, Shield, Settings, Rocket, Play, Clock } from "lucide-react";
 import { SparklesText } from "@/components/SparklesText";
 import { BlurFade } from "@/components/BlurFade";
+import BookImage from "@/assets/Book.png";
 
 const AICrashCourse = () => {
   const handleModuleClick = (moduleNumber: number) => {
@@ -16,55 +17,55 @@ const AICrashCourse = () => {
       module: "Part 1",
       title: "How to get started with AI",
       icon: Cpu,
-      description: "Build a solid foundation in artificial intelligence and large language models"
+      description: "Get a clear 5-step roadmap to start your AI journey. Learn exactly where to begin, what to focus on, and how to build momentum fast."
     },
     {
       module: "Part 2",
       title: "What Skills Do You Need to Learn?",
       icon: Code,
-      description: "Master the essential tools that will accelerate your AI development workflow"
+      description: "Get a clear 5-step roadmap to start your AI journey. Learn exactly where to begin, what to focus on, and how to build momentum fast."
     },
     {
       module: "Part 3",
       title: "Learn from Jouney Learning AI",
       icon: Database,
-      description: "Learn to work with embeddings and vector databases for intelligent data retrieval"
+      description: "Learn from my journey of mastering AI , how I stay updated with the latest advancements and how you can apply the same approach to level up your own skills."
     },
     {
       module: "Part 4",
       title: "Core Area of AI to Master",
       icon: Globe,
-      description: "Integrate multiple AI services and manage API costs effectively"
+      description: "Understand the four core areas of AI you need to master. Gain a clear framework to cut through the overwhelm and focus on what truly matters."
     },
     {
       module: "Part 5",
       title: "What is vibe coding and how to use it?",
       icon: Shield,
-      description: "Ensure your AI applications are secure, reliable, and production-ready"
+      description: "Learn how to communicate your ideas through code-based prototyping and build real products. Discover how to make this a core part of your product and design process."
     },
     {
       module: "Part 6",
       title: "What are AI Agents",
       icon: Settings,
-      description: "Optimize your AI applications for performance and scale them effectively"
+      description: "Understand what AI agents are, how they’re shaping modern products and tools, and how you can start building your own."
     },
     {
       module: "Part 7",
       title: "Industry trends and resources to stay updated",
       icon: Rocket,
-      description: "Deploy your AI applications with confidence using modern DevOps practices"
+      description: "Stay ahead by keeping up with the industry’s constant evolution. Learn where to find reliable resources, how to track emerging trends, and how to stay informed as AI and product design rapidly change, so you can adapt, innovate, and lead with confidence."
     },
     {
       module: "Part 8",
       title: "Industry Product Designers Podcast",
       icon: Play,
-      description: "Listen to insights from leading product designers and AI practitioners in the industry"
+      description: "Hear directly from industry experts as they share how they’re designing real-world AI products, tackling challenges, and shaping the future of intelligent experiences."
     },
     {
       module: "Part 9",
       title: "What's Next and Further Resources",
       icon: Clock,
-      description: "Plan your continued learning journey with curated resources and next steps"
+      description: "Learn about the next steps and discover future resources to keep growing your AI skills and continue leveling up in your journey."
     }
   ];
 
@@ -114,12 +115,17 @@ const AICrashCourse = () => {
                       </p>
                     </BlurFade>
 
-                    {/* CTA Button */}
+                    {/* CTA Buttons */}
                     <BlurFade delay={0.4} duration={0.8} yOffset={10} blur="6px">
                       <div className="text-center mb-12">
-                        <Button variant="default" size="lg" className="text-lg">
-                          Enroll Today for $99
-                        </Button>
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                          <Button variant="default" size="lg" className="text-lg">
+                            Enroll Today for $99
+                          </Button>
+                          <Button variant="outline" size="lg" className="text-lg">
+                            Login
+                          </Button>
+                        </div>
                       </div>
                     </BlurFade>
 
@@ -128,7 +134,7 @@ const AICrashCourse = () => {
                       <div className="max-w-4xl mx-auto">
                         <div className="relative aspect-video rounded-xl overflow-hidden bg-card border border-border">
                           <iframe
-                            src="https://www.youtube.com/embed/8UwrcVIyvWA"
+                            src="https://www.youtube.com/embed/6vnUzMOrAPw"
                             title="AI for Designers 101 - Course Introduction"
                             className="w-full h-full"
                             frameBorder="0"
@@ -156,23 +162,24 @@ const AICrashCourse = () => {
                 {[
                   {
                     icon: Sparkles,
-                    title: "AI Fundamentals",
-                    description: "Understanding LLMs, embeddings, and vector databases"
+                    title: "Know where to start",
+                    description: "Get insights on how to get started with AI and discover 5 steps to future-proof your career."
+                
                   },
                   {
                     icon: Zap,
-                    title: "Practical Tools",
-                    description: "Master Cursor, Lovable, and other AI-powered development tools"
+                    title: "Learn about the must-have skills.",
+                    description: "Learn about the must-have skills to become an AI product designer"
                   },
                   {
                     icon: BookOpen,
-                    title: "Real Projects",
-                    description: "Build production-ready AI applications from scratch"
+                    title: "Learn from Journey Learning AI",
+                    description: "Learn about John’s journey to becoming an AI product designer and how he built his career in AI design."
                   },
                   {
                     icon: Award,
-                    title: "Best Practices",
-                    description: "Learn prompt engineering, security, and optimization"
+                    title: "How to Go from Theory to Application ",
+                    description: "Learn how to apply the theories you've learned to real-world projects and build your own AI products."
                   }
                 ].map((item, index) => (
                   <BlurFade key={index} delay={0.2 + index * 0.1} duration={0.8} yOffset={10} blur="6px">
@@ -222,16 +229,16 @@ const AICrashCourse = () => {
                         {/* Module Content */}
                         <div className="flex-1">
                           <div className="flex items-center gap-3 mb-3">
-                            <span className="text-sm font-medium text-muted-foreground">
+                            <span className="text-base font-medium text-muted-foreground">
                               {module.module}
                             </span>
                           </div>
                           
-                          <h3 className="text-xl font-bold mb-3 text-foreground">
+                          <h3 className="text-2xl font-medium mb-3 text-foreground">
                             {module.title}
                           </h3>
                           
-                          <p className="text-sm mb-4 text-muted-foreground">
+                          <p className="text-lg mb-4 text-muted-foreground">
                             {module.description}
                           </p>
                         </div>
@@ -242,31 +249,24 @@ const AICrashCourse = () => {
                 })}
               </div>
 
-              {/* Course Benefits */}
+              {/* Get AI Foundation Ebook */}
               <BlurFade delay={0.3} duration={0.8} yOffset={10} blur="8px">
-              <div className="mt-20 bg-gradient-to-r from-primary/5 to-accent/5 rounded-2xl p-10">
-                <h3 className="text-2xl font-bold text-center mb-10">Why This Course Works</h3>
-                <div className="grid md:grid-cols-3 gap-8">
-                  <div className="text-center">
-                    <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-6">
-                      <BookOpen className="w-7 h-7 text-primary" />
+              <div className="mt-20 bg-card border border-border rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-300">
+                <div className="grid md:grid-cols-2 gap-0">
+                  {/* Ebook Image */}
+                  <div className="bg-white p-12 flex items-center justify-center">
+                    <div className="w-full max-w-xs aspect-[3/4] bg-white rounded-lg shadow-2xl flex items-center justify-center border-2 border-gray-200 overflow-hidden">
+                      <img src={BookImage} alt="AI Foundation Ebook" className="w-full h-full object-cover" />
                     </div>
-                    <h4 className="font-semibold mb-3">Progressive Learning</h4>
-                    <p className="text-sm text-muted-foreground">Each module builds on the previous one, ensuring steady skill development</p>
                   </div>
-                  <div className="text-center">
-                    <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-6">
-                      <Zap className="w-7 h-7 text-primary" />
-                    </div>
-                    <h4 className="font-semibold mb-3">Hands-on Projects</h4>
-                    <p className="text-sm text-muted-foreground">Real-world projects in every module to reinforce learning</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-6">
-                      <Award className="w-7 h-7 text-primary" />
-                    </div>
-                    <h4 className="font-semibold mb-3">Industry Ready</h4>
-                    <p className="text-sm text-muted-foreground">Skills that directly apply to professional AI development</p>
+                  
+                  {/* Content */}
+                  <div className="p-10 flex flex-col justify-center">
+                    <h3 className="text-3xl font-bold mb-4">Bonus: Get an AI Foundation Ebook</h3>
+                    <p className="text-lg text-muted-foreground mb-8">
+                    Included in the course, you’ll get a comprehensive AI Foundations eBook that simplifies the complex world of AI and helps you build the vocabulary to understand the latest advancements written in simple, relatable terms.
+                    </p>
+                  
                   </div>
                 </div>
               </div>
@@ -278,13 +278,13 @@ const AICrashCourse = () => {
               <section className="py-24 px-4">
                 <div className="container mx-auto max-w-3xl text-center">
                   <BlurFade delay={0.1} duration={0.8} yOffset={10} blur="8px">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-8">
+                    <h2 className="text-3xl md:text-4xl font-semibold mb-8">
                       Ready to Start Your AI Journey?
                     </h2>
                   </BlurFade>
                   <BlurFade delay={0.2} duration={0.8} yOffset={10} blur="8px">
                     <p className="text-lg text-muted-foreground mb-12">
-                      Join hundreds of developers who are already building the future with AI.
+                     Enroll today and get started with your AI journey today
                     </p>
                   </BlurFade>
                   
@@ -292,13 +292,11 @@ const AICrashCourse = () => {
                     <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                       {/* Primary CTA */}
                       <Button variant="cta" size="lg" className="w-full sm:w-auto">
-                        Enroll Now - $99
+                        Enroll Today for $99
                       </Button>
                       
                       {/* Secondary CTA */}
-                      <Button variant="outline" size="lg" className="w-full sm:w-auto">
-                        Learn More
-                      </Button>
+                      
                     </div>
                   </BlurFade>
                 </div>
