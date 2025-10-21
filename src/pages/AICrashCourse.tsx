@@ -84,21 +84,21 @@ const AICrashCourse = () => {
         
         <main>
               {/* Course Header */}
-              <section className="py-28 px-4 bg-gradient-to-br from-primary/5 to-accent/5 backdrop-blur-sm">
+              <section className="py-16 sm:py-20 md:py-24 lg:py-28 px-4 sm:px-6 md:px-8 bg-gradient-to-br from-primary/5 to-accent/5 backdrop-blur-sm">
             <div className="container mx-auto max-w-6xl">
               <div className="text-center animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
                 <BlurFade delay={0.1} duration={0.8} yOffset={10} blur="8px">
-                  <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-2 mb-6">
-                    <Sparkles className="w-4 h-4 text-primary" />
-                    <span className="text-sm font-medium text-primary">AI for Designers & Product Leaders</span>
+                  <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-3 py-2 sm:px-4 sm:py-2 mb-4 sm:mb-6">
+                    <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-primary" />
+                    <span className="text-xs sm:text-sm font-medium text-primary">AI for Designers & Product Leaders</span>
                   </div>
                 </BlurFade>
                 
                     <BlurFade delay={0.2} duration={0.8} yOffset={14} blur="10px">
-                      <div className="mb-6">
+                      <div className="mb-4 sm:mb-6">
                         <SparklesText
                           text="AI for Designers 101"
-                          className="text-4xl md:text-6xl font-medium  text-white"
+                          className="text-[40px] sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-medium text-white"
                           sparklesCount={14}
                           colors={{
                             first: "#3B82F6", // Blue
@@ -109,20 +109,20 @@ const AICrashCourse = () => {
                     </BlurFade>
                 
                     <BlurFade delay={0.3} duration={0.8} yOffset={12} blur="8px">
-                      <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-                       Don't know where to start with AI? This course is for you.Provide a clear path to get started with AI, through 
+                      <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-6 sm:mb-8 px-4">
+                       Don't know where to start with AI? This course is for you. Provide a clear path to get started with AI, through 
                        well researched and practical insights.
                       </p>
                     </BlurFade>
 
                     {/* CTA Buttons */}
                     <BlurFade delay={0.4} duration={0.8} yOffset={10} blur="6px">
-                      <div className="text-center mb-12">
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                          <Button variant="default" size="lg" className="text-lg">
+                      <div className="text-center mb-8 sm:mb-12">
+                        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4">
+                          <Button variant="default" size="lg" className="w-full sm:w-auto text-base sm:text-lg">
                             Enroll Today for $99
                           </Button>
-                          <Button variant="outline" size="lg" className="text-lg">
+                          <Button variant="outline" size="lg" className="w-full sm:w-auto text-base sm:text-lg">
                             Login
                           </Button>
                         </div>
@@ -131,7 +131,7 @@ const AICrashCourse = () => {
 
                     {/* YouTube Video */}
                     <BlurFade delay={0.5} duration={0.8} yOffset={8} blur="6px">
-                      <div className="max-w-4xl mx-auto">
+                      <div className="max-w-4xl mx-auto px-4">
                         <div className="relative aspect-video rounded-xl overflow-hidden bg-card border border-border">
                           <iframe
                             src="https://www.youtube.com/embed/6vnUzMOrAPw"
@@ -150,15 +150,15 @@ const AICrashCourse = () => {
 
 
           {/* What You'll Learn */}
-          <section className="py-24 px-4 bg-card/30">
+          <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-card/30">
             <div className="container mx-auto max-w-6xl">
               <BlurFade delay={0.1} duration={0.8} yOffset={10} blur="8px">
-                <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 md:mb-16">
                   What You'll Learn
                 </h2>
               </BlurFade>
               
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
                 {[
                   {
                     icon: Sparkles,
@@ -184,11 +184,11 @@ const AICrashCourse = () => {
                 ].map((item, index) => (
                   <BlurFade key={index} delay={0.2 + index * 0.1} duration={0.8} yOffset={10} blur="6px">
                     <div 
-                      className="bg-card border border-border rounded-lg p-8 hover:border-primary/50 transition-colors h-full flex flex-col"
+                      className="bg-card border border-border rounded-lg p-4 sm:p-6 md:p-8 hover:border-primary/50 transition-colors h-full flex flex-col"
                     >
-                      <item.icon className="w-10 h-10 text-primary mb-6" />
-                      <h3 className="text-lg font-semibold mb-3">{item.title}</h3>
-                      <p className="text-sm text-muted-foreground">{item.description}</p>
+                      <item.icon className="w-8 h-8 sm:w-10 sm:h-10 text-primary mb-4 sm:mb-6" />
+                      <h3 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3">{item.title}</h3>
+                      <p className="text-xs sm:text-sm text-muted-foreground">{item.description}</p>
                     </div>
                   </BlurFade>
                 ))}
@@ -197,48 +197,48 @@ const AICrashCourse = () => {
           </section>
 
           {/* Interactive Modules Section */}
-          <section className="py-24 px-4">
+          <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8">
             <div className="container mx-auto max-w-6xl">
               <BlurFade delay={0.1} duration={0.8} yOffset={10} blur="8px">
-                <div className="text-center mb-20">
-                  <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                <div className="text-center mb-12 sm:mb-16 md:mb-20">
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
                     Course Modules
                   </h2>
-                  <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                  <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto px-4">
                     Master AI development through our comprehensive, hands-on modules designed to take you from beginner to expert.
                   </p>
                 </div>
               </BlurFade>
 
-              <div className="space-y-8">
+              <div className="space-y-4 sm:space-y-6 md:space-y-8">
                 {modules.map((module, index) => {
                   const moduleNumber = index + 1;
 
                   return (
                     <BlurFade key={index} delay={0.2 + index * 0.1} duration={0.8} yOffset={10} blur="6px">
                       <div 
-                        className="bg-card border border-border rounded-xl p-8 hover:border-primary/50 hover:shadow-lg transition-all duration-300 cursor-pointer"
+                        className="bg-card border border-border rounded-xl p-4 sm:p-6 md:p-8 hover:border-primary/50 hover:shadow-lg transition-all duration-300 cursor-pointer"
                         onClick={() => handleModuleClick(moduleNumber)}
                       >
-                      <div className="flex items-start gap-6">
+                      <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
                         {/* Module Icon */}
-                        <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center">
-                          <module.icon className="w-7 h-7 text-primary" />
+                        <div className="w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <module.icon className="w-6 h-6 sm:w-7 sm:h-7 text-primary" />
                         </div>
 
                         {/* Module Content */}
                         <div className="flex-1">
-                          <div className="flex items-center gap-3 mb-3">
-                            <span className="text-base font-medium text-muted-foreground">
+                          <div className="flex items-center gap-3 mb-2 sm:mb-3">
+                            <span className="text-sm sm:text-base font-medium text-muted-foreground">
                               {module.module}
                             </span>
                           </div>
                           
-                          <h3 className="text-2xl font-medium mb-3 text-foreground">
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-medium mb-2 sm:mb-3 text-foreground">
                             {module.title}
                           </h3>
                           
-                          <p className="text-lg mb-4 text-muted-foreground">
+                          <p className="text-sm sm:text-base md:text-lg text-muted-foreground">
                             {module.description}
                           </p>
                         </div>
@@ -251,20 +251,20 @@ const AICrashCourse = () => {
 
               {/* Get AI Foundation Ebook */}
               <BlurFade delay={0.3} duration={0.8} yOffset={10} blur="8px">
-              <div className="mt-20 bg-card border border-border rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-300">
-                <div className="grid md:grid-cols-2 gap-0">
+              <div className="mt-12 sm:mt-16 md:mt-20 bg-card border border-border rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-300">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
                   {/* Ebook Image */}
-                  <div className="bg-white p-12 flex items-center justify-center">
+                  <div className="bg-white p-6 sm:p-8 md:p-12 flex items-center justify-center">
                     <div className="w-full max-w-xs aspect-[3/4] bg-white rounded-lg shadow-2xl flex items-center justify-center border-2 border-gray-200 overflow-hidden">
                       <img src={BookImage} alt="AI Foundation Ebook" className="w-full h-full object-cover" />
                     </div>
                   </div>
                   
                   {/* Content */}
-                  <div className="p-10 flex flex-col justify-center">
-                    <h3 className="text-3xl font-bold mb-4">Bonus: Get an AI Foundation Ebook</h3>
-                    <p className="text-lg text-muted-foreground mb-8">
-                    Included in the course, you’ll get a comprehensive AI Foundations eBook that simplifies the complex world of AI and helps you build the vocabulary to understand the latest advancements written in simple, relatable terms.
+                  <div className="p-6 sm:p-8 md:p-10 flex flex-col justify-center">
+                    <h3 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">Bonus: Get an AI Foundation Ebook</h3>
+                    <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8">
+                    Included in the course, you'll get a comprehensive AI Foundations eBook that simplifies the complex world of AI and helps you build the vocabulary to understand the latest advancements written in simple, relatable terms.
                     </p>
                   
                   </div>
@@ -275,23 +275,23 @@ const AICrashCourse = () => {
           </section>
 
               {/* CTA Section */}
-              <section className="py-24 px-4">
+              <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8">
                 <div className="container mx-auto max-w-3xl text-center">
                   <BlurFade delay={0.1} duration={0.8} yOffset={10} blur="8px">
-                    <h2 className="text-3xl md:text-4xl font-semibold mb-8">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-6 sm:mb-8">
                       Ready to Start Your AI Journey?
                     </h2>
                   </BlurFade>
                   <BlurFade delay={0.2} duration={0.8} yOffset={10} blur="8px">
-                    <p className="text-lg text-muted-foreground mb-12">
+                    <p className="text-base sm:text-lg text-muted-foreground mb-8 sm:mb-12 px-4">
                      Enroll today and get started with your AI journey today
                     </p>
                   </BlurFade>
                   
                   <BlurFade delay={0.3} duration={0.8} yOffset={10} blur="6px">
-                    <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                    <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4">
                       {/* Primary CTA */}
-                      <Button variant="cta" size="lg" className="w-full sm:w-auto">
+                      <Button variant="cta" size="lg" className="w-full sm:w-auto text-base sm:text-lg">
                         Enroll Today for $99
                       </Button>
                       
@@ -305,7 +305,7 @@ const AICrashCourse = () => {
         
         <footer className="border-t border-border py-12 bg-card/30">
           <div className="container px-4 text-center text-sm text-muted-foreground">
-            <p>© 2025 Vibe Coding Mastermind. All rights reserved.</p>
+            <p>© AI Design Academy. All rights reserved.</p>
           </div>
         </footer>
       </div>

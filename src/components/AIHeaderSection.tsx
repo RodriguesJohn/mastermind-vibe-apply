@@ -15,7 +15,14 @@ export const AIHeaderSection = () => {
         <div className="max-w-6xl mx-auto">
           {/* Mobile/Tablet Layout */}
           <div className="lg:hidden">
-            <div className="text-center space-y-6 sm:space-y-8">
+            <div className="text-left sm:text-center space-y-6 sm:space-y-8">
+              {/* Sphere - Mobile: top-left */}
+              <div className="flex justify-start sm:justify-center pb-1 sm:hidden">
+                <div className="w-[250px] h-[250px]">
+                  <ParticleSphere />
+                </div>
+              </div>
+              
               {/* Date Badge */}
               <BlurFade delay={0.1} duration={0.8} yOffset={10} blur="4px">
                 <div className="inline-block">
@@ -27,14 +34,14 @@ export const AIHeaderSection = () => {
               
               {/* Title */}
               <BlurFade delay={0.2} duration={0.8} yOffset={20} blur="8px">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-tight">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight leading-tight text-left sm:text-center">
                   <span className="text-white block">
                     AI Mastery for Designers
                   </span>
                   <span className="text-white block">
                     & Product Leaders
                   </span>
-                  <span className="text-white block text-xl sm:text-2xl md:text-3xl font-semibold mt-2 opacity-90">
+                  <span className="text-white block text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mt-2 opacity-90">
                     5-Week Cohort
                   </span>
                 </h1>
@@ -42,14 +49,14 @@ export const AIHeaderSection = () => {
               
               {/* Description */}
               <BlurFade delay={0.4} duration={0.8} yOffset={15} blur="6px">
-                <p className="text-lg sm:text-xl text-white/80 leading-relaxed max-w-2xl mx-auto px-4">
+                <p className="text-lg sm:text-xl text-white/80 leading-relaxed max-w-2xl mx-auto sm:mx-auto px-4 text-left sm:text-center">
                   Stay ahead and upskill today. Design AI products and systems through a structured learning program.
                 </p>
               </BlurFade>
               
               {/* Buttons */}
               <BlurFade delay={0.6} duration={0.8} yOffset={10} blur="4px">
-                <div className="flex flex-col sm:flex-row gap-4 items-center justify-center pt-4">
+                <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-start sm:justify-center pt-4">
                   <Button variant="default" size="lg" className="group bg-white/15 text-white backdrop-blur-sm hover:bg-white/25 border border-white/20 w-full sm:w-auto min-w-[200px]" asChild>
                     <a href="https://maven.com/productlearnio/aiproductdesignmasterycohort" target="_blank" rel="noopener noreferrer">
                       Enroll Today
@@ -64,9 +71,9 @@ export const AIHeaderSection = () => {
                 </div>
               </BlurFade>
               
-              {/* Sphere - Centered below content */}
-              <div className="flex justify-center pt-8 sm:pt-12">
-                <div className="w-[280px] h-[280px] sm:w-[320px] sm:h-[320px]">
+              {/* Sphere - Tablet: centered below content */}
+              <div className="hidden sm:flex sm:justify-center pt-8 md:pt-12">
+                <div className="w-[320px] h-[320px]">
                   <ParticleSphere />
                 </div>
               </div>
@@ -84,9 +91,12 @@ export const AIHeaderSection = () => {
               </BlurFade>
               
               <BlurFade delay={0.2} duration={0.8} yOffset={20} blur="8px">
-                <h1 className="text-4xl xl:text-3.5xl font-semibold tracking-tight leading-[1.2] xl:leading-[1.3]">
+                <h1 className="text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-semibold tracking-tight leading-[1.2] lg:leading-[1.3]">
                   <span className="text-white block">
-                    AI Mastery for Designers & Product Leaders 5-Week Cohort
+                    AI Mastery for Designers & Product Leaders
+                  </span>
+                  <span className="text-white block text-xl lg:text-2xl xl:text-3xl font-semibold mt-2 opacity-90">
+                    5-Week Cohort
                   </span>
                 </h1>
               </BlurFade>
