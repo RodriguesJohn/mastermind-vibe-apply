@@ -119,7 +119,7 @@ const SparklesText: React.FC<SparklesTextProps> = ({
         {sparkles.map((sparkle) => (
           <Sparkle key={sparkle.id} {...sparkle} />
         ))}
-        <strong className="text-4.5xl">{text}</strong>
+        <strong className="text-3xl">{text}</strong>
       </span>
     </div>
   );
