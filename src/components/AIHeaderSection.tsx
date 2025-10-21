@@ -6,55 +6,118 @@ import { BlurFade } from "@/components/BlurFade";
 
 export const AIHeaderSection = () => {
   return (
-    <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden border-b border-border/40 w-full">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden border-b border-border/40 w-full">
       {/* Advanced Shader Background */}
       <ShaderBackground />
       
       {/* Content */}
-      <div className="relative z-10 px-4 md:px-10 lg:px-[120px] py-16 md:py-20">
-        <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
-              {/* Left Column - Text Content */}
-              <div className="space-y-6 animate-fade-in order-2 lg:order-1">
-                <BlurFade delay={0.1} duration={0.8} yOffset={10} blur="4px">
-                  <p className="text-sm md:text-base text-white/60 max-w-1xl uppercase">
-                    Next cohort starting on November 8th.
-                  </p>
-                </BlurFade>
-                
-                <BlurFade delay={0.2} duration={0.8} yOffset={20} blur="8px">
-                  <h2 className="text-4xl md:text-4.5xl font-semibold tracking-tight leading-[1.4]">
-                    <span className="text-white block">
-                      AI Mastery for Designers & Product Leaders 5-Week Cohort
-                    </span>
-                  </h2>
-                </BlurFade>
-                
-                <BlurFade delay={0.4} duration={0.8} yOffset={15} blur="6px">
-                  <p className="text-xl md:text-1xl text-white/75 max-w-2xl leading-relaxed">
-                    Stay ahead and upskill today. Design AI products and systems through a structured learning program.
-                  </p>
-                </BlurFade>
-                
-                <BlurFade delay={0.6} duration={0.8} yOffset={10} blur="4px">
-                  <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center pt-6">
-                    <Button variant="default" size="xl" className="group bg-white/10 text-white backdrop-blur-sm hover:bg-white/20 border border-white/10" asChild>
-                      <a href="https://maven.com/productlearnio/aiproductdesignmasterycohort" target="_blank" rel="noopener noreferrer">
-                        Enroll Today
-                        <ArrowRight className="group-hover:translate-x-1 transition-transform" />
-                      </a>
-                    </Button>
-                    <Button variant="outline" size="xl" className="border-white/10 text-white/80 hover:bg-white/5" asChild>
-                      <a href="https://cal.com/aidesignacademy/15min?overlayCalendar=true" target="_blank" rel="noopener noreferrer">
-                        Book a Call
-                      </a>
-                    </Button>
-                  </div>
-                </BlurFade>
+      <div className="relative z-5 px-6 sm:px-8 md:px-12 lg:px-5 py-4 sm:py-6 md:py-8 lg:py-12">
+        <div className="max-w-6xl mx-auto">
+          {/* Mobile/Tablet Layout */}
+          <div className="lg:hidden">
+            <div className="text-center space-y-6 sm:space-y-8">
+              {/* Date Badge */}
+              <BlurFade delay={0.1} duration={0.8} yOffset={10} blur="4px">
+                <div className="inline-block">
+                  <span className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/80 text-sm font-medium uppercase tracking-wide">
+                    Next cohort starting on November 8th
+                  </span>
+                </div>
+              </BlurFade>
+              
+              {/* Title */}
+              <BlurFade delay={0.2} duration={0.8} yOffset={20} blur="8px">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-tight">
+                  <span className="text-white block">
+                    AI Mastery for Designers
+                  </span>
+                  <span className="text-white block">
+                    & Product Leaders
+                  </span>
+                  <span className="text-white block text-xl sm:text-2xl md:text-3xl font-semibold mt-2 opacity-90">
+                    5-Week Cohort
+                  </span>
+                </h1>
+              </BlurFade>
+              
+              {/* Description */}
+              <BlurFade delay={0.4} duration={0.8} yOffset={15} blur="6px">
+                <p className="text-lg sm:text-xl text-white/80 leading-relaxed max-w-2xl mx-auto px-4">
+                  Stay ahead and upskill today. Design AI products and systems through a structured learning program.
+                </p>
+              </BlurFade>
+              
+              {/* Buttons */}
+              <BlurFade delay={0.6} duration={0.8} yOffset={10} blur="4px">
+                <div className="flex flex-col sm:flex-row gap-4 items-center justify-center pt-4">
+                  <Button variant="default" size="lg" className="group bg-white/15 text-white backdrop-blur-sm hover:bg-white/25 border border-white/20 w-full sm:w-auto min-w-[200px]" asChild>
+                    <a href="https://maven.com/productlearnio/aiproductdesignmasterycohort" target="_blank" rel="noopener noreferrer">
+                      Enroll Today
+                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </a>
+                  </Button>
+                  <Button variant="outline" size="lg" className="border-white/30 text-white/90 hover:bg-white/10 w-full sm:w-auto min-w-[200px]" asChild>
+                    <a href="https://cal.com/aidesignacademy/15min?overlayCalendar=true" target="_blank" rel="noopener noreferrer">
+                      Book a Call
+                    </a>
+                  </Button>
+                </div>
+              </BlurFade>
+              
+              {/* Sphere - Centered below content */}
+              <div className="flex justify-center pt-8 sm:pt-12">
+                <div className="w-[280px] h-[280px] sm:w-[320px] sm:h-[320px]">
+                  <ParticleSphere />
+                </div>
               </div>
+            </div>
+          </div>
 
-          {/* Right Column - Particle Sphere */}
-          <div className="flex items-center justify-center order-1 lg:order-2">
-            <ParticleSphere />
+          {/* Desktop Layout */}
+          <div className="hidden lg:grid lg:grid-cols-2 gap-8 items-center">
+            {/* Left Column - Text Content */}
+            <div className="space-y-4 animate-fade-in">
+              <BlurFade delay={0.1} duration={0.8} yOffset={10} blur="4px">
+                <p className="text-sm text-white/60 uppercase tracking-wide font-medium">
+                  Next cohort starting on November 8th.
+                </p>
+              </BlurFade>
+              
+              <BlurFade delay={0.2} duration={0.8} yOffset={20} blur="8px">
+                <h1 className="text-4xl xl:text-3.5xl font-semibold tracking-tight leading-[1.2] xl:leading-[1.3]">
+                  <span className="text-white block">
+                    AI Mastery for Designers & Product Leaders 5-Week Cohort
+                  </span>
+                </h1>
+              </BlurFade>
+              
+              <BlurFade delay={0.4} duration={0.8} yOffset={15} blur="6px">
+                <p className="text-xl xl:text-2xl text-white/75 max-w-2xl leading-relaxed">
+                  Stay ahead and upskill today. Design AI products and systems through a structured learning program.
+                </p>
+              </BlurFade>
+              
+              <BlurFade delay={0.6} duration={0.8} yOffset={10} blur="4px">
+                <div className="flex flex-row gap-6 items-center pt-6">
+                  <Button variant="default" size="xl" className="group bg-white/10 text-white backdrop-blur-sm hover:bg-white/20 border border-white/10" asChild>
+                    <a href="https://maven.com/productlearnio/aiproductdesignmasterycohort" target="_blank" rel="noopener noreferrer">
+                      Enroll Today
+                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </a>
+                  </Button>
+                  <Button variant="outline" size="xl" className="border-white/10 text-white/80 hover:bg-white/5" asChild>
+                    <a href="https://cal.com/aidesignacademy/15min?overlayCalendar=true" target="_blank" rel="noopener noreferrer">
+                      Book a Call
+                    </a>
+                  </Button>
+                </div>
+              </BlurFade>
+            </div>
+
+            {/* Right Column - Particle Sphere */}
+            <div className="flex items-center justify-center">
+              <ParticleSphere />
+            </div>
           </div>
         </div>
       </div>
