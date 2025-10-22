@@ -33,7 +33,7 @@ export const Navigation = () => {
               <DropdownMenuContent align="start" className="w-56">
                 <DropdownMenuItem asChild>
                   <a href="/" className="cursor-pointer">
-                    Consulting
+                    Coaching
                   </a>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
@@ -83,7 +83,7 @@ export const Navigation = () => {
                 <div className="border-t border-border pt-4 mt-2">
                   <p className="text-sm text-muted-foreground mb-3">More</p>
                   <a href="/" className="text-base font-medium hover:text-primary transition-colors py-2 block" onClick={() => setMobileMenuOpen(false)}>
-                    Consulting
+                    Coaching
                   </a>
                   <a href="/tools" className="text-base font-medium hover:text-primary transition-colors py-2 block" onClick={() => setMobileMenuOpen(false)}>
                     Tools
