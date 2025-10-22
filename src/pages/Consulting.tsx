@@ -116,13 +116,30 @@ const Consulting = () => {
                       </div>
 
                       <div className="mt-8 space-y-2">
-                        <Button 
-                          variant={tier.highlighted ? "default" : "outline"}
-                          className="w-full"
-                          size="lg"
-                        >
-                          {tier.cta}
-                        </Button>
+                        {tier.name === "Individual Coaching" ? (
+                          <Button 
+                            variant={tier.highlighted ? "default" : "outline"}
+                            className="w-full"
+                            size="lg"
+                            asChild
+                          >
+                            <a 
+                              href="https://cal.com/aidesignacademy/1-1-coaching-call?overlayCalendar=true"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              {tier.cta}
+                            </a>
+                          </Button>
+                        ) : (
+                          <Button 
+                            variant={tier.highlighted ? "default" : "outline"}
+                            className="w-full"
+                            size="lg"
+                          >
+                            {tier.cta}
+                          </Button>
+                        )}
                         {tier.ctaSubtext && (
                           <p className="text-sm text-muted-foreground text-center underline">
                             {tier.ctaSubtext}
