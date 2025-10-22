@@ -131,6 +131,21 @@ const Consulting = () => {
                               {tier.cta}
                             </a>
                           </Button>
+                        ) : tier.name === "Business Consulting" ? (
+                          <Button 
+                            variant={tier.highlighted ? "default" : "outline"}
+                            className="w-full"
+                            size="lg"
+                            asChild
+                          >
+                            <a 
+                              href="https://cal.com/aidesignacademy/business-consulting?overlayCalendar=true"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              {tier.cta}
+                            </a>
+                          </Button>
                         ) : (
                           <Button 
                             variant={tier.highlighted ? "default" : "outline"}
