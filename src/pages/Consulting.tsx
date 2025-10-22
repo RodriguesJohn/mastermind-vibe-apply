@@ -15,7 +15,7 @@ const Consulting = () => {
       features: [
         "Personalized AI strategy sessions",
         "Direct access to instructor",
-        "Portfolio review and feedback",
+        "Project feedback and guidance",
         "Career guidance and mentorship",
         "Priority support",
       ],
