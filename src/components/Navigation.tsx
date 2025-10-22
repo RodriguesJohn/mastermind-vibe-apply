@@ -19,7 +19,7 @@ export const Navigation = () => {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6">
-            <a href="/cohort" className="text-sm font-medium hover:text-primary transition-colors">
+            <a href="/" className="text-sm font-medium hover:text-primary transition-colors">
               Cohort
             </a>
            
@@ -32,7 +32,7 @@ export const Navigation = () => {
               </DropdownMenuTrigger>
               <DropdownMenuContent align="start" className="w-56">
                 <DropdownMenuItem asChild>
-                  <a href="/" className="cursor-pointer">
+                  <a href="/consulting" className="cursor-pointer">
                     Coaching
                   </a>
                 </DropdownMenuItem>
@@ -50,8 +50,8 @@ export const Navigation = () => {
             </DropdownMenu>
           </div>
           
-          <Button variant="cta" size="sm" className="hidden md:flex">
-            Join the Cohort
+          <Button variant="cta" size="sm" className="hidden md:flex" asChild>
+            <a href="/">Join the Cohort</a>
           </Button>
 
           {/* Mobile Menu */}
@@ -70,7 +70,7 @@ export const Navigation = () => {
               </SheetHeader>
               
               <nav className="flex flex-col gap-4 mt-8">
-                <a href="/cohort" className="text-base font-medium hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
+                <a href="/" className="text-base font-medium hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
                   Cohort
                 </a>
                 <a href="#playbook" className="text-base font-medium hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
@@ -82,7 +82,7 @@ export const Navigation = () => {
                 
                 <div className="border-t border-border pt-4 mt-2">
                   <p className="text-sm text-muted-foreground mb-3">More</p>
-                  <a href="/" className="text-base font-medium hover:text-primary transition-colors py-2 block" onClick={() => setMobileMenuOpen(false)}>
+                  <a href="/consulting" className="text-base font-medium hover:text-primary transition-colors py-2 block" onClick={() => setMobileMenuOpen(false)}>
                     Coaching
                   </a>
                   <a href="/tools" className="text-base font-medium hover:text-primary transition-colors py-2 block" onClick={() => setMobileMenuOpen(false)}>
@@ -93,8 +93,8 @@ export const Navigation = () => {
                   </a>
                 </div>
 
-                <Button variant="cta" size="lg" className="mt-6" onClick={() => setMobileMenuOpen(false)}>
-                  Apply Now
+                <Button variant="cta" size="lg" className="mt-6" asChild onClick={() => setMobileMenuOpen(false)}>
+                  <a href="/">Apply Now</a>
                 </Button>
               </nav>
             </SheetContent>
