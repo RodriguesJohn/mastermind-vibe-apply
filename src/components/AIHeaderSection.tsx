@@ -16,9 +16,9 @@ export const AIHeaderSection = () => {
           {/* Mobile/Tablet Layout */}
           <div className="lg:hidden">
             <div className="text-left sm:text-center space-y-6 sm:space-y-8">
-              {/* Sphere - Mobile: top-left */}
-              <div className="flex justify-start sm:justify-center pb-1 sm:hidden">
-                <div className="w-[250px] h-[250px]">
+              {/* Sphere - Hidden on mobile, visible on tablet+ */}
+              <div className="hidden sm:flex sm:justify-center pb-4 sm:pb-8 md:pb-12">
+                <div className="w-[320px] h-[320px]">
                   <ParticleSphere />
                 </div>
               </div>
@@ -83,12 +83,6 @@ export const AIHeaderSection = () => {
                 </div>
               </BlurFade>
 
-              {/* Sphere - Tablet: centered below content */}
-              <div className="hidden sm:flex sm:justify-center pt-8 md:pt-12">
-                <div className="w-[320px] h-[320px]">
-                  <ParticleSphere />
-                </div>
-              </div>
             </div>
           </div>
 
