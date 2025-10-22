@@ -19,7 +19,8 @@ const Consulting = () => {
         "Career guidance and mentorship",
         "Priority support",
       ],
-      cta: "Book Session",
+      cta: "Book a Call",
+      ctaSubtext: null,
       highlighted: false,
     },
     {
@@ -34,7 +35,8 @@ const Consulting = () => {
         "Skill assessment and growth tracking",
         "Flexible scheduling",
       ],
-      cta: "Get Started",
+      cta: "Book a Session",
+      ctaSubtext: null,
       highlighted: true,
     },
     {
@@ -49,7 +51,8 @@ const Consulting = () => {
         "Ongoing support and guidance",
         "ROI optimization",
       ],
-      cta: "Contact Us",
+      cta: "Book a Session",
+      ctaSubtext: "Schedule a discovery call",
       highlighted: false,
     },
   ];
@@ -112,13 +115,20 @@ const Consulting = () => {
                         </ul>
                       </div>
 
-                      <Button 
-                        variant={tier.highlighted ? "default" : "outline"}
-                        className="w-full mt-8"
-                        size="lg"
-                      >
-                        {tier.cta}
-                      </Button>
+                      <div className="mt-8 space-y-2">
+                        <Button 
+                          variant={tier.highlighted ? "default" : "outline"}
+                          className="w-full"
+                          size="lg"
+                        >
+                          {tier.cta}
+                        </Button>
+                        {tier.ctaSubtext && (
+                          <p className="text-sm text-muted-foreground text-center">
+                            {tier.ctaSubtext}
+                          </p>
+                        )}
+                      </div>
                     </Card>
                   </BlurFade>
                 ))}
