@@ -19,7 +19,7 @@ export const Navigation = () => {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6">
-            <a href="/" className="text-sm font-medium hover:text-primary transition-colors">
+            <a href="/cohort" className="text-sm font-medium hover:text-primary transition-colors">
               Cohort
             </a>
            
@@ -70,7 +70,7 @@ export const Navigation = () => {
               </SheetHeader>
               
               <nav className="flex flex-col gap-4 mt-8">
-                <a href="/" className="text-base font-medium hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
+                <a href="/cohort" className="text-base font-medium hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
                   Cohort
                 </a>
                 <a href="#playbook" className="text-base font-medium hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
