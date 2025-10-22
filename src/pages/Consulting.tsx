@@ -124,7 +124,7 @@ const Consulting = () => {
                           {tier.cta}
                         </Button>
                         {tier.ctaSubtext && (
-                          <p className="text-sm text-muted-foreground text-center">
+                          <p className="text-sm text-muted-foreground text-center underline">
                             {tier.ctaSubtext}
                           </p>
                         )}
