@@ -10,6 +10,8 @@ const Consulting = () => {
     {
       name: "Cohort Member Coaching",
       description: "One-to-one consulting and coaching exclusively for cohort members",
+      price: "Included",
+      priceSubtext: "For active cohort members",
       features: [
         "Personalized AI strategy sessions",
         "Direct access to instructor",
@@ -23,6 +25,8 @@ const Consulting = () => {
     {
       name: "Individual Coaching",
       description: "Personalized coaching for professionals looking to master AI",
+      price: "$500",
+      priceSubtext: "per hour",
       features: [
         "Custom learning roadmap",
         "One-on-one mentorship sessions",
@@ -36,6 +40,8 @@ const Consulting = () => {
     {
       name: "Business Consulting",
       description: "Strategic AI consulting for teams and organizations",
+      price: "$5,000",
+      priceSubtext: "starting rate",
       features: [
         "AI strategy and implementation",
         "Team training and workshops",
@@ -90,6 +96,11 @@ const Consulting = () => {
                       <div className="space-y-4 flex-grow">
                         <h3 className="text-2xl font-bold">{tier.name}</h3>
                         <p className="text-muted-foreground">{tier.description}</p>
+                        
+                        <div className="pt-4">
+                          <div className="text-4xl font-bold">{tier.price}</div>
+                          <div className="text-sm text-muted-foreground">{tier.priceSubtext}</div>
+                        </div>
                         
                         <ul className="space-y-3 pt-6">
                           {tier.features.map((feature) => (
