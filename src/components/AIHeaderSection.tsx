@@ -71,7 +71,7 @@ export const AIHeaderSection = () => {
                     asChild
                   >
                     <a
-                      href="https://cal.com/aidesignacademy/15min?overlayCalendar=true"
+                      href="https://cal.com/aidesignacademy/1-1-coaching-call"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -130,7 +130,7 @@ export const AIHeaderSection = () => {
                     asChild
                   >
                     <a
-                      href="https://cal.com/aidesignacademy/15min?overlayCalendar=true"
+                      href="https://cal.com/aidesignacademy/1-1-coaching-call"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
