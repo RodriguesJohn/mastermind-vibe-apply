@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Cohort from "./pages/Cohort";
+import Consulting from "./pages/Consulting";
 import AICrashCourse from "./pages/AICrashCourse";
 import Projects from "./pages/Projects";
 import Tools from "./pages/Tools";
@@ -20,8 +21,10 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Cohort />} />
-          <Route path="/index" element={<Index />} />
+          <Route path="/" element={<Consulting />} />
+          <Route path="/cohort" element={<Cohort />} />
+          {/* Membership page hidden for now */}
+          {/* <Route path="/index" element={<Index />} /> */}
           <Route path="/ai-crash-course" element={<AICrashCourse />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/tools" element={<Tools />} />
