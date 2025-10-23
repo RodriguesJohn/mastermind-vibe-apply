@@ -98,7 +98,7 @@ const AICrashCourse = () => {
                       <div className="mb-4 sm:mb-6">
                         <SparklesText
                           text="AI for Designers 101"
-                          className="text-[40px] sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-medium text-white"
+                          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium text-white"
                           sparklesCount={14}
                           colors={{
                             first: "#3B82F6", // Blue
