@@ -32,7 +32,7 @@ export const Navigation = () => {
               </DropdownMenuTrigger>
               <DropdownMenuContent align="start" className="w-56">
                 <DropdownMenuItem asChild>
-                  <a href="/consulting" className="cursor-pointer">
+                  <a href="/coaching" className="cursor-pointer">
                     Coaching
                   </a>
                 </DropdownMenuItem>
@@ -82,7 +82,7 @@ export const Navigation = () => {
                 
                 <div className="border-t border-border pt-4 mt-2">
                   <p className="text-sm text-muted-foreground mb-3">More</p>
-                  <a href="/consulting" className="text-base font-medium hover:text-primary transition-colors py-2 block" onClick={() => setMobileMenuOpen(false)}>
+                  <a href="/coaching" className="text-base font-medium hover:text-primary transition-colors py-2 block" onClick={() => setMobileMenuOpen(false)}>
                     Coaching
                   </a>
                   <a href="/tools" className="text-base font-medium hover:text-primary transition-colors py-2 block" onClick={() => setMobileMenuOpen(false)}>
