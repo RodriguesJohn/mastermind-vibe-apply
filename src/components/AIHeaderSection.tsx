@@ -95,7 +95,7 @@ export const AIHeaderSection = () => {
               </BlurFade>
 
               <BlurFade delay={0.2} duration={0.8} yOffset={20} blur="8px">
-                <h1 className="text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-semibold tracking-tight leading-[1.2] lg:leading-[1.3]">
+                <h1 className="text-3xl lg:text-5xl xl:text-5.5xl 2xl:text-4xl font-semibold tracking-tight leading-[1.2] lg:leading-[1.8]">
                   <span className="text-white block">AI Mastery for Designers & Product Leaders 5-Week Cohort</span>
                 </h1>
               </BlurFade>
