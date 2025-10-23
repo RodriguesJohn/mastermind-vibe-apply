@@ -171,9 +171,14 @@ const Consulting = () => {
                           </Button>
                         )}
                         {tier.ctaSubtext && (
-                          <p className="text-sm text-muted-foreground text-center underline">
+                          <a 
+                            href="https://cal.com/aidesignacademy/discovery-call?overlayCalendar=true"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm text-muted-foreground text-center underline hover:text-primary transition-colors block"
+                          >
                             {tier.ctaSubtext}
-                          </p>
+                          </a>
                         )}
                       </div>
                     </Card>
