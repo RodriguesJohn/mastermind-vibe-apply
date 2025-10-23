@@ -10,6 +10,7 @@ import AICrashCourse from "./pages/AICrashCourse";
 import Projects from "./pages/Projects";
 import Tools from "./pages/Tools";
 import TalentPool from "./pages/TalentPool";
+import Course from "./pages/Course";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,6 +24,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Cohort />} />
           <Route path="/coaching" element={<Consulting />} />
+          <Route path="/course" element={<Course />} />
           {/* Membership page hidden for now */}
           {/* <Route path="/index" element={<Index />} /> */}
           <Route path="/ai-crash-course" element={<AICrashCourse />} />

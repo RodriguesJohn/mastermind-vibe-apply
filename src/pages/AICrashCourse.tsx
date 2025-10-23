@@ -96,15 +96,9 @@ const AICrashCourse = () => {
                 
                     <BlurFade delay={0.2} duration={0.8} yOffset={14} blur="10px">
                       <div className="mb-4 sm:mb-6">
-                        <SparklesText
-                          text="AI for Designers 101"
-                          className="text-[40px] sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-medium text-white"
-                          sparklesCount={14}
-                          colors={{
-                            first: "#3B82F6", // Blue
-                            second: "#8B5CF6" // Purple
-                          }}
-                        />
+                        <h1 className="text-3xl sm:text-4xl font-bold leading-tight text-white">
+                          AI for Designers 101
+                        </h1>
                       </div>
                     </BlurFade>
                 
