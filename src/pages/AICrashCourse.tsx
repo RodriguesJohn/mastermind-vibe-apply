@@ -84,7 +84,7 @@ const AICrashCourse = () => {
         
         <main>
               {/* Course Header */}
-              <section className="py-16 sm:py-20 md:py-24 lg:py-28 px-4 sm:px-6 md:px-8 bg-gradient-to-br from-primary/5 to-accent/5 backdrop-blur-sm">
+              <section className="py-8 sm:py-20 md:py-24 lg:py-28 px-4 sm:px-6 md:px-8 bg-gradient-to-br from-primary/5 to-accent/5 backdrop-blur-sm">
             <div className="container mx-auto max-w-6xl">
               <div className="text-center animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
                 <BlurFade delay={0.1} duration={0.8} yOffset={10} blur="8px">
