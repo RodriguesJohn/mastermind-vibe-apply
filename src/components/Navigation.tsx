@@ -3,7 +3,6 @@ import { Menu } from "lucide-react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { useState } from "react";
-import Logo from "@/assets/Logo.png";
 
 export const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -14,7 +13,7 @@ export const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo/Brand */}
           <a href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <img src={Logo} alt="AI Design Academy" className="w-6 h-6" />
+            <img src="/logo.png" alt="AI Design Academy" className="w-6 h-6" />
             <span className="font-bold text-lg">AI Design Academy</span>
           </a>
           
@@ -65,7 +64,7 @@ export const Navigation = () => {
             <SheetContent side="right" className="w-[300px]">
               <SheetHeader>
                 <SheetTitle className="flex items-center gap-2">
-                  <img src={Logo} alt="AI Design Academy" className="w-5 h-5" />
+                  <img src="/logo.png" alt="AI Design Academy" className="w-5 h-5" />
                   AI Design Academy
                 </SheetTitle>
               </SheetHeader>
