@@ -16,7 +16,7 @@ const modules = [
   {
     icon: Sparkles,
     title: "Week 3: Build AI Agents",
-    description: "Learn how to design AI agent systems and workflows from a UX perspective. Get step-by-step frameworks and processes to create and prototype your own agents, and use tools like Make.com to build AI agents that actually work."
+    description: "Learn how to design AI agent systems and workflows from a UX perspective. Get step-by-step frameworks and processes to create and prototype your own agents, and use tools like n8n to build AI agents that actually work."
   },
   {
     icon: Diamond,
