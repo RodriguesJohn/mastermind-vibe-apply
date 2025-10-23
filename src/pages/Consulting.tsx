@@ -116,7 +116,22 @@ const Consulting = () => {
                       </div>
 
                       <div className="mt-8 space-y-2">
-                        {tier.name === "Individual Coaching" ? (
+                        {tier.name === "Cohort Member Coaching" ? (
+                          <Button 
+                            variant={tier.highlighted ? "default" : "outline"}
+                            className="w-full"
+                            size="lg"
+                            asChild
+                          >
+                            <a 
+                              href="https://cal.com/aidesignacademy/cohort-member-1-1-coaching?overlayCalendar=true"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              {tier.cta}
+                            </a>
+                          </Button>
+                        ) : tier.name === "Individual Coaching" ? (
                           <Button 
                             variant={tier.highlighted ? "default" : "outline"}
                             className="w-full"
