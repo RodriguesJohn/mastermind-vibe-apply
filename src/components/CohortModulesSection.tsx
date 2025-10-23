@@ -21,7 +21,7 @@ const modules = [
   {
     icon: Diamond,
     title: "Week 4 : Learn vibe coding and Prototyping with AI",
-    description: "Learn how to create functional prototypes with tools like Loveable and Vibe, and code your product idea so you can effectively communicate your vision."
+    description: "Learn how to create functional prototypes with Lovable and Cursor to effectively communicate your vision. Master efficient vibe-coding workflows and build AI apps using modern AI coding tools."
   },
   {
     icon: Target,
