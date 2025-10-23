@@ -150,8 +150,8 @@ const AICrashCourse = () => {
 
 
           {/* What You'll Learn */}
-          <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-card/30">
-            <div className="container mx-auto max-w-6xl">
+          <section className="py-16 sm:py-20 md:py-24 bg-card/30">
+            <div className="px-5 sm:px-8 md:px-12 lg:px-20 max-w-5xl mx-auto">
               <BlurFade delay={0.1} duration={0.8} yOffset={10} blur="8px">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 md:mb-16">
                   What You'll Learn
@@ -197,8 +197,8 @@ const AICrashCourse = () => {
           </section>
 
           {/* Interactive Modules Section */}
-          <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8">
-            <div className="container mx-auto max-w-6xl">
+          <section className="py-16 sm:py-20 md:py-24">
+            <div className="px-5 sm:px-8 md:px-12 lg:px-20 max-w-5xl mx-auto">
               <BlurFade delay={0.1} duration={0.8} yOffset={10} blur="8px">
                 <div className="text-center mb-12 sm:mb-16 md:mb-20">
                   <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
@@ -275,8 +275,8 @@ const AICrashCourse = () => {
           </section>
 
               {/* CTA Section */}
-              <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8">
-                <div className="container mx-auto max-w-3xl text-center">
+              <section className="py-16 sm:py-20 md:py-24">
+                <div className="px-5 sm:px-8 md:px-12 lg:px-20 max-w-5xl mx-auto text-center">
                   <BlurFade delay={0.1} duration={0.8} yOffset={10} blur="8px">
                     <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-6 sm:mb-8">
                       Ready to Start Your AI Journey?
