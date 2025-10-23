@@ -6,7 +6,7 @@ const modules = [
   {
     icon: Diamond,
     title: "Week 1 : Master AI Foundation",
-    description: "Deep dive into the foundations of AI – understand its core concepts, build your language and vocabulary, and strengthen your fundamentals so you can design intelligent systems and interfaces with confidence. Everything is explained in a simple, easy-to-understand way."
+    description: "Deep dive into AI fundamentals – understand core concepts, build your vocabulary, and learn to design intelligent systems with clarity and confidence."
   },
   {
     icon: Target,
