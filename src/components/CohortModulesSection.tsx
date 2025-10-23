@@ -6,7 +6,7 @@ const modules = [
   {
     icon: Diamond,
     title: "Week 1 : Master AI Foundation",
-    description: "Get the opportunity to ask questions to designers from top companies such as Meta, Amazon, and more. Learn from their expertise and experiences as AI product designers."
+    description: "Deep dive into AI fundamentals – understand core concepts, build your vocabulary, and learn to design intelligent systems with clarity and confidence."
   },
   {
     icon: Target,
@@ -16,12 +16,12 @@ const modules = [
   {
     icon: Sparkles,
     title: "Week 3: Build AI Agents",
-    description: "Learn how to design AI agent systems and workflows from a UX perspective. Get step-by-step frameworks and processes to create and prototype your own agents, and use tools like Make.com to build AI agents that actually work."
+    description: "Learn how to design AI agent systems and workflows from a UX perspective. Get step-by-step frameworks and processes to create and prototype your own agents, and use tools like n8n to build AI agents that actually work."
   },
   {
     icon: Diamond,
     title: "Week 4 : Learn vibe coding and Prototyping with AI",
-    description: "Learn how to create functional prototypes with tools like Loveable and Vibe, and code your product idea so you can effectively communicate your vision."
+    description: "Learn how to create functional prototypes with Lovable and Cursor to effectively communicate your vision. Master efficient vibe-coding workflows and build AI apps using modern AI coding tools."
   },
   {
     icon: Target,
