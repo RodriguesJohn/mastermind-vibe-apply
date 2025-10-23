@@ -75,7 +75,7 @@ export const AIHeaderSection = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Book a Call
+                      Book a Call Today
                     </a>
                   </Button>
                 </div>
@@ -134,7 +134,7 @@ export const AIHeaderSection = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Book a Call
+                      Book a Call Today
                     </a>
                   </Button>
                 </div>
