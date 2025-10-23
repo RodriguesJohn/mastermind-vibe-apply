@@ -4,8 +4,6 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { useState } from "react";
 
-const logoUrl = new URL("@/assets/Logo.png", import.meta.url).href;
-
 export const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   
@@ -15,7 +13,7 @@ export const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo/Brand */}
           <a href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <img src={logoUrl} alt="AI Design Academy" className="w-6 h-6" />
+            <img src="/logo.png" alt="AI Design Academy" className="w-6 h-6" />
             <span className="font-bold text-lg">AI Design Academy</span>
           </a>
           
@@ -66,7 +64,7 @@ export const Navigation = () => {
             <SheetContent side="right" className="w-[300px]">
               <SheetHeader>
                 <SheetTitle className="flex items-center gap-2">
-                  <img src={logoUrl} alt="AI Design Academy" className="w-5 h-5" />
+                  <img src="/logo.png" alt="AI Design Academy" className="w-5 h-5" />
                   AI Design Academy
                 </SheetTitle>
               </SheetHeader>
