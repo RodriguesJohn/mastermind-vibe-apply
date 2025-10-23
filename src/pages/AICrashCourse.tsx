@@ -131,7 +131,7 @@ const AICrashCourse = () => {
 
                     {/* YouTube Video */}
                     <BlurFade delay={0.5} duration={0.8} yOffset={8} blur="6px">
-                      <div className="max-w-4xl mx-auto px-4">
+                      <div className="max-w-4xl mx-auto px-2 sm:px-4">
                         <div className="relative aspect-video rounded-xl overflow-hidden bg-card border border-border">
                           <iframe
                             src="https://www.youtube.com/embed/6vnUzMOrAPw"
