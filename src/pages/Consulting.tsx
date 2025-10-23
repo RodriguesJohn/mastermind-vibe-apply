@@ -49,7 +49,7 @@ const Consulting = () => {
         "Team training and workshops",
         "Custom solution development",
         "Ongoing support and guidance",
-        "ROI optimization",
+        "Design Direction & Strategy",
       ],
       cta: "Book a Session",
       ctaSubtext: "Schedule a discovery call",
