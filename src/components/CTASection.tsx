@@ -23,9 +23,16 @@ export const CTASection = () => {
               variant="cta" 
               size="xl"
               className="group"
+              asChild
             >
-              Apply to Join
-              <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+              <a 
+                href="https://maven.com/productlearnio/aiproductdesignmasterycohort"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Apply to Join
+                <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+              </a>
             </Button>
           </div>
           

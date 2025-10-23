@@ -51,7 +51,7 @@ export const Navigation = () => {
           </div>
           
           <Button variant="cta" size="sm" className="hidden md:flex" asChild>
-            <a href="/">Join the Cohort</a>
+            <a href="https://maven.com/productlearnio/aiproductdesignmasterycohort" target="_blank" rel="noopener noreferrer">Join the Cohort</a>
           </Button>
 
           {/* Mobile Menu */}
@@ -94,7 +94,7 @@ export const Navigation = () => {
                 </div>
 
                 <Button variant="cta" size="lg" className="mt-6" asChild onClick={() => setMobileMenuOpen(false)}>
-                  <a href="/">Apply Now</a>
+                  <a href="https://maven.com/productlearnio/aiproductdesignmasterycohort" target="_blank" rel="noopener noreferrer">Apply Now</a>
                 </Button>
               </nav>
             </SheetContent>
