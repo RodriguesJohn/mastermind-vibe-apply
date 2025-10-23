@@ -6,7 +6,7 @@ const modules = [
   {
     icon: Diamond,
     title: "Week 1 : Master AI Foundation",
-    description: "Get the opportunity to ask questions to designers from top companies such as Meta, Amazon, and more. Learn from their expertise and experiences as AI product designers."
+    description: "Deep dive into the foundations of AI – understand its core concepts, build your language and vocabulary, and strengthen your fundamentals so you can design intelligent systems and interfaces with confidence. Everything is explained in a simple, easy-to-understand way."
   },
   {
     icon: Target,
