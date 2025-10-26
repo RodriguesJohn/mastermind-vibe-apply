@@ -3,11 +3,6 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { ShaderBackground } from "@/components/AdvancedShaderBackground";
 import { BlurFade } from "@/components/BlurFade";
-import boltLogo from "@/assets/logos/bolt.png";
-import claudeLogo from "@/assets/logos/claude.png";
-import cursorLogo from "@/assets/logos/cursor.png";
-import lovableLogo from "@/assets/logos/lovable.png";
-import v0Logo from "@/assets/logos/v0.png";
 
 export const AIHeaderSection = () => {
   return (
@@ -152,24 +147,6 @@ export const AIHeaderSection = () => {
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Company Logos Section */}
-      <div className="relative z-5 px-5 sm:px-8 md:px-12 lg:px-20 max-w-5xl mx-auto pb-12 sm:pb-16">
-        <BlurFade delay={0.8} duration={0.8} yOffset={10} blur="4px">
-          <div className="text-center space-y-6">
-            <p className="text-sm sm:text-base text-white/60 uppercase tracking-wide font-medium">
-              People from these companies have joined
-            </p>
-            <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12 md:gap-16">
-              <img src={boltLogo} alt="Bolt" className="h-6 sm:h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src={claudeLogo} alt="Claude" className="h-6 sm:h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src={cursorLogo} alt="Cursor" className="h-6 sm:h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src={lovableLogo} alt="Lovable" className="h-6 sm:h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src={v0Logo} alt="V0" className="h-6 sm:h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-            </div>
-          </div>
-        </BlurFade>
       </div>
 
       {/* Bottom Gradient Fade */}
