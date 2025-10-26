@@ -4,6 +4,10 @@ import claudeLogo from "@/assets/logos/claude.png";
 import cursorLogo from "@/assets/logos/cursor.png";
 import lovableLogo from "@/assets/logos/lovable.png";
 import v0Logo from "@/assets/logos/v0.png";
+import hubspotLogo from "@/assets/logos/hubspot.png";
+import intercomLogo from "@/assets/logos/intercom.png";
+import jpmorganLogo from "@/assets/logos/jpmorgan.png";
+import kingfisherLogo from "@/assets/logos/kingfisher.png";
 
 export const CompanyLogosSection = () => {
   return (
@@ -15,6 +19,26 @@ export const CompanyLogosSection = () => {
               People from these companies have joined
             </p>
             <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12 md:gap-16">
+              <img 
+                src={hubspotLogo} 
+                alt="HubSpot" 
+                className="h-6 sm:h-8 w-auto opacity-60 hover:opacity-100 transition-opacity" 
+              />
+              <img 
+                src={intercomLogo} 
+                alt="Intercom" 
+                className="h-6 sm:h-8 w-auto opacity-60 hover:opacity-100 transition-opacity" 
+              />
+              <img 
+                src={jpmorganLogo} 
+                alt="JPMorgan Chase" 
+                className="h-6 sm:h-8 w-auto opacity-60 hover:opacity-100 transition-opacity" 
+              />
+              <img 
+                src={kingfisherLogo} 
+                alt="Kingfisher" 
+                className="h-6 sm:h-8 w-auto opacity-60 hover:opacity-100 transition-opacity" 
+              />
               <img 
                 src={boltLogo} 
                 alt="Bolt" 
