@@ -1,6 +1,5 @@
 import { Navigation } from "@/components/Navigation";
 import { AIHeaderSection } from "@/components/AIHeaderSection";
-import { CompanyLogosSection } from "@/components/CompanyLogosSection";
 import { CohortOverviewSection } from "@/components/CohortOverviewSection";
 import { CohortModulesSection } from "@/components/CohortModulesSection";
 import { CohortTestimonialsSection } from "@/components/CohortTestimonialsSection";
@@ -21,7 +20,6 @@ const Cohort = () => {
         <Navigation />
         <main>
           <AIHeaderSection />
-          <CompanyLogosSection />
           <CohortOverviewSection />
           <CohortTestimonialsSection />
           <CohortModulesSection />
