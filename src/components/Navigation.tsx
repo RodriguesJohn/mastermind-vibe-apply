@@ -23,9 +23,6 @@ export const Navigation = () => {
               Cohort
             </a>
            
-            <a href="/ai-crash-course" className="text-sm font-medium hover:text-primary transition-colors">
-              AI Crash Course
-            </a>
             <DropdownMenu>
               <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium hover:text-primary transition-colors">
                 More
@@ -75,9 +72,6 @@ export const Navigation = () => {
                 </a>
                 <a href="#playbook" className="text-base font-medium hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
                   Blog
-                </a>
-                <a href="/ai-crash-course" className="text-base font-medium hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
-                  AI Crash Course
                 </a>
                 
                 <div className="border-t border-border pt-4 mt-2">
