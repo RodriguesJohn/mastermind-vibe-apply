@@ -15,9 +15,9 @@ export const AIHeaderSection = () => {
         <div className="max-w-6xl mx-auto">
           {/* Mobile/Tablet Layout */}
           <div className="lg:hidden">
-            <div className="text-left sm:text-center space-y-6 sm:space-y-8">
+            <div className="text-left space-y-6 sm:space-y-8">
               {/* Sphere - Hidden on mobile, visible on tablet+ */}
-              <div className="hidden sm:flex sm:justify-center pb-4 sm:pb-8 md:pb-12">
+              <div className="hidden sm:flex pb-4 sm:pb-8 md:pb-12">
                 <div className="w-[320px] h-[320px]">
                   <ParticleSphere />
                 </div>
@@ -34,21 +34,21 @@ export const AIHeaderSection = () => {
 
               {/* Title */}
               <BlurFade delay={0.2} duration={0.8} yOffset={20} blur="8px">
-                <h1 className="text-4xl sm:text-4.5xl md:text-5xl lg:text-6xl xl:text-6xl font-bold tracking-tight leading-tight text-left sm:text-center">
+                <h1 className="text-4xl sm:text-4.5xl md:text-5xl lg:text-6xl xl:text-6xl font-bold tracking-tight leading-tight text-left">
                   <span className="text-white block">AI Mastery for Designers & Product Leaders 5-Week Cohort</span>
                 </h1>
               </BlurFade>
 
               {/* Description */}
               <BlurFade delay={0.4} duration={0.8} yOffset={15} blur="6px">
-                <p className="text-lg sm:text-xl text-white/80 leading-relaxed max-w-2xl mx-auto sm:mx-auto px-4 text-left sm:text-center">
+                <p className="text-lg sm:text-xl text-white/80 leading-relaxed max-w-2xl text-left">
                   Stay ahead and upskill today. Design AI products and systems through a structured learning program.
                 </p>
               </BlurFade>
 
               {/* Buttons */}
               <BlurFade delay={0.6} duration={0.8} yOffset={10} blur="4px">
-                <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-start sm:justify-center pt-4">
+                <div className="flex flex-col sm:flex-row gap-4 items-start pt-4">
                   <Button
                     variant="default"
                     size="lg"
