@@ -14,10 +14,7 @@ export const CompanyLogosSection = () => {
     <section className="py-12 sm:py-16 md:py-20 bg-background border-b border-border/40">
       <div className="px-5 sm:px-8 md:px-12 lg:px-20 max-w-5xl mx-auto">
         <BlurFade delay={0.1} duration={0.8} yOffset={10} blur="4px">
-          <div className="text-center space-y-6 sm:space-y-8">
-            <p className="text-sm sm:text-base text-muted-foreground uppercase tracking-wide font-medium">
-              People from these companies have joined
-            </p>
+          <div className="text-center">
             <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12 md:gap-16">
               <img 
                 src={hubspotLogo} 
