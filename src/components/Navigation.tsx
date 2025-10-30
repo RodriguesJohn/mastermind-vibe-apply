@@ -38,11 +38,11 @@ export const Navigation = () => {
                     Tools
                   </a>
                 </DropdownMenuItem>
-                <DropdownMenuItem asChild>
+                {/* <DropdownMenuItem asChild>
                   <a href="/talent-pool" className="cursor-pointer">
                     Talent Hub
                   </a>
-                </DropdownMenuItem>
+                </DropdownMenuItem> */}
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
@@ -82,9 +82,9 @@ export const Navigation = () => {
                   <a href="/tools" className="text-base font-medium hover:text-primary transition-colors py-2 block" onClick={() => setMobileMenuOpen(false)}>
                     Tools
                   </a>
-                  <a href="/talent-pool" className="text-base font-medium hover:text-primary transition-colors py-2 block" onClick={() => setMobileMenuOpen(false)}>
+                  {/* <a href="/talent-pool" className="text-base font-medium hover:text-primary transition-colors py-2 block" onClick={() => setMobileMenuOpen(false)}>
                     Talent Hub
-                  </a>
+                  </a> */}
                 </div>
 
                 <Button variant="cta" size="lg" className="mt-6" asChild onClick={() => setMobileMenuOpen(false)}>
