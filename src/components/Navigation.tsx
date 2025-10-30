@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { useState } from "react";
 
@@ -22,29 +21,12 @@ export const Navigation = () => {
             <a href="/" className="text-sm font-medium hover:text-primary transition-colors">
               Cohort
             </a>
-           
-            <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium hover:text-primary transition-colors">
-                More
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="start" className="w-56">
-                <DropdownMenuItem asChild>
-                  <a href="/coaching" className="cursor-pointer">
-                    Coaching
-                  </a>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <a href="/tools" className="cursor-pointer">
-                    Tools
-                  </a>
-                </DropdownMenuItem>
-                {/* <DropdownMenuItem asChild>
-                  <a href="/talent-pool" className="cursor-pointer">
-                    Talent Hub
-                  </a>
-                </DropdownMenuItem> */}
-              </DropdownMenuContent>
-            </DropdownMenu>
+            <a href="/coaching" className="text-sm font-medium hover:text-primary transition-colors">
+              Coaching
+            </a>
+            <a href="/tools" className="text-sm font-medium hover:text-primary transition-colors">
+              Tools
+            </a>
           </div>
           
           <Button variant="cta" size="sm" className="hidden md:flex" asChild>
@@ -70,22 +52,12 @@ export const Navigation = () => {
                 <a href="/" className="text-base font-medium hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
                   Cohort
                 </a>
-                <a href="#playbook" className="text-base font-medium hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
-                  Blog
+                <a href="/coaching" className="text-base font-medium hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
+                  Coaching
                 </a>
-                
-                <div className="border-t border-border pt-4 mt-2">
-                  <p className="text-sm text-muted-foreground mb-3">More</p>
-                  <a href="/coaching" className="text-base font-medium hover:text-primary transition-colors py-2 block" onClick={() => setMobileMenuOpen(false)}>
-                    Coaching
-                  </a>
-                  <a href="/tools" className="text-base font-medium hover:text-primary transition-colors py-2 block" onClick={() => setMobileMenuOpen(false)}>
-                    Tools
-                  </a>
-                  {/* <a href="/talent-pool" className="text-base font-medium hover:text-primary transition-colors py-2 block" onClick={() => setMobileMenuOpen(false)}>
-                    Talent Hub
-                  </a> */}
-                </div>
+                <a href="/tools" className="text-base font-medium hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
+                  Tools
+                </a>
 
                 <Button variant="cta" size="lg" className="mt-6" asChild onClick={() => setMobileMenuOpen(false)}>
                   <a href="https://maven.com/productlearnio/aiproductdesignmasterycohort" target="_blank" rel="noopener noreferrer">Apply Now</a>
