@@ -46,7 +46,7 @@ const Consulting = () => {
       features: [
         "AI strategy and implementation",
         "Team training and workshops",
-        "Custom solution development",
+        "Prototyping with AI",
         "MVP development",
         "Design Direction & Strategy",
       ],
