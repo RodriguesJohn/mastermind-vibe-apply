@@ -6,7 +6,11 @@ import { Helmet } from "react-helmet";
 import { BlurFade } from "@/components/BlurFade";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import LindaImage from "@/assets/Linda.jpeg";
-import JohnImage from "@/assets/John.png";
+import SnehImage from "@/assets/Sneh.webp";
+import SonaliImage from "@/assets/Sonali.jpeg";
+import KennyImage from "@/assets/Kenny.jpeg";
+import AviadImage from "@/assets/Avaid.jpeg";
+import IniImage from "@/assets/Indi.jpeg";
 
 const Consulting = () => {
   const testimonials = [
@@ -18,11 +22,39 @@ const Consulting = () => {
       image: LindaImage
     },
     {
-      name: "John Rodrigues",
-      role: "AI Design Expert & Instructor",
-      content: "I've had the privilege of working with numerous designers and businesses, helping them navigate the AI landscape. Seeing my clients successfully integrate AI into their workflows and achieve their goals is what drives my coaching practice.",
-      initials: "JR",
-      image: JohnImage
+      name: "Sneh",
+      role: "UX Designer",
+      content: "John is calm, insightful, and deeply attuned to emerging design trends. His strategic frameworks and coaching helped me think like both a strategist and a solutionist.",
+      initials: "S",
+      image: SnehImage
+    },
+    {
+      name: "Sonali",
+      role: "Sr. Product Designer at JPMorgan Chase",
+      content: "John emphasizes practical application over lectures, which made the material immediately useful. I'm more confident in the subject and excited to apply this foundation to my career.",
+      initials: "So",
+      image: SonaliImage
+    },
+    {
+      name: "Kenneth Hargrove",
+      role: "Product Designer @CoStar",
+      content: "John's coaching gave me the foundation to understand AI at a high level and learn about tools to leverage in my design process. I highly recommend working with him.",
+      initials: "KH",
+      image: KennyImage
+    },
+    {
+      name: "Aviad",
+      role: "Product Designer",
+      content: "John delivered everything he listed and more. Always accessible, he creates additional tutorials on demand and is ready to help, explain, and mentor with patience and care.",
+      initials: "A",
+      image: AviadImage
+    },
+    {
+      name: "ÌníOlúwa",
+      role: "Senior Product Designer at Intercom",
+      content: "I've gone from not knowing how to code to building my own AI agent and now creating an app. Thank you, John, for being such a generous teacher and for expanding my horizons!",
+      initials: "Ì",
+      image: IniImage
     }
   ];
 
@@ -217,7 +249,7 @@ const Consulting = () => {
                   </h2>
                 </BlurFade>
                 
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {testimonials.map((testimonial, index) => (
                     <BlurFade key={index} delay={0.4 + (index * 0.1)} duration={0.8} yOffset={15} blur="6px">
                       <Card className="p-8 bg-card/50 border-border/40 hover:border-border transition-all duration-300">
