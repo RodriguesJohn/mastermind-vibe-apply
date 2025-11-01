@@ -52,7 +52,7 @@ export const AIHeaderSection = () => {
                   <Button
                     variant="default"
                     size="lg"
-                    className="group bg-white/15 text-white backdrop-blur-sm hover:bg-white/25 border border-white/20 w-full sm:w-auto min-w-[200px]"
+                    className="group bg-accent text-primary-foreground hover:bg-accent/90 w-full sm:w-auto min-w-[200px]"
                     asChild
                   >
                     <a
@@ -111,7 +111,7 @@ export const AIHeaderSection = () => {
                   <Button
                     variant="default"
                     size="xl"
-                    className="group bg-white/10 text-white backdrop-blur-sm hover:bg-white/20 border border-white/10"
+                    className="group bg-accent text-primary-foreground hover:bg-accent/90"
                     asChild
                   >
                     <a
