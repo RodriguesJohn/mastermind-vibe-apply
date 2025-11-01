@@ -47,7 +47,7 @@ const Consulting = () => {
         "AI strategy and implementation",
         "Team training and workshops",
         "Custom solution development",
-        "Ongoing support and guidance",
+        "MVP development",
         "Design Direction & Strategy",
       ],
       cta: "Book a Session",
