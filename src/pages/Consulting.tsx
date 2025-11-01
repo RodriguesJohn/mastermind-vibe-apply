@@ -44,7 +44,7 @@ const Consulting = () => {
       price: "$10,000",
       priceSubtext: "starting price",
       features: [
-        "AI strategy integration",
+        "AI strategy and integration",
         "Team training and workshops",
         "Prototyping with AI",
         "MVP development",
