@@ -26,8 +26,8 @@ const Consulting = () => {
     {
       name: "Individual Coaching",
       description: "Personalized coaching for professionals looking to master AI",
-      price: "$500",
-      priceSubtext: "per hour",
+      price: "$2,000",
+      priceSubtext: "",
       features: [
         "GetCareer101 mentorship and coaching",
         "Landing design job support and guidance",
