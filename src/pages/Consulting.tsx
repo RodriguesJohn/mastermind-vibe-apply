@@ -41,8 +41,8 @@ const Consulting = () => {
     {
       name: "Business Consulting",
       description: "Strategic AI consulting for teams and organizations",
-      price: "$5,000",
-      priceSubtext: "starting rate",
+      price: "$10,000",
+      priceSubtext: "",
       features: [
         "AI strategy and implementation",
         "Team training and workshops",
