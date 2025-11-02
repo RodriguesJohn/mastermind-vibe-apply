@@ -2,7 +2,6 @@ import { ParticleSphere } from "@/components/ParticleSphere";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { ShaderBackground } from "@/components/AdvancedShaderBackground";
-import { BlurFade } from "@/components/BlurFade";
 
 export const AIHeaderSection = () => {
   return (
@@ -24,62 +23,54 @@ export const AIHeaderSection = () => {
               </div>
 
               {/* Date Badge */}
-              <BlurFade delay={0.1} duration={0.8} yOffset={10} blur="4px">
-                <div className="inline-block">
-                  <span className="inline-flex items-center px-1 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/80 text-sm font-medium uppercase tracking-wide">
-                    Next cohort starting on November 8th
-                  </span>
-                </div>
-              </BlurFade>
+              <div className="inline-block">
+                <span className="inline-flex items-center px-1 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/80 text-sm font-medium uppercase tracking-wide">
+                  Next cohort starting on November 8th
+                </span>
+              </div>
 
               {/* Title */}
-              <BlurFade delay={0.2} duration={0.8} yOffset={20} blur="8px">
-                <h1 className="text-4xl sm:text-4.5xl md:text-5xl lg:text-6xl xl:text-6xl font-bold tracking-tight leading-tight text-left">
-                  <span className="text-white block">AI Mastery for Designers & Product Leaders 5-Week Cohort</span>
-                </h1>
-              </BlurFade>
+              <h1 className="text-4xl sm:text-4.5xl md:text-5xl lg:text-6xl xl:text-6xl font-bold tracking-tight leading-tight text-left">
+                <span className="text-white block">AI Mastery for Designers & Product Leaders 5-Week Cohort</span>
+              </h1>
 
               {/* Description */}
-              <BlurFade delay={0.4} duration={0.8} yOffset={15} blur="6px">
-                <p className="text-lg sm:text-xl text-white/80 leading-relaxed max-w-2xl text-left">
-                  Stay ahead and upskill today. Learn how to design and design AI apps and systems to structure learning programs.
-                </p>
-              </BlurFade>
+              <p className="text-lg sm:text-xl text-white/80 leading-relaxed max-w-2xl text-left">
+                Stay ahead and upskill today. Learn how to design and design AI apps and systems to structure learning programs.
+              </p>
 
               {/* Buttons */}
-              <BlurFade delay={0.6} duration={0.8} yOffset={10} blur="4px">
-                <div className="flex flex-col sm:flex-row gap-4 items-start pt-4">
-                  <Button
-                    variant="default"
-                    size="lg"
-                    className="group bg-accent text-primary-foreground hover:bg-accent/90 w-full sm:w-auto min-w-[200px]"
-                    asChild
+              <div className="flex flex-col sm:flex-row gap-4 items-start pt-4">
+                <Button
+                  variant="default"
+                  size="lg"
+                  className="group bg-accent text-primary-foreground hover:bg-accent/90 w-full sm:w-auto min-w-[200px]"
+                  asChild
+                >
+                  <a
+                    href="https://maven.com/productlearnio/aiproductdesignmasterycohort"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <a
-                      href="https://maven.com/productlearnio/aiproductdesignmasterycohort"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Enroll Today
-                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </a>
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    className="border-white/30 text-white/90 hover:bg-white/10 w-full sm:w-auto min-w-[200px]"
-                    asChild
+                    Enroll Today
+                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </a>
+                </Button>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="border-white/30 text-white/90 hover:bg-white/10 w-full sm:w-auto min-w-[200px]"
+                  asChild
+                >
+                  <a
+                    href="https://cal.com/aidesignacademy/15min?overlayCalendar=true"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <a
-                      href="https://cal.com/aidesignacademy/15min?overlayCalendar=true"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Book a Call Today
-                    </a>
-                  </Button>
-                </div>
-              </BlurFade>
+                    Book a Call Today
+                  </a>
+                </Button>
+              </div>
 
             </div>
           </div>
@@ -87,58 +78,50 @@ export const AIHeaderSection = () => {
           {/* Desktop Layout */}
           <div className="hidden lg:grid lg:grid-cols-2 gap-8 items-center">
             {/* Left Column - Text Content */}
-            <div className="space-y-4 animate-fade-in">
-              <BlurFade delay={0.1} duration={0.8} yOffset={10} blur="4px">
-                <p className="text-sm text-white/60 uppercase tracking-wide font-medium">
-                  Next cohort starting on November 8th.
-                </p>
-              </BlurFade>
+            <div className="space-y-4">
+              <p className="text-sm text-white/60 uppercase tracking-wide font-medium">
+                Next cohort starting on November 8th.
+              </p>
 
-              <BlurFade delay={0.2} duration={0.8} yOffset={20} blur="8px">
-                <h1 className="text-2xl lg:text-5xl xl:text-4xl 2xl:text-4xl font-semibold tracking-tight leading-[1.2] lg:leading-[1.8]">
-                  <span className="text-white block">AI Mastery for Designers & Product Leaders 5-Week Cohort</span>
-                </h1>
-              </BlurFade>
+              <h1 className="text-2xl lg:text-5xl xl:text-4xl 2xl:text-4xl font-semibold tracking-tight leading-[1.2] lg:leading-[1.8]">
+                <span className="text-white block">AI Mastery for Designers & Product Leaders 5-Week Cohort</span>
+              </h1>
 
-              <BlurFade delay={0.4} duration={0.8} yOffset={15} blur="6px">
-                <p className="text-xl xl:text-2xl text-white/75 max-w-2xl leading-relaxed">
-                  Stay ahead and upskill today. Learn how to design AI apps and systems through a structured learning program.
-                </p>
-              </BlurFade>
+              <p className="text-xl xl:text-2xl text-white/75 max-w-2xl leading-relaxed">
+                Stay ahead and upskill today. Learn how to design AI apps and systems through a structured learning program.
+              </p>
 
-              <BlurFade delay={0.6} duration={0.8} yOffset={10} blur="4px">
-                <div className="flex flex-row gap-6 items-center pt-6">
-                  <Button
-                    variant="default"
-                    size="xl"
-                    className="group bg-accent text-primary-foreground hover:bg-accent/90"
-                    asChild
+              <div className="flex flex-row gap-6 items-center pt-6">
+                <Button
+                  variant="default"
+                  size="xl"
+                  className="group bg-accent text-primary-foreground hover:bg-accent/90"
+                  asChild
+                >
+                  <a
+                    href="https://maven.com/productlearnio/aiproductdesignmasterycohort"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <a
-                      href="https://maven.com/productlearnio/aiproductdesignmasterycohort"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Enroll Today
-                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </a>
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="xl"
-                    className="border-white/10 text-white/80 hover:bg-white/5"
-                    asChild
+                    Enroll Today
+                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </a>
+                </Button>
+                <Button
+                  variant="outline"
+                  size="xl"
+                  className="border-white/10 text-white/80 hover:bg-white/5"
+                  asChild
+                >
+                  <a
+                    href="https://cal.com/aidesignacademy/15min?overlayCalendar=true"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <a
-                      href="https://cal.com/aidesignacademy/15min?overlayCalendar=true"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Book a Call Today
-                    </a>
-                  </Button>
-                </div>
-              </BlurFade>
+                    Book a Call Today
+                  </a>
+                </Button>
+              </div>
             </div>
 
             {/* Right Column - Particle Sphere */}
