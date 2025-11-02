@@ -149,78 +149,72 @@ const VibeCodingAccelerator = () => {
         <Navigation />
         
         <main className="bg-black">
-          {/* Hero Section - Top Part */}
+          {/* Hero Section */}
           <section className="relative py-16 md:py-24 overflow-hidden bg-black text-white border-b border-white/10">
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-primary/10 via-black to-black" />
             
             <div className="px-4 md:px-10 lg:px-[120px] relative z-10 w-full">
               <div className="max-w-[1200px] mx-auto">
-                {/* Top Content */}
-                <div className="text-center max-w-4xl mx-auto">
-                  <BlurFade delay={0.2} duration={0.8}>
-                    <div className="flex items-center justify-center gap-2 mb-6">
-                      <span className="text-xs text-white/60 font-medium tracking-wider uppercase">Self-paced · Weekly live support · Lifetime access</span>
-                    </div>
-                  </BlurFade>
+                <div className="grid lg:grid-cols-2 gap-12 items-center">
+                  {/* Left Column - Content */}
+                  <div>
+                    <BlurFade delay={0.2} duration={0.8}>
+                      <div className="flex items-center gap-2 mb-6">
+                        <span className="text-xs text-white/60 font-medium tracking-wider uppercase">Self-paced · Weekly live support · Lifetime access</span>
+                      </div>
+                    </BlurFade>
 
-                  <BlurFade delay={0.3} duration={0.8}>
-                    <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">
-                      Master Vibe Coding
-                      <span className="block text-primary mt-2">in 60 Days</span>
-                    </h1>
-                  </BlurFade>
+                    <BlurFade delay={0.3} duration={0.8}>
+                      <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">
+                        Master Vibe Coding
+                        <span className="block text-primary mt-2">in 60 Days</span>
+                      </h1>
+                    </BlurFade>
 
-                  <BlurFade delay={0.4} duration={0.8}>
-                    <p className="text-lg md:text-xl text-white/70 mb-8 leading-relaxed max-w-2xl mx-auto">
-                      A design engineering accelerator that turns designers into builders who launch real apps using AI tools like Lovable, Cursor, React, and Supabase.
-                    </p>
-                  </BlurFade>
+                    <BlurFade delay={0.4} duration={0.8}>
+                      <p className="text-lg md:text-xl text-white/70 mb-8 leading-relaxed max-w-xl">
+                        A design engineering accelerator that turns designers into builders who launch real apps using AI tools like Lovable, Cursor, React, and Supabase.
+                      </p>
+                    </BlurFade>
 
-                  <BlurFade delay={0.5} duration={0.8}>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                      <Button 
-                        variant="cta" 
-                        size="lg"
-                        className="group"
-                        asChild
-                      >
-                        <a 
-                          href="https://maven.com/productlearnio/aiproductdesignmasterycohort"
-                          target="_blank"
-                          rel="noopener noreferrer"
+                    <BlurFade delay={0.5} duration={0.8}>
+                      <div className="flex flex-col sm:flex-row gap-4">
+                        <Button 
+                          variant="cta" 
+                          size="lg"
+                          className="group"
+                          asChild
                         >
-                          Join Now
-                          <ArrowRight className="group-hover:translate-x-1 transition-transform" />
-                        </a>
-                      </Button>
-                      <Button 
-                        variant="outline" 
-                        size="lg"
-                        className="border-white/20 text-white hover:bg-white/10"
-                        asChild
-                      >
-                        <a 
-                          href="https://cal.com/aidesignacademy/15min?overlayCalendar=true"
-                          target="_blank"
-                          rel="noopener noreferrer"
+                          <a 
+                            href="https://maven.com/productlearnio/aiproductdesignmasterycohort"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Join Now
+                            <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+                          </a>
+                        </Button>
+                        <Button 
+                          variant="outline" 
+                          size="lg"
+                          className="border-white/20 text-white hover:bg-white/10"
+                          asChild
                         >
-                          Book a Call Today
-                        </a>
-                      </Button>
-                    </div>
-                  </BlurFade>
-                </div>
-              </div>
-            </div>
-          </section>
+                          <a 
+                            href="https://cal.com/aidesignacademy/15min?overlayCalendar=true"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Book a Call Today
+                          </a>
+                        </Button>
+                      </div>
+                    </BlurFade>
+                  </div>
 
-          {/* Hero Section - Bottom Part - Video */}
-          <section className="relative py-12 md:py-16 overflow-hidden bg-black text-white border-b border-white/10">
-            <div className="px-4 md:px-10 lg:px-[120px] relative z-10 w-full">
-              <div className="max-w-[1200px] mx-auto">
-                <BlurFade delay={0.6} duration={0.8}>
-                  <div className="bg-white/[0.02] backdrop-blur-sm border border-white/10 rounded-2xl p-8 md:p-12">
-                    <div className="relative aspect-video rounded-xl overflow-hidden bg-white/5 border border-white/20 hover:border-primary/50 transition-colors group cursor-pointer">
+                  {/* Right Column - Video */}
+                  <BlurFade delay={0.6} duration={0.8}>
+                    <div className="relative aspect-video rounded-2xl overflow-hidden bg-white/5 border border-white/10 hover:border-primary/50 transition-colors group cursor-pointer">
                       <div className="absolute inset-0 flex items-center justify-center">
                         <div className="w-20 h-20 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/40 flex items-center justify-center group-hover:scale-110 transition-transform">
                           <Play className="w-8 h-8 text-primary ml-1" />
@@ -228,8 +222,8 @@ const VibeCodingAccelerator = () => {
                       </div>
                       <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                     </div>
-                  </div>
-                </BlurFade>
+                  </BlurFade>
+                </div>
               </div>
             </div>
           </section>
