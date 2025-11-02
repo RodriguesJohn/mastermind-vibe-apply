@@ -119,7 +119,7 @@ const Consulting = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        Book a Call
+                        Get in touch
                       </a>
                     </Button>
                   </div>
@@ -157,7 +157,7 @@ const Consulting = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        Book a Call
+                        Get in touch
                       </a>
                     </Button>
 
