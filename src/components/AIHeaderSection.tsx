@@ -31,12 +31,12 @@ export const AIHeaderSection = () => {
 
               {/* Title */}
               <h1 className="text-4xl sm:text-4.5xl md:text-5xl lg:text-6xl xl:text-6xl font-bold tracking-tight leading-tight text-left">
-                <span className="text-white block">AI Mastery for Designers & Product Leaders 5-Week Cohort</span>
+                <span className="text-white block">Become a Design Engineer</span>
               </h1>
 
               {/* Description */}
-              <p className="text-lg sm:text-xl text-white/80 leading-relaxed max-w-2xl text-left">
-                Stay ahead and upskill today. Learn how to design and design AI apps and systems to structure learning programs.
+              <p className="text-medium sm:text-xl text-white/80 leading-relaxed max-w-2xl text-left">
+                Master the technical skills to bridge design and engineering. Build real projects and create your AI design engineering portfolio.
               </p>
 
               {/* Buttons */}
@@ -78,17 +78,17 @@ export const AIHeaderSection = () => {
           {/* Desktop Layout */}
           <div className="hidden lg:grid lg:grid-cols-2 gap-8 items-center">
             {/* Left Column - Text Content */}
-            <div className="space-y-4">
+            <div className="space-y-4 animate-fade-in">
               <p className="text-sm text-white/60 uppercase tracking-wide font-medium">
                 Next cohort starting on November 8th.
               </p>
 
               <h1 className="text-2xl lg:text-5xl xl:text-4xl 2xl:text-4xl font-semibold tracking-tight leading-[1.2] lg:leading-[1.8]">
-                <span className="text-white block">AI Mastery for Designers & Product Leaders 5-Week Cohort</span>
+                <span className="text-white block">Become a Design Engineer</span>
               </h1>
 
               <p className="text-xl xl:text-2xl text-white/75 max-w-2xl leading-relaxed">
-                Stay ahead and upskill today. Learn how to design AI apps and systems through a structured learning program.
+                Master the technical skills to bridge design and engineering. Build real projects and create your AI design engineering portfolio.
               </p>
 
               <div className="flex flex-row gap-6 items-center pt-6">
