@@ -42,7 +42,7 @@ export const AIHeaderSection = () => {
               {/* Description */}
               <BlurFade delay={0.4} duration={0.8} yOffset={15} blur="6px">
                 <p className="text-lg sm:text-xl text-white/80 leading-relaxed max-w-2xl text-left">
-                  Stay ahead and upskill today. Design AI products and systems through a structured learning program.
+                  Stay ahead and upskill today. Learn how to design and design AI apps and systems to structure learning programs.
                 </p>
               </BlurFade>
 
@@ -102,7 +102,7 @@ export const AIHeaderSection = () => {
 
               <BlurFade delay={0.4} duration={0.8} yOffset={15} blur="6px">
                 <p className="text-xl xl:text-2xl text-white/75 max-w-2xl leading-relaxed">
-                  We design and develop websites for creative agencies, powered by AI.
+                  Stay ahead and upskill today. Learn how to design and design AI apps and systems to structure learning programs.
                 </p>
               </BlurFade>
 
