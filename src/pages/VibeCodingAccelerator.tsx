@@ -699,7 +699,7 @@ const VibeCodingAccelerator = () => {
 
                         <p className="text-white/60 mt-12 text-sm">Includes : Security, Unlimited Storage, Payment, Search engine, and all features</p>
                       </div>
-                      <div className="relative pt-0 md:pt-4">
+                      <div className="relative pt-0 md:pt-4 md:pl-12">
                         <ul
                           role="list"
                           className="space-y-4"
@@ -707,17 +707,17 @@ const VibeCodingAccelerator = () => {
                           {['First premium advantage', 'Second advantage weekly', 'Third advantage donate to project', 'Fourth, access to all components weekly'].map((item, index) => (
                             <li
                               key={index}
-                              className="flex items-center gap-3"
+                              className="flex items-start gap-3"
                             >
                               <Check
-                                className="text-primary size-4 flex-shrink-0"
+                                className="text-primary size-4 flex-shrink-0 mt-0.5"
                                 strokeWidth={3.5}
                               />
-                              <span className="text-white">{item}</span>
+                              <span className="text-white break-words">{item}</span>
                             </li>
                           ))}
                         </ul>
-                        <p className="text-white/60 mt-6 text-sm">Team can be any size, and you can add or switch members as needed. Companies using our platform include:</p>
+                        <p className="text-white/60 mt-6 text-sm break-words">Team can be any size, and you can add or switch members as needed. Companies using our platform include:</p>
                         <div className="mt-12 flex flex-wrap items-center justify-start gap-8">
                           <img
                             className="h-5 w-fit brightness-0 invert"
