@@ -496,7 +496,7 @@ const VibeCodingAccelerator = () => {
                   </div>
                 </BlurFade>
 
-                <div className="grid md:grid-cols-2 gap-6 mt-16">
+                <div className="grid md:grid-cols-2 gap-6 mt-16 group/card-grid">
                   {modules.map((module, index) => (
                     <BlurFade key={index} delay={0.3 + (index * 0.05)} duration={0.8}>
                       <motion.div
@@ -504,7 +504,7 @@ const VibeCodingAccelerator = () => {
                         transition={{ duration: 0.3, ease: "easeOut" }}
                         className="cursor-pointer"
                       >
-                        <Card className="border-white/10 hover:border-white/30 transition-colors h-full overflow-hidden">
+                        <Card className="border-white/10 transition-all h-full overflow-hidden group-hover/card-grid:blur-sm hover:blur-none hover:border-white/20">
                           {/* Shader Section with Module Info Overlay */}
                           <div className="relative h-32 overflow-hidden">
                             <MeshGradient
