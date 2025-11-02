@@ -76,7 +76,7 @@ const Consulting = () => {
       highlighted: false,
     },
     {
-      name: "Business Consulting",
+      name: "AI Consulting",
       description: "Strategic AI consulting for teams and organizations",
       price: "$10,000",
       priceSubtext: "starting price",
@@ -182,7 +182,7 @@ const Consulting = () => {
                               {tier.cta}
                             </a>
                           </Button>
-                        ) : tier.name === "Business Consulting" ? (
+                        ) : tier.name === "AI Consulting" ? (
                           <Button 
                             variant={tier.highlighted ? "default" : "outline"}
                             className="w-full"
