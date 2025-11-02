@@ -31,37 +31,98 @@ const VibeCodingAccelerator = () => {
     {
       number: "01",
       title: "Orientation + First Build",
-      description: "Build your first AI mini-app"
+      description: "Build your first AI mini-app",
+      week: "Week 1",
+      topics: [
+        "Program overview & AI tools landscape",
+        "Setting up your development environment",
+        "Build your first AI-powered mini-app",
+        "Introduction to Lovable & Cursor basics"
+      ],
+      outcome: "Ship a working AI app and understand the modern dev workflow"
     },
     {
       number: "02",
-      title: "Lovable",
-      description: "Visual AI builder, ship fast"
+      title: "Lovable Mastery",
+      description: "Visual AI builder, ship fast",
+      week: "Week 2",
+      topics: [
+        "Deep dive into Lovable's visual builder",
+        "Creating responsive UIs with AI assistance",
+        "Integrating components and layouts",
+        "Building your first complete web app"
+      ],
+      outcome: "Build and deploy a polished web application using Lovable"
     },
     {
       number: "03-04",
-      title: "Cursor",
-      description: "Code with AI, web + mobile builds"
+      title: "Cursor Deep Dive",
+      description: "Code with AI, web + mobile builds",
+      week: "Weeks 3-4",
+      topics: [
+        "Cursor IDE fundamentals & AI prompting",
+        "Building custom components with React",
+        "Creating responsive, mobile-first designs",
+        "Working with APIs and third-party services",
+        "Advanced debugging and optimization"
+      ],
+      outcome: "Build a full-featured web and mobile app using Cursor"
     },
     {
       number: "05",
-      title: "Design Engineering",
-      description: "React, Tailwind, Next.js foundations"
+      title: "Design Engineering Foundations",
+      description: "React, Tailwind, Next.js foundations",
+      week: "Week 5",
+      topics: [
+        "React fundamentals & component architecture",
+        "Tailwind CSS for modern UI design",
+        "Next.js for production-ready apps",
+        "Component libraries & design systems",
+        "Performance optimization techniques"
+      ],
+      outcome: "Master the core technologies powering modern web apps"
     },
     {
       number: "06",
-      title: "Backend",
-      description: "Supabase, APIs, data"
+      title: "Backend & Data",
+      description: "Supabase, APIs, data",
+      week: "Week 6",
+      topics: [
+        "Supabase setup & database design",
+        "Authentication and user management",
+        "Building RESTful APIs",
+        "Real-time data with subscriptions",
+        "Data security and best practices"
+      ],
+      outcome: "Build secure, scalable backends with Supabase"
     },
     {
       number: "07",
-      title: "Launch",
-      description: "Deploy to Vercel, share live"
+      title: "Launch & Deploy",
+      description: "Deploy to Vercel, share live",
+      week: "Week 7",
+      topics: [
+        "Vercel deployment best practices",
+        "Domain setup & SSL configuration",
+        "Environment variables & secrets",
+        "Performance monitoring & analytics",
+        "Post-launch optimization"
+      ],
+      outcome: "Deploy your app live and handle production challenges"
     },
     {
       number: "08",
-      title: "Capstone",
-      description: "Create and launch your own product"
+      title: "Capstone Project",
+      description: "Create and launch your own product",
+      week: "Week 8",
+      topics: [
+        "Ideation & project planning",
+        "Building your unique product",
+        "Testing & refinement",
+        "Final deployment & launch",
+        "Portfolio presentation prep"
+      ],
+      outcome: "Launch your own product and showcase it in your portfolio"
     }
   ];
 
@@ -425,28 +486,38 @@ const VibeCodingAccelerator = () => {
                 <div className="grid md:grid-cols-2 gap-6 mt-16">
                   {modules.map((module, index) => (
                     <BlurFade key={index} delay={0.3 + (index * 0.05)} duration={0.8}>
-                      <Card className="p-8 bg-white/5 border-white/10 hover:bg-white/10 transition-colors">
-                        <div className="flex items-start gap-4">
+                      <Card className="p-8 bg-white/5 border-white/10 hover:border-primary/50 transition-colors h-full">
+                        <div className="flex items-start gap-4 mb-4">
                           <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center">
                             <span className="text-primary font-bold">{module.number}</span>
                           </div>
-                          <div>
+                          <div className="flex-1">
+                            <div className="flex items-center gap-2 mb-2">
+                              <span className="text-sm text-white/60">{module.week}</span>
+                            </div>
                             <h3 className="text-xl font-semibold mb-2 text-white">{module.title}</h3>
-                            <p className="text-white/70">{module.description}</p>
+                            <p className="text-white/70 mb-4">{module.description}</p>
+                          </div>
+                        </div>
+                        
+                        <div className="space-y-3">
+                          <p className="text-sm font-medium text-white/90 mb-2">What You'll Learn:</p>
+                          <ul className="space-y-2">
+                            {module.topics.map((topic, topicIndex) => (
+                              <li key={topicIndex} className="flex items-start gap-2 text-sm text-white/70">
+                                <Check className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                                <span>{topic}</span>
+                              </li>
+                            ))}
+                          </ul>
+                          <div className="pt-4 border-t border-white/10 mt-4">
+                            <p className="text-sm font-medium text-primary">{module.outcome}</p>
                           </div>
                         </div>
                       </Card>
                     </BlurFade>
                   ))}
                 </div>
-
-                <BlurFade delay={0.8} duration={0.8}>
-                  <div className="text-center mt-12">
-                    <Button variant="outline" size="lg" className="border-white/20 text-white hover:bg-white/10" asChild>
-                      <a href="#curriculum-details">View Full Curriculum →</a>
-                    </Button>
-                  </div>
-                </BlurFade>
               </div>
             </div>
           </section>
