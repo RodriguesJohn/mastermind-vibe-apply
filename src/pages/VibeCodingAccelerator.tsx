@@ -522,7 +522,7 @@ const VibeCodingAccelerator = () => {
                         {/* Content Section */}
                         <div className="p-8 bg-black -mt-6 pt-10">
                           <div className="mb-6">
-                            <h3 className="text-2xl font-bold mb-2 text-white">{module.title}</h3>
+                            <h3 className="text-2xl font-normal mb-2 text-white">{module.title}</h3>
                             <p className="text-white/60 text-sm">{module.description}</p>
                           </div>
                           
