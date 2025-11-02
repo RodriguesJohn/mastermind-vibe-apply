@@ -172,8 +172,8 @@ const VibeCodingAccelerator = () => {
                   </BlurFade>
 
                   <BlurFade delay={0.4} duration={0.8}>
-                    <p className="text-lg md:text-xl text-white/70 mb-8 leading-relaxed max-w-3xl">
-                      A design engineering accelerator that turns designers into builders who launch real apps using AI tools like Lovable, Cursor, React, and Supabase.
+                    <p className="text-lg md:text-xl text-white/70 font-medium mb-8 leading-relaxed max-w-3xl">
+                      Turn designers into builders. Launch real apps with AI tools.
                     </p>
                   </BlurFade>
 
