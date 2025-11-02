@@ -35,7 +35,6 @@ const VibeCodingAccelerator = () => {
       title: "Orientation + First Build",
       description: "Build your first AI mini-app",
       week: "Week 1",
-      colors: ["#72b9bb", "#b5d9d9", "#ffd1bd", "#ffebe0"],
       topics: [
         "Program overview & AI tools landscape",
         "Setting up your development environment",
@@ -49,7 +48,6 @@ const VibeCodingAccelerator = () => {
       title: "Lovable Mastery",
       description: "Visual AI builder, ship fast",
       week: "Week 2",
-      colors: ["#ff6b6b", "#ffa8a8", "#ffe0e0", "#fff5f5"],
       topics: [
         "Deep dive into Lovable's visual builder",
         "Creating responsive UIs with AI assistance",
@@ -63,7 +61,6 @@ const VibeCodingAccelerator = () => {
       title: "Cursor Deep Dive",
       description: "Code with AI, web + mobile builds",
       week: "Weeks 3-4",
-      colors: ["#6bcf7f", "#a5e6b8", "#d4f5dc", "#f0fdf4"],
       topics: [
         "Cursor IDE fundamentals & AI prompting",
         "Building custom components with React",
@@ -78,7 +75,6 @@ const VibeCodingAccelerator = () => {
       title: "Design Engineering Foundations",
       description: "React, Tailwind, Next.js foundations",
       week: "Week 5",
-      colors: ["#9b59b6", "#bb9dcc", "#dcd2e3", "#f3eef8"],
       topics: [
         "React fundamentals & component architecture",
         "Tailwind CSS for modern UI design",
@@ -93,7 +89,6 @@ const VibeCodingAccelerator = () => {
       title: "Backend & Data",
       description: "Supabase, APIs, data",
       week: "Week 6",
-      colors: ["#3498db", "#85c1e9", "#cfe8f4", "#ebf5fb"],
       topics: [
         "Supabase setup & database design",
         "Authentication and user management",
@@ -108,7 +103,6 @@ const VibeCodingAccelerator = () => {
       title: "Launch & Deploy",
       description: "Deploy to Vercel, share live",
       week: "Week 7",
-      colors: ["#f39c12", "#f7c869", "#fde4b7", "#fef9e7"],
       topics: [
         "Vercel deployment best practices",
         "Domain setup & SSL configuration",
@@ -123,7 +117,6 @@ const VibeCodingAccelerator = () => {
       title: "Capstone Project",
       description: "Create and launch your own product",
       week: "Week 8",
-      colors: ["#e74c3c", "#ec9281", "#f5c5ba", "#fdf0ed"],
       topics: [
         "Ideation & project planning",
         "Building your unique product",
@@ -134,6 +127,9 @@ const VibeCodingAccelerator = () => {
       project: "Your Unique Product: Launch your own idea and build your portfolio"
     }
   ];
+
+  // Shared blue gradient colors for all cards
+  const gradientColors = ["#3B82F6", "#60A5FA", "#93C5FD", "#DBEAFE"];
 
   const careerBenefits = [
     {
@@ -503,7 +499,7 @@ const VibeCodingAccelerator = () => {
                           <MeshGradient
                             width={800}
                             height={600}
-                            colors={module.colors}
+                            colors={gradientColors}
                             distortion={0.8}
                             swirl={0.6}
                             speed={0.42}
