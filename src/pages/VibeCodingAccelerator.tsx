@@ -12,6 +12,7 @@ import SonaliImage from "@/assets/Sonali.jpeg";
 import LogoCloud from "@/components/LogoCloud";
 import { MeshGradient } from "@paper-design/shaders-react";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const VibeCodingAccelerator = () => {
   const howItWorks = [
@@ -498,51 +499,57 @@ const VibeCodingAccelerator = () => {
                 <div className="grid md:grid-cols-2 gap-6 mt-16">
                   {modules.map((module, index) => (
                     <BlurFade key={index} delay={0.3 + (index * 0.05)} duration={0.8}>
-                      <Card className="border-white/10 hover:border-white/30 transition-colors h-full overflow-hidden">
-                        {/* Shader Section with Module Info Overlay */}
-                        <div className="relative h-32 overflow-hidden">
-                          <MeshGradient
-                            width={800}
-                            height={200}
-                            colors={module.colors}
-                            distortion={0.8}
-                            swirl={0.6}
-                            speed={0.42}
-                            offsetX={0.08}
-                          />
-                          {/* Module number and week overlay on shader */}
-                          <div className="absolute bottom-0 left-0 p-4 flex items-center gap-3">
-                            <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/30">
-                              <span className="text-white font-bold text-sm">{module.number}</span>
+                      <motion.div
+                        whileHover={{ y: -8, scale: 1.02 }}
+                        transition={{ duration: 0.3, ease: "easeOut" }}
+                        className="cursor-pointer"
+                      >
+                        <Card className="border-white/10 hover:border-white/30 transition-colors h-full overflow-hidden">
+                          {/* Shader Section with Module Info Overlay */}
+                          <div className="relative h-32 overflow-hidden">
+                            <MeshGradient
+                              width={800}
+                              height={200}
+                              colors={module.colors}
+                              distortion={0.8}
+                              swirl={0.6}
+                              speed={0.42}
+                              offsetX={0.08}
+                            />
+                            {/* Module number and week overlay on shader */}
+                            <div className="absolute bottom-0 left-0 p-4 flex items-center gap-3">
+                              <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/30">
+                                <span className="text-white font-bold text-sm">{module.number}</span>
+                              </div>
+                              <span className="text-xs text-white uppercase tracking-wide font-medium">{module.week}</span>
                             </div>
-                            <span className="text-xs text-white uppercase tracking-wide font-medium">{module.week}</span>
-                          </div>
-                        </div>
-                        
-                        {/* Content Section */}
-                        <div className="p-8 bg-black -mt-6 pt-10">
-                          <div className="mb-6">
-                            <h3 className="text-2xl font-normal mb-2 text-white">{module.title}</h3>
-                            <p className="text-white/60 text-sm">{module.description}</p>
                           </div>
                           
-                          <div className="space-y-4 pt-4 border-t border-white/10">
-                            <p className="text-sm font-semibold text-white/90 uppercase tracking-wide">What You'll Learn:</p>
-                            <ul className="space-y-2">
-                              {module.topics.map((topic, topicIndex) => (
-                                <li key={topicIndex} className="flex items-start gap-2 text-sm text-white/70">
-                                  <Check className="w-4 h-4 text-white mt-0.5 flex-shrink-0" />
-                                  <span>{topic}</span>
-                                </li>
-                              ))}
-                            </ul>
-                            <div className="pt-4 border-t border-white/10">
-                              <p className="text-xs font-semibold text-white/60 uppercase tracking-wide mb-2">Project:</p>
-                              <p className="text-sm font-medium text-white/90">{module.project}</p>
+                          {/* Content Section */}
+                          <div className="p-8 bg-black -mt-6 pt-10">
+                            <div className="mb-6">
+                              <h3 className="text-2xl font-normal mb-2 text-white">{module.title}</h3>
+                              <p className="text-white/60 text-sm">{module.description}</p>
+                            </div>
+                            
+                            <div className="space-y-4 pt-4 border-t border-white/10">
+                              <p className="text-sm font-semibold text-white/90 uppercase tracking-wide">What You'll Learn:</p>
+                              <ul className="space-y-2">
+                                {module.topics.map((topic, topicIndex) => (
+                                  <li key={topicIndex} className="flex items-start gap-2 text-sm text-white/70">
+                                    <Check className="w-4 h-4 text-white mt-0.5 flex-shrink-0" />
+                                    <span>{topic}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                              <div className="pt-4 border-t border-white/10">
+                                <p className="text-xs font-semibold text-white/60 uppercase tracking-wide mb-2">Project:</p>
+                                <p className="text-sm font-medium text-white/90">{module.project}</p>
+                              </div>
                             </div>
                           </div>
-                        </div>
-                      </Card>
+                        </Card>
+                      </motion.div>
                     </BlurFade>
                   ))}
                 </div>
