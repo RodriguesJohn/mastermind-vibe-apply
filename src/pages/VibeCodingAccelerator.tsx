@@ -145,32 +145,32 @@ const VibeCodingAccelerator = () => {
         <meta name="description" content="A 60-day self-paced accelerator that turns designers into builders who launch real apps using AI tools like Lovable, Cursor, React, and Supabase." />
       </Helmet>
 
-      <div className="min-h-screen">
+      <div className="min-h-screen bg-black">
         <Navigation />
         
-        <main>
+        <main className="bg-black">
           {/* Hero Section */}
-          <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-accent/10 to-background" />
+          <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black text-white">
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-black to-black" />
             
             <div className="px-4 md:px-10 lg:px-[120px] relative z-10 w-full">
               <div className="max-w-[1200px] mx-auto">
                 <BlurFade delay={0.2} duration={0.8}>
-                  <div className="flex items-center gap-2 mb-6 justify-center">
-                    <span className="text-sm text-muted-foreground font-medium">Self-paced · Weekly live support · Lifetime access</span>
+                  <div className="flex items-center gap-2 mb-8 justify-center">
+                    <span className="text-sm text-white/60 font-medium tracking-wider uppercase">Self-paced · Weekly live support · Lifetime access</span>
                   </div>
                 </BlurFade>
 
                 <BlurFade delay={0.3} duration={0.8}>
-                  <h1 className="text-5xl md:text-7xl font-bold text-center mb-6">
-                    Design. Code. Ship.
-                    <span className="block text-primary">Launch Your Future.</span>
+                  <h1 className="text-6xl md:text-8xl font-bold text-center mb-6 tracking-tight">
+                    Master Vibe Coding
+                    <span className="block text-primary mt-2">in 60 Days</span>
                   </h1>
                 </BlurFade>
 
                 <BlurFade delay={0.4} duration={0.8}>
-                  <p className="text-xl md:text-2xl text-muted-foreground text-center max-w-3xl mx-auto mb-8">
-                    A 60-day self-paced accelerator that turns designers into builders who launch real apps using AI tools like Lovable, Cursor, React, and Supabase.
+                  <p className="text-xl md:text-2xl text-white/70 text-center max-w-3xl mx-auto mb-12 leading-relaxed">
+                    A design engineering accelerator that turns designers into builders who launch real apps using AI tools like Lovable, Cursor, React, and Supabase.
                   </p>
                 </BlurFade>
 
@@ -208,17 +208,17 @@ const VibeCodingAccelerator = () => {
           </section>
 
           {/* Problem / Opportunity Section */}
-          <section id="problem" className="py-24 md:py-32">
+          <section id="problem" className="py-24 md:py-32 bg-black text-white border-t border-white/10">
             <div className="px-4 md:px-10 lg:px-[120px]">
               <div className="max-w-[1200px] mx-auto">
                 <BlurFade delay={0.2} duration={0.8}>
-                  <h2 className="text-4xl md:text-5xl font-bold text-center mb-8">
+                  <h2 className="text-4xl md:text-6xl font-bold text-center mb-8 tracking-tight">
                     Stop Handing Off Your Ideas — Start Shipping Them.
                   </h2>
                 </BlurFade>
 
                 <BlurFade delay={0.3} duration={0.8}>
-                  <p className="text-xl text-muted-foreground text-center max-w-3xl mx-auto mb-12">
+                  <p className="text-xl text-white/70 text-center max-w-3xl mx-auto mb-12 leading-relaxed">
                     Most designers can imagine great products. Few can build them.<br/>
                     Vibe Coding bridges that gap. Learn the modern design-engineering workflow so you can build, launch, and monetize your own ideas — without waiting on developers.
                   </p>
@@ -226,13 +226,13 @@ const VibeCodingAccelerator = () => {
 
                 <BlurFade delay={0.4} duration={0.8}>
                   <div className="grid md:grid-cols-2 gap-8 items-center max-w-4xl mx-auto">
-                    <Card className="p-8 bg-muted/50">
-                      <p className="text-lg font-semibold mb-2">Before</p>
-                      <p className="text-muted-foreground">Figma handoff → Wait for developers → Compromised vision</p>
+                    <Card className="p-8 bg-white/5 border-white/10">
+                      <p className="text-lg font-semibold mb-2 text-white/60">Before</p>
+                      <p className="text-white/80">Figma handoff → Wait for developers → Compromised vision</p>
                     </Card>
-                    <Card className="p-8 bg-primary/10 border-primary/20">
-                      <p className="text-lg font-semibold mb-2">After</p>
-                      <p className="text-muted-foreground">Design → Build → Launch → Live product in your hands</p>
+                    <Card className="p-8 bg-primary/20 border-primary/40">
+                      <p className="text-lg font-semibold mb-2 text-primary">After</p>
+                      <p className="text-white/90">Design → Build → Launch → Live product in your hands</p>
                     </Card>
                   </div>
                 </BlurFade>
@@ -241,12 +241,12 @@ const VibeCodingAccelerator = () => {
           </section>
 
           {/* Outcomes Section */}
-          <section className="py-24 md:py-32 bg-muted/30">
+          <section className="py-24 md:py-32 bg-black text-white border-t border-white/10">
             <div className="px-4 md:px-10 lg:px-[120px]">
               <div className="max-w-[1200px] mx-auto">
                 <BlurFade delay={0.2} duration={0.8}>
                   <div className="text-center mb-16 space-y-4">
-                    <h2 className="text-4xl md:text-5xl font-bold">
+                    <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
                       In 60 Days, You'll Be Able To …
                     </h2>
                   </div>
@@ -255,11 +255,11 @@ const VibeCodingAccelerator = () => {
                 <div className="grid md:grid-cols-2 gap-6">
                   {outcomes.map((outcome, index) => (
                     <BlurFade key={index} delay={0.3 + (index * 0.1)} duration={0.8}>
-                      <div className="flex items-start gap-4 p-6 rounded-xl bg-card/50 backdrop-blur-sm border border-border/50 hover:border-primary/50 transition-colors">
+                      <div className="flex items-start gap-4 p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-primary/50 transition-colors">
                         <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center mt-0.5">
                           <Check className="w-4 h-4 text-primary" />
                         </div>
-                        <p className="text-lg leading-relaxed">
+                        <p className="text-lg leading-relaxed text-white/80">
                           {outcome}
                         </p>
                       </div>
@@ -271,11 +271,11 @@ const VibeCodingAccelerator = () => {
           </section>
 
           {/* How It Works Section */}
-          <section className="py-24 md:py-32">
+          <section className="py-24 md:py-32 bg-black text-white border-t border-white/10">
             <div className="px-4 md:px-10 lg:px-[120px]">
               <div className="max-w-[1200px] mx-auto">
                 <BlurFade delay={0.2} duration={0.8}>
-                  <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
+                  <h2 className="text-4xl md:text-6xl font-bold text-center mb-4 tracking-tight">
                     Learn at Your Own Pace — With Live Support.
                   </h2>
                 </BlurFade>
@@ -283,16 +283,16 @@ const VibeCodingAccelerator = () => {
                 <div className="grid md:grid-cols-3 gap-8 mt-16">
                   {howItWorks.map((item, index) => (
                     <BlurFade key={index} delay={0.3 + (index * 0.1)} duration={0.8}>
-                      <Card className="p-8 text-center bg-card border-border">
-                        <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
-                        <p className="text-muted-foreground">{item.description}</p>
+                      <Card className="p-8 text-center bg-white/5 border-white/10">
+                        <h3 className="text-xl font-semibold mb-3 text-white">{item.title}</h3>
+                        <p className="text-white/70">{item.description}</p>
                       </Card>
                     </BlurFade>
                   ))}
                 </div>
 
                 <BlurFade delay={0.6} duration={0.8}>
-                  <p className="text-center text-muted-foreground mt-8">
+                  <p className="text-center text-white/60 mt-8">
                     You learn independently — but never alone.
                   </p>
                 </BlurFade>
@@ -301,11 +301,11 @@ const VibeCodingAccelerator = () => {
           </section>
 
           {/* Curriculum Section */}
-          <section className="py-24 md:py-32 bg-muted/30">
+          <section className="py-24 md:py-32 bg-black text-white border-t border-white/10">
             <div className="px-4 md:px-10 lg:px-[120px]">
               <div className="max-w-[1200px] mx-auto">
                 <BlurFade delay={0.2} duration={0.8}>
-                  <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
+                  <h2 className="text-4xl md:text-6xl font-bold text-center mb-4 tracking-tight">
                     The 60-Day Roadmap
                   </h2>
                 </BlurFade>
@@ -313,14 +313,14 @@ const VibeCodingAccelerator = () => {
                 <div className="grid md:grid-cols-2 gap-6 mt-16">
                   {modules.map((module, index) => (
                     <BlurFade key={index} delay={0.3 + (index * 0.05)} duration={0.8}>
-                      <Card className={`p-8 ${index % 2 === 0 ? 'bg-card' : 'bg-muted/50'}`}>
+                      <Card className="p-8 bg-white/5 border-white/10 hover:bg-white/10 transition-colors">
                         <div className="flex items-start gap-4">
-                          <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                          <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center">
                             <span className="text-primary font-bold">{module.number}</span>
                           </div>
                           <div>
-                            <h3 className="text-xl font-semibold mb-2">{module.title}</h3>
-                            <p className="text-muted-foreground">{module.description}</p>
+                            <h3 className="text-xl font-semibold mb-2 text-white">{module.title}</h3>
+                            <p className="text-white/70">{module.description}</p>
                           </div>
                         </div>
                       </Card>
@@ -330,7 +330,7 @@ const VibeCodingAccelerator = () => {
 
                 <BlurFade delay={0.8} duration={0.8}>
                   <div className="text-center mt-12">
-                    <Button variant="outline" size="lg" asChild>
+                    <Button variant="outline" size="lg" className="border-white/20 text-white hover:bg-white/10" asChild>
                       <a href="#curriculum-details">View Full Curriculum →</a>
                     </Button>
                   </div>
@@ -340,14 +340,14 @@ const VibeCodingAccelerator = () => {
           </section>
 
           {/* Career Benefits Section */}
-          <section className="py-24 md:py-32">
+          <section className="py-24 md:py-32 bg-black text-white border-t border-white/10">
             <div className="px-4 md:px-10 lg:px-[120px]">
               <div className="max-w-[1200px] mx-auto">
                 <BlurFade delay={0.2} duration={0.8}>
-                  <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
+                  <h2 className="text-4xl md:text-6xl font-bold text-center mb-4 tracking-tight">
                     How Vibe Coding Elevates Your Career
                   </h2>
-                  <p className="text-center text-muted-foreground mb-16">
+                  <p className="text-center text-white/60 mb-16">
                     You're not learning syntax — you're learning freedom.
                   </p>
                 </BlurFade>
@@ -355,12 +355,12 @@ const VibeCodingAccelerator = () => {
                 <div className="grid md:grid-cols-3 gap-8">
                   {careerBenefits.map((benefit, index) => (
                     <BlurFade key={index} delay={0.3 + (index * 0.1)} duration={0.8}>
-                      <Card className="p-8 text-center bg-card border-border hover:border-primary/50 transition-all">
-                        <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                      <Card className="p-8 text-center bg-white/5 border-white/10 hover:border-primary/50 transition-all">
+                        <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4">
                           <benefit.icon className="w-8 h-8 text-primary" />
                         </div>
-                        <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
-                        <p className="text-muted-foreground">{benefit.description}</p>
+                        <h3 className="text-xl font-semibold mb-3 text-white">{benefit.title}</h3>
+                        <p className="text-white/70">{benefit.description}</p>
                       </Card>
                     </BlurFade>
                   ))}
@@ -370,11 +370,11 @@ const VibeCodingAccelerator = () => {
           </section>
 
           {/* Testimonials Section */}
-          <section className="py-24 md:py-32 bg-muted/30">
+          <section className="py-24 md:py-32 bg-black text-white border-t border-white/10">
             <div className="px-4 md:px-10 lg:px-[120px]">
               <div className="max-w-[1200px] mx-auto">
                 <BlurFade delay={0.2} duration={0.8}>
-                  <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
+                  <h2 className="text-4xl md:text-6xl font-bold text-center mb-16 tracking-tight">
                     What People Say
                   </h2>
                 </BlurFade>
@@ -382,18 +382,18 @@ const VibeCodingAccelerator = () => {
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {testimonials.map((testimonial, index) => (
                     <BlurFade key={index} delay={0.3 + (index * 0.1)} duration={0.8}>
-                      <Card className="p-8 bg-card/50 border-border/40 hover:border-border transition-all duration-300">
+                      <Card className="p-8 bg-white/5 border-white/10 hover:border-white/20 transition-all duration-300">
                         <div className="flex items-start gap-4 mb-4">
                           <Avatar className="w-12 h-12">
                             <AvatarImage src={testimonial.image} alt={testimonial.name} />
                             <AvatarFallback>{testimonial.initials}</AvatarFallback>
                           </Avatar>
                           <div>
-                            <p className="font-semibold">{testimonial.name}</p>
-                            <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                            <p className="font-semibold text-white">{testimonial.name}</p>
+                            <p className="text-sm text-white/60">{testimonial.role}</p>
                           </div>
                         </div>
-                        <p className="text-muted-foreground leading-relaxed">
+                        <p className="text-white/70 leading-relaxed">
                           "{testimonial.content}"
                         </p>
                       </Card>
@@ -405,35 +405,35 @@ const VibeCodingAccelerator = () => {
           </section>
 
           {/* Pricing Section */}
-          <section className="py-24 md:py-32">
+          <section className="py-24 md:py-32 bg-black text-white border-t border-white/10">
             <div className="px-4 md:px-10 lg:px-[120px]">
               <div className="max-w-[1200px] mx-auto">
                 <BlurFade delay={0.2} duration={0.8}>
-                  <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
+                  <h2 className="text-4xl md:text-6xl font-bold text-center mb-16 tracking-tight">
                     Choose Your Access Plan
                   </h2>
                 </BlurFade>
 
                 <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                   <BlurFade delay={0.3} duration={0.8}>
-                    <Card className="p-8 bg-card border-border">
-                      <h3 className="text-2xl font-bold mb-4">Standard Access</h3>
+                    <Card className="p-8 bg-white/5 border-white/10">
+                      <h3 className="text-2xl font-bold mb-4 text-white">Standard Access</h3>
                       <div className="mb-6">
-                        <span className="text-4xl font-bold">$5,000</span>
-                        <span className="text-muted-foreground"> USD (one-time)</span>
+                        <span className="text-4xl font-bold text-white">$5,000</span>
+                        <span className="text-white/60"> USD (one-time)</span>
                       </div>
                       <ul className="space-y-3 mb-8">
                         <li className="flex items-start gap-2">
                           <Check className="w-5 h-5 text-primary mt-0.5" />
-                          <span>Lifetime content access</span>
+                          <span className="text-white/80">Lifetime content access</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <Check className="w-5 h-5 text-primary mt-0.5" />
-                          <span>60 days live support + community</span>
+                          <span className="text-white/80">60 days live support + community</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <Check className="w-5 h-5 text-primary mt-0.5" />
-                          <span>Certificate upon completion</span>
+                          <span className="text-white/80">Certificate upon completion</span>
                         </li>
                       </ul>
                       <Button className="w-full" variant="cta" size="lg" asChild>
@@ -449,27 +449,27 @@ const VibeCodingAccelerator = () => {
                   </BlurFade>
 
                   <BlurFade delay={0.4} duration={0.8}>
-                    <Card className="p-8 bg-primary/5 border-primary/20">
-                      <div className="inline-block px-3 py-1 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-4">
+                    <Card className="p-8 bg-primary/10 border-primary/30">
+                      <div className="inline-block px-3 py-1 bg-primary/20 text-primary text-sm font-semibold rounded-full mb-4">
                         Flexible
                       </div>
-                      <h3 className="text-2xl font-bold mb-4">3 Monthly Payments</h3>
+                      <h3 className="text-2xl font-bold mb-4 text-white">3 Monthly Payments</h3>
                       <div className="mb-6">
-                        <span className="text-4xl font-bold">$1,900</span>
-                        <span className="text-muted-foreground"> × 3 months</span>
+                        <span className="text-4xl font-bold text-white">$1,900</span>
+                        <span className="text-white/60"> × 3 months</span>
                       </div>
                       <ul className="space-y-3 mb-8">
                         <li className="flex items-start gap-2">
                           <Check className="w-5 h-5 text-primary mt-0.5" />
-                          <span>Start instantly</span>
+                          <span className="text-white/80">Start instantly</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <Check className="w-5 h-5 text-primary mt-0.5" />
-                          <span>Same benefits as Standard</span>
+                          <span className="text-white/80">Same benefits as Standard</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <Check className="w-5 h-5 text-primary mt-0.5" />
-                          <span>Cancel before Month 2 if it's not for you</span>
+                          <span className="text-white/80">Cancel before Month 2 if it's not for you</span>
                         </li>
                       </ul>
                       <Button className="w-full" variant="cta" size="lg" asChild>
@@ -489,21 +489,21 @@ const VibeCodingAccelerator = () => {
           </section>
 
           {/* About Creator Section */}
-          <section className="py-24 md:py-32 bg-muted/30">
+          <section className="py-24 md:py-32 bg-black text-white border-t border-white/10">
             <div className="px-4 md:px-10 lg:px-[120px]">
               <div className="max-w-[1200px] mx-auto">
                 <BlurFade delay={0.2} duration={0.8}>
-                  <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
+                  <h2 className="text-4xl md:text-6xl font-bold text-center mb-12 tracking-tight">
                     Meet John Rodrigues
                   </h2>
                 </BlurFade>
 
                 <BlurFade delay={0.3} duration={0.8}>
                   <div className="max-w-3xl mx-auto text-center space-y-6">
-                    <p className="text-xl text-muted-foreground">
+                    <p className="text-xl text-white/80">
                       Design Engineer · Educator · Founder of AI Design Academy.
                     </p>
-                    <p className="text-lg text-muted-foreground">
+                    <p className="text-lg text-white/70">
                       John has guided thousands of designers into code and built AI products for leading startups. 
                       Vibe Coding distills his system for designing + shipping modern products fast.
                     </p>
@@ -514,11 +514,11 @@ const VibeCodingAccelerator = () => {
           </section>
 
           {/* FAQ Section */}
-          <section className="py-24 md:py-32">
+          <section className="py-24 md:py-32 bg-black text-white border-t border-white/10">
             <div className="px-4 md:px-10 lg:px-[120px]">
               <div className="max-w-[1200px] mx-auto">
                 <BlurFade delay={0.2} duration={0.8}>
-                  <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
+                  <h2 className="text-4xl md:text-6xl font-bold text-center mb-16 tracking-tight">
                     Frequently Asked Questions
                   </h2>
                 </BlurFade>
@@ -527,11 +527,11 @@ const VibeCodingAccelerator = () => {
                   <div className="max-w-3xl mx-auto">
                     <Accordion type="single" collapsible className="w-full">
                       {faqs.map((faq, index) => (
-                        <AccordionItem key={index} value={`item-${index}`}>
-                          <AccordionTrigger className="text-left">
+                        <AccordionItem key={index} value={`item-${index}`} className="border-white/10">
+                          <AccordionTrigger className="text-left text-white hover:text-white/80">
                             {faq.question}
                           </AccordionTrigger>
-                          <AccordionContent className="text-muted-foreground">
+                          <AccordionContent className="text-white/70">
                             {faq.answer}
                           </AccordionContent>
                         </AccordionItem>
@@ -544,17 +544,19 @@ const VibeCodingAccelerator = () => {
           </section>
 
           {/* Final CTA Section */}
-          <section className="py-24 md:py-32 relative overflow-hidden bg-gradient-to-br from-primary/10 via-accent/10 to-background">
+          <section className="py-24 md:py-32 relative overflow-hidden bg-black text-white border-t border-white/10">
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/20 via-black to-black" />
+            
             <div className="px-4 md:px-10 lg:px-[120px] relative z-10">
               <div className="max-w-[1200px] mx-auto text-center space-y-8">
                 <BlurFade delay={0.2} duration={0.8}>
-                  <h2 className="text-4xl md:text-6xl font-bold">
+                  <h2 className="text-4xl md:text-7xl font-bold tracking-tight">
                     Start Building the Future
                   </h2>
                 </BlurFade>
                 
                 <BlurFade delay={0.3} duration={0.8}>
-                  <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
+                  <p className="text-xl md:text-2xl text-white/70 max-w-2xl mx-auto">
                     You already have taste. Now gain the power to build with it.<br/>
                     Join Vibe Coding and ship your first full-stack product in 60 days.
                   </p>
@@ -580,6 +582,7 @@ const VibeCodingAccelerator = () => {
                     <Button 
                       variant="outline" 
                       size="xl"
+                      className="border-white/20 text-white hover:bg-white/10"
                       asChild
                     >
                       <a href="mailto:admissions@aidesignacademy.com">
@@ -590,7 +593,7 @@ const VibeCodingAccelerator = () => {
                 </BlurFade>
                 
                 <BlurFade delay={0.5} duration={0.8}>
-                  <p className="text-sm text-muted-foreground pt-4">
+                  <p className="text-sm text-white/60 pt-4">
                     Evergreen enrollment · Weekly live support · Lifetime access
                   </p>
                 </BlurFade>
