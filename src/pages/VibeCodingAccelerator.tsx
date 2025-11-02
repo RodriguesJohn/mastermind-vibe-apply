@@ -499,7 +499,7 @@ const VibeCodingAccelerator = () => {
                   {modules.map((module, index) => (
                     <BlurFade key={index} delay={0.3 + (index * 0.05)} duration={0.8}>
                       <Card className="p-8 border-white/10 hover:border-white/30 transition-colors h-full backdrop-blur-sm overflow-hidden relative">
-                        <div className="absolute inset-0 opacity-20 pointer-events-none">
+                        <div className="absolute inset-0 opacity-20 pointer-events-none blur-xl">
                           <MeshGradient
                             width={800}
                             height={600}
