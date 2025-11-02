@@ -231,20 +231,22 @@ const VibeCodingAccelerator = () => {
                 <div>
                   <BlurFade delay={0.2} duration={0.8}>
                     <div className="flex items-center gap-2 mb-6">
-                      <span className="text-xs text-white/60 font-medium tracking-wider uppercase">Self-paced · Weekly live support · Lifetime access</span>
+                      <span className="text-xs text-white/60 font-medium tracking-wider uppercase"></span>
                     </div>
                   </BlurFade>
 
                   <BlurFade delay={0.3} duration={0.8}>
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-normal mb-8 tracking-tight">
-                      Master Vibe Coding
-                      <span className="block text-primary mt-2">in 60 Days</span>
+                    Master Vibe Coding in 60 Days 
+                      <span className="block text-primary mt-2">Design, Code and Ship AI Apps </span>
                     </h1>
                   </BlurFade>
 
                   <BlurFade delay={0.4} duration={0.8}>
-                    <p className="text-lg md:text-xl text-white/60 font-normal mb-8 leading-relaxed max-w-3xl">
-                      Ship your first full-stack product in 60 days.
+                    <p className="text-lg md:text-medium text-white/60 font-light mb-7 leading-relaxed max-w-3xl">
+                    Join the 60-day Vibe Coding Accelerator for business owners, designers, and product managers 
+                      <br />
+                      who want to master how to design, code, and ship with AI.
                     </p>
                   </BlurFade>
 
@@ -261,7 +263,7 @@ const VibeCodingAccelerator = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          Join Now
+                          Apply Today
                           <ArrowRight className="group-hover:translate-x-1 transition-transform" />
                         </a>
                       </Button>
