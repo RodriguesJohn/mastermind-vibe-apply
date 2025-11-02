@@ -494,11 +494,12 @@ const VibeCodingAccelerator = () => {
                 <div className="grid md:grid-cols-2 gap-6 mt-16">
                   {modules.map((module, index) => (
                     <BlurFade key={index} delay={0.3 + (index * 0.05)} duration={0.8}>
-                      <Card className="p-8 border-white/10 hover:border-white/30 transition-colors h-full backdrop-blur-sm overflow-hidden relative">
-                        <div className="absolute inset-0 opacity-20 pointer-events-none">
+                      <Card className="border-white/10 hover:border-white/30 transition-colors h-full overflow-hidden">
+                        {/* Shader Section */}
+                        <div className="relative h-32 overflow-hidden">
                           <MeshGradient
                             width={800}
-                            height={600}
+                            height={200}
                             colors={gradientColors}
                             distortion={0.8}
                             swirl={0.6}
@@ -506,8 +507,9 @@ const VibeCodingAccelerator = () => {
                             offsetX={0.08}
                           />
                         </div>
-                        <div className="absolute inset-0 bg-black/40 pointer-events-none" />
-                        <div className="relative z-10">
+                        
+                        {/* Content Section */}
+                        <div className="p-8 bg-black">
                           <div className="mb-6">
                             <div className="flex items-center gap-3 mb-3">
                               <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center border border-white/20">
