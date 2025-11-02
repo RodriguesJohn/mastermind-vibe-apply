@@ -155,7 +155,7 @@ const Consulting = () => {
                         {tier.name === "Cohort Member Coaching" ? (
                           <Button 
                             variant={tier.highlighted ? "default" : "outline"}
-                            className="w-full"
+                            className="w-full bg-accent text-accent-foreground hover:bg-accent/90"
                             size="lg"
                             asChild
                           >
