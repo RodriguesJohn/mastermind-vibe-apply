@@ -62,22 +62,82 @@ const Consulting = () => {
             </div>
           </section>
 
-          {/* Consulting Section */}
+          {/* Two Column Consulting Cards */}
           <section className="py-16 px-4 md:px-10 lg:px-[120px]">
             <div className="max-w-[1200px] mx-auto">
-              <div className="max-w-3xl mx-auto">
-                <Card className="p-12 bg-card/50 border-border/40 hover:border-border transition-all duration-300 rounded-2xl">
-                  <div className="space-y-8 text-center">
+              <div className="grid md:grid-cols-2 gap-8">
+                {/* Cohort Member Coaching Card */}
+                <Card className="p-8 bg-card/50 border-border/40 hover:border-border transition-all duration-300 rounded-2xl">
+                  <div className="space-y-6">
+                    <div className="space-y-3">
+                      <h2 className="text-3xl font-bold tracking-tight">
+                        Cohort Member Coaching
+                      </h2>
+                      <p className="text-lg text-muted-foreground">
+                        One-to-one consulting and coaching exclusively for cohort members
+                      </p>
+                    </div>
+
                     <div className="space-y-4">
-                      <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+                      <div className="flex items-baseline gap-2">
+                        <span className="text-2xl font-bold">Included</span>
+                        <span className="text-sm text-muted-foreground">For active cohort members</span>
+                      </div>
+                      
+                      <ul className="space-y-3">
+                        <li className="flex items-start gap-3">
+                          <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                          <span className="text-muted-foreground">Personalized AI strategy sessions</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                          <span className="text-muted-foreground">Direct access to instructor</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                          <span className="text-muted-foreground">Project feedback and guidance</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                          <span className="text-muted-foreground">Career guidance and mentorship</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                          <span className="text-muted-foreground">Priority support</span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <Button 
+                      variant="default"
+                      size="lg"
+                      className="w-full"
+                      asChild
+                    >
+                      <a 
+                        href="https://cal.com/aidesignacademy/cohort-member-coaching"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Book a Call
+                      </a>
+                    </Button>
+                  </div>
+                </Card>
+
+                {/* AI Product Design Consulting Card */}
+                <Card className="p-8 bg-card/50 border-border/40 hover:border-border transition-all duration-300 rounded-2xl">
+                  <div className="space-y-6">
+                    <div className="space-y-3">
+                      <h2 className="text-3xl font-bold tracking-tight">
                         AI Product Design Consulting
                       </h2>
-                      <p className="text-xl text-muted-foreground">
+                      <p className="text-lg text-muted-foreground">
                         Work directly with John Rodrigues to design, prototype, and launch AI-powered products — from zero to one.
                       </p>
                     </div>
 
-                    <div className="space-y-6 text-lg text-muted-foreground leading-relaxed pt-4">
+                    <div className="space-y-4 text-muted-foreground leading-relaxed">
                       <p>
                         I collaborate with founders, product managers, and startup teams to turn ideas into investor-ready MVPs.
                       </p>
@@ -86,24 +146,22 @@ const Consulting = () => {
                       </p>
                     </div>
 
-                    <div className="pt-6">
-                      <Button 
-                        variant="default"
-                        size="lg"
-                        className="w-full sm:w-auto px-12 bg-accent text-accent-foreground hover:bg-accent/90 transition-all hover:scale-105"
-                        asChild
+                    <Button 
+                      variant="default"
+                      size="lg"
+                      className="w-full bg-accent text-accent-foreground hover:bg-accent/90 transition-all hover:scale-105"
+                      asChild
+                    >
+                      <a 
+                        href="https://cal.com/aidesignacademy/business-consulting?overlayCalendar=true"
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
-                        <a 
-                          href="https://cal.com/aidesignacademy/business-consulting?overlayCalendar=true"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Book a Call
-                        </a>
-                      </Button>
-                    </div>
+                        Book a Call
+                      </a>
+                    </Button>
 
-                    <p className="text-sm text-muted-foreground/60 italic pt-2">
+                    <p className="text-sm text-muted-foreground/60 italic">
                       Past collaborations include AI startups, innovation labs, and enterprise product teams.
                     </p>
                   </div>
