@@ -218,34 +218,34 @@ const VibeCodingAccelerator = () => {
                   {/* Tools You Will Learn */}
                   <BlurFade delay={0.7} duration={0.8}>
                     <div className="mt-12 pt-8 border-t border-white/10">
-                      <p className="text-sm text-white/60 uppercase tracking-wider font-medium mb-6 text-center">
+                      <h2 className="text-center text-lg font-medium text-white/60 mb-8">
                         Tools You Will Learn
-                      </p>
-                      <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8">
+                      </h2>
+                      <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12 md:gap-16">
                         <img 
                           src={lovableLogo} 
                           alt="Lovable" 
-                          className="h-8 w-auto opacity-60 hover:opacity-100 transition-opacity" 
+                          className="h-5 w-fit opacity-60 hover:opacity-100 transition-opacity" 
                         />
                         <img 
                           src={cursorLogo} 
                           alt="Cursor" 
-                          className="h-8 w-auto opacity-60 hover:opacity-100 transition-opacity" 
+                          className="h-5 w-fit opacity-60 hover:opacity-100 transition-opacity" 
                         />
                         <img 
                           src={boltLogo} 
                           alt="Bolt" 
-                          className="h-8 w-auto opacity-60 hover:opacity-100 transition-opacity" 
+                          className="h-5 w-fit opacity-60 hover:opacity-100 transition-opacity" 
                         />
                         <img 
                           src={claudeLogo} 
                           alt="Claude" 
-                          className="h-8 w-auto opacity-60 hover:opacity-100 transition-opacity" 
+                          className="h-5 w-fit opacity-60 hover:opacity-100 transition-opacity" 
                         />
                         <img 
                           src={v0Logo} 
                           alt="V0" 
-                          className="h-8 w-auto opacity-60 hover:opacity-100 transition-opacity" 
+                          className="h-5 w-fit opacity-60 hover:opacity-100 transition-opacity" 
                         />
                       </div>
                     </div>
