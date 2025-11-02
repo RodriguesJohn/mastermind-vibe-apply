@@ -241,7 +241,7 @@ const VibeCodingAccelerator = () => {
           <section className="py-24 md:py-32 bg-black text-white border-t border-white/10">
             <div className="px-4 md:px-10 lg:px-[120px]">
               <div className="max-w-[1200px] mx-auto">
-                <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
                   <BlurFade delay={0.1} duration={0.8}>
                     <Card className="p-8 bg-white/5 border-white/10 hover:border-primary/50 transition-colors h-full">
                       <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center mb-6">
