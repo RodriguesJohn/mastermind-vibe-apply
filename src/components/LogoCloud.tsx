@@ -19,7 +19,7 @@ export default function LogoCloud() {
     <section className="py-16 bg-black overflow-hidden">
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-12">
-          <h2 className="text-lg font-medium text-white min-w-fit">Learn the Best Tools<br />AI tools in the industry</h2>
+          <h2 className="text-lg font-medium text-white min-w-fit">Learn Best AI tools<br />in the industry</h2>
           <div className="h-px w-px bg-white/20 hidden md:block flex-shrink-0" />
           
           <div className="relative flex-1 overflow-hidden">
