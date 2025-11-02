@@ -109,7 +109,7 @@ const Consulting = () => {
                     </div>
 
                     <Button 
-                      variant="default"
+                      variant="secondary"
                       size="lg"
                       className="w-full"
                       asChild
@@ -147,9 +147,9 @@ const Consulting = () => {
                     </div>
 
                     <Button 
-                      variant="default"
+                      variant="secondary"
                       size="lg"
-                      className="w-full bg-accent text-accent-foreground hover:bg-accent/90 transition-all hover:scale-105"
+                      className="w-full hover:scale-105 transition-all"
                       asChild
                     >
                       <a 
