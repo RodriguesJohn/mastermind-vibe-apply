@@ -454,7 +454,7 @@ const VibeCodingAccelerator = () => {
                       className="cursor-pointer h-full"
                     >
                       <Card className="p-0 border-white/10 overflow-hidden transition-all duration-300 h-full group">
-                        <div className="relative h-40 overflow-hidden bg-white/5">
+                        <div className="relative h-80 overflow-hidden bg-white/5">
                           <div className="absolute inset-0 flex items-center justify-center">
                             <Code2 className="w-16 h-16 text-white/20 group-hover:scale-110 transition-transform duration-300" />
                           </div>
@@ -475,7 +475,7 @@ const VibeCodingAccelerator = () => {
                       className="cursor-pointer h-full"
                     >
                       <Card className="p-0 border-white/10 overflow-hidden transition-all duration-300 h-full group">
-                        <div className="relative h-40 overflow-hidden bg-white/5">
+                        <div className="relative h-80 overflow-hidden bg-white/5">
                           <div className="absolute inset-0 flex items-center justify-center">
                             <Database className="w-16 h-16 text-white/20 group-hover:scale-110 transition-transform duration-300" />
                           </div>
@@ -496,7 +496,7 @@ const VibeCodingAccelerator = () => {
                       className="cursor-pointer h-full"
                     >
                       <Card className="p-0 border-white/10 overflow-hidden transition-all duration-300 h-full group">
-                        <div className="relative h-40 overflow-hidden bg-white/5">
+                        <div className="relative h-80 overflow-hidden bg-white/5">
                           <div className="absolute inset-0 flex items-center justify-center">
                             <Globe className="w-16 h-16 text-white/20 group-hover:scale-110 transition-transform duration-300" />
                           </div>
@@ -517,7 +517,7 @@ const VibeCodingAccelerator = () => {
                       className="cursor-pointer h-full"
                     >
                       <Card className="p-0 border-white/10 overflow-hidden transition-all duration-300 h-full group">
-                        <div className="relative h-40 overflow-hidden bg-white/5">
+                        <div className="relative h-80 overflow-hidden bg-white/5">
                           <div className="absolute inset-0 flex items-center justify-center">
                             <Rocket className="w-16 h-16 text-white/20 group-hover:scale-110 transition-transform duration-300" />
                           </div>
