@@ -512,7 +512,7 @@ const VibeCodingAccelerator = () => {
                           />
                           {/* Module number and week overlay on shader */}
                           <div className="absolute bottom-0 left-0 p-4 flex items-center gap-3">
-                            <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-black/60 backdrop-blur-sm flex items-center justify-center border border-white/30">
+                            <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/30">
                               <span className="text-white font-bold text-sm">{module.number}</span>
                             </div>
                             <span className="text-xs text-white uppercase tracking-wide font-medium">{module.week}</span>
