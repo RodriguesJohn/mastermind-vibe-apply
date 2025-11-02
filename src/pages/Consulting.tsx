@@ -76,21 +76,6 @@ const Consulting = () => {
       highlighted: false,
     },
     {
-      name: "Individual Coaching",
-      description: "Personalized coaching for professionals looking to master AI",
-      price: "$2,000",
-      priceSubtext: "",
-      features: [
-        "GetCareer101 mentorship and coaching",
-        "Landing design job support and guidance",
-        "Project consultation and strategy",
-        "Portfolio reviews and interview preparation",
-      ],
-      cta: "Book a Session",
-      ctaSubtext: null,
-      highlighted: true,
-    },
-    {
       name: "Business Consulting",
       description: "Strategic AI consulting for teams and organizations",
       price: "$10,000",
