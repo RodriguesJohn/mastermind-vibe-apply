@@ -165,7 +165,7 @@ const VibeCodingAccelerator = () => {
                   </BlurFade>
 
                   <BlurFade delay={0.3} duration={0.8}>
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold mb-8 tracking-tight">
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-normal mb-8 tracking-tight">
                       Master Vibe Coding
                       <span className="block text-primary mt-2">in 60 Days</span>
                     </h1>
