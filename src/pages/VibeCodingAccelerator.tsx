@@ -9,6 +9,11 @@ import { Helmet } from "react-helmet";
 import LindaImage from "@/assets/Linda.jpeg";
 import SnehImage from "@/assets/Sneh.webp";
 import SonaliImage from "@/assets/Sonali.jpeg";
+import cursorLogo from "@/assets/logos/cursor.png";
+import lovableLogo from "@/assets/logos/lovable.png";
+import v0Logo from "@/assets/logos/v0.png";
+import boltLogo from "@/assets/logos/bolt.png";
+import claudeLogo from "@/assets/logos/claude.png";
 
 const VibeCodingAccelerator = () => {
   const howItWorks = [
@@ -207,6 +212,42 @@ const VibeCodingAccelerator = () => {
                           Book a Call Today
                         </a>
                       </Button>
+                    </div>
+                  </BlurFade>
+
+                  {/* Tools You Will Learn */}
+                  <BlurFade delay={0.7} duration={0.8}>
+                    <div className="mt-12 pt-8 border-t border-white/10">
+                      <p className="text-sm text-white/60 uppercase tracking-wider font-medium mb-6 text-center">
+                        Tools You Will Learn
+                      </p>
+                      <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8">
+                        <img 
+                          src={lovableLogo} 
+                          alt="Lovable" 
+                          className="h-8 w-auto opacity-60 hover:opacity-100 transition-opacity" 
+                        />
+                        <img 
+                          src={cursorLogo} 
+                          alt="Cursor" 
+                          className="h-8 w-auto opacity-60 hover:opacity-100 transition-opacity" 
+                        />
+                        <img 
+                          src={boltLogo} 
+                          alt="Bolt" 
+                          className="h-8 w-auto opacity-60 hover:opacity-100 transition-opacity" 
+                        />
+                        <img 
+                          src={claudeLogo} 
+                          alt="Claude" 
+                          className="h-8 w-auto opacity-60 hover:opacity-100 transition-opacity" 
+                        />
+                        <img 
+                          src={v0Logo} 
+                          alt="V0" 
+                          className="h-8 w-auto opacity-60 hover:opacity-100 transition-opacity" 
+                        />
+                      </div>
                     </div>
                   </BlurFade>
                 </div>
