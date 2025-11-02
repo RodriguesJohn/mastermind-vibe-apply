@@ -109,7 +109,7 @@ const Consulting = () => {
                     </div>
 
                     <Button 
-                      variant="secondary"
+                      variant="default"
                       size="lg"
                       className="w-full"
                       asChild
