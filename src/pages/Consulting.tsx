@@ -4,60 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Check } from "lucide-react";
 import { Helmet } from "react-helmet";
 import { BlurFade } from "@/components/BlurFade";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import LindaImage from "@/assets/Linda.jpeg";
-import SnehImage from "@/assets/Sneh.webp";
-import SonaliImage from "@/assets/Sonali.jpeg";
-import KennyImage from "@/assets/Kenny.jpeg";
-import AviadImage from "@/assets/Avaid.jpeg";
-import IniImage from "@/assets/Indi.jpeg";
 
 const Consulting = () => {
-  const testimonials = [
-    {
-      name: "Linda",
-      role: "Principal Product Designer, JPMorgan Chase",
-      content: "John's coaching has been invaluable in helping me understand how to practically apply AI tools in my design work. His one-on-one sessions are focused, actionable, and genuinely supportive.",
-      initials: "L",
-      image: LindaImage
-    },
-    {
-      name: "Sneh",
-      role: "UX Designer",
-      content: "John is calm, insightful, and deeply attuned to emerging design trends. His strategic frameworks and coaching helped me think like both a strategist and a solutionist.",
-      initials: "S",
-      image: SnehImage
-    },
-    {
-      name: "Sonali",
-      role: "Sr. Product Designer at JPMorgan Chase",
-      content: "John emphasizes practical application over lectures, which made the material immediately useful. I'm more confident in the subject and excited to apply this foundation to my career.",
-      initials: "So",
-      image: SonaliImage
-    },
-    {
-      name: "Kenneth Hargrove",
-      role: "Product Designer @CoStar",
-      content: "John's coaching gave me the foundation to understand AI at a high level and learn about tools to leverage in my design process. I highly recommend working with him.",
-      initials: "KH",
-      image: KennyImage
-    },
-    {
-      name: "Aviad",
-      role: "Product Designer",
-      content: "John delivered everything he listed and more. Always accessible, he creates additional tutorials on demand and is ready to help, explain, and mentor with patience and care.",
-      initials: "A",
-      image: AviadImage
-    },
-    {
-      name: "ÌníOlúwa",
-      role: "Senior Product Designer at Intercom",
-      content: "I've gone from not knowing how to code to building my own AI agent and now creating an app. Thank you, John, for being such a generous teacher and for expanding my horizons!",
-      initials: "Ì",
-      image: IniImage
-    }
-  ];
-
   const tiers = [
     {
       name: "Cohort Member Coaching",
@@ -224,45 +172,6 @@ const Consulting = () => {
             </div>
           </section>
 
-          {/* Testimonials Section */}
-          <section className="py-24 md:py-32 bg-background/50">
-            <div className="px-4 md:px-10 lg:px-[120px]">
-              <div className="max-w-[1200px] mx-auto">
-                <BlurFade delay={0.2} duration={0.8} yOffset={20} blur="8px">
-                  <h2 className="text-4xl md:text-5xl font-semibold text-center mb-16 tracking-tight">
-                    What People Say
-                  </h2>
-                </BlurFade>
-                
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {testimonials.map((testimonial, index) => (
-                    <BlurFade key={index} delay={0.4 + (index * 0.1)} duration={0.8} yOffset={15} blur="6px">
-                      <Card className="p-8 bg-card/50 border-border/40 hover:border-border transition-all duration-300">
-                        <p className="text-foreground leading-relaxed mb-6">
-                          "{testimonial.content}"
-                        </p>
-                        
-                        <div className="flex items-center gap-4 pt-4 border-t border-border/40">
-                          <Avatar className="w-16 h-16">
-                            {testimonial.image ? (
-                              <AvatarImage src={testimonial.image} alt={testimonial.name} />
-                            ) : null}
-                            <AvatarFallback className="bg-primary/10 text-primary font-semibold">
-                              {testimonial.initials}
-                            </AvatarFallback>
-                          </Avatar>
-                          <div>
-                            <p className="font-semibold text-foreground">{testimonial.name}</p>
-                            <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                          </div>
-                        </div>
-                      </Card>
-                    </BlurFade>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </section>
         </main>
       </div>
     </>
