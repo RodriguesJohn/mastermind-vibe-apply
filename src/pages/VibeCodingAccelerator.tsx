@@ -237,6 +237,52 @@ const VibeCodingAccelerator = () => {
             </div>
           </section>
 
+          {/* Key Outcomes Cards */}
+          <section className="py-24 md:py-32 bg-black text-white border-t border-white/10">
+            <div className="px-4 md:px-10 lg:px-[120px]">
+              <div className="max-w-[1200px] mx-auto">
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  <BlurFade delay={0.1} duration={0.8}>
+                    <Card className="p-8 bg-white/5 border-white/10 hover:border-primary/50 transition-colors h-full">
+                      <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center mb-4">
+                        <Code2 className="w-6 h-6 text-primary" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-white mb-3">Build 2 Real Apps</h3>
+                      <p className="text-white/70">Guided project + your own capstone</p>
+                    </Card>
+                  </BlurFade>
+                  <BlurFade delay={0.2} duration={0.8}>
+                    <Card className="p-8 bg-white/5 border-white/10 hover:border-primary/50 transition-colors h-full">
+                      <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center mb-4">
+                        <Sparkles className="w-6 h-6 text-primary" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-white mb-3">Master AI Tools</h3>
+                      <p className="text-white/70">Lovable, Cursor, Windsurf, and more</p>
+                    </Card>
+                  </BlurFade>
+                  <BlurFade delay={0.3} duration={0.8}>
+                    <Card className="p-8 bg-white/5 border-white/10 hover:border-primary/50 transition-colors h-full">
+                      <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center mb-4">
+                        <Database className="w-6 h-6 text-primary" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-white mb-3">Full-Stack Skills</h3>
+                      <p className="text-white/70">React, Next.js, Supabase, APIs</p>
+                    </Card>
+                  </BlurFade>
+                  <BlurFade delay={0.4} duration={0.8}>
+                    <Card className="p-8 bg-white/5 border-white/10 hover:border-primary/50 transition-colors h-full">
+                      <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center mb-4">
+                        <Globe className="w-6 h-6 text-primary" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-white mb-3">Launch Publicly</h3>
+                      <p className="text-white/70">Deploy to Vercel, share live</p>
+                    </Card>
+                  </BlurFade>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Outcomes Section */}
           <section className="py-24 md:py-32 bg-black text-white border-t border-white/10">
             <div className="px-4 md:px-10 lg:px-[120px]">
