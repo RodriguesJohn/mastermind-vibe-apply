@@ -2,11 +2,12 @@ import { BlurFade } from "./BlurFade";
 
 export default function LogoCloud() {
   return (
-    <section className="py-16">
-      <div className="mx-auto max-w-5xl px-6">
-        <h2 className="text-center text-lg font-medium">Your favorite companies are our partners.</h2>
-        
-        <div className="mx-auto mt-20 flex max-w-4xl flex-wrap items-center justify-center gap-x-12 gap-y-8 sm:gap-x-16 sm:gap-y-12">
+    <section className="py-16 bg-black">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-12">
+          <h2 className="text-lg font-medium text-white min-w-fit">Powering the best<br />teams</h2>
+          <div className="h-px w-px bg-white/20 hidden md:block" />
+          <div className="flex flex-wrap items-center gap-x-8 gap-y-4">
           <img 
             className="h-5 w-fit dark:invert" 
             src="https://html.tailus.io/blocks/customers/nvidia.svg" 
@@ -84,6 +85,7 @@ export default function LogoCloud() {
             height="20" 
             width="auto" 
           />
+          </div>
         </div>
       </div>
     </section>
