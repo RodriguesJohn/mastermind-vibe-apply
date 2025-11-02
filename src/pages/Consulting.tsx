@@ -65,10 +65,10 @@ const Consulting = () => {
           {/* Two Column Consulting Cards */}
           <section className="py-16 px-4 md:px-10 lg:px-[120px]">
             <div className="max-w-[1200px] mx-auto">
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="grid md:grid-cols-2 gap-8 items-stretch">
                 {/* Cohort Member Coaching Card */}
-                <Card className="p-8 bg-card/50 border-border/40 hover:border-border transition-all duration-300 rounded-2xl">
-                  <div className="space-y-6">
+                <Card className="p-8 bg-card/50 border-border/40 hover:border-border transition-all duration-300 rounded-2xl flex flex-col">
+                  <div className="space-y-6 flex-grow">
                     <div className="space-y-3">
                       <h2 className="text-3xl font-bold tracking-tight">
                         Cohort Member Coaching
@@ -107,27 +107,27 @@ const Consulting = () => {
                         </li>
                       </ul>
                     </div>
-
-                    <Button 
-                      variant="default"
-                      size="lg"
-                      className="w-full"
-                      asChild
-                    >
-                      <a 
-                        href="https://cal.com/aidesignacademy/cohort-member-coaching"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Get in touch
-                      </a>
-                    </Button>
                   </div>
+
+                  <Button 
+                    variant="default"
+                    size="lg"
+                    className="w-full mt-6"
+                    asChild
+                  >
+                    <a 
+                      href="https://cal.com/aidesignacademy/cohort-member-coaching"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Get in touch
+                    </a>
+                  </Button>
                 </Card>
 
                 {/* AI Product Design Consulting Card */}
-                <Card className="p-8 bg-card/50 border-border/40 hover:border-border transition-all duration-300 rounded-2xl">
-                  <div className="space-y-6">
+                <Card className="p-8 bg-card/50 border-border/40 hover:border-border transition-all duration-300 rounded-2xl flex flex-col">
+                  <div className="space-y-6 flex-grow">
                     <div className="space-y-3">
                       <h2 className="text-3xl font-bold tracking-tight">
                         AI Product Design Consulting
@@ -151,7 +151,9 @@ const Consulting = () => {
                         <span className="text-muted-foreground">From product strategy and UX design to interactive prototypes and AI integration — we'll move fast and build something remarkable</span>
                       </li>
                     </ul>
+                  </div>
 
+                  <div className="space-y-4 mt-6">
                     <Button 
                       variant="secondary"
                       size="lg"
