@@ -137,14 +137,20 @@ const Consulting = () => {
                       </p>
                     </div>
 
-                    <div className="space-y-4 text-muted-foreground leading-relaxed">
-                      <p>
-                        I collaborate with founders, product managers, and startup teams to turn ideas into investor-ready MVPs.
-                      </p>
-                      <p>
-                        From product strategy and UX design to interactive prototypes and AI integration — we'll move fast and build something remarkable.
-                      </p>
-                    </div>
+                    <ul className="space-y-3">
+                      <li className="flex items-start gap-3">
+                        <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                        <span className="text-muted-foreground">Work directly with John Rodrigues to design, prototype, and launch AI-powered products — from zero to one</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                        <span className="text-muted-foreground">I collaborate with founders, product managers, and startup teams to turn ideas into investor-ready MVPs</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                        <span className="text-muted-foreground">From product strategy and UX design to interactive prototypes and AI integration — we'll move fast and build something remarkable</span>
+                      </li>
+                    </ul>
 
                     <Button 
                       variant="secondary"
