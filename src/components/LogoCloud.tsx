@@ -1,6 +1,7 @@
 import { BlurFade } from "./BlurFade";
 import lovableLogo from "@/assets/logos/lovable.png";
 import cursorLogo from "@/assets/logos/cursor.png";
+import reactNativeLogo from "@/assets/logos/react-native.png";
 
 export default function LogoCloud() {
   const logos = [
@@ -10,7 +11,7 @@ export default function LogoCloud() {
     { src: "https://cdn.simpleicons.org/swiftui/FA7343", alt: "SwiftUI Logo", className: "h-6 w-fit brightness-0 invert" },
     { src: "https://html.tailus.io/blocks/customers/openai.svg", alt: "OpenAI Logo", className: "h-6 w-fit brightness-0 invert" },
     { src: lovableLogo, alt: "Lovable Logo", className: "h-6 w-fit brightness-0 invert" },
-    { src: "https://html.tailus.io/blocks/customers/react.svg", alt: "React Logo", className: "h-6 w-fit brightness-0 invert" },
+    { src: reactNativeLogo, alt: "React Native Logo", className: "h-6 w-fit brightness-0 invert" },
     { src: "https://html.tailus.io/blocks/customers/tailwindcss.svg", alt: "Tailwind Logo", className: "h-6 w-fit brightness-0 invert" },
     { src: "https://cdn.simpleicons.org/supabase/3ECF8E", alt: "Supabase Logo", className: "h-6 w-fit brightness-0 invert" },
     { src: "https://cdn.simpleicons.org/nextdotjs/000000", alt: "Next.js Logo", className: "h-6 w-fit brightness-0 invert" },
