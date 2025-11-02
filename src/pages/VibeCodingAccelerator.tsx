@@ -289,6 +289,68 @@ const VibeCodingAccelerator = () => {
             </div>
           </section>
 
+          {/* Projects You Will Build */}
+          <section className="py-24 md:py-32 bg-black text-white border-t border-white/10">
+            <div className="px-4 md:px-10 lg:px-[120px]">
+              <div className="max-w-[1200px] mx-auto">
+                <BlurFade delay={0.2} duration={0.8}>
+                  <div className="text-center mb-16 space-y-4">
+                    <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
+                      Projects You Will Build
+                    </h2>
+                  </div>
+                </BlurFade>
+                
+                <div className="grid md:grid-cols-2 gap-6">
+                  <BlurFade delay={0.3} duration={0.8}>
+                    <Card className="p-8 bg-white/5 border-white/10 hover:border-primary/50 transition-colors h-full">
+                      <div className="aspect-video rounded-lg bg-white/5 mb-4 flex items-center justify-center">
+                        <Code2 className="w-12 h-12 text-white/20" />
+                      </div>
+                      <h3 className="text-2xl font-semibold text-white mb-3">AI Mini-App</h3>
+                      <p className="text-white/70 leading-relaxed">
+                        Build your first AI-powered app using Lovable and deploy it live. Learn the fundamentals of modern AI development.
+                      </p>
+                    </Card>
+                  </BlurFade>
+                  <BlurFade delay={0.4} duration={0.8}>
+                    <Card className="p-8 bg-white/5 border-white/10 hover:border-primary/50 transition-colors h-full">
+                      <div className="aspect-video rounded-lg bg-white/5 mb-4 flex items-center justify-center">
+                        <Database className="w-12 h-12 text-white/20" />
+                      </div>
+                      <h3 className="text-2xl font-semibold text-white mb-3">Full-Stack Web App</h3>
+                      <p className="text-white/70 leading-relaxed">
+                        Create a complete web application with React, Next.js, and Supabase. Integrate APIs and databases.
+                      </p>
+                    </Card>
+                  </BlurFade>
+                  <BlurFade delay={0.5} duration={0.8}>
+                    <Card className="p-8 bg-white/5 border-white/10 hover:border-primary/50 transition-colors h-full">
+                      <div className="aspect-video rounded-lg bg-white/5 mb-4 flex items-center justify-center">
+                        <Globe className="w-12 h-12 text-white/20" />
+                      </div>
+                      <h3 className="text-2xl font-semibold text-white mb-3">Mobile-Ready Product</h3>
+                      <p className="text-white/70 leading-relaxed">
+                        Build a responsive, mobile-first application using Cursor and modern web technologies.
+                      </p>
+                    </Card>
+                  </BlurFade>
+                  <BlurFade delay={0.6} duration={0.8}>
+                    <Card className="p-8 bg-white/5 border-white/10 hover:border-primary/50 transition-colors h-full">
+                      <div className="aspect-video rounded-lg bg-white/5 mb-4 flex items-center justify-center">
+                        <Rocket className="w-12 h-12 text-white/20" />
+                      </div>
+                      <h3 className="text-2xl font-semibold text-white mb-3">Capstone Project</h3>
+                      <p className="text-white/70 leading-relaxed">
+                        Launch your own idea from concept to Vercel. Build, deploy, and showcase your unique product.
+                      </p>
+                    </Card>
+                  </BlurFade>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Outcomes Section */}
           <section className="py-24 md:py-32 bg-black text-white border-t border-white/10">
             <div className="px-4 md:px-10 lg:px-[120px]">
