@@ -499,7 +499,7 @@ const VibeCodingAccelerator = () => {
                   {modules.map((module, index) => (
                     <BlurFade key={index} delay={0.3 + (index * 0.05)} duration={0.8}>
                       <Card className="border-white/10 hover:border-white/30 transition-colors h-full overflow-hidden">
-                        {/* Shader Section */}
+                        {/* Shader Section with Module Info Overlay */}
                         <div className="relative h-32 overflow-hidden">
                           <MeshGradient
                             width={800}
@@ -510,17 +510,18 @@ const VibeCodingAccelerator = () => {
                             speed={0.42}
                             offsetX={0.08}
                           />
+                          {/* Module number and week overlay on shader */}
+                          <div className="absolute bottom-0 left-0 p-4 flex items-center gap-3">
+                            <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-black/60 backdrop-blur-sm flex items-center justify-center border border-white/30">
+                              <span className="text-white font-bold text-sm">{module.number}</span>
+                            </div>
+                            <span className="text-xs text-white uppercase tracking-wide font-medium">{module.week}</span>
+                          </div>
                         </div>
                         
                         {/* Content Section */}
-                        <div className="p-8 bg-black">
+                        <div className="p-8 bg-black -mt-6 pt-10">
                           <div className="mb-6">
-                            <div className="flex items-center gap-3 mb-3">
-                              <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center border border-white/20">
-                                <span className="text-white font-bold text-sm">{module.number}</span>
-                              </div>
-                              <span className="text-xs text-white/60 uppercase tracking-wide">{module.week}</span>
-                            </div>
                             <h3 className="text-2xl font-bold mb-2 text-white">{module.title}</h3>
                             <p className="text-white/60 text-sm">{module.description}</p>
                           </div>
