@@ -504,7 +504,7 @@ const VibeCodingAccelerator = () => {
                         transition={{ duration: 0.3, ease: "easeOut" }}
                         className="cursor-pointer"
                       >
-                        <Card className="border-white/10 h-full overflow-hidden [&:not(:hover)]:blur-[2px] transition-all duration-300">
+                        <Card className="border-white/10 h-full overflow-hidden transition-all duration-300 peer peer-hover:blur-sm">
                           {/* Shader Section with Module Info Overlay */}
                           <div className="relative h-32 overflow-hidden">
                             <MeshGradient
