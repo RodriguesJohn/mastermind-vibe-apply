@@ -10,7 +10,8 @@ import LindaImage from "@/assets/Linda.jpeg";
 import SnehImage from "@/assets/Sneh.webp";
 import SonaliImage from "@/assets/Sonali.jpeg";
 import LogoCloud from "@/components/LogoCloud";
-import { ParticleSphere } from "@/components/ParticleSphere";
+import { MeshGradient } from "@paper-design/shaders-react";
+import { useState, useEffect } from "react";
 
 const VibeCodingAccelerator = () => {
   const howItWorks = [
@@ -34,6 +35,7 @@ const VibeCodingAccelerator = () => {
       title: "Orientation + First Build",
       description: "Build your first AI mini-app",
       week: "Week 1",
+      colors: ["#72b9bb", "#b5d9d9", "#ffd1bd", "#ffebe0"],
       topics: [
         "Program overview & AI tools landscape",
         "Setting up your development environment",
@@ -47,6 +49,7 @@ const VibeCodingAccelerator = () => {
       title: "Lovable Mastery",
       description: "Visual AI builder, ship fast",
       week: "Week 2",
+      colors: ["#ff6b6b", "#ffa8a8", "#ffe0e0", "#fff5f5"],
       topics: [
         "Deep dive into Lovable's visual builder",
         "Creating responsive UIs with AI assistance",
@@ -60,6 +63,7 @@ const VibeCodingAccelerator = () => {
       title: "Cursor Deep Dive",
       description: "Code with AI, web + mobile builds",
       week: "Weeks 3-4",
+      colors: ["#6bcf7f", "#a5e6b8", "#d4f5dc", "#f0fdf4"],
       topics: [
         "Cursor IDE fundamentals & AI prompting",
         "Building custom components with React",
@@ -74,6 +78,7 @@ const VibeCodingAccelerator = () => {
       title: "Design Engineering Foundations",
       description: "React, Tailwind, Next.js foundations",
       week: "Week 5",
+      colors: ["#9b59b6", "#bb9dcc", "#dcd2e3", "#f3eef8"],
       topics: [
         "React fundamentals & component architecture",
         "Tailwind CSS for modern UI design",
@@ -88,6 +93,7 @@ const VibeCodingAccelerator = () => {
       title: "Backend & Data",
       description: "Supabase, APIs, data",
       week: "Week 6",
+      colors: ["#3498db", "#85c1e9", "#cfe8f4", "#ebf5fb"],
       topics: [
         "Supabase setup & database design",
         "Authentication and user management",
@@ -102,6 +108,7 @@ const VibeCodingAccelerator = () => {
       title: "Launch & Deploy",
       description: "Deploy to Vercel, share live",
       week: "Week 7",
+      colors: ["#f39c12", "#f7c869", "#fde4b7", "#fef9e7"],
       topics: [
         "Vercel deployment best practices",
         "Domain setup & SSL configuration",
@@ -116,6 +123,7 @@ const VibeCodingAccelerator = () => {
       title: "Capstone Project",
       description: "Create and launch your own product",
       week: "Week 8",
+      colors: ["#e74c3c", "#ec9281", "#f5c5ba", "#fdf0ed"],
       topics: [
         "Ideation & project planning",
         "Building your unique product",
@@ -476,13 +484,6 @@ const VibeCodingAccelerator = () => {
 
           {/* Curriculum Section */}
           <section className="relative py-24 md:py-32 bg-black text-white border-t border-white/10 overflow-hidden">
-            <div className="absolute inset-0 opacity-30 pointer-events-none">
-              <div className="w-full h-full">
-                <div className="absolute top-20 left-20 w-96 h-96">
-                  <ParticleSphere />
-                </div>
-              </div>
-            </div>
             <div className="px-4 md:px-10 lg:px-[120px] relative z-10">
               <div className="max-w-[1200px] mx-auto">
                 <BlurFade delay={0.2} duration={0.8}>
@@ -497,32 +498,46 @@ const VibeCodingAccelerator = () => {
                 <div className="grid md:grid-cols-2 gap-6 mt-16">
                   {modules.map((module, index) => (
                     <BlurFade key={index} delay={0.3 + (index * 0.05)} duration={0.8}>
-                      <Card className="p-8 bg-white/5 border-white/10 hover:border-white/30 transition-colors h-full backdrop-blur-sm">
-                        <div className="flex items-start gap-4 mb-4">
-                          <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center border border-white/20">
-                            <span className="text-white font-bold">{module.number}</span>
-                          </div>
-                          <div className="flex-1">
-                            <div className="flex items-center gap-2 mb-2">
-                              <span className="text-sm text-white/60">{module.week}</span>
-                            </div>
-                            <h3 className="text-xl font-semibold mb-2 text-white">{module.title}</h3>
-                            <p className="text-white/70 mb-4">{module.description}</p>
-                          </div>
+                      <Card className="p-8 border-white/10 hover:border-white/30 transition-colors h-full backdrop-blur-sm overflow-hidden relative">
+                        <div className="absolute inset-0 opacity-20 pointer-events-none">
+                          <MeshGradient
+                            width={800}
+                            height={600}
+                            colors={module.colors}
+                            distortion={0.8}
+                            swirl={0.6}
+                            speed={0.42}
+                            offsetX={0.08}
+                          />
                         </div>
-                        
-                        <div className="space-y-3">
-                          <p className="text-sm font-medium text-white/90 mb-2">What You'll Learn:</p>
-                          <ul className="space-y-2">
-                            {module.topics.map((topic, topicIndex) => (
-                              <li key={topicIndex} className="flex items-start gap-2 text-sm text-white/70">
-                                <Check className="w-4 h-4 text-white mt-0.5 flex-shrink-0" />
-                                <span>{topic}</span>
-                              </li>
-                            ))}
-                          </ul>
-                          <div className="pt-4 border-t border-white/10 mt-4">
-                            <p className="text-sm font-medium text-white">{module.outcome}</p>
+                        <div className="absolute inset-0 bg-black/40 pointer-events-none" />
+                        <div className="relative z-10">
+                          <div className="flex items-start gap-4 mb-4">
+                            <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center border border-white/20">
+                              <span className="text-white font-bold">{module.number}</span>
+                            </div>
+                            <div className="flex-1">
+                              <div className="flex items-center gap-2 mb-2">
+                                <span className="text-sm text-white/60">{module.week}</span>
+                              </div>
+                              <h3 className="text-xl font-semibold mb-2 text-white">{module.title}</h3>
+                              <p className="text-white/70 mb-4">{module.description}</p>
+                            </div>
+                          </div>
+                          
+                          <div className="space-y-3">
+                            <p className="text-sm font-medium text-white/90 mb-2">What You'll Learn:</p>
+                            <ul className="space-y-2">
+                              {module.topics.map((topic, topicIndex) => (
+                                <li key={topicIndex} className="flex items-start gap-2 text-sm text-white/70">
+                                  <Check className="w-4 h-4 text-white mt-0.5 flex-shrink-0" />
+                                  <span>{topic}</span>
+                                </li>
+                              ))}
+                            </ul>
+                            <div className="pt-4 border-t border-white/10 mt-4">
+                              <p className="text-sm font-medium text-white">{module.outcome}</p>
+                            </div>
                           </div>
                         </div>
                       </Card>
