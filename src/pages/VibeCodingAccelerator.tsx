@@ -679,7 +679,7 @@ const VibeCodingAccelerator = () => {
               <BlurFade delay={0.3} duration={0.8}>
                 <div className="mt-8 md:mt-16">
                   <Card className="relative bg-white/5 border-white/10">
-                    <div className="grid items-center gap-12 divide-y divide-white/10 p-8 md:p-12 md:grid-cols-2 md:divide-x md:divide-y-0">
+                    <div className="grid items-start gap-12 divide-y divide-white/10 p-8 md:p-12 md:grid-cols-2 md:divide-x md:divide-y-0">
                       <div className="pb-12 text-center md:pb-0 md:pr-12">
                         <h3 className="text-2xl font-semibold text-white">Suite Enterprise</h3>
                         <p className="mt-2 text-lg text-white/70">For your company of any size</p>
@@ -699,7 +699,7 @@ const VibeCodingAccelerator = () => {
 
                         <p className="text-white/60 mt-12 text-sm">Includes : Security, Unlimited Storage, Payment, Search engine, and all features</p>
                       </div>
-                      <div className="relative">
+                      <div className="relative pt-0 md:pt-4">
                         <ul
                           role="list"
                           className="space-y-4"
@@ -707,10 +707,10 @@ const VibeCodingAccelerator = () => {
                           {['First premium advantage', 'Second advantage weekly', 'Third advantage donate to project', 'Fourth, access to all components weekly'].map((item, index) => (
                             <li
                               key={index}
-                              className="flex items-center gap-2"
+                              className="flex items-center gap-3"
                             >
                               <Check
-                                className="text-primary size-3"
+                                className="text-primary size-4 flex-shrink-0"
                                 strokeWidth={3.5}
                               />
                               <span className="text-white">{item}</span>
@@ -718,7 +718,7 @@ const VibeCodingAccelerator = () => {
                           ))}
                         </ul>
                         <p className="text-white/60 mt-6 text-sm">Team can be any size, and you can add or switch members as needed. Companies using our platform include:</p>
-                        <div className="mt-12 flex flex-wrap items-center justify-between gap-6">
+                        <div className="mt-12 flex flex-wrap items-center justify-start gap-8">
                           <img
                             className="h-5 w-fit brightness-0 invert"
                             src="https://html.tailus.io/blocks/customers/nvidia.svg"
