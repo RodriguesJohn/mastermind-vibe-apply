@@ -50,8 +50,8 @@ const modules = [
 
 export const CohortModulesSection = () => {
   return (
-    <section className="py-24 md:py-32 bg-black text-white">
-      <div className="px-4 md:px-10 lg:px-[120px]">
+    <section className="py-24 md:py-32 bg-black text-white overflow-hidden">
+      <div className="px-4 sm:px-8 md:px-10 lg:px-[120px]">
         <div className="max-w-[1200px] mx-auto">
           <BlurFade delay={0.2} duration={0.8} yOffset={20} blur="8px">
             <h2 className="text-4xl md:text-5xl font-semibold text-center mb-16 tracking-tight">
@@ -59,7 +59,7 @@ export const CohortModulesSection = () => {
             </h2>
           </BlurFade>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {modules.map((module, index) => {
             return (
               <BlurFade key={index} delay={0.4 + (index * 0.1)} duration={0.8} yOffset={15} blur="6px">
