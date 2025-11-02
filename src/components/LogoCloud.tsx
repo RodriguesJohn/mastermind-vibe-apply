@@ -6,8 +6,7 @@ export default function LogoCloud() {
   const logos = [
     { src: cursorLogo, alt: "Cursor Logo", className: "h-6 w-fit brightness-0 invert" },
     { src: "https://cdn.simpleicons.org/figma/F24E1E", alt: "Figma Logo", className: "h-6 w-fit brightness-0 invert" },
-    { src: "https://cdn.simpleicons.org/figma/F24E1E", alt: "Figma Make Logo", className: "h-6 w-fit brightness-0 invert" },
-    { src: "https://developer.apple.com/assets/elements/icons/swiftui/swiftui-96x96_2x.png", alt: "SwiftUI Logo", className: "h-6 w-fit brightness-0 invert" },
+    { src: "https://cdn.simpleicons.org/swiftui/FA7343", alt: "SwiftUI Logo", className: "h-6 w-fit brightness-0 invert" },
     { src: "https://html.tailus.io/blocks/customers/openai.svg", alt: "OpenAI Logo", className: "h-6 w-fit brightness-0 invert" },
     { src: lovableLogo, alt: "Lovable Logo", className: "h-6 w-fit brightness-0 invert" },
     { src: "https://cdn.simpleicons.org/react/F61DAF", alt: "React Native Logo", className: "h-6 w-fit brightness-0 invert" },
