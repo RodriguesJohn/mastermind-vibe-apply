@@ -10,6 +10,7 @@ import LindaImage from "@/assets/Linda.jpeg";
 import SnehImage from "@/assets/Sneh.webp";
 import SonaliImage from "@/assets/Sonali.jpeg";
 import LogoCloud from "@/components/LogoCloud";
+import { ParticleSphere } from "@/components/ParticleSphere";
 
 const VibeCodingAccelerator = () => {
   const howItWorks = [
@@ -474,22 +475,32 @@ const VibeCodingAccelerator = () => {
           </section>
 
           {/* Curriculum Section */}
-          <section className="py-24 md:py-32 bg-black text-white border-t border-white/10">
-            <div className="px-4 md:px-10 lg:px-[120px]">
+          <section className="relative py-24 md:py-32 bg-black text-white border-t border-white/10 overflow-hidden">
+            <div className="absolute inset-0 opacity-30 pointer-events-none">
+              <div className="w-full h-full">
+                <div className="absolute top-20 left-20 w-96 h-96">
+                  <ParticleSphere />
+                </div>
+              </div>
+            </div>
+            <div className="px-4 md:px-10 lg:px-[120px] relative z-10">
               <div className="max-w-[1200px] mx-auto">
                 <BlurFade delay={0.2} duration={0.8}>
-                  <h2 className="text-4xl md:text-6xl font-bold text-center mb-4 tracking-tight">
-                    The 60-Day Roadmap
-                  </h2>
+                  <div className="text-center mb-4">
+                    <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
+                      60-Day Accelerator Curriculum
+                    </h2>
+                    <p className="text-xl text-white/60 mt-4">Things You Will Learn</p>
+                  </div>
                 </BlurFade>
 
                 <div className="grid md:grid-cols-2 gap-6 mt-16">
                   {modules.map((module, index) => (
                     <BlurFade key={index} delay={0.3 + (index * 0.05)} duration={0.8}>
-                      <Card className="p-8 bg-white/5 border-white/10 hover:border-primary/50 transition-colors h-full">
+                      <Card className="p-8 bg-white/5 border-white/10 hover:border-white/30 transition-colors h-full backdrop-blur-sm">
                         <div className="flex items-start gap-4 mb-4">
-                          <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center">
-                            <span className="text-primary font-bold">{module.number}</span>
+                          <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center border border-white/20">
+                            <span className="text-white font-bold">{module.number}</span>
                           </div>
                           <div className="flex-1">
                             <div className="flex items-center gap-2 mb-2">
@@ -505,13 +516,13 @@ const VibeCodingAccelerator = () => {
                           <ul className="space-y-2">
                             {module.topics.map((topic, topicIndex) => (
                               <li key={topicIndex} className="flex items-start gap-2 text-sm text-white/70">
-                                <Check className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                                <Check className="w-4 h-4 text-white mt-0.5 flex-shrink-0" />
                                 <span>{topic}</span>
                               </li>
                             ))}
                           </ul>
                           <div className="pt-4 border-t border-white/10 mt-4">
-                            <p className="text-sm font-medium text-primary">{module.outcome}</p>
+                            <p className="text-sm font-medium text-white">{module.outcome}</p>
                           </div>
                         </div>
                       </Card>
