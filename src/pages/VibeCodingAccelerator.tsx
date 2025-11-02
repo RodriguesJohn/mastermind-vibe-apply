@@ -173,8 +173,6 @@ const VibeCodingAccelerator = () => {
 
                   <BlurFade delay={0.4} duration={0.8}>
                     <p className="text-lg md:text-xl text-white/60 font-normal mb-8 leading-relaxed max-w-3xl">
-                      Turn designers into builders.<br />
-                      Launch real apps with AI tools.<br />
                       Ship your first full-stack product in 60 days.
                     </p>
                   </BlurFade>
