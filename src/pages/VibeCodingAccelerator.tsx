@@ -42,7 +42,7 @@ const VibeCodingAccelerator = () => {
         "Build your first AI-powered mini-app",
         "Introduction to Lovable & Cursor basics"
       ],
-      outcome: "Ship a working AI app and understand the modern dev workflow"
+      project: "AI Mini-App: Build and deploy your first AI-powered application"
     },
     {
       number: "02",
@@ -56,7 +56,7 @@ const VibeCodingAccelerator = () => {
         "Integrating components and layouts",
         "Building your first complete web app"
       ],
-      outcome: "Build and deploy a polished web application using Lovable"
+      project: "Web App: Create a polished, responsive web application"
     },
     {
       number: "03-04",
@@ -71,7 +71,7 @@ const VibeCodingAccelerator = () => {
         "Working with APIs and third-party services",
         "Advanced debugging and optimization"
       ],
-      outcome: "Build a full-featured web and mobile app using Cursor"
+      project: "Full-Stack App: Build a feature-rich web and mobile application"
     },
     {
       number: "05",
@@ -86,7 +86,7 @@ const VibeCodingAccelerator = () => {
         "Component libraries & design systems",
         "Performance optimization techniques"
       ],
-      outcome: "Master the core technologies powering modern web apps"
+      project: "Component Library: Build a production-ready design system"
     },
     {
       number: "06",
@@ -101,7 +101,7 @@ const VibeCodingAccelerator = () => {
         "Real-time data with subscriptions",
         "Data security and best practices"
       ],
-      outcome: "Build secure, scalable backends with Supabase"
+      project: "Database Application: Create an app with real-time data sync"
     },
     {
       number: "07",
@@ -116,7 +116,7 @@ const VibeCodingAccelerator = () => {
         "Performance monitoring & analytics",
         "Post-launch optimization"
       ],
-      outcome: "Deploy your app live and handle production challenges"
+      project: "Live Production App: Deploy and optimize a live application"
     },
     {
       number: "08",
@@ -131,7 +131,7 @@ const VibeCodingAccelerator = () => {
         "Final deployment & launch",
         "Portfolio presentation prep"
       ],
-      outcome: "Launch your own product and showcase it in your portfolio"
+      project: "Your Unique Product: Launch your own idea and build your portfolio"
     }
   ];
 
@@ -534,7 +534,8 @@ const VibeCodingAccelerator = () => {
                               ))}
                             </ul>
                             <div className="pt-4 border-t border-white/10">
-                              <p className="text-sm font-medium text-white/90">{module.outcome}</p>
+                              <p className="text-xs font-semibold text-white/60 uppercase tracking-wide mb-2">Project:</p>
+                              <p className="text-sm font-medium text-white/90">{module.project}</p>
                             </div>
                           </div>
                         </div>
