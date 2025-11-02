@@ -9,11 +9,7 @@ import { Helmet } from "react-helmet";
 import LindaImage from "@/assets/Linda.jpeg";
 import SnehImage from "@/assets/Sneh.webp";
 import SonaliImage from "@/assets/Sonali.jpeg";
-import cursorLogo from "@/assets/logos/cursor.png";
-import lovableLogo from "@/assets/logos/lovable.png";
-import v0Logo from "@/assets/logos/v0.png";
-import boltLogo from "@/assets/logos/bolt.png";
-import claudeLogo from "@/assets/logos/claude.png";
+import LogoCloud from "@/components/LogoCloud";
 
 const VibeCodingAccelerator = () => {
   const howItWorks = [
@@ -215,45 +211,13 @@ const VibeCodingAccelerator = () => {
                     </div>
                   </BlurFade>
 
-                  {/* Tools You Will Learn */}
-                  <BlurFade delay={0.7} duration={0.8}>
-                    <div className="mt-12 pt-8 border-t border-white/10">
-                      <h2 className="text-center text-lg font-medium text-white/60 mb-8">
-                        Tools You Will Learn
-                      </h2>
-                      <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12 md:gap-16">
-                        <img 
-                          src={lovableLogo} 
-                          alt="Lovable" 
-                          className="h-5 w-fit opacity-60 hover:opacity-100 transition-opacity" 
-                        />
-                        <img 
-                          src={cursorLogo} 
-                          alt="Cursor" 
-                          className="h-5 w-fit opacity-60 hover:opacity-100 transition-opacity" 
-                        />
-                        <img 
-                          src={boltLogo} 
-                          alt="Bolt" 
-                          className="h-5 w-fit opacity-60 hover:opacity-100 transition-opacity" 
-                        />
-                        <img 
-                          src={claudeLogo} 
-                          alt="Claude" 
-                          className="h-5 w-fit opacity-60 hover:opacity-100 transition-opacity" 
-                        />
-                        <img 
-                          src={v0Logo} 
-                          alt="V0" 
-                          className="h-5 w-fit opacity-60 hover:opacity-100 transition-opacity" 
-                        />
-                      </div>
-                    </div>
-                  </BlurFade>
                 </div>
               </div>
             </div>
           </section>
+
+          {/* Tools You Will Learn */}
+          <LogoCloud />
 
           {/* Video Section */}
           <section className="relative py-12 md:py-16 overflow-hidden bg-black text-white border-b border-white/10">
