@@ -684,7 +684,7 @@ const VibeCodingAccelerator = () => {
                         <h3 className="text-2xl font-semibold text-white">Suite Enterprise</h3>
                         <p className="mt-2 text-lg text-white/70">For your company of any size</p>
                         <span className="mb-6 mt-12 inline-block text-6xl font-bold text-white">
-                          <span className="text-4xl">$</span>234
+                          <span className="text-4xl">$</span>4999
                         </span>
 
                         <div className="flex justify-center">
