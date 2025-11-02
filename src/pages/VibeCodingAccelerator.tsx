@@ -448,48 +448,128 @@ const VibeCodingAccelerator = () => {
                 
                 <div className="grid md:grid-cols-2 gap-6">
                   <BlurFade delay={0.3} duration={0.8}>
-                    <Card className="p-8 bg-white/5 border-white/10 hover:border-primary/50 transition-colors h-full">
-                      <div className="aspect-video rounded-lg bg-white/5 mb-4 flex items-center justify-center">
-                        <Code2 className="w-12 h-12 text-white/20" />
-                      </div>
-                      <h3 className="text-2xl font-semibold text-white mb-3">AI Mini-App</h3>
-                      <p className="text-white/70 leading-relaxed">
-                        Build your first AI-powered app using Lovable and deploy it live. Learn the fundamentals of modern AI development.
-                      </p>
-                    </Card>
+                    <motion.div
+                      whileHover={{ y: -6, scale: 1.02 }}
+                      transition={{ duration: 0.3, ease: "easeOut" }}
+                      className="cursor-pointer h-full"
+                    >
+                      <Card className="p-0 border-white/10 overflow-hidden transition-all duration-300 h-full group">
+                        <div className="relative h-40 overflow-hidden">
+                          <MeshGradient
+                            width={600}
+                            height={160}
+                            colors={["#72b9bb", "#b5d9d9", "#ffd1bd", "#ffebe0"]}
+                            distortion={0.8}
+                            swirl={0.6}
+                            speed={0.42}
+                            offsetX={0.08}
+                          />
+                          <div className="absolute inset-0 bg-black/30" />
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <Code2 className="w-16 h-16 text-white group-hover:scale-110 transition-transform duration-300" />
+                          </div>
+                        </div>
+                        <div className="p-8 bg-black">
+                          <h3 className="text-2xl font-semibold text-white mb-3">AI Mini-App</h3>
+                          <p className="text-white/70 leading-relaxed">
+                            Build your first AI-powered app using Lovable and deploy it live. Learn the fundamentals of modern AI development.
+                          </p>
+                        </div>
+                      </Card>
+                    </motion.div>
                   </BlurFade>
                   <BlurFade delay={0.4} duration={0.8}>
-                    <Card className="p-8 bg-white/5 border-white/10 hover:border-primary/50 transition-colors h-full">
-                      <div className="aspect-video rounded-lg bg-white/5 mb-4 flex items-center justify-center">
-                        <Database className="w-12 h-12 text-white/20" />
-                      </div>
-                      <h3 className="text-2xl font-semibold text-white mb-3">Full-Stack Web App</h3>
-                      <p className="text-white/70 leading-relaxed">
-                        Create a complete web application with React, Next.js, and Supabase. Integrate APIs and databases.
-                      </p>
-                    </Card>
+                    <motion.div
+                      whileHover={{ y: -6, scale: 1.02 }}
+                      transition={{ duration: 0.3, ease: "easeOut" }}
+                      className="cursor-pointer h-full"
+                    >
+                      <Card className="p-0 border-white/10 overflow-hidden transition-all duration-300 h-full group">
+                        <div className="relative h-40 overflow-hidden">
+                          <MeshGradient
+                            width={600}
+                            height={160}
+                            colors={["#3498db", "#85c1e9", "#cfe8f4", "#ebf5fb"]}
+                            distortion={0.8}
+                            swirl={0.6}
+                            speed={0.42}
+                            offsetX={0.08}
+                          />
+                          <div className="absolute inset-0 bg-black/30" />
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <Database className="w-16 h-16 text-white group-hover:scale-110 transition-transform duration-300" />
+                          </div>
+                        </div>
+                        <div className="p-8 bg-black">
+                          <h3 className="text-2xl font-semibold text-white mb-3">Full-Stack Web App</h3>
+                          <p className="text-white/70 leading-relaxed">
+                            Create a complete web application with React, Next.js, and Supabase. Integrate APIs and databases.
+                          </p>
+                        </div>
+                      </Card>
+                    </motion.div>
                   </BlurFade>
                   <BlurFade delay={0.5} duration={0.8}>
-                    <Card className="p-8 bg-white/5 border-white/10 hover:border-primary/50 transition-colors h-full">
-                      <div className="aspect-video rounded-lg bg-white/5 mb-4 flex items-center justify-center">
-                        <Globe className="w-12 h-12 text-white/20" />
-                      </div>
-                      <h3 className="text-2xl font-semibold text-white mb-3">Mobile-Ready Product</h3>
-                      <p className="text-white/70 leading-relaxed">
-                        Build a responsive, mobile-first application using Cursor and modern web technologies.
-                      </p>
-                    </Card>
+                    <motion.div
+                      whileHover={{ y: -6, scale: 1.02 }}
+                      transition={{ duration: 0.3, ease: "easeOut" }}
+                      className="cursor-pointer h-full"
+                    >
+                      <Card className="p-0 border-white/10 overflow-hidden transition-all duration-300 h-full group">
+                        <div className="relative h-40 overflow-hidden">
+                          <MeshGradient
+                            width={600}
+                            height={160}
+                            colors={["#6bcf7f", "#a5e6b8", "#d4f5dc", "#f0fdf4"]}
+                            distortion={0.8}
+                            swirl={0.6}
+                            speed={0.42}
+                            offsetX={0.08}
+                          />
+                          <div className="absolute inset-0 bg-black/30" />
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <Globe className="w-16 h-16 text-white group-hover:scale-110 transition-transform duration-300" />
+                          </div>
+                        </div>
+                        <div className="p-8 bg-black">
+                          <h3 className="text-2xl font-semibold text-white mb-3">Mobile-Ready Product</h3>
+                          <p className="text-white/70 leading-relaxed">
+                            Build a responsive, mobile-first application using Cursor and modern web technologies.
+                          </p>
+                        </div>
+                      </Card>
+                    </motion.div>
                   </BlurFade>
                   <BlurFade delay={0.6} duration={0.8}>
-                    <Card className="p-8 bg-white/5 border-white/10 hover:border-primary/50 transition-colors h-full">
-                      <div className="aspect-video rounded-lg bg-white/5 mb-4 flex items-center justify-center">
-                        <Rocket className="w-12 h-12 text-white/20" />
-                      </div>
-                      <h3 className="text-2xl font-semibold text-white mb-3">Capstone Project</h3>
-                      <p className="text-white/70 leading-relaxed">
-                        Launch your own idea from concept to Vercel. Build, deploy, and showcase your unique product.
-                      </p>
-                    </Card>
+                    <motion.div
+                      whileHover={{ y: -6, scale: 1.02 }}
+                      transition={{ duration: 0.3, ease: "easeOut" }}
+                      className="cursor-pointer h-full"
+                    >
+                      <Card className="p-0 border-white/10 overflow-hidden transition-all duration-300 h-full group">
+                        <div className="relative h-40 overflow-hidden">
+                          <MeshGradient
+                            width={600}
+                            height={160}
+                            colors={["#e74c3c", "#ec9281", "#f5c5ba", "#fdf0ed"]}
+                            distortion={0.8}
+                            swirl={0.6}
+                            speed={0.42}
+                            offsetX={0.08}
+                          />
+                          <div className="absolute inset-0 bg-black/30" />
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <Rocket className="w-16 h-16 text-white group-hover:scale-110 transition-transform duration-300" />
+                          </div>
+                        </div>
+                        <div className="p-8 bg-black">
+                          <h3 className="text-2xl font-semibold text-white mb-3">Capstone Project</h3>
+                          <p className="text-white/70 leading-relaxed">
+                            Launch your own idea from concept to Vercel. Build, deploy, and showcase your unique product.
+                          </p>
+                        </div>
+                      </Card>
+                    </motion.div>
                   </BlurFade>
                 </div>
               </div>
