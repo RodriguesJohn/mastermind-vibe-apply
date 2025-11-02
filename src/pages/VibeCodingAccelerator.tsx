@@ -499,10 +499,10 @@ const VibeCodingAccelerator = () => {
                   {modules.map((module, index) => (
                     <BlurFade key={index} delay={0.3 + (index * 0.05)} duration={0.8}>
                       <Card className="p-8 border-white/10 hover:border-white/30 transition-colors h-full backdrop-blur-sm overflow-hidden relative">
-                        <div className="absolute inset-0 opacity-20 pointer-events-none overflow-hidden">
+                        <div className="absolute inset-0 opacity-20 pointer-events-none">
                           <MeshGradient
-                            width={400}
-                            height={300}
+                            width={800}
+                            height={600}
                             colors={module.colors}
                             distortion={0.8}
                             swirl={0.6}
@@ -512,21 +512,19 @@ const VibeCodingAccelerator = () => {
                         </div>
                         <div className="absolute inset-0 bg-black/40 pointer-events-none" />
                         <div className="relative z-10">
-                          <div className="flex items-start gap-4 mb-4">
-                            <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center border border-white/20">
-                              <span className="text-white font-bold">{module.number}</span>
-                            </div>
-                            <div className="flex-1">
-                              <div className="flex items-center gap-2 mb-2">
-                                <span className="text-sm text-white/60">{module.week}</span>
+                          <div className="mb-6">
+                            <div className="flex items-center gap-3 mb-3">
+                              <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center border border-white/20">
+                                <span className="text-white font-bold text-sm">{module.number}</span>
                               </div>
-                              <h3 className="text-xl font-semibold mb-2 text-white">{module.title}</h3>
-                              <p className="text-white/70 mb-4">{module.description}</p>
+                              <span className="text-xs text-white/60 uppercase tracking-wide">{module.week}</span>
                             </div>
+                            <h3 className="text-2xl font-bold mb-2 text-white">{module.title}</h3>
+                            <p className="text-white/60 text-sm">{module.description}</p>
                           </div>
                           
-                          <div className="space-y-3">
-                            <p className="text-sm font-medium text-white/90 mb-2">What You'll Learn:</p>
+                          <div className="space-y-4 pt-4 border-t border-white/10">
+                            <p className="text-sm font-semibold text-white/90 uppercase tracking-wide">What You'll Learn:</p>
                             <ul className="space-y-2">
                               {module.topics.map((topic, topicIndex) => (
                                 <li key={topicIndex} className="flex items-start gap-2 text-sm text-white/70">
@@ -535,8 +533,8 @@ const VibeCodingAccelerator = () => {
                                 </li>
                               ))}
                             </ul>
-                            <div className="pt-4 border-t border-white/10 mt-4">
-                              <p className="text-sm font-medium text-white">{module.outcome}</p>
+                            <div className="pt-4 border-t border-white/10">
+                              <p className="text-sm font-medium text-white/90">{module.outcome}</p>
                             </div>
                           </div>
                         </div>
