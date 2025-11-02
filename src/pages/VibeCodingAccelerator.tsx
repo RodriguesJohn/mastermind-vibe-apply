@@ -663,86 +663,96 @@ const VibeCodingAccelerator = () => {
           </section>
 
           {/* Pricing Section */}
-          <section className="py-24 md:py-32 bg-black text-white border-t border-white/10">
-            <div className="px-4 md:px-10 lg:px-[120px]">
-              <div className="max-w-[1200px] mx-auto">
-                <BlurFade delay={0.2} duration={0.8}>
-                  <h2 className="text-4xl md:text-6xl font-bold text-center mb-16 tracking-tight">
-                    Choose Your Access Plan
+          <section className="relative py-24 md:py-32 bg-black text-white border-t border-white/10">
+            <div className="mx-auto max-w-5xl px-4 md:px-10 lg:px-[120px]">
+              <BlurFade delay={0.2} duration={0.8}>
+                <div className="mx-auto max-w-2xl text-center mb-8 md:mb-16">
+                  <h2 className="text-balance text-3xl font-bold md:text-4xl lg:text-5xl text-white">
+                    Pricing that scale with your business
                   </h2>
-                </BlurFade>
-
-                <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                  <BlurFade delay={0.3} duration={0.8}>
-                    <Card className="p-8 bg-white/5 border-white/10">
-                      <h3 className="text-2xl font-bold mb-4 text-white">Standard Access</h3>
-                      <div className="mb-6">
-                        <span className="text-4xl font-bold text-white">$5,000</span>
-                        <span className="text-white/60"> USD (one-time)</span>
-                      </div>
-                      <ul className="space-y-3 mb-8">
-                        <li className="flex items-start gap-2">
-                          <Check className="w-5 h-5 text-primary mt-0.5" />
-                          <span className="text-white/80">Lifetime content access</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <Check className="w-5 h-5 text-primary mt-0.5" />
-                          <span className="text-white/80">60 days live support + community</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <Check className="w-5 h-5 text-primary mt-0.5" />
-                          <span className="text-white/80">Certificate upon completion</span>
-                        </li>
-                      </ul>
-                      <Button className="w-full" variant="cta" size="lg" asChild>
-                        <a 
-                          href="https://maven.com/productlearnio/aiproductdesignmasterycohort"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Join Now
-                        </a>
-                      </Button>
-                    </Card>
-                  </BlurFade>
-
-                  <BlurFade delay={0.4} duration={0.8}>
-                    <Card className="p-8 bg-primary/10 border-primary/30">
-                      <div className="inline-block px-3 py-1 bg-primary/20 text-primary text-sm font-semibold rounded-full mb-4">
-                        Flexible
-                      </div>
-                      <h3 className="text-2xl font-bold mb-4 text-white">3 Monthly Payments</h3>
-                      <div className="mb-6">
-                        <span className="text-4xl font-bold text-white">$1,900</span>
-                        <span className="text-white/60"> × 3 months</span>
-                      </div>
-                      <ul className="space-y-3 mb-8">
-                        <li className="flex items-start gap-2">
-                          <Check className="w-5 h-5 text-primary mt-0.5" />
-                          <span className="text-white/80">Start instantly</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <Check className="w-5 h-5 text-primary mt-0.5" />
-                          <span className="text-white/80">Same benefits as Standard</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <Check className="w-5 h-5 text-primary mt-0.5" />
-                          <span className="text-white/80">Cancel before Month 2 if it's not for you</span>
-                        </li>
-                      </ul>
-                      <Button className="w-full" variant="cta" size="lg" asChild>
-                        <a 
-                          href="https://maven.com/productlearnio/aiproductdesignmasterycohort"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Start With $1,900 →
-                        </a>
-                      </Button>
-                    </Card>
-                  </BlurFade>
+                  <p className="text-white/60 mx-auto mt-4 max-w-md text-balance text-lg">
+                    Choose the perfect plan for your needs and start optimizing your workflow today
+                  </p>
                 </div>
-              </div>
+              </BlurFade>
+
+              <BlurFade delay={0.3} duration={0.8}>
+                <div className="mt-8 md:mt-16">
+                  <Card className="relative bg-white/5 border-white/10">
+                    <div className="grid items-center gap-12 divide-y divide-white/10 p-8 md:p-12 md:grid-cols-2 md:divide-x md:divide-y-0">
+                      <div className="pb-12 text-center md:pb-0 md:pr-12">
+                        <h3 className="text-2xl font-semibold text-white">Suite Enterprise</h3>
+                        <p className="mt-2 text-lg text-white/70">For your company of any size</p>
+                        <span className="mb-6 mt-12 inline-block text-6xl font-bold text-white">
+                          <span className="text-4xl">$</span>234
+                        </span>
+
+                        <div className="flex justify-center">
+                          <Button
+                            asChild
+                            size="lg"
+                            variant="cta"
+                          >
+                            <a href="#">Get started</a>
+                          </Button>
+                        </div>
+
+                        <p className="text-white/60 mt-12 text-sm">Includes : Security, Unlimited Storage, Payment, Search engine, and all features</p>
+                      </div>
+                      <div className="relative">
+                        <ul
+                          role="list"
+                          className="space-y-4"
+                        >
+                          {['First premium advantage', 'Second advantage weekly', 'Third advantage donate to project', 'Fourth, access to all components weekly'].map((item, index) => (
+                            <li
+                              key={index}
+                              className="flex items-center gap-2"
+                            >
+                              <Check
+                                className="text-primary size-3"
+                                strokeWidth={3.5}
+                              />
+                              <span className="text-white">{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                        <p className="text-white/60 mt-6 text-sm">Team can be any size, and you can add or switch members as needed. Companies using our platform include:</p>
+                        <div className="mt-12 flex flex-wrap items-center justify-between gap-6">
+                          <img
+                            className="h-5 w-fit brightness-0 invert"
+                            src="https://html.tailus.io/blocks/customers/nvidia.svg"
+                            alt="Nvidia Logo"
+                            height="20"
+                            width="auto"
+                          />
+                          <img
+                            className="h-4 w-fit brightness-0 invert"
+                            src="https://html.tailus.io/blocks/customers/column.svg"
+                            alt="Column Logo"
+                            height="16"
+                            width="auto"
+                          />
+                          <img
+                            className="h-4 w-fit brightness-0 invert"
+                            src="https://html.tailus.io/blocks/customers/github.svg"
+                            alt="GitHub Logo"
+                            height="16"
+                            width="auto"
+                          />
+                          <img
+                            className="h-5 w-fit brightness-0 invert"
+                            src="https://html.tailus.io/blocks/customers/nike.svg"
+                            alt="Nike Logo"
+                            height="20"
+                            width="auto"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </Card>
+                </div>
+              </BlurFade>
             </div>
           </section>
 
