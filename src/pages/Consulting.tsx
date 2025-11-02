@@ -62,106 +62,52 @@ const Consulting = () => {
             </div>
           </section>
 
-          {/* Tiers Section */}
+          {/* Consulting Section */}
           <section className="py-16 px-4 md:px-10 lg:px-[120px]">
             <div className="max-w-[1200px] mx-auto">
-              <div className="grid md:grid-cols-2 gap-8">
-                {tiers.map((tier, index) => (
-                  <Card 
-                    key={tier.name}
-                    className={`p-8 h-full flex flex-col ${
-                      tier.highlighted 
-                        ? "border-primary shadow-lg scale-105" 
-                        : ""
-                    }`}
-                  >
-                    <div className="space-y-4 flex-grow">
-                      <h3 className="text-2xl font-bold">{tier.name}</h3>
-                      <p className="text-muted-foreground">{tier.description}</p>
-                      
-                      <div className="pt-4">
-                        <div className="text-4xl font-bold">{tier.price}</div>
-                        <div className="text-sm text-muted-foreground">{tier.priceSubtext}</div>
-                      </div>
-                      
-                      <ul className="space-y-3 pt-6">
-                        {tier.features.map((feature) => (
-                          <li key={feature} className="flex items-start gap-3">
-                            <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                            <span>{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
+              <div className="max-w-3xl mx-auto">
+                <Card className="p-12 bg-card/50 border-border/40 hover:border-border transition-all duration-300 rounded-2xl">
+                  <div className="space-y-8 text-center">
+                    <div className="space-y-4">
+                      <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+                        AI Product Design Consulting
+                      </h2>
+                      <p className="text-xl text-muted-foreground">
+                        Work directly with John Rodrigues to design, prototype, and launch AI-powered products — from zero to one.
+                      </p>
                     </div>
 
-                    <div className="mt-8 space-y-2">
-                      {tier.name === "Cohort Member Coaching" ? (
-                        <Button 
-                          variant={tier.highlighted ? "default" : "outline"}
-                          className="w-full bg-accent text-accent-foreground hover:bg-accent/90"
-                          size="lg"
-                          asChild
-                        >
-                          <a 
-                            href="https://cal.com/aidesignacademy/cohort-member-1-1-coaching?overlayCalendar=true"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            {tier.cta}
-                          </a>
-                        </Button>
-                      ) : tier.name === "Individual Coaching" ? (
-                        <Button 
-                          variant={tier.highlighted ? "default" : "outline"}
-                          className="w-full"
-                          size="lg"
-                          asChild
-                        >
-                          <a 
-                            href="https://cal.com/aidesignacademy/1-1-coaching-call?overlayCalendar=true"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            {tier.cta}
-                          </a>
-                        </Button>
-                      ) : tier.name === "AI Consulting" ? (
-                        <Button 
-                          variant={tier.highlighted ? "default" : "outline"}
-                          className="w-full"
-                          size="lg"
-                          asChild
-                        >
-                          <a 
-                            href="https://cal.com/aidesignacademy/business-consulting?overlayCalendar=true"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            {tier.cta}
-                          </a>
-                        </Button>
-                      ) : (
-                        <Button 
-                          variant={tier.highlighted ? "default" : "outline"}
-                          className="w-full"
-                          size="lg"
-                        >
-                          {tier.cta}
-                        </Button>
-                      )}
-                      {tier.ctaSubtext && (
+                    <div className="space-y-6 text-lg text-muted-foreground leading-relaxed pt-4">
+                      <p>
+                        I collaborate with founders, product managers, and startup teams to turn ideas into investor-ready MVPs.
+                      </p>
+                      <p>
+                        From product strategy and UX design to interactive prototypes and AI integration — we'll move fast and build something remarkable.
+                      </p>
+                    </div>
+
+                    <div className="pt-6">
+                      <Button 
+                        variant="default"
+                        size="lg"
+                        className="w-full sm:w-auto px-12 bg-accent text-accent-foreground hover:bg-accent/90 transition-all hover:scale-105"
+                        asChild
+                      >
                         <a 
-                          href="https://cal.com/aidesignacademy/discovery-call?overlayCalendar=true"
+                          href="https://cal.com/aidesignacademy/business-consulting?overlayCalendar=true"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-sm text-muted-foreground text-center underline hover:text-primary transition-colors block"
                         >
-                          {tier.ctaSubtext}
+                          Book a Call
                         </a>
-                      )}
+                      </Button>
                     </div>
-                  </Card>
-                ))}
+
+                    <p className="text-sm text-muted-foreground/60 italic pt-2">
+                      Past collaborations include AI startups, innovation labs, and enterprise product teams.
+                    </p>
+                  </div>
+                </Card>
               </div>
             </div>
           </section>
