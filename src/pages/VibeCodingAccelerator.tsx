@@ -247,7 +247,7 @@ const VibeCodingAccelerator = () => {
                       <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center mb-6">
                         <Code2 className="w-6 h-6 text-primary" />
                       </div>
-                      <h3 className="text-2xl font-semibold text-white mb-4">Build Real Products</h3>
+                      <h3 className="text-2xl font-semibold text-white mb-4">Build Your Own Products</h3>
                       <p className="text-white/70 leading-relaxed mb-4">
                         Turn your ideas into working apps using AI tools like Lovable, Cursor, and Supabase — even if you're not technical.
                       </p>
