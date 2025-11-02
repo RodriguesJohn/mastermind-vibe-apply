@@ -1,25 +1,20 @@
 import { BlurFade } from "./BlurFade";
 import lovableLogo from "@/assets/logos/lovable.png";
 import cursorLogo from "@/assets/logos/cursor.png";
-import claudeLogo from "@/assets/logos/claude.png";
 
 export default function LogoCloud() {
   const logos = [
-    { src: lovableLogo, alt: "Lovable Logo", className: "h-6 w-fit brightness-0 invert" },
     { src: cursorLogo, alt: "Cursor Logo", className: "h-6 w-fit brightness-0 invert" },
-    { src: claudeLogo, alt: "Claude Logo", className: "h-6 w-fit brightness-0 invert" },
-    { src: "https://html.tailus.io/blocks/customers/react.svg", alt: "React Native Logo", className: "h-6 w-fit brightness-0 invert" },
-    { src: "https://html.tailus.io/blocks/customers/n8n.svg", alt: "n8n Logo", className: "h-6 w-fit brightness-0 invert" },
-    { src: "https://html.tailus.io/blocks/customers/column.svg", alt: "Column Logo", className: "h-4 w-fit brightness-0 invert" },
-    { src: "https://html.tailus.io/blocks/customers/github.svg", alt: "GitHub Logo", className: "h-4 w-fit brightness-0 invert" },
-    { src: "https://html.tailus.io/blocks/customers/nike.svg", alt: "Nike Logo", className: "h-5 w-fit brightness-0 invert" },
-    { src: "https://html.tailus.io/blocks/customers/laravel.svg", alt: "Laravel Logo", className: "h-4 w-fit brightness-0 invert" },
-    { src: "https://html.tailus.io/blocks/customers/lilly.svg", alt: "Lilly Logo", className: "h-7 w-fit brightness-0 invert" },
-    { src: "https://html.tailus.io/blocks/customers/lemonsqueezy.svg", alt: "Lemon Squeezy Logo", className: "h-5 w-fit brightness-0 invert" },
+    { src: "https://cdn.simpleicons.org/figma/F24E1E", alt: "Figma Logo", className: "h-6 w-fit brightness-0 invert" },
+    { src: "https://cdn.simpleicons.org/figma/F24E1E", alt: "Figma Make Logo", className: "h-6 w-fit brightness-0 invert" },
+    { src: "https://cdn.simpleicons.org/swiftui/FA7343", alt: "SwiftUI Logo", className: "h-6 w-fit brightness-0 invert" },
     { src: "https://html.tailus.io/blocks/customers/openai.svg", alt: "OpenAI Logo", className: "h-6 w-fit brightness-0 invert" },
-    { src: "https://html.tailus.io/blocks/customers/tailwindcss.svg", alt: "Tailwind CSS Logo", className: "h-4 w-fit brightness-0 invert" },
-    { src: "https://html.tailus.io/blocks/customers/vercel.svg", alt: "Vercel Logo", className: "h-5 w-fit brightness-0 invert" },
-    { src: "https://html.tailus.io/blocks/customers/zapier.svg", alt: "Zapier Logo", className: "h-5 w-fit brightness-0 invert" },
+    { src: lovableLogo, alt: "Lovable Logo", className: "h-6 w-fit brightness-0 invert" },
+    { src: "https://html.tailus.io/blocks/customers/react.svg", alt: "React Logo", className: "h-6 w-fit brightness-0 invert" },
+    { src: "https://html.tailus.io/blocks/customers/tailwindcss.svg", alt: "Tailwind Logo", className: "h-6 w-fit brightness-0 invert" },
+    { src: "https://cdn.simpleicons.org/supabase/3ECF8E", alt: "Supabase Logo", className: "h-6 w-fit brightness-0 invert" },
+    { src: "https://cdn.simpleicons.org/nextdotjs/000000", alt: "Next.js Logo", className: "h-6 w-fit brightness-0 invert" },
+    { src: "https://html.tailus.io/blocks/customers/vercel.svg", alt: "Vercel Logo", className: "h-6 w-fit brightness-0 invert" },
   ];
 
   return (
