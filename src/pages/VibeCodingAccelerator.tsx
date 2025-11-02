@@ -237,39 +237,6 @@ const VibeCodingAccelerator = () => {
             </div>
           </section>
 
-          {/* Problem / Opportunity Section */}
-          <section id="problem" className="py-24 md:py-32 bg-black text-white border-t border-white/10">
-            <div className="px-4 md:px-10 lg:px-[120px]">
-              <div className="max-w-[1200px] mx-auto">
-                <BlurFade delay={0.2} duration={0.8}>
-                  <h2 className="text-4xl md:text-6xl font-bold text-center mb-8 tracking-tight">
-                    Stop Handing Off Your Ideas — Start Shipping Them.
-                  </h2>
-                </BlurFade>
-
-                <BlurFade delay={0.3} duration={0.8}>
-                  <p className="text-xl text-white/70 text-center max-w-3xl mx-auto mb-12 leading-relaxed">
-                    Most designers can imagine great products. Few can build them.<br/>
-                    Vibe Coding bridges that gap. Learn the modern design-engineering workflow so you can build, launch, and monetize your own ideas — without waiting on developers.
-                  </p>
-                </BlurFade>
-
-                <BlurFade delay={0.4} duration={0.8}>
-                  <div className="grid md:grid-cols-2 gap-8 items-center max-w-4xl mx-auto">
-                    <Card className="p-8 bg-white/5 border-white/10">
-                      <p className="text-lg font-semibold mb-2 text-white/60">Before</p>
-                      <p className="text-white/80">Figma handoff → Wait for developers → Compromised vision</p>
-                    </Card>
-                    <Card className="p-8 bg-primary/20 border-primary/40">
-                      <p className="text-lg font-semibold mb-2 text-primary">After</p>
-                      <p className="text-white/90">Design → Build → Launch → Live product in your hands</p>
-                    </Card>
-                  </div>
-                </BlurFade>
-              </div>
-            </div>
-          </section>
-
           {/* Outcomes Section */}
           <section className="py-24 md:py-32 bg-black text-white border-t border-white/10">
             <div className="px-4 md:px-10 lg:px-[120px]">
@@ -299,6 +266,7 @@ const VibeCodingAccelerator = () => {
               </div>
             </div>
           </section>
+
 
           {/* How It Works Section */}
           <section className="py-24 md:py-32 bg-black text-white border-t border-white/10">
