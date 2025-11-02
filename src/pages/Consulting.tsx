@@ -153,7 +153,7 @@ const Consulting = () => {
                       asChild
                     >
                       <a 
-                        href="https://cal.com/aidesignacademy/business-consulting?overlayCalendar=true"
+                        href="https://john-rodrigues.com/"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
