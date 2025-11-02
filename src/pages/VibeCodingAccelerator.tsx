@@ -150,7 +150,7 @@ const VibeCodingAccelerator = () => {
         
         <main className="bg-black">
           {/* Hero Section */}
-          <section className="relative py-16 md:py-24 overflow-hidden bg-black text-white border-b border-white/10">
+          <section className="relative py-16 md:py-24 overflow-hidden bg-black text-white border-b border-white/10 w-full">
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-primary/10 via-black to-black" />
             
             <div className="px-4 md:px-10 lg:px-[120px] relative z-10 w-full">
