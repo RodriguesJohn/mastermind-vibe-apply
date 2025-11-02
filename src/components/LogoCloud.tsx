@@ -18,21 +18,21 @@ export default function LogoCloud() {
   return (
     <section className="py-16 bg-black overflow-hidden">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-12 mb-12">
+        <div className="flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-12">
           <h2 className="text-lg font-medium text-white min-w-fit">Powering the best<br />teams</h2>
-          <div className="h-px w-px bg-white/20 hidden md:block" />
-        </div>
-        
-        <div className="relative">
-          <div className="flex gap-x-8 gap-y-4 animate-scroll-left hover:[animation-play-state:paused]">
-            {logos.concat(logos).map((logo, index) => (
-              <img 
-                key={index}
-                className={`${logo.className} dark:invert`}
-                src={logo.src}
-                alt={logo.alt}
-              />
-            ))}
+          <div className="h-px w-px bg-white/20 hidden md:block flex-shrink-0" />
+          
+          <div className="relative flex-1 overflow-hidden">
+            <div className="flex gap-x-8 gap-y-4 animate-scroll-left hover:[animation-play-state:paused]">
+              {logos.concat(logos).map((logo, index) => (
+                <img 
+                  key={index}
+                  className={`${logo.className} dark:invert flex-shrink-0`}
+                  src={logo.src}
+                  alt={logo.alt}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>
