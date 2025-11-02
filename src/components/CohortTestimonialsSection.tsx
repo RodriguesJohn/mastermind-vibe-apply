@@ -6,7 +6,6 @@ import SonaliImage from "@/assets/Sonali.jpeg";
 import KennyImage from "@/assets/Kenny.jpeg";
 import AviadImage from "@/assets/Avaid.jpeg";
 import IniImage from "@/assets/Indi.jpeg";
-import { BlurFade } from "@/components/BlurFade";
 
 const testimonials = [
   {
@@ -58,38 +57,35 @@ export const CohortTestimonialsSection = () => {
     <section className="py-24 md:py-32 bg-background">
       <div className="px-4 md:px-10 lg:px-[120px]">
         <div className="max-w-[1200px] mx-auto">
-          <BlurFade delay={0.2} duration={0.8} yOffset={20} blur="8px">
-            <h2 className="text-4xl md:text-5xl font-semibold text-center mb-16 tracking-tight">
-              Stories From Cohort Members
-            </h2>
-          </BlurFade>
+          <h2 className="text-4xl md:text-5xl font-semibold text-center mb-16 tracking-tight">
+            Stories From Cohort Members
+          </h2>
           
           <div className="grid md:grid-cols-2 gap-4 md:gap-6">
           {testimonials.map((testimonial, index) => (
-            <BlurFade key={index} delay={0.4 + (index * 0.1)} duration={0.8} yOffset={15} blur="6px">
-              <Card 
-                className="p-8 bg-card/50 border-border/40 hover:border-border transition-all duration-300"
-              >
-              <p className="text-white leading-relaxed mb-6">
-                {testimonial.content}
-              </p>
-              
-              <div className="flex items-center gap-4 pt-4 border-t border-border/40">
-                <Avatar className="w-16 h-16">
-                  {testimonial.image ? (
-                    <AvatarImage src={testimonial.image} alt={testimonial.name} />
-                  ) : null}
-                  <AvatarFallback className="bg-primary/10 text-primary font-semibold">
-                    {testimonial.initials}
-                  </AvatarFallback>
-                </Avatar>
-                <div>
-                  <p className="font-semibold text-foreground">{testimonial.name}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                </div>
-                </div>
-              </Card>
-            </BlurFade>
+            <Card 
+              key={index}
+              className="p-8 bg-card/50 border-border/40 hover:border-border transition-all duration-300"
+            >
+            <p className="text-white leading-relaxed mb-6">
+              {testimonial.content}
+            </p>
+            
+            <div className="flex items-center gap-4 pt-4 border-t border-border/40">
+              <Avatar className="w-16 h-16">
+                {testimonial.image ? (
+                  <AvatarImage src={testimonial.image} alt={testimonial.name} />
+                ) : null}
+                <AvatarFallback className="bg-primary/10 text-primary font-semibold">
+                  {testimonial.initials}
+                </AvatarFallback>
+              </Avatar>
+              <div>
+                <p className="font-semibold text-foreground">{testimonial.name}</p>
+                <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+              </div>
+              </div>
+            </Card>
             ))}
             </div>
         </div>

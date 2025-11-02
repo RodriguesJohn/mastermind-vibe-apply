@@ -1,4 +1,3 @@
-import { BlurFade } from "./BlurFade";
 import lovableLogo from "@/assets/logos/lovable.png";
 import cursorLogo from "@/assets/logos/cursor.png";
 

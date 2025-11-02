@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Check } from "lucide-react";
 import { Helmet } from "react-helmet";
-import { BlurFade } from "@/components/BlurFade";
 
 const Consulting = () => {
   const tiers = [
@@ -54,16 +53,12 @@ const Consulting = () => {
           {/* Hero Section */}
           <section className="py-24 md:py-32 px-4 md:px-10 lg:px-[120px]">
             <div className="max-w-[1200px] mx-auto text-center space-y-6">
-              <BlurFade delay={0.1}>
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold">
-                  AI Consulting & Coaching
-                </h1>
-              </BlurFade>
-              <BlurFade delay={0.2}>
-                <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
-                  Personalized guidance to accelerate your AI journey, from individual coaching to enterprise consulting
-                </p>
-              </BlurFade>
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold">
+                AI Consulting & Coaching
+              </h1>
+              <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
+                Personalized guidance to accelerate your AI journey, from individual coaching to enterprise consulting
+              </p>
             </div>
           </section>
 
@@ -72,101 +67,100 @@ const Consulting = () => {
             <div className="max-w-[1200px] mx-auto">
               <div className="grid md:grid-cols-2 gap-8">
                 {tiers.map((tier, index) => (
-                  <BlurFade key={tier.name} delay={0.1 * (index + 1)}>
-                    <Card 
-                      className={`p-8 h-full flex flex-col ${
-                        tier.highlighted 
-                          ? "border-primary shadow-lg scale-105" 
-                          : ""
-                      }`}
-                    >
-                      <div className="space-y-4 flex-grow">
-                        <h3 className="text-2xl font-bold">{tier.name}</h3>
-                        <p className="text-muted-foreground">{tier.description}</p>
-                        
-                        <div className="pt-4">
-                          <div className="text-4xl font-bold">{tier.price}</div>
-                          <div className="text-sm text-muted-foreground">{tier.priceSubtext}</div>
-                        </div>
-                        
-                        <ul className="space-y-3 pt-6">
-                          {tier.features.map((feature) => (
-                            <li key={feature} className="flex items-start gap-3">
-                              <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                              <span>{feature}</span>
-                            </li>
-                          ))}
-                        </ul>
+                  <Card 
+                    key={tier.name}
+                    className={`p-8 h-full flex flex-col ${
+                      tier.highlighted 
+                        ? "border-primary shadow-lg scale-105" 
+                        : ""
+                    }`}
+                  >
+                    <div className="space-y-4 flex-grow">
+                      <h3 className="text-2xl font-bold">{tier.name}</h3>
+                      <p className="text-muted-foreground">{tier.description}</p>
+                      
+                      <div className="pt-4">
+                        <div className="text-4xl font-bold">{tier.price}</div>
+                        <div className="text-sm text-muted-foreground">{tier.priceSubtext}</div>
                       </div>
+                      
+                      <ul className="space-y-3 pt-6">
+                        {tier.features.map((feature) => (
+                          <li key={feature} className="flex items-start gap-3">
+                            <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                            <span>{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
 
-                      <div className="mt-8 space-y-2">
-                        {tier.name === "Cohort Member Coaching" ? (
-                          <Button 
-                            variant={tier.highlighted ? "default" : "outline"}
-                            className="w-full bg-accent text-accent-foreground hover:bg-accent/90"
-                            size="lg"
-                            asChild
-                          >
-                            <a 
-                              href="https://cal.com/aidesignacademy/cohort-member-1-1-coaching?overlayCalendar=true"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              {tier.cta}
-                            </a>
-                          </Button>
-                        ) : tier.name === "Individual Coaching" ? (
-                          <Button 
-                            variant={tier.highlighted ? "default" : "outline"}
-                            className="w-full"
-                            size="lg"
-                            asChild
-                          >
-                            <a 
-                              href="https://cal.com/aidesignacademy/1-1-coaching-call?overlayCalendar=true"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              {tier.cta}
-                            </a>
-                          </Button>
-                        ) : tier.name === "AI Consulting" ? (
-                          <Button 
-                            variant={tier.highlighted ? "default" : "outline"}
-                            className="w-full"
-                            size="lg"
-                            asChild
-                          >
-                            <a 
-                              href="https://cal.com/aidesignacademy/business-consulting?overlayCalendar=true"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              {tier.cta}
-                            </a>
-                          </Button>
-                        ) : (
-                          <Button 
-                            variant={tier.highlighted ? "default" : "outline"}
-                            className="w-full"
-                            size="lg"
-                          >
-                            {tier.cta}
-                          </Button>
-                        )}
-                        {tier.ctaSubtext && (
+                    <div className="mt-8 space-y-2">
+                      {tier.name === "Cohort Member Coaching" ? (
+                        <Button 
+                          variant={tier.highlighted ? "default" : "outline"}
+                          className="w-full bg-accent text-accent-foreground hover:bg-accent/90"
+                          size="lg"
+                          asChild
+                        >
                           <a 
-                            href="https://cal.com/aidesignacademy/discovery-call?overlayCalendar=true"
+                            href="https://cal.com/aidesignacademy/cohort-member-1-1-coaching?overlayCalendar=true"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-sm text-muted-foreground text-center underline hover:text-primary transition-colors block"
                           >
-                            {tier.ctaSubtext}
+                            {tier.cta}
                           </a>
-                        )}
-                      </div>
-                    </Card>
-                  </BlurFade>
+                        </Button>
+                      ) : tier.name === "Individual Coaching" ? (
+                        <Button 
+                          variant={tier.highlighted ? "default" : "outline"}
+                          className="w-full"
+                          size="lg"
+                          asChild
+                        >
+                          <a 
+                            href="https://cal.com/aidesignacademy/1-1-coaching-call?overlayCalendar=true"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {tier.cta}
+                          </a>
+                        </Button>
+                      ) : tier.name === "AI Consulting" ? (
+                        <Button 
+                          variant={tier.highlighted ? "default" : "outline"}
+                          className="w-full"
+                          size="lg"
+                          asChild
+                        >
+                          <a 
+                            href="https://cal.com/aidesignacademy/business-consulting?overlayCalendar=true"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {tier.cta}
+                          </a>
+                        </Button>
+                      ) : (
+                        <Button 
+                          variant={tier.highlighted ? "default" : "outline"}
+                          className="w-full"
+                          size="lg"
+                        >
+                          {tier.cta}
+                        </Button>
+                      )}
+                      {tier.ctaSubtext && (
+                        <a 
+                          href="https://cal.com/aidesignacademy/discovery-call?overlayCalendar=true"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm text-muted-foreground text-center underline hover:text-primary transition-colors block"
+                        >
+                          {tier.ctaSubtext}
+                        </a>
+                      )}
+                    </div>
+                  </Card>
                 ))}
               </div>
             </div>
