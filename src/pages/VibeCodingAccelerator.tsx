@@ -32,7 +32,7 @@ const VibeCodingAccelerator = () => {
   const modules = [
     {
       number: "01",
-      title: "Understanding HTML, CSS, and JavaScript Basics",
+      title: "HTML, CSS, and JavaScript Foundation",
       description: "Learn the fundamentals of web development",
       week: "Week 1",
       colors: ["#FF6B6B", "#FFD93D", "#FF8E53", "#FF6B9D"],
