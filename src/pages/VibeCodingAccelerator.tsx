@@ -329,9 +329,9 @@ const VibeCodingAccelerator = () => {
                   </h1>
 
                   <p className="text-lg md:text-medium text-white/60 font-light mb-7 leading-relaxed max-w-3xl">
-                  Master HTML, CSS, JavaScript, React, Tailwind CSS, and Next.js from the ground up. 
+                  The future belongs to designers who can build.
                     <br />
-                    Build real projects and create your AI design engineering portfolio in 90 days.
+                    Master the foundations, learn to code, and start shipping with confidence.
                   </p>
 
                   <div className="flex flex-col sm:flex-row gap-4">
