@@ -428,9 +428,9 @@ const VibeCodingAccelerator = () => {
                 </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  <Card className="p-8 bg-white/5 border-white/10 hover:border-primary/50 transition-all">
+                  <Card className="p-8 bg-white/5 border-white/10 hover:border-primary/50 transition-all overflow-hidden">
                     <div className="mb-6">
-                      <div className="text-4xl md:text-5xl font-bold text-primary mb-2 leading-tight">
+                      <div className="text-3xl md:text-4xl font-bold text-primary mb-2 leading-tight break-words">
                         $200K-$400K
                       </div>
                       <p className="text-sm text-white/60 uppercase tracking-wide mb-4">Salary Range</p>
@@ -441,7 +441,7 @@ const VibeCodingAccelerator = () => {
                     </p>
                   </Card>
 
-                  <Card className="p-8 bg-white/5 border-white/10 hover:border-primary/50 transition-all">
+                  <Card className="p-8 bg-white/5 border-white/10 hover:border-primary/50 transition-all overflow-hidden">
                     <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mb-6">
                       <Briefcase className="w-8 h-8 text-primary" />
                     </div>
@@ -451,7 +451,7 @@ const VibeCodingAccelerator = () => {
                     </p>
                   </Card>
 
-                  <Card className="p-8 bg-white/5 border-white/10 hover:border-primary/50 transition-all">
+                  <Card className="p-8 bg-white/5 border-white/10 hover:border-primary/50 transition-all overflow-hidden">
                     <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mb-6">
                       <Rocket className="w-8 h-8 text-primary" />
                     </div>
