@@ -107,7 +107,7 @@ const VibeCodingAccelerator = () => {
     },
     {
       number: "06",
-      title: "Understand Design, UI Principles, and Visual Design Principles",
+      title: "Visual Design and UI Design Principles",
       description: "Master design fundamentals and visual principles",
       week: "Week 6",
       colors: ["#4F4F8C", "#5F7AAB", "#7FA8D5", "#87CEEB"],
