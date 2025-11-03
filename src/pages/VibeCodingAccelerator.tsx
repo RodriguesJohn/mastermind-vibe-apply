@@ -374,32 +374,6 @@ const VibeCodingAccelerator = () => {
             </div>
           </section>
 
-          {/* Key Outcomes Cards */}
-          <section className="py-24 md:py-32 bg-black text-white border-t border-white/10">
-            <div className="px-4 md:px-10 lg:px-[120px]">
-              <div className="max-w-[1200px] mx-auto">
-                <div className="text-center mb-16 space-y-4">
-                  <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
-                    In 90 Days, You'll Be Able To …
-                  </h2>
-                </div>
-                
-                <div className="grid md:grid-cols-2 gap-6">
-                  {outcomes.map((outcome, index) => (
-                    <div key={index} className="flex items-start gap-4 p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-primary/50 transition-colors">
-                      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center mt-0.5">
-                        <Check className="w-4 h-4 text-primary" />
-                      </div>
-                      <p className="text-lg leading-relaxed text-white/80">
-                        {outcome}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </section>
-
           {/* Benefits of Becoming a Design Engineer */}
           <section className="py-24 md:py-32 bg-black text-white border-t border-white/10">
             <div className="px-4 md:px-10 lg:px-[120px]">
