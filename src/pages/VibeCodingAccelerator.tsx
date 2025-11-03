@@ -350,6 +350,18 @@ const VibeCodingAccelerator = () => {
                         <ArrowRight className="group-hover:translate-x-1 transition-transform" />
                       </a>
                     </Button>
+                    <Button 
+                      variant="outline" 
+                      size="lg"
+                      className="border-white/20 text-white hover:bg-white/10"
+                      asChild
+                    >
+                      <a 
+                        href="#"
+                      >
+                        Log in
+                      </a>
+                    </Button>
                   </div>
                 </div>
               </div>
