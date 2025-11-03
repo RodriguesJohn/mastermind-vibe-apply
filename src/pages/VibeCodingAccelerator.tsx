@@ -346,22 +346,8 @@ const VibeCodingAccelerator = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        Apply Today
+                        Join the waitlist
                         <ArrowRight className="group-hover:translate-x-1 transition-transform" />
-                      </a>
-                    </Button>
-                    <Button 
-                      variant="outline" 
-                      size="lg"
-                      className="border-white/20 text-white hover:bg-white/10"
-                      asChild
-                    >
-                      <a 
-                        href="https://cal.com/aidesignacademy/15min?overlayCalendar=true"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Book a Call Today
                       </a>
                     </Button>
                   </div>
