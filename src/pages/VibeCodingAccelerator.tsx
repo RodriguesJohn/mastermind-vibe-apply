@@ -118,7 +118,7 @@ const VibeCodingAccelerator = () => {
         "Advanced TypeScript features and patterns",
         "Building type-safe applications"
       ],
-      project: "TypeScript App: Build a type-safe application using TypeScript with React and Next.js"
+      project: "Minimal Note-Taking App: Build a minimal note-taking application using TypeScript"
     },
     {
       number: "07",
