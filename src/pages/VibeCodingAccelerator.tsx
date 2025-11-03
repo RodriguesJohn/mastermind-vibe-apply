@@ -73,7 +73,7 @@ const VibeCodingAccelerator = () => {
         "Gesture-based interactions and drag controls",
         "Performance optimization for animations"
       ],
-      project: "Animated Interface: Build an interactive app with smooth animations using Framer Motion"
+      project: "Chat Interface Animations: Build UI animations for chat interfaces to communicate feedback and emotions using React Motion"
     },
     {
       number: "04",
