@@ -279,7 +279,7 @@ const VibeCodingAccelerator = () => {
                   </div>
 
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-normal mb-8 tracking-tight">
-                  Become a Design Engineer
+                  Become a Design Engineer in 90 Days
                     <span className="block text-primary mt-2">Master Technical Skills & Build Your Portfolio</span>
                   </h1>
 
