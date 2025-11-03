@@ -164,6 +164,21 @@ const VibeCodingAccelerator = () => {
         "Streamlining the design handoff process"
       ],
       project: "Shift UI Project: Convert Figma designs to production-ready React code using Shift UI"
+    },
+    {
+      number: "Final",
+      title: "Career Roadmap and Building Your Personal Brand",
+      description: "Plan your career path and establish your professional presence",
+      week: "Final",
+      colors: ["#2ECC71", "#58D68D", "#A9DFBF", "#E8F8F5"],
+      topics: [
+        "Design engineering career paths and opportunities",
+        "Building a strong personal brand and online presence",
+        "Networking strategies and community building",
+        "Portfolio optimization and showcasing your work",
+        "Landing your dream role or starting your own practice"
+      ],
+      project: "Career Plan: Develop your career roadmap and personal brand strategy"
     }
   ];
 
