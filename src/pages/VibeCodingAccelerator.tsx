@@ -88,7 +88,7 @@ const VibeCodingAccelerator = () => {
         "Dark mode and theming",
         "Building production-ready, polished designs"
       ],
-      project: "Advanced UI: Build a complex interface with animations and custom styling"
+      project: "Apple Website Recreation: Recreate the Apple website with Tailwind CSS"
     },
     {
       number: "05",
