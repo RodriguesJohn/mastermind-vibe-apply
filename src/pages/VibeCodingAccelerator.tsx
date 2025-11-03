@@ -167,18 +167,48 @@ const VibeCodingAccelerator = () => {
     },
     {
       number: "10",
-      title: "Career Roadmap and Building Your Personal Brand",
-      description: "Plan your career path and establish your professional presence",
+      title: "Career Roadmap",
+      description: "Plan your design engineering career path",
       week: "Week 10",
       colors: ["#2ECC71", "#58D68D", "#A9DFBF", "#E8F8F5"],
       topics: [
         "Design engineering career paths and opportunities",
+        "Identifying your career goals and direction",
+        "Understanding the design engineering job market",
+        "Skill development and career progression",
+        "Building a strategic career plan"
+      ],
+      project: "Career Plan: Develop your comprehensive career roadmap"
+    },
+    {
+      number: "11",
+      title: "Building Your Personal Brand",
+      description: "Establish your professional presence and online identity",
+      week: "Week 11",
+      colors: ["#F39C12", "#F7C869", "#FDE4B7", "#FEF9E7"],
+      topics: [
         "Building a strong personal brand and online presence",
         "Networking strategies and community building",
         "Portfolio optimization and showcasing your work",
+        "Content creation and thought leadership",
         "Landing your dream role or starting your own practice"
       ],
-      project: "Career Plan: Develop your career roadmap and personal brand strategy"
+      project: "Personal Brand Strategy: Create and execute your personal branding plan"
+    },
+    {
+      number: "12",
+      title: "To Be Announced",
+      description: "Additional content coming soon",
+      week: "Week 12",
+      colors: ["#9B59B6", "#BB9DCC", "#DCD2E3", "#F3EEF8"],
+      topics: [
+        "Content to be determined",
+        "Additional learning opportunities",
+        "Advanced topics and techniques",
+        "Specialized skills and knowledge",
+        "Continuing your design engineering journey"
+      ],
+      project: "Project details to be announced"
     }
   ];
 
@@ -375,7 +405,7 @@ const VibeCodingAccelerator = () => {
               <div className="max-w-[1200px] mx-auto">
                 <div className="text-center mb-4">
                   <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
-                    10-Week Design Engineering Curriculum
+                    12-Week Design Engineering Curriculum
                   </h2>
                   <p className="text-xl text-white/60 mt-4">Things You Will Learn</p>
                 </div>
