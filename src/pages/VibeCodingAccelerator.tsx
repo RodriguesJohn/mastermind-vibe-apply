@@ -62,7 +62,7 @@ const VibeCodingAccelerator = () => {
     },
     {
       number: "03",
-      title: "React Motion",
+      title: "UI Animation with React Motion",
       description: "Master animations and motion design in React",
       week: "Week 3",
       colors: ["#95E1D3", "#F38181", "#FCE38A", "#AAE3F0"],
