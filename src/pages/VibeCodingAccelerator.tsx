@@ -197,18 +197,18 @@ const VibeCodingAccelerator = () => {
     },
     {
       number: "12",
-      title: "To Be Announced",
-      description: "Additional content coming soon",
+      title: "Final Project Challenge",
+      description: "Build your final project and share it with the world",
       week: "Week 12",
       colors: ["#9B59B6", "#BB9DCC", "#DCD2E3", "#F3EEF8"],
       topics: [
-        "Content to be determined",
-        "Additional learning opportunities",
-        "Advanced topics and techniques",
-        "Specialized skills and knowledge",
-        "Continuing your design engineering journey"
+        "Reviewing project demos and gathering inspiration",
+        "Ideating and planning your final project",
+        "Building your project from concept to completion",
+        "Optimizing and polishing your work",
+        "Sharing your project on social media and building your presence"
       ],
-      project: "Project details to be announced"
+      project: "Final Project: Build, deploy, and share your showcase project on social media"
     }
   ];
 
