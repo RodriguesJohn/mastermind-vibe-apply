@@ -229,19 +229,19 @@ const VibeCodingAccelerator = () => {
 
   const careerBenefits = [
     {
-      icon: Briefcase,
-      title: "Freelancers",
-      description: "Deliver full $10K MVP projects"
+      icon: Sparkles,
+      title: "1️⃣ Creative Freedom",
+      description: "Turn your ideas into real products — fast. No more waiting on developers. No more static mockups. You'll learn to design, code, and ship your own apps — and finally build the ideas sitting in your Figma files."
     },
     {
       icon: TrendingUp,
-      title: "Designers",
-      description: "Move into high-value Design Engineer roles"
+      title: "2️⃣ Career Leverage",
+      description: "Design Engineers get paid more — and get noticed faster. You'll instantly stand out as someone who bridges design and engineering. Whether you want to land a dream job, freelance for top startups, or launch your own thing — this skillset puts you in the top 1%."
     },
     {
       icon: Rocket,
-      title: "Founders",
-      description: "Build prototypes 5× faster, raise sooner"
+      title: "3️⃣ Future-Proof Advantage",
+      description: "AI is changing everything — learn the skills that won't get replaced. You'll master the foundations that make new tools work for you, not against you. Design Engineers don't fear AI — they use it to ship faster and smarter."
     }
   ];
 
