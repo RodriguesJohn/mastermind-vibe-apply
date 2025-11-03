@@ -133,7 +133,7 @@ const VibeCodingAccelerator = () => {
         "Typography, color theory, and spacing",
         "Creating cohesive design systems"
       ],
-      project: "Design System: Create a comprehensive design system applying UI and visual design principles"
+      project: "UI Redesign Challenge: Identify and audit a bad design UI, then redesign the app based on best design principles"
     },
     {
       number: "08",
