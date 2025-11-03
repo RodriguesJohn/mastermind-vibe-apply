@@ -430,8 +430,8 @@ const VibeCodingAccelerator = () => {
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                   <Card className="p-8 bg-white/5 border-white/10 hover:border-primary/50 transition-all overflow-hidden">
                     <div className="mb-6">
-                      <div className="text-3xl md:text-4xl font-bold text-primary mb-2 leading-tight break-words">
-                        $200K-$400K
+                      <div className="text-3xl md:text-4xl font-bold text-primary mb-2 leading-tight whitespace-nowrap">
+                        $200K–$400K
                       </div>
                       <p className="text-sm text-white/60 uppercase tracking-wide mb-4">Salary Range</p>
                     </div>
