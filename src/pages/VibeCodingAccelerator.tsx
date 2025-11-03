@@ -43,7 +43,7 @@ const VibeCodingAccelerator = () => {
         "Building interactive web pages",
         "Understanding how the web works"
       ],
-      project: "Interactive Web Page: Build your first responsive webpage with HTML, CSS, and JavaScript"
+      project: "Weather App: Build a weather application using HTML, CSS, and JavaScript"
     },
     {
       number: "02",
