@@ -414,6 +414,57 @@ const VibeCodingAccelerator = () => {
             </div>
           </section>
 
+          {/* Benefits of Becoming a Design Engineer */}
+          <section className="py-24 md:py-32 bg-black text-white border-t border-white/10">
+            <div className="px-4 md:px-10 lg:px-[120px]">
+              <div className="max-w-[1200px] mx-auto">
+                <div className="text-center mb-16 space-y-4">
+                  <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
+                    Benefits of Becoming a Design Engineer
+                  </h2>
+                  <p className="text-xl text-white/60 max-w-2xl mx-auto">
+                    Unlock high earning potential and build the career you want
+                  </p>
+                </div>
+
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  <Card className="p-8 bg-white/5 border-white/10 hover:border-primary/50 transition-all">
+                    <div className="mb-6">
+                      <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
+                        $200K-$400K
+                      </div>
+                      <p className="text-sm text-white/60 uppercase tracking-wide">Salary Range</p>
+                    </div>
+                    <h3 className="text-xl font-semibold mb-3 text-white">High Earning Potential</h3>
+                    <p className="text-white/70 leading-relaxed">
+                      Design engineers command top salaries in the tech industry, with opportunities ranging from $200K to $400K+ depending on experience and location.
+                    </p>
+                  </Card>
+
+                  <Card className="p-8 bg-white/5 border-white/10 hover:border-primary/50 transition-all">
+                    <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mb-6">
+                      <Briefcase className="w-8 h-8 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-3 text-white">Freelance Opportunities</h3>
+                    <p className="text-white/70 leading-relaxed">
+                      Work on your own terms. Build a freelance business delivering $10K+ MVP projects for clients, set your own rates, and work from anywhere.
+                    </p>
+                  </Card>
+
+                  <Card className="p-8 bg-white/5 border-white/10 hover:border-primary/50 transition-all">
+                    <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mb-6">
+                      <Rocket className="w-8 h-8 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-3 text-white">Build Your Own AI Apps</h3>
+                    <p className="text-white/70 leading-relaxed">
+                      Turn your ideas into reality. Design, code, and launch your own AI-powered applications and products without waiting for a team.
+                    </p>
+                  </Card>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Curriculum Section */}
           <section className="relative py-24 md:py-32 bg-black text-white border-t border-white/10 overflow-hidden">
             <div className="px-4 md:px-10 lg:px-[120px] relative z-10">
