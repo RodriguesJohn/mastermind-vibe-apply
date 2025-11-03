@@ -429,13 +429,11 @@ const VibeCodingAccelerator = () => {
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                   <Card className="p-8 bg-white/5 border-white/10 hover:border-primary/50 transition-all overflow-hidden">
-                    <div className="mb-6">
-                      <div className="text-3xl md:text-4xl font-bold text-primary mb-2 leading-tight whitespace-nowrap">
-                        $200K–$400K
-                      </div>
-                      <p className="text-sm text-white/60 uppercase tracking-wide mb-4">Salary Range</p>
+                    <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mb-6">
+                      <DollarSign className="w-8 h-8 text-primary" />
                     </div>
                     <h3 className="text-xl font-semibold mb-3 text-white">High Earning Potential</h3>
+                    <p className="text-sm text-white/60 uppercase tracking-wide mb-4">$200K-$400K Salary Range</p>
                     <p className="text-white/70 leading-relaxed">
                       Design engineers command top salaries in the tech industry, with opportunities ranging from $200K to $400K+ depending on experience and location.
                     </p>
