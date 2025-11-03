@@ -103,7 +103,7 @@ const VibeCodingAccelerator = () => {
         "Image optimization and performance",
         "Deployment and production optimization"
       ],
-      project: "Next.js App: Build a full-stack application with server-side rendering"
+      project: "Image Generation App: Build an image generation app powered by OpenAI's API using Next.js"
     },
     {
       number: "06",
