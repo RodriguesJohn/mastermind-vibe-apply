@@ -286,7 +286,7 @@ const VibeCodingAccelerator = () => {
                   <p className="text-lg md:text-medium text-white/60 font-light mb-7 leading-relaxed max-w-3xl">
                   Master HTML, CSS, JavaScript, React, Tailwind CSS, and Next.js from the ground up. 
                     <br />
-                    Build real projects and create your AI design engineering portfolio in 7 weeks.
+                    Build real projects and create your AI design engineering portfolio in 90 days.
                   </p>
 
                   <div className="flex flex-col sm:flex-row gap-4">
@@ -349,7 +349,7 @@ const VibeCodingAccelerator = () => {
               <div className="max-w-[1200px] mx-auto">
                 <div className="text-center mb-16 space-y-4">
                   <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
-                    In 7 Weeks, You'll Be Able To …
+                    In 90 Days, You'll Be Able To …
                   </h2>
                 </div>
                 
@@ -375,7 +375,7 @@ const VibeCodingAccelerator = () => {
               <div className="max-w-[1200px] mx-auto">
                 <div className="text-center mb-4">
                   <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
-                    7-Week Design Engineering Curriculum
+                    10-Week Design Engineering Curriculum
                   </h2>
                   <p className="text-xl text-white/60 mt-4">Things You Will Learn</p>
                 </div>
