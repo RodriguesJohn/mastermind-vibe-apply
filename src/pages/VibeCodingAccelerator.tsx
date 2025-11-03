@@ -122,18 +122,18 @@ const VibeCodingAccelerator = () => {
     },
     {
       number: "07",
-      title: "Build Your Project & Create Your Portfolio",
-      description: "Apply everything you've learned to build your portfolio",
+      title: "Visual Design and UI Design Principles",
+      description: "Master design fundamentals and visual principles",
       week: "Week 7",
       colors: ["#E74C3C", "#EC9281", "#F5C5BA", "#FDF0ED"],
       topics: [
-        "Portfolio design and structure",
-        "Showcasing your projects effectively",
-        "Deployment to Vercel",
-        "Optimizing for performance and SEO",
-        "Presenting your work professionally"
+        "Design fundamentals and principles",
+        "UI/UX best practices and patterns",
+        "Visual hierarchy and composition",
+        "Typography, color theory, and spacing",
+        "Creating cohesive design systems"
       ],
-      project: "Design Engineering Portfolio: Create and deploy your professional portfolio showcasing all your work"
+      project: "Design System: Create a comprehensive design system applying UI and visual design principles"
     },
     {
       number: "08",
@@ -167,10 +167,25 @@ const VibeCodingAccelerator = () => {
     },
     {
       number: "10",
-      title: "Career Roadmap",
-      description: "Plan your design engineering career path",
+      title: "Build Your Project & Create Your Portfolio",
+      description: "Apply everything you've learned to build your portfolio",
       week: "Week 10",
       colors: ["#2ECC71", "#58D68D", "#A9DFBF", "#E8F8F5"],
+      topics: [
+        "Portfolio design and structure",
+        "Showcasing your projects effectively",
+        "Deployment to Vercel",
+        "Optimizing for performance and SEO",
+        "Presenting your work professionally"
+      ],
+      project: "Design Engineering Portfolio: Create and deploy your professional portfolio showcasing all your work"
+    },
+    {
+      number: "11",
+      title: "Career Roadmap",
+      description: "Plan your design engineering career path",
+      week: "Week 11",
+      colors: ["#F39C12", "#F7C869", "#FDE4B7", "#FEF9E7"],
       topics: [
         "Design engineering career paths and opportunities",
         "Identifying your career goals and direction",
@@ -181,10 +196,10 @@ const VibeCodingAccelerator = () => {
       project: "Career Plan: Develop your comprehensive career roadmap"
     },
     {
-      number: "11",
+      number: "12",
       title: "Building Your Personal Brand",
       description: "Establish your professional presence and online identity",
-      week: "Week 11",
+      week: "Week 12",
       colors: ["#F39C12", "#F7C869", "#FDE4B7", "#FEF9E7"],
       topics: [
         "Building a strong personal brand and online presence",
@@ -196,10 +211,10 @@ const VibeCodingAccelerator = () => {
       project: "Personal Brand Strategy: Create and execute your personal branding plan"
     },
     {
-      number: "12",
+      number: "13",
       title: "Final Project Challenge",
       description: "Build your final project and share it with the world",
-      week: "Week 12",
+      week: "Week 13",
       colors: ["#9B59B6", "#BB9DCC", "#DCD2E3", "#F3EEF8"],
       topics: [
         "Reviewing project demos and gathering inspiration",
@@ -405,7 +420,7 @@ const VibeCodingAccelerator = () => {
               <div className="max-w-[1200px] mx-auto">
                 <div className="text-center mb-4">
                   <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
-                    12-Week Design Engineering Curriculum
+                    90-Day Design Engineering Curriculum
                   </h2>
                   <p className="text-xl text-white/60 mt-4">Things You Will Learn</p>
                 </div>
