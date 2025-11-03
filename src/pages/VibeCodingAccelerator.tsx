@@ -62,18 +62,18 @@ const VibeCodingAccelerator = () => {
     },
     {
       number: "03",
-      title: "Learning Tailwind CSS",
-      description: "Master utility-first CSS for rapid UI development",
+      title: "React Motion",
+      description: "Master animations and motion design in React",
       week: "Week 3",
       colors: ["#95E1D3", "#F38181", "#FCE38A", "#AAE3F0"],
       topics: [
-        "Tailwind CSS utility classes and responsive design",
-        "Building layouts with Flexbox and Grid",
-        "Customizing colors, typography, and spacing",
-        "Creating beautiful interfaces without custom CSS",
-        "Best practices for utility-first development"
+        "Framer Motion fundamentals and animation principles",
+        "Creating smooth transitions and animations",
+        "Page transitions and layout animations",
+        "Gesture-based interactions and drag controls",
+        "Performance optimization for animations"
       ],
-      project: "Styled Interface: Create a polished UI using Tailwind CSS"
+      project: "Animated Interface: Build an interactive app with smooth animations using Framer Motion"
     },
     {
       number: "04",
