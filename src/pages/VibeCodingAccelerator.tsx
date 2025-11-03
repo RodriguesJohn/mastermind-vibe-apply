@@ -107,18 +107,18 @@ const VibeCodingAccelerator = () => {
     },
     {
       number: "06",
-      title: "Visual Design and UI Design Principles",
-      description: "Master design fundamentals and visual principles",
+      title: "TypeScript",
+      description: "Master TypeScript for type-safe development",
       week: "Week 6",
       colors: ["#4F4F8C", "#5F7AAB", "#7FA8D5", "#87CEEB"],
       topics: [
-        "Design fundamentals and principles",
-        "UI/UX best practices and patterns",
-        "Visual hierarchy and composition",
-        "Typography, color theory, and spacing",
-        "Creating cohesive design systems"
+        "TypeScript fundamentals and type system",
+        "Interfaces, types, and type annotations",
+        "Type safety with React and Next.js",
+        "Advanced TypeScript features and patterns",
+        "Building type-safe applications"
       ],
-      project: "Design System: Create a comprehensive design system applying UI and visual design principles"
+      project: "TypeScript App: Build a type-safe application using TypeScript with React and Next.js"
     },
     {
       number: "07",
