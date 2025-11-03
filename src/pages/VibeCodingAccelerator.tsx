@@ -440,7 +440,7 @@ const VibeCodingAccelerator = () => {
             <div className="px-4 md:px-10 lg:px-[120px] relative z-10">
               <div className="max-w-[1200px] mx-auto">
                 <div className="text-center mb-4">
-                  <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
+                  <h2 className="text-[56px] font-medium leading-[1.1] tracking-tight">
                     90-Day Design Engineering Curriculum
                   </h2>
                   <p className="text-xl text-white/60 mt-4">Things You Will Learn</p>
