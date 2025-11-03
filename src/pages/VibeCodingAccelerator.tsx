@@ -32,106 +32,93 @@ const VibeCodingAccelerator = () => {
   const modules = [
     {
       number: "01",
-      title: "Orientation + First Build",
-      description: "Build your first AI mini-app",
+      title: "Understanding HTML, CSS, and JavaScript Basics",
+      description: "Learn the fundamentals of web development",
       week: "Week 1",
-      colors: ["#72b9bb", "#b5d9d9", "#ffd1bd", "#ffebe0"],
+      colors: ["#FF6B6B", "#FFD93D", "#FF8E53", "#FF6B9D"],
       topics: [
-        "Program overview & AI tools landscape",
-        "Setting up your development environment",
-        "Build your first AI-powered mini-app",
-        "Introduction to Lovable & Cursor basics"
+        "HTML structure and semantic markup",
+        "CSS styling, layout, and responsive design",
+        "JavaScript fundamentals: variables, functions, and DOM manipulation",
+        "Building interactive web pages",
+        "Understanding how the web works"
       ],
-      project: "AI Mini-App: Build and deploy your first AI-powered application"
+      project: "Interactive Web Page: Build your first responsive webpage with HTML, CSS, and JavaScript"
     },
     {
       number: "02",
-      title: "Lovable Mastery",
-      description: "Visual AI builder, ship fast",
+      title: "Learn the Foundation of React",
+      description: "Master component-based development",
       week: "Week 2",
-      colors: ["#ff6b6b", "#ffa8a8", "#ffe0e0", "#fff5f5"],
+      colors: ["#4ECDC4", "#87CEEB", "#DA70D6", "#BA55D3"],
       topics: [
-        "Deep dive into Lovable's visual builder",
-        "Creating responsive UIs with AI assistance",
-        "Integrating components and layouts",
-        "Building your first complete web app"
+        "React fundamentals: components, props, and state",
+        "React hooks: useState, useEffect, and custom hooks",
+        "Building reusable UI components",
+        "Component architecture and composition",
+        "Handling user interactions and events"
       ],
-      project: "Web App: Create a polished, responsive web application"
+      project: "React App: Build a dynamic application using React components and hooks"
     },
     {
-      number: "03-04",
-      title: "Cursor Deep Dive",
-      description: "Code with AI, web + mobile builds",
-      week: "Weeks 3-4",
-      colors: ["#6bcf7f", "#a5e6b8", "#d4f5dc", "#f0fdf4"],
+      number: "03",
+      title: "Learning Tailwind CSS",
+      description: "Master utility-first CSS for rapid UI development",
+      week: "Week 3",
+      colors: ["#95E1D3", "#F38181", "#FCE38A", "#AAE3F0"],
       topics: [
-        "Cursor IDE fundamentals & AI prompting",
-        "Building custom components with React",
-        "Creating responsive, mobile-first designs",
-        "Working with APIs and third-party services",
-        "Advanced debugging and optimization"
+        "Tailwind CSS utility classes and responsive design",
+        "Building layouts with Flexbox and Grid",
+        "Customizing colors, typography, and spacing",
+        "Creating beautiful interfaces without custom CSS",
+        "Best practices for utility-first development"
       ],
-      project: "Full-Stack App: Build a feature-rich web and mobile application"
+      project: "Styled Interface: Create a polished UI using Tailwind CSS"
+    },
+    {
+      number: "04",
+      title: "Advanced Tailwind and Styling",
+      description: "Deepen your Tailwind skills with advanced patterns",
+      week: "Week 4",
+      colors: ["#FF6B6B", "#FF8E53", "#FFD93D", "#FFA07A"],
+      topics: [
+        "Advanced Tailwind patterns and techniques",
+        "Custom configurations and plugins",
+        "Animations and transitions",
+        "Dark mode and theming",
+        "Building production-ready, polished designs"
+      ],
+      project: "Advanced UI: Build a complex interface with animations and custom styling"
     },
     {
       number: "05",
-      title: "Design Engineering Foundations",
-      description: "React, Tailwind, Next.js foundations",
+      title: "Learning Next.js",
+      description: "Build full-stack applications with Next.js",
       week: "Week 5",
-      colors: ["#9b59b6", "#bb9dcc", "#dcd2e3", "#f3eef8"],
+      colors: ["#C44569", "#D68FD6", "#E3A0D3", "#FF8CC8"],
       topics: [
-        "React fundamentals & component architecture",
-        "Tailwind CSS for modern UI design",
-        "Next.js for production-ready apps",
-        "Component libraries & design systems",
-        "Performance optimization techniques"
+        "Next.js fundamentals: pages, routing, and layouts",
+        "Server-side rendering and static site generation",
+        "API routes and data fetching",
+        "Image optimization and performance",
+        "Deployment and production optimization"
       ],
-      project: "Component Library: Build a production-ready design system"
+      project: "Next.js App: Build a full-stack application with server-side rendering"
     },
     {
       number: "06",
-      title: "Backend & Data",
-      description: "Supabase, APIs, data",
+      title: "Build Your Project & Create Your Portfolio",
+      description: "Apply everything you've learned to build your portfolio",
       week: "Week 6",
-      colors: ["#3498db", "#85c1e9", "#cfe8f4", "#ebf5fb"],
+      colors: ["#4F4F8C", "#5F7AAB", "#7FA8D5", "#87CEEB"],
       topics: [
-        "Supabase setup & database design",
-        "Authentication and user management",
-        "Building RESTful APIs",
-        "Real-time data with subscriptions",
-        "Data security and best practices"
+        "Portfolio design and structure",
+        "Showcasing your projects effectively",
+        "Deployment to Vercel",
+        "Optimizing for performance and SEO",
+        "Presenting your work professionally"
       ],
-      project: "Database Application: Create an app with real-time data sync"
-    },
-    {
-      number: "07",
-      title: "Launch & Deploy",
-      description: "Deploy to Vercel, share live",
-      week: "Week 7",
-      colors: ["#f39c12", "#f7c869", "#fde4b7", "#fef9e7"],
-      topics: [
-        "Vercel deployment best practices",
-        "Domain setup & SSL configuration",
-        "Environment variables & secrets",
-        "Performance monitoring & analytics",
-        "Post-launch optimization"
-      ],
-      project: "Live Production App: Deploy and optimize a live application"
-    },
-    {
-      number: "08",
-      title: "Capstone Project",
-      description: "Create and launch your own product",
-      week: "Week 8",
-      colors: ["#e74c3c", "#ec9281", "#f5c5ba", "#fdf0ed"],
-      topics: [
-        "Ideation & project planning",
-        "Building your unique product",
-        "Testing & refinement",
-        "Final deployment & launch",
-        "Portfolio presentation prep"
-      ],
-      project: "Your Unique Product: Launch your own idea and build your portfolio"
+      project: "Design Engineering Portfolio: Create and deploy your professional portfolio showcasing all your work"
     }
   ];
 
@@ -154,12 +141,12 @@ const VibeCodingAccelerator = () => {
   ];
 
   const outcomes = [
-    "Build and deploy 2 real apps (guided + capstone)",
-    "Master AI tools (Lovable, Cursor, Windsurf)",
-    "Understand React, Tailwind, Next.js, Supabase",
-    "Integrate APIs and databases",
-    "Launch publicly with Vercel",
-    "Present portfolio work that gets jobs and clients"
+    "Master HTML, CSS, and JavaScript fundamentals",
+    "Build dynamic applications with React",
+    "Create beautiful UIs with Tailwind CSS",
+    "Develop full-stack apps with Next.js",
+    "Deploy your projects to production",
+    "Create a professional design engineering portfolio"
   ];
 
   const faqs = [
@@ -212,8 +199,8 @@ const VibeCodingAccelerator = () => {
   return (
     <>
       <Helmet>
-        <title>Vibe Coding - 60-Day Design Engineering Accelerator</title>
-        <meta name="description" content="A 60-day self-paced accelerator that turns designers into builders who launch real apps using AI tools like Lovable, Cursor, React, and Supabase." />
+        <title>Become a Design Engineer - Design Engineering Course</title>
+        <meta name="description" content="Master HTML, CSS, JavaScript, React, Tailwind, and Next.js to become a design engineer. Build your portfolio and accelerate your career." />
       </Helmet>
 
       <div className="min-h-screen bg-black">
@@ -232,14 +219,14 @@ const VibeCodingAccelerator = () => {
                   </div>
 
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-normal mb-8 tracking-tight">
-                  Master Vibe Coding in 60 Days 
-                    <span className="block text-primary mt-2">Design, Code and Ship AI Apps </span>
+                  Become a Design Engineer
+                    <span className="block text-primary mt-2">Master Technical Skills & Build Your Portfolio</span>
                   </h1>
 
                   <p className="text-lg md:text-medium text-white/60 font-light mb-7 leading-relaxed max-w-3xl">
-                  Join the 60-day Vibe Coding Accelerator for business owners, designers, and product managers 
+                  Master HTML, CSS, JavaScript, React, Tailwind CSS, and Next.js from the ground up. 
                     <br />
-                    who want to master how to design, code, and ship with AI.
+                    Build real projects and create your AI design engineering portfolio in 6 weeks.
                   </p>
 
                   <div className="flex flex-col sm:flex-row gap-4">
@@ -302,7 +289,7 @@ const VibeCodingAccelerator = () => {
               <div className="max-w-[1200px] mx-auto">
                 <div className="text-center mb-16 space-y-4">
                   <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
-                    In 60 Days, You'll Be Able To …
+                    In 6 Weeks, You'll Be Able To …
                   </h2>
                 </div>
                 
@@ -328,7 +315,7 @@ const VibeCodingAccelerator = () => {
               <div className="max-w-[1200px] mx-auto">
                 <div className="text-center mb-4">
                   <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
-                    60-Day Accelerator Curriculum
+                    6-Week Design Engineering Curriculum
                   </h2>
                   <p className="text-xl text-white/60 mt-4">Things You Will Learn</p>
                 </div>
