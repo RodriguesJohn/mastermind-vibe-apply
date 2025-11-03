@@ -58,7 +58,7 @@ const VibeCodingAccelerator = () => {
         "Component architecture and composition",
         "Handling user interactions and events"
       ],
-      project: "React App: Build a dynamic application using React components and hooks"
+      project: "AI Recipe Generator: Build an AI-powered recipe generator using React"
     },
     {
       number: "03",
