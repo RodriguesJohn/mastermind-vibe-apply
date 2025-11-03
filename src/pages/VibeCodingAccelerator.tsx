@@ -136,10 +136,10 @@ const VibeCodingAccelerator = () => {
       project: "Design Engineering Portfolio: Create and deploy your professional portfolio showcasing all your work"
     },
     {
-      number: "Bonus 1",
+      number: "08",
       title: "Figma Course",
       description: "Master design tools and prototyping",
-      week: "Bonus",
+      week: "Week 8",
       colors: ["#FF6B6B", "#FFD93D", "#FF8E53", "#FF6B9D"],
       topics: [
         "Figma interface and tools",
@@ -151,10 +151,10 @@ const VibeCodingAccelerator = () => {
       project: "Figma Project: Design and prototype a complete interface using Figma"
     },
     {
-      number: "Bonus 2",
+      number: "09",
       title: "Shift UI Course",
       description: "Convert designs to code efficiently",
-      week: "Bonus",
+      week: "Week 9",
       colors: ["#4ECDC4", "#87CEEB", "#DA70D6", "#BA55D3"],
       topics: [
         "Shift UI fundamentals",
@@ -166,10 +166,10 @@ const VibeCodingAccelerator = () => {
       project: "Shift UI Project: Convert Figma designs to production-ready React code using Shift UI"
     },
     {
-      number: "Final",
+      number: "10",
       title: "Career Roadmap and Building Your Personal Brand",
       description: "Plan your career path and establish your professional presence",
-      week: "Final",
+      week: "Week 10",
       colors: ["#2ECC71", "#58D68D", "#A9DFBF", "#E8F8F5"],
       topics: [
         "Design engineering career paths and opportunities",
