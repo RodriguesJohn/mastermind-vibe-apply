@@ -107,10 +107,25 @@ const VibeCodingAccelerator = () => {
     },
     {
       number: "06",
-      title: "Build Your Project & Create Your Portfolio",
-      description: "Apply everything you've learned to build your portfolio",
+      title: "Understand Design, UI Principles, and Visual Design Principles",
+      description: "Master design fundamentals and visual principles",
       week: "Week 6",
       colors: ["#4F4F8C", "#5F7AAB", "#7FA8D5", "#87CEEB"],
+      topics: [
+        "Design fundamentals and principles",
+        "UI/UX best practices and patterns",
+        "Visual hierarchy and composition",
+        "Typography, color theory, and spacing",
+        "Creating cohesive design systems"
+      ],
+      project: "Design System: Create a comprehensive design system applying UI and visual design principles"
+    },
+    {
+      number: "07",
+      title: "Build Your Project & Create Your Portfolio",
+      description: "Apply everything you've learned to build your portfolio",
+      week: "Week 7",
+      colors: ["#E74C3C", "#EC9281", "#F5C5BA", "#FDF0ED"],
       topics: [
         "Portfolio design and structure",
         "Showcasing your projects effectively",
@@ -119,6 +134,36 @@ const VibeCodingAccelerator = () => {
         "Presenting your work professionally"
       ],
       project: "Design Engineering Portfolio: Create and deploy your professional portfolio showcasing all your work"
+    },
+    {
+      number: "Bonus 1",
+      title: "Figma Course",
+      description: "Master design tools and prototyping",
+      week: "Bonus",
+      colors: ["#FF6B6B", "#FFD93D", "#FF8E53", "#FF6B9D"],
+      topics: [
+        "Figma interface and tools",
+        "Creating designs and components",
+        "Prototyping and interactions",
+        "Design handoff and collaboration",
+        "Advanced Figma techniques"
+      ],
+      project: "Figma Project: Design and prototype a complete interface using Figma"
+    },
+    {
+      number: "Bonus 2",
+      title: "Shift UI Course",
+      description: "Convert designs to code efficiently",
+      week: "Bonus",
+      colors: ["#4ECDC4", "#87CEEB", "#DA70D6", "#BA55D3"],
+      topics: [
+        "Shift UI fundamentals",
+        "Converting Figma designs to code",
+        "Design-to-code workflows",
+        "Component generation and optimization",
+        "Streamlining the design handoff process"
+      ],
+      project: "Shift UI Project: Convert Figma designs to production-ready React code using Shift UI"
     }
   ];
 
@@ -226,7 +271,7 @@ const VibeCodingAccelerator = () => {
                   <p className="text-lg md:text-medium text-white/60 font-light mb-7 leading-relaxed max-w-3xl">
                   Master HTML, CSS, JavaScript, React, Tailwind CSS, and Next.js from the ground up. 
                     <br />
-                    Build real projects and create your AI design engineering portfolio in 6 weeks.
+                    Build real projects and create your AI design engineering portfolio in 7 weeks.
                   </p>
 
                   <div className="flex flex-col sm:flex-row gap-4">
@@ -289,7 +334,7 @@ const VibeCodingAccelerator = () => {
               <div className="max-w-[1200px] mx-auto">
                 <div className="text-center mb-16 space-y-4">
                   <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
-                    In 6 Weeks, You'll Be Able To …
+                    In 7 Weeks, You'll Be Able To …
                   </h2>
                 </div>
                 
@@ -315,7 +360,7 @@ const VibeCodingAccelerator = () => {
               <div className="max-w-[1200px] mx-auto">
                 <div className="text-center mb-4">
                   <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
-                    6-Week Design Engineering Curriculum
+                    7-Week Design Engineering Curriculum
                   </h2>
                   <p className="text-xl text-white/60 mt-4">Things You Will Learn</p>
                 </div>
