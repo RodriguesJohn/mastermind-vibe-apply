@@ -120,7 +120,7 @@ const Consulting = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Schedule a call
+                      Schedule a Call
                     </a>
                   </Button>
                 </Card>
