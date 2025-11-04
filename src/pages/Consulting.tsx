@@ -116,11 +116,11 @@ const Consulting = () => {
                     asChild
                   >
                     <a 
-                      href="https://cal.com/aidesignacademy/cohort-member-coaching"
+                      href="https://cal.com/aidesignacademy/cohort-member-1-1-coaching"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Get in touch
+                      Schedule a call
                     </a>
                   </Button>
                 </Card>
