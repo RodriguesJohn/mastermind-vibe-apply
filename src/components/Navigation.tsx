@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Menu, ChevronDown } from "lucide-react";
+import { Menu, ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import {
   DropdownMenu,
@@ -8,12 +8,21 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
   const isMasterclassPage = location.pathname === "/ai-design-masterclass";
+  
+  const handleBack = () => {
+    navigate(-1);
+  };
+  
+  const handleForward = () => {
+    navigate(1);
+  };
   
   return (
     <nav className="sticky top-0 left-0 right-0 z-50 border-b border-border/40 bg-background/98 backdrop-blur-xl">
@@ -70,13 +79,30 @@ export const Navigation = () => {
           
           {/* Header CTA removed per request */}
 
-          {/* Mobile Menu */}
-          <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
-            <SheetTrigger asChild className="md:hidden">
-              <Button variant="ghost" size="sm">
-                <Menu className="w-5 h-5" />
-              </Button>
-            </SheetTrigger>
+          {/* Mobile Menu with Navigation Arrows */}
+          <div className="md:hidden flex items-center gap-2">
+            <Button 
+              variant="ghost" 
+              size="sm" 
+              onClick={handleBack}
+              className="h-9 w-9 p-0"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </Button>
+            <Button 
+              variant="ghost" 
+              size="sm" 
+              onClick={handleForward}
+              className="h-9 w-9 p-0"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </Button>
+            <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="sm">
+                  <Menu className="w-5 h-5" />
+                </Button>
+              </SheetTrigger>
             <SheetContent side="right" className="w-[300px]">
               <SheetHeader>
                 <SheetTitle className="flex items-center gap-2">
@@ -114,6 +140,7 @@ export const Navigation = () => {
               </nav>
             </SheetContent>
           </Sheet>
+          </div>
         </div>
       </div>
     </nav>
