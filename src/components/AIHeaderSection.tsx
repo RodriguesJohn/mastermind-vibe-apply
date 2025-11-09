@@ -84,10 +84,7 @@ export const AIHeaderSection = () => {
               </span>
             </div>
 
-            <h1 
-              className="font-medium mb-4 tracking-tight"
-              style={{ fontSize: '40px', lineHeight: '1.2' }}
-            >
+            <h1 className="text-3xl sm:text-4xl md:text-[40px] font-medium mb-4 tracking-tight leading-tight">
               AI Mastery For Designers
               <span className="block">and Product Leaders Cohort</span>
             </h1>

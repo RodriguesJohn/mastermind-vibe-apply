@@ -1199,7 +1199,7 @@ const KnowledgeHub = () => {
                                 <div className="flex items-start justify-between mb-3">
                                   <h3 className="text-xl font-semibold text-white group-hover:text-white/90 transition-colors pr-2">{item.title}</h3>
                                   {item.type === "research" && <FileText className="w-5 h-5 text-white/60 flex-shrink-0 ml-2" />}
-                                  {item.type === "article" && <BookOpen className="w-5 h-5 text-white/60 flex-shrink-0 ml-2" />}
+                                  {item.type === "tool" && <Wrench className="w-5 h-5 text-white/60 flex-shrink-0 ml-2" />}
                                 </div>
                                 <p className="text-white/70 leading-relaxed mb-4 text-sm">{item.description}</p>
                                 {item.date && (
