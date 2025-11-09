@@ -1,11 +1,12 @@
 import { Helmet } from "react-helmet";
-import { Play, ChevronRight, Menu, ArrowRight } from "lucide-react";
+import { Play, ChevronRight, ChevronLeft, Menu, ArrowRight } from "lucide-react";
 import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Navigation } from "@/components/Navigation";
+import { useNavigate } from "react-router-dom";
 
 interface Lesson {
   id: number;
@@ -88,6 +89,15 @@ const AIDesignMasterclass = () => {
     courseSections[0]?.lessons[0]?.id ?? null
   );
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  
+  const handleBack = () => {
+    navigate(-1);
+  };
+  
+  const handleForward = () => {
+    navigate(1);
+  };
   
   const allLessons = useMemo(() => courseSections.flatMap(section => section.lessons), [courseSections]);
 
@@ -576,13 +586,22 @@ const AIDesignMasterclass = () => {
           
           {/* Mobile Menu Button - Bottom Footer Style */}
           <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 border-t border-white/10">
-            <div className="bg-black/80 backdrop-blur-xl">
+            <div className="bg-black/80 backdrop-blur-xl flex items-center">
+              <Button 
+                variant="ghost" 
+                size="lg"
+                onClick={handleBack}
+                className="h-16 w-16 bg-transparent hover:bg-white/5 text-white rounded-none flex-shrink-0"
+                aria-label="Go back"
+              >
+                <ChevronLeft className="h-5 w-5" />
+              </Button>
               <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
                 <SheetTrigger asChild>
                   <Button 
                     variant="ghost" 
                     size="lg"
-                    className="w-full h-16 bg-transparent hover:bg-white/5 text-white font-medium text-base rounded-none"
+                    className="flex-1 h-16 bg-transparent hover:bg-white/5 text-white font-medium text-base rounded-none"
                   >
                     <Menu className="h-5 w-5 mr-2" />
                     Menu
@@ -642,6 +661,15 @@ const AIDesignMasterclass = () => {
                   </nav>
                 </SheetContent>
               </Sheet>
+              <Button 
+                variant="ghost" 
+                size="lg"
+                onClick={handleForward}
+                className="h-16 w-16 bg-transparent hover:bg-white/5 text-white rounded-none flex-shrink-0"
+                aria-label="Go forward"
+              >
+                <ChevronRight className="h-5 w-5" />
+              </Button>
             </div>
           </div>
           
