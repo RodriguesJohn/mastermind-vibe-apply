@@ -1,10 +1,9 @@
 import { Helmet } from "react-helmet";
-import { Play, ChevronRight, Menu, ArrowRight } from "lucide-react";
+import { Play, ChevronRight, ChevronLeft, ArrowRight } from "lucide-react";
 import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Navigation } from "@/components/Navigation";
 
 interface Lesson {
@@ -87,7 +86,6 @@ const AIDesignMasterclass = () => {
   const [selectedLessonId, setSelectedLessonId] = useState<number | null>(
     courseSections[0]?.lessons[0]?.id ?? null
   );
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   
   const allLessons = useMemo(() => courseSections.flatMap(section => section.lessons), [courseSections]);
 
@@ -110,8 +108,27 @@ const AIDesignMasterclass = () => {
     }
   };
 
+  const handleNext = () => {
+    const currentIndex = courseSections.findIndex(s => s.id === activeSectionId);
+    if (currentIndex < courseSections.length - 1) {
+      const nextSection = courseSections[currentIndex + 1];
+      handleSectionClick(nextSection.id);
+    }
+  };
+
+  const handlePrevious = () => {
+    const currentIndex = courseSections.findIndex(s => s.id === activeSectionId);
+    if (currentIndex > 0) {
+      const prevSection = courseSections[currentIndex - 1];
+      handleSectionClick(prevSection.id);
+    }
+  };
+
   const selectedVideo = allLessons.find(lesson => lesson.id === selectedLessonId);
   const activeSection = courseSections.find(section => section.id === activeSectionId);
+  const currentIndex = courseSections.findIndex(s => s.id === activeSectionId);
+  const hasNext = currentIndex < courseSections.length - 1;
+  const hasPrevious = currentIndex > 0;
 
   return (
     <>
@@ -133,43 +150,38 @@ const AIDesignMasterclass = () => {
             <section className="py-8">
               <div className="px-5 sm:px-8 md:px-12 lg:px-20 max-w-[1800px] mx-auto">
                 <div className="grid lg:grid-cols-[350px_1fr] gap-8">
-                {/* Course Content List - Left Sidebar */}
-                <aside className="w-full hidden lg:block sticky top-20 h-[calc(100vh-5rem)] overflow-y-auto border-r border-border/40 pr-6 py-6 bg-card/30 backdrop-blur-sm">
-                  <h2 className="text-lg font-semibold px-2 mb-6">Course content</h2>
-                  <div className="space-y-5">
-                    <div>
-                      <p className="uppercase text-[11px] tracking-[0.18em] text-white/40 px-2 mb-3">Lessons</p>
-                      <div className="space-y-2">
-                        {courseSections.map((section, index) => {
-                          const isActive = section.id === activeSectionId;
-                          const partLabel = index === 0 ? "Welcome" : `Part ${index}`;
-                          return (
-                            <button
-                              key={section.id}
-                              onClick={() => handleSectionClick(section.id)}
-                              className={`w-full flex items-center justify-between px-4 py-3 rounded-xl transition-all border text-left ${
-                                isActive
-                                  ? "border-white/40 bg-white/10 shadow-[0_0_0_1px_rgba(255,255,255,0.08)]"
-                                  : "border-white/10 bg-white/5 hover:bg-white/10"
-                              }`}
-                            >
-                              <div className="flex items-center gap-3 text-left">
-                                <div className={`w-9 h-9 rounded-md flex items-center justify-center text-xs font-semibold ${
-                                  isActive ? "bg-white text-black" : "bg-white/5 text-white/60"
-                                }`}>
-                                  {index === 0 ? "W" : `${index}`}
-                                </div>
-                                <div className="flex flex-col items-start">
-                                  <span className={`text-xs uppercase tracking-[0.18em] ${isActive ? "text-white/70" : "text-white/40"}`}>{partLabel}</span>
-                                  <span className={`text-sm font-medium ${isActive ? "text-white" : "text-white/70"}`}>{section.title}</span>
-                                </div>
-                              </div>
-                              <ChevronRight className={`w-4 h-4 ${isActive ? "text-white" : "text-white/30"}`} />
-                            </button>
-                          );
-                        })}
+                {/* Navigation - Left Sidebar */}
+                <aside className="w-full hidden lg:block sticky top-20 h-[calc(100vh-5rem)] border-r border-border/40 pr-6 py-6 bg-card/30 backdrop-blur-sm">
+                  <div className="flex flex-col gap-4">
+                    <button
+                      onClick={handlePrevious}
+                      disabled={!hasPrevious}
+                      className={`w-full flex items-center justify-between px-4 py-3 rounded-xl transition-all border text-left ${
+                        hasPrevious
+                          ? "border-white/40 bg-white/10 hover:bg-white/20 cursor-pointer"
+                          : "border-white/10 bg-white/5 opacity-50 cursor-not-allowed"
+                      }`}
+                    >
+                      <div className="flex items-center gap-3">
+                        <ChevronLeft className="w-4 h-4 text-white" />
+                        <span className="text-sm font-medium text-white">Previous</span>
                       </div>
-                    </div>
+                    </button>
+                    
+                    <button
+                      onClick={handleNext}
+                      disabled={!hasNext}
+                      className={`w-full flex items-center justify-between px-4 py-3 rounded-xl transition-all border text-left ${
+                        hasNext
+                          ? "border-white/40 bg-white/10 hover:bg-white/20 cursor-pointer"
+                          : "border-white/10 bg-white/5 opacity-50 cursor-not-allowed"
+                      }`}
+                    >
+                      <div className="flex items-center gap-3">
+                        <span className="text-sm font-medium text-white">Next</span>
+                        <ChevronRight className="w-4 h-4 text-white" />
+                      </div>
+                    </button>
                   </div>
                 </aside>
 
@@ -574,74 +586,36 @@ const AIDesignMasterclass = () => {
           </section>
           </main>
           
-          {/* Mobile Menu Button - Bottom Footer Style */}
+          {/* Mobile Navigation - Bottom Footer Style */}
           <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 border-t border-white/10">
             <div className="bg-black/80 backdrop-blur-xl">
-              <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
-                <SheetTrigger asChild>
-                  <Button 
-                    variant="ghost" 
-                    size="lg"
-                    className="w-full h-16 bg-transparent hover:bg-white/5 text-white font-medium text-base rounded-none"
-                  >
-                    <Menu className="h-5 w-5 mr-2" />
-                    Menu
-                  </Button>
-                </SheetTrigger>
-                <SheetContent side="bottom" className="w-full h-[80vh] p-0 bg-black/95 backdrop-blur-xl border-t border-white/10 rounded-t-3xl">
-                  <div className="p-6 border-b border-white/10">
-                    <div className="flex items-center justify-between mb-6">
-                      <h2 className="text-lg font-semibold text-white">Course content</h2>
-                    </div>
-                  </div>
-                  
-                  <nav className="p-4 space-y-1 overflow-y-auto h-full pb-20">
-                    {courseSections.map((section) => (
-                      <div key={section.id} className="mb-2">
-                        <button
-                          onClick={() => {
-                            // This function is no longer needed as expanded state is removed
-                            // setCourseSections(sections =>
-                            //   sections.map(s => s.id === section.id ? { ...s, expanded: !s.expanded } : { ...s, expanded: false })
-                            // );
-                          }}
-                          className="w-full p-4 flex items-center justify-between bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition-colors"
-                        >
-                          <span className="text-sm font-medium text-white">{section.title}</span>
-                          {/* ChevronUp/Down icons are no longer needed */}
-                          {/* {section.expanded ? (
-                            <ChevronUp className="w-4 h-4 text-white/60" />
-                          ) : (
-                            <ChevronDown className="w-4 h-4 text-white/60" />
-                          )} */}
-                        </button>
-                        
-                        {/* {section.expanded && ( */}
-                          <div className="mt-2 ml-4 space-y-1">
-                            {section.lessons.map((lesson) => (
-                              <button
-                                key={lesson.id}
-                                onClick={() => {
-                                  handleLessonClick(lesson);
-                                  setMobileMenuOpen(false);
-                                }}
-                                className={`w-full p-3 flex items-center gap-3 text-left rounded-lg transition-colors ${
-                                  selectedLessonId === lesson.id 
-                                    ? "bg-primary/20 text-primary" 
-                                    : "text-white/60 hover:bg-white/5 hover:text-white"
-                                }`}
-                              >
-                                <Play className="w-4 h-4" />
-                                <span className="text-sm">{lesson.title}</span>
-                              </button>
-                            ))}
-                          </div>
-                        {/* )} */}
-                      </div>
-                    ))}
-                  </nav>
-                </SheetContent>
-              </Sheet>
+              <div className="flex gap-2 p-4">
+                <button
+                  onClick={handlePrevious}
+                  disabled={!hasPrevious}
+                  className={`flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-lg transition-all border ${
+                    hasPrevious
+                      ? "border-white/40 bg-white/10 hover:bg-white/20 text-white"
+                      : "border-white/10 bg-white/5 opacity-50 cursor-not-allowed text-white/50"
+                  }`}
+                >
+                  <ChevronLeft className="w-5 h-5" />
+                  <span className="font-medium">Previous</span>
+                </button>
+                
+                <button
+                  onClick={handleNext}
+                  disabled={!hasNext}
+                  className={`flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-lg transition-all border ${
+                    hasNext
+                      ? "border-white/40 bg-white/10 hover:bg-white/20 text-white"
+                      : "border-white/10 bg-white/5 opacity-50 cursor-not-allowed text-white/50"
+                  }`}
+                >
+                  <span className="font-medium">Next</span>
+                  <ChevronRight className="w-5 h-5" />
+                </button>
+              </div>
             </div>
           </div>
           
