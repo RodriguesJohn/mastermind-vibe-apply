@@ -1,10 +1,20 @@
 import { Helmet } from "react-helmet";
-import { Play, ChevronRight, ChevronLeft, ArrowRight } from "lucide-react";
+import { Play, ChevronRight, ChevronLeft, ArrowRight, Lock } from "lucide-react";
 import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Navigation } from "@/components/Navigation";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 interface Lesson {
   id: number;
@@ -68,7 +78,7 @@ const AIDesignMasterclass = () => {
         id: 6,
         title: "Masterclass",
         lessons: [
-          { id: 601, title: "Masterclass", videoId: "7CiJGrQR0KE", duration: "", unlocked: true },
+          { id: 601, title: "Masterclass", videoId: "7CiJGrQR0KE", duration: "", unlocked: false },
         ],
       },
       {
@@ -86,6 +96,10 @@ const AIDesignMasterclass = () => {
   const [selectedLessonId, setSelectedLessonId] = useState<number | null>(
     courseSections[0]?.lessons[0]?.id ?? null
   );
+  const [masterclassUnlocked, setMasterclassUnlocked] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
   
   const allLessons = useMemo(() => courseSections.flatMap(section => section.lessons), [courseSections]);
 
@@ -96,9 +110,26 @@ const AIDesignMasterclass = () => {
     setSelectedLessonId(lesson.id);
   };
 
+  const handleFormSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (name.trim() && email.trim()) {
+      // Here you could send the data to your backend/API
+      // For now, we'll just unlock the masterclass
+      setMasterclassUnlocked(true);
+      setModalOpen(false);
+      // Automatically navigate to the masterclass
+      setActiveSectionId(6);
+      setSelectedLessonId(601);
+      // Reset form
+      setName("");
+      setEmail("");
+    }
+  };
+
   const handleSectionClick = (sectionId: number) => {
     const section = courseSections.find((s) => s.id === sectionId);
     if (!section) return;
+    
     setActiveSectionId(sectionId);
     const firstLesson = section.lessons[0];
     if (firstLesson) {
@@ -151,37 +182,32 @@ const AIDesignMasterclass = () => {
               <div className="px-5 sm:px-8 md:px-12 lg:px-20 max-w-[1800px] mx-auto">
                 <div className="grid lg:grid-cols-[350px_1fr] gap-8">
                 {/* Navigation - Left Sidebar */}
-                <aside className="w-full hidden lg:block sticky top-20 h-[calc(100vh-5rem)] border-r border-border/40 pr-6 py-6 bg-card/30 backdrop-blur-sm">
-                  <div className="flex flex-col gap-4">
-                    <button
-                      onClick={handlePrevious}
-                      disabled={!hasPrevious}
-                      className={`w-full flex items-center justify-between px-4 py-3 rounded-xl transition-all border text-left ${
-                        hasPrevious
-                          ? "border-white/40 bg-white/10 hover:bg-white/20 cursor-pointer"
-                          : "border-white/10 bg-white/5 opacity-50 cursor-not-allowed"
-                      }`}
-                    >
-                      <div className="flex items-center gap-3">
-                        <ChevronLeft className="w-4 h-4 text-white" />
-                        <span className="text-sm font-medium text-white">Previous</span>
-                      </div>
-                    </button>
-                    
-                    <button
-                      onClick={handleNext}
-                      disabled={!hasNext}
-                      className={`w-full flex items-center justify-between px-4 py-3 rounded-xl transition-all border text-left ${
-                        hasNext
-                          ? "border-white/40 bg-white/10 hover:bg-white/20 cursor-pointer"
-                          : "border-white/10 bg-white/5 opacity-50 cursor-not-allowed"
-                      }`}
-                    >
-                      <div className="flex items-center gap-3">
-                        <span className="text-sm font-medium text-white">Next</span>
-                        <ChevronRight className="w-4 h-4 text-white" />
-                      </div>
-                    </button>
+                <aside className="w-full hidden lg:block sticky top-20 h-[calc(100vh-5rem)] border-r border-border/40 pr-6 py-6 bg-card/30 backdrop-blur-sm overflow-y-auto">
+                  <div className="flex flex-col gap-2">
+                    <p className="text-xs uppercase tracking-[0.18em] text-white/40 mb-2 px-2">Course Sections</p>
+                    {courseSections.map((section) => {
+                      const isActive = section.id === activeSectionId;
+                      return (
+                        <button
+                          key={section.id}
+                          onClick={() => handleSectionClick(section.id)}
+                          className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-left ${
+                            isActive
+                              ? "bg-white/20 text-white"
+                              : "text-white/70 hover:bg-white/10 hover:text-white"
+                          }`}
+                        >
+                          <span className={`text-xs font-semibold ${
+                            isActive ? "text-white" : "text-white/50"
+                          }`}>
+                            {section.id === 0 ? "W" : section.id}
+                          </span>
+                          <span className="text-sm font-medium flex-1 truncate">
+                            {section.title}
+                          </span>
+                        </button>
+                      );
+                    })}
                   </div>
                 </aside>
 
@@ -199,6 +225,35 @@ const AIDesignMasterclass = () => {
                     <Card className={`overflow-hidden ${activeSectionId === 0 || activeSectionId === 1 || activeSectionId === 2 || activeSectionId === 3 || activeSectionId === 4 || activeSectionId === 5 || activeSectionId === 7 ? 'border-gray-200' : 'border-border/40'}`}>
                       {activeSectionId === 0 ? (
                         <div className="p-12 md:p-16 lg:p-20 bg-white dark:bg-gray-50">
+                          {/* Previous/Next Navigation */}
+                          <div className="flex gap-2 mb-6">
+                            <button
+                              onClick={handlePrevious}
+                              disabled={!hasPrevious}
+                              className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all border text-sm ${
+                                hasPrevious
+                                  ? "border-gray-300 bg-white hover:bg-gray-50 text-gray-700 cursor-pointer"
+                                  : "border-gray-200 bg-gray-50 opacity-50 cursor-not-allowed text-gray-400"
+                              }`}
+                            >
+                              <ChevronLeft className="w-4 h-4" />
+                              <span>Previous</span>
+                            </button>
+                            
+                            <button
+                              onClick={handleNext}
+                              disabled={!hasNext}
+                              className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all border text-sm ${
+                                hasNext
+                                  ? "border-gray-300 bg-white hover:bg-gray-50 text-gray-700 cursor-pointer"
+                                  : "border-gray-200 bg-gray-50 opacity-50 cursor-not-allowed text-gray-400"
+                              }`}
+                            >
+                              <span>Next</span>
+                              <ChevronRight className="w-4 h-4" />
+                            </button>
+                          </div>
+                          
                           <div className="space-y-4 text-left">
                             <h2 className="text-2xl md:text-3xl font-medium mb-6 text-gray-900">Welcome to the step-by-step guide.</h2>
                             <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6">
@@ -220,6 +275,35 @@ const AIDesignMasterclass = () => {
                         </div>
                       ) : activeSectionId === 1 ? (
                         <div className="p-12 md:p-16 lg:p-20 bg-white dark:bg-gray-50">
+                          {/* Previous/Next Navigation */}
+                          <div className="flex gap-2 mb-6">
+                            <button
+                              onClick={handlePrevious}
+                              disabled={!hasPrevious}
+                              className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all border text-sm ${
+                                hasPrevious
+                                  ? "border-gray-300 bg-white hover:bg-gray-50 text-gray-700 cursor-pointer"
+                                  : "border-gray-200 bg-gray-50 opacity-50 cursor-not-allowed text-gray-400"
+                              }`}
+                            >
+                              <ChevronLeft className="w-4 h-4" />
+                              <span>Previous</span>
+                            </button>
+                            
+                            <button
+                              onClick={handleNext}
+                              disabled={!hasNext}
+                              className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all border text-sm ${
+                                hasNext
+                                  ? "border-gray-300 bg-white hover:bg-gray-50 text-gray-700 cursor-pointer"
+                                  : "border-gray-200 bg-gray-50 opacity-50 cursor-not-allowed text-gray-400"
+                              }`}
+                            >
+                              <span>Next</span>
+                              <ChevronRight className="w-4 h-4" />
+                            </button>
+                          </div>
+                          
                           <div className="space-y-6 text-left">
                             <h2 className="text-2xl md:text-3xl font-medium mb-6 text-gray-900">Where to Get Started with AI</h2>
                             <div className="space-y-4">
@@ -271,6 +355,35 @@ const AIDesignMasterclass = () => {
                         </div>
                       ) : activeSectionId === 2 ? (
                         <div className="p-12 md:p-16 lg:p-20 bg-white dark:bg-gray-50">
+                          {/* Previous/Next Navigation */}
+                          <div className="flex gap-2 mb-6">
+                            <button
+                              onClick={handlePrevious}
+                              disabled={!hasPrevious}
+                              className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all border text-sm ${
+                                hasPrevious
+                                  ? "border-gray-300 bg-white hover:bg-gray-50 text-gray-700 cursor-pointer"
+                                  : "border-gray-200 bg-gray-50 opacity-50 cursor-not-allowed text-gray-400"
+                              }`}
+                            >
+                              <ChevronLeft className="w-4 h-4" />
+                              <span>Previous</span>
+                            </button>
+                            
+                            <button
+                              onClick={handleNext}
+                              disabled={!hasNext}
+                              className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all border text-sm ${
+                                hasNext
+                                  ? "border-gray-300 bg-white hover:bg-gray-50 text-gray-700 cursor-pointer"
+                                  : "border-gray-200 bg-gray-50 opacity-50 cursor-not-allowed text-gray-400"
+                              }`}
+                            >
+                              <span>Next</span>
+                              <ChevronRight className="w-4 h-4" />
+                            </button>
+                          </div>
+                          
                           <div className="space-y-6 text-left">
                             <h2 className="text-2xl md:text-3xl font-medium mb-6 text-gray-900">Must-Have Skills in the Age of AI</h2>
                             <div className="space-y-4 mb-8">
@@ -319,6 +432,35 @@ const AIDesignMasterclass = () => {
                         </div>
                       ) : activeSectionId === 3 ? (
                         <div className="p-12 md:p-16 lg:p-20 bg-white dark:bg-gray-50">
+                          {/* Previous/Next Navigation */}
+                          <div className="flex gap-2 mb-6">
+                            <button
+                              onClick={handlePrevious}
+                              disabled={!hasPrevious}
+                              className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all border text-sm ${
+                                hasPrevious
+                                  ? "border-gray-300 bg-white hover:bg-gray-50 text-gray-700 cursor-pointer"
+                                  : "border-gray-200 bg-gray-50 opacity-50 cursor-not-allowed text-gray-400"
+                              }`}
+                            >
+                              <ChevronLeft className="w-4 h-4" />
+                              <span>Previous</span>
+                            </button>
+                            
+                            <button
+                              onClick={handleNext}
+                              disabled={!hasNext}
+                              className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all border text-sm ${
+                                hasNext
+                                  ? "border-gray-300 bg-white hover:bg-gray-50 text-gray-700 cursor-pointer"
+                                  : "border-gray-200 bg-gray-50 opacity-50 cursor-not-allowed text-gray-400"
+                              }`}
+                            >
+                              <span>Next</span>
+                              <ChevronRight className="w-4 h-4" />
+                            </button>
+                          </div>
+                          
                           <div className="space-y-6 text-left">
                             <h2 className="text-2xl md:text-3xl font-medium mb-6 text-gray-900">My Journey Learning AI</h2>
                             <div className="space-y-6 text-base md:text-lg text-gray-700 leading-relaxed">
@@ -355,6 +497,35 @@ const AIDesignMasterclass = () => {
                         </div>
                       ) : activeSectionId === 4 ? (
                         <div className="p-12 md:p-16 lg:p-20 bg-white dark:bg-gray-50">
+                          {/* Previous/Next Navigation */}
+                          <div className="flex gap-2 mb-6">
+                            <button
+                              onClick={handlePrevious}
+                              disabled={!hasPrevious}
+                              className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all border text-sm ${
+                                hasPrevious
+                                  ? "border-gray-300 bg-white hover:bg-gray-50 text-gray-700 cursor-pointer"
+                                  : "border-gray-200 bg-gray-50 opacity-50 cursor-not-allowed text-gray-400"
+                              }`}
+                            >
+                              <ChevronLeft className="w-4 h-4" />
+                              <span>Previous</span>
+                            </button>
+                            
+                            <button
+                              onClick={handleNext}
+                              disabled={!hasNext}
+                              className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all border text-sm ${
+                                hasNext
+                                  ? "border-gray-300 bg-white hover:bg-gray-50 text-gray-700 cursor-pointer"
+                                  : "border-gray-200 bg-gray-50 opacity-50 cursor-not-allowed text-gray-400"
+                              }`}
+                            >
+                              <span>Next</span>
+                              <ChevronRight className="w-4 h-4" />
+                            </button>
+                          </div>
+                          
                           <div className="space-y-6 text-left">
                             <h2 className="text-2xl md:text-3xl font-medium mb-6 text-gray-900">From Theory to Application</h2>
                             <div className="space-y-6 text-base md:text-lg text-gray-700 leading-relaxed">
@@ -387,6 +558,35 @@ const AIDesignMasterclass = () => {
                         </div>
                       ) : activeSectionId === 5 ? (
                         <div className="p-12 md:p-16 lg:p-20 bg-white dark:bg-gray-50">
+                          {/* Previous/Next Navigation */}
+                          <div className="flex gap-2 mb-6">
+                            <button
+                              onClick={handlePrevious}
+                              disabled={!hasPrevious}
+                              className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all border text-sm ${
+                                hasPrevious
+                                  ? "border-gray-300 bg-white hover:bg-gray-50 text-gray-700 cursor-pointer"
+                                  : "border-gray-200 bg-gray-50 opacity-50 cursor-not-allowed text-gray-400"
+                              }`}
+                            >
+                              <ChevronLeft className="w-4 h-4" />
+                              <span>Previous</span>
+                            </button>
+                            
+                            <button
+                              onClick={handleNext}
+                              disabled={!hasNext}
+                              className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all border text-sm ${
+                                hasNext
+                                  ? "border-gray-300 bg-white hover:bg-gray-50 text-gray-700 cursor-pointer"
+                                  : "border-gray-200 bg-gray-50 opacity-50 cursor-not-allowed text-gray-400"
+                              }`}
+                            >
+                              <span>Next</span>
+                              <ChevronRight className="w-4 h-4" />
+                            </button>
+                          </div>
+                          
                           <div className="space-y-6 text-left">
                             <h2 className="text-2xl md:text-3xl font-medium mb-6 text-gray-900">Leading the AI Revolution</h2>
                             <div className="space-y-6 text-base md:text-lg text-gray-700 leading-relaxed">
@@ -413,6 +613,35 @@ const AIDesignMasterclass = () => {
                         </div>
                       ) : activeSectionId === 7 ? (
                         <div className="p-12 md:p-16 lg:p-20 bg-white dark:bg-gray-50">
+                          {/* Previous/Next Navigation */}
+                          <div className="flex gap-2 mb-6">
+                            <button
+                              onClick={handlePrevious}
+                              disabled={!hasPrevious}
+                              className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all border text-sm ${
+                                hasPrevious
+                                  ? "border-gray-300 bg-white hover:bg-gray-50 text-gray-700 cursor-pointer"
+                                  : "border-gray-200 bg-gray-50 opacity-50 cursor-not-allowed text-gray-400"
+                              }`}
+                            >
+                              <ChevronLeft className="w-4 h-4" />
+                              <span>Previous</span>
+                            </button>
+                            
+                            <button
+                              onClick={handleNext}
+                              disabled={!hasNext}
+                              className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all border text-sm ${
+                                hasNext
+                                  ? "border-gray-300 bg-white hover:bg-gray-50 text-gray-700 cursor-pointer"
+                                  : "border-gray-200 bg-gray-50 opacity-50 cursor-not-allowed text-gray-400"
+                              }`}
+                            >
+                              <span>Next</span>
+                              <ChevronRight className="w-4 h-4" />
+                            </button>
+                          </div>
+                          
                           <div className="space-y-6 text-left">
                             <h2 className="text-2xl md:text-3xl font-medium mb-6 text-gray-900">Vibe Coding Weekend Workshop</h2>
                             <div className="space-y-6 text-base md:text-lg text-gray-700 leading-relaxed">
@@ -515,26 +744,80 @@ const AIDesignMasterclass = () => {
                           </div>
                         </div>
                       ) : (
-                        <div className="relative aspect-video bg-black">
-                          {selectedVideo ? (
-                            <iframe
-                              src={`https://www.youtube.com/embed/${selectedVideo.videoId}`}
-                              title={selectedVideo.title}
-                              className="w-full h-full"
-                              frameBorder="0"
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                              allowFullScreen
-                            />
-                          ) : (
-                            <iframe
-                              src={`https://www.youtube.com/embed/6vnUzMOrAPw`}
-                              title="AI Design Masterclass - Trailer"
-                              className="w-full h-full"
-                              frameBorder="0"
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                              allowFullScreen
-                            />
-                          )}
+                        <div className="space-y-4">
+                          {/* Previous/Next Navigation */}
+                          <div className="flex gap-2 px-6 pt-6">
+                            <button
+                              onClick={handlePrevious}
+                              disabled={!hasPrevious}
+                              className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all border text-sm ${
+                                hasPrevious
+                                  ? "border-white/40 bg-white/10 hover:bg-white/20 text-white cursor-pointer"
+                                  : "border-white/10 bg-white/5 opacity-50 cursor-not-allowed text-white/50"
+                              }`}
+                            >
+                              <ChevronLeft className="w-4 h-4" />
+                              <span>Previous</span>
+                            </button>
+                            
+                            <button
+                              onClick={handleNext}
+                              disabled={!hasNext}
+                              className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all border text-sm ${
+                                hasNext
+                                  ? "border-white/40 bg-white/10 hover:bg-white/20 text-white cursor-pointer"
+                                  : "border-white/10 bg-white/5 opacity-50 cursor-not-allowed text-white/50"
+                              }`}
+                            >
+                              <span>Next</span>
+                              <ChevronRight className="w-4 h-4" />
+                            </button>
+                          </div>
+                          
+                          <div className="relative aspect-video bg-black">
+                            {selectedVideo && selectedVideo.id === 601 ? (
+                              <>
+                                <iframe
+                                  src={`https://www.youtube.com/embed/${selectedVideo.videoId}`}
+                                  title={selectedVideo.title}
+                                  className="w-full h-full"
+                                  frameBorder="0"
+                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                  allowFullScreen
+                                />
+                                {!masterclassUnlocked && (
+                                  <div 
+                                    onClick={() => setModalOpen(true)}
+                                    className="absolute inset-0 flex flex-col items-center justify-center bg-black/70 backdrop-blur-sm cursor-pointer hover:bg-black/80 transition-colors z-10"
+                                  >
+                                    <Lock className="w-16 h-16 text-white/80 mb-4" />
+                                    <h3 className="text-xl font-semibold text-white mb-2">Masterclass Locked</h3>
+                                    <p className="text-white/70 mb-6 text-center px-4">
+                                      Click to unlock and access the masterclass
+                                    </p>
+                                  </div>
+                                )}
+                              </>
+                            ) : selectedVideo ? (
+                              <iframe
+                                src={`https://www.youtube.com/embed/${selectedVideo.videoId}`}
+                                title={selectedVideo.title}
+                                className="w-full h-full"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen
+                              />
+                            ) : (
+                              <iframe
+                                src={`https://www.youtube.com/embed/6vnUzMOrAPw`}
+                                title="AI Design Masterclass - Trailer"
+                                className="w-full h-full"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen
+                              />
+                            )}
+                          </div>
                         </div>
                       )}
                     </Card>
@@ -552,22 +835,30 @@ const AIDesignMasterclass = () => {
                         <div className="divide-y divide-border/20">
                           {activeSection.lessons.map((lesson) => {
                             const isSelected = lesson.id === selectedLessonId;
+                            const isLocked = lesson.id === 601 && !masterclassUnlocked;
                             return (
                               <button
                                 key={lesson.id}
                                 onClick={() => handleLessonClick(lesson, activeSection.id)}
                                 className={`w-full flex items-center justify-between px-6 py-4 text-left transition-colors ${
                                   isSelected ? "bg-white/10" : "hover:bg-white/5"
-                                }`}
+                                } ${isLocked ? "opacity-60" : ""}`}
                               >
                                 <div className="flex items-center gap-4">
                                   <span className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-semibold ${
                                     isSelected ? "bg-white text-black" : "bg-white/5 text-white/50"
                                   }`}>
-                                    <Play className={`w-3.5 h-3.5 ${isSelected ? "text-black" : "text-white/60"}`} />
+                                    {isLocked ? (
+                                      <Lock className={`w-3.5 h-3.5 ${isSelected ? "text-black" : "text-white/60"}`} />
+                                    ) : (
+                                      <Play className={`w-3.5 h-3.5 ${isSelected ? "text-black" : "text-white/60"}`} />
+                                    )}
                                   </span>
                                   <div>
-                                    <p className={`text-sm font-medium ${isSelected ? "text-white" : "text-white/80"}`}>{lesson.title}</p>
+                                    <p className={`text-sm font-medium ${isSelected ? "text-white" : "text-white/80"}`}>
+                                      {lesson.title}
+                                      {isLocked && <span className="ml-2 text-xs text-white/50">(Locked)</span>}
+                                    </p>
                                   </div>
                                 </div>
                                 <ChevronRight className={`w-4 h-4 ${isSelected ? "text-white" : "text-white/30"}`} />
@@ -626,6 +917,71 @@ const AIDesignMasterclass = () => {
           </footer>
         </div>
       </div>
+
+      {/* Masterclass Unlock Modal */}
+      <Dialog open={modalOpen} onOpenChange={setModalOpen}>
+        <DialogContent className="mx-4 sm:mx-auto sm:max-w-[425px] bg-black border-white/20">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-semibold text-white">
+              Unlock Masterclass
+            </DialogTitle>
+            <DialogDescription className="text-white/70">
+              Please provide your name and email to access the masterclass.
+            </DialogDescription>
+          </DialogHeader>
+          <form onSubmit={handleFormSubmit}>
+            <div className="grid gap-4 py-4">
+              <div className="grid gap-2">
+                <Label htmlFor="name" className="text-white">
+                  Name
+                </Label>
+                <Input
+                  id="name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder="Enter your name"
+                  required
+                  className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus-visible:ring-white/50"
+                />
+              </div>
+              <div className="grid gap-2">
+                <Label htmlFor="email" className="text-white">
+                  Email
+                </Label>
+                <Input
+                  id="email"
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email"
+                  required
+                  className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus-visible:ring-white/50"
+                />
+              </div>
+            </div>
+            <DialogFooter>
+              <Button
+                type="button"
+                variant="outline"
+                onClick={() => {
+                  setModalOpen(false);
+                  setName("");
+                  setEmail("");
+                }}
+                className="border-white/20 text-white hover:bg-white/10"
+              >
+                Cancel
+              </Button>
+              <Button
+                type="submit"
+                className="bg-white text-black hover:bg-white/90"
+              >
+                Unlock Masterclass
+              </Button>
+            </DialogFooter>
+          </form>
+        </DialogContent>
+      </Dialog>
     </>
   );
 };
