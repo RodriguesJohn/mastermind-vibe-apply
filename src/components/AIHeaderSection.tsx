@@ -1,139 +1,190 @@
-import { ParticleSphere } from "@/components/ParticleSphere";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { ShaderBackground } from "@/components/AdvancedShaderBackground";
+import { ParticleSphere } from "./ParticleSphere";
 
 export const AIHeaderSection = () => {
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden border-b border-border/40 w-full">
-      {/* Advanced Shader Background */}
-      <ShaderBackground />
+  const stars = Array.from({ length: 5 });
 
-      {/* Content */}
-      <div className="relative z-5 px-6 sm:px-8 md:px-12 lg:px-5 py-4 sm:py-6 md:py-8 lg:py-12">
-        <div className="max-w-6xl mx-auto">
-          {/* Mobile/Tablet Layout */}
-          <div className="lg:hidden">
-            <div className="text-left space-y-6 sm:space-y-8">
-              {/* Sphere - Hidden on mobile, visible on tablet+ */}
-              <div className="hidden sm:flex pb-4 sm:pb-8 md:pb-12">
-                <div className="w-[320px] h-[320px]">
-                  <ParticleSphere />
+  return (
+    <section className="relative py-16 md:py-24 overflow-hidden bg-black text-white border-b border-white/10 w-full z-0">
+      {/* Subtle glow/shader effect with motion */}
+      <div 
+        className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(59,130,246,0.25)_0%,_rgba(0,0,0,0)_50%)] pointer-events-none" 
+        style={{ animation: "glowMove 8s ease-in-out infinite" }}
+        aria-hidden="true" 
+      />
+      <div 
+        className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(147,51,234,0.2)_0%,_rgba(0,0,0,0)_70%)] pointer-events-none" 
+        style={{ animation: "glowPulse 6s ease-in-out infinite" }}
+        aria-hidden="true" 
+      />
+      
+      <div className="px-4 md:px-10 lg:px-[120px] relative z-10 w-full">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="grid lg:grid-cols-[minmax(0,_1fr)_minmax(280px,_420px)] gap-12 items-center">
+            <div>
+            {/* Local keyframes for subtle star wave */}
+            <style>
+              {`
+                @keyframes starWave { 
+                  0%, 100% { transform: translateY(0); }
+                  50% { transform: translateY(-2px); }
+                }
+                @keyframes iconPulse { 
+                  0%, 100% { transform: scale(1); opacity: 0.6; }
+                  50% { transform: scale(1.1); opacity: 0.8; }
+                }
+                @keyframes blurEntrance {
+                  0% {
+                    opacity: 0;
+                    filter: blur(10px);
+                    transform: translateY(10px);
+                  }
+                  100% {
+                    opacity: 1;
+                    filter: blur(0);
+                    transform: translateY(0);
+                  }
+                }
+                @keyframes glowMove {
+                  0%, 100% {
+                    transform: translate(0, 0) scale(1);
+                    opacity: 0.25;
+                  }
+                  50% {
+                    transform: translate(20px, -30px) scale(1.1);
+                    opacity: 0.35;
+                  }
+                }
+                @keyframes glowPulse {
+                  0%, 100% {
+                    transform: scale(1);
+                    opacity: 0.2;
+                  }
+                  50% {
+                    transform: scale(1.15);
+                    opacity: 0.3;
+                  }
+                }
+              `}
+            </style>
+
+            <div className="flex items-center gap-2 mb-6">
+              <span className="text-xs font-medium tracking-wider uppercase flex items-center gap-1">
+                {stars.map((_, i) => (
+                  <span
+                    key={i}
+                    className="text-yellow-400 inline-block"
+                    style={{ animation: "starWave 1.6s ease-in-out infinite", animationDelay: `${i * 0.12}s` }}
+                  >
+                    ★
+                  </span>
+                ))}
+                <span className="text-white/60 ml-1">on Maven</span>
+              </span>
+            </div>
+
+            <h1 
+              className="font-medium mb-4 tracking-tight"
+              style={{ fontSize: '40px', lineHeight: '1.2' }}
+            >
+              AI Mastery For Designers
+              <span className="block">and Product Leaders Cohort</span>
+            </h1>
+
+            <p className="text-lg md:text-medium text-white/60 font-light mb-14 leading-relaxed max-w-3xl">
+              Stay ahead and upskill today. Learn how to design AI apps and systems.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button 
+                variant="cta" 
+                size="lg"
+                className="group"
+                asChild
+              >
+                <a 
+                  href="https://maven.com/productlearnio/aiproductdesignmasterycohort"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Enroll in the cohort
+                  <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+                </a>
+              </Button>
+              <Button 
+                variant="outline" 
+                size="lg"
+                className="border-white/20 text-white hover:bg-white/10"
+                asChild
+              >
+                <a 
+                  href="https://cal.com/aidesignacademy/15min?overlayCalendar=true"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Book an info call
+                </a>
+              </Button>
+            </div>
+
+            {/* KPIs */}
+            <div className="flex justify-start mt-16">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+                <div 
+                  className="flex flex-col items-start text-left"
+                  style={{ animation: "blurEntrance 0.8s ease-out forwards", animationDelay: "0.1s", opacity: 0 }}
+                >
+                  <div className="mb-1">
+                    <span className="text-lg md:text-xl font-semibold text-white/70">6+</span>
+                  </div>
+                  <span className="text-xs text-white/60">
+                    Completed<br />Design Projects
+                  </span>
+                </div>
+                
+                <div 
+                  className="flex flex-col items-start text-left"
+                  style={{ animation: "blurEntrance 0.8s ease-out forwards", animationDelay: "0.2s", opacity: 0 }}
+                >
+                  <div className="mb-1">
+                    <span className="text-lg md:text-xl font-semibold text-white/70">3</span>
+                  </div>
+                  <span className="text-xs text-white/60">Cohorts Ran</span>
+                </div>
+                
+                <div 
+                  className="flex flex-col items-start text-left"
+                  style={{ animation: "blurEntrance 0.8s ease-out forwards", animationDelay: "0.3s", opacity: 0 }}
+                >
+                  <div className="mb-1">
+                    <span className="text-lg md:text-xl font-semibold text-white/70">22</span>
+                  </div>
+                  <span className="text-xs text-white/60">Community<br />Members</span>
+                </div>
+                
+                <div 
+                  className="flex flex-col items-start text-left"
+                  style={{ animation: "blurEntrance 0.8s ease-out forwards", animationDelay: "0.4s", opacity: 0 }}
+                >
+                  <div className="mb-1">
+                    <span className="text-lg md:text-xl font-semibold text-white/70">5/5</span>
+                  </div>
+                  <span className="text-xs text-white/60">
+                    Cohort Rating<br />on Maven
+                  </span>
                 </div>
               </div>
-
-              {/* Date Badge */}
-              <div className="inline-block">
-                <span className="inline-flex items-center px-1 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/80 text-sm font-medium uppercase tracking-wide">
-                  Next cohort starting on November 8th
-                </span>
-              </div>
-
-              {/* Title */}
-              <h1 className="text-4xl sm:text-4.5xl md:text-5xl lg:text-6xl xl:text-6xl font-bold tracking-tight leading-tight text-left">
-                <span className="text-white block">AI Mastery for Designers & Product Leaders 5-Week Cohort</span>
-              </h1>
-
-              {/* Description */}
-              <p className="text-lg sm:text-xl text-white/80 leading-relaxed max-w-2xl text-left">
-                Stay ahead and upskill today. Learn how to design and design AI apps and systems to structure learning programs.
-              </p>
-
-              {/* Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 items-start pt-4">
-                <Button
-                  variant="default"
-                  size="lg"
-                  className="group bg-accent text-primary-foreground hover:bg-accent/90 w-full sm:w-auto min-w-[200px]"
-                  asChild
-                >
-                  <a
-                    href="https://maven.com/productlearnio/aiproductdesignmasterycohort"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Enroll Today
-                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </a>
-                </Button>
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="border-white/30 text-white/90 hover:bg-white/10 w-full sm:w-auto min-w-[200px]"
-                  asChild
-                >
-                  <a
-                    href="https://cal.com/aidesignacademy/15min?overlayCalendar=true"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Book a Call Today
-                  </a>
-                </Button>
-              </div>
-
             </div>
-          </div>
-
-          {/* Desktop Layout */}
-          <div className="hidden lg:grid lg:grid-cols-2 gap-8 items-center">
-            {/* Left Column - Text Content */}
-            <div className="space-y-4 animate-fade-in">
-              <p className="text-sm text-white/60 uppercase tracking-wide font-medium">
-                Next cohort starting on November 8th.
-              </p>
-
-              <h1 className="text-2xl lg:text-5xl xl:text-4xl 2xl:text-4xl font-semibold tracking-tight leading-[1.2] lg:leading-[1.8]">
-                <span className="text-white block">AI Mastery for Designers & Product Leaders 5-Week Cohort</span>
-              </h1>
-
-              <p className="text-xl xl:text-2xl text-white/75 max-w-2xl leading-relaxed">
-                Stay ahead and upskill today. Learn how to design AI apps and systems through a structured learning program.
-              </p>
-
-              <div className="flex flex-row gap-6 items-center pt-6">
-                <Button
-                  variant="default"
-                  size="xl"
-                  className="group bg-accent text-primary-foreground hover:bg-accent/90"
-                  asChild
-                >
-                  <a
-                    href="https://maven.com/productlearnio/aiproductdesignmasterycohort"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Enroll Today
-                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </a>
-                </Button>
-                <Button
-                  variant="outline"
-                  size="xl"
-                  className="border-white/10 text-white/80 hover:bg-white/5"
-                  asChild
-                >
-                  <a
-                    href="https://cal.com/aidesignacademy/15min?overlayCalendar=true"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Book a Call Today
-                  </a>
-                </Button>
-              </div>
             </div>
 
-            {/* Right Column - Particle Sphere */}
-            <div className="flex items-center justify-center">
-              <ParticleSphere />
+            <div className="hidden lg:flex justify-center relative">
+              <div className="absolute -inset-8 bg-[radial-gradient(circle,_rgba(46,114,255,0.18)_0%,_rgba(0,0,0,0)_70%)] blur-3xl" aria-hidden="true" />
+              <ParticleSphere size="sm" className="relative z-10 max-w-[320px]" />
             </div>
           </div>
         </div>
       </div>
-
-      {/* Bottom Gradient Fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/40 to-transparent" />
     </section>
   );
 };

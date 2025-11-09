@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { AnimatedTestimonials } from "@/components/AnimatedTestimonials";
 
 const Course = () => {
   const [selectedModule, setSelectedModule] = useState(1);
@@ -257,6 +258,36 @@ const Course = () => {
             )}
           </div>
         </main>
+
+        {/* Testimonials Section */}
+        <section className="py-16 bg-background border-t border-border">
+          <div className="container mx-auto">
+            <h2 className="text-3xl font-bold text-center mb-12">What Students Say</h2>
+            <AnimatedTestimonials
+              testimonials={[
+                {
+                  quote: "This cohort transformed my approach to AI product design. The hands-on learning and community support made all the difference.",
+                  name: "Sarah Chen",
+                  designation: "Product Designer at Meta",
+                  src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
+                },
+                {
+                  quote: "The best investment I've made in my career. The frameworks and strategies I learned here I use every day at work.",
+                  name: "Michael Rodriguez",
+                  designation: "Senior UX Designer at Google",
+                  src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+                },
+                {
+                  quote: "John's teaching style is exceptional. He breaks down complex AI concepts into digestible, actionable insights.",
+                  name: "Emily Johnson",
+                  designation: "Design Lead at Microsoft",
+                  src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
+                },
+              ]}
+              autoplay={true}
+            />
+          </div>
+        </section>
 
         {/* Payment Modal */}
         <Dialog open={showPaymentModal} onOpenChange={setShowPaymentModal}>

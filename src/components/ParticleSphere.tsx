@@ -2,6 +2,7 @@ import { useRef, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Line } from '@react-three/drei';
 import * as THREE from 'three';
+import { cn } from '@/lib/utils';
 
 function DotParticle({ position, delay }: { position: [number, number, number], delay: number }) {
   const ref = useRef<THREE.Mesh>(null);
@@ -72,11 +73,28 @@ function ParticleCloud() {
   );
 }
 
-export const ParticleSphere = () => {
+type ParticleSphereSize = 'sm' | 'md' | 'lg';
+
+const sizeClassMap: Record<ParticleSphereSize, string> = {
+  sm: 'h-[200px] sm:h-[240px] md:h-[280px] lg:h-[320px]',
+  md: 'h-[300px] sm:h-[360px] md:h-[420px] lg:h-[500px]',
+  lg: 'h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px]'
+};
+
+interface ParticleSphereProps {
+  size?: ParticleSphereSize;
+  className?: string;
+}
+
+export const ParticleSphere = ({ size = 'lg', className }: ParticleSphereProps) => {
   return (
-    <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] opacity-100 pointer-events-none animate-fade-in">
+    <div className={cn(
+      'relative w-full opacity-100 pointer-events-none animate-fade-in',
+      sizeClassMap[size],
+      className
+    )}>
       <Canvas
-        camera={{ position: [0, 0, 4], fov: 75 }}
+        camera={{ position: [0, 0, size === 'sm' ? 3 : 4], fov: 75 }}
         className="w-full h-full"
       >
         <ambientLight intensity={0.5} />

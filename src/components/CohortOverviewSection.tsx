@@ -22,8 +22,15 @@ export const CohortOverviewSection = () => {
           
           {/* Main Content */}
           <div className="space-y-6">
-            <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed line-height-1.4">
-              Many designers are overwhelmed by the rapid changes in AI and product design, often lacking the structured, hands-on learning and community support needed to keep up. This 5-week cohort is designed to provide the guidance, expert feedback, and real project experience essential to confidently create AI products and build a strong portfolio. With demand for AI product designers rising and the market booming, this program helps designers stay ahead by mastering in-demand skills and connecting with a leading design community.
+            <p 
+              className="max-w-3xl mx-auto font-medium text-white"
+              style={{
+                letterSpacing: '0',
+                fontSize: '16px',
+                lineHeight: '1.6'
+              }}
+            >
+              Many designers and product leaders are overwhelmed by the rapid changes in AI and product design, often lacking the structured, hands-on learning and community support needed to keep up. This 4-week cohort is designed to provide the guidance, expert feedback, and real project experience essential to confidently create AI products. With demand for AI product designers and product leaders rising and the market booming, this program helps designers and product leaders stay ahead by mastering in-demand skills and connecting with a leading design community.
             </p>
           </div>
         </div>

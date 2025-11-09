@@ -52,20 +52,28 @@ export const CohortModulesSection = () => {
     <section className="py-24 md:py-32 bg-black text-white overflow-hidden">
       <div className="px-4 sm:px-8 md:px-10 lg:px-[120px]">
         <div className="max-w-[1200px] mx-auto">
-          <h2 className="text-4xl md:text-5xl font-semibold text-center mb-16 tracking-tight">
+          <h2 
+            className="font-normal text-center mb-16 tracking-tight"
+            style={{ fontSize: '32px', lineHeight: '1.25' }}
+          >
             What We Have for You
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 group">
           {modules.map((module, index) => {
             return (
               <motion.div
                 key={index}
-                whileHover={{ y: -8, scale: 1.02 }}
-                transition={{ duration: 0.3, ease: "easeOut" }}
-                className="cursor-pointer"
+                whileHover={{ y: -8, scale: 1.08 }}
+                transition={{ 
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 30,
+                  mass: 0.5
+                }}
+                className="cursor-pointer transition-all duration-300 group-hover:blur-sm group-hover:opacity-60 hover:!blur-none hover:!opacity-100"
               >
-                <Card className="border-white/10 h-full overflow-hidden transition-all duration-300 peer">
+                <Card className="border-white/10 h-full overflow-hidden">
                   {/* Shader Section with Module Info Overlay */}
                   <div className="relative h-32 overflow-hidden">
                     <MeshGradient

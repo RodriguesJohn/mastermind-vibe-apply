@@ -51,26 +51,36 @@ const Consulting = () => {
         <Navigation />
         <main>
           {/* Hero Section */}
-          <section className="py-24 md:py-32 px-4 md:px-10 lg:px-[120px]">
-            <div className="max-w-[1200px] mx-auto text-center space-y-6">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold">
-                AI Consulting & Coaching
-              </h1>
-              <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
-                Personalized guidance to accelerate your AI journey, from individual coaching to enterprise consulting
-              </p>
+          <section className="relative pt-16 md:pt-24 pb-8 md:pb-12 overflow-hidden bg-black text-white border-b border-white/10 w-full z-0">
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-primary/10 via-black to-black" />
+            
+            <div className="px-4 md:px-10 lg:px-[120px] relative z-10 w-full">
+              <div className="max-w-[1200px] mx-auto">
+                <div>
+                  <h1 
+                    className="font-medium mb-4 tracking-tight"
+                    style={{ fontSize: '40px', lineHeight: '1.2' }}
+                  >
+                    AI Consulting & Coaching
+                  </h1>
+
+                  <p className="text-lg md:text-medium text-white/60 font-light mb-7 leading-relaxed whitespace-nowrap">
+                    Personalized guidance to accelerate your AI journey, from individual coaching to enterprise consulting
+                  </p>
+                </div>
+              </div>
             </div>
           </section>
 
           {/* Two Column Consulting Cards */}
-          <section className="py-16 px-4 md:px-10 lg:px-[120px]">
+          <section className="pt-8 md:pt-12 pb-16 px-4 md:px-10 lg:px-[120px]">
             <div className="max-w-[1200px] mx-auto">
               <div className="grid md:grid-cols-2 gap-8 items-stretch">
                 {/* Cohort Member Coaching Card */}
                 <Card className="p-8 bg-card/50 border-border/40 hover:border-border transition-all duration-300 rounded-2xl flex flex-col">
                   <div className="space-y-6 flex-grow">
                     <div className="space-y-3">
-                      <h2 className="text-3xl font-bold tracking-tight">
+                      <h2 className="text-2xl font-medium tracking-tight">
                         Cohort Member Coaching
                       </h2>
                       <p className="text-lg text-muted-foreground">
@@ -109,27 +119,29 @@ const Consulting = () => {
                     </div>
                   </div>
 
-                  <Button 
-                    variant="default"
-                    size="lg"
-                    className="w-full mt-6"
-                    asChild
-                  >
-                    <a 
-                      href="https://cal.com/aidesignacademy/cohort-member-coaching"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                  <div className="mt-auto pt-6">
+                    <Button 
+                      variant="default"
+                      size="lg"
+                      className="w-full"
+                      asChild
                     >
-                      Get in touch
-                    </a>
-                  </Button>
+                      <a 
+                        href="https://cal.com/aidesignacademy/cohort-member-1-1-coaching?overlayCalendar=true"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Schedule a call
+                      </a>
+                    </Button>
+                  </div>
                 </Card>
 
                 {/* AI Product Design Consulting Card */}
                 <Card className="p-8 bg-card/50 border-border/40 hover:border-border transition-all duration-300 rounded-2xl flex flex-col">
                   <div className="space-y-6 flex-grow">
                     <div className="space-y-3">
-                      <h2 className="text-3xl font-bold tracking-tight">
+                      <h2 className="text-2xl font-medium tracking-tight">
                         AI Product Design Consulting
                       </h2>
                       <p className="text-lg text-muted-foreground">
@@ -153,7 +165,7 @@ const Consulting = () => {
                     </ul>
                   </div>
 
-                  <div className="space-y-4 mt-6">
+                  <div className="mt-auto pt-6">
                     <Button 
                       variant="secondary"
                       size="lg"
@@ -169,7 +181,7 @@ const Consulting = () => {
                       </a>
                     </Button>
 
-                    <p className="text-sm text-muted-foreground/60 italic">
+                    <p className="text-sm text-muted-foreground/60 italic mt-4">
                       Past collaborations include AI startups, innovation labs, and enterprise product teams.
                     </p>
                   </div>

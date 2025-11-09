@@ -12,6 +12,9 @@ import Tools from "./pages/Tools";
 import TalentPool from "./pages/TalentPool";
 import Course from "./pages/Course";
 import VibeCodingAccelerator from "./pages/VibeCodingAccelerator";
+import AIDesignMasterclass from "./pages/AIDesignMasterclass";
+import KnowledgeHub from "./pages/KnowledgeHub";
+import DesignEngineering from "./pages/DesignEngineering";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +33,9 @@ const App = () => (
           {/* Membership page hidden for now */}
           {/* <Route path="/index" element={<Index />} /> */}
           <Route path="/ai-crash-course" element={<AICrashCourse />} />
+          <Route path="/ai-design-masterclass" element={<AIDesignMasterclass />} />
+          <Route path="/knowledge-hub" element={<KnowledgeHub />} />
+          <Route path="/design-engineering" element={<DesignEngineering />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/tools" element={<Tools />} />
           {/* <Route path="/talent-pool" element={<TalentPool />} /> */}

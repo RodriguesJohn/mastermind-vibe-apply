@@ -57,7 +57,10 @@ export const CohortTestimonialsSection = () => {
     <section className="py-24 md:py-32 bg-background">
       <div className="px-4 md:px-10 lg:px-[120px]">
         <div className="max-w-[1200px] mx-auto">
-          <h2 className="text-4xl md:text-5xl font-semibold text-center mb-16 tracking-tight">
+          <h2 
+            className="font-normal text-center mb-16 tracking-tight"
+            style={{ fontSize: '32px', lineHeight: '1.25' }}
+          >
             Stories From Cohort Members
           </h2>
           
@@ -67,7 +70,10 @@ export const CohortTestimonialsSection = () => {
               key={index}
               className="p-8 bg-card/50 border-border/40 hover:border-border transition-all duration-300"
             >
-            <p className="text-white leading-relaxed mb-6">
+            <p 
+              className="text-white leading-relaxed mb-6"
+              style={{ opacity: '0.64' }}
+            >
               {testimonial.content}
             </p>
             
