@@ -126,16 +126,16 @@ export const AIHeaderSection = () => {
             </div>
 
             {/* KPIs */}
-            <div className="flex justify-start mt-16">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+            <div className="flex justify-start mt-12 md:mt-16">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-8 md:gap-x-12 md:gap-y-0">
                 <div 
                   className="flex flex-col items-start text-left"
                   style={{ animation: "blurEntrance 0.8s ease-out forwards", animationDelay: "0.1s", opacity: 0 }}
                 >
-                  <div className="mb-1">
-                    <span className="text-lg md:text-xl font-semibold text-white/70">6+</span>
+                  <div className="mb-2">
+                    <span className="text-2xl md:text-3xl font-semibold text-white/80">6+</span>
                   </div>
-                  <span className="text-xs text-white/60">
+                  <span className="text-sm md:text-xs text-white/60 leading-tight">
                     Completed<br />Design Projects
                   </span>
                 </div>
@@ -144,30 +144,30 @@ export const AIHeaderSection = () => {
                   className="flex flex-col items-start text-left"
                   style={{ animation: "blurEntrance 0.8s ease-out forwards", animationDelay: "0.2s", opacity: 0 }}
                 >
-                  <div className="mb-1">
-                    <span className="text-lg md:text-xl font-semibold text-white/70">3</span>
+                  <div className="mb-2">
+                    <span className="text-2xl md:text-3xl font-semibold text-white/80">3</span>
                   </div>
-                  <span className="text-xs text-white/60">Cohorts Ran</span>
+                  <span className="text-sm md:text-xs text-white/60 leading-tight">Cohorts Ran</span>
                 </div>
                 
                 <div 
                   className="flex flex-col items-start text-left"
                   style={{ animation: "blurEntrance 0.8s ease-out forwards", animationDelay: "0.3s", opacity: 0 }}
                 >
-                  <div className="mb-1">
-                    <span className="text-lg md:text-xl font-semibold text-white/70">22</span>
+                  <div className="mb-2">
+                    <span className="text-2xl md:text-3xl font-semibold text-white/80">22</span>
                   </div>
-                  <span className="text-xs text-white/60">Community<br />Members</span>
+                  <span className="text-sm md:text-xs text-white/60 leading-tight">Community<br />Members</span>
                 </div>
                 
                 <div 
                   className="flex flex-col items-start text-left"
                   style={{ animation: "blurEntrance 0.8s ease-out forwards", animationDelay: "0.4s", opacity: 0 }}
                 >
-                  <div className="mb-1">
-                    <span className="text-lg md:text-xl font-semibold text-white/70">5/5</span>
+                  <div className="mb-2">
+                    <span className="text-2xl md:text-3xl font-semibold text-white/80">5/5</span>
                   </div>
-                  <span className="text-xs text-white/60">
+                  <span className="text-sm md:text-xs text-white/60 leading-tight">
                     Cohort Rating<br />on Maven
                   </span>
                 </div>
