@@ -23,7 +23,7 @@ const Cohort = () => {
         "This cohort gave me the practical, hands-on approach I needed to actually use AI tools in my design work.",
       name: "Elaine Anzaldo",
       role: "Senior Product Designer at Meta",
-      description: "Explore how AI products are designed for wearables and build human-centered experiences.",
+      description: "Design AI products for wearables with human-centered experiences.",
       imageSrc:
         "https://media.licdn.com/dms/image/v2/D5603AQHVwM0T15wsng/profile-displayphoto-shrink_800_800/B56ZOxeYKhG8Ao-/0/1733849351352?e=1763596800&v=beta&t=WVCx8mbXSMSLcterbsI5QaIwjVrkopIIhGCxSFz8uUY",
     },
