@@ -499,7 +499,7 @@ const KnowledgeHub = () => {
           description: "Master AI design with our comprehensive masterclass designed for designers and product leaders",
           category: "courses",
           type: "course",
-          url: "/ai-design-masterclass",
+          url: "/guide",
           colors: ["#FF6B6B", "#FFD93D", "#FF8E53", "#FF6B9D"],
           tag: "Free",
         },

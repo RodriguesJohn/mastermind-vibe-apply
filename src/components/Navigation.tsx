@@ -13,7 +13,7 @@ import { useLocation } from "react-router-dom";
 export const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
-  const isMasterclassPage = location.pathname === "/ai-design-masterclass";
+  const isMasterclassPage = location.pathname === "/guide";
   
   return (
     <nav className="sticky top-0 left-0 right-0 z-50 border-b border-border/40 bg-background/98 backdrop-blur-xl">
@@ -30,7 +30,7 @@ export const Navigation = () => {
             <a href="/" className="text-sm font-normal hover:text-primary transition-colors">
               AI Cohort
             </a>
-            <a href="/ai-design-masterclass" className="text-sm font-normal text-white hover:text-white/80 transition-colors">
+            <a href="/guide" className="text-sm font-normal text-white hover:text-white/80 transition-colors">
               Guide
             </a>
             <DropdownMenu>
@@ -92,7 +92,7 @@ export const Navigation = () => {
                 {/* <a href="/vibe-coding-accelerator" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
                   Mastermind
                 </a> */}
-                <a href="/ai-design-masterclass" className="text-base font-normal text-white hover:text-white/80 transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
+                <a href="/guide" className="text-base font-normal text-white hover:text-white/80 transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
                   Guide
                 </a>
                 <a href="/knowledge-hub" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
