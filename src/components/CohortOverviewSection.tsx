@@ -3,7 +3,7 @@ import goldenGateBridge from "@/assets/golden-gate-bridge.jpg";
 
 export const CohortOverviewSection = () => {
   return (
-    <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div 
         className="absolute inset-0 z-0 bg-cover bg-center"
@@ -12,7 +12,7 @@ export const CohortOverviewSection = () => {
       <div className="absolute inset-0 z-0 bg-black/85" />
       
       {/* Content */}
-      <div className="relative z-10 px-4 md:px-10 lg:px-[120px] py-24 md:py-32">
+      <div className="relative z-10 px-4 md:px-10 lg:px-[120px] py-12 md:py-16">
         <div className="max-w-[1200px] mx-auto text-center space-y-8">
           {/* Stat Badge */}
           <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-sm px-6 py-2 text-sm font-medium text-white border border-white/20">
