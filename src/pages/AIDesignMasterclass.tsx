@@ -104,6 +104,7 @@ const AIDesignMasterclass = () => {
     acceptCommunication: false,
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [checkboxError, setCheckboxError] = useState(false);
   
   const allLessons = useMemo(() => courseSections.flatMap(section => section.lessons), [courseSections]);
 
@@ -137,9 +138,13 @@ const AIDesignMasterclass = () => {
     e.preventDefault();
     
     if (!formData.acceptCommunication) {
-      alert('Please accept to receive further communication to unlock the masterclass.');
+      setCheckboxError(true);
+      // Remove error state after animation
+      setTimeout(() => setCheckboxError(false), 600);
       return;
     }
+    
+    setCheckboxError(false);
 
     if (!formData.name || !formData.email) {
       alert('Please fill in all required fields.');
@@ -306,6 +311,14 @@ const AIDesignMasterclass = () => {
                 rgba(0,0,0,0.01) 4px
               );
             pointer-events: none;
+          }
+          @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            10%, 30%, 50%, 70%, 90% { transform: translateX(-4px); }
+            20%, 40%, 60%, 80% { transform: translateX(4px); }
+          }
+          .checkbox-shake {
+            animation: shake 0.5s ease-in-out;
           }
         `}</style>
       </Helmet>
@@ -1040,20 +1053,21 @@ const AIDesignMasterclass = () => {
                   required
                 />
               </div>
-              <div className="flex items-start space-x-3 pt-2">
+              <div className={`flex items-start space-x-3 pt-2 ${checkboxError ? 'checkbox-shake' : ''}`}>
                 <Checkbox
                   id="acceptCommunication"
                   checked={formData.acceptCommunication}
-                  onCheckedChange={(checked) => 
-                    setFormData({ ...formData, acceptCommunication: checked === true })
-                  }
-                  className="border-white/30 data-[state=checked]:bg-white data-[state=checked]:border-white mt-1"
+                  onCheckedChange={(checked) => {
+                    setFormData({ ...formData, acceptCommunication: checked === true });
+                    setCheckboxError(false);
+                  }}
+                  className="h-5 w-5 rounded border-2 border-white/30 data-[state=checked]:bg-white data-[state=checked]:border-white data-[state=checked]:text-black mt-0.5 flex-shrink-0"
                 />
                 <Label 
                   htmlFor="acceptCommunication" 
-                  className="text-sm text-white/90 leading-relaxed cursor-pointer"
+                  className="text-sm text-white/90 leading-relaxed cursor-pointer flex-1"
                 >
-                  Do you accept to receive further communication from AI Design Academy/john *
+                  I accept to receive further communication from AI Design Academy and John Rodrigues *
                 </Label>
               </div>
             </div>
