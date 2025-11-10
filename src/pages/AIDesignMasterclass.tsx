@@ -804,7 +804,7 @@ const AIDesignMasterclass = () => {
                               </p>
                               <div className="mb-8">
                                 <a 
-                                  href="https://maven.com/productlearnio/vibe-coding-2-days-bootcamp" 
+                                  href="https://maven.com/productlearnio/vibe-coding-workshop" 
                                   target="_blank" 
                                   rel="noopener noreferrer"
                                   className="inline-flex items-center gap-2 px-8 py-4 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300 hover:scale-105 hover:shadow-lg text-lg group"

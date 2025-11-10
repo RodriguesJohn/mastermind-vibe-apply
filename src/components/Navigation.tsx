@@ -50,7 +50,7 @@ export const Navigation = () => {
                   </a>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <a href="https://maven.com/productlearnio/vibe-coding-2-days-bootcamp" target="_blank" rel="noopener noreferrer" className="cursor-pointer">
+                  <a href="https://maven.com/productlearnio/vibe-coding-workshop" target="_blank" rel="noopener noreferrer" className="cursor-pointer">
                     Workshop
                   </a>
                 </DropdownMenuItem>
@@ -98,7 +98,7 @@ export const Navigation = () => {
                 <a href="/knowledge-hub" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
                   Knowledge Hub
                 </a>
-                <a href="https://maven.com/productlearnio/vibe-coding-2-days-bootcamp" target="_blank" rel="noopener noreferrer" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
+                <a href="https://maven.com/productlearnio/vibe-coding-workshop" target="_blank" rel="noopener noreferrer" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
                   Workshop
                 </a>
                 <a href="/coaching" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
