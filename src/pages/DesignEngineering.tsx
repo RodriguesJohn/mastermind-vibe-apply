@@ -182,14 +182,13 @@ const DesignEngineering = () => {
                 </div>
 
                 <h1 
-                  className="font-medium mb-4 tracking-tight text-center text-5xl sm:text-6xl md:text-7xl lg:text-8xl"
+                  className="font-medium mb-4 tracking-tight text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
                 >
-                  Become an AI
-                  <span className="block">Design Engineer</span>
+                  Level Up Your Design Engineering Skills.
                 </h1>
 
                 <p className="text-lg md:text-xl text-white/70 font-light mb-8 leading-relaxed max-w-3xl mx-auto text-center">
-                  Master the foundations, learn to code beautiful interfaces, and become a next-generation AI Design Engineer through this comprehensive program.
+                  Learn to code interfaces, build real projects, and accelerate your<br />journey from designer to design engineer.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 mb-12 justify-center">

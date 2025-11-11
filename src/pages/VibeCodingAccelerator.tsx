@@ -155,9 +155,7 @@ const VibeCodingAccelerator = () => {
           {/* Hero */}
           <section className="relative overflow-hidden border-b border-white/10 bg-black py-32 sm:py-40 md:py-48">
             {/* Shader background */}
-            <div className="absolute inset-0 z-0">
-              <DotScreenShader />
-                  </div>
+            <DotScreenShader />
 
             <style>{`
               @keyframes bounceAround {

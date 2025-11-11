@@ -155,15 +155,24 @@ function Scene() {
 
 export const DotScreenShader = () => {
   return (
-    <Canvas
-      gl={{
-        antialias: true,
-        powerPreference: 'high-performance',
-        outputColorSpace: THREE.SRGBColorSpace,
-        toneMapping: THREE.NoToneMapping
-      }}>
-      <Scene />
-    </Canvas>
+    <div className="absolute inset-0 z-0 w-full h-full">
+      <Canvas
+        gl={{
+          antialias: true,
+          powerPreference: 'high-performance',
+          outputColorSpace: THREE.SRGBColorSpace,
+          toneMapping: THREE.NoToneMapping
+        }}
+        style={{ 
+          width: '100%', 
+          height: '100%', 
+          display: 'block'
+        }}
+        dpr={[1, 2]}
+        camera={{ position: [0, 0, 1], fov: 75 }}>
+        <Scene />
+      </Canvas>
+    </div>
   )
 }
 
