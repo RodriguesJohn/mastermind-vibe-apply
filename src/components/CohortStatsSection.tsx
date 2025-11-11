@@ -47,30 +47,30 @@ export const CohortStatsSection = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                  <Card className="p-8 bg-white/5 border-white/10 hover:border-white/20 transition-all duration-300 h-full">
+                  <Card className="p-6 sm:p-8 bg-white/5 border-white/10 hover:border-white/20 transition-all duration-300 h-full">
                     <div className="flex flex-col items-start h-full">
-                      <div className="mb-6 flex items-center gap-4 w-full">
-                        <div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0">
+                      <div className="mb-4 sm:mb-6 flex items-center gap-3 sm:gap-4 w-full">
+                        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0">
                           {stat.icon === "CircleCheckBig" ? (
-                            <CircleCheckBigIcon size={24} className="text-white" />
+                            <CircleCheckBigIcon size={20} className="text-white" />
                           ) : stat.icon === "UsersRound" ? (
-                            <UsersRoundIcon size={24} className="text-white" />
+                            <UsersRoundIcon size={20} className="text-white" />
                           ) : stat.icon === "Star" ? (
-                            <StarIcon size={24} className="text-white" />
+                            <StarIcon size={20} className="text-white" />
                           ) : stat.icon === "Sparkles" ? (
-                            <SparklesIcon size={24} className="text-white" />
+                            <SparklesIcon size={20} className="text-white" />
                           ) : null}
                         </div>
                         <div className="flex-1">
-                          <span className="text-5xl md:text-6xl font-semibold text-white leading-none">
+                          <span className="text-4xl sm:text-5xl md:text-6xl font-semibold text-white leading-none">
                             {stat.number}
                           </span>
                         </div>
                       </div>
-                      <h3 className="text-lg md:text-xl font-semibold text-white mb-3 leading-tight">
+                      <h3 className="text-base sm:text-lg md:text-xl font-semibold text-white mb-3 leading-tight">
                         {stat.title}
                       </h3>
-                      <p className="text-sm md:text-base text-white/60 leading-relaxed flex-1">
+                      <p className="text-xs sm:text-sm md:text-base text-white/60 leading-relaxed flex-1">
                         {stat.subcontent}
                       </p>
                     </div>

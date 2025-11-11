@@ -55,8 +55,8 @@ export const PlaybookSection = () => {
 
             </div>
 
-            <div className="flex items-center justify-center">
-              <div className="relative w-full max-w-md">
+            <div className="flex items-center justify-center mt-8 lg:mt-0">
+              <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md">
                 {/* Stacked Paper */}
                 <div className="relative w-full aspect-[3/4] flex items-center justify-center">
                   {/* Paper 1 - Back */}
@@ -139,13 +139,13 @@ export const PlaybookSection = () => {
                     />
                     
                     {/* Content */}
-                    <div className="p-6 h-full flex flex-col">
-                      <div className="mb-4">
-                        <h3 className="text-lg font-semibold text-gray-900 mb-2">Getting Started Guide</h3>
-                        <div className="h-0.5 w-12 bg-gray-300 mb-4"></div>
+                    <div className="p-4 sm:p-5 md:p-6 h-full flex flex-col">
+                      <div className="mb-3 sm:mb-4">
+                        <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">Getting Started Guide</h3>
+                        <div className="h-0.5 w-10 sm:w-12 bg-gray-300 mb-3 sm:mb-4"></div>
                       </div>
                       
-                      <div className="flex-1 space-y-3 text-left">
+                      <div className="flex-1 space-y-2 sm:space-y-3 text-left">
                         <div>
                           <div className="text-xs font-semibold text-gray-700 mb-1">Step 1: Foundation</div>
                           <div className="text-xs text-gray-600 leading-relaxed">
@@ -168,7 +168,7 @@ export const PlaybookSection = () => {
                         </div>
                       </div>
                       
-                      <div className="mt-4 pt-4 border-t border-gray-200">
+                      <div className="mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-gray-200">
                         <div className="text-xs text-gray-500 italic">Continue reading →</div>
                       </div>
                     </div>
