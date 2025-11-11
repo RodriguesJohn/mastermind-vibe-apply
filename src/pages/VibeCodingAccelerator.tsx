@@ -149,7 +149,8 @@ const VibeCodingAccelerator = () => {
       <div className="min-h-screen bg-black text-white">
         <Navigation />
         
-        <main>
+        {/* Temporarily hiding all sections except header */}
+        {false && <main>
           {/* Hero */}
           <section className="relative overflow-hidden border-b border-white/10 bg-gradient-to-b from-white/10 via-black to-black py-24 sm:py-28">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.2),_transparent_55%)] blur-3xl opacity-60" />
@@ -685,12 +686,12 @@ const VibeCodingAccelerator = () => {
                   </a>
                 </Button>
               </div>
-            </div>
-          </section>
-        </main>
-      </div>
-    </>
-  );
-};
+                </div>
+              </section>
+            </main>}
+          </div>
+        </>
+      );
+    };
 
 export default VibeCodingAccelerator;
