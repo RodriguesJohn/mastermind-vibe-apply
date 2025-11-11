@@ -15,9 +15,9 @@ export const CohortOverviewSection = () => {
       <div className="relative z-10 px-4 md:px-10 lg:px-[120px] py-12 md:py-16">
         <div className="max-w-[1200px] mx-auto text-center space-y-8">
           {/* Stat Badge */}
-          <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-sm px-6 py-2 text-sm font-medium text-white border border-white/20">
-            <Star className="w-4 h-4 fill-white" />
-            80% of Organizations Are Adapting to AI
+          <div className="inline-flex items-center justify-center gap-2 rounded-full bg-white/10 backdrop-blur-sm px-6 py-2 text-sm font-medium text-white border border-white/20">
+            <Star className="w-4 h-4 fill-white flex-shrink-0" />
+            <span>80% of Organizations Are Adapting to AI</span>
           </div>
           
           {/* Main Content */}
