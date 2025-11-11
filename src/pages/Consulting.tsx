@@ -61,12 +61,12 @@ const Consulting = () => {
                     className="font-medium mb-4 tracking-tight"
                     style={{ fontSize: '40px', lineHeight: '1.2' }}
                   >
-                    AI Consulting & Coaching
-                  </h1>
+                AI Consulting & Coaching
+              </h1>
 
                   <p className="text-lg md:text-medium text-white/60 font-light mb-7 leading-relaxed whitespace-nowrap">
-                    Personalized guidance to accelerate your AI journey, from individual coaching to enterprise consulting
-                  </p>
+                Personalized guidance to accelerate your AI journey, from individual coaching to enterprise consulting
+              </p>
                 </div>
               </div>
             </div>
@@ -120,20 +120,20 @@ const Consulting = () => {
                   </div>
 
                   <div className="mt-auto pt-6">
-                    <Button 
-                      variant="default"
-                      size="lg"
+                  <Button 
+                    variant="default"
+                    size="lg"
                       className="w-full"
-                      asChild
-                    >
-                      <a 
+                    asChild
+                  >
+                    <a 
                         href="https://cal.com/aidesignacademy/cohort-member-1-1-coaching?overlayCalendar=true"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                         Schedule a call
-                      </a>
-                    </Button>
+                    </a>
+                  </Button>
                   </div>
                 </Card>
 

@@ -3,6 +3,7 @@ import { AIHeaderSection } from "@/components/AIHeaderSection";
 import { CohortOverviewSection } from "@/components/CohortOverviewSection";
 import { CohortModulesSection } from "@/components/CohortModulesSection";
 import { CohortTestimonialsSection } from "@/components/CohortTestimonialsSection";
+import { CohortStatsSection } from "@/components/CohortStatsSection";
 import { InstructorSection } from "@/components/InstructorSection";
 import { PlaybookSection } from "@/components/PlaybookSection";
 import { WorkshopGallerySection } from "@/components/WorkshopGallerySection";
@@ -73,6 +74,7 @@ const Cohort = () => {
           <LogoCloud />
 
           <CohortOverviewSection />
+          <CohortStatsSection />
           <CohortTestimonialsSection />
           <CohortModulesSection />
           <InstructorSection />

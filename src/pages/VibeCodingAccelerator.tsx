@@ -1193,7 +1193,7 @@ const VibeCodingAccelerator = () => {
                             <span className="text-lg md:text-xl lg:text-2xl text-white/60 font-normal ml-2 whitespace-nowrap">
                               Master AI-powered design engineering, build real projects, and attract high-paying jobs and clients.
                             </span>
-                          </h1>
+                  </h1>
                         </div>
 
                   {/* Enrollment Toggle for Testing */}

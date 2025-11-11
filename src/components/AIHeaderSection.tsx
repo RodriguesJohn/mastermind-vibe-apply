@@ -1,6 +1,47 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { ParticleSphere } from "./ParticleSphere";
+import SphereImageGrid, { ImageData } from "./SphereImageGrid";
+import slide1 from "@/assets/Slide1.png";
+import slide2 from "@/assets/Slide2.png";
+import slide3 from "@/assets/Slide3.png";
+import workshop1 from "@/assets/workshop-1.jpg";
+import workshop2 from "@/assets/workshop-2.jpg";
+import workshop3 from "@/assets/workshop-3.jpg";
+import LindaImage from "@/assets/Linda.jpeg";
+import SnehImage from "@/assets/Sneh.webp";
+import SonaliImage from "@/assets/Sonali.jpeg";
+import KennyImage from "@/assets/Kenny.jpeg";
+import AviadImage from "@/assets/Avaid.jpeg";
+import IniImage from "@/assets/Indi.jpeg";
+import SethImage from "@/assets/Seth.png";
+import JohnImage from "@/assets/John.png";
+
+// Create images array for the sphere
+const baseImages: ImageData[] = [
+  { id: 'slide1', src: slide1, alt: 'Workshop Slide 1', title: 'Workshop Session', description: 'Interactive workshop session' },
+  { id: 'slide2', src: slide2, alt: 'Workshop Slide 2', title: 'Design Workshop', description: 'Hands-on design activities' },
+  { id: 'slide3', src: slide3, alt: 'Workshop Slide 3', title: 'Learning Session', description: 'Collaborative learning' },
+  { id: 'workshop1', src: workshop1, alt: 'Workshop Photo 1', title: 'Workshop Gallery', description: 'Participants working together' },
+  { id: 'workshop2', src: workshop2, alt: 'Workshop Photo 2', title: 'Workshop Gallery', description: 'Design activities in progress' },
+  { id: 'workshop3', src: workshop3, alt: 'Workshop Photo 3', title: 'Workshop Gallery', description: 'Team collaboration' },
+  { id: 'linda', src: LindaImage, alt: 'Linda', title: 'Linda', description: 'Principal Product Designer, JPMorgan Chase' },
+  { id: 'sneh', src: SnehImage, alt: 'Sneh', title: 'Sneh', description: 'UX Designer' },
+  { id: 'sonali', src: SonaliImage, alt: 'Sonali', title: 'Sonali', description: 'Sr. Product Designer, JPMorgan Chase' },
+  { id: 'kenny', src: KennyImage, alt: 'Kenneth Hargrove', title: 'Kenneth Hargrove', description: 'Product Designer @CoStar' },
+  { id: 'aviad', src: AviadImage, alt: 'Aviad', title: 'Aviad', description: 'Product Designer' },
+  { id: 'ini', src: IniImage, alt: 'ÌníOlúwa', title: 'ÌníOlúwa', description: 'Senior Product Designer, Intercom' },
+  { id: 'seth', src: SethImage, alt: 'Seth', title: 'Seth', description: 'Guest Speaker' },
+  { id: 'john', src: JohnImage, alt: 'John Rodrigues', title: 'John Rodrigues', description: 'Sr. Product Designer, Founder' },
+];
+
+const headerImages: ImageData[] = [
+  ...baseImages,
+  ...baseImages.map((img, idx) => ({ ...img, id: `${img.id}-dup1-${idx}` })),
+  ...baseImages.map((img, idx) => ({ ...img, id: `${img.id}-dup2-${idx}` })),
+  ...baseImages.map((img, idx) => ({ ...img, id: `${img.id}-dup3-${idx}` })),
+  ...baseImages.slice(0, 12).map((img, idx) => ({ ...img, id: `${img.id}-dup4-${idx}` })),
+  ...baseImages.slice(0, 8).map((img, idx) => ({ ...img, id: `${img.id}-dup5-${idx}` }))
+];
 
 export const AIHeaderSection = () => {
   const stars = Array.from({ length: 5 });
@@ -21,55 +62,55 @@ export const AIHeaderSection = () => {
       
       <div className="px-4 md:px-10 lg:px-[120px] relative z-10 w-full">
         <div className="max-w-[1200px] mx-auto">
-          <div className="grid lg:grid-cols-[minmax(0,_1fr)_minmax(280px,_420px)] gap-12 items-center">
-            <div>
-            {/* Local keyframes for subtle star wave */}
-            <style>
-              {`
-                @keyframes starWave { 
-                  0%, 100% { transform: translateY(0); }
-                  50% { transform: translateY(-2px); }
+          {/* Local keyframes for subtle star wave */}
+          <style>
+            {`
+              @keyframes starWave { 
+                0%, 100% { transform: translateY(0); }
+                50% { transform: translateY(-2px); }
+              }
+              @keyframes iconPulse { 
+                0%, 100% { transform: scale(1); opacity: 0.6; }
+                50% { transform: scale(1.1); opacity: 0.8; }
+              }
+              @keyframes blurEntrance {
+                0% {
+                  opacity: 0;
+                  filter: blur(10px);
+                  transform: translateY(10px);
                 }
-                @keyframes iconPulse { 
-                  0%, 100% { transform: scale(1); opacity: 0.6; }
-                  50% { transform: scale(1.1); opacity: 0.8; }
+                100% {
+                  opacity: 1;
+                  filter: blur(0);
+                  transform: translateY(0);
                 }
-                @keyframes blurEntrance {
-                  0% {
-                    opacity: 0;
-                    filter: blur(10px);
-                    transform: translateY(10px);
-                  }
-                  100% {
-                    opacity: 1;
-                    filter: blur(0);
-                    transform: translateY(0);
-                  }
+              }
+              @keyframes glowMove {
+                0%, 100% {
+                  transform: translate(0, 0) scale(1);
+                  opacity: 0.25;
                 }
-                @keyframes glowMove {
-                  0%, 100% {
-                    transform: translate(0, 0) scale(1);
-                    opacity: 0.25;
-                  }
-                  50% {
-                    transform: translate(20px, -30px) scale(1.1);
-                    opacity: 0.35;
-                  }
+                50% {
+                  transform: translate(20px, -30px) scale(1.1);
+                  opacity: 0.35;
                 }
-                @keyframes glowPulse {
-                  0%, 100% {
-                    transform: scale(1);
-                    opacity: 0.2;
-                  }
-                  50% {
-                    transform: scale(1.15);
-                    opacity: 0.3;
-                  }
+              }
+              @keyframes glowPulse {
+                0%, 100% {
+                  transform: scale(1);
+                  opacity: 0.2;
                 }
-              `}
-            </style>
+                50% {
+                  transform: scale(1.15);
+                  opacity: 0.3;
+                }
+              }
+            `}
+          </style>
 
-            <div className="flex items-center gap-2 mb-6">
+          {/* Centered Content */}
+          <div className="text-center mb-6 md:mb-8">
+            <div className="flex items-center justify-center gap-2 mb-6">
               <span className="text-xs font-medium tracking-wider uppercase flex items-center gap-1">
                 {stars.map((_, i) => (
                   <span
@@ -84,16 +125,16 @@ export const AIHeaderSection = () => {
               </span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-[40px] font-medium mb-4 tracking-tight leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium mb-4 tracking-tight leading-relaxed text-center">
               AI Mastery For Designers
               <span className="block">and Product Leaders Cohort</span>
             </h1>
 
-            <p className="text-lg md:text-medium text-white/60 font-light mb-14 leading-relaxed max-w-3xl">
+            <p className="text-lg md:text-medium text-white/60 font-light mb-8 leading-relaxed max-w-3xl mx-auto">
               Stay ahead and upskill today. Learn how to design AI apps and systems.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 variant="cta" 
                 size="lg"
@@ -124,60 +165,23 @@ export const AIHeaderSection = () => {
                 </a>
               </Button>
             </div>
+          </div>
 
-            {/* KPIs */}
-            <div className="flex justify-start mt-12 md:mt-16">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-8 md:gap-x-12 md:gap-y-0">
-                <div 
-                  className="flex flex-col items-start text-left"
-                  style={{ animation: "blurEntrance 0.8s ease-out forwards", animationDelay: "0.1s", opacity: 0 }}
-                >
-                  <div className="mb-2">
-                    <span className="text-2xl md:text-3xl font-semibold text-white/80">6+</span>
-                  </div>
-                  <span className="text-sm md:text-xs text-white/60 leading-tight">
-                    Completed<br />Design Projects
-                  </span>
-                </div>
-                
-                <div 
-                  className="flex flex-col items-start text-left"
-                  style={{ animation: "blurEntrance 0.8s ease-out forwards", animationDelay: "0.2s", opacity: 0 }}
-                >
-                  <div className="mb-2">
-                    <span className="text-2xl md:text-3xl font-semibold text-white/80">3</span>
-                  </div>
-                  <span className="text-sm md:text-xs text-white/60 leading-tight">Cohorts Ran</span>
-                </div>
-                
-                <div 
-                  className="flex flex-col items-start text-left"
-                  style={{ animation: "blurEntrance 0.8s ease-out forwards", animationDelay: "0.3s", opacity: 0 }}
-                >
-                  <div className="mb-2">
-                    <span className="text-2xl md:text-3xl font-semibold text-white/80">22</span>
-                  </div>
-                  <span className="text-sm md:text-xs text-white/60 leading-tight">Community<br />Members</span>
-                </div>
-                
-                <div 
-                  className="flex flex-col items-start text-left"
-                  style={{ animation: "blurEntrance 0.8s ease-out forwards", animationDelay: "0.4s", opacity: 0 }}
-                >
-                  <div className="mb-2">
-                    <span className="text-2xl md:text-3xl font-semibold text-white/80">5/5</span>
-                  </div>
-                  <span className="text-sm md:text-xs text-white/60 leading-tight">
-                    Cohort Rating<br />on Maven
-                  </span>
-                </div>
-              </div>
-            </div>
-            </div>
-
-            <div className="hidden lg:flex justify-center relative">
+          {/* SphereImageGrid at bottom, top half visible */}
+          <div className="relative w-full flex justify-center overflow-hidden" style={{ height: '400px' }}>
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2" style={{ transform: 'translateX(-50%) translateY(55%)' }}>
               <div className="absolute -inset-8 bg-[radial-gradient(circle,_rgba(46,114,255,0.18)_0%,_rgba(0,0,0,0)_70%)] blur-3xl" aria-hidden="true" />
-              <ParticleSphere size="sm" className="relative z-10 max-w-[320px]" />
+              <div className="relative z-10">
+                <SphereImageGrid
+                  images={headerImages}
+                  containerSize={800}
+                  sphereRadius={320}
+                  autoRotate={true}
+                  autoRotateSpeed={0.2}
+                  dragSensitivity={0.8}
+                  baseImageScale={0.12}
+                />
+              </div>
             </div>
           </div>
         </div>

@@ -18,14 +18,16 @@ export default function LogoCloud() {
   ];
 
   return (
-    <section className="py-16 bg-black overflow-hidden">
-      <div className="px-4 md:px-10 lg:px-[120px]">
+    <section className="py-16 bg-black overflow-hidden relative">
+      {/* Black fade overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black pointer-events-none z-10" />
+      
+      <div className="px-4 md:px-10 lg:px-[120px] relative z-20">
         <div className="max-w-[1200px] mx-auto">
-          <div className="flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-12">
-            <h2 className="text-sm font-medium text-white/60 min-w-fit">Learn Best AI Tools<br />In The Industry</h2>
-            <div className="h-px w-px bg-white/20 hidden md:block flex-shrink-0" />
+          <div className="flex flex-col items-center gap-8 md:gap-12">
+            <h2 className="text-sm font-medium text-white/60 text-center">Learn Best AI Tools In The Industry</h2>
             
-            <div className="relative flex-1 overflow-hidden">
+            <div className="relative w-full overflow-hidden flex justify-center">
               <div className="flex gap-x-8 gap-y-4 animate-scroll-left hover:[animation-play-state:paused] items-center">
                 {logos.concat(logos).map((item, index) => (
                   item.src ? (

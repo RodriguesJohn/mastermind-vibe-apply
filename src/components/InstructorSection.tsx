@@ -1,6 +1,10 @@
 import { Card } from "@/components/ui/card";
 import { Linkedin } from "lucide-react";
 import instructorImage from "@/assets/John.png";
+import appleLogo from "@/assets/Apple.png";
+import googleLogo from "@/assets/Google.svg.png";
+import citiLogo from "@/assets/Citi.svg.png";
+import chaseLogo from "@/assets/Chase.png";
 
 export const InstructorSection = () => {
   return (
@@ -26,16 +30,24 @@ export const InstructorSection = () => {
 
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Sr. Product Designer at JPMorgan | Founder of AI Design Academy. John Rodrigues is a Senior Product Designer, AI strategist, and author of The AI Design Playbook, a resource trusted by over 1,500 industry leaders. He is the founder of AI Design Academy.
+                  Sr. Product Designer at JPMorgan | Founder of AI Design Academy. John Rodrigues is a Senior Product Designer, AI strategist, and author of The AI Design Playbook, a resource trusted by over 1,500 industry leaders.
                 </p>
 
                 <p>
-                  John currently leads AI design initiatives at JPMorgan Chase and has previously worked with Citi Bank. With over a decade of experience in product design, he holds a Master's degree in Interaction Design, a Bachelor's in Engineering, and an AI certification from Stanford University.
+                  With over a decade of experience in product design, he leads AI design initiatives at JPMorgan Chase and holds a Master's degree in Interaction Design, a Bachelor's in Engineering, and an AI certification from Stanford University.
                 </p>
+              </div>
 
-                <p>
-                  Recognized as one of the Top 10 mentors on ADPList, John has built a loyal community of over 10,000 followers on LinkedIn and authored a book on design career. His work bridges design, technology, and AI, helping the next generation of designers stay ahead in a rapidly evolving industry.
+              <div>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Publication trusted by companies
                 </p>
+                <div className="flex items-center gap-8 flex-wrap opacity-80">
+                  <img className="h-6 w-fit opacity-80" src={appleLogo} alt="Apple" height="24" width="auto" />
+                  <img className="h-6 w-fit opacity-80" src={googleLogo} alt="Google" height="24" width="auto" />
+                  <img className="h-6 w-fit opacity-80" src={citiLogo} alt="Citi" height="24" width="auto" />
+                  <img className="h-6 w-fit opacity-80" src={chaseLogo} alt="Chase" height="24" width="auto" />
+                </div>
               </div>
             </div>
 
@@ -47,8 +59,8 @@ export const InstructorSection = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
+              </div>
             </div>
-          </div>
           
           {/* Profile Bar with Gradient */}
           <div className="mt-12 pt-8 border-t border-border/40 relative">

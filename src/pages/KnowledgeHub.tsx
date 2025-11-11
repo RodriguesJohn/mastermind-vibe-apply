@@ -63,7 +63,7 @@ const KnowledgeHub = () => {
       setActiveView("category");
     }
   }, [searchParams]);
-  const [chatOpen, setChatOpen] = useState(true);
+  const [chatOpen, setChatOpen] = useState(false);
   const [chatMessages, setChatMessages] = useState<ChatMessage[]>([
     {
       id: 1,
@@ -1250,7 +1250,13 @@ const KnowledgeHub = () => {
                       <p className="text-xs text-white/60">Ask me anything</p>
                     </div>
                   </div>
-                  {/* Chat remains open by default; toggle button removed */}
+                  <button
+                    onClick={() => setChatOpen(false)}
+                    className="w-8 h-8 flex items-center justify-center rounded hover:bg-white/10 transition-colors"
+                    aria-label="Close chat"
+                  >
+                    <X className="w-5 h-5 text-white/60" />
+                  </button>
                 </div>
 
                 {/* Alert Banner */}
@@ -1348,6 +1354,26 @@ const KnowledgeHub = () => {
                 </div>
               </div>
             </motion.aside>
+          )}
+        </AnimatePresence>
+
+        {/* Floating Chat Button */}
+        <AnimatePresence>
+          {!chatOpen && (
+            <motion.button
+              initial={{ y: 100, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: 100, opacity: 0 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              onClick={() => setChatOpen(true)}
+              className="fixed bottom-24 md:bottom-6 right-4 md:right-6 z-50 flex items-center gap-3 px-4 md:px-6 py-3 md:py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 rounded-full text-white font-medium transition-all hover:scale-105 shadow-lg"
+            >
+              <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-white/10 flex items-center justify-center overflow-hidden flex-shrink-0">
+                <img src={JohnImage} alt="John" className="w-full h-full object-cover" />
+              </div>
+              <span className="hidden md:inline">Chat with John.ai</span>
+              <MessageSquare className="w-5 h-5 md:hidden" />
+            </motion.button>
           )}
         </AnimatePresence>
 
