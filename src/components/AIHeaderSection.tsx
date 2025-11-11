@@ -125,7 +125,7 @@ export const AIHeaderSection = () => {
               </span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium mb-4 tracking-tight leading-tight text-center">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium mb-4 tracking-tight leading-tight text-center">
               AI Mastery For Designers
               <span className="block">and Product Leaders Cohort</span>
             </h1>
