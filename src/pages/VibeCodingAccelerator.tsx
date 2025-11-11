@@ -158,7 +158,7 @@ const VibeCodingAccelerator = () => {
             <div className="absolute inset-0 z-0">
               <DotScreenShader />
                   </div>
-            
+
             <style>{`
               @keyframes bounceAround {
                 0%, 100% {
@@ -201,12 +201,13 @@ const VibeCodingAccelerator = () => {
                   <img 
                     src={CursorLogo} 
                     alt="Cursor" 
-                    className="w-12 h-12 sm:w-16 sm:h-16 opacity-80"
+                    className="w-12 sm:w-16 opacity-80 object-contain flex-shrink-0"
                     style={{
                       animation: 'bounceAround 15s ease-in-out infinite',
+                      height: 'auto',
                     }}
                   />
-                </div>
+                    </div>
                 <h1 className="text-4xl font-normal leading-tight sm:text-5xl lg:text-6xl relative">
                   Vibe Coding 101 with Cursor
                   </h1>
