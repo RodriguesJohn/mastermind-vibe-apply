@@ -184,7 +184,7 @@ const DesignEngineering = () => {
                 <h1 
                   className="font-medium mb-4 tracking-tight text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
                 >
-                  Level Up Your Design Engineering Skills.
+                  Level Up Your<br className="hidden lg:block" /> Design Engineering Skills.
                 </h1>
 
                 <p className="text-lg md:text-xl text-white/70 font-light mb-8 leading-relaxed max-w-3xl mx-auto text-center">
