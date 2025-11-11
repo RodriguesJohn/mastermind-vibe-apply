@@ -1,4 +1,4 @@
-// Static imports for better compatibility with build tools
+// Import HC images from assets folder
 import headerCircleImages from "@/assets/HeaderCircle";
 
 // Position offsets for organic cloud-like arrangement
