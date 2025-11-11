@@ -184,11 +184,11 @@ const DesignEngineering = () => {
                 <h1 
                   className="font-medium mb-4 tracking-tight text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
                 >
-                  Level Up Your<br className="hidden lg:block" /> Design Engineering Skills.
+                  Become a<br /> Design Engineer
                 </h1>
 
                 <p className="text-lg md:text-xl text-white/70 font-light mb-8 leading-relaxed max-w-3xl mx-auto text-center">
-                  Learn to code interfaces, build real projects, and accelerate your<br />journey from designer to design engineer.
+                  Learn how to design and code products with high craft.<br />Don't just design but build products.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 mb-12 justify-center">
@@ -199,7 +199,7 @@ const DesignEngineering = () => {
                     asChild
                   >
                     <a href="https://tally.so/r/RGKRBp" target="_blank" rel="noopener noreferrer">
-                      Apply today
+                      Join the waitlist
                       <ArrowRight className="group-hover:translate-x-1 transition-transform" />
                     </a>
                   </Button>
@@ -441,9 +441,9 @@ const DesignEngineering = () => {
                       <p className="mt-2 text-lg text-white/70">Unlock new possibilities and become a design engineer.</p>
                       <div className="mb-6 mt-12">
                         <span className="inline-block text-6xl font-semibold text-white">
-                          <span className="text-4xl">$</span>99
+                          <span className="text-4xl">$</span>999
                         </span>
-                        <p className="text-white/60 text-sm mt-2">per month</p>
+                        <p className="text-white/60 text-sm mt-2">one-time payment</p>
                       </div>
 
                       <div className="flex justify-start">
@@ -453,12 +453,11 @@ const DesignEngineering = () => {
                           variant="cta"
                         >
                           <a href="https://tally.so/r/RGKRBp" target="_blank" rel="noopener noreferrer">
-                            Apply today
+                            Join the waitlist
                           </a>
                         </Button>
                       </div>
 
-                      <p className="text-white/60 mt-12 text-sm">Cancel anytime. No hidden fees.</p>
                     </div>
                     <div className="relative pt-0 md:pt-4 md:pl-12">
                       <ul
@@ -470,7 +469,7 @@ const DesignEngineering = () => {
                           'Get access to hands-on practical courses all in one place with structured learning',
                           'Private community of design engineers',
                           'Self-paced learning',
-                          'Gamified learning experience with leaderboard to unlock perks'
+                          'Gamified learning experience with leaderboard'
                         ].map((item, index) => (
                           <li
                             key={index}
