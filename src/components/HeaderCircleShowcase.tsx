@@ -1,9 +1,5 @@
-// Use import.meta.glob to dynamically import all images from HeaderCircle folder
-const imageModules = import.meta.glob("@/assets/HeaderCircle/*.{png,jpeg,jpg}", { eager: true });
-
-// Convert the glob result to an array of image URLs
-// Each module has a default export which is the image URL
-const headerCircleImages = Object.values(imageModules).map((module: any) => module.default) as string[];
+// Static imports for better compatibility with build tools
+import headerCircleImages from "@/assets/HeaderCircle";
 
 // Position offsets for organic cloud-like arrangement
 const positions = [

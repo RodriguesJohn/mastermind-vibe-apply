@@ -1,17 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import SphereImageGrid, { ImageData } from "./SphereImageGrid";
+import headerCircleImages from "@/assets/HeaderCircle";
 
-// Use import.meta.glob to dynamically import all images from HeaderCircle folder
-const headerCircleModules = import.meta.glob("@/assets/HeaderCircle/*.{png,jpeg,jpg}", { eager: true });
-
-// Convert the glob result to ImageData array
-const headerCircleImages: ImageData[] = Object.entries(headerCircleModules).map(([path, module]: [string, any], index) => {
-  const filename = path.split('/').pop() || `image-${index}`;
+// Convert the imported images to ImageData array
+const headerCircleImageData: ImageData[] = headerCircleImages.map((src, index) => {
+  const filename = src.split('/').pop() || `image-${index}`;
   const nameWithoutExt = filename.replace(/\.[^/.]+$/, '');
   return {
     id: `header-circle-${index}`,
-    src: module.default,
+    src: src,
     alt: nameWithoutExt,
     title: nameWithoutExt,
     description: 'Community member'
@@ -19,7 +17,7 @@ const headerCircleImages: ImageData[] = Object.entries(headerCircleModules).map(
 });
 
 // Create baseImages from HeaderCircle images
-const baseImages: ImageData[] = headerCircleImages;
+const baseImages: ImageData[] = headerCircleImageData;
 
 const headerImages: ImageData[] = [
   ...baseImages,
