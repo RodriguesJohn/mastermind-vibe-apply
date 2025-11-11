@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Helmet } from "react-helmet";
 import { CalendarDays, Clock, Users, Play, Sparkles, CheckCircle2, Video, BookmarkCheck, ShieldCheck, ArrowRight, BookOpen, Rocket, Code2, Hammer } from "lucide-react";
+import { DotScreenShader } from "@/components/DotScreenShader";
 import JohnImage from "@/assets/John.png";
 import JPMorganLogo from "@/assets/Chase.png";
 import IntercomLogo from "@/assets/intercom-1-logo-png-transparent.png";
@@ -149,39 +150,39 @@ const VibeCodingAccelerator = () => {
       <div className="min-h-screen bg-black text-white">
         <Navigation />
         
-        {/* Temporarily hiding all sections except header */}
-        {false && <main>
+        <main>
           {/* Hero */}
-          <section className="relative overflow-hidden border-b border-white/10 bg-gradient-to-b from-white/10 via-black to-black py-24 sm:py-28">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.2),_transparent_55%)] blur-3xl opacity-60" />
+          <section className="relative overflow-hidden border-b border-white/10 bg-black py-32 sm:py-40 md:py-48">
+            {/* Shader background */}
+            <div className="absolute inset-0 z-0">
+              <DotScreenShader />
+            </div>
             <div className="relative z-10 mx-auto max-w-4xl px-6 lg:px-10">
               <div className="space-y-6 text-center">
-                <h1 className="text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
-                  Vibe Coding 101
-                  <span className="block">Beginner Course</span>
+                <h1 className="text-4xl font-normal leading-tight sm:text-5xl lg:text-6xl">
+                  Vibe Coding 101 with Cursor
                 </h1>
                 <p className="text-lg text-white/70 sm:text-xl mx-auto max-w-2xl">
-                  Become the design engineer every team wants. Learn end-to-end vibe coding workflow and
-                  ship AI-powered products with confidence.
+                  Where to Get Started with Vibe Coding, what tools to use, look into the project demos behind the scenes, and build your first Vibe Coding prototype.
                 </p>
                 <div className="flex flex-col gap-3 sm:flex-row justify-center">
                   <Button variant="cta" size="xl" asChild>
                     <a href="https://maven.com/productlearnio/aiproductdesignmasterycohort" target="_blank" rel="noopener noreferrer">
-                      Enroll Today
-                      <ArrowRight className="h-5 w-5" />
-                      </a>
-                    </Button>
-                  <Button variant="outline" size="xl" className="border-white/30 text-white hover:bg-white/10" asChild>
-                    <a href="https://maven.com/productlearnio/vibe-coding-workshop" target="_blank" rel="noopener noreferrer">
-                      Join the live workshop
+                      Join the Live Workshop
                       <Play className="h-5 w-5" />
                     </a>
-                    </Button>
+                  </Button>
+                  <Button variant="outline" size="xl" className="border-white/30 text-white hover:bg-white/10">
+                    Take the Self-Paced Course
+                    <ArrowRight className="h-5 w-5" />
+                  </Button>
                 </div>
             </div>
                         </div>
           </section>
 
+          {/* Hide all other sections */}
+          {false && <>
           {/* Video Section */}
           <section className="relative border-b border-white/10 bg-black py-20 overflow-hidden">
             {/* Colorful shader effects */}
@@ -688,10 +689,11 @@ const VibeCodingAccelerator = () => {
               </div>
                 </div>
               </section>
-            </main>}
+          </>}
+            </main>
           </div>
-        </>
-      );
-    };
+    </>
+  );
+};
 
 export default VibeCodingAccelerator;
