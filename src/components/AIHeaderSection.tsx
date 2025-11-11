@@ -1,38 +1,25 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import SphereImageGrid, { ImageData } from "./SphereImageGrid";
-import slide1 from "@/assets/Slide1.png";
-import slide2 from "@/assets/Slide2.png";
-import slide3 from "@/assets/Slide3.png";
-import workshop1 from "@/assets/workshop-1.jpg";
-import workshop2 from "@/assets/workshop-2.jpg";
-import workshop3 from "@/assets/workshop-3.jpg";
-import LindaImage from "@/assets/Linda.jpeg";
-import SnehImage from "@/assets/Sneh.webp";
-import SonaliImage from "@/assets/Sonali.jpeg";
-import KennyImage from "@/assets/Kenny.jpeg";
-import AviadImage from "@/assets/Avaid.jpeg";
-import IniImage from "@/assets/Indi.jpeg";
-import SethImage from "@/assets/Seth.png";
-import JohnImage from "@/assets/John.png";
 
-// Create images array for the sphere
-const baseImages: ImageData[] = [
-  { id: 'slide1', src: slide1, alt: 'Workshop Slide 1', title: 'Workshop Session', description: 'Interactive workshop session' },
-  { id: 'slide2', src: slide2, alt: 'Workshop Slide 2', title: 'Design Workshop', description: 'Hands-on design activities' },
-  { id: 'slide3', src: slide3, alt: 'Workshop Slide 3', title: 'Learning Session', description: 'Collaborative learning' },
-  { id: 'workshop1', src: workshop1, alt: 'Workshop Photo 1', title: 'Workshop Gallery', description: 'Participants working together' },
-  { id: 'workshop2', src: workshop2, alt: 'Workshop Photo 2', title: 'Workshop Gallery', description: 'Design activities in progress' },
-  { id: 'workshop3', src: workshop3, alt: 'Workshop Photo 3', title: 'Workshop Gallery', description: 'Team collaboration' },
-  { id: 'linda', src: LindaImage, alt: 'Linda', title: 'Linda', description: 'Principal Product Designer, JPMorgan Chase' },
-  { id: 'sneh', src: SnehImage, alt: 'Sneh', title: 'Sneh', description: 'UX Designer' },
-  { id: 'sonali', src: SonaliImage, alt: 'Sonali', title: 'Sonali', description: 'Sr. Product Designer, JPMorgan Chase' },
-  { id: 'kenny', src: KennyImage, alt: 'Kenneth Hargrove', title: 'Kenneth Hargrove', description: 'Product Designer @CoStar' },
-  { id: 'aviad', src: AviadImage, alt: 'Aviad', title: 'Aviad', description: 'Product Designer' },
-  { id: 'ini', src: IniImage, alt: 'ÌníOlúwa', title: 'ÌníOlúwa', description: 'Senior Product Designer, Intercom' },
-  { id: 'seth', src: SethImage, alt: 'Seth', title: 'Seth', description: 'Guest Speaker' },
-  { id: 'john', src: JohnImage, alt: 'John Rodrigues', title: 'John Rodrigues', description: 'Sr. Product Designer, Founder' },
-];
+// Use import.meta.glob to dynamically import all images from HeaderCircle folder
+const headerCircleModules = import.meta.glob("@/assets/HeaderCircle/*.{png,jpeg,jpg}", { eager: true });
+
+// Convert the glob result to ImageData array
+const headerCircleImages: ImageData[] = Object.entries(headerCircleModules).map(([path, module]: [string, any], index) => {
+  const filename = path.split('/').pop() || `image-${index}`;
+  const nameWithoutExt = filename.replace(/\.[^/.]+$/, '');
+  return {
+    id: `header-circle-${index}`,
+    src: module.default,
+    alt: nameWithoutExt,
+    title: nameWithoutExt,
+    description: 'Community member'
+  };
+});
+
+// Create baseImages from HeaderCircle images
+const baseImages: ImageData[] = headerCircleImages;
 
 const headerImages: ImageData[] = [
   ...baseImages,

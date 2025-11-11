@@ -15,6 +15,7 @@ import VibeCodingAccelerator from "./pages/VibeCodingAccelerator";
 import AIDesignMasterclass from "./pages/AIDesignMasterclass";
 import KnowledgeHub from "./pages/KnowledgeHub";
 import DesignEngineering from "./pages/DesignEngineering";
+import VibeCodingWeekendWorkshop from "./pages/VibeCodingWeekendWorkshop";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,13 +30,14 @@ const App = () => (
           <Route path="/" element={<Cohort />} />
           <Route path="/coaching" element={<Consulting />} />
           <Route path="/course" element={<Course />} />
-          <Route path="/vibe-coding-accelerator" element={<VibeCodingAccelerator />} />
+          <Route path="/vibe-coding-course" element={<VibeCodingAccelerator />} />
           {/* Membership page hidden for now */}
           {/* <Route path="/index" element={<Index />} /> */}
           <Route path="/ai-crash-course" element={<AICrashCourse />} />
           <Route path="/guide" element={<AIDesignMasterclass />} />
           <Route path="/knowledge-hub" element={<KnowledgeHub />} />
           <Route path="/design-engineering" element={<DesignEngineering />} />
+          <Route path="/weekend-workshop" element={<VibeCodingWeekendWorkshop />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/tools" element={<Tools />} />
           {/* <Route path="/talent-pool" element={<TalentPool />} /> */}

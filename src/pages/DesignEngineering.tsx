@@ -95,8 +95,8 @@ const DesignEngineering = () => {
     },
     {
       number: "11",
-      title: "Convert Designs with Shift",
-      description: "Learn Shift to convert Figma designs to production-ready React code. Master the design-to-code workflow and component generation.",
+      title: "Learn SwiftUI",
+      description: "Master SwiftUI to build native iOS and macOS applications. Learn declarative UI development, state management, and modern iOS design patterns.",
       colors: ["#2ECC71", "#58D68D", "#A9DFBF", "#E8F8F5"],
       logos: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/code/code-original.svg"],
       status: "coming up next"
@@ -111,7 +111,7 @@ const DesignEngineering = () => {
     },
     {
       number: "13",
-      title: "Build Project and Project Tutorials",
+      title: "UI and Visual Craft",
       description: "Build complete projects from start to finish. Follow step-by-step tutorials and create portfolio-worthy applications.",
       colors: ["#3498DB", "#5DADE2", "#85C1E9", "#AED6F1"],
       logos: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/code/code-original.svg"],
@@ -119,8 +119,16 @@ const DesignEngineering = () => {
     },
     {
       number: "14",
-      title: "Unlock Freelance Contract and New Roles Opportunities",
-      description: "Learn how to find and secure freelance contracts and new role opportunities. Get strategies for networking, portfolio presentation, and landing high-paying design engineering positions.",
+      title: "Portfolio Preparation",
+      description: "Learn how to showcase your design engineering skills effectively. Build a compelling portfolio that highlights your projects and demonstrates your technical abilities.",
+      colors: ["#E74C3C", "#EC7063", "#F1948A", "#F5B7B1"],
+      logos: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/code/code-original.svg"],
+      status: "coming up next"
+    },
+    {
+      number: "15",
+      title: "Advanced Design Engineering Techniques",
+      description: "Explore advanced techniques and best practices in design engineering. Learn to build complex interfaces, optimize performance, and create scalable design systems.",
       colors: ["#16A085", "#1ABC9C", "#48C9B0", "#A3E4D7"],
       logos: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/code/code-original.svg"],
       status: "coming up next"
@@ -145,8 +153,8 @@ const DesignEngineering = () => {
     },
     {
       icon: Trophy,
-      title: "Gamified Experience",
-      description: "Rise up the leaderboard, unlock new opportunities, and track your progress. Stay motivated with achievements, badges, and a competitive learning environment.",
+      title: "Portfolio Development",
+      description: "Build a standout portfolio that showcases your design engineering skills. Learn how to present your projects effectively and demonstrate your capabilities.",
     },
   ];
 
@@ -163,28 +171,28 @@ const DesignEngineering = () => {
         <main>
           {/* Hero Section */}
           <section className="relative py-16 md:py-24 overflow-hidden bg-black text-white border-b border-white/10">
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-primary/10 via-black to-black" />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(59,130,246,0.15)_0%,_rgba(0,0,0,0)_70%)] blur-3xl" />
             
             <div className="px-4 md:px-10 lg:px-[120px] relative z-10 w-full">
               <div className="max-w-[1200px] mx-auto">
-                <div className="flex items-center gap-2 mb-6">
+                <div className="flex items-center justify-center gap-2 mb-6">
                   <span className="text-xs text-white/60 font-medium tracking-wider uppercase">
                     Design Engineering Course
                   </span>
                 </div>
 
                 <h1 
-                  className="font-medium mb-4 tracking-tight"
-                  style={{ fontSize: '48px', lineHeight: '1.2' }}
+                  className="font-medium mb-4 tracking-tight text-center text-5xl sm:text-6xl md:text-7xl lg:text-8xl"
                 >
-                  Become a Design Engineer
+                  Become an AI
+                  <span className="block">Design Engineer</span>
                 </h1>
 
-                <p className="text-lg md:text-xl text-white/70 font-light mb-8 leading-relaxed max-w-3xl">
-                  The future belongs to designers who can build. Master the foundations, learn to code, and start shipping production-ready applications with confidence.
+                <p className="text-lg md:text-xl text-white/70 font-light mb-8 leading-relaxed max-w-3xl mx-auto text-center">
+                  Master the foundations, learn to code beautiful interfaces, and become a next-generation AI Design Engineer through this comprehensive program.
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-4 mb-12">
+                <div className="flex flex-col sm:flex-row gap-4 mb-12 justify-center">
                   <Button 
                     variant="cta" 
                     size="lg"
@@ -206,55 +214,6 @@ const DesignEngineering = () => {
                       Login
                     </a>
                   </Button>
-                </div>
-
-                {/* Technology Logos */}
-                <div className="pt-8 border-t border-white/10">
-                  <div className="flex items-center gap-6 md:gap-8 flex-wrap opacity-60">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" className="h-6 w-auto object-contain" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" className="h-6 w-auto object-contain" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg" alt="CSS3" className="h-6 w-auto object-contain" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" className="h-6 w-auto object-contain" />
-                    <img src={tailwindLogo} alt="Tailwind CSS" className="h-6 w-auto object-contain" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" className="h-6 w-auto object-contain" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" className="h-6 w-auto object-contain" />
-                    <img src={cursorLogo} alt="Cursor" className="h-6 w-auto object-contain" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Video Section - Hidden for now */}
-          {/* <section className="relative py-12 md:py-16 overflow-hidden bg-black text-white border-b border-white/10">
-            <div className="px-4 md:px-10 lg:px-[120px] relative z-10 w-full">
-              <div className="max-w-[1200px] mx-auto">
-                <div className="relative aspect-video rounded-2xl overflow-hidden bg-white/5 border border-white/10 hover:border-primary/50 transition-colors group cursor-pointer">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-20 h-20 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/40 flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <Play className="w-8 h-8 text-primary ml-1" />
-                    </div>
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                </div>
-              </div>
-            </div>
-          </section> */}
-
-          {/* Overview Section */}
-          <section className="relative py-24 md:py-32 overflow-hidden bg-black text-white border-b border-white/10">
-            <div className="px-4 md:px-10 lg:px-[120px]">
-              <div className="max-w-[1200px] mx-auto">
-                <div className="text-center mb-16 space-y-4">
-                  <h2 
-                    className="font-medium tracking-tight"
-                    style={{ fontSize: '32px', lineHeight: '1.25' }}
-                  >
-                    Why Design Engineering?
-                  </h2>
-                  <p className="text-xl text-white/60 max-w-3xl mx-auto leading-relaxed">
-                    Many designers are stuck creating static mockups, waiting on developers, and unable to bring their ideas to life. This membership gives you access to tactical, practical coding skills designed for designers. With AI, the barrier to entry is getting lower—now is the right time to get started. Design engineers earn $200k–$400k, and there's a significant lack of talent in the market. This course will unlock that opportunity for you.
-                  </p>
                 </div>
               </div>
             </div>
@@ -287,6 +246,120 @@ const DesignEngineering = () => {
                     </Card>
                   ))}
                 </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Video Section - Hidden for now */}
+          {/* <section className="relative py-12 md:py-16 overflow-hidden bg-black text-white border-b border-white/10">
+            <div className="px-4 md:px-10 lg:px-[120px] relative z-10 w-full">
+              <div className="max-w-[1200px] mx-auto">
+                <div className="relative aspect-video rounded-2xl overflow-hidden bg-white/5 border border-white/10 hover:border-primary/50 transition-colors group cursor-pointer">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-20 h-20 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/40 flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <Play className="w-8 h-8 text-primary ml-1" />
+                    </div>
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                </div>
+              </div>
+            </div>
+          </section> */}
+
+          {/* Overview Section */}
+          <section className="relative py-12 md:py-16 overflow-hidden bg-black text-white border-b border-white/10">
+            <div className="px-4 md:px-10 lg:px-[120px]">
+              <div className="max-w-[1200px] mx-auto">
+                <div className="text-center mb-0">
+                  <h2 
+                    className="font-medium tracking-tight"
+                    style={{ fontSize: '32px', lineHeight: '1.25' }}
+                  >
+                    Why Design Engineering?
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Handwritten Card Section */}
+          <section className="relative py-8 bg-black border-b border-white/10">
+            <div className="px-4 md:px-10 lg:px-[120px]">
+              <div className="max-w-[1200px] mx-auto grid md:grid-cols-3 gap-8">
+                <motion.div
+                  initial={{ opacity: 0, rotate: -2 }}
+                  animate={{ opacity: 1, rotate: -1 }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                  className="relative max-w-md mx-auto"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-lg shadow-2xl transform rotate-[-1deg]" />
+                  <div className="relative bg-gradient-to-br from-yellow-50 to-yellow-100 p-8 md:p-12 rounded-lg shadow-2xl border-2 border-yellow-200/50 transform rotate-[1deg]">
+                    <div className="absolute top-4 right-4 w-12 h-12 opacity-10">
+                      <div className="w-full h-full border-2 border-yellow-300 rounded-full" />
+                    </div>
+                    <p 
+                      className="text-gray-800 text-lg md:text-xl leading-relaxed"
+                      style={{
+                        fontFamily: "'Kalam', 'Comic Sans MS', cursive",
+                        fontWeight: 400,
+                        letterSpacing: '0.02em',
+                        lineHeight: '1.8'
+                      }}
+                    >
+                      Many designers are stuck creating static mockups, waiting on developers, and unable to bring their ideas to life.
+                    </p>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, rotate: 1 }}
+                  animate={{ opacity: 1, rotate: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  className="relative max-w-md mx-auto"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-lg shadow-2xl transform rotate-[1deg]" />
+                  <div className="relative bg-gradient-to-br from-yellow-50 to-yellow-100 p-8 md:p-12 rounded-lg shadow-2xl border-2 border-yellow-200/50 transform rotate-[-1deg]">
+                    <div className="absolute top-4 right-4 w-12 h-12 opacity-10">
+                      <div className="w-full h-full border-2 border-yellow-300 rounded-full" />
+                    </div>
+                    <p 
+                      className="text-gray-800 text-lg md:text-xl leading-relaxed"
+                      style={{
+                        fontFamily: "'Kalam', 'Comic Sans MS', cursive",
+                        fontWeight: 400,
+                        letterSpacing: '0.02em',
+                        lineHeight: '1.8'
+                      }}
+                    >
+                      With AI, the barrier to entry is getting lower—now is the right time to get started.
+                    </p>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, rotate: -2 }}
+                  animate={{ opacity: 1, rotate: -1 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  className="relative max-w-md mx-auto"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-lg shadow-2xl transform rotate-[-1deg]" />
+                  <div className="relative bg-gradient-to-br from-yellow-50 to-yellow-100 p-8 md:p-12 rounded-lg shadow-2xl border-2 border-yellow-200/50 transform rotate-[1deg]">
+                    <div className="absolute top-4 right-4 w-12 h-12 opacity-10">
+                      <div className="w-full h-full border-2 border-yellow-300 rounded-full" />
+                    </div>
+                    <p 
+                      className="text-gray-800 text-lg md:text-xl leading-relaxed"
+                      style={{
+                        fontFamily: "'Kalam', 'Comic Sans MS', cursive",
+                        fontWeight: 400,
+                        letterSpacing: '0.02em',
+                        lineHeight: '1.8'
+                      }}
+                    >
+                      There's a significant demand for design engineers in the market.
+                    </p>
+                  </div>
+                </motion.div>
               </div>
             </div>
           </section>
@@ -339,17 +412,6 @@ const DesignEngineering = () => {
                         <div className="p-6 bg-white/5 -mt-6 pt-10 flex-1 flex flex-col">
                           <h3 className="text-lg font-semibold mb-3 text-white">{module.title}</h3>
                           <p className="text-white/60 text-sm leading-relaxed flex-1 mb-3">{module.description}</p>
-                          {module.status && (
-                            <div className="mt-auto pt-3">
-                              <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${
-                                module.status === "available"
-                                  ? "bg-green-500/20 text-green-400 border border-green-500/30"
-                                  : "bg-yellow-500/20 text-yellow-400 border border-yellow-500/30"
-                              }`}>
-                                {module.status === "available" ? "Available" : "Coming up next"}
-                              </span>
-                            </div>
-                          )}
                         </div>
                       </Card>
                     </motion.div>
@@ -382,8 +444,7 @@ const DesignEngineering = () => {
                         <span className="inline-block text-6xl font-semibold text-white">
                           <span className="text-4xl">$</span>99
                         </span>
-                        <span className="text-white/60 text-lg ml-2">/ month</span>
-                        <p className="text-white/60 text-sm mt-2">Soon it will be $149/month</p>
+                        <p className="text-white/60 text-sm mt-2">per month</p>
                       </div>
 
                       <div className="flex justify-start">
@@ -398,7 +459,7 @@ const DesignEngineering = () => {
                         </Button>
                       </div>
 
-                      <p className="text-white/60 mt-12 text-sm">Lock your price at $99/month. When the price increases, you'll stay at your initial rate.</p>
+                      <p className="text-white/60 mt-12 text-sm">Cancel anytime. No hidden fees.</p>
                     </div>
                     <div className="relative pt-0 md:pt-4 md:pl-12">
                       <ul
