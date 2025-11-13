@@ -441,7 +441,7 @@ const DesignEngineering = () => {
                       <p className="mt-2 text-lg text-white/70">Unlock new possibilities and become a design engineer.</p>
                       <div className="mb-6 mt-12">
                         <span className="inline-block text-6xl font-semibold text-white">
-                          <span className="text-4xl">$</span>999
+                          <span className="text-4xl">$</span>2499
                         </span>
                         <p className="text-white/60 text-sm mt-2">one-time payment</p>
                       </div>
