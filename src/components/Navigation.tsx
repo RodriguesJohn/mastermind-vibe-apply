@@ -64,11 +64,11 @@ export const Navigation = () => {
                     Consulting
                   </a>
                 </DropdownMenuItem>
-                <DropdownMenuItem asChild>
+                {/* <DropdownMenuItem asChild>
                   <a href="/tools" className="cursor-pointer">
                     Tools
                   </a>
-                </DropdownMenuItem>
+                </DropdownMenuItem> */}
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
@@ -112,9 +112,9 @@ export const Navigation = () => {
                 <a href="/coaching" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
                   Consulting
                 </a>
-                <a href="/tools" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
+                {/* <a href="/tools" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
                   Tools
-                </a>
+                </a> */}
 
                 <Button variant="cta" size="lg" className="mt-2" asChild onClick={() => setMobileMenuOpen(false)}>
                   <a href="https://maven.com/productlearnio/aiproductdesignmasterycohort" target="_blank" rel="noopener noreferrer">Apply Now</a>
