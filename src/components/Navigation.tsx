@@ -54,11 +54,11 @@ export const Navigation = () => {
                     Vibe Coding Course
                   </a>
                 </DropdownMenuItem>
-                <DropdownMenuItem asChild>
+                {/* <DropdownMenuItem asChild>
                   <a href="/design-engineering" className="cursor-pointer">
                     DX course
                   </a>
-                </DropdownMenuItem>
+                </DropdownMenuItem> */}
                 <DropdownMenuItem asChild>
                   <a href="/coaching" className="cursor-pointer">
                     Consulting
@@ -106,9 +106,9 @@ export const Navigation = () => {
                 <a href="/vibe-coding-course" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
                   Vibe Coding Course
                 </a>
-                <a href="/design-engineering" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
+                {/* <a href="/design-engineering" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
                   DX course
-                </a>
+                </a> */}
                 <a href="/coaching" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
                   Consulting
                 </a>
