@@ -79,13 +79,6 @@ const Cohort = () => {
           <CohortModulesSection />
           <InstructorSection />
 
-          {/* Customer Testimonials */}
-          <TestimonialSection
-            title="Guest Speakers"
-            subtitle="Learn directly from industry leaders and hear outcomes from designers who applied these methods at work."
-            testimonials={customerTestimonials}
-          />
-
           <PlaybookSection />
           <WorkshopGallerySection />
         </main>
