@@ -1,12 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Menu, ChevronDown } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -33,44 +27,9 @@ export const Navigation = () => {
             <a href="/guide" className="text-sm font-normal text-white hover:text-white/80 transition-colors">
               Guide
             </a>
-            <DropdownMenu>
-              <DropdownMenuTrigger className="text-sm font-normal hover:text-primary transition-colors flex items-center gap-1 outline-none">
-                More
-                <ChevronDown className="w-4 h-4" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-48">
-                {/* <DropdownMenuItem asChild>
-                  <a href="/vibe-coding-accelerator" className="cursor-pointer">
-                    Mastermind
-                  </a>
-                </DropdownMenuItem> */}
-                {/* <DropdownMenuItem asChild>
-                  <a href="/knowledge-hub" className="cursor-pointer">
-                    Knowledge Hub
-                  </a>
-                </DropdownMenuItem> */}
-                <DropdownMenuItem asChild>
-                  <a href="/vibe-coding-course" className="cursor-pointer">
-                    Vibe Coding Course
-                  </a>
-                </DropdownMenuItem>
-                {/* <DropdownMenuItem asChild>
-                  <a href="/design-engineering" className="cursor-pointer">
-                    DX course
-                  </a>
-                </DropdownMenuItem> */}
-                <DropdownMenuItem asChild>
-                  <a href="/coaching" className="cursor-pointer">
-                    Consulting
-                  </a>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <a href="/tools" className="cursor-pointer">
-                    Tools
-                  </a>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
+            <a href="/vibe-coding-course" className="text-sm font-normal hover:text-primary transition-colors">
+              Vibe Coding Course
+            </a>
           </div>
           
           {/* Header CTA removed per request */}
@@ -105,15 +64,6 @@ export const Navigation = () => {
                 </a> */}
                 <a href="/vibe-coding-course" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
                   Vibe Coding Course
-                </a>
-                {/* <a href="/design-engineering" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
-                  DX course
-                </a> */}
-                <a href="/coaching" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
-                  Consulting
-                </a>
-                <a href="/tools" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
-                  Tools
                 </a>
 
                 <Button variant="cta" size="lg" className="mt-2" asChild onClick={() => setMobileMenuOpen(false)}>
