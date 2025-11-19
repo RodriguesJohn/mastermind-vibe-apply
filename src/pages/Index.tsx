@@ -1,6 +1,7 @@
 import React from "react";
 import { Navigation } from "../components/Navigation";
 import { HeroSection } from "../components/HeroSection";
+import { TestimonialsSection } from "../components/TestimonialsSection";
 import { Helmet } from "react-helmet";
 
 const Index = () => {
@@ -19,22 +20,7 @@ const Index = () => {
         <main>
           <HeroSection />
           
-          {/* Video Section */}
-          <section className="relative py-12 md:py-16 overflow-hidden bg-black text-white border-b border-white/10">
-            <div className="px-4 md:px-10 lg:px-[120px] relative z-10 w-full">
-              <div className="max-w-[1200px] mx-auto">
-                <div className="relative aspect-video rounded-2xl overflow-hidden bg-white/5 border border-white/10">
-                  <iframe
-                    src="https://www.youtube.com/embed/aNNaVhnJdYc"
-                    title="AI Design Academy Video"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="absolute inset-0 w-full h-full"
-                  />
-                </div>
-              </div>
-            </div>
-          </section>
+          <TestimonialsSection />
           
           {/* Who is this for? Section */}
           <section className="py-24 px-4 md:px-10 lg:px-[120px] bg-card/30">
