@@ -28,7 +28,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Cohort />} />
-          <Route path="/coaching" element={<Consulting />} />
+          {/* <Route path="/coaching" element={<Consulting />} /> */}
           <Route path="/course" element={<Course />} />
           <Route path="/vibe-coding-course" element={<VibeCodingAccelerator />} />
           {/* Membership page hidden for now */}
@@ -39,7 +39,7 @@ const App = () => (
           <Route path="/design-engineering" element={<DesignEngineering />} />
           <Route path="/weekend-workshop" element={<VibeCodingWeekendWorkshop />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/tools" element={<Tools />} />
+          {/* <Route path="/tools" element={<Tools />} /> */}
           {/* <Route path="/talent-pool" element={<TalentPool />} /> */}
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
