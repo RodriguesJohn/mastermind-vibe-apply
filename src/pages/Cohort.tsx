@@ -42,17 +42,6 @@ const Cohort = () => {
           <AIHeaderSection />
           <CohortCompanyLogos />
 
-          {/* Video Section */}
-          <section className="relative py-12 md:py-16 overflow-hidden bg-black text-white border-b border-white/10">
-            <div className="px-4 md:px-10 lg:px-[120px] relative z-10 w-full">
-              <div className="max-w-[1200px] mx-auto">
-                <div className="relative aspect-video rounded-2xl overflow-hidden bg-white/5 border border-white/10">
-                  <iframe src="https://www.youtube.com/embed/aNNaVhnJdYc?rel=0&modestbranding=1" title="AI Design Academy Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen loading="lazy" frameBorder="0" className="absolute inset-0 w-full h-full" />
-                </div>
-              </div>
-            </div>
-          </section>
-
           <LogoCloud />
 
           <CohortOverviewSection />
