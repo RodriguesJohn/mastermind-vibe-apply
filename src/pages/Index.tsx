@@ -3,6 +3,7 @@ import { Navigation } from "../components/Navigation";
 import { HeroSection } from "../components/HeroSection";
 import { CohortTestimonialsSection } from "../components/CohortTestimonialsSection";
 import { TestimonialsSection } from "../components/TestimonialsSection";
+import CohortCompanyLogos from "../components/CohortCompanyLogos";
 import { Helmet } from "react-helmet";
 
 const Index = () => {
@@ -20,6 +21,8 @@ const Index = () => {
         <Navigation />
         <main>
           <HeroSection />
+          
+          <CohortCompanyLogos />
           
           <CohortTestimonialsSection />
           
