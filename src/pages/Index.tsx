@@ -2,6 +2,7 @@ import React from "react";
 import { Navigation } from "../components/Navigation";
 import { HeroSection } from "../components/HeroSection";
 import { CohortTestimonialsSection } from "../components/CohortTestimonialsSection";
+import { TestimonialsSection } from "../components/TestimonialsSection";
 import { Helmet } from "react-helmet";
 
 const Index = () => {
@@ -21,6 +22,8 @@ const Index = () => {
           <HeroSection />
           
           <CohortTestimonialsSection />
+          
+          <TestimonialsSection />
           
           {/* Who is this for? Section */}
           <section className="py-24 px-4 md:px-10 lg:px-[120px] bg-card/30">
