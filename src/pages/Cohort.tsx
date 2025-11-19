@@ -6,7 +6,6 @@ import { CohortTestimonialsSection } from "@/components/CohortTestimonialsSectio
 import { CohortStatsSection } from "@/components/CohortStatsSection";
 import { InstructorSection } from "@/components/InstructorSection";
 import { PlaybookSection } from "@/components/PlaybookSection";
-import { WorkshopGallerySection } from "@/components/WorkshopGallerySection";
 import { Helmet } from "react-helmet";
 import LogoCloud from "@/components/LogoCloud";
 import CohortCompanyLogos from "@/components/CohortCompanyLogos";
@@ -66,7 +65,6 @@ const Cohort = () => {
           />
           <CohortModulesSection />
           <InstructorSection />
-          <WorkshopGallerySection />
           <PlaybookSection />
           
         </main>
