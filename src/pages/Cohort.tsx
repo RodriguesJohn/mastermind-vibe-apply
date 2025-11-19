@@ -58,10 +58,15 @@ const Cohort = () => {
 
           <CohortOverviewSection />
           <CohortStatsSection />
-          
-          
-          
-
+          <CohortTestimonialsSection />
+          <TestimonialSection 
+            title="What Our Members Are Saying"
+            subtitle="Discover how our cohort has helped designers and product leaders master AI"
+            testimonials={customerTestimonials}
+          />
+          <CohortModulesSection />
+          <InstructorSection />
+          <WorkshopGallerySection />
           <PlaybookSection />
           
         </main>

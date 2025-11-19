@@ -17,7 +17,6 @@ import KnowledgeHub from "./pages/KnowledgeHub";
 import DesignEngineering from "./pages/DesignEngineering";
 import VibeCodingWeekendWorkshop from "./pages/VibeCodingWeekendWorkshop";
 import NotFound from "./pages/NotFound";
-import ElevenLabsWidget from "./components/ElevenLabsWidget";
 
 const queryClient = new QueryClient();
 
@@ -46,7 +45,6 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
-      <ElevenLabsWidget />
     </TooltipProvider>
   </QueryClientProvider>
 );
