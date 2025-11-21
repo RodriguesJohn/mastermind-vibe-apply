@@ -75,7 +75,7 @@ const Cohort = () => {
                   </CardHeader>
                   <CardContent className="space-y-6">
                     <div>
-                      <div className="text-4xl font-bold mb-2">$497</div>
+                      <div className="text-4xl font-bold mb-2">$899</div>
                       <p className="text-muted-foreground">One-time payment</p>
                     </div>
                     <ul className="space-y-3">
@@ -113,7 +113,7 @@ const Cohort = () => {
                   </CardHeader>
                   <CardContent className="space-y-6">
                     <div>
-                      <div className="text-4xl font-bold mb-2">$1,997</div>
+                      <div className="text-4xl font-bold mb-2">$1,499</div>
                       <p className="text-muted-foreground">5-week program</p>
                     </div>
                     <ul className="space-y-3">
