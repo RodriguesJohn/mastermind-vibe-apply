@@ -123,19 +123,19 @@ const Cohort = () => {
                       </li>
                       <li className="flex items-start gap-2">
                         <Check className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                        <span>Live weekly sessions with instructors</span>
+                        <span>Hands-on workshop</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <Check className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                        <span>1-on-1 feedback and mentorship</span>
+                        <span>Direct access to John Rodrigues</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <Check className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                        <span>Real-world project portfolio</span>
+                        <span>Live interactive sessions</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <Check className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                        <span>Exclusive cohort networking</span>
+                        <span>1-on-1 feedback</span>
                       </li>
                     </ul>
                   </CardContent>
