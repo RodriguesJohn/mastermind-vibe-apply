@@ -242,7 +242,7 @@ const VibeCodingAccelerator = () => {
                       <ArrowRight className="h-5 w-5" />
                       </a>
                     </Button>
-                  <Button variant="outline" size="xl" className="border-white/30 text-white hover:bg-white/10 w-full sm:w-auto sm:min-w-[200px]" asChild>
+                  <Button variant="outline" size="xl" className="bg-white text-black border-white hover:bg-gray-100 hover:shadow-lg hover:scale-105 transition-all duration-300 w-full sm:w-auto sm:min-w-[200px]" asChild>
                     <a href="https://ai-design-academy-s-school.teachable.com/l/products?sortKey=name&sortDirection=asc&page=1" target="_blank" rel="noopener noreferrer">
                       Log In
                       <ArrowRight className="h-5 w-5" />
