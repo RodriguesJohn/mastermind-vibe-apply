@@ -4,25 +4,46 @@ import { motion } from "framer-motion";
 
 const modules = [
   {
-    number: "0",
-    week: "Week 0",
-    title: "Getting Started with Vibe Coding",
-    description: "Learn what vibe coding is, set up your development environment, and get familiar with the tools you'll be using throughout the course.",
-    colors: ["#FF6B6B", "#FFD93D", "#FF8E53", "#FF6B9D"]
-  },
-  {
     number: "1",
     week: "Week 1",
-    title: "Master Cursor & Build Your First App",
-    description: "Deep dive into Cursor IDE, learn AI-powered coding techniques, and build your first functional prototype with hands-on guidance.",
-    colors: ["#4ECDC4", "#87CEEB", "#DA70D6", "#BA55D3"]
+    title: "Master AI Foundation",
+    description: "Deep dive into AI fundamentals – understand core concepts, build your vocabulary, and learn to design intelligent systems with clarity and confidence.",
+    colors: ["#FF6B6B", "#FFD93D", "#FF8E53", "#FF6B9D"]
   },
   {
     number: "2",
     week: "Week 2",
-    title: "Create AI Recipe Generator",
-    description: "Put your skills to work by building a complete AI-powered recipe generator app as your portfolio project. Learn to integrate AI APIs and create production-ready applications.",
+    title: "AI Product Design Strategy",
+    description: "Identify AI use cases and design human-centered solutions that drive business impact and value.",
+    colors: ["#4ECDC4", "#87CEEB", "#DA70D6", "#BA55D3"]
+  },
+  {
+    number: "3",
+    week: "Week 3",
+    title: "Build AI Agents",
+    description: "Learn how to design AI agent systems and workflows from a UX perspective. Get step-by-step frameworks and processes to create and prototype your own agents, and use tools like n8n to build AI agents that actually work.",
     colors: ["#95E1D3", "#F38181", "#FCE38A", "#AAE3F0"]
+  },
+  {
+    number: "4",
+    week: "Week 4",
+    title: "Learn vibe coding and Prototyping with AI",
+    description: "Learn how to create functional prototypes with Lovable and Cursor to effectively communicate your vision. Master efficient vibe-coding workflows and build AI apps using modern AI coding tools.",
+    colors: ["#FF6B6B", "#FF8E53", "#FFD93D", "#FFA07A"]
+  },
+  {
+    number: "5",
+    week: "Bonus",
+    title: "Get 1:1 Coaching and Consulting",
+    description: "Get one-on-one coaching with John to overcome challenges, personalize your learning goals, ask any questions, and get clear guidance to unlock your next step.",
+    colors: ["#C44569", "#D68FD6", "#E3A0D3", "#FF8CC8"]
+  },
+  {
+    number: "6",
+    week: "Bonus",
+    title: "Guest Speakers From Top Companies",
+    description: "Get the opportunity to ask questions to designers from top companies such as Meta, Amazon, and more. Learn from their expertise and experiences as AI product designers.",
+    colors: ["#4F4F8C", "#5F7AAB", "#7FA8D5", "#87CEEB"]
   }
 ];
 
