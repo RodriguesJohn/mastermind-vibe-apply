@@ -41,22 +41,22 @@ const headerCards = [
 
 export const OutcomesSection = () => {
   return (
-    <section className="py-24 md:py-32 relative overflow-hidden">
+    <section className="py-12 sm:py-16 md:py-24 lg:py-32 relative overflow-hidden">
       {/* Background Accent */}
       <div className="absolute inset-0 bg-gradient-hero opacity-50" />
       
-      <div className="px-4 md:px-10 lg:px-[120px] relative z-10">
+      <div className="px-4 sm:px-6 md:px-10 lg:px-[120px] relative z-10">
         <div className="max-w-[1200px] mx-auto">
-          <div className="text-center mb-16 space-y-4">
-            <h2 className="text-4xl md:text-5xl font-bold">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16 space-y-3 sm:space-y-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
               What You'll Achieve
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
               Transform your skills and career trajectory
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-4 sm:gap-6 max-w-5xl mx-auto">
             {outcomes.map((outcome, index) => (
               <div
                 key={index}
@@ -81,15 +81,15 @@ export const OutcomesSection = () => {
                 <div className="absolute top-24 left-0 right-0 h-12 bg-gradient-to-b from-black/60 via-black/80 to-black pointer-events-none z-10" />
                 
                 {/* Bottom Section - Text Content */}
-                <div className="relative flex items-start gap-4 p-6 bg-black -mt-6 pt-10 z-20">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center mt-0.5 border border-white/30">
-                    <Check className="w-4 h-4 text-green-500" />
+                <div className="relative flex items-start gap-3 sm:gap-4 p-4 sm:p-6 bg-black -mt-6 pt-8 sm:pt-10 z-20">
+                  <div className="flex-shrink-0 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center mt-0.5 border border-white/30">
+                    <Check className="w-3 h-3 sm:w-4 sm:h-4 text-green-500" />
                   </div>
                   <div className="flex-1">
-                    <p className="text-lg leading-relaxed text-white font-semibold mb-2">
+                    <p className="text-base sm:text-lg leading-relaxed text-white font-semibold mb-1 sm:mb-2">
                       {outcome.text}
                     </p>
-                    <p className="text-sm leading-relaxed text-white/70 font-light">
+                    <p className="text-xs sm:text-sm leading-relaxed text-white/70 font-light">
                       {outcome.description}
                     </p>
                   </div>

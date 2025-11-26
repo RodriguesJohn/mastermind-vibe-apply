@@ -36,22 +36,22 @@ const bonusModule = {
 
 export const CohortModulesSection = () => {
   return (
-    <section className="py-24 md:py-32 bg-black text-white overflow-hidden">
-      <div className="px-4 sm:px-8 md:px-10 lg:px-[120px]">
+    <section className="py-12 sm:py-16 md:py-24 lg:py-32 bg-black text-white overflow-hidden">
+      <div className="px-4 sm:px-6 md:px-10 lg:px-[120px]">
         <div className="max-w-[1200px] mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16">
             <h2 
-              className="font-normal mb-4 tracking-tight"
-              style={{ fontSize: '32px', lineHeight: '1.25' }}
+              className="font-normal mb-3 sm:mb-4 tracking-tight text-2xl sm:text-3xl md:text-4xl"
+              style={{ lineHeight: '1.25' }}
             >
               This Is How Your Journey Will Look After Enrolling
             </h2>
-            <p className="text-white/70 text-lg max-w-2xl mx-auto">
+            <p className="text-white/70 text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-2">
               Modules are released weekly over four weeks, giving you time to complete each milestone without feeling overwhelmed.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-4 md:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-4 sm:gap-5 md:gap-6">
             {/* Week 0 */}
             <motion.div
               whileHover={{ y: -8, scale: 1.08 }}
@@ -85,10 +85,10 @@ export const CohortModulesSection = () => {
                 </div>
                 
                 {/* Content Section */}
-                <div className="p-8 bg-black -mt-6 pt-10 flex-1 flex flex-col">
+                <div className="p-5 sm:p-6 md:p-8 bg-black -mt-6 pt-8 sm:pt-10 flex-1 flex flex-col">
                   <div className="flex-1">
-                    <h3 className="text-xl font-semibold mb-2 text-white">{modules[0].title}</h3>
-                    <p className="text-white/60 text-sm leading-relaxed">{modules[0].description}</p>
+                    <h3 className="text-lg sm:text-xl font-semibold mb-2 text-white">{modules[0].title}</h3>
+                    <p className="text-white/60 text-xs sm:text-sm leading-relaxed">{modules[0].description}</p>
                   </div>
                 </div>
               </Card>
@@ -127,10 +127,10 @@ export const CohortModulesSection = () => {
                 </div>
                 
                 {/* Content Section */}
-                <div className="p-8 bg-black -mt-6 pt-10 flex-1 flex flex-col">
+                <div className="p-5 sm:p-6 md:p-8 bg-black -mt-6 pt-8 sm:pt-10 flex-1 flex flex-col">
                   <div className="flex-1">
-                    <h3 className="text-xl font-semibold mb-2 text-white">{modules[1].title}</h3>
-                    <p className="text-white/60 text-sm leading-relaxed">{modules[1].description}</p>
+                    <h3 className="text-lg sm:text-xl font-semibold mb-2 text-white">{modules[1].title}</h3>
+                    <p className="text-white/60 text-xs sm:text-sm leading-relaxed">{modules[1].description}</p>
                   </div>
                 </div>
               </Card>
@@ -169,10 +169,10 @@ export const CohortModulesSection = () => {
                 </div>
                 
                 {/* Content Section */}
-                <div className="p-8 bg-black -mt-6 pt-10 flex-1 flex flex-col">
+                <div className="p-5 sm:p-6 md:p-8 bg-black -mt-6 pt-8 sm:pt-10 flex-1 flex flex-col">
                   <div className="flex-1">
-                    <h3 className="text-xl font-semibold mb-2 text-white">{modules[2].title}</h3>
-                    <p className="text-white/60 text-sm leading-relaxed">{modules[2].description}</p>
+                    <h3 className="text-lg sm:text-xl font-semibold mb-2 text-white">{modules[2].title}</h3>
+                    <p className="text-white/60 text-xs sm:text-sm leading-relaxed">{modules[2].description}</p>
                   </div>
                 </div>
               </Card>
@@ -211,10 +211,10 @@ export const CohortModulesSection = () => {
                 </div>
                 
                 {/* Content Section */}
-                <div className="p-8 bg-black -mt-6 pt-10 flex-1 flex flex-col">
+                <div className="p-5 sm:p-6 md:p-8 bg-black -mt-6 pt-8 sm:pt-10 flex-1 flex flex-col">
                   <div className="flex-1">
-                    <h3 className="text-xl font-semibold mb-2 text-white">{bonusModule.title}</h3>
-                    <p className="text-white/60 text-sm leading-relaxed">{bonusModule.description}</p>
+                    <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 text-white">{bonusModule.title}</h3>
+                    <p className="text-white/60 text-xs sm:text-sm leading-relaxed">{bonusModule.description}</p>
                   </div>
                 </div>
               </Card>

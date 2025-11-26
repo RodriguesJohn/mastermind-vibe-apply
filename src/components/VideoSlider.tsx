@@ -19,7 +19,7 @@ export const VideoSlider = () => {
   const duplicatedVideos = [...videos, ...videos];
 
   return (
-    <section className="relative border-b border-white/10 bg-black py-20 overflow-hidden">
+    <section className="relative border-b border-white/10 bg-black py-12 sm:py-16 md:py-20 overflow-hidden">
       {/* Shader effects */}
       <div 
         className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(59,130,246,0.25)_0%,_rgba(0,0,0,0)_50%)] pointer-events-none" 
@@ -54,18 +54,26 @@ export const VideoSlider = () => {
               opacity: 0.3;
             }
           }
+          @keyframes scroll-left {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-50%);
+            }
+          }
         `}
       </style>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-10">
-        <h2 className="text-3xl font-semibold mb-10 text-center">Projects You Will Build</h2>
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
+        <h2 className="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8 md:mb-10 text-center">Projects You Will Build</h2>
         
         <div className="relative w-full overflow-hidden">
           {/* Left fade gradient */}
-          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-black via-black/80 to-transparent z-20 pointer-events-none" />
+          <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-24 md:w-32 bg-gradient-to-r from-black via-black/80 to-transparent z-20 pointer-events-none" />
           
           {/* Right fade gradient */}
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-black via-black/80 to-transparent z-20 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-24 md:w-32 bg-gradient-to-l from-black via-black/80 to-transparent z-20 pointer-events-none" />
           
           <div 
             className="flex gap-6 hover:[animation-play-state:paused]"
@@ -76,9 +84,9 @@ export const VideoSlider = () => {
             {duplicatedVideos.map((video, index) => (
               <div
                 key={`${video.id}-${index}`}
-                className="flex-shrink-0 w-full md:w-[600px] lg:w-[700px]"
+                className="flex-shrink-0 w-[280px] sm:w-[400px] md:w-[600px] lg:w-[700px]"
               >
-                <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 aspect-video">
+                <div className="relative overflow-hidden rounded-xl sm:rounded-2xl md:rounded-3xl border border-white/10 bg-white/5 aspect-video">
                   <iframe
                     src={`https://www.youtube.com/embed/${video.id}?rel=0&modestbranding=1&autoplay=1&mute=1&loop=1&playlist=${video.id}`}
                     title={video.title}
@@ -93,7 +101,7 @@ export const VideoSlider = () => {
         </div>
         
         {/* Header Cards Section */}
-        <div className="mt-16 grid md:grid-cols-3 gap-6">
+        <div className="mt-8 sm:mt-12 md:mt-16 grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
           {[
             {
               title: "Getting Started Master Prompt",
@@ -118,8 +126,8 @@ export const VideoSlider = () => {
               </div>
               
               {/* Header Content */}
-              <div className="relative p-8 min-h-[120px] flex flex-col items-center justify-center">
-                <h3 className="text-xl font-medium text-white text-center">
+              <div className="relative p-6 sm:p-8 min-h-[100px] sm:min-h-[120px] flex flex-col items-center justify-center">
+                <h3 className="text-base sm:text-lg md:text-xl font-medium text-white text-center">
                   {card.title}
                 </h3>
               </div>
