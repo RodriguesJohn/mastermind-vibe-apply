@@ -17,7 +17,11 @@ import IntercomLogo from "@/assets/intercom-1-logo-png-transparent.png";
 import HubspotLogo from "@/assets/Hubspot.svg.png";
 import MetaLogo from "@/assets/meta.png";
 import GoogleLogo from "@/assets/Google.svg.png";
+import AppleLogo from "@/assets/Apple.png";
 import LovableLogo from "@/assets/logos/lovable.png";
+import AGILogo from "@/assets/AGI.png";
+import OpenAILogo from "@/assets/OpenAI 1.png";
+import LoveableLogoMain from "@/assets/Loveable.png";
 import WorkshopImage1 from "@/assets/workshop-1.jpg";
 import WorkshopImage2 from "@/assets/workshop-2.jpg";
 import WorkshopImage3 from "@/assets/workshop-3.jpg";
@@ -133,14 +137,9 @@ const cohortModules = [
         "Yes! This course is completely self-paced. You have lifetime access to all course materials, so you can learn at your own speed and on your own schedule. Whether you want to complete it in 14 days or take your time over several weeks, you have full flexibility to work through the content whenever it's convenient for you.",
     },
     {
-      question: "Do I need to learn?",
+      question: "If you have any questions, how do I reach out?",
       answer:
-        "You'll learn by doing! This isn't about memorizing code—it's about understanding how to work with AI tools like Cursor to bring your ideas to life. You'll build real projects while learning the workflows and techniques that make AI-powered development accessible.",
-    },
-    {
-      question: "No coding?",
-      answer:
-        "You'll learn to code with AI assistance, not traditional coding. Using Cursor and AI tools, you'll communicate your ideas and let AI help you build apps. It's like having a coding partner that understands your vision. No need to memorize syntax or spend years learning—just focus on your ideas and let AI handle the heavy lifting.",
+        "If you have any questions, you reach out to us directly at hello@theaidesignacademy.com.",
     },
   ];
 
@@ -228,11 +227,11 @@ const VibeCodingAccelerator = () => {
                   Master Vibe Coding<br />With Cursor in 14 Days
                   </h1>
                 <p className="text-lg text-white/70 sm:text-xl mx-auto max-w-2xl">
-                  Learn where to get started with Vibe Coding, discover what tools to use, explore project demos behind the scenes, and build your first Vibe Coding prototype.
+                  Beginner-friendly vibe coding course with Cursor. In 14 days, this step-by-step course will help you prototype your first 2 apps with our proven curriculum.
                 </p>
                 <div className="flex flex-col gap-3 sm:flex-row justify-center max-w-md mx-auto">
                   <Button variant="cta" size="xl" className="w-full sm:w-auto sm:min-w-[200px]" asChild>
-                    <a href="https://maven.com/productlearnio/aiproductdesignmasterycohort" target="_blank" rel="noopener noreferrer">
+                    <a href="https://ai-design-academy-s-school.teachable.com/purchase?product_id=6550289" target="_blank" rel="noopener noreferrer">
                       Enroll Today
                       <ArrowRight className="h-5 w-5" />
                       </a>
@@ -305,6 +304,45 @@ const VibeCodingAccelerator = () => {
                     <p>
                       John has built a loyal community of over 10,000 followers on LinkedIn and authored books on design career. His work bridges design, technology, and AI, helping the next generation of designers stay ahead in a rapidly evolving industry.
                     </p>
+                    
+                    {/* Trusted By Section */}
+                    <div className="pt-4">
+                      <p className="text-sm text-white/60 mb-4">
+                        <em>The AI Design Playbook</em> trusted by
+                      </p>
+                      <div className="flex items-center gap-6 flex-wrap">
+                        <img 
+                          src={AppleLogo} 
+                          alt="Apple" 
+                          className="h-7 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity"
+                        />
+                        <img 
+                          src={GoogleLogo} 
+                          alt="Google" 
+                          className="h-7 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity"
+                        />
+                        <img 
+                          src={MetaLogo} 
+                          alt="Meta" 
+                          className="h-7 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity"
+                        />
+                        <img 
+                          src={JPMorganLogo} 
+                          alt="JPMorgan Chase" 
+                          className="h-7 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity"
+                        />
+                        <img 
+                          src={IntercomLogo} 
+                          alt="Intercom" 
+                          className="h-7 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity"
+                        />
+                        <img 
+                          src={HubspotLogo} 
+                          alt="HubSpot" 
+                          className="h-7 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity"
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -316,41 +354,39 @@ const VibeCodingAccelerator = () => {
                   Recent Accomplishment
                 </h4>
                 <p className="text-white/90 mb-6">
-                  <strong className="text-white">🏆 Hackathon Winner</strong> — Recently won the hackathon in San Francisco held by <strong className="text-white">HAI (Human-Centered AI Institute)</strong>, <strong className="text-white">OpenAI</strong>, and <strong className="text-white">Loveable</strong>. This achievement showcases expertise in building innovative AI-powered solutions and demonstrates the practical application of vibe coding techniques taught in this course.
+                  <strong className="text-white">🏆 Hackathon Winner</strong> During the hackathon hosted in San Francisco by <strong className="text-white">AGI</strong>, <strong className="text-white">OpenAI</strong>, and <strong className="text-white">Loveable</strong>, I designed and developed a web platform called UX Agent that analyzes websites, gives feedback, and everything was built in two days with the power of Vibe coding. It demonstrates how anybody can now design, develop, and communicate their ideas effectively. It's a very valuable skill to have in this AI era.
                 </p>
                 {/* Logos */}
                 <div className="flex items-center gap-6 flex-wrap">
                   <span className="text-sm text-white/60">Hosted by:</span>
                   <div className="flex items-center gap-8">
+                    {/* AGI Logo */}
+                    <div className="flex items-center">
+                      <img 
+                        src={AGILogo} 
+                        alt="AGI" 
+                        className="h-8 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
+                        style={{ maxHeight: '32px' }}
+                      />
+                    </div>
+                    
                     {/* OpenAI Logo */}
                     <div className="flex items-center">
                       <img 
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/240px-ChatGPT_logo.svg.png" 
+                        src={OpenAILogo} 
                         alt="OpenAI" 
-                        className="h-8 w-8 object-contain opacity-90 hover:opacity-100 transition-opacity filter brightness-0 invert"
-                        onError={(e) => {
-                          // Fallback: show text if image fails
-                          e.currentTarget.style.display = 'none';
-                          const fallback = e.currentTarget.parentElement?.querySelector('.openai-fallback');
-                          if (fallback) fallback.classList.remove('hidden');
-                        }}
+                        className="h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
+                        style={{ maxHeight: '48px' }}
                       />
-                      <span className="text-white/80 font-semibold text-sm ml-2 openai-fallback hidden">OpenAI</span>
-                    </div>
-                    
-                    {/* HAI Logo */}
-                    <div className="flex items-center">
-                      <div className="w-8 h-8 rounded bg-white/10 flex items-center justify-center">
-                        <span className="text-white/90 font-bold text-xs">HAI</span>
-                      </div>
                     </div>
                     
                     {/* Loveable Logo */}
                     <div className="flex items-center">
                       <img 
-                        src={LovableLogo} 
+                        src={LoveableLogoMain} 
                         alt="Loveable" 
-                        className="h-8 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
+                        className="h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
+                        style={{ maxHeight: '48px' }}
                       />
                     </div>
                   </div>
@@ -380,13 +416,23 @@ const VibeCodingAccelerator = () => {
             />
             <div className="relative z-10 mx-auto max-w-4xl px-6 lg:px-10">
               <h2 className="text-3xl font-semibold text-center">Frequently Asked Questions</h2>
-              <div className="mt-10 space-y-6">
-                {faqs.map((faq) => (
-                  <Card key={faq.question} className="border-white/10 bg-white/5 p-6">
-                    <h3 className="text-xl font-semibold text-white">{faq.question}</h3>
-                    <p className="mt-3 text-base text-white/70">{faq.answer}</p>
-                  </Card>
-                ))}
+              <div className="mt-10">
+                <Accordion type="single" collapsible className="w-full space-y-4">
+                  {faqs.map((faq, index) => (
+                    <AccordionItem 
+                      key={faq.question} 
+                      value={`item-${index}`}
+                      className="border-white/10 bg-white/5 rounded-lg px-6"
+                    >
+                      <AccordionTrigger className="text-xl font-medium text-white hover:no-underline">
+                        {faq.question}
+                      </AccordionTrigger>
+                      <AccordionContent className="text-base font-medium text-white/70 pt-2 pb-4">
+                        {faq.answer}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
               </div>
             </div>
           </section>
@@ -406,7 +452,7 @@ const VibeCodingAccelerator = () => {
               </p>
               <div className="flex flex-col gap-3 sm:flex-row justify-center">
                 <Button variant="cta" size="xl" className="w-full sm:w-auto sm:min-w-[200px]" asChild>
-                  <a href="https://maven.com/productlearnio/aiproductdesignmasterycohort" target="_blank" rel="noopener noreferrer">
+                  <a href="https://ai-design-academy-s-school.teachable.com/purchase?product_id=6550289" target="_blank" rel="noopener noreferrer">
                     Enroll Today - $299
                     <ArrowRight className="h-5 w-5" />
                   </a>

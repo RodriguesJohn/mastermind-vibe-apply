@@ -1,12 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { X } from "lucide-react";
-import { useState } from "react";
 import { ArrowRight } from "lucide-react";
 
 export const BlackFridayStickyBar = () => {
-  const [isVisible, setIsVisible] = useState(true);
-
-  if (!isVisible) return null;
 
   return (
     <>
@@ -63,18 +58,11 @@ export const BlackFridayStickyBar = () => {
                 className="bg-white text-primary hover:bg-white/90 font-semibold"
                 asChild
               >
-                <a href="https://maven.com/productlearnio/aiproductdesignmasterycohort" target="_blank" rel="noopener noreferrer">
+                <a href="https://ai-design-academy-s-school.teachable.com/purchase?product_id=6550289" target="_blank" rel="noopener noreferrer">
                   Enroll Now
                   <ArrowRight className="h-4 w-4 ml-1" />
                 </a>
               </Button>
-              <button
-                onClick={() => setIsVisible(false)}
-                className="text-white/80 hover:text-white transition-colors p-1"
-                aria-label="Close"
-              >
-                <X className="h-4 w-4" />
-              </button>
             </div>
           </div>
         </div>

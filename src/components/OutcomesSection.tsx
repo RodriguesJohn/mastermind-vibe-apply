@@ -4,18 +4,22 @@ import { MeshGradient } from "@paper-design/shaders-react";
 const outcomes = [
   {
     text: "Learn Cursor",
+    description: "Master the most popular AI development tool. Perfect for designers who want to prototype their ideas quickly.",
     colors: ["#FF6B6B", "#FFD93D", "#FF8E53", "#FF6B9D"]
   },
   {
     text: "Build a mobile app prototype",
+    description: "Hands-on mobile app design and prototyping with rich animations and API integration. Design interfaces you can touch and feel.",
     colors: ["#4ECDC4", "#87CEEB", "#DA70D6", "#BA55D3"]
   },
   {
     text: "Create an AI recipe app with the power of Gen AI",
+    description: "Finally, create an AI recipe generator app using OpenAI's API within Cursor, and don't just design static interfaces but design interfaces that are generative in nature.",
     colors: ["#95E1D3", "#F38181", "#FCE38A", "#AAE3F0"]
   },
   {
     text: "Learn the workflows",
+    description: "Unique workflows that save money and speed up your prototyping process. Build your ideas quickly without deep technical knowledge.",
     colors: ["#C44569", "#D68FD6", "#E3A0D3", "#FF8CC8"]
   },
 ];
@@ -81,9 +85,14 @@ export const OutcomesSection = () => {
                   <div className="flex-shrink-0 w-6 h-6 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center mt-0.5 border border-white/30">
                     <Check className="w-4 h-4 text-green-500" />
                   </div>
-                  <p className="text-lg leading-relaxed text-white font-light">
-                    {outcome.text}
-                  </p>
+                  <div className="flex-1">
+                    <p className="text-lg leading-relaxed text-white font-semibold mb-2">
+                      {outcome.text}
+                    </p>
+                    <p className="text-sm leading-relaxed text-white/70 font-light">
+                      {outcome.description}
+                    </p>
+                  </div>
                 </div>
               </div>
             ))}

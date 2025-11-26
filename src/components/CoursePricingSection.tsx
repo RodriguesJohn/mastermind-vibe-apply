@@ -61,10 +61,10 @@ export const CoursePricingSection = () => {
               
               <CardHeader className="text-center pb-8 pt-8">
                 <CardTitle className="text-3xl md:text-4xl font-bold mb-4">
-                  AI Mastery Course
+                  Master Vibe Coding with Cursor today
                 </CardTitle>
                 <CardDescription className="text-lg">
-                  Everything you need to master AI-powered development
+                  Everything you need to get started to prototype<br />and vibe code your apps with AI
                 </CardDescription>
               </CardHeader>
               
@@ -87,11 +87,11 @@ export const CoursePricingSection = () => {
                   <p className="font-semibold text-lg">What's included:</p>
                   <ul className="space-y-3">
                     {[
-                      "Complete course curriculum with video lessons",
-                      "Build 2 real-world projects (Mobile app + AI Recipe Generator)",
-                      "Learn Cursor and AI development tools",
-                      "Lifetime access to course materials",
-                      "Certificate of completion",
+                      "Proven and tested curriculum",
+                      "Build 2 projects (Mobile app and AI recipe generator)",
+                      "Learn Cursor, one of the most highly adapted vibe coding tool",
+                      "Watch courses anytime, self-paced learning",
+                      "Future proof your career",
                     ].map((feature, index) => (
                       <li key={index} className="flex items-start gap-3">
                         <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
@@ -105,8 +105,11 @@ export const CoursePricingSection = () => {
                   size="xl" 
                   className="w-full mt-8"
                   variant="cta"
+                  asChild
                 >
-                  Enroll Now - $299
+                  <a href="https://ai-design-academy-s-school.teachable.com/purchase?product_id=6550289" target="_blank" rel="noopener noreferrer">
+                    Enroll Now - $299
+                  </a>
                 </Button>
                 
                 <div className="flex items-center justify-center gap-2 pt-2">

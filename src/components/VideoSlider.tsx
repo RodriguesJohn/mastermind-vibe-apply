@@ -118,13 +118,10 @@ export const VideoSlider = () => {
               </div>
               
               {/* Header Content */}
-              <div className="relative p-8 min-h-[120px] flex flex-col items-center justify-center gap-2">
-                <h3 className="text-xl font-semibold text-white text-center">
+              <div className="relative p-8 min-h-[120px] flex flex-col items-center justify-center">
+                <h3 className="text-xl font-medium text-white text-center">
                   {card.title}
                 </h3>
-                <p className="text-sm text-white/60 text-center">
-                  {card.action}
-                </p>
               </div>
             </div>
           ))}

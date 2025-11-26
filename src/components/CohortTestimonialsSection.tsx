@@ -1,11 +1,16 @@
 import { StaggerTestimonials } from "@/components/StaggerTestimonials";
+import { VibeCodingTestimonials } from "@/components/VibeCodingTestimonials";
+import { useLocation } from "react-router-dom";
 
 export const CohortTestimonialsSection = () => {
+  const location = useLocation();
+  const isVibeCodingPage = location.pathname === "/vibe-coding-course" || location.pathname.includes("vibe-coding");
+  
   return (
     <section className="py-24 md:py-32 bg-background">
       <div className="px-4 md:px-10 lg:px-[120px]">
         <div className="max-w-[1200px] mx-auto">
-          <StaggerTestimonials />
+          {isVibeCodingPage ? <VibeCodingTestimonials /> : <StaggerTestimonials />}
         </div>
       </div>
     </section>
