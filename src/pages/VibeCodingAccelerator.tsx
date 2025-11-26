@@ -142,6 +142,11 @@ const cohortModules = [
       answer:
         "If you have any questions, you reach out to us directly at hello@theaidesignacademy.com.",
     },
+    {
+      question: "What's the best way to reach out?",
+      answer:
+        "The best way to reach out is via email at hello@theaidesignacademy.com. We typically respond within 24-48 hours. For urgent matters, please include 'URGENT' in your subject line.",
+    },
   ];
 
 const companyLogos = [
@@ -237,10 +242,12 @@ const VibeCodingAccelerator = () => {
                       <ArrowRight className="h-5 w-5" />
                       </a>
                     </Button>
-                  <Button variant="outline" size="xl" className="border-white/30 text-white hover:bg-white/10 w-full sm:w-auto sm:min-w-[200px]">
-                    Log In
-                    <ArrowRight className="h-5 w-5" />
-                    </Button>
+                  <Button variant="outline" size="xl" className="border-white/30 text-white hover:bg-white/10 w-full sm:w-auto sm:min-w-[200px]" asChild>
+                    <a href="https://ai-design-academy-s-school.teachable.com/l/products?sortKey=name&sortDirection=asc&page=1" target="_blank" rel="noopener noreferrer">
+                      Log In
+                      <ArrowRight className="h-5 w-5" />
+                    </a>
+                  </Button>
                     </div>
                 </div>
                         </div>

@@ -109,12 +109,12 @@ export const CohortModulesSection = () => {
       <div className="px-4 sm:px-6 md:px-10 lg:px-[120px]">
         <div className="max-w-[1200px] mx-auto">
           <div className="text-center mb-8 sm:mb-12 md:mb-16">
-            <h2 
+          <h2 
               className="font-normal mb-3 sm:mb-4 tracking-tight text-2xl sm:text-3xl md:text-4xl"
               style={{ lineHeight: '1.25' }}
-            >
+          >
               {heading}
-            </h2>
+          </h2>
             {description && (
               <p className="text-white/70 text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-2">
                 {description}

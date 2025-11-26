@@ -825,7 +825,7 @@ const AIDesignMasterclass = () => {
                               </div>
 
 
-                            </div>
+                                  </div>
                           </div>
                         </div>
                       ) : (

@@ -88,7 +88,7 @@ export const OutcomesSection = () => {
                   <div className="flex-1">
                     <p className="text-base sm:text-lg leading-relaxed text-white font-semibold mb-1 sm:mb-2">
                       {outcome.text}
-                    </p>
+                </p>
                     <p className="text-xs sm:text-sm leading-relaxed text-white/70 font-light">
                       {outcome.description}
                     </p>

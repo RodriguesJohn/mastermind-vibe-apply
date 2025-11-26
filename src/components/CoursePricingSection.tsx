@@ -55,7 +55,7 @@ export const CoursePricingSection = () => {
             <Card className="border-primary/50 shadow-2xl relative overflow-hidden">
               <div className="flex justify-center pt-3 sm:pt-4">
                 <div className="bg-destructive text-destructive-foreground px-3 sm:px-4 py-1 rounded-full text-xs sm:text-sm font-semibold">
-                  Black Friday Sale
+                Black Friday Sale
                 </div>
               </div>
               
@@ -108,7 +108,7 @@ export const CoursePricingSection = () => {
                   asChild
                 >
                   <a href="https://ai-design-academy-s-school.teachable.com/purchase?product_id=6550289" target="_blank" rel="noopener noreferrer">
-                    Enroll Now - $299
+                  Enroll Now - $299
                   </a>
                 </Button>
                 
