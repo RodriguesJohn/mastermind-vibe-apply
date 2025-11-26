@@ -83,9 +83,9 @@ const AIDesignMasterclass = () => {
       },
       {
         id: 7,
-        title: "Workshop Invite",
+        title: "Vibe Coding Course",
         lessons: [
-          { id: 701, title: "Workshop Invite", videoId: "dQw4w9WgXcQ", duration: "", unlocked: true },
+          { id: 701, title: "Vibe Coding Course", videoId: "dQw4w9WgXcQ", duration: "", unlocked: true },
         ],
       },
     ],
@@ -797,91 +797,34 @@ const AIDesignMasterclass = () => {
                           </div>
                           
                           <div className="space-y-6 text-left">
-                            <h2 className="text-2xl md:text-3xl font-medium mb-6 text-gray-900">Vibe Coding Weekend Workshop</h2>
+                            <h2 className="text-2xl md:text-3xl font-medium mb-6 text-gray-900">Vibe Coding Course</h2>
                             <div className="space-y-6 text-base md:text-lg text-gray-700 leading-relaxed">
                               <p className="font-semibold text-gray-900">
                                 Learn Where to Start With Vibe Coding, Explore the Best Tools and Resources, and Vibe Code Your First App From Scratch.
                               </p>
                               <div className="mb-8">
                                 <a 
-                                  href="https://maven.com/productlearnio/vibe-coding-workshop" 
-                                  target="_blank" 
-                                  rel="noopener noreferrer"
+                                  href="/vibe-coding-course"
                                   className="inline-flex items-center gap-2 px-8 py-4 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300 hover:scale-105 hover:shadow-lg text-lg group"
                                 >
-                                  Join the workshop Today
+                                  Enroll in the course
                                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                                 </a>
                               </div>
                               <div className="space-y-4">
-                                <h3 className="text-xl md:text-2xl font-semibold text-gray-900 mt-8">Workshop Overview</h3>
+                                <h3 className="text-xl md:text-2xl font-semibold text-gray-900 mt-8">Course Overview</h3>
                                 <p>
-                                  The Vibe Coding Workshop helps designers, builders, and innovators go from simply exploring AI tools to confidently designing and shipping real AI-powered products.
+                                  Beginner-friendly vibe coding course with Cursor. In 14 days, this step-by-step course will help you prototype your first 2 apps with our proven curriculum.
                                 </p>
                                 <p>
-                                  You'll learn the foundations of Vibe Coding the creative workflow that blends design, AI, and code into one seamless process. Through guided lessons, hands-on demos, and a final project, you'll master the tools, mindset, and techniques needed to bring ideas to life fast.
+                                  You'll learn the foundations of Vibe Coding—the creative workflow that blends design, AI, and code into one seamless process. Through guided lessons, hands-on demos, and real-world projects, you'll master the tools, mindset, and techniques needed to bring ideas to life fast.
                                 </p>
                                 <p>
-                                  By the end of this workshop, you'll have built your own interactive app, gained practical prototyping skills, and developed the confidence to create apps with AI.
+                                  By the end of this course, you'll have built your own interactive apps, gained practical prototyping skills, and developed the confidence to create apps with AI.
                                 </p>
                               </div>
 
-                              <div className="space-y-4 mt-8">
-                                <h3 className="text-xl md:text-2xl font-semibold text-gray-900">Who is this course for</h3>
-                                <ul className="space-y-3 list-disc list-inside">
-                                  <li><strong>Product Designers, Researchers</strong> looking to build their AI portfolios and switch to the AI industry.</li>
-                                  <li><strong>Design Leaders, Managers</strong> looking to upskill and lead AI design projects.</li>
-                                  <li><strong>Founders, business owners</strong> who want to do AI consulting or level up their design services through AI</li>
-                                </ul>
-                              </div>
 
-                              <div className="space-y-4 mt-8">
-                                <h3 className="text-xl md:text-2xl font-semibold text-gray-900">What you'll get out of this course</h3>
-                                <div className="space-y-4">
-                                  <div className="space-y-2">
-                                    <h4 className="font-semibold text-gray-900">Learn how to get started with vibe coding</h4>
-                                    <p className="text-gray-700">Discover the foundations of Vibe Coding, learn what it is, how it works, and how to start building your first AI-powered interface.</p>
-                                  </div>
-                                  <div className="space-y-2">
-                                    <h4 className="font-semibold text-gray-900">What tools to leverage for vibe coding</h4>
-                                    <p className="text-gray-700">Explore the essential tools that make Vibe Coding possible. Learn how to use platforms like Cursor, Lovable, React, and AI-powered assistants to design, code, and ship faster.</p>
-                                  </div>
-                                  <div className="space-y-2">
-                                    <h4 className="font-semibold text-gray-900">Take a look at the demos in action</h4>
-                                    <p className="text-gray-700">Watch real Vibe Coding demos in action and see how ideas turn into interactive apps using AI and modern design tools.</p>
-                                  </div>
-                                  <div className="space-y-2">
-                                    <h4 className="font-semibold text-gray-900">Do a vibe coding challenge</h4>
-                                    <p className="text-gray-700">Put your skills to the test with a hands-on Vibe Coding challenge. Apply what you've learned to build and ship your own mini AI-powered project.</p>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div className="space-y-4 mt-8">
-                                <h3 className="text-xl md:text-2xl font-semibold text-gray-900">What's included</h3>
-                                <ul className="space-y-2">
-                                  <li className="flex items-start gap-2">
-                                    <span className="text-gray-900 font-medium">Live sessions:</span>
-                                    <span className="text-gray-700">Learn directly from John Rodrigues in a real-time, interactive format.</span>
-                                  </li>
-                                  <li className="flex items-start gap-2">
-                                    <span className="text-gray-900 font-medium">Lifetime access:</span>
-                                    <span className="text-gray-700">Go back to course content and recordings whenever you need to.</span>
-                                  </li>
-                                  <li className="flex items-start gap-2">
-                                    <span className="text-gray-900 font-medium">Community of peers:</span>
-                                    <span className="text-gray-700">Stay accountable and share insights with like-minded professionals.</span>
-                                  </li>
-                                  <li className="flex items-start gap-2">
-                                    <span className="text-gray-900 font-medium">Certificate of completion:</span>
-                                    <span className="text-gray-700">Share your new skills with your employer or on LinkedIn.</span>
-                                  </li>
-                                  <li className="flex items-start gap-2">
-                                    <span className="text-gray-900 font-medium">Maven Guarantee:</span>
-                                    <span className="text-gray-700">This course is backed by the Maven Guarantee. Students are eligible for a full refund up until the halfway point of the course.</span>
-                                  </li>
-                                </ul>
-                              </div>
                             </div>
                           </div>
                         </div>
