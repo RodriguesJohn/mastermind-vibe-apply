@@ -6,12 +6,11 @@ import { CohortTestimonialsSection } from "@/components/CohortTestimonialsSectio
 import { CohortStatsSection } from "@/components/CohortStatsSection";
 import { InstructorSection } from "@/components/InstructorSection";
 import { PlaybookSection } from "@/components/PlaybookSection";
+import { OutcomesSection } from "@/components/OutcomesSection";
+import { CoursePricingSection } from "@/components/CoursePricingSection";
 import { Helmet } from "react-helmet";
 import LogoCloud from "@/components/LogoCloud";
 import CohortCompanyLogos from "@/components/CohortCompanyLogos";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Check } from "lucide-react";
 const Cohort = () => {
   return <>
       <Helmet>
@@ -23,18 +22,10 @@ const Cohort = () => {
         <Navigation />
         <main>
           <AIHeaderSection />
-          <CohortCompanyLogos />
+          <OutcomesSection />
           <CohortTestimonialsSection />
-
-          <LogoCloud />
-
-          <CohortOverviewSection />
-          <CohortStatsSection />
           <CohortModulesSection />
-          <InstructorSection />
-          
-          <PlaybookSection />
-          
+          <CoursePricingSection />
         </main>
       </div>
     </>;

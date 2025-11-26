@@ -1,12 +1,9 @@
 import { Check } from "lucide-react";
 
 const outcomes = [
-  "Build AI mobile and web apps",
-  "Develop advanced problem-solving and architectural thinking",
-  "Learn vibe coding techniques",
-  "Create an impressive portfolio that stands out",
-  "Gain exclusive access to job opportunities and projects",
-  "Receive personalized code reviews and mentorship",
+  "Learn Cursor and feel confident using AI-powered development tools",
+  "Prototype a mobile app from scratch with hands-on guidance",
+  "Create an AI recipe generator app as your portfolio project",
 ];
 
 export const OutcomesSection = () => {
