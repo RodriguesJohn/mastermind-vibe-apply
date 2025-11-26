@@ -21,7 +21,8 @@ import GoogleLogo from "@/assets/Google.svg.png";
 import AppleLogo from "@/assets/Apple.png";
 import LovableLogo from "@/assets/logos/lovable.png";
 import AGILogo from "@/assets/AGI.png";
-import OpenAILogo from "@/assets/OpenAI 1.png";
+// OpenAI logo moved to public folder for better compatibility
+const OpenAILogo = "/openai-logo.png";
 import LoveableLogoMain from "@/assets/Loveable.png";
 import WorkshopImage1 from "@/assets/workshop-1.jpg";
 import WorkshopImage2 from "@/assets/workshop-2.jpg";
@@ -242,7 +243,7 @@ const VibeCodingAccelerator = () => {
                       <ArrowRight className="h-5 w-5" />
                       </a>
                     </Button>
-                  <Button variant="outline" size="xl" className="bg-white text-black border-white hover:bg-gray-100 hover:shadow-lg hover:scale-105 transition-all duration-300 w-full sm:w-auto sm:min-w-[200px]" asChild>
+                  <Button variant="outline" size="xl" className="bg-white text-gray-600 border-white hover:text-black hover:shadow-lg hover:scale-105 transition-all duration-300 w-full sm:w-auto sm:min-w-[200px]" asChild>
                     <a href="https://ai-design-academy-s-school.teachable.com/l/products?sortKey=name&sortDirection=asc&page=1" target="_blank" rel="noopener noreferrer">
                       Log In
                       <ArrowRight className="h-5 w-5" />
