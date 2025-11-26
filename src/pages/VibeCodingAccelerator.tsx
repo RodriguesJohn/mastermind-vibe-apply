@@ -269,10 +269,7 @@ const VibeCodingAccelerator = () => {
               aria-hidden="true" 
             />
             <div className="relative z-10 mx-auto max-w-5xl px-4 sm:px-6 lg:px-10">
-              <h2 className="text-2xl sm:text-3xl font-semibold mb-4 sm:mb-6 text-center sm:text-left">Meet your instructor</h2>
-              <p className="text-base sm:text-lg text-white/80 mb-6 sm:mb-8 text-center sm:text-left italic">
-                Bring good vibes to the sessions and learn from them.
-              </p>
+              <h2 className="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8 text-center sm:text-left">Meet your instructor</h2>
               <div className="grid gap-6 sm:gap-8 md:grid-cols-[300px_1fr]">
                 {/* Instructor Image */}
                 <div>
