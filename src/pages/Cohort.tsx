@@ -6,8 +6,6 @@ import { CohortTestimonialsSection } from "@/components/CohortTestimonialsSectio
 import { CohortStatsSection } from "@/components/CohortStatsSection";
 import { InstructorSection } from "@/components/InstructorSection";
 import { PlaybookSection } from "@/components/PlaybookSection";
-import { OutcomesSection } from "@/components/OutcomesSection";
-import { CoursePricingSection } from "@/components/CoursePricingSection";
 import { Helmet } from "react-helmet";
 import LogoCloud from "@/components/LogoCloud";
 import CohortCompanyLogos from "@/components/CohortCompanyLogos";
@@ -22,10 +20,18 @@ const Cohort = () => {
         <Navigation />
         <main>
           <AIHeaderSection />
-          <OutcomesSection />
+          <CohortCompanyLogos />
           <CohortTestimonialsSection />
+
+          <LogoCloud />
+
+          <CohortOverviewSection />
+          <CohortStatsSection />
           <CohortModulesSection />
-          <CoursePricingSection />
+          <InstructorSection />
+          
+          <PlaybookSection />
+          
         </main>
       </div>
     </>;
