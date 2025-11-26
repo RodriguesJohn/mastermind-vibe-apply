@@ -5,6 +5,10 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Helmet } from "react-helmet";
 import { CalendarDays, Clock, Users, Play, Sparkles, CheckCircle2, Video, BookmarkCheck, ShieldCheck, ArrowRight, BookOpen, Rocket, Code2, Hammer } from "lucide-react";
 import { DotScreenShader } from "@/components/DotScreenShader";
+import { OutcomesSection } from "@/components/OutcomesSection";
+import { CohortTestimonialsSection } from "@/components/CohortTestimonialsSection";
+import { CohortModulesSection } from "@/components/CohortModulesSection";
+import { CoursePricingSection } from "@/components/CoursePricingSection";
 import JohnImage from "@/assets/John.png";
 import JPMorganLogo from "@/assets/Chase.png";
 import IntercomLogo from "@/assets/intercom-1-logo-png-transparent.png";
@@ -227,6 +231,18 @@ const VibeCodingAccelerator = () => {
               </div>
             </div>
           </section>
+
+          {/* Outcomes Section */}
+          <OutcomesSection />
+
+          {/* Testimonials Section */}
+          <CohortTestimonialsSection />
+
+          {/* Curriculum Section */}
+          <CohortModulesSection />
+
+          {/* Pricing Section */}
+          <CoursePricingSection />
 
           {/* Hide all other sections */}
           {false && <>
