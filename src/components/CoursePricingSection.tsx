@@ -5,6 +5,39 @@ import { Check } from "lucide-react";
 export const CoursePricingSection = () => {
   return (
     <section className="py-24 md:py-32 relative overflow-hidden">
+      <style>
+        {`
+          @keyframes checkmarkPulse {
+            0%, 100% {
+              transform: scale(1);
+              opacity: 1;
+            }
+            50% {
+              transform: scale(1.15);
+              opacity: 0.9;
+            }
+          }
+          @keyframes checkmarkBounce {
+            0% {
+              transform: scale(0);
+              opacity: 0;
+            }
+            50% {
+              transform: scale(1.3);
+            }
+            70% {
+              transform: scale(0.9);
+            }
+            100% {
+              transform: scale(1);
+              opacity: 1;
+            }
+          }
+          .checkmark-animated {
+            animation: checkmarkBounce 0.6s ease-out, checkmarkPulse 2s ease-in-out 0.6s infinite;
+          }
+        `}
+      </style>
       <div className="absolute inset-0 bg-gradient-hero opacity-30" />
       
       <div className="px-4 md:px-10 lg:px-[120px] relative z-10">
@@ -20,11 +53,13 @@ export const CoursePricingSection = () => {
           
           <div className="max-w-2xl mx-auto">
             <Card className="border-primary/50 shadow-2xl relative overflow-hidden">
-              <div className="absolute top-4 right-4 bg-destructive text-destructive-foreground px-4 py-1 rounded-full text-sm font-semibold">
-                Black Friday Sale
+              <div className="flex justify-center pt-4">
+                <div className="bg-destructive text-destructive-foreground px-4 py-1 rounded-full text-sm font-semibold">
+                  Black Friday Sale
+                </div>
               </div>
               
-              <CardHeader className="text-center pb-8 pt-12">
+              <CardHeader className="text-center pb-8 pt-8">
                 <CardTitle className="text-3xl md:text-4xl font-bold mb-4">
                   AI Mastery Course
                 </CardTitle>
@@ -73,6 +108,17 @@ export const CoursePricingSection = () => {
                 >
                   Enroll Now - $299
                 </Button>
+                
+                <div className="flex items-center justify-center gap-2 pt-2">
+                  <div className="flex items-center gap-2">
+                    <div className="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center">
+                      <Check className="w-3 h-3 text-green-500 checkmark-animated" />
+                    </div>
+                    <p className="text-sm text-muted-foreground">
+                      Secure payment via Teachable
+                    </p>
+                  </div>
+                </div>
                 
                 <p className="text-center text-sm text-muted-foreground">
                   Black Friday pricing ends soon!

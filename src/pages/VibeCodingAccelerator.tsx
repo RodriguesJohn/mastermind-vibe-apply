@@ -3,18 +3,21 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Helmet } from "react-helmet";
-import { CalendarDays, Clock, Users, Play, Sparkles, CheckCircle2, Video, BookmarkCheck, ShieldCheck, ArrowRight, BookOpen, Rocket, Code2, Hammer } from "lucide-react";
+import { CalendarDays, Clock, Users, Play, Sparkles, CheckCircle2, Video, BookmarkCheck, ShieldCheck, ArrowRight, BookOpen, Rocket, Code2, Hammer, Award } from "lucide-react";
 import { DotScreenShader } from "@/components/DotScreenShader";
 import { OutcomesSection } from "@/components/OutcomesSection";
 import { CohortTestimonialsSection } from "@/components/CohortTestimonialsSection";
 import { CohortModulesSection } from "@/components/CohortModulesSection";
 import { CoursePricingSection } from "@/components/CoursePricingSection";
+import { VideoSlider } from "@/components/VideoSlider";
+import { BlackFridayStickyBar } from "@/components/BlackFridayStickyBar";
 import JohnImage from "@/assets/John.png";
 import JPMorganLogo from "@/assets/Chase.png";
 import IntercomLogo from "@/assets/intercom-1-logo-png-transparent.png";
 import HubspotLogo from "@/assets/Hubspot.svg.png";
 import MetaLogo from "@/assets/meta.png";
 import GoogleLogo from "@/assets/Google.svg.png";
+import LovableLogo from "@/assets/logos/lovable.png";
 import WorkshopImage1 from "@/assets/workshop-1.jpg";
 import WorkshopImage2 from "@/assets/workshop-2.jpg";
 import WorkshopImage3 from "@/assets/workshop-3.jpg";
@@ -115,21 +118,31 @@ const cohortModules = [
 
   const faqs = [
     {
-    question: "What happens if I can't make a live session?",
-    answer:
-      "You'll get the full recording, plus access to the community for recaps and Q&A. Join the next live session or catch up on your own time.",
-  },
-  {
-    question: "I work full-time, what is the expected time commitment?",
-    answer:
-      "Plan for 2–3 hours across the workshop weekend. The core live session runs 90 minutes, and you'll have optional time to complete the vibe coding challenge.",
-  },
-  {
-    question: "What's the refund policy?",
-    answer:
-      "The Maven Guarantee has you covered. You're eligible for a full refund up until the halfway point of the course.",
-  },
-];
+      question: "I'm not technical, is it right?",
+      answer:
+        "Absolutely! This course is designed for non-technical professionals. You don't need any coding background to get started. We'll guide you through everything step-by-step, from setting up Cursor to building your first apps with AI assistance.",
+    },
+    {
+      question: "Is it beginner-friendly?",
+      answer:
+        "Yes, 100% beginner-friendly! We start from the very basics and build up gradually. Whether you're completely new to coding or have some experience, our structured approach ensures you'll learn at your own pace with hands-on projects and clear guidance.",
+    },
+    {
+      question: "Is the course self-paced?",
+      answer:
+        "Yes! This course is completely self-paced. You have lifetime access to all course materials, so you can learn at your own speed and on your own schedule. Whether you want to complete it in 14 days or take your time over several weeks, you have full flexibility to work through the content whenever it's convenient for you.",
+    },
+    {
+      question: "Do I need to learn?",
+      answer:
+        "You'll learn by doing! This isn't about memorizing code—it's about understanding how to work with AI tools like Cursor to bring your ideas to life. You'll build real projects while learning the workflows and techniques that make AI-powered development accessible.",
+    },
+    {
+      question: "No coding?",
+      answer:
+        "You'll learn to code with AI assistance, not traditional coding. Using Cursor and AI tools, you'll communicate your ideas and let AI help you build apps. It's like having a coding partner that understands your vision. No need to memorize syntax or spend years learning—just focus on your ideas and let AI handle the heavy lifting.",
+    },
+  ];
 
 const companyLogos = [
   { src: JPMorganLogo, alt: "JPMorgan Chase & Co." },
@@ -145,7 +158,7 @@ const VibeCodingAccelerator = () => {
   return (
     <>
       <Helmet>
-        <title>Vibe Coding 101 Beginner Course</title>
+        <title>Vibe Coding with Cursor in 14 days</title>
         <meta
           name="description"
           content="Master vibe coding and design engineering. Learn to ship AI-powered products, build a standout portfolio, and command top-tier roles."
@@ -154,8 +167,9 @@ const VibeCodingAccelerator = () => {
 
       <div className="bg-black text-white">
         <Navigation />
+        <BlackFridayStickyBar />
         
-        <main>
+        <main className="pb-20">
           {/* Hero */}
           <section className="relative overflow-hidden border-b border-white/10 bg-black py-32 sm:py-40 md:py-48">
             {/* Shader background */}
@@ -209,9 +223,9 @@ const VibeCodingAccelerator = () => {
                       height: 'auto',
                     }}
                   />
-                    </div>
+                            </div>
                 <h1 className="text-4xl font-normal leading-tight sm:text-5xl lg:text-6xl relative">
-                  Vibe Coding 101 with Cursor
+                  Master Vibe Coding<br />With Cursor in 14 Days
                   </h1>
                 <p className="text-lg text-white/70 sm:text-xl mx-auto max-w-2xl">
                   Learn where to get started with Vibe Coding, discover what tools to use, explore project demos behind the scenes, and build your first Vibe Coding prototype.
@@ -219,30 +233,192 @@ const VibeCodingAccelerator = () => {
                 <div className="flex flex-col gap-3 sm:flex-row justify-center max-w-md mx-auto">
                   <Button variant="cta" size="xl" className="w-full sm:w-auto sm:min-w-[200px]" asChild>
                     <a href="https://maven.com/productlearnio/aiproductdesignmasterycohort" target="_blank" rel="noopener noreferrer">
-                      Join Live Workshop
-                      <Play className="h-5 w-5" />
+                      Enroll Today
+                      <ArrowRight className="h-5 w-5" />
                       </a>
                     </Button>
                   <Button variant="outline" size="xl" className="border-white/30 text-white hover:bg-white/10 w-full sm:w-auto sm:min-w-[200px]">
-                    Self-Paced Course
+                    Log In
                     <ArrowRight className="h-5 w-5" />
                     </Button>
+                    </div>
                 </div>
-              </div>
-            </div>
+                        </div>
           </section>
 
           {/* Outcomes Section */}
           <OutcomesSection />
 
+          {/* Video Slider Section */}
+          <VideoSlider />
+
           {/* Testimonials Section */}
           <CohortTestimonialsSection />
+
+          {/* Meet your instructor */}
+          <section className="relative border-b border-white/10 bg-black py-20 overflow-hidden">
+            {/* Colorful shader effects */}
+            <div 
+              className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(147,51,234,0.3)_0%,_rgba(0,0,0,0)_50%)] pointer-events-none" 
+              style={{ animation: "glowMove 8s ease-in-out infinite" }}
+              aria-hidden="true" 
+            />
+            <div 
+              className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(34,197,94,0.2)_0%,_rgba(0,0,0,0)_70%)] pointer-events-none" 
+              style={{ animation: "glowPulse 6s ease-in-out infinite" }}
+              aria-hidden="true" 
+            />
+            <div className="relative z-10 mx-auto max-w-5xl px-6 lg:px-10">
+              <h2 className="text-3xl font-semibold mb-8">Meet your instructor</h2>
+              <div className="grid gap-8 md:grid-cols-[300px_1fr]">
+                {/* Video placeholder - vertical video */}
+                <div>
+                  <div className="relative w-full mx-auto max-w-[300px] aspect-[9/16] rounded-2xl border border-white/10 overflow-hidden bg-black/50">
+                    {/* Placeholder for video - will be replaced with actual video */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="text-center text-white/40">
+                        <Video className="h-12 w-12 mx-auto mb-2" />
+                        <p className="text-sm">Video coming soon</p>
+                      </div>
+                    </div>
+                    {/* Video element - replace src when video is provided */}
+                    <video
+                      className="w-full h-full object-cover"
+                      controls
+                      poster=""
+                      style={{ display: 'none' }}
+                    >
+                      <source src="" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <h3 className="text-2xl font-semibold text-white">John Rodrigues</h3>
+                  <div className="space-y-4 text-white/70">
+                    <p className="text-lg">
+                      John Rodrigues is a Senior Product Designer, AI strategist, and author of <em>The AI Design Playbook</em>, a resource trusted by over 1,500 industry leaders. He is the founder of AI Design Academy and currently leads AI design initiatives at JPMorgan Chase.
+                    </p>
+                    <p>
+                      With over a decade of experience in product design, John holds a Master's degree in Interaction Design, a Bachelor's in Engineering, and an AI certification from Stanford University. Previously worked with Citi Bank and recognized as one of the Top 10 mentors on ADPList.
+                    </p>
+                    <p>
+                      John has built a loyal community of over 10,000 followers on LinkedIn and authored books on design career. His work bridges design, technology, and AI, helping the next generation of designers stay ahead in a rapidly evolving industry.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Recent Accomplishment Section - Moved to bottom */}
+              <div className="mt-12 bg-white/5 border border-white/10 rounded-xl p-6">
+                <h4 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+                  <Award className="h-5 w-5 text-primary" />
+                  Recent Accomplishment
+                </h4>
+                <p className="text-white/90 mb-6">
+                  <strong className="text-white">🏆 Hackathon Winner</strong> — Recently won the hackathon in San Francisco held by <strong className="text-white">HAI (Human-Centered AI Institute)</strong>, <strong className="text-white">OpenAI</strong>, and <strong className="text-white">Loveable</strong>. This achievement showcases expertise in building innovative AI-powered solutions and demonstrates the practical application of vibe coding techniques taught in this course.
+                </p>
+                {/* Logos */}
+                <div className="flex items-center gap-6 flex-wrap">
+                  <span className="text-sm text-white/60">Hosted by:</span>
+                  <div className="flex items-center gap-8">
+                    {/* OpenAI Logo */}
+                    <div className="flex items-center">
+                      <img 
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/240px-ChatGPT_logo.svg.png" 
+                        alt="OpenAI" 
+                        className="h-8 w-8 object-contain opacity-90 hover:opacity-100 transition-opacity filter brightness-0 invert"
+                        onError={(e) => {
+                          // Fallback: show text if image fails
+                          e.currentTarget.style.display = 'none';
+                          const fallback = e.currentTarget.parentElement?.querySelector('.openai-fallback');
+                          if (fallback) fallback.classList.remove('hidden');
+                        }}
+                      />
+                      <span className="text-white/80 font-semibold text-sm ml-2 openai-fallback hidden">OpenAI</span>
+                    </div>
+                    
+                    {/* HAI Logo */}
+                    <div className="flex items-center">
+                      <div className="w-8 h-8 rounded bg-white/10 flex items-center justify-center">
+                        <span className="text-white/90 font-bold text-xs">HAI</span>
+                      </div>
+                    </div>
+                    
+                    {/* Loveable Logo */}
+                    <div className="flex items-center">
+                      <img 
+                        src={LovableLogo} 
+                        alt="Loveable" 
+                        className="h-8 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
 
           {/* Curriculum Section */}
           <CohortModulesSection />
 
           {/* Pricing Section */}
           <CoursePricingSection />
+
+          {/* FAQ */}
+          <section className="relative border-b border-white/10 bg-black py-20 overflow-hidden">
+            {/* Colorful shader effects */}
+            <div 
+              className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(168,85,247,0.25)_0%,_rgba(0,0,0,0)_50%)] pointer-events-none" 
+              style={{ animation: "glowMove 8s ease-in-out infinite" }}
+              aria-hidden="true" 
+            />
+            <div 
+              className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(59,130,246,0.2)_0%,_rgba(0,0,0,0)_70%)] pointer-events-none" 
+              style={{ animation: "glowPulse 6s ease-in-out infinite" }}
+              aria-hidden="true" 
+            />
+            <div className="relative z-10 mx-auto max-w-4xl px-6 lg:px-10">
+              <h2 className="text-3xl font-semibold text-center">Frequently Asked Questions</h2>
+              <div className="mt-10 space-y-6">
+                {faqs.map((faq) => (
+                  <Card key={faq.question} className="border-white/10 bg-white/5 p-6">
+                    <h3 className="text-xl font-semibold text-white">{faq.question}</h3>
+                    <p className="mt-3 text-base text-white/70">{faq.answer}</p>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Final CTA Section */}
+          <section className="relative bg-black py-24 overflow-hidden">
+            {/* Shader effects */}
+            <div 
+              className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(59,130,246,0.2)_0%,_rgba(0,0,0,0)_70%)] pointer-events-none" 
+              style={{ animation: "glowPulse 6s ease-in-out infinite" }}
+              aria-hidden="true" 
+            />
+            <div className="relative z-10 mx-auto max-w-4xl px-6 lg:px-10 text-center">
+              <h2 className="text-3xl md:text-4xl font-semibold mb-4">Ready to Master Vibe Coding?</h2>
+              <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
+                Join the Black Friday sale and save $200. Limited time offer!
+              </p>
+              <div className="flex flex-col gap-3 sm:flex-row justify-center">
+                <Button variant="cta" size="xl" className="w-full sm:w-auto sm:min-w-[200px]" asChild>
+                  <a href="https://maven.com/productlearnio/aiproductdesignmasterycohort" target="_blank" rel="noopener noreferrer">
+                    Enroll Today - $299
+                    <ArrowRight className="h-5 w-5" />
+                  </a>
+                </Button>
+                <Button variant="outline" size="xl" className="border-white/30 text-white hover:bg-white/10 w-full sm:w-auto sm:min-w-[200px]">
+                  Learn More
+                  <ArrowRight className="h-5 w-5" />
+                </Button>
+              </div>
+              <p className="mt-6 text-sm text-white/50">100% Money-Back Guarantee • Lifetime Access</p>
+            </div>
+          </section>
 
           {/* Hide all other sections */}
           {false && <>
@@ -270,9 +446,9 @@ const VibeCodingAccelerator = () => {
                     loading="lazy"
                     className="h-full w-full"
                   />
-                </div>
-              </div>
-            </div>
+                        </div>
+                            </div>
+                    </div>
           </section>
 
           {/* Highlights */}
@@ -299,9 +475,9 @@ const VibeCodingAccelerator = () => {
                     <h3 className="text-xl font-semibold text-white">{item.title}</h3>
                     <p className="mt-3 text-white/70">{item.description}</p>
                   </Card>
-                              ))}
-              </div>
-            </div>
+                        ))}
+                      </div>
+                  </div>
           </section>
 
           {/* Who is this course for */}
@@ -346,7 +522,7 @@ const VibeCodingAccelerator = () => {
               <p className="mt-6 text-lg text-white/70">
                 No coding required, bring only vibes. Eagerness to learn and a desire to leverage AI to level up your skills and bring AI products to life.
                   </p>
-                </div>
+            </div>
           </section>
 
           {/* What's included */}
@@ -369,10 +545,10 @@ const VibeCodingAccelerator = () => {
                   <Card key={item.title} className="border-white/10 bg-white/5 p-6">
                     <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
                       <item.icon className="h-6 w-6 text-primary" />
-                      </div>
+                </div>
                     <h3 className="text-xl font-semibold text-white">{item.title}</h3>
                     <p className="mt-3 text-sm text-white/70">{item.description}</p>
-                    </Card>
+                  </Card>
                   ))}
               </div>
             </div>
@@ -384,7 +560,7 @@ const VibeCodingAccelerator = () => {
               <div className="inline-flex items-center gap-3 rounded-full border border-white/10 px-4 py-2 text-sm text-white/60">
                 <Play className="h-4 w-4" />
                 Watch the vibe coding workshop recording
-                        </div>
+                    </div>
               <div className="relative mt-10 overflow-hidden rounded-3xl border border-white/10 bg-white/5">
                 <div className="aspect-video w-full">
                   <iframe
@@ -395,7 +571,7 @@ const VibeCodingAccelerator = () => {
                     loading="lazy"
                     className="h-full w-full"
                   />
-                      </div>
+                  </div>
                 </div>
               <p className="mt-6 text-base text-white/70">
                 Get a head start by watching the workshop recording, then join the next live session to build alongside
@@ -454,11 +630,11 @@ const VibeCodingAccelerator = () => {
                     <div className="mb-3 flex items-center gap-3">
                       <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-sm font-semibold text-primary">
                         {index + 1}
-                      </div>
-                    </div>
+                </div>
+              </div>
                     <h3 className="text-lg font-semibold text-white">{module.title}</h3>
-                  </Card>
-                ))}
+                    </Card>
+                  ))}
               </div>
             </div>
           </section>
@@ -490,7 +666,7 @@ const VibeCodingAccelerator = () => {
                       <div className="flex flex-col text-left">
                         <span className="text-sm uppercase tracking-wide text-white/60">{module.week}</span>
                         <span className="mt-2 text-xl font-semibold">{module.title}</span>
-                  </div>
+                      </div>
                         </AccordionTrigger>
                     <AccordionContent className="pb-6 text-white/70">
                       {module.items.length > 0 ? (
@@ -509,47 +685,6 @@ const VibeCodingAccelerator = () => {
                       </AccordionItem>
                     ))}
                   </Accordion>
-            </div>
-          </section>
-
-          {/* Meet your instructor */}
-          <section className="relative border-b border-white/10 bg-black py-20 overflow-hidden">
-            {/* Colorful shader effects */}
-            <div 
-              className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(147,51,234,0.3)_0%,_rgba(0,0,0,0)_50%)] pointer-events-none" 
-              style={{ animation: "glowMove 8s ease-in-out infinite" }}
-              aria-hidden="true" 
-            />
-            <div 
-              className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(34,197,94,0.2)_0%,_rgba(0,0,0,0)_70%)] pointer-events-none" 
-              style={{ animation: "glowPulse 6s ease-in-out infinite" }}
-              aria-hidden="true" 
-            />
-            <div className="relative z-10 mx-auto max-w-5xl px-6 lg:px-10">
-              <h2 className="text-3xl font-semibold mb-8">Meet your instructor</h2>
-              <div className="grid gap-8 md:grid-cols-[200px_1fr]">
-                <div>
-                  <img
-                    src={JohnImage}
-                    alt="John Rodrigues"
-                    className="w-full rounded-2xl border border-white/10 object-cover"
-                  />
-                                  </div>
-                <div className="space-y-4">
-                  <h3 className="text-2xl font-semibold text-white">John Rodrigues</h3>
-                  <div className="space-y-3 text-white/70">
-                    <p>
-                      John Rodrigues is a Senior Product Designer, AI strategist, and author of <em>The AI Design Playbook</em>, a resource trusted by over 1,500 industry leaders. He is the founder of AI Design Academy
-                    </p>
-                    <p>
-                      John currently leads AI design initiatives at JPMorgan Chase and has previously worked with Citi Bank. With over a decade of experience in product design, he holds a Master's degree in Interaction Design, a Bachelor's in Engineering, and an AI certification from Stanford University.
-                    </p>
-                    <p>
-                      Recognized as one of the Top 10 mentors on ADPList, John has built a loyal community of over 10,000 followers on LinkedIn and authored book on design career. His work bridges design, technology, and AI helping the next generation of designers stay ahead in a rapidly evolving industry.
-                    </p>
-                                </div>
-                        </div>
-                      </div>
             </div>
           </section>
 
@@ -675,32 +810,6 @@ const VibeCodingAccelerator = () => {
                 </Card>
               </div>
                               </div>
-          </section>
-
-          {/* FAQ */}
-          <section className="relative border-b border-white/10 bg-black py-20 overflow-hidden">
-            {/* Colorful shader effects */}
-            <div 
-              className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(168,85,247,0.25)_0%,_rgba(0,0,0,0)_50%)] pointer-events-none" 
-              style={{ animation: "glowMove 8s ease-in-out infinite" }}
-              aria-hidden="true" 
-            />
-            <div 
-              className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(59,130,246,0.2)_0%,_rgba(0,0,0,0)_70%)] pointer-events-none" 
-              style={{ animation: "glowPulse 6s ease-in-out infinite" }}
-              aria-hidden="true" 
-            />
-            <div className="relative z-10 mx-auto max-w-4xl px-6 lg:px-10">
-              <h2 className="text-3xl font-semibold text-center">Frequently Asked Questions</h2>
-              <div className="mt-10 space-y-6">
-                {faqs.map((faq) => (
-                  <Card key={faq.question} className="border-white/10 bg-white/5 p-6">
-                    <h3 className="text-xl font-semibold text-white">{faq.question}</h3>
-                    <p className="mt-3 text-base text-white/70">{faq.answer}</p>
-                          </Card>
-                ))}
-                      </div>
-                    </div>
           </section>
 
           {/* Stay in the loop */}
