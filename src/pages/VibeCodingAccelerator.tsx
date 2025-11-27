@@ -241,7 +241,7 @@ const VibeCodingAccelerator = () => {
                     </div>
                   </div>
                   <div className="space-y-3 sm:space-y-4">
-                    <h3 className="text-xl sm:text-2xl font-semibold text-white text-center md:text-left">John Rodrigues</h3>
+                    <h3 className="text-xl sm:text-2xl font-semibold text-white md:text-left text-left">John Rodrigues</h3>
                     <div className="space-y-3 sm:space-y-4 text-white/70">
                     <p className="text-base sm:text-lg">
                       Senior Product Designer, AI strategist, and author of <em>The AI Design Playbook</em>, trusted by 1,500+ industry leaders. Founder of AI Design Academy.
@@ -754,7 +754,6 @@ const VibeCodingAccelerator = () => {
             </>}
         </main>
       </div>
-    </>
-  ;
+    </>;
 };
 export default VibeCodingAccelerator;
