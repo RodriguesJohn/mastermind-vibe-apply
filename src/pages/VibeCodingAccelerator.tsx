@@ -28,147 +28,111 @@ import WorkshopImage1 from "@/assets/workshop-1.jpg";
 import WorkshopImage2 from "@/assets/workshop-2.jpg";
 import WorkshopImage3 from "@/assets/workshop-3.jpg";
 import CursorLogo from "@/assets/logos/cursor.png";
-
-const vibeCodingHighlights = [
-  {
-    title: "Learn what vibe coding is",
-    description:
-      "Discover the foundations of Vibe Coding learn what it is, how it works, and how to start building your first AI-powered interface.",
-    icon: BookOpen,
-  },
-  {
-    title: "Learn tools and step by step how to get started",
-    description:
-      "Explore the essential tools that make Vibe Coding possible. Learn how to use platforms like Cursor, Lovable, React, and AI-powered assistants to design, code, and ship faster.",
-    icon: Rocket,
-  },
-  {
-    title: "Learn Cursor",
-    description:
-      "Watch real Vibe Coding demos in action and see how ideas turn into interactive apps using AI and modern design tools.",
-    icon: Code2,
-  },
-  {
-    title: "Build your first project",
-    description:
-      "Put your skills to the test with a hands-on Vibe Coding challenge. Apply what you've learned to build and ship your own mini AI-powered project.",
-    icon: Hammer,
-  },
-];
-
-const whatsIncluded = [
-  {
-    title: "Live sessions",
-    description: "Learn directly from John Rodrigues in a real-time, interactive format.",
-    icon: Users,
-  },
-  {
-    title: "Lifetime access",
-    description: "Go back to course content and recordings whenever you need to.",
-    icon: BookmarkCheck,
-  },
-  {
-    title: "Community of peers",
-    description: "Stay accountable and share insights with like-minded professionals.",
-    icon: Sparkles,
-  },
-  {
-    title: "Certificate of completion",
-    description: "Share your new skills with your employer or on LinkedIn.",
-    icon: CheckCircle2,
-  },
-  {
-    title: "Maven Guarantee",
-    description: "This course is backed by the Maven Guarantee. Students are eligible for a full refund up until the halfway point of the course.",
-    icon: ShieldCheck,
-  },
-];
-
-const cohortModules = [
-  {
-    week: "Nov 14—Nov 15",
-    title: "Welcome to Vibe Coding Bootcamp",
-    items: [],
-  },
-  {
-    week: "Nov 14—Nov 15",
-    title: "Things to Prep For the Live Session",
-    items: [],
-  },
-  {
-    week: "Nov 14—Nov 15",
-    title: "What is Vibe Coding",
-    items: [],
-  },
-  {
-    week: "Nov 14—Nov 15",
-    title: "What are the tools to use for Vibe Coding",
-    items: [],
-  },
-  {
-    week: "Nov 14—Nov 15",
-    title: "How to Leverage Vibe coding in your workflows",
-    items: ["1 item"],
-  },
-  {
-    week: "Nov 14—Nov 15",
-    title: "Vibe Code Demos",
-    items: [],
-  },
-  {
-    week: "Nov 15",
-    title: "Vibe Coding Bootcamp Live Session",
-    items: ["Sat 11/15 7:00 PM—8:30 PM (UTC)"],
-  },
-  ];
-
-  const faqs = [
-    {
-      question: "I'm not technical, is it right?",
-      answer:
-        "Absolutely! This course is designed for non-technical professionals. You don't need any coding background to get started. We'll guide you through everything step-by-step, from setting up Cursor to building your first apps with AI assistance.",
-    },
-    {
-      question: "Is it beginner-friendly?",
-      answer:
-        "Yes, 100% beginner-friendly! We start from the very basics and build up gradually. Whether you're completely new to coding or have some experience, our structured approach ensures you'll learn at your own pace with hands-on projects and clear guidance.",
-    },
-    {
-      question: "Is the course self-paced?",
-      answer:
-        "Yes! This course is completely self-paced. You have lifetime access to all course materials, so you can learn at your own speed and on your own schedule. Whether you want to complete it in 14 days or take your time over several weeks, you have full flexibility to work through the content whenever it's convenient for you.",
-    },
-    {
-      question: "If you have any questions, how do I reach out?",
-      answer:
-        "If you have any questions, you reach out to us directly at hello@theaidesignacademy.com.",
-    },
-    {
-      question: "What's the best way to reach out?",
-      answer:
-        "The best way to reach out is via email at hello@theaidesignacademy.com. We typically respond within 24-48 hours. For urgent matters, please include 'URGENT' in your subject line.",
-    },
-  ];
-
-const companyLogos = [
-  { src: JPMorganLogo, alt: "JPMorgan Chase & Co." },
-  { src: IntercomLogo, alt: "Intercom" },
-  { src: HubspotLogo, alt: "HubSpot" },
-  { src: MetaLogo, alt: "Meta" },
-  { src: GoogleLogo, alt: "Google" },
-];
-
+const vibeCodingHighlights = [{
+  title: "Learn what vibe coding is",
+  description: "Discover the foundations of Vibe Coding learn what it is, how it works, and how to start building your first AI-powered interface.",
+  icon: BookOpen
+}, {
+  title: "Learn tools and step by step how to get started",
+  description: "Explore the essential tools that make Vibe Coding possible. Learn how to use platforms like Cursor, Lovable, React, and AI-powered assistants to design, code, and ship faster.",
+  icon: Rocket
+}, {
+  title: "Learn Cursor",
+  description: "Watch real Vibe Coding demos in action and see how ideas turn into interactive apps using AI and modern design tools.",
+  icon: Code2
+}, {
+  title: "Build your first project",
+  description: "Put your skills to the test with a hands-on Vibe Coding challenge. Apply what you've learned to build and ship your own mini AI-powered project.",
+  icon: Hammer
+}];
+const whatsIncluded = [{
+  title: "Live sessions",
+  description: "Learn directly from John Rodrigues in a real-time, interactive format.",
+  icon: Users
+}, {
+  title: "Lifetime access",
+  description: "Go back to course content and recordings whenever you need to.",
+  icon: BookmarkCheck
+}, {
+  title: "Community of peers",
+  description: "Stay accountable and share insights with like-minded professionals.",
+  icon: Sparkles
+}, {
+  title: "Certificate of completion",
+  description: "Share your new skills with your employer or on LinkedIn.",
+  icon: CheckCircle2
+}, {
+  title: "Maven Guarantee",
+  description: "This course is backed by the Maven Guarantee. Students are eligible for a full refund up until the halfway point of the course.",
+  icon: ShieldCheck
+}];
+const cohortModules = [{
+  week: "Nov 14—Nov 15",
+  title: "Welcome to Vibe Coding Bootcamp",
+  items: []
+}, {
+  week: "Nov 14—Nov 15",
+  title: "Things to Prep For the Live Session",
+  items: []
+}, {
+  week: "Nov 14—Nov 15",
+  title: "What is Vibe Coding",
+  items: []
+}, {
+  week: "Nov 14—Nov 15",
+  title: "What are the tools to use for Vibe Coding",
+  items: []
+}, {
+  week: "Nov 14—Nov 15",
+  title: "How to Leverage Vibe coding in your workflows",
+  items: ["1 item"]
+}, {
+  week: "Nov 14—Nov 15",
+  title: "Vibe Code Demos",
+  items: []
+}, {
+  week: "Nov 15",
+  title: "Vibe Coding Bootcamp Live Session",
+  items: ["Sat 11/15 7:00 PM—8:30 PM (UTC)"]
+}];
+const faqs = [{
+  question: "I'm not technical, is it right?",
+  answer: "Absolutely! This course is designed for non-technical professionals. You don't need any coding background to get started. We'll guide you through everything step-by-step, from setting up Cursor to building your first apps with AI assistance."
+}, {
+  question: "Is it beginner-friendly?",
+  answer: "Yes, 100% beginner-friendly! We start from the very basics and build up gradually. Whether you're completely new to coding or have some experience, our structured approach ensures you'll learn at your own pace with hands-on projects and clear guidance."
+}, {
+  question: "Is the course self-paced?",
+  answer: "Yes! This course is completely self-paced. You have lifetime access to all course materials, so you can learn at your own speed and on your own schedule. Whether you want to complete it in 14 days or take your time over several weeks, you have full flexibility to work through the content whenever it's convenient for you."
+}, {
+  question: "If you have any questions, how do I reach out?",
+  answer: "If you have any questions, you reach out to us directly at hello@theaidesignacademy.com."
+}, {
+  question: "What's the best way to reach out?",
+  answer: "The best way to reach out is via email at hello@theaidesignacademy.com. We typically respond within 24-48 hours. For urgent matters, please include 'URGENT' in your subject line."
+}];
+const companyLogos = [{
+  src: JPMorganLogo,
+  alt: "JPMorgan Chase & Co."
+}, {
+  src: IntercomLogo,
+  alt: "Intercom"
+}, {
+  src: HubspotLogo,
+  alt: "HubSpot"
+}, {
+  src: MetaLogo,
+  alt: "Meta"
+}, {
+  src: GoogleLogo,
+  alt: "Google"
+}];
 const galleryImages = [WorkshopImage1, WorkshopImage2, WorkshopImage3];
-
 const VibeCodingAccelerator = () => {
-  return (
-    <>
+  return <>
       <Helmet>
         <title>Vibe Coding with Cursor in 14 days</title>
-        <meta
-          name="description"
-          content="Master vibe coding and design engineering. Learn to ship AI-powered products, build a standout portfolio, and command top-tier roles."
-        />
+        <meta name="description" content="Master vibe coding and design engineering. Learn to ship AI-powered products, build a standout portfolio, and command top-tier roles." />
       </Helmet>
 
       <div className="bg-black text-white">
@@ -220,15 +184,10 @@ const VibeCodingAccelerator = () => {
               <div className="space-y-4 sm:space-y-6 text-center relative">
                 {/* Bouncing Cursor Logo around title */}
                 <div className="absolute -top-12 sm:-top-16 md:-top-20 lg:-top-24 left-1/2 -translate-x-1/2 pointer-events-none flex items-center justify-center">
-                  <img 
-                    src={CursorLogo} 
-                    alt="Cursor" 
-                    className="w-10 sm:w-12 md:w-16 opacity-80 object-contain flex-shrink-0"
-                    style={{
-                      animation: 'bounceAround 15s ease-in-out infinite',
-                      height: 'auto',
-                    }}
-                  />
+                  <img src={CursorLogo} alt="Cursor" className="w-10 sm:w-12 md:w-16 opacity-80 object-contain flex-shrink-0" style={{
+                  animation: 'bounceAround 15s ease-in-out infinite',
+                  height: 'auto'
+                }} />
                             </div>
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal leading-tight relative pt-8 sm:pt-0">
                   Master Vibe Coding<br />With Cursor in 14 Days
@@ -266,27 +225,19 @@ const VibeCodingAccelerator = () => {
           {/* Meet your instructor */}
           <section className="relative border-b border-white/10 bg-black py-12 sm:py-16 md:py-20 overflow-hidden">
             {/* Colorful shader effects */}
-            <div 
-              className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(147,51,234,0.3)_0%,_rgba(0,0,0,0)_50%)] pointer-events-none" 
-              style={{ animation: "glowMove 8s ease-in-out infinite" }}
-              aria-hidden="true" 
-            />
-            <div 
-              className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(34,197,94,0.2)_0%,_rgba(0,0,0,0)_70%)] pointer-events-none" 
-              style={{ animation: "glowPulse 6s ease-in-out infinite" }}
-              aria-hidden="true" 
-            />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(147,51,234,0.3)_0%,_rgba(0,0,0,0)_50%)] pointer-events-none" style={{
+            animation: "glowMove 8s ease-in-out infinite"
+          }} aria-hidden="true" />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(34,197,94,0.2)_0%,_rgba(0,0,0,0)_70%)] pointer-events-none" style={{
+            animation: "glowPulse 6s ease-in-out infinite"
+          }} aria-hidden="true" />
             <div className="relative z-10 mx-auto max-w-5xl px-4 sm:px-6 lg:px-10">
               <h2 className="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8 text-center sm:text-left">Meet your instructor</h2>
               <div className="grid gap-6 sm:gap-8 md:grid-cols-[300px_1fr]">
                 {/* Instructor Image */}
                 <div>
                   <div className="relative w-full mx-auto max-w-[300px] aspect-[2/3] rounded-2xl border border-white/10 overflow-hidden bg-black/50">
-                    <img 
-                      src={JohnImage2} 
-                      alt="John Rodrigues" 
-                      className="w-full h-full object-cover"
-                    />
+                    <img src={JohnImage2} alt="John Rodrigues" className="w-full h-full object-cover" />
                   </div>
                 </div>
                 <div className="space-y-3 sm:space-y-4">
@@ -305,36 +256,12 @@ const VibeCodingAccelerator = () => {
                         <em>The AI Design Playbook</em> trusted by
                       </p>
                       <div className="flex items-center justify-center sm:justify-start gap-4 sm:gap-6 flex-wrap">
-                        <img 
-                          src={AppleLogo} 
-                          alt="Apple" 
-                          className="h-7 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity"
-                        />
-                        <img 
-                          src={GoogleLogo} 
-                          alt="Google" 
-                          className="h-7 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity"
-                        />
-                        <img 
-                          src={MetaLogo} 
-                          alt="Meta" 
-                          className="h-7 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity"
-                        />
-                        <img 
-                          src={JPMorganLogo} 
-                          alt="JPMorgan Chase" 
-                          className="h-7 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity"
-                        />
-                        <img 
-                          src={IntercomLogo} 
-                          alt="Intercom" 
-                          className="h-7 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity"
-                        />
-                        <img 
-                          src={HubspotLogo} 
-                          alt="HubSpot" 
-                          className="h-7 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity"
-                        />
+                        <img src={AppleLogo} alt="Apple" className="h-7 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity" />
+                        <img src={GoogleLogo} alt="Google" className="h-7 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity" />
+                        <img src={MetaLogo} alt="Meta" className="h-7 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity" />
+                        <img src={JPMorganLogo} alt="JPMorgan Chase" className="h-7 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity" />
+                        <img src={IntercomLogo} alt="Intercom" className="h-7 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity" />
+                        <img src={HubspotLogo} alt="HubSpot" className="h-7 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity" />
                       </div>
                     </div>
                   </div>
@@ -356,32 +283,23 @@ const VibeCodingAccelerator = () => {
                     <div className="flex items-center gap-4 sm:gap-8">
                       {/* AGI Logo */}
                       <div className="flex items-center">
-                        <img 
-                          src={AGILogo} 
-                          alt="AGI" 
-                          className="h-8 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
-                          style={{ maxHeight: '32px' }}
-                        />
+                        <img src={AGILogo} alt="AGI" className="h-8 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" style={{
+                      maxHeight: '32px'
+                    }} />
                       </div>
                       
                       {/* OpenAI Logo */}
                       <div className="flex items-center">
-                        <img 
-                          src={OpenAILogo} 
-                          alt="OpenAI" 
-                          className="h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
-                          style={{ maxHeight: '48px' }}
-                        />
+                        <img src={OpenAILogo} alt="OpenAI" className="h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" style={{
+                      maxHeight: '48px'
+                    }} />
                       </div>
                       
                       {/* Loveable Logo */}
                       <div className="flex items-center">
-                        <img 
-                          src={LoveableLogoMain} 
-                          alt="Loveable" 
-                          className="h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
-                          style={{ maxHeight: '48px' }}
-                        />
+                        <img src={LoveableLogoMain} alt="Loveable" className="h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" style={{
+                      maxHeight: '48px'
+                    }} />
                       </div>
                     </div>
                   </div>
@@ -398,34 +316,24 @@ const VibeCodingAccelerator = () => {
           {/* FAQ */}
           <section className="relative border-b border-white/10 bg-black py-12 sm:py-16 md:py-20 overflow-hidden">
             {/* Colorful shader effects */}
-            <div 
-              className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(168,85,247,0.25)_0%,_rgba(0,0,0,0)_50%)] pointer-events-none" 
-              style={{ animation: "glowMove 8s ease-in-out infinite" }}
-              aria-hidden="true" 
-            />
-            <div 
-              className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(59,130,246,0.2)_0%,_rgba(0,0,0,0)_70%)] pointer-events-none" 
-              style={{ animation: "glowPulse 6s ease-in-out infinite" }}
-              aria-hidden="true" 
-            />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(168,85,247,0.25)_0%,_rgba(0,0,0,0)_50%)] pointer-events-none" style={{
+            animation: "glowMove 8s ease-in-out infinite"
+          }} aria-hidden="true" />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(59,130,246,0.2)_0%,_rgba(0,0,0,0)_70%)] pointer-events-none" style={{
+            animation: "glowPulse 6s ease-in-out infinite"
+          }} aria-hidden="true" />
             <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-10">
               <h2 className="text-2xl sm:text-3xl font-semibold text-center">Frequently Asked Questions</h2>
               <div className="mt-6 sm:mt-10">
                 <Accordion type="single" collapsible className="w-full space-y-3 sm:space-y-4">
-                  {faqs.map((faq, index) => (
-                    <AccordionItem 
-                      key={faq.question} 
-                      value={`item-${index}`}
-                      className="border-white/10 bg-white/5 rounded-lg px-4 sm:px-6"
-                    >
+                  {faqs.map((faq, index) => <AccordionItem key={faq.question} value={`item-${index}`} className="border-white/10 bg-white/5 rounded-lg px-4 sm:px-6">
                       <AccordionTrigger className="text-lg sm:text-xl font-medium text-white hover:no-underline text-left">
                         {faq.question}
                       </AccordionTrigger>
                       <AccordionContent className="text-sm sm:text-base font-medium text-white/70 pt-2 pb-3 sm:pb-4">
                         {faq.answer}
                       </AccordionContent>
-                    </AccordionItem>
-                  ))}
+                    </AccordionItem>)}
                 </Accordion>
               </div>
             </div>
@@ -434,11 +342,9 @@ const VibeCodingAccelerator = () => {
           {/* Final CTA Section */}
           <section className="relative bg-black py-16 sm:py-20 md:py-24 overflow-hidden">
             {/* Shader effects */}
-            <div 
-              className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(59,130,246,0.2)_0%,_rgba(0,0,0,0)_70%)] pointer-events-none" 
-              style={{ animation: "glowPulse 6s ease-in-out infinite" }}
-              aria-hidden="true" 
-            />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(59,130,246,0.2)_0%,_rgba(0,0,0,0)_70%)] pointer-events-none" style={{
+            animation: "glowPulse 6s ease-in-out infinite"
+          }} aria-hidden="true" />
             <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-10 text-center">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-3 sm:mb-4">Ready to Master Vibe Coding?</h2>
               <p className="text-base sm:text-lg md:text-xl text-white/70 mb-6 sm:mb-8 max-w-2xl mx-auto px-2">
@@ -465,27 +371,16 @@ const VibeCodingAccelerator = () => {
           {/* Video Section */}
           <section className="relative border-b border-white/10 bg-black py-20 overflow-hidden">
             {/* Colorful shader effects */}
-            <div 
-              className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(59,130,246,0.3)_0%,_rgba(0,0,0,0)_50%)] pointer-events-none" 
-              style={{ animation: "glowMove 8s ease-in-out infinite" }}
-              aria-hidden="true" 
-            />
-            <div 
-              className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_rgba(236,72,153,0.25)_0%,_rgba(0,0,0,0)_60%)] pointer-events-none" 
-              style={{ animation: "glowPulse 6s ease-in-out infinite" }}
-              aria-hidden="true" 
-            />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(59,130,246,0.3)_0%,_rgba(0,0,0,0)_50%)] pointer-events-none" style={{
+              animation: "glowMove 8s ease-in-out infinite"
+            }} aria-hidden="true" />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_rgba(236,72,153,0.25)_0%,_rgba(0,0,0,0)_60%)] pointer-events-none" style={{
+              animation: "glowPulse 6s ease-in-out infinite"
+            }} aria-hidden="true" />
             <div className="relative z-10 mx-auto max-w-6xl px-6 lg:px-10">
               <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5">
                 <div className="aspect-video w-full">
-                  <iframe
-                    src="https://www.youtube.com/embed/An8IM-kPyms?rel=0&modestbranding=1"
-                    title="Vibe Coding Workshop Recording"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                    loading="lazy"
-                    className="h-full w-full"
-                  />
+                  <iframe src="https://www.youtube.com/embed/An8IM-kPyms?rel=0&modestbranding=1" title="Vibe Coding Workshop Recording" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen loading="lazy" className="h-full w-full" />
                         </div>
                             </div>
                     </div>
@@ -494,28 +389,22 @@ const VibeCodingAccelerator = () => {
           {/* Highlights */}
           <section className="relative border-b border-white/10 bg-black py-20 overflow-hidden" id="highlights">
             {/* Shader effects */}
-            <div 
-              className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(59,130,246,0.25)_0%,_rgba(0,0,0,0)_50%)] pointer-events-none" 
-              style={{ animation: "glowMove 8s ease-in-out infinite" }}
-              aria-hidden="true" 
-            />
-            <div 
-              className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(147,51,234,0.2)_0%,_rgba(0,0,0,0)_70%)] pointer-events-none" 
-              style={{ animation: "glowPulse 6s ease-in-out infinite" }}
-              aria-hidden="true" 
-            />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(59,130,246,0.25)_0%,_rgba(0,0,0,0)_50%)] pointer-events-none" style={{
+              animation: "glowMove 8s ease-in-out infinite"
+            }} aria-hidden="true" />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(147,51,234,0.2)_0%,_rgba(0,0,0,0)_70%)] pointer-events-none" style={{
+              animation: "glowPulse 6s ease-in-out infinite"
+            }} aria-hidden="true" />
             <div className="relative z-10 mx-auto max-w-6xl px-6 lg:px-10">
               <h2 className="text-3xl font-semibold">Outcome from this course</h2>
               <div className="mt-10 grid gap-8 md:grid-cols-2">
-                {vibeCodingHighlights.map((item) => (
-                  <Card key={item.title} className="border-white/10 bg-white/5 p-6 hover:border-white/20 transition-colors">
+                {vibeCodingHighlights.map(item => <Card key={item.title} className="border-white/10 bg-white/5 p-6 hover:border-white/20 transition-colors">
                     <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
                       <item.icon className="h-6 w-6 text-primary" />
                 </div>
                     <h3 className="text-xl font-semibold text-white">{item.title}</h3>
                     <p className="mt-3 text-white/70">{item.description}</p>
-                  </Card>
-                        ))}
+                  </Card>)}
                       </div>
                   </div>
           </section>
@@ -523,16 +412,12 @@ const VibeCodingAccelerator = () => {
           {/* Who is this course for */}
           <section className="relative border-b border-white/10 bg-black py-20 overflow-hidden">
             {/* Shader effects */}
-            <div 
-              className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(59,130,246,0.25)_0%,_rgba(0,0,0,0)_50%)] pointer-events-none" 
-              style={{ animation: "glowMove 8s ease-in-out infinite" }}
-              aria-hidden="true" 
-            />
-            <div 
-              className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(147,51,234,0.2)_0%,_rgba(0,0,0,0)_70%)] pointer-events-none" 
-              style={{ animation: "glowPulse 6s ease-in-out infinite" }}
-              aria-hidden="true" 
-            />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(59,130,246,0.25)_0%,_rgba(0,0,0,0)_50%)] pointer-events-none" style={{
+              animation: "glowMove 8s ease-in-out infinite"
+            }} aria-hidden="true" />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(147,51,234,0.2)_0%,_rgba(0,0,0,0)_70%)] pointer-events-none" style={{
+              animation: "glowPulse 6s ease-in-out infinite"
+            }} aria-hidden="true" />
             <div className="relative z-10 mx-auto max-w-6xl px-6 lg:px-10">
               <h2 className="text-3xl font-semibold mb-10">Who is this course for</h2>
               <div className="grid gap-6 md:grid-cols-3">
@@ -568,28 +453,22 @@ const VibeCodingAccelerator = () => {
           {/* What's included */}
           <section className="relative border-b border-white/10 bg-black py-20 overflow-hidden">
             {/* Shader effects */}
-            <div 
-              className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(59,130,246,0.25)_0%,_rgba(0,0,0,0)_50%)] pointer-events-none" 
-              style={{ animation: "glowMove 8s ease-in-out infinite" }}
-              aria-hidden="true" 
-            />
-            <div 
-              className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(147,51,234,0.2)_0%,_rgba(0,0,0,0)_70%)] pointer-events-none" 
-              style={{ animation: "glowPulse 6s ease-in-out infinite" }}
-              aria-hidden="true" 
-            />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(59,130,246,0.25)_0%,_rgba(0,0,0,0)_50%)] pointer-events-none" style={{
+              animation: "glowMove 8s ease-in-out infinite"
+            }} aria-hidden="true" />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(147,51,234,0.2)_0%,_rgba(0,0,0,0)_70%)] pointer-events-none" style={{
+              animation: "glowPulse 6s ease-in-out infinite"
+            }} aria-hidden="true" />
             <div className="relative z-10 mx-auto max-w-6xl px-6 lg:px-10">
               <h2 className="text-3xl font-semibold">What's included</h2>
               <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                {whatsIncluded.map((item) => (
-                  <Card key={item.title} className="border-white/10 bg-white/5 p-6">
+                {whatsIncluded.map(item => <Card key={item.title} className="border-white/10 bg-white/5 p-6">
                     <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
                       <item.icon className="h-6 w-6 text-primary" />
                 </div>
                     <h3 className="text-xl font-semibold text-white">{item.title}</h3>
                     <p className="mt-3 text-sm text-white/70">{item.description}</p>
-                  </Card>
-                  ))}
+                  </Card>)}
               </div>
             </div>
           </section>
@@ -603,14 +482,7 @@ const VibeCodingAccelerator = () => {
                     </div>
               <div className="relative mt-10 overflow-hidden rounded-3xl border border-white/10 bg-white/5">
                 <div className="aspect-video w-full">
-                  <iframe
-                    src="https://www.youtube.com/embed/aNNaVhnJdYc?rel=0&modestbranding=1"
-                    title="Vibe Coding Weekend Workshop Recording"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                    loading="lazy"
-                    className="h-full w-full"
-                  />
+                  <iframe src="https://www.youtube.com/embed/aNNaVhnJdYc?rel=0&modestbranding=1" title="Vibe Coding Weekend Workshop Recording" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen loading="lazy" className="h-full w-full" />
                   </div>
                 </div>
               <p className="mt-6 text-base text-white/70">
@@ -623,16 +495,12 @@ const VibeCodingAccelerator = () => {
           {/* Course outline */}
           <section className="relative border-b border-white/10 bg-black py-20 overflow-hidden">
             {/* Shader effects */}
-            <div 
-              className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(59,130,246,0.25)_0%,_rgba(0,0,0,0)_50%)] pointer-events-none" 
-              style={{ animation: "glowMove 8s ease-in-out infinite" }}
-              aria-hidden="true" 
-            />
-            <div 
-              className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(147,51,234,0.2)_0%,_rgba(0,0,0,0)_70%)] pointer-events-none" 
-              style={{ animation: "glowPulse 6s ease-in-out infinite" }}
-              aria-hidden="true" 
-            />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(59,130,246,0.25)_0%,_rgba(0,0,0,0)_50%)] pointer-events-none" style={{
+              animation: "glowMove 8s ease-in-out infinite"
+            }} aria-hidden="true" />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(147,51,234,0.2)_0%,_rgba(0,0,0,0)_70%)] pointer-events-none" style={{
+              animation: "glowPulse 6s ease-in-out infinite"
+            }} aria-hidden="true" />
             
             <style>
               {`
@@ -665,16 +533,14 @@ const VibeCodingAccelerator = () => {
                 No coding required, bring only vibes. Eagerness to learn and a desire to leverage AI to level up your skills and bring AI products to life.
               </p>
               <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                {cohortModules.map((module, index) => (
-                  <Card key={module.title} className="border-white/10 bg-white/5 p-6">
+                {cohortModules.map((module, index) => <Card key={module.title} className="border-white/10 bg-white/5 p-6">
                     <div className="mb-3 flex items-center gap-3">
                       <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-sm font-semibold text-primary">
                         {index + 1}
                 </div>
               </div>
                     <h3 className="text-lg font-semibold text-white">{module.title}</h3>
-                    </Card>
-                  ))}
+                    </Card>)}
               </div>
             </div>
           </section>
@@ -682,26 +548,17 @@ const VibeCodingAccelerator = () => {
           {/* Course syllabus */}
           <section className="relative border-b border-white/10 bg-black py-20 overflow-hidden">
             {/* Shader effects */}
-            <div 
-              className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(59,130,246,0.25)_0%,_rgba(0,0,0,0)_50%)] pointer-events-none" 
-              style={{ animation: "glowMove 8s ease-in-out infinite" }}
-              aria-hidden="true" 
-            />
-            <div 
-              className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(147,51,234,0.2)_0%,_rgba(0,0,0,0)_70%)] pointer-events-none" 
-              style={{ animation: "glowPulse 6s ease-in-out infinite" }}
-              aria-hidden="true" 
-            />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(59,130,246,0.25)_0%,_rgba(0,0,0,0)_50%)] pointer-events-none" style={{
+              animation: "glowMove 8s ease-in-out infinite"
+            }} aria-hidden="true" />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(147,51,234,0.2)_0%,_rgba(0,0,0,0)_70%)] pointer-events-none" style={{
+              animation: "glowPulse 6s ease-in-out infinite"
+            }} aria-hidden="true" />
             
             <div className="relative z-10 mx-auto max-w-5xl px-6 lg:px-10">
               <h2 className="text-3xl font-semibold">Course syllabus</h2>
               <Accordion type="single" collapsible className="mt-10 space-y-4">
-                {cohortModules.map((module, index) => (
-                  <AccordionItem
-                    key={module.title}
-                    value={`module-${index}`}
-                    className="overflow-hidden rounded-2xl border border-white/10 bg-white/5 px-6"
-                  >
+                {cohortModules.map((module, index) => <AccordionItem key={module.title} value={`module-${index}`} className="overflow-hidden rounded-2xl border border-white/10 bg-white/5 px-6">
                     <AccordionTrigger className="py-6 text-left text-lg text-white hover:text-white/80">
                       <div className="flex flex-col text-left">
                         <span className="text-sm uppercase tracking-wide text-white/60">{module.week}</span>
@@ -709,21 +566,14 @@ const VibeCodingAccelerator = () => {
                       </div>
                         </AccordionTrigger>
                     <AccordionContent className="pb-6 text-white/70">
-                      {module.items.length > 0 ? (
-                        <ul className="mt-4 space-y-3 text-base">
-                          {module.items.map((item) => (
-                            <li key={item} className="flex items-start gap-3">
+                      {module.items.length > 0 ? <ul className="mt-4 space-y-3 text-base">
+                          {module.items.map(item => <li key={item} className="flex items-start gap-3">
                               <CheckCircle2 className="mt-1 h-5 w-5 text-primary" />
                               <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                      ) : (
-                        <p className="mt-4 text-base">0 items</p>
-                      )}
+                          </li>)}
+                      </ul> : <p className="mt-4 text-base">0 items</p>}
                         </AccordionContent>
-                      </AccordionItem>
-                    ))}
+                      </AccordionItem>)}
                   </Accordion>
             </div>
           </section>
@@ -731,16 +581,12 @@ const VibeCodingAccelerator = () => {
           {/* Gallery */}
           <section className="relative border-b border-white/10 bg-black py-20 overflow-hidden">
             {/* Colorful shader effects */}
-            <div 
-              className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(251,146,60,0.25)_0%,_rgba(0,0,0,0)_60%)] pointer-events-none" 
-              style={{ animation: "glowMove 8s ease-in-out infinite" }}
-              aria-hidden="true" 
-            />
-            <div 
-              className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(168,85,247,0.2)_0%,_rgba(0,0,0,0)_50%)] pointer-events-none" 
-              style={{ animation: "glowPulse 6s ease-in-out infinite" }}
-              aria-hidden="true" 
-            />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(251,146,60,0.25)_0%,_rgba(0,0,0,0)_60%)] pointer-events-none" style={{
+              animation: "glowMove 8s ease-in-out infinite"
+            }} aria-hidden="true" />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(168,85,247,0.2)_0%,_rgba(0,0,0,0)_50%)] pointer-events-none" style={{
+              animation: "glowPulse 6s ease-in-out infinite"
+            }} aria-hidden="true" />
             <div className="relative z-10 mx-auto max-w-6xl px-6 lg:px-10">
               <div className="flex flex-col gap-6 text-left md:flex-row md:items-center md:justify-between">
                           <div>
@@ -751,15 +597,10 @@ const VibeCodingAccelerator = () => {
                           </div>
                           </div>
               <div className="mt-10 grid gap-6 md:grid-cols-3">
-                {galleryImages.map((image, index) => (
-                  <div
-                    key={image}
-                    className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5"
-                  >
+                {galleryImages.map((image, index) => <div key={image} className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5">
                     <img src={image} alt={`Workshop moment ${index + 1}`} className="h-full w-full object-cover" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
-                    </div>
-                ))}
+                    </div>)}
                       </div>
             </div>
           </section>
@@ -767,16 +608,12 @@ const VibeCodingAccelerator = () => {
           {/* Cohort details */}
           <section id="upcoming-cohort" className="relative border-b border-white/10 bg-black py-20 overflow-hidden">
             {/* Colorful shader effects */}
-            <div 
-              className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(59,130,246,0.25)_0%,_rgba(0,0,0,0)_50%)] pointer-events-none" 
-              style={{ animation: "glowMove 8s ease-in-out infinite" }}
-              aria-hidden="true" 
-            />
-            <div 
-              className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(236,72,153,0.2)_0%,_rgba(0,0,0,0)_60%)] pointer-events-none" 
-              style={{ animation: "glowPulse 6s ease-in-out infinite" }}
-              aria-hidden="true" 
-            />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(59,130,246,0.25)_0%,_rgba(0,0,0,0)_50%)] pointer-events-none" style={{
+              animation: "glowMove 8s ease-in-out infinite"
+            }} aria-hidden="true" />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(236,72,153,0.2)_0%,_rgba(0,0,0,0)_60%)] pointer-events-none" style={{
+              animation: "glowPulse 6s ease-in-out infinite"
+            }} aria-hidden="true" />
             <div className="relative z-10 mx-auto max-w-4xl px-6 text-center lg:px-10">
               <p className="text-sm uppercase tracking-[0.3em] text-white/60">Join an upcoming cohort</p>
               <h2 className="mt-4 text-3xl font-semibold">Vibe Coding Weekend Workshop</h2>
@@ -805,12 +642,7 @@ const VibeCodingAccelerator = () => {
                       Enroll
                     </a>
                   </Button>
-                        <Button
-                    variant="outline"
-                    size="xl"
-                    className="border-white/30 text-white hover:bg-white/10"
-                          asChild
-                        >
+                        <Button variant="outline" size="xl" className="border-white/30 text-white hover:bg-white/10" asChild>
                     <a href="mailto:rodriguesjohnbaptist@gmail.com">Get reimbursed</a>
                         </Button>
                               </div>
@@ -822,16 +654,12 @@ const VibeCodingAccelerator = () => {
           {/* Community promise */}
           <section className="relative border-b border-white/10 bg-black py-20 overflow-hidden">
             {/* Colorful shader effects */}
-            <div 
-              className="absolute inset-0 bg-[radial-gradient(ellipse_at_left,_rgba(34,197,94,0.2)_0%,_rgba(0,0,0,0)_60%)] pointer-events-none" 
-              style={{ animation: "glowMove 8s ease-in-out infinite" }}
-              aria-hidden="true" 
-            />
-            <div 
-              className="absolute inset-0 bg-[radial-gradient(ellipse_at_right,_rgba(251,146,60,0.25)_0%,_rgba(0,0,0,0)_60%)] pointer-events-none" 
-              style={{ animation: "glowPulse 6s ease-in-out infinite" }}
-              aria-hidden="true" 
-            />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_left,_rgba(34,197,94,0.2)_0%,_rgba(0,0,0,0)_60%)] pointer-events-none" style={{
+              animation: "glowMove 8s ease-in-out infinite"
+            }} aria-hidden="true" />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_right,_rgba(251,146,60,0.25)_0%,_rgba(0,0,0,0)_60%)] pointer-events-none" style={{
+              animation: "glowPulse 6s ease-in-out infinite"
+            }} aria-hidden="true" />
             <div className="relative z-10 mx-auto max-w-6xl px-6 lg:px-10">
               <div className="grid gap-10 md:grid-cols-3">
                 <Card className="border-white/10 bg-white/5 p-6">
@@ -863,13 +691,7 @@ const VibeCodingAccelerator = () => {
               </p>
 
               <form className="mx-auto mt-8 flex w-full max-w-xl flex-col gap-3 sm:flex-row">
-                <input
-                  type="email"
-                  required
-                  defaultValue="rodriguesjohnbaptist@gmail.com"
-                  placeholder="you@example.com"
-                  className="flex-1 rounded-lg border border-white/20 bg-black/40 px-4 py-3 text-white outline-none placeholder:text-white/40 focus:border-primary focus:ring-2 focus:ring-primary/30"
-                />
+                <input type="email" required defaultValue="rodriguesjohnbaptist@gmail.com" placeholder="you@example.com" className="flex-1 rounded-lg border border-white/20 bg-black/40 px-4 py-3 text-white outline-none placeholder:text-white/40 focus:border-primary focus:ring-2 focus:ring-primary/30" />
                 <Button variant="cta" size="lg" type="submit">
                   Sign up
                 </Button>
@@ -904,8 +726,6 @@ const VibeCodingAccelerator = () => {
           </>}
         </main>
       </div>
-    </>
-  );
+    </>;
 };
-
 export default VibeCodingAccelerator;
