@@ -362,7 +362,6 @@ const VibeCodingAccelerator = () => {
                   <ArrowRight className="h-5 w-5" />
                 </Button>
               </div>
-              <p className="mt-6 text-sm text-white/50">100% Money-Back Guarantee • Lifetime Access</p>
             </div>
           </section>
 
