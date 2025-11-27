@@ -84,7 +84,7 @@ const vibeCodingBonusModule = {
 
 export const CohortModulesSection = () => {
   const location = useLocation();
-  const isVibeCodingCourse = location.pathname === "/vibe-coding-course";
+  const isVibeCodingCourse = location.pathname === "/";
   
   // Use different modules based on the page
   const modules = isVibeCodingCourse ? vibeCodingModules : aiCohortModules;
