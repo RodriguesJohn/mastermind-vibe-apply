@@ -192,8 +192,10 @@ const VibeCodingAccelerator = () => {
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.2] relative pt-8 sm:pt-0">
                   Master Vibe Coding<br />With Cursor in 14 Days
                   </h1>
-                <p className="text-sm sm:text-base md:text-lg text-white/70 mx-auto max-w-2xl px-2">Beginner-friendly vibe coding with Cursor. Build 2 apps in 14 days with our proven curriculum.
-                <br />with our proven curriculum.
+                <p className="text-sm sm:text-base md:text-lg text-white/70 mx-auto max-w-2xl px-2 leading-relaxed">
+                  Beginner-friendly vibe coding with Cursor. Build 2 apps in 14 days.
+                  <br />
+                  <span className="text-white/60">With our proven curriculum.</span>
                 </p>
                 <div className="flex flex-col gap-3 sm:flex-row justify-center max-w-md mx-auto px-4 sm:px-0">
                   <Button variant="cta" size="lg" className="w-full sm:w-auto sm:min-w-[200px]" asChild>
@@ -310,7 +312,7 @@ const VibeCodingAccelerator = () => {
                   Recent Accomplishment
                 </h4>
                 <p className="text-sm sm:text-base text-white/90 mb-4 sm:mb-6">
-                  <strong className="text-white">🏆 Hackathon Winner</strong> Built UX Agent—a web platform that analyzes websites and gives feedback—in two days with Vibe coding at the hackathon hosted by <strong className="text-white">AGI</strong>, <strong className="text-white">OpenAI</strong>, and <strong className="text-white">Loveable</strong>.
+                  <strong className="text-white">🏆 Hackathon Winner</strong> Built UX Agent, a web platform that analyzes websites and gives feedback, in two days with Vibe coding at the hackathon hosted by <strong className="text-white">AGI</strong>, <strong className="text-white">OpenAI</strong>, and <strong className="text-white">Loveable</strong>.
                 </p>
                 {/* Logos */}
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6 flex-wrap">
