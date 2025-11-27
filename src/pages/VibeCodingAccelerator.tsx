@@ -231,7 +231,7 @@ const VibeCodingAccelerator = () => {
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(34,197,94,0.2)_0%,_rgba(0,0,0,0)_70%)] pointer-events-none" style={{
             animation: "glowPulse 6s ease-in-out infinite"
           }} aria-hidden="true" />
-            <div className="relative z-10 mx-auto max-w-5xl px-4 sm:px-6 lg:px-10">
+            <div className="relative z-10 max-w-5xl sm:px-6 lg:px-10 mx-[4px] px-[24px]">
               <h2 className="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8 text-center sm:text-left">Meet your instructor</h2>
               <div className="grid gap-6 sm:gap-8 md:grid-cols-[300px_1fr]">
                 {/* Instructor Image */}
