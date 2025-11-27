@@ -35,12 +35,9 @@ export const OutcomesSection = () => {
       <div className="px-4 sm:px-6 md:px-10 lg:px-[120px] relative z-10">
         <div className="max-w-[1200px] mx-auto">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 space-y-3 sm:space-y-4">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium">
               What You'll Achieve
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
-              Transform your skills and career trajectory
-            </p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-4 sm:gap-6 max-w-5xl mx-auto">

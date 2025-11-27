@@ -163,13 +163,13 @@ in 90 day                                   �
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 mb-12 justify-center">
-                  <Button variant="cta" size="lg" className="group" asChild>
+                  <Button variant="cta" size="default" className="group" asChild>
                     <a href="https://tally.so/r/RGKRBp" target="_blank" rel="noopener noreferrer">
                       Join the waitlist
                       <ArrowRight className="group-hover:translate-x-1 transition-transform" />
                     </a>
                   </Button>
-                  <Button variant="outline" size="lg" className="border-white/20 text-white hover:bg-white/10" asChild>
+                  <Button variant="outline" size="default" className="border-white/20 text-white hover:bg-white/10" asChild>
                     <a href="/login">
                       Login
                     </a>

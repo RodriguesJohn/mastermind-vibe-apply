@@ -51,27 +51,25 @@ export const CoursePricingSection = () => {
           
           <div className="max-w-2xl mx-auto">
             <Card className="border-primary/50 shadow-2xl relative overflow-hidden">
-              <div className="flex justify-center pt-3 sm:pt-4">
+              <div className="flex justify-start pt-4 sm:pt-6 px-4 sm:px-6">
                 <div className="bg-destructive text-destructive-foreground px-3 sm:px-4 py-1 rounded-full text-xs sm:text-sm font-semibold">
                 Black Friday Sale
                 </div>
               </div>
               
-              <CardHeader className="text-center pb-6 sm:pb-8 pt-6 sm:pt-8 px-4 sm:px-6">
+              <CardHeader className="text-left pb-6 sm:pb-8 pt-4 sm:pt-6 px-4 sm:px-6">
                 <CardTitle className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
                   Master Vibe Coding with Cursor today
                 </CardTitle>
-                <CardDescription className="text-base sm:text-lg">Everything you need to get started to prototype and vibe code your app<br />and vibe code your apps with AI
-                </CardDescription>
               </CardHeader>
               
               <CardContent className="space-y-6 sm:space-y-8 px-4 sm:px-6">
-                <div className="text-center space-y-2">
-                  <div className="flex items-center justify-center gap-3 sm:gap-4">
-                    <span className="text-2xl sm:text-3xl font-bold md:text-6xl text-white">
+                <div className="text-left space-y-2">
+                  <div className="flex items-center justify-start gap-3 sm:gap-4">
+                    <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white">
                       $299
                     </span>
-                    <span className="text-xl sm:text-2xl text-muted-foreground line-through">
+                    <span className="text-xl sm:text-2xl md:text-3xl text-muted-foreground line-through">
                       $499
                     </span>
                   </div>
@@ -96,7 +94,7 @@ export const CoursePricingSection = () => {
                   </a>
                 </Button>
                 
-                <div className="flex items-center justify-center gap-2 pt-2">
+                <div className="flex items-center justify-start gap-2 pt-2">
                   <div className="flex items-center gap-2">
                     <div className="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-green-500/20 flex items-center justify-center">
                       <Check className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-green-500 checkmark-animated" />
@@ -107,7 +105,7 @@ export const CoursePricingSection = () => {
                   </div>
                 </div>
                 
-                <p className="text-center text-xs sm:text-sm text-muted-foreground">
+                <p className="text-left text-xs sm:text-sm text-muted-foreground">
                   Black Friday pricing ends soon!
                 </p>
               </CardContent>

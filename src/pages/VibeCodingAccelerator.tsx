@@ -12,7 +12,7 @@ import { CoursePricingSection } from "@/components/CoursePricingSection";
 import { VideoSlider } from "@/components/VideoSlider";
 import { BlackFridayStickyBar } from "@/components/BlackFridayStickyBar";
 import JohnImage from "@/assets/John.png";
-import JohnImage2 from "@/assets/John-2.jpg";
+import JohnImage2 from "@/assets/John-4.jpg";
 import JPMorganLogo from "@/assets/Chase.png";
 import IntercomLogo from "@/assets/intercom-1-logo-png-transparent.png";
 import HubspotLogo from "@/assets/Hubspot.svg.png";
@@ -189,28 +189,28 @@ const VibeCodingAccelerator = () => {
                   height: 'auto'
                 }} />
                             </div>
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal leading-tight relative pt-8 sm:pt-0">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.2] relative pt-8 sm:pt-0">
                   Master Vibe Coding<br />With Cursor in 14 Days
                   </h1>
-                <p className="text-base sm:text-lg md:text-xl text-white/70 mx-auto max-w-2xl px-2">
-                  Beginner-friendly vibe coding course with Cursor. In 14 days, this step-by-step course will help you prototype your first 2 apps with our proven curriculum.
+                <p className="text-sm sm:text-base md:text-lg text-white/70 mx-auto max-w-2xl px-2">
+                  Beginner-friendly vibe coding with Cursor. Build 2 apps in 14 days<br />with our proven curriculum.
                 </p>
                 <div className="flex flex-col gap-3 sm:flex-row justify-center max-w-md mx-auto px-4 sm:px-0">
-                  <Button variant="cta" size="xl" className="w-full sm:w-auto sm:min-w-[200px]" asChild>
+                  <Button variant="cta" size="lg" className="w-full sm:w-auto sm:min-w-[200px]" asChild>
                     <a href="https://ai-design-academy-s-school.teachable.com/purchase?product_id=6550289" target="_blank" rel="noopener noreferrer">
                       Enroll Today
                       <ArrowRight className="h-5 w-5" />
                       </a>
                     </Button>
-                  <Button variant="outline" size="xl" className="bg-white text-gray-600 border-white hover:text-black hover:shadow-lg hover:scale-105 transition-all duration-300 w-full sm:w-auto sm:min-w-[200px]" asChild>
+                  <Button variant="outline" size="lg" className="bg-white text-gray-600 border-white hover:text-black hover:shadow-lg hover:scale-105 transition-all duration-300 w-full sm:w-auto sm:min-w-[200px]" asChild>
                     <a href="https://ai-design-academy-s-school.teachable.com/l/products?sortKey=name&sortDirection=asc&page=1" target="_blank" rel="noopener noreferrer">
                       Log In
                       <ArrowRight className="h-5 w-5" />
                     </a>
                   </Button>
-                    </div>
+                  </div>
                 </div>
-                        </div>
+              </div>
           </section>
 
           {/* Outcomes Section */}
@@ -231,20 +231,20 @@ const VibeCodingAccelerator = () => {
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(34,197,94,0.2)_0%,_rgba(0,0,0,0)_70%)] pointer-events-none" style={{
             animation: "glowPulse 6s ease-in-out infinite"
           }} aria-hidden="true" />
-            <div className="relative z-10 max-w-5xl sm:px-6 lg:px-10 mx-[4px] px-[24px]">
-              <h2 className="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8 text-center sm:text-left">Meet your instructor</h2>
-              <div className="grid gap-6 sm:gap-8 md:grid-cols-[300px_1fr]">
-                {/* Instructor Image */}
-                <div>
-                  <div className="relative w-full mx-auto max-w-[300px] aspect-[2/3] rounded-2xl border border-white/10 overflow-hidden bg-black/50">
-                    <img src={JohnImage2} alt="John Rodrigues" className="w-full h-full object-cover" />
+            <div className="relative z-10 max-w-5xl sm:px-6 lg:px-10 mx-auto px-[24px]">
+              <div className="max-w-4xl mx-auto">
+                <div className="grid gap-6 sm:gap-8 md:grid-cols-[300px_1fr] md:items-start">
+                  {/* Instructor Image */}
+                  <div>
+                    <div className="relative w-full mx-auto max-w-[300px] aspect-square rounded-2xl border border-white/10 overflow-hidden bg-black/50">
+                      <img src={JohnImage2} alt="John Rodrigues" className="w-full h-full object-cover object-top" />
+                    </div>
                   </div>
-                </div>
-                <div className="space-y-3 sm:space-y-4">
-                  <h3 className="text-xl sm:text-2xl font-semibold text-white sm:text-left text-left">John Rodrigues</h3>
-                  <div className="space-y-3 sm:space-y-4 text-white/70">
+                  <div className="space-y-3 sm:space-y-4">
+                    <h3 className="text-xl sm:text-2xl font-semibold text-white text-center md:text-left">John Rodrigues</h3>
+                    <div className="space-y-3 sm:space-y-4 text-white/70">
                     <p className="text-base sm:text-lg">
-                      John Rodrigues is a Senior Product Designer, AI strategist, and author of <em>The AI Design Playbook</em>, trusted by over 1,500 industry leaders. He is the founder of AI Design Academy and currently leads AI design initiatives at JPMorgan Chase.
+                      Senior Product Designer, AI strategist, and author of <em>The AI Design Playbook</em>, trusted by 1,500+ industry leaders. Founder of AI Design Academy.
                     </p>
                     <p>
                       With over a decade of experience, John holds a Master's in Interaction Design and an AI certification from Stanford. He's recognized as one of the Top 10 mentors on ADPList and has built a community of over 10,000 followers on LinkedIn.
@@ -264,7 +264,7 @@ const VibeCodingAccelerator = () => {
                             100% { transform: translateX(-50%); }
                           }
                           .logo-ticker {
-                            animation: scroll-logos 20s linear infinite;
+                            animation: scroll-logos 10s linear infinite;
                           }
                           .logo-ticker:hover {
                             animation-play-state: paused;
@@ -298,45 +298,40 @@ const VibeCodingAccelerator = () => {
                         <img src={HubspotLogo} alt="HubSpot" className="h-7 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity" />
                       </div>
                     </div>
+                    </div>
                   </div>
                 </div>
               </div>
               
               {/* Recent Accomplishment Section - Moved to bottom */}
               <div className="mt-12 sm:mt-16 md:mt-20 bg-white/5 rounded-xl p-4 sm:p-6">
-                  <h4 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4 flex items-center gap-2">
-                    <Award className="h-5 w-5 text-primary" />
-                    Recent Accomplishment
-                  </h4>
-                  <p className="text-sm sm:text-base text-white/90 mb-4 sm:mb-6">
-                    <strong className="text-white">🏆 Hackathon Winner</strong> During the hackathon hosted in San Francisco by <strong className="text-white">AGI</strong>, <strong className="text-white">OpenAI</strong>, and <strong className="text-white">Loveable</strong>, I designed and developed UX Agent—a web platform that analyzes websites and gives feedback—all built in two days with Vibe coding. It demonstrates how anyone can design, develop, and communicate ideas effectively in this AI era.
-                  </p>
-                  {/* Logos */}
-                  <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6 flex-wrap">
-                    <span className="text-xs sm:text-sm text-white/60">Hosted by:</span>
-                    <div className="flex items-center gap-4 sm:gap-8">
-                      {/* AGI Logo */}
-                      <div className="flex items-center">
-                        <img src={AGILogo} alt="AGI" className="h-8 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" style={{
-                      maxHeight: '32px'
-                    }} />
-                      </div>
-                      
-                      {/* OpenAI Logo */}
-                      <div className="flex items-center">
-                        <img src={OpenAILogo} alt="OpenAI" className="h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" style={{
-                      maxHeight: '48px'
-                    }} />
-                      </div>
-                      
-                      {/* Loveable Logo */}
-                      <div className="flex items-center">
-                        <img src={LoveableLogoMain} alt="Loveable" className="h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" style={{
-                      maxHeight: '48px'
-                    }} />
-                      </div>
+                <h4 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4 flex items-center gap-2">
+                  <Award className="h-5 w-5 text-primary" />
+                  Recent Accomplishment
+                </h4>
+                <p className="text-sm sm:text-base text-white/90 mb-4 sm:mb-6">
+                  <strong className="text-white">🏆 Hackathon Winner</strong> Built UX Agent—a web platform that analyzes websites and gives feedback—in two days with Vibe coding at the hackathon hosted by <strong className="text-white">AGI</strong>, <strong className="text-white">OpenAI</strong>, and <strong className="text-white">Loveable</strong>.
+                </p>
+                {/* Logos */}
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6 flex-wrap">
+                  <span className="text-xs sm:text-sm text-white/60">Hosted by:</span>
+                  <div className="flex items-center gap-4 sm:gap-8">
+                    {/* AGI Logo */}
+                    <div className="flex items-center">
+                      <img src={AGILogo} alt="AGI" className="h-5 sm:h-8 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" />
+                    </div>
+                    
+                    {/* OpenAI Logo */}
+                    <div className="flex items-center">
+                      <img src={OpenAILogo} alt="OpenAI" className="h-8 sm:h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" />
+                    </div>
+                    
+                    {/* Loveable Logo */}
+                    <div className="flex items-center">
+                      <img src={LoveableLogoMain} alt="Loveable" className="h-8 sm:h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" />
                     </div>
                   </div>
+                </div>
               </div>
             </div>
           </section>
@@ -385,13 +380,13 @@ const VibeCodingAccelerator = () => {
                 Join the Black Friday sale and save $200. Limited time offer!
               </p>
               <div className="flex flex-col gap-3 sm:flex-row justify-center">
-                <Button variant="cta" size="xl" className="w-full sm:w-auto sm:min-w-[200px]" asChild>
+                <Button variant="cta" size="lg" className="w-full sm:w-auto sm:min-w-[200px]" asChild>
                   <a href="https://ai-design-academy-s-school.teachable.com/purchase?product_id=6550289" target="_blank" rel="noopener noreferrer">
                     Enroll Today - $299
                     <ArrowRight className="h-5 w-5" />
                   </a>
                 </Button>
-                <Button variant="outline" size="xl" className="border-white/30 text-white hover:bg-white/10 w-full sm:w-auto sm:min-w-[200px]">
+                <Button variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 w-full sm:w-auto sm:min-w-[200px]">
                   Learn More
                   <ArrowRight className="h-5 w-5" />
                 </Button>
@@ -670,12 +665,12 @@ const VibeCodingAccelerator = () => {
               <div className="mt-10 flex flex-col items-center justify-center gap-4 text-sm text-white/70">
                 <p>Need help? Get reimbursed by your company or save 20%+ with a team enrollment.</p>
                 <div className="flex flex-col gap-3 sm:flex-row">
-                  <Button variant="cta" size="xl" asChild>
+                  <Button variant="cta" size="lg" asChild>
                     <a href="https://maven.com/productlearnio/vibe-coding-workshop" target="_blank" rel="noopener noreferrer">
                       Enroll
                     </a>
                   </Button>
-                        <Button variant="outline" size="xl" className="border-white/30 text-white hover:bg-white/10" asChild>
+                        <Button variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10" asChild>
                     <a href="mailto:rodriguesjohnbaptist@gmail.com">Get reimbursed</a>
                         </Button>
                               </div>
@@ -756,9 +751,10 @@ const VibeCodingAccelerator = () => {
               </div>
             </div>
           </section>
-          </>}
+            </>}
         </main>
       </div>
-    </>;
+    </>
+  ;
 };
 export default VibeCodingAccelerator;

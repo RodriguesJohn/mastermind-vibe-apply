@@ -47,19 +47,19 @@ const vibeCodingModules = [{
   number: "0",
   week: "Week 0",
   title: "Cursor Setup and Environment Setup",
-  description: "An IDE can be unfamiliar territory for non-technical folks and designers, but we'll make it easy for you to set up with our tested getting started prompts and lessons. Starting is always a challenge, but we'll make it simple so you can get up and running quickly.",
+  description: "Set up Cursor IDE with our tested prompts and lessons. We'll make it simple so you can get started quickly.",
   colors: ["#4ECDC4", "#87CEEB", "#DA70D6", "#BA55D3"]
 }, {
   number: "1",
   week: "Week 1",
   title: "Prototyping Mobile Apps with AI",
-  description: "Prototype mobile apps and interfaces with interactions on touch interfaces and everything. They open up more opportunities for you to design and prototype mobile apps.",
+  description: "Prototype mobile apps with touch interactions and animations. Learn to design and build mobile interfaces.",
   colors: ["#95E1D3", "#F38181", "#FCE38A", "#AAE3F0"]
 }, {
   number: "2",
   week: "Week 2",
   title: "Building Web Apps with Gen AI Capabilities",
-  description: "Build your first web app powered by Gen-AI capabilities and create an AI recipe generator powered by OpenAI LLM and OpenAI API using Cursor and translate your Figma design into a functional prototype with AI.",
+  description: "Build a web app with Gen-AI capabilities. Create an AI recipe generator using OpenAI API and translate Figma designs into functional prototypes.",
   colors: ["#FF6B6B", "#FF8E53", "#FFD93D", "#FFA07A"]
 }];
 const vibeCodingBonusModule = {
@@ -78,7 +78,7 @@ export const CohortModulesSection = () => {
   const bonusModule = isVibeCodingCourse ? vibeCodingBonusModule : null;
 
   // Determine heading and description based on page
-  const heading = isVibeCodingCourse ? "This Is How Your Journey Will Look After Enrolling" : "What We Have for You";
+  const heading = isVibeCodingCourse ? "Your Learning Journey" : "What We Have for You";
   const description = null;
 
   // For AI Cohort, show all 6 modules in a 3-column grid
@@ -124,7 +124,7 @@ export const CohortModulesSection = () => {
                   <div className="p-5 sm:p-6 md:p-8 bg-black -mt-6 pt-8 sm:pt-10 flex-1 flex flex-col">
                     <div className="flex-1">
                       <h3 className="text-lg sm:text-xl font-semibold mb-2 text-white">{module.title}</h3>
-                      <p className="text-white/60 text-xs sm:text-sm leading-relaxed">{module.description}</p>
+                      <p className="text-white/60 text-sm sm:text-base leading-relaxed">{module.description}</p>
                     </div>
                   </div>
                 </Card>
@@ -157,7 +157,7 @@ export const CohortModulesSection = () => {
                   <div className="p-5 sm:p-6 md:p-8 bg-black -mt-6 pt-8 sm:pt-10 flex-1 flex flex-col">
                     <div className="flex-1">
                       <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 text-white">{bonusModule.title}</h3>
-                      <p className="text-white/60 text-xs sm:text-sm leading-relaxed">{bonusModule.description}</p>
+                      <p className="text-white/60 text-sm sm:text-base leading-relaxed">{bonusModule.description}</p>
                     </div>
                   </div>
                 </Card>

@@ -25,12 +25,6 @@ const vibeCodingTestimonials = [
     rating: 10
   },
   {
-    tempId: 3,
-    testimonial: "John's course is practical, with demos and real encouragement to explore AI tools specifically for designers. His enthusiasm for AI design feels authentic, and it's contagious.",
-    by: "Linda, Principal Product Designer, Accessibility Specialist JPMorgan Chase",
-    rating: 10
-  },
-  {
     tempId: 4,
     testimonial: "The biggest takeaway has been how much this course pushed me to explore and grow. Every session has been engaging, interactive, and deeply impactful. I've gone from not knowing how to code to building my own AI agent.",
     by: "ÌníOlúwa, Senior Product Designer at Intercom",

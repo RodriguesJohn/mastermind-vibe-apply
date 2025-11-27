@@ -25,24 +25,34 @@ const testimonials = [
   },
   {
     tempId: 2,
-    testimonial: "The most valuable part of this cohort was the hands-on experience with new AI tools. John emphasizes practical application over lectures, which made the material immediately useful.",
-    by: "Sonali, Sr.Product Designer at JPMorgan Chase",
+    testimonial: "I really enjoyed this class — it offered a hands-on, practical learning experience that pushed me in all the right ways. The challenges made the problem-solving process engaging, especially as we explored different approaches to reach the end goal. Learning to use vibe coding in Cursor was both enjoyable and incredibly rewarding. I highly recommend this course to anyone curious about AI tools and excited to explore their possibilities.",
+    by: "Sonali Mookim, Lead Designer at JPMorgan Chase",
     imgSrc: SonaliImage
   },
   {
     tempId: 3,
+    testimonial: "The sessions were completely hands-on from the get go, which made it a learning opportunity to debug live and watch others debug too. If you're looking to quickly learn the basics of orchestrating design and prototyping tools in a single fast paced workshop, I would recommend this course.",
+    by: "Tanya Elizabeth Kuruvilla, Product Designer at Moloco"
+  },
+  {
+    tempId: 4,
+    testimonial: "The most valuable part of this cohort was the hands-on experience with new AI tools. John emphasizes practical application over lectures, which made the material immediately useful.",
+    by: "Sonali, Sr.Product Designer at JPMorgan Chase"
+  },
+  {
+    tempId: 5,
     testimonial: "This cohort has given me the foundation to understand AI at a high level. I've learned about more tools to leverage in my design process and how to design human-centered AI experiences.",
     by: "Kenneth (Ken) Hargrove, Product Designer @CoStar",
     imgSrc: KennyImage
   },
   {
-    tempId: 4,
+    tempId: 6,
     testimonial: "John delivered everything he listed and more. Always accessible, he creates additional tutorials on demand and is ready to help, explain, and mentor with patience and care.",
     by: "Aviad, Product Designer",
     imgSrc: AviadImage
   },
   {
-    tempId: 5,
+    tempId: 7,
     testimonial: "The biggest takeaway has been how much this course pushed me to explore and grow. Every session has been engaging, interactive, and deeply impactful. I've gone from not knowing how to code to building my own AI agent.",
     by: "ÌníOlúwa, Senior Product Designer at Intercom",
     imgSrc: IniImage
@@ -51,7 +61,7 @@ const testimonials = [
 
 interface TestimonialCardProps {
   position: number;
-  testimonial: typeof testimonials[0];
+  testimonial: typeof testimonials[0] & { imgSrc?: string };
   handleMove: (steps: number) => void;
   cardSize: number;
 }
@@ -96,14 +106,16 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
         }}
       />
       <div className="flex flex-col h-full">
-        <img
-          src={testimonial.imgSrc}
-          alt={`${testimonial.by.split(',')[0]}`}
-          className="mb-4 h-14 w-12 bg-muted object-cover object-top flex-shrink-0"
-          style={{
-            boxShadow: "3px 3px 0px hsl(var(--background))"
-          }}
-        />
+        {testimonial.imgSrc ? (
+          <img
+            src={testimonial.imgSrc}
+            alt={`${testimonial.by.split(',')[0]}`}
+            className="mb-4 h-14 w-12 bg-muted object-cover object-top flex-shrink-0"
+            style={{
+              boxShadow: "3px 3px 0px hsl(var(--background))"
+            }}
+          />
+        ) : null}
         <h3 className={cn(
           "text-base sm:text-xl font-medium flex-1 overflow-hidden",
           isCenter ? "text-primary-foreground" : "text-foreground"

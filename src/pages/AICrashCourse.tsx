@@ -111,10 +111,10 @@ const AICrashCourse = () => {
                 {/* CTA Buttons */}
                 <div className="text-center mb-8 sm:mb-12">
                   <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4">
-                    <Button variant="default" size="lg" className="w-full sm:w-auto text-base sm:text-lg">
+                    <Button variant="default" size="default" className="w-full sm:w-auto text-base sm:text-lg">
                       Enroll Today for $99
                     </Button>
-                    <Button variant="outline" size="lg" className="w-full sm:w-auto text-base sm:text-lg">
+                    <Button variant="outline" size="default" className="w-full sm:w-auto text-base sm:text-lg">
                       Login
                     </Button>
                   </div>
@@ -267,7 +267,7 @@ const AICrashCourse = () => {
                   
                   <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4">
                     {/* Primary CTA */}
-                    <Button variant="cta" size="lg" className="w-full sm:w-auto text-base sm:text-lg">
+                    <Button variant="cta" size="default" className="w-full sm:w-auto text-base sm:text-lg">
                       Enroll Today for $99
                     </Button>
                     
