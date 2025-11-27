@@ -61,8 +61,7 @@ export const CoursePricingSection = () => {
                 <CardTitle className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
                   Master Vibe Coding with Cursor today
                 </CardTitle>
-                <CardDescription className="text-base sm:text-lg">
-                  Everything you need to get started to prototype<br />and vibe code your apps with AI
+                <CardDescription className="text-base sm:text-lg">Everything you need to get started to prototype and vibe code your app<br />and vibe code your apps with AI
                 </CardDescription>
               </CardHeader>
               
