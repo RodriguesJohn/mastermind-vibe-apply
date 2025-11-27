@@ -1,10 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check } from "lucide-react";
-
 export const CoursePricingSection = () => {
-  return (
-    <section className="py-12 sm:py-16 md:py-24 lg:py-32 relative overflow-hidden">
+  return <section className="py-12 sm:py-16 md:py-24 lg:py-32 relative overflow-hidden">
       <style>
         {`
           @keyframes checkmarkPulse {
@@ -71,7 +69,7 @@ export const CoursePricingSection = () => {
               <CardContent className="space-y-6 sm:space-y-8 px-4 sm:px-6">
                 <div className="text-center space-y-2">
                   <div className="flex items-center justify-center gap-3 sm:gap-4">
-                    <span className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary">
+                    <span className="text-2xl sm:text-3xl font-bold md:text-6xl text-white">
                       $299
                     </span>
                     <span className="text-xl sm:text-2xl text-muted-foreground line-through">
@@ -86,27 +84,14 @@ export const CoursePricingSection = () => {
                 <div className="space-y-3 sm:space-y-4 pt-4 sm:pt-6">
                   <p className="font-semibold text-base sm:text-lg">What's included:</p>
                   <ul className="space-y-2 sm:space-y-3">
-                    {[
-                      "Proven and tested curriculum",
-                      "Build 2 projects (Mobile app and AI recipe generator)",
-                      "Learn Cursor, one of the most highly adapted vibe coding tool",
-                      "Watch courses anytime, self-paced learning",
-                      "Future proof your career",
-                    ].map((feature, index) => (
-                      <li key={index} className="flex items-start gap-2 sm:gap-3">
+                    {["Proven and tested curriculum", "Build 2 projects (Mobile app and AI recipe generator)", "Learn Cursor, one of the most highly adapted vibe coding tool", "Watch courses anytime, self-paced learning", "Future proof your career"].map((feature, index) => <li key={index} className="flex items-start gap-2 sm:gap-3">
                         <Check className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
                         <span className="text-sm sm:text-base text-foreground/90">{feature}</span>
-                      </li>
-                    ))}
+                      </li>)}
                   </ul>
                 </div>
 
-                <Button 
-                  size="xl" 
-                  className="w-full mt-6 sm:mt-8 text-base sm:text-lg"
-                  variant="cta"
-                  asChild
-                >
+                <Button size="xl" className="w-full mt-6 sm:mt-8 text-base sm:text-lg" variant="cta" asChild>
                   <a href="https://ai-design-academy-s-school.teachable.com/purchase?product_id=6550289" target="_blank" rel="noopener noreferrer">
                   Enroll Now - $299
                   </a>
@@ -131,6 +116,5 @@ export const CoursePricingSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
