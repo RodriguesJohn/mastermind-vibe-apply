@@ -241,7 +241,7 @@ const VibeCodingAccelerator = () => {
                   </div>
                 </div>
                 <div className="space-y-3 sm:space-y-4">
-                  <h3 className="text-xl sm:text-2xl font-semibold text-white text-center sm:text-left">John Rodrigues</h3>
+                  <h3 className="text-xl sm:text-2xl font-semibold text-white sm:text-left text-left">John Rodrigues</h3>
                   <div className="space-y-3 sm:space-y-4 text-white/70">
                     <p className="text-base sm:text-lg">
                       John Rodrigues is a Senior Product Designer, AI strategist, and author of <em>The AI Design Playbook</em>, trusted by over 1,500 industry leaders. He is the founder of AI Design Academy and currently leads AI design initiatives at JPMorgan Chase.
@@ -252,7 +252,7 @@ const VibeCodingAccelerator = () => {
                     
                     {/* Trusted By Section */}
                     <div className="pt-4">
-                      <p className="text-xs sm:text-sm text-white/60 mb-3 sm:mb-4 text-center sm:text-left">
+                      <p className="text-xs sm:text-sm text-white/60 mb-3 sm:mb-4 sm:text-left text-left">
                         <em>The AI Design Playbook</em> trusted by
                       </p>
                       <div className="flex items-center justify-center sm:justify-start gap-4 sm:gap-6 flex-wrap">
