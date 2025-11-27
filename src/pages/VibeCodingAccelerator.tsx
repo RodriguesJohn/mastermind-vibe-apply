@@ -255,7 +255,41 @@ const VibeCodingAccelerator = () => {
                       <p className="text-xs sm:text-sm text-white/60 mb-3 sm:mb-4 sm:text-left text-left">
                         <em>The AI Design Playbook</em> trusted by
                       </p>
-                      <div className="flex items-center justify-center sm:justify-start gap-4 sm:gap-6 flex-wrap">
+                      
+                      {/* Mobile: Scrolling ticker */}
+                      <div className="sm:hidden overflow-hidden relative">
+                        <style>{`
+                          @keyframes scroll-logos {
+                            0% { transform: translateX(0); }
+                            100% { transform: translateX(-50%); }
+                          }
+                          .logo-ticker {
+                            animation: scroll-logos 20s linear infinite;
+                          }
+                          .logo-ticker:hover {
+                            animation-play-state: paused;
+                          }
+                        `}</style>
+                        <div className="logo-ticker flex items-center gap-8">
+                          {/* First set of logos */}
+                          <img src={AppleLogo} alt="Apple" className="h-6 w-auto object-contain opacity-70 flex-shrink-0" />
+                          <img src={GoogleLogo} alt="Google" className="h-6 w-auto object-contain opacity-70 flex-shrink-0" />
+                          <img src={MetaLogo} alt="Meta" className="h-6 w-auto object-contain opacity-70 flex-shrink-0" />
+                          <img src={JPMorganLogo} alt="JPMorgan Chase" className="h-6 w-auto object-contain opacity-70 flex-shrink-0" />
+                          <img src={IntercomLogo} alt="Intercom" className="h-6 w-auto object-contain opacity-70 flex-shrink-0" />
+                          <img src={HubspotLogo} alt="HubSpot" className="h-6 w-auto object-contain opacity-70 flex-shrink-0" />
+                          {/* Duplicate set for seamless loop */}
+                          <img src={AppleLogo} alt="Apple" className="h-6 w-auto object-contain opacity-70 flex-shrink-0" />
+                          <img src={GoogleLogo} alt="Google" className="h-6 w-auto object-contain opacity-70 flex-shrink-0" />
+                          <img src={MetaLogo} alt="Meta" className="h-6 w-auto object-contain opacity-70 flex-shrink-0" />
+                          <img src={JPMorganLogo} alt="JPMorgan Chase" className="h-6 w-auto object-contain opacity-70 flex-shrink-0" />
+                          <img src={IntercomLogo} alt="Intercom" className="h-6 w-auto object-contain opacity-70 flex-shrink-0" />
+                          <img src={HubspotLogo} alt="HubSpot" className="h-6 w-auto object-contain opacity-70 flex-shrink-0" />
+                        </div>
+                      </div>
+                      
+                      {/* Desktop: Static layout */}
+                      <div className="hidden sm:flex items-center justify-start gap-6">
                         <img src={AppleLogo} alt="Apple" className="h-7 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity" />
                         <img src={GoogleLogo} alt="Google" className="h-7 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity" />
                         <img src={MetaLogo} alt="Meta" className="h-7 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity" />
