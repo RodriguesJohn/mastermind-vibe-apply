@@ -79,7 +79,7 @@ export const CohortModulesSection = () => {
 
   // Determine heading and description based on page
   const heading = isVibeCodingCourse ? "This Is How Your Journey Will Look After Enrolling" : "What We Have for You";
-  const description = isVibeCodingCourse ? "Modules are released weekly over four weeks, giving you time to complete each milestone without feeling overwhelmed." : null;
+  const description = null;
 
   // For AI Cohort, show all 6 modules in a 3-column grid
   // For Vibe Coding, show 4 modules (3 weeks + bonus) in a 2x2 grid
