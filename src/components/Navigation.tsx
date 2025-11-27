@@ -22,13 +22,13 @@ export const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6">
             <a href="/" className="text-sm font-normal hover:text-primary transition-colors">
-              AI Cohort
+              Vibe Coding Course
             </a>
             <a href="/guide" className="text-sm font-normal text-white hover:text-white/80 transition-colors">
               Guide
             </a>
-            <a href="/vibe-coding-course" className="text-sm font-normal hover:text-primary transition-colors">
-              Vibe Coding Course
+            <a href="/cohort" className="text-sm font-normal hover:text-primary transition-colors">
+              AI Cohort
             </a>
           </div>
           
@@ -51,7 +51,7 @@ export const Navigation = () => {
               
               <nav className="flex flex-col gap-4 mt-8">
                 <a href="/" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
-                  AI Cohort
+                  Vibe Coding Course
                 </a>
                 {/* <a href="/vibe-coding-accelerator" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
                   Mastermind
@@ -62,8 +62,8 @@ export const Navigation = () => {
                 {/* <a href="/knowledge-hub" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
                   Knowledge Hub
                 </a> */}
-                <a href="/vibe-coding-course" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
-                  Vibe Coding Course
+                <a href="/cohort" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
+                  AI Cohort
                 </a>
 
                 <Button variant="cta" size="lg" className="mt-2" asChild onClick={() => setMobileMenuOpen(false)}>

@@ -28,10 +28,10 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Cohort />} />
+          <Route path="/" element={<VibeCodingAccelerator />} />
+          <Route path="/cohort" element={<Cohort />} />
           {/* <Route path="/coaching" element={<Consulting />} /> */}
           <Route path="/course" element={<Course />} />
-          <Route path="/vibe-coding-course" element={<VibeCodingAccelerator />} />
           {/* Membership page hidden for now */}
           {/* <Route path="/index" element={<Index />} /> */}
           <Route path="/ai-crash-course" element={<AICrashCourse />} />
