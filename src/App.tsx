@@ -17,6 +17,7 @@ import KnowledgeHub from "./pages/KnowledgeHub";
 import DesignEngineering from "./pages/DesignEngineering";
 import VibeCodingWeekendWorkshop from "./pages/VibeCodingWeekendWorkshop";
 import AppLanding from "./pages/AppLanding";
+import Blog from "./pages/Blog";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -40,6 +41,7 @@ const App = () => (
           <Route path="/design-engineering" element={<DesignEngineering />} />
           <Route path="/weekend-workshop" element={<VibeCodingWeekendWorkshop />} />
           <Route path="/app" element={<AppLanding />} /> {/* TEMPORARY PAGE */}
+          <Route path="/blog" element={<Blog />} />
           <Route path="/projects" element={<Projects />} />
           {/* <Route path="/tools" element={<Tools />} /> */}
           {/* <Route path="/talent-pool" element={<TalentPool />} /> */}
