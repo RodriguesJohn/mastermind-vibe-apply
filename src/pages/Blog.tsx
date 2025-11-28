@@ -116,16 +116,16 @@ const Blog = () => {
                   <div data-style="clean">
                     <ul className="formkit-alert formkit-alert-error text-red-500 mb-3 text-sm" data-element="errors" data-group="alert"></ul>
                     
-                    <div className="flex flex-col sm:flex-row gap-2.5">
+                    <div className="flex flex-col md:flex-row gap-3">
                       <input 
-                        className="formkit-input flex-1 h-11 px-4 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-white/40 focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all text-sm" 
+                        className="formkit-input w-full md:flex-1 h-11 px-4 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-white/40 focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all text-sm" 
                         aria-label="First Name" 
                         name="fields[first_name]" 
                         placeholder="First Name" 
                         type="text" 
                       />
                       <input 
-                        className="formkit-input flex-1 h-11 px-4 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-white/40 focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all text-sm" 
+                        className="formkit-input w-full md:flex-1 h-11 px-4 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-white/40 focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all text-sm" 
                         name="email_address" 
                         aria-label="Email Address" 
                         placeholder="Email Address" 
@@ -134,7 +134,7 @@ const Blog = () => {
                       />
                       <button 
                         data-element="submit" 
-                        className="formkit-submit h-11 px-8 bg-white text-black hover:bg-white/90 font-medium rounded-lg transition-all flex items-center justify-center relative overflow-hidden whitespace-nowrap text-sm shrink-0 shadow-lg shadow-white/10"
+                        className="formkit-submit w-full md:w-auto h-11 px-8 bg-white text-black hover:bg-white/90 font-medium rounded-lg transition-all flex items-center justify-center relative overflow-hidden whitespace-nowrap text-sm md:shrink-0 shadow-lg shadow-white/10"
                         style={{ backgroundColor: '#ffffff', color: '#000000' }}
                       >
                         <div className="formkit-spinner absolute inset-0 flex items-center justify-center bg-white/10 opacity-0 transition-opacity">
