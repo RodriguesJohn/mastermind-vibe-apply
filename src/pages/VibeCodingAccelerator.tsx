@@ -318,7 +318,7 @@ const VibeCodingAccelerator = () => {
                       Recent Accomplishment
                     </h4>
                     <p className="text-base text-white/60 mb-6 leading-relaxed">
-                      <span className="text-white font-medium">🏆 Hackathon Winner</span> — Built <span className="text-white">UX Agent</span>, a web platform that analyzes websites and gives feedback, in just two days with Vibe coding.
+                      <span className="text-white font-medium">Hackathon Winner</span> Built <span className="text-white">UX Agent</span>, a web platform that analyzes websites and gives feedback, in just two days with Vibe coding.
                     </p>
                     <div className="flex items-center gap-2 text-sm text-white/40">
                       <span>Hosted by</span>
