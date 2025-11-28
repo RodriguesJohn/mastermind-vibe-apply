@@ -26,6 +26,9 @@ export const Navigation = () => {
             <a href="/guide" className="text-sm font-normal text-white hover:text-white/80 transition-colors">
               Guide
             </a>
+            <a href="/get-guide" className="text-sm font-normal hover:text-primary transition-colors">
+              Get Guide
+            </a>
             <a href="/blog" className="text-sm font-normal hover:text-primary transition-colors">
               Blog
             </a>
@@ -60,6 +63,9 @@ export const Navigation = () => {
                 </a> */}
                 <a href="/guide" className="text-base font-normal text-white hover:text-white/80 transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
                   Guide
+                </a>
+                <a href="/get-guide" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
+                  Get Guide
                 </a>
                 <a href="/blog" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
                   Blog

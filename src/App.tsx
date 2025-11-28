@@ -19,6 +19,7 @@ import VibeCodingWeekendWorkshop from "./pages/VibeCodingWeekendWorkshop";
 import AppLanding from "./pages/AppLanding";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
+import GetGuide from "./pages/GetGuide";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -44,6 +45,7 @@ const App = () => (
           <Route path="/app" element={<AppLanding />} /> {/* TEMPORARY PAGE */}
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/get-guide" element={<GetGuide />} />
           <Route path="/projects" element={<Projects />} />
           {/* <Route path="/tools" element={<Tools />} /> */}
           {/* <Route path="/talent-pool" element={<TalentPool />} /> */}
