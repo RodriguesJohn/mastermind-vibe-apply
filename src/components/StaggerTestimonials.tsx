@@ -59,9 +59,16 @@ const testimonials = [
   }
 ];
 
+interface Testimonial {
+  tempId: number;
+  testimonial: string;
+  by: string;
+  imgSrc?: string;
+}
+
 interface TestimonialCardProps {
   position: number;
-  testimonial: typeof testimonials[0] & { imgSrc?: string };
+  testimonial: Testimonial;
   handleMove: (steps: number) => void;
   cardSize: number;
 }
