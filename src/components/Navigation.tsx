@@ -23,9 +23,6 @@ export const Navigation = () => {
             <a href="/" className="text-sm font-normal hover:text-primary transition-colors">
               Vibe Coding Course
             </a>
-            <a href="/guide" className="text-sm font-normal text-white hover:text-white/80 transition-colors">
-              Guide
-            </a>
             <a href="/get-guide" className="text-sm font-normal hover:text-primary transition-colors">
               Get Guide
             </a>
@@ -61,9 +58,6 @@ export const Navigation = () => {
                 {/* <a href="/vibe-coding-accelerator" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
                   Mastermind
                 </a> */}
-                <a href="/guide" className="text-base font-normal text-white hover:text-white/80 transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
-                  Guide
-                </a>
                 <a href="/get-guide" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
                   Get Guide
                 </a>
@@ -76,10 +70,6 @@ export const Navigation = () => {
                 <a href="/cohort" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
                   Cohort
                 </a>
-
-                <Button variant="cta" size="lg" className="mt-2" asChild onClick={() => setMobileMenuOpen(false)}>
-                  <a href="https://maven.com/productlearnio/aiproductdesignmasterycohort" target="_blank" rel="noopener noreferrer">Apply Now</a>
-                </Button>
               </nav>
             </SheetContent>
           </Sheet>

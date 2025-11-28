@@ -1,13 +1,9 @@
 import { Helmet } from "react-helmet";
-import { Play, ChevronRight, ChevronLeft, ArrowRight, Lock } from "lucide-react";
+import { Play, ChevronRight, ChevronLeft, ArrowRight } from "lucide-react";
 import { useMemo, useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Navigation } from "@/components/Navigation";
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Checkbox } from "@/components/ui/checkbox";
 interface Lesson {
   id: number;
   title: string;
@@ -87,16 +83,6 @@ const AIDesignMasterclass = () => {
       unlocked: true
     }]
   }, {
-    id: 6,
-    title: "Masterclass",
-    lessons: [{
-      id: 601,
-      title: "Masterclass",
-      videoId: "7CiJGrQR0KE",
-      duration: "",
-      unlocked: true
-    }]
-  }, {
     id: 7,
     title: "Vibe Coding Course",
     lessons: [{
@@ -107,26 +93,34 @@ const AIDesignMasterclass = () => {
       unlocked: true
     }]
   }], []);
-  const [activeSectionId, setActiveSectionId] = useState<number | null>(courseSections[0]?.id ?? null);
-  const [selectedLessonId, setSelectedLessonId] = useState<number | null>(courseSections[0]?.lessons[0]?.id ?? null);
-  const [masterclassUnlocked, setMasterclassUnlocked] = useState<boolean>(false);
-  const [modalOpen, setModalOpen] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    acceptCommunication: false
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [checkboxError, setCheckboxError] = useState(false);
-  const allLessons = useMemo(() => courseSections.flatMap(section => section.lessons), [courseSections]);
+  // Filter out masterclass section before initializing state
+  const availableSections = courseSections.filter(section => section.id !== 6 && section.title.toLowerCase() !== 'masterclass');
+  const [activeSectionId, setActiveSectionId] = useState<number | null>(availableSections[0]?.id ?? null);
+  const [selectedLessonId, setSelectedLessonId] = useState<number | null>(availableSections[0]?.lessons[0]?.id ?? null);
+  const allLessons = useMemo(() => availableSections.flatMap(section => section.lessons), [availableSections]);
+  
+  // Ensure activeSectionId is never 6
+  useEffect(() => {
+    if (activeSectionId === 6) {
+      setActiveSectionId(availableSections[0]?.id ?? null);
+      const firstLesson = availableSections[0]?.lessons[0];
+      if (firstLesson) {
+        setSelectedLessonId(firstLesson.id);
+      }
+    }
+  }, [activeSectionId, availableSections]);
   const handleLessonClick = (lesson: Lesson, sectionId?: number) => {
+    // Prevent clicking on masterclass lessons
+    if (sectionId === 6) return;
     if (sectionId) {
       setActiveSectionId(sectionId);
     }
     setSelectedLessonId(lesson.id);
   };
   const handleSectionClick = (sectionId: number) => {
-    const section = courseSections.find(s => s.id === sectionId);
+    // Prevent navigation to masterclass section
+    if (sectionId === 6) return;
+    const section = availableSections.find(s => s.id === sectionId);
     if (!section) return;
     setActiveSectionId(sectionId);
     const firstLesson = section.lessons[0];
@@ -136,138 +130,29 @@ const AIDesignMasterclass = () => {
       setSelectedLessonId(null);
     }
   };
-  const handleMasterclassClick = () => {
-    if (!masterclassUnlocked) {
-      setModalOpen(true);
-    }
-  };
-  const handleFormSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!formData.acceptCommunication) {
-      setCheckboxError(true);
-      // Remove error state after animation
-      setTimeout(() => setCheckboxError(false), 600);
-      return;
-    }
-    setCheckboxError(false);
-    if (!formData.name || !formData.email) {
-      alert('Please fill in all required fields.');
-      return;
-    }
-    setIsSubmitting(true);
-    try {
-      // Send data to webhook
-      const webhookUrl = 'https://n8n.srv1037166.hstgr.cloud/webhook-test/67040c87-56cc-483c-8aef-6e43e60d1e6c';
-      const payload = {
-        name: formData.name,
-        email: formData.email,
-        acceptCommunication: formData.acceptCommunication,
-        timestamp: new Date().toISOString()
-      };
-      console.log('Submitting to webhook:', webhookUrl);
-      console.log('Payload:', payload);
-
-      // Build URL with query parameters for GET request
-      const url = new URL(webhookUrl);
-      url.searchParams.append('name', formData.name);
-      url.searchParams.append('email', formData.email);
-      url.searchParams.append('acceptCommunication', formData.acceptCommunication.toString());
-      url.searchParams.append('timestamp', new Date().toISOString());
-      const response = await fetch(url.toString(), {
-        method: 'GET'
-      });
-      console.log('Response status:', response.status);
-      console.log('Response ok:', response.ok);
-
-      // Check if response is ok or if it's a 200-299 status code
-      if (response.ok || response.status >= 200 && response.status < 300) {
-        // Unlock masterclass even if webhook response isn't perfect
-        setMasterclassUnlocked(true);
-        setModalOpen(false);
-
-        // Navigate to masterclass section
-        const masterclassSection = courseSections.find(s => s.id === 6);
-        if (masterclassSection) {
-          setActiveSectionId(6);
-          const firstLesson = masterclassSection.lessons[0];
-          if (firstLesson) {
-            setSelectedLessonId(firstLesson.id);
-          }
-        }
-
-        // Reset form
-        setFormData({
-          name: '',
-          email: '',
-          acceptCommunication: false
-        });
-      } else {
-        // Try to get error message from response
-        let errorMessage = 'There was an error submitting your information. Please try again.';
-        try {
-          const errorData = await response.text();
-          console.error('Error response:', errorData);
-          if (errorData) {
-            errorMessage = `Error: ${errorData}`;
-          }
-        } catch (e) {
-          console.error('Error reading response:', e);
-        }
-        alert(errorMessage);
-      }
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      // Even if webhook fails, unlock the masterclass for better UX
-      // The webhook might have received the data but failed to respond
-      setMasterclassUnlocked(true);
-      setModalOpen(false);
-
-      // Navigate to masterclass section
-      const masterclassSection = courseSections.find(s => s.id === 6);
-      if (masterclassSection) {
-        setActiveSectionId(6);
-        const firstLesson = masterclassSection.lessons[0];
-        if (firstLesson) {
-          setSelectedLessonId(firstLesson.id);
-        }
-      }
-
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        acceptCommunication: false
-      });
-
-      // Show success message even if webhook had issues
-      alert('Masterclass unlocked! The webhook may have had connection issues, but your access has been granted.');
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
   const handleNext = () => {
-    const currentIndex = courseSections.findIndex(s => s.id === activeSectionId);
-    if (currentIndex < courseSections.length - 1) {
-      const nextSection = courseSections[currentIndex + 1];
+    const currentIndex = availableSections.findIndex(s => s.id === activeSectionId);
+    if (currentIndex < availableSections.length - 1) {
+      const nextSection = availableSections[currentIndex + 1];
       handleSectionClick(nextSection.id);
     }
   };
   const handlePrevious = () => {
-    const currentIndex = courseSections.findIndex(s => s.id === activeSectionId);
+    const currentIndex = availableSections.findIndex(s => s.id === activeSectionId);
     if (currentIndex > 0) {
-      const prevSection = courseSections[currentIndex - 1];
+      const prevSection = availableSections[currentIndex - 1];
       handleSectionClick(prevSection.id);
     }
   };
   const selectedVideo = allLessons.find(lesson => lesson.id === selectedLessonId);
-  const activeSection = courseSections.find(section => section.id === activeSectionId);
-  const currentIndex = courseSections.findIndex(s => s.id === activeSectionId);
-  const hasNext = currentIndex < courseSections.length - 1;
+  const activeSection = availableSections.find(section => section.id === activeSectionId);
+  const currentIndex = availableSections.findIndex(s => s.id === activeSectionId);
+  const hasNext = currentIndex < availableSections.length - 1;
   const hasPrevious = currentIndex > 0;
   return <>
       <Helmet>
-        <title>AI Design Masterclass - Vibe Coding Mastermind</title>
-        <meta name="description" content="Master AI design with our comprehensive masterclass designed for designers and product leaders." />
+        <title>Getting Started Guide - AI Design Academy</title>
+        <meta name="description" content="A comprehensive step-by-step guide to getting started with AI design for designers and product leaders." />
         <style>{`
           .paper-texture {
             background-color: #ffffff;
@@ -302,14 +187,6 @@ const AIDesignMasterclass = () => {
               );
             pointer-events: none;
           }
-          @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            10%, 30%, 50%, 70%, 90% { transform: translateX(-4px); }
-            20%, 40%, 60%, 80% { transform: translateX(4px); }
-          }
-          .checkbox-shake {
-            animation: shake 0.5s ease-in-out;
-          }
         `}</style>
       </Helmet>
       
@@ -327,7 +204,7 @@ const AIDesignMasterclass = () => {
                 <aside className="w-full hidden lg:block sticky top-20 h-[calc(100vh-5rem)] border-r border-border/40 pr-6 py-6 bg-card/30 backdrop-blur-sm overflow-y-auto">
                   <div className="flex flex-col gap-2">
                     <p className="text-xs uppercase tracking-[0.18em] text-white/40 mb-2 px-2">Course Sections</p>
-                    {courseSections.map(section => {
+                    {availableSections.map(section => {
                       const isActive = section.id === activeSectionId;
                       return <button key={section.id} onClick={() => handleSectionClick(section.id)} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-left ${isActive ? "bg-white/20 text-white" : "text-white/70 hover:bg-white/10 hover:text-white"}`}>
                           <span className={`text-xs font-semibold ${isActive ? "text-white" : "text-white/50"}`}>
@@ -379,7 +256,7 @@ const AIDesignMasterclass = () => {
                                 <li>Learn from my journey navigating and learning AI</li>
                                 <li>Going from theory to application</li>
                                 <li>Leading AI revolution</li>
-                                <li>Watch a recorded masterclass</li>
+                                <li>Access additional resources</li>
                                 <li>Get resources</li>
                               </ul>
                             </div>
@@ -618,28 +495,6 @@ const AIDesignMasterclass = () => {
                               </p>
                             </div>
                           </div>
-                        </div> : activeSectionId === 6 ? <div className="space-y-4">
-                          <div className="flex gap-2 px-6 pt-6">
-                            <button onClick={handlePrevious} disabled={!hasPrevious} className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all border text-sm ${hasPrevious ? "border-white/40 bg-white/10 hover:bg-white/20 text-white cursor-pointer" : "border-white/10 bg-white/5 opacity-50 cursor-not-allowed text-white/50"}`}>
-                              <ChevronLeft className="w-4 h-4" />
-                              <span>Previous</span>
-                            </button>
-                            <button onClick={handleNext} disabled={!hasNext} className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all border text-sm ${hasNext ? "border-white/40 bg-white/10 hover:bg-white/20 text-white cursor-pointer" : "border-white/10 bg-white/5 opacity-50 cursor-not-allowed text-white/50"}`}>
-                              <span>Next</span>
-                              <ChevronRight className="w-4 h-4" />
-                            </button>
-                          </div>
-                          <div className="relative aspect-video bg-black">
-                            {!masterclassUnlocked ? <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/90 z-10 cursor-pointer" onClick={handleMasterclassClick}>
-                                <Lock className="w-16 h-16 text-white/60 mb-4" />
-                                <h3 className="text-xl font-semibold text-white mb-2">Masterclass Locked</h3>
-                                <p className="text-white/70 mb-6 text-center px-4">Enter your details to unlock the masterclass</p>
-                                <button className="px-6 py-3 bg-white text-black rounded-lg font-medium hover:bg-white/90 transition-colors">
-                                  Unlock Masterclass
-                                </button>
-                              </div> : null}
-                            {selectedVideo ? <iframe src={`https://www.youtube.com/embed/${selectedVideo.videoId}`} title={selectedVideo.title} className="w-full h-full" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen /> : <iframe src={`https://www.youtube.com/embed/6vnUzMOrAPw`} title="AI Design Masterclass - Trailer" className="w-full h-full" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />}
-                          </div>
                         </div> : activeSectionId === 7 ? <div className="p-12 md:p-16 lg:p-20 bg-white dark:bg-gray-50 paper-texture relative">
                           {/* Previous/Next Navigation */}
                           <div className="flex gap-2 mb-6">
@@ -694,7 +549,7 @@ const AIDesignMasterclass = () => {
                             </button>
                           </div>
                           <div className="relative aspect-video bg-black">
-                            {selectedVideo ? <iframe src={`https://www.youtube.com/embed/${selectedVideo.videoId}`} title={selectedVideo.title} className="w-full h-full" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen /> : <iframe src={`https://www.youtube.com/embed/6vnUzMOrAPw`} title="AI Design Masterclass - Trailer" className="w-full h-full" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />}
+                            {selectedVideo ? <iframe src={`https://www.youtube.com/embed/${selectedVideo.videoId}`} title={selectedVideo.title} className="w-full h-full" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen /> : <div className="w-full h-full flex items-center justify-center bg-black text-white">Select a lesson to view</div>}
                           </div>
                         </div>}
                     </Card>
@@ -711,16 +566,14 @@ const AIDesignMasterclass = () => {
                         <div className="divide-y divide-border/20">
                           {activeSection.lessons.map(lesson => {
                           const isSelected = lesson.id === selectedLessonId;
-                          const isLocked = activeSection.id === 6 && !masterclassUnlocked;
                           return <button key={lesson.id} onClick={() => handleLessonClick(lesson, activeSection.id)} className={`w-full flex items-center justify-between px-6 py-4 text-left transition-colors ${isSelected ? "bg-white/10" : "hover:bg-white/5"}`}>
                                 <div className="flex items-center gap-4">
                                   <span className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-semibold ${isSelected ? "bg-white text-black" : "bg-white/5 text-white/50"}`}>
-                                    {isLocked ? <Lock className={`w-3.5 h-3.5 ${isSelected ? "text-black" : "text-white/60"}`} /> : <Play className={`w-3.5 h-3.5 ${isSelected ? "text-black" : "text-white/60"}`} />}
+                                    <Play className={`w-3.5 h-3.5 ${isSelected ? "text-black" : "text-white/60"}`} />
                                   </span>
                                   <div>
                                     <p className={`text-sm font-medium ${isSelected ? "text-white" : "text-white/80"}`}>
                                       {lesson.title}
-                                      {isLocked && <span className="text-white/50 ml-2">(Locked)</span>}
                                     </p>
                                   </div>
                                 </div>
@@ -763,55 +616,6 @@ const AIDesignMasterclass = () => {
         </div>
       </div>
 
-      {/* Unlock Masterclass Modal */}
-      <Dialog open={modalOpen} onOpenChange={setModalOpen}>
-        <DialogContent className="bg-black border-white/20 text-white sm:max-w-[500px]">
-          <DialogHeader>
-            <DialogTitle className="text-2xl font-semibold text-white">Unlock Masterclass</DialogTitle>
-            <DialogDescription className="text-white/70">
-              Please provide your details to access the masterclass
-            </DialogDescription>
-          </DialogHeader>
-          <form onSubmit={handleFormSubmit}>
-            <div className="space-y-4 py-4">
-              <div className="space-y-2">
-                <Label htmlFor="name" className="text-white">Name *</Label>
-                <Input id="name" type="text" value={formData.name} onChange={e => setFormData({
-                ...formData,
-                name: e.target.value
-              })} className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-white/40" placeholder="Enter your name" required />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="email" className="text-white">Email *</Label>
-                <Input id="email" type="email" value={formData.email} onChange={e => setFormData({
-                ...formData,
-                email: e.target.value
-              })} className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-white/40" placeholder="Enter your email" required />
-              </div>
-              <div className={`flex items-start space-x-3 pt-2 ${checkboxError ? 'checkbox-shake' : ''}`}>
-                <Checkbox id="acceptCommunication" checked={formData.acceptCommunication} onCheckedChange={checked => {
-                setFormData({
-                  ...formData,
-                  acceptCommunication: checked === true
-                });
-                setCheckboxError(false);
-              }} className="h-5 w-5 rounded border-2 border-white/30 data-[state=checked]:bg-white data-[state=checked]:border-white data-[state=checked]:text-black mt-0.5 flex-shrink-0" />
-                <Label htmlFor="acceptCommunication" className="text-sm text-white/90 leading-relaxed cursor-pointer flex-1">
-                  I accept to receive further communication from AI Design Academy and John Rodrigues *
-                </Label>
-              </div>
-            </div>
-            <DialogFooter>
-              <Button type="button" variant="outline" onClick={() => setModalOpen(false)} className="border-white/20 text-white hover:bg-white/10">
-                Cancel
-              </Button>
-              <Button type="submit" disabled={isSubmitting || !formData.acceptCommunication} className="bg-white text-black hover:bg-white/90 disabled:opacity-50 disabled:cursor-not-allowed">
-                {isSubmitting ? 'Unlocking...' : 'Unlock Masterclass'}
-              </Button>
-            </DialogFooter>
-          </form>
-        </DialogContent>
-      </Dialog>
     </>;
 };
 export default AIDesignMasterclass;

@@ -2,6 +2,7 @@ import { Navigation } from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { Helmet } from "react-helmet";
 import { ArrowRight } from "lucide-react";
+import { useEffect } from "react";
 import CursorBlogImage from "@/assets/CursorBlog.png";
 
 // Blog post data
@@ -43,11 +44,32 @@ const blogPosts = [
 ];
 
 const Blog = () => {
+  useEffect(() => {
+    // Check if script is already present
+    const scriptId = 'ck-script-87b7674766';
+    if (!document.getElementById(scriptId)) {
+      const script = document.createElement('script');
+      script.id = scriptId;
+      script.src = "https://f.convertkit.com/ckjs/ck.5.js";
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  }, []);
+
   return (
     <>
       <Helmet>
         <title>Blog - AI Design Academy</title>
         <meta name="description" content="Tutorials, updates, and success stories from the AI Design Academy community. Learn vibe coding, AI tools, and how to build real applications." />
+        <style dangerouslySetInnerHTML={{__html: `
+          .formkit-form[data-uid="87b7674766"] .formkit-submit[data-active] .formkit-spinner { opacity: 1; height: 100%; width: 50px; }
+          .formkit-form[data-uid="87b7674766"] .formkit-submit[data-active] .formkit-spinner ~ span { opacity: 0; }
+          .formkit-spinner { display: flex; height: 0px; width: 0px; margin: 0 auto; position: absolute; top: 0; left: 0; right: 0; overflow: hidden; text-align: center; transition: all 300ms ease-in-out; }
+          .formkit-spinner > div { margin: auto; width: 12px; height: 12px; background-color: #fff; opacity: 0.3; border-radius: 100%; display: inline-block; animation: formkit-bouncedelay 1.4s infinite ease-in-out both; }
+          .formkit-spinner > div:nth-child(1) { animation-delay: -0.32s; }
+          .formkit-spinner > div:nth-child(2) { animation-delay: -0.16s; }
+          @keyframes formkit-bouncedelay { 0%, 80%, 100% { transform: scale(0); } 40% { transform: scale(1); } }
+        `}} />
       </Helmet>
 
       <div className="min-h-screen bg-[#0E0E10] text-white selection:bg-white/20">
@@ -55,24 +77,81 @@ const Blog = () => {
 
         <main className="pt-24 sm:pt-32 pb-16 sm:pb-24 px-4 sm:px-6 md:px-12 max-w-[1400px] mx-auto">
           {/* Header Section */}
-          <div className="mb-16 sm:mb-24">
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-medium tracking-tight mb-6 sm:mb-8">
+          <div className="mb-16 sm:mb-24 space-y-8">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-medium tracking-tight">
               Blog
             </h1>
             
-            <div className="flex flex-wrap gap-4 text-sm font-medium text-white/60">
-              <button className="px-4 py-2 bg-white/10 text-white rounded-full hover:bg-white/15 transition-colors">
-                All
-              </button>
-              <button className="px-4 py-2 hover:bg-white/5 rounded-full transition-colors">
-                Tutorials
-              </button>
-              <button className="px-4 py-2 hover:bg-white/5 rounded-full transition-colors">
-                Updates
-              </button>
-              <button className="px-4 py-2 hover:bg-white/5 rounded-full transition-colors">
-                Stories
-              </button>
+            <div className="flex flex-col xl:flex-row gap-8 xl:items-end justify-between">
+              {/* Categories */}
+              <div className="flex flex-wrap gap-4 text-sm font-medium text-white/60">
+                <button className="px-4 py-2 bg-white/10 text-white rounded-full hover:bg-white/15 transition-colors">
+                  All
+                </button>
+                <button className="px-4 py-2 hover:bg-white/5 rounded-full transition-colors">
+                  Tutorials
+                </button>
+                <button className="px-4 py-2 hover:bg-white/5 rounded-full transition-colors">
+                  Updates
+                </button>
+                <button className="px-4 py-2 hover:bg-white/5 rounded-full transition-colors">
+                  Stories
+                </button>
+              </div>
+
+              {/* Top Newsletter Form */}
+              <div className="w-full xl:max-w-xl">
+                <p className="text-sm text-white/60 mb-4 xl:text-right">
+                  Get all AI updates delivered to your inbox.
+                </p>
+                 <form 
+                  action="https://app.kit.com/forms/8819273/subscriptions" 
+                  className="seva-form formkit-form" 
+                  method="post" 
+                  data-sv-form="8819273" 
+                  data-uid="87b7674766" 
+                  data-format="inline" 
+                  data-version="5" 
+                >
+                  <div data-style="clean">
+                    <ul className="formkit-alert formkit-alert-error text-red-500 mb-3 text-sm" data-element="errors" data-group="alert"></ul>
+                    
+                    <div className="flex flex-col sm:flex-row gap-2.5">
+                      <input 
+                        className="formkit-input flex-1 h-11 px-4 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-white/40 focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all text-sm" 
+                        aria-label="First Name" 
+                        name="fields[first_name]" 
+                        placeholder="First Name" 
+                        type="text" 
+                      />
+                      <input 
+                        className="formkit-input flex-1 h-11 px-4 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-white/40 focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all text-sm" 
+                        name="email_address" 
+                        aria-label="Email Address" 
+                        placeholder="Email Address" 
+                        required 
+                        type="email" 
+                      />
+                      <button 
+                        data-element="submit" 
+                        className="formkit-submit h-11 px-8 bg-white text-black hover:bg-white/90 font-medium rounded-lg transition-all flex items-center justify-center relative overflow-hidden whitespace-nowrap text-sm shrink-0 shadow-lg shadow-white/10"
+                        style={{ backgroundColor: '#ffffff', color: '#000000' }}
+                      >
+                        <div className="formkit-spinner absolute inset-0 flex items-center justify-center bg-white/10 opacity-0 transition-opacity">
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                        </div>
+                        <span className="formkit-submit-text" style={{ color: '#000000' }}>Subscribe</span>
+                      </button>
+                    </div>
+                    
+                    <div className="formkit-powered-by-convertkit-container mt-3 text-right">
+                      <a href="https://kit.com/features/forms?utm_campaign=poweredby&utm_content=form&utm_medium=referral&utm_source=dynamic" data-element="powered-by" className="formkit-powered-by-convertkit text-[10px] text-white/20 hover:text-white/40 transition-colors" data-variant="dark" target="_blank" rel="nofollow">Built with Kit</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
 
@@ -130,68 +209,10 @@ const Blog = () => {
               </div>
             ))}
           </div>
-
-          {/* List View Section */}
-          {/* Hidden since we only have 3 posts total now (1 featured + 2 secondary)
-          <div className="border-t border-white/10 pt-24">
-             <div className="flex items-center justify-between mb-16">
-              <h2 className="text-2xl font-medium">All articles</h2>
-              <Button variant="ghost" className="text-white/60 hover:text-white hover:bg-white/5">
-                View archive <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
-               {blogPosts.slice(3).map((post) => (
-                <article key={post.id} className="group cursor-pointer flex flex-col h-full" onClick={() => window.location.href = `/blog/${post.slug}`}>
-                  <div className="aspect-[3/2] bg-white/5 mb-6 overflow-hidden rounded-sm">
-                     <img 
-                      src={post.image} 
-                      alt={post.title}
-                      className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-[1.01] transition-all duration-500"
-                    />
-                  </div>
-                  
-                  <div className="flex-1 flex flex-col">
-                    <div className="flex items-center justify-between text-xs text-white/40 mb-3">
-                       <span className="font-medium text-white/60">{new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
-                    </div>
-
-                    <h3 className="text-lg font-medium leading-snug mb-3 group-hover:text-white/80 transition-colors">
-                      {post.title}
-                    </h3>
-                    
-                    <p className="text-sm text-white/60 leading-relaxed line-clamp-3">
-                      {post.excerpt}
-                    </p>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-          */}
         </main>
-
-        {/* Minimal Footer CTA - Hidden for now */}
-        {/* <section className="py-32 border-t border-white/10">
-          <div className="container mx-auto px-6 text-center">
-             <h2 className="text-4xl md:text-5xl font-medium mb-8 tracking-tight">
-              Ready to start building?
-            </h2>
-            <div className="flex items-center justify-center gap-6">
-              <Button size="lg" className="h-12 px-8 rounded-full bg-white text-black hover:bg-white/90 font-medium">
-                Get started
-              </Button>
-               <Button size="lg" variant="ghost" className="h-12 px-8 rounded-full text-white hover:bg-white/10 font-medium">
-                Read documentation
-              </Button>
-            </div>
-          </div>
-        </section> */}
       </div>
     </>
   );
 };
 
 export default Blog;
-// Force sync update
