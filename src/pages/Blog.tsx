@@ -91,22 +91,8 @@ const Blog = () => {
       <div className="min-h-screen bg-background">
         <Navigation />
 
-        {/* Hero Section */}
-        <section className="py-16 sm:py-24">
-          <div className="container mx-auto px-4 sm:px-8 max-w-6xl">
-            <div className="text-center mb-12">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight mb-4">
-                AI Design Academy Blog
-              </h1>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Tutorials, course updates, and success stories from our community of AI-powered designers and developers.
-              </p>
-            </div>
-          </div>
-        </section>
-
         {/* Featured Post */}
-        <section className="py-8 border-t border-border/40">
+        <section className="pt-32 pb-8 border-t border-border/40">
           <div className="container mx-auto px-4 sm:px-8 max-w-6xl">
             <h2 className="text-2xl font-semibold mb-8">Featured</h2>
             <Card className="overflow-hidden hover:shadow-lg transition-shadow">
