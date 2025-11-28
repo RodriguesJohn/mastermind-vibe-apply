@@ -76,49 +76,59 @@ const Blog = () => {
             </div>
           </div>
 
-          {/* Featured Grid Layout - Linear Style */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-x-8 gap-y-12 mb-32">
-            {/* Featured Item 1 (Large) */}
-            <div className="lg:col-span-8 group cursor-pointer" onClick={() => window.location.href = `/blog/${featuredPost.slug}`}>
-              <div className="relative aspect-[16/9] mb-6 overflow-hidden bg-white/5 rounded-sm">
+          {/* Main Grid Layout - 3 Equal Columns */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-32">
+            {/* Featured Item (Cursor 2.0) - Now same size as others */}
+            <div className="group cursor-pointer flex flex-col h-full" onClick={() => window.location.href = `/blog/${featuredPost.slug}`}>
+              <div className="relative aspect-[16/10] mb-6 overflow-hidden bg-white/5 rounded-sm">
                 <img 
                   src={featuredPost.image} 
                   alt={featuredPost.title}
                   className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-[1.01] transition-all duration-500"
                 />
               </div>
-              <div className="space-y-3">
-                <div className="flex items-center gap-3 text-xs sm:text-sm text-white/60">
-                  <span>{new Date(featuredPost.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</span>
+              <div className="flex-1 flex flex-col">
+                <div className="flex items-center gap-2 text-[10px] sm:text-xs font-medium text-white/40 mb-3 uppercase tracking-wider">
+                  {featuredPost.category}
                 </div>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-medium leading-tight group-hover:text-white/90 transition-colors">
+                <h3 className="text-xl font-medium leading-snug mb-3 group-hover:text-white/80 transition-colors">
                   {featuredPost.title}
-                </h2>
-                <p className="text-base sm:text-lg text-white/60 max-w-2xl leading-relaxed line-clamp-3 sm:line-clamp-none">
+                </h3>
+                <p className="text-sm text-white/60 leading-relaxed mb-4 line-clamp-3">
                   {featuredPost.excerpt}
                 </p>
+                <div className="mt-auto flex items-center gap-2 text-[10px] sm:text-xs text-white/40">
+                  <span>{new Date(featuredPost.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</span>
+                </div>
               </div>
             </div>
 
-            {/* Secondary Featured List */}
-            <div className="lg:col-span-4 flex flex-col gap-8 lg:gap-12 lg:border-l border-white/10 lg:pl-12 pt-8 lg:pt-0 border-t lg:border-t-0 border-white/10">
-              {blogPosts.map((post) => (
-                <div key={post.id} className="group cursor-pointer" onClick={() => window.location.href = `/blog/${post.slug}`}>
-                   <div className="flex items-center gap-2 text-[10px] sm:text-xs font-medium text-white/40 mb-2 sm:mb-3 uppercase tracking-wider">
+            {/* Other Posts */}
+            {blogPosts.map((post) => (
+              <div key={post.id} className="group cursor-pointer flex flex-col h-full" onClick={() => window.location.href = `/blog/${post.slug}`}>
+                <div className="relative aspect-[16/10] mb-6 overflow-hidden bg-white/5 rounded-sm">
+                  <img 
+                    src={post.image} 
+                    alt={post.title}
+                    className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-[1.01] transition-all duration-500"
+                  />
+                </div>
+                <div className="flex-1 flex flex-col">
+                   <div className="flex items-center gap-2 text-[10px] sm:text-xs font-medium text-white/40 mb-3 uppercase tracking-wider">
                     {post.category}
                   </div>
-                  <h3 className="text-lg sm:text-xl font-medium leading-snug mb-2 sm:mb-3 group-hover:text-white/80 transition-colors">
+                  <h3 className="text-xl font-medium leading-snug mb-3 group-hover:text-white/80 transition-colors">
                     {post.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-white/60 line-clamp-2 leading-relaxed mb-3 sm:mb-4">
+                  <p className="text-sm text-white/60 leading-relaxed mb-4 line-clamp-3">
                     {post.excerpt}
                   </p>
-                   <div className="flex items-center gap-2 text-[10px] sm:text-xs text-white/40">
+                   <div className="mt-auto flex items-center gap-2 text-[10px] sm:text-xs text-white/40">
                     <span>{new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</span>
                   </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
 
           {/* List View Section */}

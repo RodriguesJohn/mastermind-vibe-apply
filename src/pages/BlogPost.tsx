@@ -232,7 +232,7 @@ const BlogPost = () => {
 
                 <h2 className="text-2xl font-medium text-white mt-12 mb-4 tracking-tight">Step 1: Stay updated with industry changes, new tools, and workflows</h2>
                 <p>
-                  Which resources should you follow to keep up? You can join the AI Design Playbook, where we share the latest market changes and in-depth articles to help you stay ahead.
+                  Which resources should you follow to keep up? You can join the <a href="https://johnrodrigues.substack.com/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 underline decoration-white/30 underline-offset-4 transition-colors">AI Design Playbook</a>, where we share the latest market changes and in-depth articles to help you stay ahead.
                 </p>
 
                 <h2 className="text-2xl font-medium text-white mt-12 mb-4 tracking-tight">Step 2: Learn the AI foundations and key terminology</h2>
