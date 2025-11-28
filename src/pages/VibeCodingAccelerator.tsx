@@ -162,7 +162,11 @@ const VibeCodingAccelerator = () => {
             animation: blurEntrance 0.8s ease-out forwards;
           }
           .blur-entrance-subtle {
-            animation: blurEntranceSubtle 0.6s ease-out 0.4s forwards;
+            animation: blurEntranceSubtle 0.6s ease-out 0.6s forwards;
+            opacity: 0;
+          }
+          .blur-entrance-subtle-delayed {
+            animation: blurEntranceSubtle 0.6s ease-out 0.3s forwards;
             opacity: 0;
           }
         `}</style>
@@ -225,7 +229,7 @@ const VibeCodingAccelerator = () => {
                 <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight leading-[1.3] relative pt-8 sm:pt-0 blur-entrance">
                   Master Vibe Coding &<br />Prototype 2 AI Apps with<br />Cursor in 14 Days
                   </h1>
-                <p className="text-sm sm:text-base md:text-lg text-white/60 mx-auto max-w-2xl px-2 leading-relaxed font-medium">
+                <p className="text-sm sm:text-base md:text-lg text-white/60 mx-auto max-w-2xl px-2 leading-relaxed font-medium blur-entrance-subtle-delayed">
                   Beginner-Friendly Vibe Coding With Cursor. Go from beginner to vibe coding expert.
                 </p>
                 <div className="flex flex-col gap-3 sm:flex-row justify-center max-w-md mx-auto px-4 sm:px-0">
