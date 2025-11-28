@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Linkedin } from "lucide-react";
-import instructorImage from "@/assets/John.png";
+import instructorImage from "@/assets/John-4.jpg";
 import appleLogo from "@/assets/Apple.png";
 import googleLogo from "@/assets/Google.svg.png";
 import citiLogo from "@/assets/Citi.svg.png";

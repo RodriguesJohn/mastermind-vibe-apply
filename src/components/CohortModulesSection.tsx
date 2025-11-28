@@ -58,14 +58,14 @@ const vibeCodingModules = [{
 }, {
   number: "2",
   week: "Week 2",
-  title: "Building Web Apps with Gen AI Capabilities",
+    title: "Building Web Apps with GenAI Capabilities",
   description: "Build a web app with Gen-AI capabilities. Create an AI recipe generator using OpenAI API and translate Figma designs into functional prototypes.",
   colors: ["#FF6B6B", "#FF8E53", "#FFD93D", "#FFA07A"]
 }];
 const vibeCodingBonusModule = {
   number: "B",
   week: "Bonus",
-  title: "The first 20 would get a 1:1 with 30 minutes with John",
+    title: "The First 20 Would Get a 1:1 With 30 Minutes With John",
   description: "The first 20 get a 1:1 with John for AI journey guidance and mentorship.",
   colors: ["#C44569", "#D68FD6", "#E3A0D3", "#FF8CC8"]
 };
