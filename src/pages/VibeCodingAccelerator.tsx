@@ -133,6 +133,39 @@ const VibeCodingAccelerator = () => {
       <Helmet>
         <title>Vibe Coding with Cursor in 14 days</title>
         <meta name="description" content="Master vibe coding and design engineering. Learn to ship AI-powered products, build a standout portfolio, and command top-tier roles." />
+        <style>{`
+          @keyframes blurEntrance {
+            0% {
+              filter: blur(10px);
+              opacity: 0;
+              transform: translateY(10px);
+            }
+            100% {
+              filter: blur(0);
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+          @keyframes blurEntranceSubtle {
+            0% {
+              filter: blur(5px);
+              opacity: 0;
+              transform: translateY(5px);
+            }
+            100% {
+              filter: blur(0);
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+          .blur-entrance {
+            animation: blurEntrance 0.8s ease-out forwards;
+          }
+          .blur-entrance-subtle {
+            animation: blurEntranceSubtle 0.6s ease-out 0.4s forwards;
+            opacity: 0;
+          }
+        `}</style>
       </Helmet>
 
       <div className="bg-[#0E0E10] text-white selection:bg-white/20">
@@ -189,20 +222,20 @@ const VibeCodingAccelerator = () => {
                   height: 'auto'
                 }} />
                             </div>
-                <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight leading-[1.3] relative pt-8 sm:pt-0">
+                <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight leading-[1.3] relative pt-8 sm:pt-0 blur-entrance">
                   Master Vibe Coding &<br />Prototype 2 AI Apps with<br />Cursor in 14 Days
                   </h1>
                 <p className="text-sm sm:text-base md:text-lg text-white/60 mx-auto max-w-2xl px-2 leading-relaxed font-medium">
                   Beginner-Friendly Vibe Coding With Cursor. Go from beginner to vibe coding expert.
                 </p>
                 <div className="flex flex-col gap-3 sm:flex-row justify-center max-w-md mx-auto px-4 sm:px-0">
-                  <Button variant="cta" size="lg" className="w-full sm:w-auto sm:min-w-[200px]" asChild>
+                  <Button variant="cta" size="lg" className="w-full sm:w-auto sm:min-w-[200px] blur-entrance-subtle" asChild>
                     <a href="https://ai-design-academy-s-school.teachable.com/purchase?product_id=6550289" target="_blank" rel="noopener noreferrer">
                       Enroll Today
                       <ArrowRight className="h-5 w-5" />
                       </a>
                     </Button>
-                  <Button variant="outline" size="lg" className="bg-white text-gray-600 border-white hover:bg-white hover:text-black hover:shadow-lg hover:scale-105 transition-all duration-300 w-full sm:w-auto sm:min-w-[200px]" asChild>
+                  <Button variant="outline" size="lg" className="bg-white text-gray-600 border-white hover:bg-white hover:text-black hover:shadow-lg hover:scale-105 transition-all duration-300 w-full sm:w-auto sm:min-w-[200px] blur-entrance-subtle" asChild>
                     <a href="https://ai-design-academy-s-school.teachable.com/l/products?sortKey=name&sortDirection=asc&page=1" target="_blank" rel="noopener noreferrer">
                       Log In
                       <ArrowRight className="h-5 w-5" />
