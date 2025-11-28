@@ -26,6 +26,7 @@ const blogPosts = [
     date: "2024-11-23",
     readTime: "6 min read",
     category: "Tutorial",
+    image: "/placeholder.svg",
     slug: "mastering-cursor-prompting-techniques"
   },
   {
@@ -36,6 +37,7 @@ const blogPosts = [
     date: "2024-11-20",
     readTime: "3 min read",
     category: "Course Updates",
+    image: "/placeholder.svg",
     slug: "ai-recipe-generator-module-released"
   },
   {
@@ -46,6 +48,7 @@ const blogPosts = [
     date: "2024-11-18",
     readTime: "5 min read",
     category: "Success Stories",
+    image: "/placeholder.svg",
     slug: "designer-to-fullstack-developer"
   },
   {
@@ -56,6 +59,7 @@ const blogPosts = [
     date: "2024-11-15",
     readTime: "7 min read",
     category: "Insights",
+    image: "/placeholder.svg",
     slug: "future-of-design-ai-coding"
   },
   {
@@ -66,6 +70,7 @@ const blogPosts = [
     date: "2024-11-12",
     readTime: "4 min read",
     category: "Success Stories",
+    image: "/placeholder.svg",
     slug: "ux-agent-hackathon-winner"
   },
   {
@@ -76,6 +81,7 @@ const blogPosts = [
     date: "2024-11-10",
     readTime: "5 min read",
     category: "Tutorial",
+    image: "/placeholder.svg",
     slug: "common-ai-coding-mistakes"
   }
 ];
@@ -142,11 +148,18 @@ const Blog = () => {
         <section className="py-16">
           <div className="container mx-auto px-4 sm:px-8 max-w-6xl">
             <h2 className="text-2xl font-semibold mb-8">Recent Posts</h2>
-            <div className="space-y-6">
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {blogPosts.map((post) => (
-                <Card key={post.id} className="hover:shadow-lg transition-shadow">
-                  <CardHeader>
-                    <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
+                <Card key={post.id} className="overflow-hidden hover:shadow-lg transition-shadow flex flex-col">
+                  <div className="bg-muted aspect-video">
+                    <img 
+                      src={post.image} 
+                      alt={post.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <CardHeader className="flex-1 flex flex-col">
+                    <div className="flex items-center gap-3 text-sm text-muted-foreground mb-3 flex-wrap">
                       <span className="px-3 py-1 bg-secondary text-secondary-foreground rounded-full">
                         {post.category}
                       </span>
@@ -163,13 +176,13 @@ const Blog = () => {
                         {post.readTime}
                       </div>
                     </div>
-                    <CardTitle className="text-2xl mb-2 hover:text-primary transition-colors cursor-pointer">
+                    <CardTitle className="text-xl mb-2 hover:text-primary transition-colors cursor-pointer">
                       {post.title}
                     </CardTitle>
-                    <CardDescription className="text-base mb-4">
+                    <CardDescription className="text-sm mb-4 flex-1">
                       {post.excerpt}
                     </CardDescription>
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between mt-auto">
                       <span className="text-sm text-muted-foreground">By {post.author}</span>
                       <Button variant="ghost" size="sm">
                         Read More
