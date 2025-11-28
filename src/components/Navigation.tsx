@@ -16,7 +16,6 @@ export const Navigation = () => {
           {/* Logo/Brand */}
           <a href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
             <img src="/logo.png" alt="AI Design Academy" className="w-6 h-6 object-contain flex-shrink-0" />
-            <span className="font-bold text-lg">AI Design Academy</span>
           </a>
           
           {/* Desktop Navigation */}
@@ -31,7 +30,7 @@ export const Navigation = () => {
               Blog
             </a>
             <a href="/cohort" className="text-sm font-normal hover:text-primary transition-colors">
-              AI Cohort
+              Cohort
             </a>
           </div>
           
@@ -69,7 +68,7 @@ export const Navigation = () => {
                   Knowledge Hub
                 </a> */}
                 <a href="/cohort" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
-                  AI Cohort
+                  Cohort
                 </a>
 
                 <Button variant="cta" size="lg" className="mt-2" asChild onClick={() => setMobileMenuOpen(false)}>

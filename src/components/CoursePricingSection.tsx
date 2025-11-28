@@ -50,7 +50,7 @@ export const CoursePricingSection = () => {
           </div>
           
           <div className="max-w-2xl mx-auto">
-            <Card className="border-primary/50 shadow-2xl relative overflow-hidden">
+            <Card className="border-white/5 shadow-2xl relative overflow-hidden bg-black">
               <div className="flex justify-start pt-4 sm:pt-6 px-4 sm:px-6">
                 <div className="bg-destructive text-destructive-foreground px-3 sm:px-4 py-1 rounded-full text-xs sm:text-sm font-semibold">
                 Black Friday Sale
@@ -58,7 +58,7 @@ export const CoursePricingSection = () => {
               </div>
               
               <CardHeader className="text-left pb-6 sm:pb-8 pt-4 sm:pt-6 px-4 sm:px-6">
-                <CardTitle className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
+                <CardTitle className="text-2xl sm:text-3xl md:text-4xl font-medium tracking-tight mb-3 sm:mb-4">
                   Master Vibe Coding with Cursor today
                 </CardTitle>
               </CardHeader>

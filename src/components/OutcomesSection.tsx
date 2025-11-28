@@ -5,15 +5,15 @@ const outcomes = [{
   description: "Master the most popular AI development tool. Perfect for designers who want to prototype their ideas quickly.",
   colors: ["#FF6B6B", "#FFD93D", "#FF8E53", "#FF6B9D"]
 }, {
-  text: "Build a mobile app prototype",
+  text: "Build a Mobile App Prototype",
   description: "Hands-on mobile app design and prototyping with rich animations and API integration. Design interfaces you can touch and feel.",
   colors: ["#4ECDC4", "#87CEEB", "#DA70D6", "#BA55D3"]
 }, {
-  text: "Create an AI recipe app with the power of Gen AI",
+  text: "Create an AI Recipe App with the Power of Gen AI",
   description: "Finally, create an AI recipe generator app using OpenAI's API within Cursor, and don't just design static interfaces but design interfaces that are generative in nature.",
   colors: ["#95E1D3", "#F38181", "#FCE38A", "#AAE3F0"]
 }, {
-  text: "Learn the workflows",
+  text: "Learn the Workflows",
   description: "Unique workflows that save money and speed up your prototyping process. Build your ideas quickly without deep technical knowledge.",
   colors: ["#C44569", "#D68FD6", "#E3A0D3", "#FF8CC8"]
 }];

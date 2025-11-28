@@ -1,88 +1,44 @@
 import { Navigation } from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Calendar, Clock, ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet";
+import { ArrowRight } from "lucide-react";
+import CursorBlogImage from "@/assets/CursorBlog.png";
 
 // Blog post data
 const featuredPost = {
   id: 1,
-  title: "Building Production-Ready Apps with AI: Lessons from the Trenches",
-  excerpt: "After helping dozens of designers and developers build real-world applications with AI coding tools, here are the key insights that separate successful projects from abandoned prototypes.",
+  title: "Cursor 2.0: The Future of Vibe Coding is Here",
+  excerpt: "Cursor recently launched Cursor 2.0, introducing Composer 1, Agent Mode, and parallel workflows. These updates drastically improve efficiency and hint at where vibe-coding tools are heading.",
   author: "John Rodrigues",
-  date: "2024-11-26",
-  readTime: "8 min read",
-  category: "Tutorial",
-  image: "/placeholder.svg",
-  slug: "building-production-ready-apps-with-ai"
+  date: "2024-11-28",
+  readTime: "5 min read",
+  category: "Product Update",
+  image: CursorBlogImage,
+  slug: "cursor-2-0-update"
 };
 
 const blogPosts = [
   {
     id: 2,
-    title: "Mastering Cursor: 10 Prompting Techniques That Actually Work",
-    excerpt: "The difference between mediocre and exceptional results with AI coding tools comes down to how you communicate. Here's what we've learned.",
+    title: "7 Observations on How AI is Reshaping Product Design",
+    excerpt: "After directing 5+ AI products and writing 46 articles, here are key observations on how AI is the next UI, the rise of agents, and why designers must evolve.",
     author: "John Rodrigues",
     date: "2024-11-23",
-    readTime: "6 min read",
-    category: "Tutorial",
-    image: "/placeholder.svg",
-    slug: "mastering-cursor-prompting-techniques"
+    readTime: "4 min read",
+    category: "Insights",
+    image: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2000&auto=format&fit=crop",
+    slug: "ai-reshaping-product-design"
   },
   {
     id: 3,
-    title: "Course Update: New AI Recipe Generator Module Released",
-    excerpt: "We've just launched our latest hands-on project module where you'll build a complete AI-powered recipe generator from scratch.",
+    title: "Where to Get Started with AI: 6 Steps from Chaos to Clarity",
+    excerpt: "Overwhelmed by how fast AI is changing? We've mapped out 6 practical steps and resources to help you build your foundation and start creating.",
     author: "AI Design Academy",
     date: "2024-11-20",
-    readTime: "3 min read",
-    category: "Course Updates",
-    image: "/placeholder.svg",
-    slug: "ai-recipe-generator-module-released"
-  },
-  {
-    id: 4,
-    title: "Student Success: From Designer to Full-Stack Developer in 14 Days",
-    excerpt: "Meet Sarah, a UX designer who had never written a line of code. Here's how she built and deployed three production apps using vibe coding.",
-    author: "AI Design Academy",
-    date: "2024-11-18",
     readTime: "5 min read",
-    category: "Success Stories",
-    image: "/placeholder.svg",
-    slug: "designer-to-fullstack-developer"
-  },
-  {
-    id: 5,
-    title: "The Future of Design: Why Every Designer Needs to Code (Sort Of)",
-    excerpt: "AI coding tools are changing the game for designers. You don't need to become a traditional developer, but understanding these tools is becoming essential.",
-    author: "John Rodrigues",
-    date: "2024-11-15",
-    readTime: "7 min read",
-    category: "Insights",
-    image: "/placeholder.svg",
-    slug: "future-of-design-ai-coding"
-  },
-  {
-    id: 6,
-    title: "Hackathon Winners Spotlight: UX Agent Built in 48 Hours",
-    excerpt: "How our students used vibe coding techniques to win a major hackathon hosted by AGI, OpenAI, and Loveable.",
-    author: "AI Design Academy",
-    date: "2024-11-12",
-    readTime: "4 min read",
-    category: "Success Stories",
-    image: "/placeholder.svg",
-    slug: "ux-agent-hackathon-winner"
-  },
-  {
-    id: 7,
-    title: "Common Mistakes When Starting with AI Coding Tools",
-    excerpt: "Avoid these pitfalls that trip up most beginners when they first start using Cursor and other AI coding assistants.",
-    author: "John Rodrigues",
-    date: "2024-11-10",
-    readTime: "5 min read",
-    category: "Tutorial",
-    image: "/placeholder.svg",
-    slug: "common-ai-coding-mistakes"
+    category: "Guide",
+    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2000&auto=format&fit=crop",
+    slug: "where-to-get-started-with-ai"
   }
 ];
 
@@ -94,122 +50,134 @@ const Blog = () => {
         <meta name="description" content="Tutorials, updates, and success stories from the AI Design Academy community. Learn vibe coding, AI tools, and how to build real applications." />
       </Helmet>
 
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-[#0E0E10] text-white selection:bg-white/20">
         <Navigation />
 
-        {/* Featured Post */}
-        <section className="pt-32 pb-8 border-t border-border/40">
-          <div className="container mx-auto px-4 sm:px-8 max-w-6xl">
-            <h2 className="text-2xl font-semibold mb-8">Featured</h2>
-            <Card className="overflow-hidden hover:shadow-lg transition-shadow">
-              <div className="grid md:grid-cols-2 gap-0">
-                <div className="bg-muted flex items-center justify-center p-8">
-                  <img 
-                    src={featuredPost.image} 
-                    alt={featuredPost.title}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <CardHeader className="p-8">
-                  <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
-                    <span className="px-3 py-1 bg-primary/10 text-primary rounded-full">
-                      {featuredPost.category}
-                    </span>
-                    <div className="flex items-center gap-1">
-                      <Calendar className="w-4 h-4" />
-                      {new Date(featuredPost.date).toLocaleDateString('en-US', { 
-                        month: 'short', 
-                        day: 'numeric', 
-                        year: 'numeric' 
-                      })}
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Clock className="w-4 h-4" />
-                      {featuredPost.readTime}
-                    </div>
-                  </div>
-                  <CardTitle className="text-3xl mb-4">
-                    {featuredPost.title}
-                  </CardTitle>
-                  <CardDescription className="text-base mb-6">
-                    {featuredPost.excerpt}
-                  </CardDescription>
-                  <Button variant="default" className="w-fit">
-                    Read Article
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
-                </CardHeader>
-              </div>
-            </Card>
+        <main className="pt-24 sm:pt-32 pb-16 sm:pb-24 px-4 sm:px-6 md:px-12 max-w-[1400px] mx-auto">
+          {/* Header Section */}
+          <div className="mb-16 sm:mb-24">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-medium tracking-tight mb-6 sm:mb-8">
+              Blog
+            </h1>
+            
+            <div className="flex flex-wrap gap-4 text-sm font-medium text-white/60">
+              <button className="px-4 py-2 bg-white/10 text-white rounded-full hover:bg-white/15 transition-colors">
+                All
+              </button>
+              <button className="px-4 py-2 hover:bg-white/5 rounded-full transition-colors">
+                Tutorials
+              </button>
+              <button className="px-4 py-2 hover:bg-white/5 rounded-full transition-colors">
+                Updates
+              </button>
+              <button className="px-4 py-2 hover:bg-white/5 rounded-full transition-colors">
+                Stories
+              </button>
+            </div>
           </div>
-        </section>
 
-        {/* Recent Posts */}
-        <section className="py-16">
-          <div className="container mx-auto px-4 sm:px-8 max-w-6xl">
-            <h2 className="text-2xl font-semibold mb-8">Recent Posts</h2>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {/* Featured Grid Layout - Linear Style */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-x-8 gap-y-12 mb-32">
+            {/* Featured Item 1 (Large) */}
+            <div className="lg:col-span-8 group cursor-pointer" onClick={() => window.location.href = `/blog/${featuredPost.slug}`}>
+              <div className="relative aspect-[16/9] mb-6 overflow-hidden bg-white/5 rounded-sm">
+                <img 
+                  src={featuredPost.image} 
+                  alt={featuredPost.title}
+                  className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-[1.01] transition-all duration-500"
+                />
+              </div>
+              <div className="space-y-3">
+                <div className="flex items-center gap-3 text-xs sm:text-sm text-white/60">
+                  <span>{new Date(featuredPost.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</span>
+                </div>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-medium leading-tight group-hover:text-white/90 transition-colors">
+                  {featuredPost.title}
+                </h2>
+                <p className="text-base sm:text-lg text-white/60 max-w-2xl leading-relaxed line-clamp-3 sm:line-clamp-none">
+                  {featuredPost.excerpt}
+                </p>
+              </div>
+            </div>
+
+            {/* Secondary Featured List */}
+            <div className="lg:col-span-4 flex flex-col gap-8 lg:gap-12 lg:border-l border-white/10 lg:pl-12 pt-8 lg:pt-0 border-t lg:border-t-0 border-white/10">
               {blogPosts.map((post) => (
-                <Card key={post.id} className="overflow-hidden hover:shadow-lg transition-shadow flex flex-col">
-                  <div className="bg-muted aspect-video">
-                    <img 
-                      src={post.image} 
-                      alt={post.title}
-                      className="w-full h-full object-cover"
-                    />
+                <div key={post.id} className="group cursor-pointer" onClick={() => window.location.href = `/blog/${post.slug}`}>
+                   <div className="flex items-center gap-2 text-[10px] sm:text-xs font-medium text-white/40 mb-2 sm:mb-3 uppercase tracking-wider">
+                    {post.category}
                   </div>
-                  <CardHeader className="flex-1 flex flex-col">
-                    <div className="flex items-center gap-3 text-sm text-muted-foreground mb-3 flex-wrap">
-                      <span className="px-3 py-1 bg-secondary text-secondary-foreground rounded-full">
-                        {post.category}
-                      </span>
-                      <div className="flex items-center gap-1">
-                        <Calendar className="w-4 h-4" />
-                        {new Date(post.date).toLocaleDateString('en-US', { 
-                          month: 'short', 
-                          day: 'numeric', 
-                          year: 'numeric' 
-                        })}
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <Clock className="w-4 h-4" />
-                        {post.readTime}
-                      </div>
-                    </div>
-                    <CardTitle className="text-xl mb-2 hover:text-primary transition-colors cursor-pointer">
-                      {post.title}
-                    </CardTitle>
-                    <CardDescription className="text-sm mb-4 flex-1">
-                      {post.excerpt}
-                    </CardDescription>
-                    <div className="flex items-center justify-between mt-auto">
-                      <span className="text-sm text-muted-foreground">By {post.author}</span>
-                      <Button variant="ghost" size="sm">
-                        Read More
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </Button>
-                    </div>
-                  </CardHeader>
-                </Card>
+                  <h3 className="text-lg sm:text-xl font-medium leading-snug mb-2 sm:mb-3 group-hover:text-white/80 transition-colors">
+                    {post.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-white/60 line-clamp-2 leading-relaxed mb-3 sm:mb-4">
+                    {post.excerpt}
+                  </p>
+                   <div className="flex items-center gap-2 text-[10px] sm:text-xs text-white/40">
+                    <span>{new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</span>
+                  </div>
+                </div>
               ))}
             </div>
           </div>
-        </section>
 
-        {/* Newsletter CTA */}
-        <section className="py-16 border-t border-border/40">
-          <div className="container mx-auto px-4 sm:px-8 max-w-4xl text-center">
-            <h2 className="text-3xl font-semibold mb-4">Stay Updated</h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              Get the latest tutorials, course updates, and success stories delivered to your inbox.
-            </p>
-            <Button variant="cta" size="lg" asChild>
-              <a href="https://maven.com/productlearnio/aiproductdesignmasterycohort" target="_blank" rel="noopener noreferrer">
-                Join the Community
-              </a>
-            </Button>
+          {/* List View Section */}
+          {/* Hidden since we only have 3 posts total now (1 featured + 2 secondary)
+          <div className="border-t border-white/10 pt-24">
+             <div className="flex items-center justify-between mb-16">
+              <h2 className="text-2xl font-medium">All articles</h2>
+              <Button variant="ghost" className="text-white/60 hover:text-white hover:bg-white/5">
+                View archive <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+               {blogPosts.slice(3).map((post) => (
+                <article key={post.id} className="group cursor-pointer flex flex-col h-full" onClick={() => window.location.href = `/blog/${post.slug}`}>
+                  <div className="aspect-[3/2] bg-white/5 mb-6 overflow-hidden rounded-sm">
+                     <img 
+                      src={post.image} 
+                      alt={post.title}
+                      className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-[1.01] transition-all duration-500"
+                    />
+                  </div>
+                  
+                  <div className="flex-1 flex flex-col">
+                    <div className="flex items-center justify-between text-xs text-white/40 mb-3">
+                       <span className="font-medium text-white/60">{new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+                    </div>
+
+                    <h3 className="text-lg font-medium leading-snug mb-3 group-hover:text-white/80 transition-colors">
+                      {post.title}
+                    </h3>
+                    
+                    <p className="text-sm text-white/60 leading-relaxed line-clamp-3">
+                      {post.excerpt}
+                    </p>
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
-        </section>
+          */}
+        </main>
+
+        {/* Minimal Footer CTA - Hidden for now */}
+        {/* <section className="py-32 border-t border-white/10">
+          <div className="container mx-auto px-6 text-center">
+             <h2 className="text-4xl md:text-5xl font-medium mb-8 tracking-tight">
+              Ready to start building?
+            </h2>
+            <div className="flex items-center justify-center gap-6">
+              <Button size="lg" className="h-12 px-8 rounded-full bg-white text-black hover:bg-white/90 font-medium">
+                Get started
+              </Button>
+               <Button size="lg" variant="ghost" className="h-12 px-8 rounded-full text-white hover:bg-white/10 font-medium">
+                Read documentation
+              </Button>
+            </div>
+          </div>
+        </section> */}
       </div>
     </>
   );

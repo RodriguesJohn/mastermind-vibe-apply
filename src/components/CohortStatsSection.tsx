@@ -7,7 +7,7 @@ import { SparklesIcon } from "@/components/SparklesIcon";
 
 const stats = [
   {
-    number: "6+",
+    number: "11",
     title: "Completed Design Projects",
     subcontent: "Real projects built by cohort members showcasing AI design skills",
     icon: "CircleCheckBig",
@@ -25,7 +25,7 @@ const stats = [
     icon: "UsersRound",
   },
   {
-    number: "5/5",
+    number: "4.7",
     title: "Cohort Rating on Maven",
     subcontent: "Perfect rating from participants who completed the program",
     icon: "Star",

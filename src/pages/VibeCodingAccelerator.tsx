@@ -135,13 +135,13 @@ const VibeCodingAccelerator = () => {
         <meta name="description" content="Master vibe coding and design engineering. Learn to ship AI-powered products, build a standout portfolio, and command top-tier roles." />
       </Helmet>
 
-      <div className="bg-black text-white">
+      <div className="bg-[#0E0E10] text-white selection:bg-white/20">
         <Navigation />
         <BlackFridayStickyBar />
         
         <main className="pb-20">
           {/* Hero */}
-          <section className="relative overflow-hidden border-b border-white/10 bg-black py-20 sm:py-32 md:py-40 lg:py-48">
+          <section className="relative overflow-hidden border-b border-white/5 bg-[#0E0E10] py-20 sm:py-32 md:py-40 lg:py-48">
             {/* Shader background */}
             <DotScreenShader />
 
@@ -189,13 +189,13 @@ const VibeCodingAccelerator = () => {
                   height: 'auto'
                 }} />
                             </div>
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.2] relative pt-8 sm:pt-0">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium tracking-tight leading-[1.1] relative pt-8 sm:pt-0">
                   Master Vibe Coding<br />With Cursor in 14 Days
                   </h1>
-                <p className="text-sm sm:text-base md:text-lg text-white/70 mx-auto max-w-2xl px-2 leading-relaxed">
+                <p className="text-base sm:text-lg md:text-xl text-white/60 mx-auto max-w-2xl px-2 leading-relaxed font-medium">
                   Beginner-friendly vibe coding with Cursor. Build 2 apps in 14 days.
                   <br />
-                  <span className="text-white/60">With our proven curriculum.</span>
+                  <span className="text-white/40">With our proven curriculum.</span>
                 </p>
                 <div className="flex flex-col gap-3 sm:flex-row justify-center max-w-md mx-auto px-4 sm:px-0">
                   <Button variant="cta" size="lg" className="w-full sm:w-auto sm:min-w-[200px]" asChild>
@@ -204,7 +204,7 @@ const VibeCodingAccelerator = () => {
                       <ArrowRight className="h-5 w-5" />
                       </a>
                     </Button>
-                  <Button variant="outline" size="lg" className="bg-white text-gray-600 border-white hover:text-black hover:shadow-lg hover:scale-105 transition-all duration-300 w-full sm:w-auto sm:min-w-[200px]" asChild>
+                  <Button variant="outline" size="lg" className="bg-white text-gray-600 border-white hover:bg-white hover:text-black hover:shadow-lg hover:scale-105 transition-all duration-300 w-full sm:w-auto sm:min-w-[200px]" asChild>
                     <a href="https://ai-design-academy-s-school.teachable.com/l/products?sortKey=name&sortDirection=asc&page=1" target="_blank" rel="noopener noreferrer">
                       Log In
                       <ArrowRight className="h-5 w-5" />
@@ -225,12 +225,12 @@ const VibeCodingAccelerator = () => {
           <CohortTestimonialsSection />
 
           {/* Meet your instructor */}
-          <section className="relative border-b border-white/10 bg-black py-12 sm:py-16 md:py-20 overflow-hidden">
+          <section className="relative border-b border-white/5 bg-[#0E0E10] py-12 sm:py-16 md:py-20 overflow-hidden">
             {/* Colorful shader effects */}
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(147,51,234,0.3)_0%,_rgba(0,0,0,0)_50%)] pointer-events-none" style={{
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(147,51,234,0.15)_0%,_rgba(0,0,0,0)_50%)] pointer-events-none" style={{
             animation: "glowMove 8s ease-in-out infinite"
           }} aria-hidden="true" />
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(34,197,94,0.2)_0%,_rgba(0,0,0,0)_70%)] pointer-events-none" style={{
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(34,197,94,0.1)_0%,_rgba(0,0,0,0)_70%)] pointer-events-none" style={{
             animation: "glowPulse 6s ease-in-out infinite"
           }} aria-hidden="true" />
             <div className="relative z-10 max-w-5xl sm:px-6 lg:px-10 mx-auto px-[24px]">
@@ -238,24 +238,31 @@ const VibeCodingAccelerator = () => {
                 <div className="grid gap-6 sm:gap-8 md:grid-cols-[300px_1fr] md:items-start">
                   {/* Instructor Image */}
                   <div>
-                    <div className="relative w-full mx-auto max-w-[300px] aspect-square rounded-2xl border border-white/10 overflow-hidden bg-black/50">
+                    <div className="relative w-full mx-auto max-w-[300px] aspect-square rounded-xl border border-white/5 overflow-hidden bg-white/5">
                       <img src={JohnImage2} alt="John Rodrigues" className="w-full h-full object-cover object-top" />
                     </div>
                   </div>
-                  <div className="space-y-3 sm:space-y-4">
-                    <h3 className="text-xl sm:text-2xl font-semibold text-white md:text-left text-left">John Rodrigues</h3>
-                    <div className="space-y-3 sm:space-y-4 text-white/70">
-                    <p className="text-base sm:text-lg">
-                      Senior Product Designer, AI strategist, and author of <em>The AI Design Playbook</em>, trusted by 1,500+ industry leaders. Founder of AI Design Academy.
-                    </p>
-                    <p>
-                      With over a decade of experience, John holds a Master's in Interaction Design and an AI certification from Stanford. He's recognized as one of the Top 10 mentors on ADPList and has built a community of over 10,000 followers on LinkedIn.
-                    </p>
+                  <div className="space-y-6">
+                    <div>
+                      <h3 className="text-3xl sm:text-4xl md:text-5xl font-medium text-white tracking-tight mb-2">John Rodrigues</h3>
+                      <p className="text-lg text-white/60 font-medium leading-relaxed">
+                        Senior Product Designer & AI Strategist
+                      </p>
+                    </div>
+                    
+                    <div className="space-y-4 text-white/60 text-base leading-relaxed">
+                      <p>
+                        Author of <span className="text-white">The AI Design Playbook</span>, trusted by 1,500+ industry leaders. Founder of AI Design Academy.
+                      </p>
+                      <p>
+                        With over a decade of experience, John holds a Master's in Interaction Design and an AI certification from Stanford. He's recognized as one of the Top 10 mentors on ADPList and has built a community of over 10,000 followers on LinkedIn.
+                      </p>
+                    </div>
                     
                     {/* Trusted By Section */}
-                    <div className="pt-4">
-                      <p className="text-xs sm:text-sm text-white/60 mb-3 sm:mb-4 sm:text-left text-left">
-                        <em>The AI Design Playbook</em> trusted by
+                    <div className="pt-6 border-t border-white/5">
+                      <p className="text-sm font-medium text-white/40 mb-4 uppercase tracking-wider">
+                        Trusted by designers at
                       </p>
                       
                       {/* Mobile: Scrolling ticker */}
@@ -291,46 +298,37 @@ const VibeCodingAccelerator = () => {
                       </div>
                       
                       {/* Desktop: Static layout */}
-                      <div className="hidden sm:flex items-center justify-start gap-6">
-                        <img src={AppleLogo} alt="Apple" className="h-7 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity" />
-                        <img src={GoogleLogo} alt="Google" className="h-7 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity" />
-                        <img src={MetaLogo} alt="Meta" className="h-7 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity" />
-                        <img src={JPMorganLogo} alt="JPMorgan Chase" className="h-7 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity" />
-                        <img src={IntercomLogo} alt="Intercom" className="h-7 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity" />
-                        <img src={HubspotLogo} alt="HubSpot" className="h-7 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity" />
+                      <div className="hidden sm:flex items-center justify-start gap-8 opacity-60 hover:opacity-100 transition-opacity duration-300">
+                        <img src={AppleLogo} alt="Apple" className="h-6 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
+                        <img src={GoogleLogo} alt="Google" className="h-6 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
+                        <img src={MetaLogo} alt="Meta" className="h-5 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
+                        <img src={JPMorganLogo} alt="JPMorgan Chase" className="h-5 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
+                        <img src={IntercomLogo} alt="Intercom" className="h-6 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
+                        <img src={HubspotLogo} alt="HubSpot" className="h-6 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
                       </div>
-                    </div>
                     </div>
                   </div>
                 </div>
               </div>
               
               {/* Recent Accomplishment Section - Moved to bottom */}
-              <div className="mt-12 sm:mt-16 md:mt-20 bg-white/5 rounded-xl p-4 sm:p-6">
-                <h4 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4 flex items-center gap-2">
-                  <Award className="h-5 w-5 text-primary" />
-                  Recent Accomplishment
-                </h4>
-                <p className="text-sm sm:text-base text-white/90 mb-4 sm:mb-6">
-                  <strong className="text-white">🏆 Hackathon Winner</strong> Built UX Agent, a web platform that analyzes websites and gives feedback, in two days with Vibe coding at the hackathon hosted by <strong className="text-white">AGI</strong>, <strong className="text-white">OpenAI</strong>, and <strong className="text-white">Loveable</strong>.
-                </p>
-                {/* Logos */}
-                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6 flex-wrap">
-                  <span className="text-xs sm:text-sm text-white/60">Hosted by:</span>
-                  <div className="flex items-center gap-4 sm:gap-8">
-                    {/* AGI Logo */}
-                    <div className="flex items-center">
-                      <img src={AGILogo} alt="AGI" className="h-5 sm:h-8 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" />
-                    </div>
-                    
-                    {/* OpenAI Logo */}
-                    <div className="flex items-center">
-                      <img src={OpenAILogo} alt="OpenAI" className="h-8 sm:h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" />
-                    </div>
-                    
-                    {/* Loveable Logo */}
-                    <div className="flex items-center">
-                      <img src={LoveableLogoMain} alt="Loveable" className="h-8 sm:h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" />
+              <div className="mt-12 sm:mt-16 md:mt-20 bg-white/5 rounded-lg p-6 md:p-8 border border-white/5">
+                <div className="flex flex-col md:flex-row gap-8 items-start">
+                  <div className="flex-1">
+                    <h4 className="text-xl font-medium text-white mb-4 flex items-center gap-2 tracking-tight">
+                      <Award className="h-5 w-5 text-white/80" />
+                      Recent Accomplishment
+                    </h4>
+                    <p className="text-base text-white/60 mb-6 leading-relaxed">
+                      <span className="text-white font-medium">🏆 Hackathon Winner</span> — Built <span className="text-white">UX Agent</span>, a web platform that analyzes websites and gives feedback, in just two days with Vibe coding.
+                    </p>
+                    <div className="flex items-center gap-2 text-sm text-white/40">
+                      <span>Hosted by</span>
+                      <div className="flex items-center gap-4 ml-2">
+                        <img src={AGILogo} alt="AGI" className="h-4 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity" />
+                        <img src={OpenAILogo} alt="OpenAI" className="h-5 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity" />
+                        <img src={LoveableLogoMain} alt="Loveable" className="h-5 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity" />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -345,23 +343,23 @@ const VibeCodingAccelerator = () => {
           <CoursePricingSection />
 
           {/* FAQ */}
-          <section className="relative border-b border-white/10 bg-black py-12 sm:py-16 md:py-20 overflow-hidden">
+          <section className="relative border-b border-white/5 bg-[#0E0E10] py-12 sm:py-16 md:py-20 overflow-hidden">
             {/* Colorful shader effects */}
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(168,85,247,0.25)_0%,_rgba(0,0,0,0)_50%)] pointer-events-none" style={{
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(168,85,247,0.15)_0%,_rgba(0,0,0,0)_50%)] pointer-events-none" style={{
             animation: "glowMove 8s ease-in-out infinite"
           }} aria-hidden="true" />
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(59,130,246,0.2)_0%,_rgba(0,0,0,0)_70%)] pointer-events-none" style={{
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(59,130,246,0.1)_0%,_rgba(0,0,0,0)_70%)] pointer-events-none" style={{
             animation: "glowPulse 6s ease-in-out infinite"
           }} aria-hidden="true" />
             <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-10">
-              <h2 className="text-2xl sm:text-3xl font-semibold text-center">Frequently Asked Questions</h2>
+              <h2 className="text-3xl sm:text-4xl font-medium text-center tracking-tight mb-10">Frequently Asked Questions</h2>
               <div className="mt-6 sm:mt-10">
                 <Accordion type="single" collapsible className="w-full space-y-3 sm:space-y-4">
-                  {faqs.map((faq, index) => <AccordionItem key={faq.question} value={`item-${index}`} className="border-white/10 bg-white/5 rounded-lg px-4 sm:px-6">
-                      <AccordionTrigger className="text-lg sm:text-xl font-medium text-white hover:no-underline text-left">
+                  {faqs.map((faq, index) => <AccordionItem key={faq.question} value={`item-${index}`} className="border-white/5 bg-white/5 rounded-lg px-4 sm:px-6">
+                      <AccordionTrigger className="text-lg sm:text-xl font-medium text-white hover:no-underline text-left py-6">
                         {faq.question}
                       </AccordionTrigger>
-                      <AccordionContent className="text-sm sm:text-base font-medium text-white/70 pt-2 pb-3 sm:pb-4">
+                      <AccordionContent className="text-base font-medium text-white/60 pt-0 pb-6 leading-relaxed">
                         {faq.answer}
                       </AccordionContent>
                     </AccordionItem>)}
@@ -371,14 +369,14 @@ const VibeCodingAccelerator = () => {
           </section>
 
           {/* Final CTA Section */}
-          <section className="relative bg-black py-16 sm:py-20 md:py-24 overflow-hidden">
+          <section className="relative bg-[#0E0E10] py-16 sm:py-20 md:py-24 overflow-hidden border-t border-white/5">
             {/* Shader effects */}
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(59,130,246,0.2)_0%,_rgba(0,0,0,0)_70%)] pointer-events-none" style={{
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(59,130,246,0.15)_0%,_rgba(0,0,0,0)_70%)] pointer-events-none" style={{
             animation: "glowPulse 6s ease-in-out infinite"
           }} aria-hidden="true" />
             <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-10 text-center">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-3 sm:mb-4">Ready to Master Vibe Coding?</h2>
-              <p className="text-base sm:text-lg md:text-xl text-white/70 mb-6 sm:mb-8 max-w-2xl mx-auto px-2">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium mb-4 tracking-tight">Ready to Master Vibe Coding?</h2>
+              <p className="text-lg md:text-xl text-white/60 mb-8 max-w-2xl mx-auto px-2 font-medium">
                 Join the Black Friday sale and save $200. Limited time offer!
               </p>
               <div className="flex flex-col gap-3 sm:flex-row justify-center">
