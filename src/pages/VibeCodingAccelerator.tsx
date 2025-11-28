@@ -273,7 +273,7 @@ const VibeCodingAccelerator = () => {
                 <div className="grid gap-6 sm:gap-8 md:grid-cols-[300px_1fr] md:items-start">
                   {/* Instructor Image */}
                   <div>
-                    <div className="relative w-full mx-auto max-w-[300px] aspect-square rounded-xl border border-white/5 overflow-hidden bg-white/5">
+                    <div className="relative w-full mx-auto max-w-[400px] sm:max-w-[300px] aspect-square rounded-xl border border-white/5 overflow-hidden bg-white/5">
                       <img src={JohnImage2} alt="John Rodrigues" className="w-full h-full object-cover object-top" />
                     </div>
                   </div>
