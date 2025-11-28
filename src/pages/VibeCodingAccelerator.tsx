@@ -190,7 +190,7 @@ const VibeCodingAccelerator = () => {
                 }} />
                             </div>
                 <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight leading-[1.3] relative pt-8 sm:pt-0">
-                  Master Vibe Coding &<br />Prototype 2 AI Apps with Cursor in 14 Days
+                  Master Vibe Coding &<br />Prototype 2 AI Apps with<br />Cursor in 14 Days
                   </h1>
                 <p className="text-sm sm:text-base md:text-lg text-white/60 mx-auto max-w-2xl px-2 leading-relaxed font-medium">
                   Beginner-Friendly Vibe Coding With Cursor. Go from beginner to vibe coding expert.
