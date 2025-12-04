@@ -226,12 +226,12 @@ const VibeCodingAccelerator = () => {
                   height: 'auto'
                 }} />
                             </div>
-                <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight leading-[1.3] relative pt-8 sm:pt-0 blur-entrance">
-                  Master Vibe Coding &<br />Prototype 2 AI Apps with<br />Cursor in 14 Days
+                <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight leading-[1.3] relative pt-8 sm:pt-0 blur-entrance">Master Vibe Coding &
+Prototype AI Apps with
+Cursor in 14 Days<br />Prototype 2 AI Apps with<br />Cursor in 14 Days
                   </h1>
-                <p className="text-sm sm:text-base md:text-lg text-white/60 mx-auto max-w-2xl px-2 leading-relaxed font-medium blur-entrance-subtle-delayed">
-                  Beginner-Friendly Vibe Coding With Cursor. Go from beginner to vibe coding expert.
-                </p>
+                <p className="text-sm sm:text-base md:text-lg text-white/60 mx-auto max-w-2xl px-2 leading-relaxed font-medium blur-entrance-subtle-delayed">Beginner-Friendly Vibe Coding With Cursor. Go from beginner to 
+vibe coding expert.</p>
                 <div className="flex flex-col gap-3 sm:flex-row justify-center max-w-md mx-auto px-4 sm:px-0">
                   <Button variant="cta" size="lg" className="w-full sm:w-auto sm:min-w-[200px] blur-entrance-subtle" asChild>
                     <a href="https://ai-design-academy-s-school.teachable.com/purchase?product_id=6550289" target="_blank" rel="noopener noreferrer">
@@ -296,9 +296,7 @@ const VibeCodingAccelerator = () => {
                     
                     {/* Trusted By Section */}
                     <div className="pt-6 border-t border-white/5">
-                      <p className="text-sm font-medium text-white/40 mb-4 uppercase tracking-wider">
-                        Trusted by designers at
-                      </p>
+                      <p className="text-sm font-medium text-white/40 mb-4 uppercase tracking-wider">PLAYBOOK TRUSTED BY DESIGNERS AT</p>
                       
                       {/* Mobile: Scrolling ticker */}
                       <div className="sm:hidden overflow-hidden relative">
@@ -354,8 +352,7 @@ const VibeCodingAccelerator = () => {
                       <Award className="h-5 w-5 text-white/80" />
                       Recent Accomplishment
                     </h4>
-                    <p className="text-base text-white/60 mb-6 leading-relaxed">
-                      <span className="text-white font-medium">Hackathon Winner</span> Built <span className="text-white">UX Agent</span>, a web platform that analyzes websites and gives feedback, in just two days with Vibe coding.
+                    <p className="text-base text-white/60 mb-6 leading-relaxed">Hackathon Winner Built UX Agent, a AI app that analyzes websites and gives feedback & UX audits, with AI agents fixes the websites to constantly self improve websites.<span className="text-white font-medium">Hackathon Winner</span> Built <span className="text-white">UX Agent</span>, a web platform that analyzes websites and gives feedback, in just two days with Vibe coding.
                     </p>
                     <div className="flex items-center gap-2 text-sm text-white/40">
                       <span>Hosted by</span>
