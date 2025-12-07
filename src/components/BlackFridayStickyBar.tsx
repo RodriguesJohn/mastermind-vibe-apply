@@ -58,7 +58,7 @@ export const BlackFridayStickyBar = () => {
                 className="bg-white text-primary hover:bg-white/90 font-semibold text-xs sm:text-sm px-3 sm:px-4"
                 asChild
               >
-                <a href="https://ai-design-academy-s-school.teachable.com/purchase?product_id=6550289" target="_blank" rel="noopener noreferrer">
+                <a href="https://ai-design-academy-s-school.teachable.com/purchase?product_id=6563369" target="_blank" rel="noopener noreferrer">
                   <span className="hidden xs:inline">Enroll Now</span>
                   <span className="xs:hidden">Enroll</span>
                   <ArrowRight className="h-3 w-3 sm:h-4 sm:w-4 ml-1" />

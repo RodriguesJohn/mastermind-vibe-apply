@@ -44,19 +44,10 @@ export const CoursePricingSection = () => {
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
               Course Pricing
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
-              Limited time Black Friday offer
-            </p>
           </div>
           
           <div className="max-w-2xl mx-auto">
             <Card className="border-white/5 shadow-2xl relative overflow-hidden bg-black">
-              <div className="flex justify-start pt-4 sm:pt-6 px-4 sm:px-6">
-                <div className="bg-destructive text-destructive-foreground px-3 sm:px-4 py-1 rounded-full text-xs sm:text-sm font-semibold">
-                Black Friday Sale
-                </div>
-              </div>
-              
               <CardHeader className="text-left pb-6 sm:pb-8 pt-4 sm:pt-6 px-4 sm:px-6">
                 <CardTitle className="text-2xl sm:text-3xl md:text-4xl font-medium tracking-tight mb-3 sm:mb-4">
                   Master Vibe Coding with Cursor today
@@ -67,15 +58,12 @@ export const CoursePricingSection = () => {
                 <div className="text-left space-y-2">
                   <div className="flex items-center justify-start gap-3 sm:gap-4">
                     <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white">
-                      $299
-                    </span>
-                    <span className="text-xl sm:text-2xl md:text-3xl text-muted-foreground line-through">
                       $499
                     </span>
+                    <span className="text-sm uppercase tracking-wider text-muted-foreground">
+                      USD
+                    </span>
                   </div>
-                  <p className="text-xs sm:text-sm text-muted-foreground">
-                    Original price: $499 • Save $200
-                  </p>
                 </div>
 
                 <div className="space-y-3 sm:space-y-4 pt-4 sm:pt-6">
@@ -89,8 +77,8 @@ export const CoursePricingSection = () => {
                 </div>
 
                 <Button size="xl" className="w-full mt-6 sm:mt-8 text-base sm:text-lg" variant="cta" asChild>
-                  <a href="https://ai-design-academy-s-school.teachable.com/purchase?product_id=6550289" target="_blank" rel="noopener noreferrer">
-                  Enroll Now - $299
+                  <a href="https://ai-design-academy-s-school.teachable.com/purchase?product_id=6563369" target="_blank" rel="noopener noreferrer">
+                  Enroll Now - $499
                   </a>
                 </Button>
                 
@@ -104,10 +92,6 @@ export const CoursePricingSection = () => {
                     </p>
                   </div>
                 </div>
-                
-                <p className="text-left text-xs sm:text-sm text-muted-foreground">
-                  Black Friday pricing ends soon!
-                </p>
               </CardContent>
             </Card>
           </div>

@@ -10,7 +10,6 @@ import { CohortTestimonialsSection } from "@/components/CohortTestimonialsSectio
 import { CohortModulesSection } from "@/components/CohortModulesSection";
 import { CoursePricingSection } from "@/components/CoursePricingSection";
 import { VideoSlider } from "@/components/VideoSlider";
-import { BlackFridayStickyBar } from "@/components/BlackFridayStickyBar";
 import JohnImage from "@/assets/John.png";
 import JohnImage2 from "@/assets/John-4.jpg";
 import JPMorganLogo from "@/assets/Chase.png";
@@ -174,7 +173,6 @@ const VibeCodingAccelerator = () => {
 
       <div className="bg-[#0E0E10] text-white selection:bg-white/20">
         <Navigation />
-        <BlackFridayStickyBar />
         
         <main className="pb-20">
           {/* Hero */}
@@ -234,7 +232,7 @@ const VibeCodingAccelerator = () => {
                 </p>
                 <div className="flex flex-col gap-3 sm:flex-row justify-center max-w-md mx-auto px-4 sm:px-0">
                   <Button variant="cta" size="lg" className="w-full sm:w-auto sm:min-w-[200px] blur-entrance-subtle" asChild>
-                    <a href="https://ai-design-academy-s-school.teachable.com/purchase?product_id=6550289" target="_blank" rel="noopener noreferrer">
+                    <a href="https://ai-design-academy-s-school.teachable.com/purchase?product_id=6563369" target="_blank" rel="noopener noreferrer">
                       Enroll Today
                       <ArrowRight className="h-5 w-5" />
                       </a>
@@ -400,6 +398,34 @@ const VibeCodingAccelerator = () => {
             </div>
           </section>
 
+          {/* Resources Section */}
+          <section className="relative border-b border-white/5 bg-[#0E0E10] py-12 sm:py-16 md:py-20 overflow-hidden">
+            {/* Colorful shader effects */}
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(168,85,247,0.15)_0%,_rgba(0,0,0,0)_50%)] pointer-events-none" style={{
+            animation: "glowMove 8s ease-in-out infinite"
+          }} aria-hidden="true" />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(59,130,246,0.1)_0%,_rgba(0,0,0,0)_70%)] pointer-events-none" style={{
+            animation: "glowPulse 6s ease-in-out infinite"
+          }} aria-hidden="true" />
+            <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-10">
+              <h2 className="text-3xl sm:text-4xl font-medium text-center tracking-tight mb-10">Resources</h2>
+              <div className="mt-6 sm:mt-10">
+                <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5">
+                  <div className="aspect-video w-full">
+                    <iframe 
+                      src="https://www.youtube.com/embed/5FpherfBd9c?rel=0&modestbranding=1" 
+                      title="Vibe Coding Resources" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                      allowFullScreen 
+                      loading="lazy" 
+                      className="h-full w-full" 
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Final CTA Section */}
           <section className="relative bg-[#0E0E10] py-16 sm:py-20 md:py-24 overflow-hidden border-t border-white/5">
             {/* Shader effects */}
@@ -409,12 +435,12 @@ const VibeCodingAccelerator = () => {
             <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-10 text-center">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium mb-4 tracking-tight">Ready to Master Vibe Coding?</h2>
               <p className="text-lg md:text-xl text-white/60 mb-8 max-w-2xl mx-auto px-2 font-medium">
-                Join the Black Friday sale and save $200. Limited time offer!
+                Start your journey to becoming a vibe coding expert today.
               </p>
               <div className="flex flex-col gap-3 sm:flex-row justify-center">
                 <Button variant="cta" size="lg" className="w-full sm:w-auto sm:min-w-[200px]" asChild>
-                  <a href="https://ai-design-academy-s-school.teachable.com/purchase?product_id=6550289" target="_blank" rel="noopener noreferrer">
-                    Enroll Today - $299
+                  <a href="https://ai-design-academy-s-school.teachable.com/purchase?product_id=6563369" target="_blank" rel="noopener noreferrer">
+                    Enroll Today - $499
                     <ArrowRight className="h-5 w-5" />
                   </a>
                 </Button>
