@@ -132,7 +132,7 @@ export const AIHeaderSection = () => {
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium mb-4 tracking-tight leading-relaxed text-center">
-              AI Mastery Cohort
+              AI Mastery Live Cohort
               <span className="block">For Designers & Product Leaders</span>
             </h1>
 
