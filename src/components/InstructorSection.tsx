@@ -1,87 +1,121 @@
-import { Card } from "@/components/ui/card";
-import { Linkedin } from "lucide-react";
-import instructorImage from "@/assets/John-4.jpg";
-import appleLogo from "@/assets/Apple.png";
-import googleLogo from "@/assets/Google.svg.png";
-import citiLogo from "@/assets/Citi.svg.png";
-import chaseLogo from "@/assets/Chase.png";
+import { Award } from "lucide-react";
+import JohnImage2 from "@/assets/John-4.jpg";
+import JPMorganLogo from "@/assets/Chase.png";
+import IntercomLogo from "@/assets/intercom-1-logo-png-transparent.png";
+import HubspotLogo from "@/assets/Hubspot.svg.png";
+import MetaLogo from "@/assets/meta.png";
+import GoogleLogo from "@/assets/Google.svg.png";
+import AppleLogo from "@/assets/Apple.png";
+import AGILogo from "@/assets/AGI.png";
+const OpenAILogo = "/openai-logo.png";
+import LoveableLogoMain from "@/assets/Loveable.png";
 
 export const InstructorSection = () => {
   return (
-    <section className="py-24 md:py-32 bg-background relative">
-      <div className="px-4 md:px-10 lg:px-[120px]">
-        <div className="max-w-[1200px] mx-auto">
-          <h2 
-            className="font-normal text-center mb-16 tracking-tight"
-            style={{ fontSize: '32px', lineHeight: '1.25' }}
-          >
-            Know Your Instructor
-          </h2>
-          
-          <Card className="p-8 md:p-12 bg-card/50 border-border/40">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+    <section className="relative border-b border-white/5 bg-[#0E0E10] py-12 sm:py-16 md:py-20 overflow-hidden">
+      {/* Colorful shader effects */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(147,51,234,0.15)_0%,_rgba(0,0,0,0)_50%)] pointer-events-none" style={{
+        animation: "glowMove 8s ease-in-out infinite"
+      }} aria-hidden="true" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(34,197,94,0.1)_0%,_rgba(0,0,0,0)_70%)] pointer-events-none" style={{
+        animation: "glowPulse 6s ease-in-out infinite"
+      }} aria-hidden="true" />
+      <div className="relative z-10 max-w-5xl sm:px-6 lg:px-10 mx-auto px-[24px]">
+        <div className="max-w-4xl mx-auto">
+          <div className="grid gap-6 sm:gap-8 md:grid-cols-[300px_1fr] md:items-start">
+            {/* Instructor Image */}
+            <div>
+              <div className="relative w-full mx-auto max-w-[400px] sm:max-w-[300px] aspect-square rounded-xl border border-white/5 overflow-hidden bg-white/5">
+                <img src={JohnImage2} alt="John Rodrigues" className="w-full h-full object-cover object-top" />
+              </div>
+            </div>
             <div className="space-y-6">
-              <h3 
-                className="font-semibold tracking-tight"
-                style={{ fontSize: '25.6px', lineHeight: '1.3' }}
-              >
-                Meet John Rodrigues
-              </h3>
-
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
-                <p>
-                  Sr. Product Designer at JPMorgan | Founder of AI Design Academy. John Rodrigues is a Senior Product Designer, AI strategist, and author of The AI Design Playbook, a resource trusted by over 1,500 industry leaders.
-                </p>
-
-                <p>
-                  With over a decade of experience in product design, he leads AI design initiatives at JPMorgan Chase and holds a Master's degree in Interaction Design, a Bachelor's in Engineering, and an AI certification from Stanford University.
+              <div>
+                <h3 className="text-3xl sm:text-4xl md:text-5xl font-medium text-white tracking-tight mb-2">John Rodrigues</h3>
+                <p className="text-lg text-white/60 font-medium leading-relaxed">
+                  Sr. Product Design & Design Engineer
                 </p>
               </div>
-
-              <div>
-                <p className="text-sm text-muted-foreground mb-4">
-                  Publication trusted by companies
+              
+              <div className="space-y-4 text-white/60 text-base leading-relaxed">
+                <p>
+                  Author of <span className="text-white">The AI Design Playbook</span>, trusted by 1,500+ industry leaders. Founder of AI Design Academy.
                 </p>
-                <div className="flex items-center gap-8 flex-wrap opacity-80">
-                  <img className="h-6 w-fit opacity-80" src={appleLogo} alt="Apple" height="24" width="auto" />
-                  <img className="h-6 w-fit opacity-80" src={googleLogo} alt="Google" height="24" width="auto" />
-                  <img className="h-6 w-fit opacity-80" src={citiLogo} alt="Citi" height="24" width="auto" />
-                  <img className="h-6 w-fit opacity-80" src={chaseLogo} alt="Chase" height="24" width="auto" />
+                <p>
+                  With over a decade of experience, John holds a Master's in Interaction Design and an AI certification from Stanford. He's recognized as one of the Top 10 mentors on ADPList and has built a community of over 10,000 followers on LinkedIn.
+                </p>
+              </div>
+              
+              {/* Trusted By Section */}
+              <div className="pt-6 border-t border-white/5">
+                <p className="text-sm font-medium text-white/40 mb-4 uppercase tracking-wider">PLAYBOOK TRUSTED BY DESIGNERS AT</p>
+                
+                {/* Mobile: Scrolling ticker */}
+                <div className="sm:hidden overflow-hidden relative">
+                  <style>{`
+                    @keyframes scroll-logos {
+                      0% { transform: translateX(0); }
+                      100% { transform: translateX(-50%); }
+                    }
+                    .logo-ticker {
+                      animation: scroll-logos 10s linear infinite;
+                    }
+                    .logo-ticker:hover {
+                      animation-play-state: paused;
+                    }
+                  `}</style>
+                  <div className="logo-ticker flex items-center gap-8">
+                    {/* First set of logos */}
+                    <img src={AppleLogo} alt="Apple" className="h-6 w-auto object-contain opacity-70 flex-shrink-0" />
+                    <img src={GoogleLogo} alt="Google" className="h-6 w-auto object-contain opacity-70 flex-shrink-0" />
+                    <img src={MetaLogo} alt="Meta" className="h-6 w-auto object-contain opacity-70 flex-shrink-0" />
+                    <img src={JPMorganLogo} alt="JPMorgan Chase" className="h-6 w-auto object-contain opacity-70 flex-shrink-0" />
+                    <img src={IntercomLogo} alt="Intercom" className="h-6 w-auto object-contain opacity-70 flex-shrink-0" />
+                    <img src={HubspotLogo} alt="HubSpot" className="h-6 w-auto object-contain opacity-70 flex-shrink-0" />
+                    {/* Duplicate set for seamless loop */}
+                    <img src={AppleLogo} alt="Apple" className="h-6 w-auto object-contain opacity-70 flex-shrink-0" />
+                    <img src={GoogleLogo} alt="Google" className="h-6 w-auto object-contain opacity-70 flex-shrink-0" />
+                    <img src={MetaLogo} alt="Meta" className="h-6 w-auto object-contain opacity-70 flex-shrink-0" />
+                    <img src={JPMorganLogo} alt="JPMorgan Chase" className="h-6 w-auto object-contain opacity-70 flex-shrink-0" />
+                    <img src={IntercomLogo} alt="Intercom" className="h-6 w-auto object-contain opacity-70 flex-shrink-0" />
+                    <img src={HubspotLogo} alt="HubSpot" className="h-6 w-auto object-contain opacity-70 flex-shrink-0" />
+                  </div>
+                </div>
+                
+                {/* Desktop: Static layout */}
+                <div className="hidden sm:flex items-center justify-start gap-8 opacity-60 hover:opacity-100 transition-opacity duration-300">
+                  <img src={AppleLogo} alt="Apple" className="h-6 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
+                  <img src={GoogleLogo} alt="Google" className="h-6 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
+                  <img src={MetaLogo} alt="Meta" className="h-5 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
+                  <img src={JPMorganLogo} alt="JPMorgan Chase" className="h-5 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
+                  <img src={IntercomLogo} alt="Intercom" className="h-6 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
+                  <img src={HubspotLogo} alt="HubSpot" className="h-6 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
                 </div>
               </div>
             </div>
-
-            <div className="flex items-center justify-center">
-              <div className="relative w-full max-w-md aspect-square rounded-2xl overflow-hidden">
-                <img 
-                  src={instructorImage} 
-                  alt="John Rodrigues - Senior Product Designer"
-                  className="w-full h-full object-cover"
-                />
+          </div>
+        </div>
+        
+        {/* Recent Accomplishment Section - Moved to bottom */}
+        <div className="mt-12 sm:mt-16 md:mt-20 bg-white/5 rounded-lg p-6 md:p-8 border border-white/5">
+          <div className="flex flex-col md:flex-row gap-8 items-start">
+            <div className="flex-1">
+              <h4 className="text-xl font-medium text-white mb-4 flex items-center gap-2 tracking-tight">
+                <Award className="h-5 w-5 text-white/80" />
+                Recent Accomplishment
+              </h4>
+              <p className="text-base text-white/60 mb-6 leading-relaxed">Hackathon Winner Built UX Agent, a AI app that analyzes websites and gives feedback & UX audits, with AI agents fixes the websites to constantly self improve websites.<span className="text-white font-medium">Hackathon Winner</span> Built <span className="text-white">UX Agent</span>, a web platform that analyzes websites and gives feedback, in just two days with Vibe coding.
+              </p>
+              <div className="flex items-center gap-2 text-sm text-white/40">
+                <span>Hosted by</span>
+                <div className="flex items-center gap-4 ml-2">
+                  <img src={AGILogo} alt="AGI" className="h-4 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity" />
+                  <img src={OpenAILogo} alt="OpenAI" className="h-5 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity" />
+                  <img src={LoveableLogoMain} alt="Loveable" className="h-5 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity" />
+                </div>
               </div>
-              </div>
-            </div>
-          
-          {/* Profile Bar with Gradient */}
-          <div className="mt-12 pt-8 border-t border-border/40 relative">
-            <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
-            <div className="flex items-center justify-start gap-6">
-              {/* LinkedIn Icon in Circle */}
-              <a 
-                href="https://www.linkedin.com/in/john-rodrigues4/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center flex-shrink-0 hover:bg-gray-300 transition-colors"
-                aria-label="LinkedIn Profile"
-              >
-                <Linkedin className="w-6 h-6 text-gray-900 fill-current" />
-              </a>
-              
-              {/* Connect on LinkedIn Text */}
-              <span className="text-muted-foreground text-sm">Connect on LinkedIn</span>
             </div>
           </div>
-          </Card>
         </div>
       </div>
     </section>

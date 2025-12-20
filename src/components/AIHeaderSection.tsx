@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { useState } from "react";
 import SphereImageGrid, { ImageData } from "./SphereImageGrid";
 import headerCircleImages from "@/assets/HeaderCircle";
 
@@ -29,7 +31,7 @@ const headerImages: ImageData[] = [
 ];
 
 export const AIHeaderSection = () => {
-  const stars = Array.from({ length: 5 });
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   return (
     <section className="relative py-16 md:py-24 overflow-hidden bg-black text-white border-b border-white/10 w-full z-0">
@@ -154,20 +156,28 @@ export const AIHeaderSection = () => {
                   <ArrowRight className="group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="border-white/20 text-white hover:bg-white/10"
-                asChild
-              >
-                <a 
-                  href="https://www.delphi.ai/john-rodrigues"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Chat with John.ai
-                </a>
-              </Button>
+              <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+                <DialogTrigger asChild>
+                  <Button 
+                    variant="outline" 
+                    size="lg"
+                    className="border-white/20 text-white hover:bg-white/10"
+                  >
+                    Chat with John.ai
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="max-w-4xl w-[95vw] h-[85vh] sm:h-[80vh] p-0 bg-black border-white/20 rounded-lg overflow-hidden">
+                  <div className="w-full h-full relative">
+                    <iframe
+                      src="https://www.delphi.ai/john-rodrigues"
+                      className="w-full h-full border-0 rounded-lg"
+                      title="Chat with John.ai"
+                      allow="clipboard-read; clipboard-write"
+                      loading="lazy"
+                    />
+                  </div>
+                </DialogContent>
+              </Dialog>
             </div>
           </div>
 
