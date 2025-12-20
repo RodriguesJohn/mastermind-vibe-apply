@@ -92,18 +92,28 @@ export const StaggerTestimonials: React.FC = () => {
   const [isPaused, setIsPaused] = useState(false);
   const [isManualScrolling, setIsManualScrolling] = useState(false);
   // Use all testimonials without duplication for visibility
-  const cardWidth = 320; // Mobile
+  const cardWidth = 280; // Mobile small
+  const cardWidthSm = 320; // Mobile large
   const cardWidthMd = 380; // Desktop
-  const gap = 24; // 6 * 4px (gap-6)
-  const scrollAmount = cardWidth + gap;
-  const scrollAmountMd = cardWidthMd + gap;
+  const gapMobile = 16; // 4 * 4px (gap-4) on mobile
+  const gapDesktop = 24; // 6 * 4px (gap-6) on desktop
+  const scrollAmount = cardWidth + gapMobile;
+  const scrollAmountSm = cardWidthSm + gapMobile;
+  const scrollAmountMd = cardWidthMd + gapDesktop;
 
   const scrollLeft = () => {
     if (scrollRef.current) {
       setIsManualScrolling(true);
       setIsPaused(true);
-      const isMobile = window.innerWidth < 768;
-      const amount = isMobile ? scrollAmount : scrollAmountMd;
+      const width = window.innerWidth;
+      let amount;
+      if (width < 640) {
+        amount = scrollAmount;
+      } else if (width < 768) {
+        amount = scrollAmountSm;
+      } else {
+        amount = scrollAmountMd;
+      }
       scrollRef.current.scrollBy({ left: -amount, behavior: 'smooth' });
       setTimeout(() => setIsManualScrolling(false), 1000);
     }
@@ -113,8 +123,15 @@ export const StaggerTestimonials: React.FC = () => {
     if (scrollRef.current) {
       setIsManualScrolling(true);
       setIsPaused(true);
-      const isMobile = window.innerWidth < 768;
-      const amount = isMobile ? scrollAmount : scrollAmountMd;
+      const width = window.innerWidth;
+      let amount;
+      if (width < 640) {
+        amount = scrollAmount;
+      } else if (width < 768) {
+        amount = scrollAmountSm;
+      } else {
+        amount = scrollAmountMd;
+      }
       scrollRef.current.scrollBy({ left: amount, behavior: 'smooth' });
       setTimeout(() => setIsManualScrolling(false), 1000);
     }
@@ -140,10 +157,10 @@ export const StaggerTestimonials: React.FC = () => {
 
   return (
     <div className="relative w-full">
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden -mx-4 sm:mx-0">
         <div
           ref={scrollRef}
-          className="flex gap-6 overflow-x-auto scrollbar-hide"
+          className="flex gap-4 sm:gap-6 overflow-x-auto scrollbar-hide px-4 sm:px-0"
           style={{
             scrollbarWidth: 'none',
             msOverflowStyle: 'none',
@@ -153,45 +170,45 @@ export const StaggerTestimonials: React.FC = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.tempId}
-              className="min-w-[320px] max-w-[320px] md:min-w-[380px] md:max-w-[380px] p-6 rounded-lg bg-card border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg flex flex-col flex-shrink-0"
+              className="min-w-[280px] max-w-[280px] sm:min-w-[320px] sm:max-w-[320px] md:min-w-[380px] md:max-w-[380px] p-4 sm:p-6 rounded-lg bg-card border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg flex flex-col flex-shrink-0"
             >
               {testimonial.imgSrc && (
                 <img
                   src={testimonial.imgSrc}
                   alt={`${testimonial.by.split(',')[0]}`}
-                  className="mb-4 h-16 w-16 rounded-full object-cover object-top flex-shrink-0"
+                  className="mb-3 sm:mb-4 h-12 w-12 sm:h-16 sm:w-16 rounded-full object-cover object-top flex-shrink-0"
                 />
               )}
-              <p className="text-base leading-relaxed text-foreground mb-4 flex-1">
+              <p className="text-sm sm:text-base leading-relaxed text-foreground mb-3 sm:mb-4 flex-1">
                 "{testimonial.testimonial}"
               </p>
-              <p className="text-sm text-muted-foreground italic mt-auto">
+              <p className="text-xs sm:text-sm text-muted-foreground italic mt-auto">
                 {testimonial.by}
               </p>
             </div>
           ))}
         </div>
       </div>
-      <div className="flex items-center justify-center gap-4 mt-6">
+      <div className="flex items-center justify-center gap-3 sm:gap-4 mt-4 sm:mt-6">
         <button
           onClick={scrollLeft}
           className={cn(
-            "flex h-10 w-10 items-center justify-center rounded-full border-2 border-border bg-background hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all",
+            "flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full border-2 border-border bg-background hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all",
             "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
           )}
           aria-label="Scroll left"
         >
-          <ChevronLeft className="h-5 w-5" />
+          <ChevronLeft className="h-4 w-4 sm:h-5 sm:w-5" />
         </button>
         <button
           onClick={scrollRight}
           className={cn(
-            "flex h-10 w-10 items-center justify-center rounded-full border-2 border-border bg-background hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all",
+            "flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full border-2 border-border bg-background hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all",
             "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
           )}
           aria-label="Scroll right"
         >
-          <ChevronRight className="h-5 w-5" />
+          <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5" />
         </button>
       </div>
       <style>{`

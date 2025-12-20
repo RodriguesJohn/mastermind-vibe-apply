@@ -162,36 +162,36 @@ export const CohortTestimonialsSection = () => {
   const [showAll, setShowAll] = useState(false);
   
   return (
-    <section className="py-24 md:py-32 bg-background">
-      <div className="px-4 md:px-10 lg:px-[120px]">
+    <section className="py-12 sm:py-16 md:py-24 lg:py-32 bg-background">
+      <div className="px-4 sm:px-6 md:px-10 lg:px-[120px]">
         <div className="max-w-[1200px] mx-auto">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-normal">What Cohort Members Are Saying</h2>
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 sm:gap-0 mb-6 sm:mb-8">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal">What Cohort Members Are Saying</h2>
             <button
               onClick={() => setShowAll(!showAll)}
-              className="text-sm font-medium text-white hover:text-white/80 transition-colors bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg border border-white/20"
+              className="text-sm font-medium text-white hover:text-white/80 transition-colors bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg border border-white/20 w-full sm:w-auto self-start sm:self-auto"
             >
-              View all
+              {showAll ? "You can view all the testimonials" : "View all"}
             </button>
           </div>
           {showAll ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {(isVibeCodingPage ? allVibeCodingTestimonials : allCohortTestimonials).map((testimonial) => (
                 <div
                   key={testimonial.tempId}
-                  className="p-6 rounded-lg bg-card border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg flex flex-col"
+                  className="p-4 sm:p-6 rounded-lg bg-card border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg flex flex-col"
                 >
                   {'imgSrc' in testimonial && testimonial.imgSrc && (
                     <img
                       src={testimonial.imgSrc}
                       alt={`${testimonial.by.split(',')[0]}`}
-                      className="mb-4 h-16 w-16 rounded-full object-cover object-top flex-shrink-0"
+                      className="mb-3 sm:mb-4 h-12 w-12 sm:h-16 sm:w-16 rounded-full object-cover object-top flex-shrink-0"
                     />
                   )}
-                  <p className="text-base leading-relaxed text-foreground mb-4 flex-1">
+                  <p className="text-sm sm:text-base leading-relaxed text-foreground mb-3 sm:mb-4 flex-1">
                     "{testimonial.testimonial}"
                   </p>
-                  <p className="text-sm text-muted-foreground italic mt-auto">
+                  <p className="text-xs sm:text-sm text-muted-foreground italic mt-auto">
                     {testimonial.by}
                   </p>
                 </div>
