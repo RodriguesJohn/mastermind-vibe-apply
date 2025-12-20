@@ -28,19 +28,19 @@ const aiCohortModules = [{
   title: "Learn vibe coding and Prototyping with AI",
   description: "Learn how to create functional prototypes with Lovable and Cursor to effectively communicate your vision. Master efficient vibe-coding workflows and build AI apps using modern AI coding tools.",
   colors: ["#FF6B6B", "#FF8E53", "#FFD93D", "#FFA07A"]
-}, {
-  number: "5",
-  week: "Bonus",
-  title: "Get 1:1 Coaching and Consulting",
-  description: "Get one-on-one coaching with John to overcome challenges, personalize your learning goals, ask any questions, and get clear guidance to unlock your next step.",
-  colors: ["#C44569", "#D68FD6", "#E3A0D3", "#FF8CC8"]
-}, {
-  number: "6",
-  week: "Bonus",
-  title: "Guest Speakers From Top Companies",
-  description: "Get the opportunity to ask questions to designers from top companies such as Meta, Amazon, and more. Learn from their expertise and experiences as AI product designers.",
-  colors: ["#4F4F8C", "#5F7AAB", "#7FA8D5", "#87CEEB"]
-}];
+  }, {
+    number: "5",
+    week: "Bonus",
+    title: "Get 1:1 Coaching and Consulting",
+    description: "Get one-on-one coaching with John to overcome challenges, personalize your learning goals, ask any questions, and get clear guidance to unlock your next step.",
+    colors: ["#C44569", "#D68FD6", "#E3A0D3", "#FF8CC8"]
+  }, {
+    number: "6",
+    week: "Bonus",
+    title: "Get Access to Bonus Courses",
+    description: "Unlock additional bonus courses and resources to deepen your AI design expertise. Access exclusive content, advanced tutorials, and extended learning materials to continue your growth beyond the core curriculum.",
+    colors: ["#4F4F8C", "#5F7AAB", "#7FA8D5", "#87CEEB"]
+  }];
 
 // Vibe Coding Course modules
 const vibeCodingModules = [{
