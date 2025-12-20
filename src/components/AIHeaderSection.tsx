@@ -97,7 +97,8 @@ export const AIHeaderSection = () => {
           <div className="text-center mb-6 md:mb-8">
             <div className="flex items-center justify-center gap-2 mb-6">
               <span className="text-xs font-medium tracking-wider uppercase flex items-center gap-1">
-                {stars.map((_, i) => (
+                {/* 4 full stars */}
+                {Array.from({ length: 4 }).map((_, i) => (
                   <span
                     key={i}
                     className="text-yellow-400 inline-block"
@@ -106,6 +107,24 @@ export const AIHeaderSection = () => {
                     ★
                   </span>
                 ))}
+                {/* Half-filled star (4.7 = 4 full + 0.7 of the 5th star) */}
+                <span
+                  className="inline-block relative"
+                  style={{ animation: "starWave 1.6s ease-in-out infinite", animationDelay: `${4 * 0.12}s` }}
+                >
+                  <span className="text-yellow-400/30">★</span>
+                  <span 
+                    className="absolute left-0 top-0 text-yellow-400"
+                    style={{ 
+                      width: '70%', 
+                      overflow: 'hidden',
+                      display: 'inline-block'
+                    }}
+                  >
+                    ★
+                  </span>
+                </span>
+                <span className="text-white ml-1 font-semibold">4.7</span>
                 <span className="text-white/60 ml-1">on Maven</span>
               </span>
             </div>
@@ -131,7 +150,7 @@ export const AIHeaderSection = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Enroll in the cohort
+                  Enroll In The Cohort
                   <ArrowRight className="group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>
@@ -142,11 +161,11 @@ export const AIHeaderSection = () => {
                 asChild
               >
                 <a 
-                  href="https://cal.com/aidesignacademy/15min?overlayCalendar=true"
+                  href="https://www.delphi.ai/john-rodrigues"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Book an info call
+                  Chat with John.ai
                 </a>
               </Button>
             </div>

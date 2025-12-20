@@ -32,8 +32,8 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<VibeCodingAccelerator />} />
-          <Route path="/cohort" element={<Cohort />} />
+          <Route path="/" element={<Cohort />} />
+          <Route path="/vibe-coding-course" element={<VibeCodingAccelerator />} />
           {/* <Route path="/coaching" element={<Consulting />} /> */}
           <Route path="/course" element={<Course />} />
           {/* Membership page hidden for now */}
