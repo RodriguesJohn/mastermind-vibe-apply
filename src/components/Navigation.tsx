@@ -1,6 +1,12 @@
 import { Button } from "@/components/ui/button";
-import { Menu } from "lucide-react";
+import { Menu, ChevronDown } from "lucide-react";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -23,15 +29,25 @@ export const Navigation = () => {
             <a href="/" className="text-sm font-normal hover:text-primary transition-colors">
               Cohort
             </a>
-            <a href="/vibe-coding-course" className="text-sm font-normal hover:text-primary transition-colors">
-              Vibe Coding Course
-            </a>
             <a href="/get-guide" className="text-sm font-normal hover:text-primary transition-colors">
               Get Guide
             </a>
             <a href="/blog" className="text-sm font-normal hover:text-primary transition-colors">
               Blog
             </a>
+            <DropdownMenu>
+              <DropdownMenuTrigger className="text-sm font-normal hover:text-primary transition-colors flex items-center gap-1 outline-none">
+                Courses
+                <ChevronDown className="h-4 w-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start">
+                <DropdownMenuItem asChild>
+                  <a href="/vibe-coding-course" className="cursor-pointer">
+                    Vibe Coding
+                  </a>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
           
           {/* Header CTA removed per request */}
@@ -55,18 +71,18 @@ export const Navigation = () => {
                 <a href="/" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
                   Cohort
                 </a>
-                <a href="/vibe-coding-course" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
-                  Vibe Coding Course
-                </a>
-                {/* <a href="/vibe-coding-accelerator" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
-                  Mastermind
-                </a> */}
                 <a href="/get-guide" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
                   Get Guide
                 </a>
                 <a href="/blog" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
                   Blog
                 </a>
+                <div className="flex flex-col gap-2">
+                  <span className="text-base font-normal text-foreground/60 py-2">Courses</span>
+                  <a href="/vibe-coding-course" className="text-base font-normal hover:text-primary transition-colors py-2 pl-4" onClick={() => setMobileMenuOpen(false)}>
+                    Vibe Coding
+                  </a>
+                </div>
                 {/* <a href="/knowledge-hub" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
                   Knowledge Hub
                 </a> */}
