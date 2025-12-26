@@ -58,12 +58,15 @@ export const CoursePricingSection = () => {
                 <div className="text-left space-y-2">
                   <div className="flex items-center justify-start gap-3 sm:gap-4">
                     <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white">
-                      $499
+                      $99
                     </span>
                     <span className="text-sm uppercase tracking-wider text-muted-foreground">
-                      USD
+                      per month
                     </span>
                   </div>
+                  <p className="text-sm sm:text-base text-muted-foreground italic pt-2">
+                    Course designed to be completed in one month with consistent effort • Cancel anytime
+                  </p>
                 </div>
 
                 <div className="space-y-3 sm:space-y-4 pt-4 sm:pt-6">
@@ -77,8 +80,8 @@ export const CoursePricingSection = () => {
                 </div>
 
                 <Button size="xl" className="w-full mt-6 sm:mt-8 text-base sm:text-lg" variant="cta" asChild>
-                  <a href="https://ai-design-academy-s-school.teachable.com/purchase?product_id=6563369" target="_blank" rel="noopener noreferrer">
-                  Enroll Now - $499
+                  <a href="https://checkout.teachable.com/secure/2637759/checkout/order_h0zggcc8" target="_blank" rel="noopener noreferrer">
+                    Enroll Now - $99/month
                   </a>
                 </Button>
                 

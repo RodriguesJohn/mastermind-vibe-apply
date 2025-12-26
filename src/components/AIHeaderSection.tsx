@@ -183,7 +183,7 @@ export const AIHeaderSection = () => {
 
           {/* SphereImageGrid at bottom, top half visible */}
           <div className="relative w-full flex justify-center overflow-hidden h-[300px] md:h-[400px]">
-            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2" style={{ transform: 'translateX(-50%) translateY(55%)' }}>
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 md:translate-y-[55%] translate-y-[30%]">
               <div className="absolute -inset-8 bg-[radial-gradient(circle,_rgba(46,114,255,0.18)_0%,_rgba(0,0,0,0)_70%)] blur-3xl" aria-hidden="true" />
               <div className="relative z-10">
                 <div className="hidden md:block">
@@ -200,12 +200,12 @@ export const AIHeaderSection = () => {
                 <div className="block md:hidden">
                   <SphereImageGrid
                     images={headerImages}
-                    containerSize={400}
-                    sphereRadius={160}
+                    containerSize={500}
+                    sphereRadius={200}
                     autoRotate={true}
                     autoRotateSpeed={0.2}
                     dragSensitivity={0.8}
-                    baseImageScale={0.1}
+                    baseImageScale={0.11}
                   />
                 </div>
               </div>

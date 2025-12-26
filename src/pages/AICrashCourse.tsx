@@ -114,8 +114,10 @@ const AICrashCourse = () => {
                     <Button variant="default" size="default" className="w-full sm:w-auto text-base sm:text-lg">
                       Enroll Today for $99
                     </Button>
-                    <Button variant="outline" size="default" className="w-full sm:w-auto text-base sm:text-lg">
-                      Login
+                    <Button variant="outline" size="default" className="w-full sm:w-auto text-base sm:text-lg" asChild>
+                      <a href="https://www.skool.com/ai-design-academy-6114/about" target="_blank" rel="noopener noreferrer">
+                        Login
+                      </a>
                     </Button>
                   </div>
                 </div>

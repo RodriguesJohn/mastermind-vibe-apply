@@ -170,7 +170,7 @@ in 90 day                                   �
                     </a>
                   </Button>
                   <Button variant="outline" size="default" className="border-white/20 text-white hover:bg-white/10" asChild>
-                    <a href="/login">
+                    <a href="https://www.skool.com/ai-design-academy-6114/about" target="_blank" rel="noopener noreferrer">
                       Login
                     </a>
                   </Button>

@@ -6,6 +6,8 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
@@ -29,21 +31,28 @@ export const Navigation = () => {
             <a href="/" className="text-sm font-normal hover:text-primary transition-colors">
               Cohort
             </a>
-            <a href="/get-guide" className="text-sm font-normal hover:text-primary transition-colors">
-              Get Guide
-            </a>
-            <a href="/blog" className="text-sm font-normal hover:text-primary transition-colors">
-              Blog
+            <a href="https://johnrodrigues.substack.com/" target="_blank" rel="noopener noreferrer" className="text-sm font-normal hover:text-primary transition-colors">
+              Playbook
             </a>
             <DropdownMenu>
               <DropdownMenuTrigger className="text-sm font-normal hover:text-primary transition-colors flex items-center gap-1 outline-none">
-                Courses
+                More
                 <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="start">
+              <DropdownMenuContent align="start" className="w-56">
                 <DropdownMenuItem asChild>
                   <a href="/vibe-coding-course" className="cursor-pointer">
-                    Vibe Coding
+                    Vibe Coding Course
+                  </a>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <a href="/cohort-resource-hub" className="cursor-pointer">
+                    Cohort Hub
+                  </a>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <a href="/blog" className="cursor-pointer">
+                    Blog
                   </a>
                 </DropdownMenuItem>
               </DropdownMenuContent>
@@ -71,16 +80,19 @@ export const Navigation = () => {
                 <a href="/" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
                   Cohort
                 </a>
-                <a href="/get-guide" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
-                  Get Guide
-                </a>
-                <a href="/blog" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
-                  Blog
+                <a href="https://johnrodrigues.substack.com/" target="_blank" rel="noopener noreferrer" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
+                  Playbook
                 </a>
                 <div className="flex flex-col gap-2">
-                  <span className="text-base font-normal text-foreground/60 py-2">Courses</span>
+                  <span className="text-base font-normal text-foreground/60 py-2">More</span>
                   <a href="/vibe-coding-course" className="text-base font-normal hover:text-primary transition-colors py-2 pl-4" onClick={() => setMobileMenuOpen(false)}>
-                    Vibe Coding
+                    Vibe Coding Course
+                  </a>
+                  <a href="/cohort-resource-hub" className="text-base font-normal hover:text-primary transition-colors py-2 pl-4" onClick={() => setMobileMenuOpen(false)}>
+                    Cohort Hub
+                  </a>
+                  <a href="/blog" className="text-base font-normal hover:text-primary transition-colors py-2 pl-4" onClick={() => setMobileMenuOpen(false)}>
+                    Blog
                   </a>
                 </div>
                 {/* <a href="/knowledge-hub" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>

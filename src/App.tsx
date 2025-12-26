@@ -21,6 +21,8 @@ import AppLanding from "./pages/AppLanding";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import GetGuide from "./pages/GetGuide";
+import CohortResourceHub from "./pages/CohortResourceHub";
+import Workshop from "./pages/Workshop";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -47,6 +49,8 @@ const App = () => (
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/get-guide" element={<GetGuide />} />
+          <Route path="/cohort-resource-hub" element={<CohortResourceHub />} />
+          <Route path="/workshop" element={<Workshop />} />
           <Route path="/projects" element={<Projects />} />
           {/* <Route path="/tools" element={<Tools />} /> */}
           {/* <Route path="/talent-pool" element={<TalentPool />} /> */}

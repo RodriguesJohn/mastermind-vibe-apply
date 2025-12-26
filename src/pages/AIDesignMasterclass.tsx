@@ -524,7 +524,7 @@ const AIDesignMasterclass = () => {
                               <div className="space-y-4">
                                 <h3 className="text-xl md:text-2xl font-semibold text-gray-900 mt-8">Course Overview</h3>
                                 <p>
-                                  Beginner-friendly vibe coding course with Cursor. In 14 days, this step-by-step course will help you prototype your first 2 apps with our proven curriculum.
+                                  Beginner-friendly vibe coding course with Cursor. This step-by-step course will help you prototype your first 2 apps with our proven curriculum.
                                 </p>
                                 <p>
                                   You'll learn the foundations of Vibe Coding—the creative workflow that blends design, AI, and code into one seamless process. Through guided lessons, hands-on demos, and real-world projects, you'll master the tools, mindset, and techniques needed to bring ideas to life fast.

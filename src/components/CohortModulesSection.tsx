@@ -8,7 +8,7 @@ const aiCohortModules = [{
   number: "1",
   week: "Week 1",
   title: "Master AI Foundation",
-  description: "Deep dive into AI fundamentals – understand core concepts, build your vocabulary, and learn to design intelligent systems with clarity and confidence.",
+  description: "Deep dive into AI fundamentals, understand core concepts, build your vocabulary, and learn to design intelligent systems with clarity and confidence.",
   colors: ["#FF6B6B", "#FFD93D", "#FF8E53", "#FF6B9D"]
 }, {
   number: "2",
@@ -65,8 +65,8 @@ const vibeCodingModules = [{
 const vibeCodingBonusModule = {
   number: "B",
   week: "Bonus",
-    title: "The First 20 Would Get a 1:1 With 30 Minutes With John",
-  description: "The first 20 get a 1:1 with John for AI journey guidance and mentorship.",
+  title: "Get Bonus and Resources",
+  description: "Access exclusive bonus content, additional resources, templates, and extended learning materials to enhance your vibe coding journey and continue building your skills beyond the core curriculum.",
   colors: ["#C44569", "#D68FD6", "#E3A0D3", "#FF8CC8"]
 };
 export const CohortModulesSection = () => {

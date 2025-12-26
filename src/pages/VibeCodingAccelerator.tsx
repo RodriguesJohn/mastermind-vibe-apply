@@ -95,14 +95,17 @@ const cohortModules = [{
   items: ["Sat 11/15 7:00 PM—8:30 PM (UTC)"]
 }];
 const faqs = [{
-  question: "I'm not technical, is it right?",
+  question: "I'm not technical, is this right for me?",
   answer: "Absolutely! This course is designed for non-technical professionals. You don't need any coding background to get started. We'll guide you through everything step-by-step, from setting up Cursor to building your first apps with AI assistance."
 }, {
   question: "Is it beginner-friendly?",
   answer: "Yes, 100% beginner-friendly! We start from the very basics and build up gradually. Whether you're completely new to coding or have some experience, our structured approach ensures you'll learn at your own pace with hands-on projects and clear guidance."
 }, {
   question: "Is the course self-paced?",
-  answer: "Yes! This course is completely self-paced. You have lifetime access to all course materials, so you can learn at your own speed and on your own schedule. Whether you want to complete it in 14 days or take your time over several weeks, you have full flexibility to work through the content whenever it's convenient for you."
+  answer: "Yes! This course is completely self-paced. You have lifetime access to all course materials, so you can learn at your own speed and on your own schedule. You have full flexibility to work through the content whenever it's convenient for you."
+}, {
+  question: "Can I finish this course in one month? and cancel anytime?",
+  answer: "The course is designed to be completed in approximately one month with consistent effort and dedication. However, completion time may vary based on individual learning pace, time availability, and commitment level. You can cancel your subscription anytime with no questions asked. There are no long-term commitments or cancellation fees. Please note that course completion depends on your individual effort and participation."
 }, {
   question: "If you have any questions, how do I reach out?",
   answer: "If you have any questions, you reach out to us directly at hello@theaidesignacademy.com."
@@ -130,7 +133,7 @@ const galleryImages = [WorkshopImage1, WorkshopImage2, WorkshopImage3];
 const VibeCodingAccelerator = () => {
   return <>
       <Helmet>
-        <title>Vibe Coding with Cursor in 14 days</title>
+        <title>Vibe Coding with Cursor</title>
         <meta name="description" content="Master vibe coding and design engineering. Learn to ship AI-powered products, build a standout portfolio, and command top-tier roles." />
         <style>{`
           @keyframes blurEntrance {
@@ -225,20 +228,20 @@ const VibeCodingAccelerator = () => {
                 }} />
                             </div>
                 <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight leading-[1.3] relative pt-8 sm:pt-0 blur-entrance">
-                  Master Vibe Coding &<br />Prototype AI Apps with<br />Cursor in 14 Days
+                  Master Vibe Coding &<br />Prototype AI Apps with<br />Cursor
                   </h1>
                 <p className="text-sm sm:text-base md:text-lg text-white/60 mx-auto max-w-2xl px-2 leading-relaxed font-medium blur-entrance-subtle-delayed">
                   Beginner-Friendly Vibe Coding With Cursor.<br />Go from beginner to vibe coding expert.
                 </p>
                 <div className="flex flex-col gap-3 sm:flex-row justify-center max-w-md mx-auto px-4 sm:px-0">
                   <Button variant="cta" size="lg" className="w-full sm:w-auto sm:min-w-[200px] blur-entrance-subtle" asChild>
-                    <a href="https://ai-design-academy-s-school.teachable.com/purchase?product_id=6563369" target="_blank" rel="noopener noreferrer">
+                    <a href="https://checkout.teachable.com/secure/2637759/checkout/order_h0zggcc8" target="_blank" rel="noopener noreferrer">
                       Enroll Today
                       <ArrowRight className="h-5 w-5" />
                       </a>
                     </Button>
                   <Button variant="outline" size="lg" className="bg-white text-gray-600 border-white hover:bg-white hover:text-black hover:shadow-lg hover:scale-105 transition-all duration-300 w-full sm:w-auto sm:min-w-[200px] blur-entrance-subtle" asChild>
-                    <a href="https://ai-design-academy-s-school.teachable.com/l/products?sortKey=name&sortDirection=asc&page=1" target="_blank" rel="noopener noreferrer">
+                    <a href="https://ai-design-academy-s-school.teachable.com/l/pdp/vibe-coding-101-course-build-your-first-ai-app-in-days" target="_blank" rel="noopener noreferrer">
                       Log In
                       <ArrowRight className="h-5 w-5" />
                     </a>
@@ -439,8 +442,8 @@ const VibeCodingAccelerator = () => {
               </p>
               <div className="flex flex-col gap-3 sm:flex-row justify-center">
                 <Button variant="cta" size="lg" className="w-full sm:w-auto sm:min-w-[200px]" asChild>
-                  <a href="https://ai-design-academy-s-school.teachable.com/purchase?product_id=6563369" target="_blank" rel="noopener noreferrer">
-                    Enroll Today - $499
+                  <a href="https://checkout.teachable.com/secure/2637759/checkout/order_h0zggcc8" target="_blank" rel="noopener noreferrer">
+                    Enroll Today - $99/month
                     <ArrowRight className="h-5 w-5" />
                   </a>
                 </Button>
