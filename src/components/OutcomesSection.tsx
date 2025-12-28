@@ -1,21 +1,29 @@
 import { Check } from "lucide-react";
 import { MeshGradient } from "@paper-design/shaders-react";
 const outcomes = [{
-  text: "Learn Cursor",
-  description: "Master the most popular AI development tool. Perfect for designers who want to prototype their ideas quickly.",
+  text: "Behind-the-scenes builds & resources",
+  description: "Get exclusive access to behind-the-scenes builds, resources, and insights from real AI product development.",
   colors: ["#FF6B6B", "#FFD93D", "#FF8E53", "#FF6B9D"]
 }, {
-  text: "Build a Mobile App Prototype",
-  description: "Hands-on mobile app design and prototyping with rich animations and API integration. Design interfaces you can touch and feel.",
+  text: "Cursor Complete course",
+  description: "Full access to the complete Cursor course. Master vibe coding and learn to build AI-powered products with Cursor.",
   colors: ["#4ECDC4", "#87CEEB", "#DA70D6", "#BA55D3"]
 }, {
-  text: "Create an AI Recipe App with the Power of Gen AI",
-  description: "Finally, create an AI recipe generator app using OpenAI's API within Cursor, and don't just design static interfaces but design interfaces that are generative in nature.",
+  text: "Native App Prototyping course",
+  description: "Learn to prototype native apps and bring your AI product ideas to life across platforms with our comprehensive course.",
   colors: ["#95E1D3", "#F38181", "#FCE38A", "#AAE3F0"]
 }, {
-  text: "Learn the Workflows",
-  description: "Unique workflows that save money and speed up your prototyping process. Build your ideas quickly without deep technical knowledge.",
+  text: "Getting Started course and resources",
+  description: "Access the getting started course and essential resources to kickstart your AI product building journey.",
+  colors: ["#00D4AA", "#00C9FF", "#5B8DEF", "#A855F7"]
+}, {
+  text: "Access to community of product builders",
+  description: "Connect with a community of AI product builders. Share projects, get feedback, and collaborate with fellow creators.",
   colors: ["#C44569", "#D68FD6", "#E3A0D3", "#FF8CC8"]
+}, {
+  text: "Stay updated with latest AI tools & updates",
+  description: "Help you stay updated with the latest tools and updates on AI. Get curated insights on new tools, techniques, and industry trends.",
+  colors: ["#6C5CE7", "#A29BFE", "#74B9FF", "#0984E3"]
 }];
 const headerCards = [{
   title: "Getting Started Master Prompt",

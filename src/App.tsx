@@ -13,6 +13,7 @@ import Tools from "./pages/Tools";
 import TalentPool from "./pages/TalentPool";
 import Course from "./pages/Course";
 import VibeCodingAccelerator from "./pages/VibeCodingAccelerator";
+import VibeCodingAndAIProductBuilderClub from "./pages/VibeCodingAndAIProductBuilderClub";
 import AIDesignMasterclass from "./pages/AIDesignMasterclass";
 import KnowledgeHub from "./pages/KnowledgeHub";
 import DesignEngineering from "./pages/DesignEngineering";
@@ -36,6 +37,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Cohort />} />
           <Route path="/vibe-coding-course" element={<VibeCodingAccelerator />} />
+          <Route path="/vibe-coding-and-ai-product-builder-club" element={<VibeCodingAndAIProductBuilderClub />} />
           {/* <Route path="/coaching" element={<Consulting />} /> */}
           <Route path="/course" element={<Course />} />
           {/* Membership page hidden for now */}

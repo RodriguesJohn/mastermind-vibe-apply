@@ -41,8 +41,8 @@ export const CoursePricingSection = () => {
       <div className="px-4 sm:px-6 md:px-10 lg:px-[120px] relative z-10">
         <div className="max-w-[1200px] mx-auto">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 space-y-3 sm:space-y-4">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
-              Course Pricing
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">
+              Join the AI Product Builder Club
             </h2>
           </div>
           
@@ -50,7 +50,7 @@ export const CoursePricingSection = () => {
             <Card className="border-white/5 shadow-2xl relative overflow-hidden bg-black">
               <CardHeader className="text-left pb-6 sm:pb-8 pt-4 sm:pt-6 px-4 sm:px-6">
                 <CardTitle className="text-2xl sm:text-3xl md:text-4xl font-medium tracking-tight mb-3 sm:mb-4">
-                  Master Vibe Coding with Cursor today
+                  Access to the AI Product Builder Club
                 </CardTitle>
               </CardHeader>
               
@@ -65,14 +65,14 @@ export const CoursePricingSection = () => {
                     </span>
                   </div>
                   <p className="text-sm sm:text-base text-muted-foreground italic pt-2">
-                    Course designed to be completed in one month with consistent effort • Cancel anytime
+                    Join a community of AI product builders • Cancel anytime
                   </p>
                 </div>
 
                 <div className="space-y-3 sm:space-y-4 pt-4 sm:pt-6">
                   <p className="font-semibold text-base sm:text-lg">What's included:</p>
                   <ul className="space-y-2 sm:space-y-3">
-                    {["Proven and tested curriculum", "Build 2 projects (Mobile app and AI recipe generator)", "Learn Cursor, one of the most highly adapted vibe coding tool", "Watch courses anytime, self-paced learning", "Future proof your career"].map((feature, index) => <li key={index} className="flex items-start gap-2 sm:gap-3">
+                    {["Behind-the-scenes builds & resources", "Cursor Complete course", "Native App Prototyping course", "Access to community of product builders", "Stay updated with latest AI tools & updates"].map((feature, index) => <li key={index} className="flex items-start gap-2 sm:gap-3">
                         <Check className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
                         <span className="text-sm sm:text-base text-foreground/90">{feature}</span>
                       </li>)}
@@ -80,21 +80,10 @@ export const CoursePricingSection = () => {
                 </div>
 
                 <Button size="xl" className="w-full mt-6 sm:mt-8 text-base sm:text-lg" variant="cta" asChild>
-                  <a href="https://checkout.teachable.com/secure/2637759/checkout/order_h0zggcc8" target="_blank" rel="noopener noreferrer">
-                    Enroll Now - $99/month
+                  <a href="https://www.skool.com/ai-design-academy-6114/about?ref=8d68f8fa4bf2422c8318d51d5f9fcadc" target="_blank" rel="noopener noreferrer">
+                    Join the Club - $99/month
                   </a>
                 </Button>
-                
-                <div className="flex items-center justify-start gap-2 pt-2">
-                  <div className="flex items-center gap-2">
-                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-green-500/20 flex items-center justify-center">
-                      <Check className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-green-500 checkmark-animated" />
-                    </div>
-                    <p className="text-xs sm:text-sm text-muted-foreground">
-                      Secure payment via Teachable
-                    </p>
-                  </div>
-                </div>
               </CardContent>
             </Card>
           </div>
