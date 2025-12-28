@@ -254,7 +254,7 @@ const VibeCodingAccelerator = () => {
                     <p className="text-sm sm:text-base text-gray-900 leading-relaxed">
                       <strong className="text-gray-900">Note:</strong> This course has now been moved to the{" "}
                       <a 
-                        href="/vibe-coding-and-ai-product-builder-club" 
+                        href="/club" 
                         className="text-primary hover:text-primary/80 underline font-medium transition-colors"
                       >
                         AI Product Builder Club
