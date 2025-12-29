@@ -1,4 +1,5 @@
-import { Code2, Users, Zap, Trophy } from "lucide-react";
+import { Code2, Users, Zap, Trophy, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const benefits = [
   {
@@ -19,7 +20,7 @@ const benefits = [
   {
     icon: Trophy,
     title: "Join the Community",
-    description: "Join a community of designers, product managers, and agency owners learning how to code together.",
+    description: "Join the Community of AI Product Designers and Leaders.",
   },
 ];
 
@@ -41,7 +42,7 @@ export const BenefitsSection = () => {
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="group relative p-8 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1"
+              className={`group relative p-8 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1 ${index === 3 ? 'md:col-span-2' : ''}`}
             >
               <div className="mb-6 inline-flex items-center justify-center w-14 h-14 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors">
                 <benefit.icon className="w-7 h-7 text-primary" />
@@ -54,6 +55,18 @@ export const BenefitsSection = () => {
               <p className="text-white leading-relaxed">
                 {benefit.description}
               </p>
+              
+              {/* Join Membership Button below Join the Community card */}
+              {index === 3 && (
+                <div className="mt-8 flex justify-center">
+                  <Button size="xl" className="text-base sm:text-lg" variant="cta" asChild>
+                    <a href="https://www.skool.com/ai-design-academy-6114/about?ref=8d68f8fa4bf2422c8318d51d5f9fcadc" target="_blank" rel="noopener noreferrer">
+                      Join Membership - $149/month
+                      <ArrowRight className="h-5 w-5 ml-2" />
+                    </a>
+                  </Button>
+                </div>
+              )}
             </div>
           ))}
         </div>

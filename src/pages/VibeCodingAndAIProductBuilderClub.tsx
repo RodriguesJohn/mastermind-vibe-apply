@@ -394,7 +394,7 @@ const VibeCodingAndAIProductBuilderClub = () => {
               <div className="flex flex-col gap-3 sm:flex-row justify-center">
                 <Button variant="cta" size="lg" className="w-full sm:w-auto sm:min-w-[200px]" asChild>
                   <a href="https://www.skool.com/ai-design-academy-6114/about?ref=8d68f8fa4bf2422c8318d51d5f9fcadc" target="_blank" rel="noopener noreferrer">
-                    Join Membership - $99/month
+                    Join Membership - $149/month
                     <ArrowRight className="h-5 w-5" />
                   </a>
                 </Button>

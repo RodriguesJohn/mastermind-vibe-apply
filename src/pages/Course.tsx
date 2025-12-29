@@ -324,12 +324,12 @@ const Course = () => {
               <div className="p-4 bg-muted rounded-lg">
                 <div className="flex items-center justify-between text-sm">
                   <span className="text-muted-foreground">Total Amount</span>
-                  <span className="text-lg font-bold">$99</span>
+                  <span className="text-lg font-bold">$149</span>
                 </div>
               </div>
               
               <Button className="w-full" size="lg">
-                Pay $99 and Unlock Module
+                Pay $149 and Unlock Module
               </Button>
               
               <p className="text-xs text-center text-muted-foreground">

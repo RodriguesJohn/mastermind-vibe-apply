@@ -58,7 +58,7 @@ export const CoursePricingSection = () => {
                 <div className="text-left space-y-2">
                   <div className="flex items-center justify-start gap-3 sm:gap-4">
                     <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white">
-                      $99
+                      $149
                     </span>
                     <span className="text-sm uppercase tracking-wider text-muted-foreground">
                       per month
@@ -69,19 +69,47 @@ export const CoursePricingSection = () => {
                   </p>
                 </div>
 
-                <div className="space-y-3 sm:space-y-4 pt-4 sm:pt-6">
+                <div className="space-y-4 sm:space-y-6 pt-4 sm:pt-6">
                   <p className="font-semibold text-base sm:text-lg">What's included:</p>
+                  
+                  {/* Courses Section */}
+                  <div className="space-y-2 sm:space-y-3">
+                    <p className="font-medium text-sm sm:text-base text-foreground/80 mb-2">Courses include:</p>
+                    <ul className="space-y-2 sm:space-y-3">
+                      {["Getting Started with AI", "Cursor AI", "Prototyping iOS Mobile Apps with AI & SwiftUI", "Complete Figma Course"].map((feature, index) => <li key={index} className="flex items-start gap-2 sm:gap-3">
+                          <Check className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span className="text-sm sm:text-base text-foreground/90">{feature}</span>
+                        </li>)}
+                    </ul>
+                  </div>
+
+                  {/* Additional Resources Section */}
+                  <div className="space-y-2 sm:space-y-3">
+                    <p className="font-medium text-sm sm:text-base text-foreground/80 mb-2">Additional resources:</p>
+                    <ul className="space-y-2 sm:space-y-3">
+                      {["Productivity with AI resources", "AI tools hub and credits", "Behind-the-scenes insights from building AI products"].map((feature, index) => <li key={index} className="flex items-start gap-2 sm:gap-3">
+                          <Check className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span className="text-sm sm:text-base text-foreground/90">{feature}</span>
+                        </li>)}
+                    </ul>
+                  </div>
+                </div>
+
+                {/* How will it help you Section */}
+                <div className="space-y-3 sm:space-y-4 pt-4 sm:pt-6 border-t border-white/10">
+                  <p className="font-semibold text-base sm:text-lg">How will it help you?</p>
+                  <p className="text-sm sm:text-base text-foreground/70 mb-3">This membership helps you and your team:</p>
                   <ul className="space-y-2 sm:space-y-3">
-                    {["Behind-the-scenes builds & resources", "Cursor Complete course", "Native App Prototyping course", "Access to community of product builders", "Stay updated with latest AI tools & updates"].map((feature, index) => <li key={index} className="flex items-start gap-2 sm:gap-3">
+                    {["Stay up to date with the latest AI industry changes and tools", "Strengthen AI skills and improve everyday workflows", "Strategically integrate AI to drive real product outcomes", "Follow structured, step-by-step courses built on proven curriculum"].map((benefit, index) => <li key={index} className="flex items-start gap-2 sm:gap-3">
                         <Check className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-sm sm:text-base text-foreground/90">{feature}</span>
+                        <span className="text-sm sm:text-base text-foreground/90">{benefit}</span>
                       </li>)}
                   </ul>
                 </div>
 
                 <Button size="xl" className="w-full mt-6 sm:mt-8 text-base sm:text-lg" variant="cta" asChild>
                   <a href="https://www.skool.com/ai-design-academy-6114/about?ref=8d68f8fa4bf2422c8318d51d5f9fcadc" target="_blank" rel="noopener noreferrer">
-                    Join Membership - $99/month
+                    Join Membership - $149/month
                   </a>
                 </Button>
               </CardContent>

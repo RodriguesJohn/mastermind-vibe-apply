@@ -112,7 +112,7 @@ const AICrashCourse = () => {
                 <div className="text-center mb-8 sm:mb-12">
                   <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4">
                     <Button variant="default" size="default" className="w-full sm:w-auto text-base sm:text-lg">
-                      Enroll Today for $99
+                      Enroll Today for $149
                     </Button>
                     <Button variant="outline" size="default" className="w-full sm:w-auto text-base sm:text-lg" asChild>
                       <a href="https://www.skool.com/ai-design-academy-6114/about" target="_blank" rel="noopener noreferrer">
@@ -270,7 +270,7 @@ const AICrashCourse = () => {
                   <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4">
                     {/* Primary CTA */}
                     <Button variant="cta" size="default" className="w-full sm:w-auto text-base sm:text-lg">
-                      Enroll Today for $99
+                      Enroll Today for $149
                     </Button>
                     
                     {/* Secondary CTA */}
