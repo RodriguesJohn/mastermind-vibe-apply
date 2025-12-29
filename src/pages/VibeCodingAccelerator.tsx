@@ -236,7 +236,7 @@ const VibeCodingAccelerator = () => {
                 <div className="flex flex-col gap-3 sm:flex-row justify-center max-w-md mx-auto px-4 sm:px-0">
                   <Button variant="cta" size="lg" className="w-full sm:w-auto sm:min-w-[200px] blur-entrance-subtle" asChild>
                     <a href="https://www.skool.com/ai-design-academy-6114/about?ref=8d68f8fa4bf2422c8318d51d5f9fcadc" target="_blank" rel="noopener noreferrer">
-                      Join the Club
+                      Join Membership
                       <ArrowRight className="h-5 w-5" />
                       </a>
                     </Button>
@@ -252,14 +252,14 @@ const VibeCodingAccelerator = () => {
                 <div className="mt-8 sm:mt-10 max-w-2xl mx-auto">
                   <div className="bg-white/100 rounded-lg border border-white/20 p-4 sm:p-6">
                     <p className="text-sm sm:text-base text-gray-900 leading-relaxed">
-                      <strong className="text-gray-900">Note:</strong> This course has now been moved to the{" "}
+                      <strong className="text-gray-900">Note:</strong> This course has now been moved to{" "}
                       <a 
-                        href="/club" 
+                        href="/membership" 
                         className="text-primary hover:text-primary/80 underline font-medium transition-colors"
                       >
-                        AI Product Builder Club
+                        AI Academy membership
                       </a>
-                      . Join the club to access this course and more. If you have already paid for the course, log in from{" "}
+                      . Join the membership to access this course and more. If you have already paid for the course, log in from{" "}
                       <a 
                         href="https://ai-design-academy-s-school.teachable.com/l/pdp/vibe-coding-101-course-build-your-first-ai-app-in-days" 
                         target="_blank" 

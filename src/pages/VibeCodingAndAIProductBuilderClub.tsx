@@ -88,23 +88,23 @@ const cohortModules = [{
   items: ["Sat 11/15 7:00 PM—8:30 PM (UTC)"]
 }];
 const faqs = [{
-  question: "What is the AI Product Builder Club?",
-  answer: "The AI Product Builder Club is a community of builders creating AI-powered products. As a member, you get access to exclusive courses (Cursor Complete and Native App Prototyping), behind-the-scenes builds and resources, a community of product builders, and regular updates on the latest AI tools and trends."
+  question: "What is AI Academy membership?",
+  answer: "AI Academy membership is a community of builders creating AI-powered products. As a member, you get access to exclusive courses (Cursor Complete and Native App Prototyping), behind-the-scenes builds and resources, a community of product builders, and regular updates on the latest AI tools and trends."
 }, {
-  question: "I'm not technical, is this club right for me?",
-  answer: "Absolutely! The AI Product Builder Club is designed for builders at all skill levels. You don't need any coding background to get started. We'll guide you through everything step-by-step, from learning vibe coding to building your first AI-powered products with the support of the community."
+  question: "I'm not technical, is this membership right for me?",
+  answer: "Absolutely! AI Academy membership is designed for builders at all skill levels. You don't need any coding background to get started. We'll guide you through everything step-by-step, from learning vibe coding to building your first AI-powered products with the support of the community."
 }, {
-  question: "What do I get as a club member?",
-  answer: "As a club member, you get access to: Behind-the-scenes builds & resources, the complete Cursor course, Native App Prototyping course, access to our community of product builders, and regular updates on the latest AI tools and updates. You can participate at your own pace and engage with the community whenever it's convenient for you."
+  question: "What do I get as a member?",
+  answer: "As a member, you get access to: Behind-the-scenes builds & resources, the complete Cursor course, Native App Prototyping course, access to our community of product builders, and regular updates on the latest AI tools and updates. You can participate at your own pace and engage with the community whenever it's convenient for you."
 }, {
-  question: "How does the club community work?",
-  answer: "The club community is a space where AI product builders connect, share projects, get feedback, and collaborate. You can ask questions, share your builds, learn from others, and get support from experienced builders. The community is active and welcoming to all skill levels."
+  question: "How does the community work?",
+  answer: "The community is a space where AI product builders connect, share projects, get feedback, and collaborate. You can ask questions, share your builds, learn from others, and get support from experienced builders. The community is active and welcoming to all skill levels."
 }, {
   question: "Can I cancel my membership anytime?",
   answer: "Yes! You can cancel your membership anytime with no questions asked. There are no long-term commitments or cancellation fees. Your membership continues until you decide to cancel, giving you full flexibility to participate on your own terms."
 }, {
   question: "How do I access the courses and resources?",
-  answer: "Once you join the club, you'll get immediate access to all club resources including the Cursor Complete course, Native App Prototyping course, behind-the-scenes builds, and the community platform. You'll receive login details and instructions via email after joining."
+  answer: "Once you join the membership, you'll get immediate access to all resources including the Cursor Complete course, Native App Prototyping course, behind-the-scenes builds, and the community platform. You'll receive login details and instructions via email after joining."
 }, {
   question: "How do I reach out if I have questions?",
   answer: "If you have any questions, you can reach out to us directly at hello@theaidesignacademy.com or connect with the community through our member platform where other builders can help answer your questions."
@@ -132,8 +132,8 @@ const galleryImages = [WorkshopImage1, WorkshopImage2, WorkshopImage3];
 const VibeCodingAndAIProductBuilderClub = () => {
   return <>
       <Helmet>
-        <title>Vibe Coding & AI Product Builder Club</title>
-        <meta name="description" content="Join a community of AI product builders. Learn vibe coding, ship AI-powered products, and build alongside a community of creators and innovators." />
+        <title>AI Academy Membership</title>
+        <meta name="description" content="Join AI Academy membership. Learn vibe coding, ship AI-powered products, and build alongside a community of creators and innovators." />
         <style>{`
           @keyframes blurEntrance {
             0% {
@@ -185,7 +185,7 @@ const VibeCodingAndAIProductBuilderClub = () => {
             <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-10">
               <div className="space-y-4 sm:space-y-6 text-center relative">
                 <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-bold tracking-tight leading-[1.3] relative blur-entrance">
-                  Join the AI Product<br />Builder Club
+                  AI Academy<br />Membership
                   </h1>
                 <p className="text-sm sm:text-base text-white/60 mx-auto max-w-2xl px-2 leading-relaxed font-medium blur-entrance-subtle-delayed">
                   Complete courses. Exclusive resources. Active community. Latest AI tools & updates. Start building today.
@@ -193,7 +193,7 @@ const VibeCodingAndAIProductBuilderClub = () => {
                 <div className="flex flex-col gap-3 sm:flex-row justify-center max-w-md mx-auto px-4 sm:px-0">
                   <Button variant="cta" size="lg" className="w-full sm:w-auto sm:min-w-[200px] blur-entrance-subtle" asChild>
                     <a href="https://www.skool.com/ai-design-academy-6114/about?ref=8d68f8fa4bf2422c8318d51d5f9fcadc" target="_blank" rel="noopener noreferrer">
-                      Join the Club
+                      Join Membership
                       <ArrowRight className="h-5 w-5" />
                       </a>
                     </Button>
@@ -368,7 +368,7 @@ const VibeCodingAndAIProductBuilderClub = () => {
                   <div className="aspect-video w-full">
                     <iframe 
                       src="https://www.youtube.com/embed/u-1dBIsXPM0?rel=0&modestbranding=1" 
-                      title="AI Product Builder Club Resources" 
+                      title="AI Academy Resources" 
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                       allowFullScreen 
                       loading="lazy" 
@@ -387,14 +387,14 @@ const VibeCodingAndAIProductBuilderClub = () => {
             animation: "glowPulse 6s ease-in-out infinite"
           }} aria-hidden="true" />
             <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-10 text-center">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium mb-4 tracking-tight">Ready to Join the Club?</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium mb-4 tracking-tight">Ready to Join AI Academy?</h2>
               <p className="text-lg md:text-xl text-white/60 mb-8 max-w-2xl mx-auto px-2 font-medium">
                 Join a community of builders creating the next generation of AI products. Start building, learning, and growing with us today.
               </p>
               <div className="flex flex-col gap-3 sm:flex-row justify-center">
                 <Button variant="cta" size="lg" className="w-full sm:w-auto sm:min-w-[200px]" asChild>
                   <a href="https://www.skool.com/ai-design-academy-6114/about?ref=8d68f8fa4bf2422c8318d51d5f9fcadc" target="_blank" rel="noopener noreferrer">
-                    Join the Club - $99/month
+                    Join Membership - $99/month
                     <ArrowRight className="h-5 w-5" />
                   </a>
                 </Button>

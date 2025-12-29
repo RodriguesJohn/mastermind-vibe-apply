@@ -42,7 +42,7 @@ export const CoursePricingSection = () => {
         <div className="max-w-[1200px] mx-auto">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 space-y-3 sm:space-y-4">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">
-              Join the AI Product Builder Club
+              AI Academy Membership
             </h2>
           </div>
           
@@ -50,7 +50,7 @@ export const CoursePricingSection = () => {
             <Card className="border-white/5 shadow-2xl relative overflow-hidden bg-black">
               <CardHeader className="text-left pb-6 sm:pb-8 pt-4 sm:pt-6 px-4 sm:px-6">
                 <CardTitle className="text-2xl sm:text-3xl md:text-4xl font-medium tracking-tight mb-3 sm:mb-4">
-                  Access to the AI Product Builder Club
+                  AI Academy Membership
                 </CardTitle>
               </CardHeader>
               
@@ -81,7 +81,7 @@ export const CoursePricingSection = () => {
 
                 <Button size="xl" className="w-full mt-6 sm:mt-8 text-base sm:text-lg" variant="cta" asChild>
                   <a href="https://www.skool.com/ai-design-academy-6114/about?ref=8d68f8fa4bf2422c8318d51d5f9fcadc" target="_blank" rel="noopener noreferrer">
-                    Join the Club - $99/month
+                    Join Membership - $99/month
                   </a>
                 </Button>
               </CardContent>

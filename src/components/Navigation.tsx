@@ -31,8 +31,8 @@ export const Navigation = () => {
             <a href="/" className="text-sm font-normal hover:text-primary transition-colors">
               Cohort
             </a>
-            <a href="/club" className="text-sm font-normal hover:text-primary transition-colors">
-              Club
+            <a href="/membership" className="text-sm font-normal hover:text-primary transition-colors">
+              Membership
             </a>
             <a href="https://johnrodrigues.substack.com/" target="_blank" rel="noopener noreferrer" className="text-sm font-normal hover:text-primary transition-colors">
               Playbook
@@ -83,8 +83,8 @@ export const Navigation = () => {
                 <a href="/" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
                   Cohort
                 </a>
-                <a href="/club" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
-                  Club
+                <a href="/membership" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
+                  Membership
                 </a>
                 <a href="https://johnrodrigues.substack.com/" target="_blank" rel="noopener noreferrer" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
                   Playbook
