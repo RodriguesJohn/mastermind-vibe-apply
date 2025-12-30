@@ -1,5 +1,4 @@
 import { Check, ChevronLeft, ChevronRight } from "lucide-react";
-import { MeshGradient } from "@paper-design/shaders-react";
 import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 const outcomes = [{
@@ -204,37 +203,16 @@ export const OutcomesSection = () => {
                 style={{ width: 'max-content' }}
               >
                 {duplicatedOutcomes.map((outcome, index) => <div key={index} className="relative rounded-xl border border-white/10 hover:border-white/30 transition-all overflow-hidden group bg-black flex flex-col flex-shrink-0 w-[300px] sm:w-[350px] md:w-[400px]">
-                    {/* Top Section - Gradient Shader */}
-                    <div className="relative h-32 w-full overflow-hidden bg-black">
-                      <div className="absolute inset-0 w-full h-full" style={{ minHeight: '128px' }}>
-                        <MeshGradient 
-                          width={400} 
-                          height={128} 
-                          colors={outcome.colors} 
-                          distortion={0.8} 
-                          swirl={0.6} 
-                          speed={0.42} 
-                          offsetX={0.08}
-                          style={{ width: '100%', height: '100%', display: 'block' }}
-                        />
+                    {/* Content Section */}
+                    <div className="flex items-start gap-3 sm:gap-4 p-6 sm:p-8 bg-black">
+                      <div className="flex-shrink-0 w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center mt-1 border border-white/20 group-hover:bg-white/20 transition-colors">
+                        <Check className="w-4 h-4 sm:w-5 sm:h-5 text-green-400" />
                       </div>
-                      {/* Faded black gradient overlay for smooth transition */}
-                      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-black/60 z-10 pointer-events-none" />
-                    </div>
-                    
-                    {/* Transition overlay for smoother blend */}
-                    <div className="absolute top-24 left-0 right-0 h-12 bg-gradient-to-b from-black/60 via-black/80 to-black pointer-events-none z-10" />
-                    
-                    {/* Bottom Section - Text Content */}
-                    <div className="relative flex items-start gap-3 sm:gap-4 p-4 sm:p-6 bg-black -mt-6 pt-8 sm:pt-10 z-20">
-                      <div className="flex-shrink-0 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center mt-0.5 border border-white/30">
-                        <Check className="w-3 h-3 sm:w-4 sm:h-4 text-green-500" />
-                      </div>
-                      <div className="flex-1">
-                        <p className="text-base sm:text-lg leading-relaxed text-white font-semibold mb-1 sm:mb-2">
+                      <div className="flex-1 space-y-3">
+                        <h3 className="text-lg sm:text-xl leading-tight text-white font-semibold">
                           {outcome.text}
-                    </p>
-                        <p className="sm:text-sm leading-relaxed text-white/70 font-light text-base">
+                        </h3>
+                        <p className="text-sm sm:text-base leading-relaxed text-white/70">
                           {outcome.description}
                         </p>
                       </div>
