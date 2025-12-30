@@ -3,48 +3,32 @@ import { MeshGradient } from "@paper-design/shaders-react";
 import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 const outcomes = [{
-  text: "Stay up to date with the latest AI industry changes and tools",
-  description: "This membership helps you and your team stay current with rapidly evolving AI technologies and industry trends.",
+  text: "Getting Started with AI Course",
+  description: "A foundational, step-by-step course to understand AI basics, core concepts, and how to start using AI confidently in real product and design workflows.",
   colors: ["#FF6B6B", "#FFD93D", "#FF8E53", "#FF6B9D"]
 }, {
-  text: "Strengthen AI skills and improve everyday workflows",
-  description: "This membership helps you and your team build practical AI capabilities that enhance your daily work processes.",
+  text: "Cursor – Complete Course",
+  description: "A practical, end-to-end guide to using Cursor for AI-assisted coding, prototyping, and shipping faster—no fluff, just real workflows.",
   colors: ["#4ECDC4", "#87CEEB", "#DA70D6", "#BA55D3"]
 }, {
-  text: "Strategically integrate AI to drive real product outcomes",
-  description: "This membership helps you and your team leverage AI strategically to achieve measurable product results.",
+  text: "Prototyping iOS Apps with AI",
+  description: "Learn how to design, prototype, and build iOS apps using AI tools, SwiftUI, and modern AI-native workflows—from idea to working prototype.",
   colors: ["#95E1D3", "#F38181", "#FCE38A", "#AAE3F0"]
 }, {
-  text: "Follow structured, step-by-step courses built on proven curriculum",
-  description: "This membership helps you and your team learn through systematic, tested learning paths designed for real-world application.",
+  text: "Tools & Credits Hub",
+  description: "A curated library of AI tools, platforms, and exclusive credits you can use to experiment, prototype, and build without wasting time or money.",
   colors: ["#00D4AA", "#00C9FF", "#5B8DEF", "#A855F7"]
 }, {
-  text: "Getting Started with AI",
-  description: "Courses include: Learn the fundamentals of AI and how to get started on your AI journey.",
-  colors: ["#FF6B6B", "#FFD93D", "#FF8E53", "#FF6B9D"]
-}, {
-  text: "Cursor AI",
-  description: "Courses include: Master Cursor AI to build AI-powered products and applications efficiently.",
-  colors: ["#4ECDC4", "#87CEEB", "#DA70D6", "#BA55D3"]
-}, {
-  text: "Prototyping iOS Mobile Apps with AI & SwiftUI",
-  description: "Courses include: Learn to prototype native iOS apps using AI tools and SwiftUI framework.",
-  colors: ["#95E1D3", "#F38181", "#FCE38A", "#AAE3F0"]
-}, {
-  text: "Complete Figma Course",
-  description: "Courses include: Comprehensive Figma training to design and prototype with professional tools.",
-  colors: ["#00D4AA", "#00C9FF", "#5B8DEF", "#A855F7"]
-}, {
-  text: "Productivity with AI resources",
-  description: "Additional resources: Access tools and strategies to boost your productivity using AI.",
+  text: "AI Design Playbook",
+  description: "A living playbook of frameworks, patterns, and best practices for designing AI-native and agentic products grounded in human-centered UX.",
   colors: ["#C44569", "#D68FD6", "#E3A0D3", "#FF8CC8"]
 }, {
-  text: "AI tools hub and credits",
-  description: "Additional resources: Get access to a curated hub of AI tools and credits to use them effectively.",
+  text: "Productivity System Track",
+  description: "Systems, workflows, and automations to help you work faster, think clearer, and leverage AI as a true productivity multiplier.",
   colors: ["#6C5CE7", "#A29BFE", "#74B9FF", "#0984E3"]
 }, {
-  text: "Behind-the-scenes insights from building AI products",
-  description: "Additional resources: Learn from real-world experiences and insights gained from building actual AI products.",
+  text: "Figma Course",
+  description: "A practical Figma course focused on real product design workflows, systems thinking, and collaboration—not just buttons and frames.",
   colors: ["#FF6B6B", "#FFD93D", "#FF8E53", "#FF6B9D"]
 }];
 const headerCards = [{
@@ -63,6 +47,7 @@ export const OutcomesSection = () => {
   const [canScrollRight, setCanScrollRight] = useState(true);
   const [isAutoScrolling, setIsAutoScrolling] = useState(true);
   const autoScrollRef = useRef<number | null>(null);
+  const isAutoScrollingRef = useRef(true);
 
   const checkScrollability = () => {
     if (scrollContainerRef.current) {
@@ -94,38 +79,59 @@ export const OutcomesSection = () => {
       });
       
       setTimeout(checkScrollability, 300);
+      
+      // Resume auto-scroll after 3 seconds
+      setTimeout(() => {
+        setIsAutoScrolling(true);
+      }, 3000);
     }
   };
 
+  // Sync ref with state
   useEffect(() => {
-    checkScrollability();
-    
-    // Auto-scroll functionality
-    const startAutoScroll = () => {
-      if (scrollContainerRef.current && isAutoScrolling) {
-        const scroll = () => {
-          if (scrollContainerRef.current && isAutoScrolling) {
-            scrollContainerRef.current.scrollLeft += 0.5;
-            
-            // Reset to beginning when reaching the end (for seamless loop)
-            if (scrollContainerRef.current.scrollLeft >= scrollContainerRef.current.scrollWidth / 2) {
-              scrollContainerRef.current.scrollLeft = 0;
-            }
-            
-            autoScrollRef.current = requestAnimationFrame(scroll);
-          }
-        };
-        autoScrollRef.current = requestAnimationFrame(scroll);
-      }
-    };
+    isAutoScrollingRef.current = isAutoScrolling;
+  }, [isAutoScrolling]);
 
-    if (isAutoScrolling) {
-      startAutoScroll();
-    }
-
-    return () => {
+  useEffect(() => {
+    // Small delay to ensure DOM is ready
+    const timer = setTimeout(() => {
+      checkScrollability();
+      
+      // Clean up any existing animation
       if (autoScrollRef.current) {
         cancelAnimationFrame(autoScrollRef.current);
+        autoScrollRef.current = null;
+      }
+      
+      // Auto-scroll functionality
+      if (isAutoScrolling && scrollContainerRef.current) {
+        const container = scrollContainerRef.current;
+        
+        // Only start scrolling if content actually overflows
+        if (container.scrollWidth > container.clientWidth) {
+          const scroll = () => {
+            if (container && isAutoScrollingRef.current) {
+              const currentScroll = container.scrollLeft;
+              container.scrollLeft = currentScroll + 0.3;
+              
+              // Reset to beginning when reaching the end (for seamless loop)
+              if (container.scrollLeft >= container.scrollWidth / 2) {
+                container.scrollLeft = 0;
+              }
+              
+              autoScrollRef.current = requestAnimationFrame(scroll);
+            }
+          };
+          autoScrollRef.current = requestAnimationFrame(scroll);
+        }
+      }
+    }, 200);
+
+    return () => {
+      clearTimeout(timer);
+      if (autoScrollRef.current) {
+        cancelAnimationFrame(autoScrollRef.current);
+        autoScrollRef.current = null;
       }
     };
   }, [isAutoScrolling]);
@@ -141,11 +147,8 @@ export const OutcomesSection = () => {
         <div className="max-w-[1200px] mx-auto">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 space-y-3 sm:space-y-4">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium">
-              What You'll Achieve
+              What's Included
             </h2>
-            <p className="text-base sm:text-lg text-white/70 max-w-2xl mx-auto">
-              This membership helps you and your team:
-            </p>
           </div>
           
           {/* Horizontal Scrolling Container with Controls */}
@@ -154,26 +157,29 @@ export const OutcomesSection = () => {
             <Button
               variant="outline"
               size="icon"
-              className="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-black/80 border-white/20 hover:bg-black hover:border-white/40 h-12 w-12 rounded-full"
+              className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-30 bg-black/90 backdrop-blur-sm border-white/30 hover:bg-black hover:border-white/50 h-12 w-12 rounded-full shadow-lg transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed"
               onClick={() => scroll('left')}
               disabled={!canScrollLeft}
+              aria-label="Scroll left"
             >
-              <ChevronLeft className="h-6 w-6" />
+              <ChevronLeft className="h-6 w-6 text-white" />
             </Button>
 
             {/* Right Arrow */}
             <Button
               variant="outline"
               size="icon"
-              className="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-black/80 border-white/20 hover:bg-black hover:border-white/40 h-12 w-12 rounded-full"
+              className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-30 bg-black/90 backdrop-blur-sm border-white/30 hover:bg-black hover:border-white/50 h-12 w-12 rounded-full shadow-lg transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed"
               onClick={() => scroll('right')}
               disabled={!canScrollRight}
+              aria-label="Scroll right"
             >
-              <ChevronRight className="h-6 w-6" />
+              <ChevronRight className="h-6 w-6 text-white" />
             </Button>
 
             {/* Scroll Container */}
             <div 
+              ref={scrollContainerRef}
               className="overflow-x-auto scrollbar-hide"
               onScroll={checkScrollability}
               onMouseEnter={() => setIsAutoScrolling(false)}
@@ -186,9 +192,8 @@ export const OutcomesSection = () => {
                 }
               `}</style>
               <div 
-                ref={scrollContainerRef}
                 className="flex gap-4 sm:gap-6 pb-4"
-                style={{ scrollBehavior: 'smooth' }}
+                style={{ width: 'max-content' }}
               >
                 {duplicatedOutcomes.map((outcome, index) => <div key={index} className="relative rounded-xl border border-white/10 hover:border-white/30 transition-all overflow-hidden group bg-black flex flex-col flex-shrink-0 w-[300px] sm:w-[350px] md:w-[400px]">
                     {/* Top Section - Gradient Shader */}

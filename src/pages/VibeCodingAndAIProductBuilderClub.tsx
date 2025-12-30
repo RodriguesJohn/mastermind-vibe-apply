@@ -211,6 +211,41 @@ const VibeCodingAndAIProductBuilderClub = () => {
           {/* Outcomes Section */}
           <OutcomesSection />
 
+          {/* Who is this for Section */}
+          <section className="relative border-b border-white/5 bg-[#0E0E10] py-12 sm:py-16 md:py-20 overflow-hidden">
+            {/* Colorful shader effects */}
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(147,51,234,0.15)_0%,_rgba(0,0,0,0)_50%)] pointer-events-none" style={{
+            animation: "glowMove 8s ease-in-out infinite"
+          }} aria-hidden="true" />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(34,197,94,0.1)_0%,_rgba(0,0,0,0)_70%)] pointer-events-none" style={{
+            animation: "glowPulse 6s ease-in-out infinite"
+          }} aria-hidden="true" />
+            <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-10">
+              <div className="text-center mb-8 sm:mb-12 md:mb-16">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium">
+                  Who is this for?
+                </h2>
+              </div>
+              <div className="grid gap-6 md:grid-cols-3 max-w-5xl mx-auto">
+                <Card className="border-white/10 bg-white/5 p-6 hover:border-white/20 transition-colors">
+                  <div className="text-4xl font-bold text-white/60 mb-4">01</div>
+                  <h3 className="text-xl font-semibold text-white mb-3">Product Designers and Product Managers</h3>
+                  <p className="text-white/70 leading-relaxed">Looking to integrate AI into your product workflows and build AI-powered features that enhance user experiences.</p>
+                </Card>
+                <Card className="border-white/10 bg-white/5 p-6 hover:border-white/20 transition-colors">
+                  <div className="text-4xl font-bold text-white/60 mb-4">02</div>
+                  <h3 className="text-xl font-semibold text-white mb-3">AI Product Builders</h3>
+                  <p className="text-white/70 leading-relaxed">Ready to level up your AI product development skills and learn proven frameworks for building AI-native experiences.</p>
+                </Card>
+                <Card className="border-white/10 bg-white/5 p-6 hover:border-white/20 transition-colors">
+                  <div className="text-4xl font-bold text-white/60 mb-4">03</div>
+                  <h3 className="text-xl font-semibold text-white mb-3">AI Consultants</h3>
+                  <p className="text-white/70 leading-relaxed">Want to expand your consulting services with AI expertise and deliver cutting-edge solutions to your clients.</p>
+                </Card>
+              </div>
+            </div>
+          </section>
+
           {/* Video Slider Section */}
           {/* <VideoSlider /> */}
 
