@@ -132,12 +132,13 @@ export const AIHeaderSection = () => {
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium mb-4 tracking-tight leading-relaxed text-center">
-              AI Mastery Live Cohort
-              <span className="block">For Designers & Product Leaders</span>
+              AI Mastery for Designers
+              <span className="block">From Overwhelm to Confidence</span>
+              <span className="block">in 5 Weeks</span>
             </h1>
 
             <p className="text-lg md:text-medium text-white/60 font-light mb-8 leading-relaxed max-w-3xl mx-auto">
-              Stay ahead and upskill today. Learn how to design AI apps and systems.
+              80% of organizations are adopting AI this 5-week cohort shows designers how to apply it and drive outcomes through structured resources and hands-on, live sessions. Enroll in the cohort today.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

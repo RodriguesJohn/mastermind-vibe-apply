@@ -30,6 +30,14 @@ const outcomes = [{
   text: "Figma Course",
   description: "A practical Figma course focused on real product design workflows, systems thinking, and collaboration—not just buttons and frames.",
   colors: ["#FF6B6B", "#FFD93D", "#FF8E53", "#FF6B9D"]
+}, {
+  text: "Onboards Included",
+  description: "Get personalized onboarding sessions to help you get started and make the most of your membership from day one.",
+  colors: ["#F59E0B", "#F97316", "#EF4444", "#DC2626"]
+}, {
+  text: "Monthly 30 Minutes Live Office Hours",
+  description: "Join monthly live office hours for direct Q&A, personalized guidance, and real-time support from the community and instructors.",
+  colors: ["#10B981", "#059669", "#047857", "#065F46"]
 }];
 const headerCards = [{
   title: "Getting Started Master Prompt",
