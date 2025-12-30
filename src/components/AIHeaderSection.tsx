@@ -159,7 +159,7 @@ export const AIHeaderSection = () => {
               80% of organizations are adopting AI this 5-week cohort shows designers how to apply it and drive outcomes through structured resources and hands-on, live sessions. Enroll in the cohort today.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 md:mb-16">
               <Button 
                 variant="cta" 
                 size="lg"
