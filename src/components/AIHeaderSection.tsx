@@ -93,7 +93,22 @@ export const AIHeaderSection = () => {
                 }
               }
               .ai-header-h1 {
-                line-height: 54px !important;
+                line-height: 40px !important;
+              }
+              @media (min-width: 640px) {
+                .ai-header-h1 {
+                  line-height: 28px !important;
+                }
+              }
+              @media (min-width: 768px) {
+                .ai-header-h1 {
+                  line-height: 54px !important;
+                }
+              }
+              @media (min-width: 1024px) {
+                .ai-header-h1 {
+                  line-height: 56px !important;
+                }
               }
             `}
           </style>
@@ -134,13 +149,13 @@ export const AIHeaderSection = () => {
               </span>
             </div>
 
-            <h1 className="ai-header-h1 text-[11px] sm:text-xl md:text-[54px] lg:text-[56px] font-medium mb-4 tracking-tight text-center pt-[1px] pb-[1px]">
+            <h1 className="ai-header-h1 text-3xl sm:text-xl md:text-[54px] lg:text-[56px] font-medium mb-4 tracking-tight text-center pt-[1px] pb-[1px]">
               AI Mastery for Designers
               <span className="block">From Overwhelm to Confidence</span>
               <span className="block">in 5 Weeks</span>
             </h1>
 
-            <p className="text-lg md:text-medium text-white/60 font-light mb-8 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-sm md:text-medium text-white/60 font-light mb-8 leading-relaxed max-w-3xl mx-auto">
               80% of organizations are adopting AI this 5-week cohort shows designers how to apply it and drive outcomes through structured resources and hands-on, live sessions. Enroll in the cohort today.
             </p>
 
