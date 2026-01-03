@@ -201,17 +201,13 @@ const VibeCodingAndAIProductBuilderClub = () => {
 
                 {/* CTA Buttons - Centered */}
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 sm:mb-20 md:mb-24">
-                  <Button variant="cta" size="lg" className="w-full sm:w-auto sm:min-w-[220px] h-12 text-base font-medium" asChild>
-                    <a href="https://www.skool.com/ai-design-academy-6114/about?ref=8d68f8fa4bf2422c8318d51d5f9fcadc" target="_blank" rel="noopener noreferrer">
-                      Request Invite
-                      <ArrowRight className="h-5 w-5" />
-                    </a>
+                  <Button variant="cta" size="lg" className="w-full sm:w-auto sm:min-w-[220px] h-12 text-base font-medium">
+                    Request Invite
+                    <ArrowRight className="h-5 w-5" />
                   </Button>
-                  <Button variant="outline" size="lg" className="w-full sm:w-auto sm:min-w-[220px] h-12 text-base font-medium bg-white/5 border-white/20 text-white hover:bg-white/10 hover:border-white/30 transition-all duration-300" asChild>
-                    <a href="https://www.skool.com/ai-design-academy-6114/about?ref=8d68f8fa4bf2422c8318d51d5f9fcadc" target="_blank" rel="noopener noreferrer">
-                      Member Login
-                      <ArrowRight className="h-5 w-5" />
-                    </a>
+                  <Button variant="outline" size="lg" className="w-full sm:w-auto sm:min-w-[220px] h-12 text-base font-medium bg-white/5 border-white/20 text-white hover:bg-white/10 hover:border-white/30 transition-all duration-300">
+                    Member Login
+                    <ArrowRight className="h-5 w-5" />
                   </Button>
                 </div>
               </div>
