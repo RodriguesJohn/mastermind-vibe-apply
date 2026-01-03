@@ -186,8 +186,8 @@ const VibeCodingAndAIProductBuilderClub = () => {
               {/* Header Section - Centered */}
               <div className="text-center mb-16 sm:mb-20 md:mb-24">
                 {/* Exclusive Badge */}
-                <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-5 py-2.5 text-sm font-medium text-primary border border-primary/20 mb-8">
-                  <ShieldCheck className="h-4 w-4" />
+                <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-5 py-2.5 text-sm font-medium text-white border border-primary/20 mb-8">
+                  <ShieldCheck className="h-4 w-4 text-white" />
                   Exclusive for Cohort Members Only
                 </div>
                 
