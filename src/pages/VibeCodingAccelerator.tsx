@@ -235,21 +235,31 @@ const VibeCodingAccelerator = () => {
                 </p>
                 <div className="flex flex-col gap-3 sm:flex-row justify-center max-w-md mx-auto px-4 sm:px-0">
                   <Button variant="cta" size="lg" className="w-full sm:w-auto sm:min-w-[200px] blur-entrance-subtle" asChild>
-                    <a href="https://www.skool.com/ai-design-academy-6114/about?ref=8d68f8fa4bf2422c8318d51d5f9fcadc" target="_blank" rel="noopener noreferrer">
-                      Join Membership
-                      <ArrowRight className="h-5 w-5" />
-                      </a>
-                    </Button>
-                  <Button variant="outline" size="lg" className="bg-white text-gray-600 border-white hover:bg-white hover:text-black hover:shadow-lg hover:scale-105 transition-all duration-300 w-full sm:w-auto sm:min-w-[200px] blur-entrance-subtle" asChild>
                     <a href="https://ai-design-academy-s-school.teachable.com/l/pdp/vibe-coding-101-course-build-your-first-ai-app-in-days" target="_blank" rel="noopener noreferrer">
-                      Log In
+                      Login
                       <ArrowRight className="h-5 w-5" />
                     </a>
                   </Button>
-                  </div>
+                </div>
                 </div>
                 {/* Note */}
                 <div className="mt-8 sm:mt-10 max-w-2xl mx-auto">
+                  <div className="bg-white/20 rounded-lg border border-white/20 p-4 sm:p-6">
+                    <p className="text-sm sm:text-base text-white/90 leading-relaxed text-center">
+                      <strong className="text-white">Note:</strong> This course is now moved under Cohort.{" "}
+                      <a 
+                        href="/" 
+                        className="text-white hover:text-white/80 underline font-medium transition-colors inline-flex items-center gap-1"
+                      >
+                        Join the cohort here
+                        <ArrowRight className="h-4 w-4" />
+                      </a>
+                      .
+                    </p>
+                  </div>
+                </div>
+                {/* Old Note - Hidden */}
+                <div className="hidden mt-8 sm:mt-10 max-w-2xl mx-auto">
                   <div className="bg-white/100 rounded-lg border border-white/20 p-4 sm:p-6">
                     <p className="text-sm sm:text-base text-gray-900 leading-relaxed">
                       <strong className="text-gray-900">Note:</strong> This course has now been moved to{" "}

@@ -177,80 +177,100 @@ const VibeCodingAndAIProductBuilderClub = () => {
         <Navigation />
         
         <main className="pb-20">
-          {/* Hero */}
-          <section className="relative overflow-hidden border-b border-white/5 bg-[#0E0E10] py-20 sm:py-32 md:py-40 lg:py-48">
+          {/* Exclusive Membership Header */}
+          <section className="relative overflow-hidden border-b border-white/5 bg-[#0E0E10] py-24 sm:py-32 md:py-40 lg:py-48 min-h-screen flex items-center">
             {/* Shader background */}
             <DotScreenShader />
 
-            <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-10">
-              <div className="space-y-4 sm:space-y-6 text-center relative">
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-bold tracking-tight leading-[1.3] relative blur-entrance">
+            <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-10 w-full">
+              {/* Header Section - Centered */}
+              <div className="text-center mb-16 sm:mb-20 md:mb-24">
+                {/* Exclusive Badge */}
+                <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-5 py-2.5 text-sm font-medium text-primary border border-primary/20 mb-8">
+                  <ShieldCheck className="h-4 w-4" />
+                  Exclusive for Cohort Members Only
+                </div>
+                
+                <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.1] mb-6 text-white">
                   AI Academy<br />Membership
-                  </h1>
-                <p className="text-sm sm:text-base text-white/60 mx-auto max-w-2xl px-2 leading-relaxed font-medium blur-entrance-subtle-delayed">
-                  Complete courses. Exclusive resources. Active community. Latest AI tools & updates. Start building today.
+                </h1>
+                
+                <p className="text-xl sm:text-2xl md:text-3xl text-white/60 leading-relaxed font-light max-w-3xl mx-auto mb-8">
+                  Continue your journey with exclusive access to ongoing learning, community, and resources.
                 </p>
-                <div className="flex flex-col gap-3 sm:flex-row justify-center max-w-md mx-auto px-4 sm:px-0">
-                  <Button variant="cta" size="lg" className="w-full sm:w-auto sm:min-w-[200px] blur-entrance-subtle" asChild>
+
+                {/* CTA Buttons - Centered */}
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 sm:mb-20 md:mb-24">
+                  <Button variant="cta" size="lg" className="w-full sm:w-auto sm:min-w-[220px] h-12 text-base font-medium" asChild>
                     <a href="https://www.skool.com/ai-design-academy-6114/about?ref=8d68f8fa4bf2422c8318d51d5f9fcadc" target="_blank" rel="noopener noreferrer">
-                      Join Membership
+                      Request Invite
                       <ArrowRight className="h-5 w-5" />
-                      </a>
-                    </Button>
-                  <Button variant="outline" size="lg" className="bg-white text-gray-600 border-white hover:bg-white hover:text-black hover:shadow-lg hover:scale-105 transition-all duration-300 w-full sm:w-auto sm:min-w-[200px] blur-entrance-subtle" asChild>
+                    </a>
+                  </Button>
+                  <Button variant="outline" size="lg" className="w-full sm:w-auto sm:min-w-[220px] h-12 text-base font-medium bg-white/5 border-white/20 text-white hover:bg-white/10 hover:border-white/30 transition-all duration-300" asChild>
                     <a href="https://www.skool.com/ai-design-academy-6114/about?ref=8d68f8fa4bf2422c8318d51d5f9fcadc" target="_blank" rel="noopener noreferrer">
                       Member Login
                       <ArrowRight className="h-5 w-5" />
                     </a>
                   </Button>
-                  </div>
                 </div>
               </div>
-          </section>
 
-          {/* Outcomes Section */}
-          <OutcomesSection />
-
-          {/* Who is this for Section */}
-          <section className="relative border-b border-white/5 bg-[#0E0E10] py-12 sm:py-16 md:py-20 overflow-hidden">
-            {/* Colorful shader effects */}
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(147,51,234,0.15)_0%,_rgba(0,0,0,0)_50%)] pointer-events-none" style={{
-            animation: "glowMove 8s ease-in-out infinite"
-          }} aria-hidden="true" />
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(34,197,94,0.1)_0%,_rgba(0,0,0,0)_70%)] pointer-events-none" style={{
-            animation: "glowPulse 6s ease-in-out infinite"
-          }} aria-hidden="true" />
-            <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-10">
-              <div className="text-center mb-8 sm:mb-12 md:mb-16">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium">
-                  Who is this for?
-                </h2>
-              </div>
-              <div className="grid gap-6 md:grid-cols-3 max-w-5xl mx-auto">
-                <Card className="border-white/10 bg-white/5 p-6 hover:border-white/20 transition-colors">
-                  <div className="text-4xl font-bold text-white/60 mb-4">01</div>
-                  <h3 className="text-xl font-semibold text-white mb-3">Product Designers and Product Managers</h3>
-                  <p className="text-white/70 leading-relaxed">Looking to integrate AI into your product workflows and build AI-powered features that enhance user experiences.</p>
-                </Card>
-                <Card className="border-white/10 bg-white/5 p-6 hover:border-white/20 transition-colors">
-                  <div className="text-4xl font-bold text-white/60 mb-4">02</div>
-                  <h3 className="text-xl font-semibold text-white mb-3">AI Product Builders</h3>
-                  <p className="text-white/70 leading-relaxed">Ready to level up your AI product development skills and learn proven frameworks for building AI-native experiences.</p>
-                </Card>
-                <Card className="border-white/10 bg-white/5 p-6 hover:border-white/20 transition-colors">
-                  <div className="text-4xl font-bold text-white/60 mb-4">03</div>
-                  <h3 className="text-xl font-semibold text-white mb-3">AI Consultants</h3>
-                  <p className="text-white/70 leading-relaxed">Want to expand your consulting services with AI expertise and deliver cutting-edge solutions to your clients.</p>
-                </Card>
+              {/* Features Grid - Centered 2x2 */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+                <div className="group p-8 rounded-2xl border border-white/10 bg-white/3 hover:bg-white/5 hover:border-white/20 transition-all duration-300 backdrop-blur-sm">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="p-3 rounded-xl bg-primary/10 border border-primary/20">
+                      <BookOpen className="h-6 w-6 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white">Continuous Courses</h3>
+                  </div>
+                  <p className="text-white/70 text-base leading-relaxed">Access to ongoing courses and learning materials to keep advancing your skills.</p>
+                </div>
+                
+                <div className="group p-8 rounded-2xl border border-white/10 bg-white/3 hover:bg-white/5 hover:border-white/20 transition-all duration-300 backdrop-blur-sm">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="p-3 rounded-xl bg-primary/10 border border-primary/20">
+                      <CalendarDays className="h-6 w-6 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white">Monthly Live Sessions</h3>
+                  </div>
+                  <p className="text-white/70 text-base leading-relaxed">Join monthly live sessions with industry experts and community members.</p>
+                </div>
+                
+                <div className="group p-8 rounded-2xl border border-white/10 bg-white/3 hover:bg-white/5 hover:border-white/20 transition-all duration-300 backdrop-blur-sm">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="p-3 rounded-xl bg-primary/10 border border-primary/20">
+                      <Video className="h-6 w-6 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white">Behind-the-Scenes Walkthroughs</h3>
+                  </div>
+                  <p className="text-white/70 text-base leading-relaxed">Get exclusive access to behind-the-scenes content and project walkthroughs.</p>
+                </div>
+                
+                <div className="group p-8 rounded-2xl border border-white/10 bg-white/3 hover:bg-white/5 hover:border-white/20 transition-all duration-300 backdrop-blur-sm">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="p-3 rounded-xl bg-primary/10 border border-primary/20">
+                      <Users className="h-6 w-6 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white">Community Support</h3>
+                  </div>
+                  <p className="text-white/70 text-base leading-relaxed">Direct access to community support and discussions with fellow members.</p>
+                </div>
               </div>
             </div>
           </section>
+
+          {/* Outcomes Section */}
+          <div className="hidden">
+            <OutcomesSection />
+          </div>
 
           {/* Video Slider Section */}
           {/* <VideoSlider /> */}
 
           {/* Meet your instructor */}
-          <section className="relative border-b border-white/5 bg-[#0E0E10] py-12 sm:py-16 md:py-20 overflow-hidden">
+          <section className="hidden relative border-b border-white/5 bg-[#0E0E10] py-12 sm:py-16 md:py-20 overflow-hidden">
             {/* Colorful shader effects */}
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(147,51,234,0.15)_0%,_rgba(0,0,0,0)_50%)] pointer-events-none" style={{
             animation: "glowMove 8s ease-in-out infinite"
@@ -359,10 +379,12 @@ const VibeCodingAndAIProductBuilderClub = () => {
           </section>
 
           {/* Pricing Section */}
-          <CoursePricingSection />
+          <div className="hidden">
+            <CoursePricingSection />
+          </div>
 
           {/* FAQ */}
-          <section className="relative border-b border-white/5 bg-[#0E0E10] py-12 sm:py-16 md:py-20 overflow-hidden">
+          <section className="hidden relative border-b border-white/5 bg-[#0E0E10] py-12 sm:py-16 md:py-20 overflow-hidden">
             {/* Colorful shader effects */}
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(168,85,247,0.15)_0%,_rgba(0,0,0,0)_50%)] pointer-events-none" style={{
             animation: "glowMove 8s ease-in-out infinite"
@@ -388,7 +410,7 @@ const VibeCodingAndAIProductBuilderClub = () => {
           </section>
 
           {/* Resources Section */}
-          <section className="relative border-b border-white/5 bg-[#0E0E10] py-12 sm:py-16 md:py-20 overflow-hidden">
+          <section className="hidden relative border-b border-white/5 bg-[#0E0E10] py-12 sm:py-16 md:py-20 overflow-hidden">
             {/* Colorful shader effects */}
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(168,85,247,0.15)_0%,_rgba(0,0,0,0)_50%)] pointer-events-none" style={{
             animation: "glowMove 8s ease-in-out infinite"
@@ -416,7 +438,7 @@ const VibeCodingAndAIProductBuilderClub = () => {
           </section>
 
           {/* Final CTA Section */}
-          <section className="relative bg-[#0E0E10] py-16 sm:py-20 md:py-24 overflow-hidden border-t border-white/5">
+          <section className="hidden relative bg-[#0E0E10] py-16 sm:py-20 md:py-24 overflow-hidden border-t border-white/5">
             {/* Shader effects */}
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(59,130,246,0.15)_0%,_rgba(0,0,0,0)_70%)] pointer-events-none" style={{
             animation: "glowPulse 6s ease-in-out infinite"

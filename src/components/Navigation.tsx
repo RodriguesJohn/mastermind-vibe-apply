@@ -31,9 +31,6 @@ export const Navigation = () => {
             <a href="/" className="text-sm font-normal hover:text-primary transition-colors">
               Cohort
             </a>
-            <a href="/membership" className="text-sm font-normal hover:text-primary transition-colors">
-              Membership
-            </a>
             <a href="https://johnrodrigues.substack.com/" target="_blank" rel="noopener noreferrer" className="text-sm font-normal hover:text-primary transition-colors">
               Playbook
             </a>
@@ -43,6 +40,11 @@ export const Navigation = () => {
                 <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
               <DropdownMenuContent align="start" className="w-56">
+                <DropdownMenuItem asChild>
+                  <a href="/membership" className="cursor-pointer">
+                    Membership
+                  </a>
+                </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <a href="/vibe-coding-course" className="cursor-pointer">
                     Vibe Coding Course
@@ -83,14 +85,14 @@ export const Navigation = () => {
                 <a href="/" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
                   Cohort
                 </a>
-                <a href="/membership" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
-                  Membership
-                </a>
                 <a href="https://johnrodrigues.substack.com/" target="_blank" rel="noopener noreferrer" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
                   Playbook
                 </a>
                 <div className="flex flex-col gap-2">
                   <span className="text-base font-normal text-foreground/60 py-2">More</span>
+                  <a href="/membership" className="text-base font-normal hover:text-primary transition-colors py-2 pl-4" onClick={() => setMobileMenuOpen(false)}>
+                    Membership
+                  </a>
                   <a href="/vibe-coding-course" className="text-base font-normal hover:text-primary transition-colors py-2 pl-4" onClick={() => setMobileMenuOpen(false)}>
                     Vibe Coding Course
                   </a>
