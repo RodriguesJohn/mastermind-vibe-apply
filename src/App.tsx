@@ -37,7 +37,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Cohort />} />
           <Route path="/vibe-coding-course" element={<VibeCodingAccelerator />} />
-          <Route path="/membership" element={<VibeCodingAndAIProductBuilderClub />} />
+          {/* <Route path="/membership" element={<VibeCodingAndAIProductBuilderClub />} /> */}
           {/* <Route path="/coaching" element={<Consulting />} /> */}
           <Route path="/course" element={<Course />} />
           {/* Membership page hidden for now */}

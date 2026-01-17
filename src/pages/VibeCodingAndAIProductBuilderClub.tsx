@@ -229,9 +229,9 @@ const VibeCodingAndAIProductBuilderClub = () => {
                     <div className="p-3 rounded-xl bg-primary/10 border border-primary/20">
                       <CalendarDays className="h-6 w-6 text-primary" />
                     </div>
-                    <h3 className="text-xl font-semibold text-white">Monthly Live Sessions</h3>
+                    <h3 className="text-xl font-semibold text-white">Async Q&A</h3>
                   </div>
-                  <p className="text-white/70 text-base leading-relaxed">Join monthly live sessions with industry experts and community members.</p>
+                  <p className="text-white/70 text-base leading-relaxed">Get answers to your questions through asynchronous Q&A with industry experts and community members.</p>
                 </div>
                 
                 <div className="group p-8 rounded-2xl border border-white/10 bg-white/3 hover:bg-white/5 hover:border-white/20 transition-all duration-300 backdrop-blur-sm">

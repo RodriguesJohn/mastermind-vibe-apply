@@ -1,7 +1,7 @@
 import { Navigation } from "@/components/Navigation";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { BookOpen, Users, Calendar, ArrowRight, Gift, Book } from "lucide-react";
+import { BookOpen, Users, Calendar, ArrowRight, Gift, Book, ShieldCheck, Video, CalendarDays } from "lucide-react";
 import { Helmet } from "react-helmet";
 import { DotScreenShader } from "@/components/DotScreenShader";
 import { MeshGradient } from "@paper-design/shaders-react";
@@ -67,7 +67,7 @@ const CohortResourceHub = () => {
               <div className="max-w-[1200px] mx-auto">
                 {/* Three Column Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  {/* Access Lessons and Resources Card with Shader */}
+                  {/* Membership Login Card with Shader */}
                   <Card className="group relative overflow-hidden border-2 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl bg-black flex flex-col">
                     {/* Colorful Shader Background */}
                     <div className="absolute inset-0 overflow-hidden">
@@ -84,20 +84,22 @@ const CohortResourceHub = () => {
                     <CardHeader className="relative z-10 flex-1">
                       <div className="flex items-center gap-3 mb-3">
                         <div className="p-3 rounded-xl bg-white/10 backdrop-blur-md border border-white/30 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                          <BookOpen className="h-6 w-6 text-white" />
+                          <Users className="h-6 w-6 text-white" />
                         </div>
-                        <CardTitle className="text-xl text-white">Access Lessons and Resources</CardTitle>
+                        <CardTitle className="text-xl text-white">Membership Login</CardTitle>
                       </div>
                       <CardDescription className="text-base leading-relaxed text-white/80">
-                        View all course materials, recordings, lesson content, and resources from your cohort sessions.
+                        Exclusive for Cohort Members Only. Access continuous courses, monthly live sessions, behind-the-scenes content, and community support.
                       </CardDescription>
                     </CardHeader>
-                    <CardContent className="relative z-10 mt-auto">
-                      <Button className="w-full group/btn" variant="default" size="lg" asChild>
-                        <a href="https://maven.com/productlearnio/aiproductdesignmasterycohort" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
-                          Log in
-                          <ArrowRight className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
-                        </a>
+                    <CardContent className="relative z-10 mt-auto space-y-2">
+                      <Button className="w-full group/btn" variant="default" size="lg">
+                        Member Login
+                        <ArrowRight className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
+                      </Button>
+                      <Button className="w-full group/btn bg-white/5 border-white/20 text-white hover:bg-white/10" variant="outline" size="lg">
+                        Request Invite
+                        <ArrowRight className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
                       </Button>
                     </CardContent>
                   </Card>

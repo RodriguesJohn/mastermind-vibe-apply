@@ -122,13 +122,13 @@ const BlogPost = () => {
                 </p>
                 
                 <div className="bg-white/5 border border-white/10 rounded-lg p-6 my-8 not-prose">
-                  <h3 className="text-lg font-medium text-white mb-3 tracking-tight">Announcement: Vibe Coding Course</h3>
+                  <h3 className="text-lg font-medium text-white mb-3 tracking-tight">AI Mastery for Designers</h3>
                   <p className="mb-4 text-white/70 text-base">
-                    We have launched a Vibe Coding with Cursor course where you will learn how to prototype your ideas, prototype mobile apps, web apps powered by the OpenAI API, and more, if you are interested in learning vibe coding.
+                    80% of organizations are adopting AI this 5-week cohort shows designers how to apply it and drive outcomes through structured resources and hands-on, live sessions.
                   </p>
                   <Button size="sm" className="bg-white text-black hover:bg-white/90 rounded-md px-4 h-9 text-sm font-medium" asChild>
                     <a href="/" target="_blank" rel="noopener noreferrer">
-                      Enroll in the course
+                      Enroll in the Cohort
                     </a>
                   </Button>
                 </div>
@@ -210,13 +210,13 @@ const BlogPost = () => {
                 <hr className="border-white/10 my-12" />
                 
                 <div className="bg-white/5 border border-white/10 rounded-lg p-8 my-8 text-center not-prose">
-                  <h3 className="text-xl font-medium text-white mb-3 tracking-tight">Master Vibe Coding</h3>
+                  <h3 className="text-xl font-medium text-white mb-3 tracking-tight">AI Mastery for Designers</h3>
                   <p className="mb-6 text-white/70 text-base max-w-lg mx-auto">
-                    Ready to build your own AI-powered products? Join our comprehensive course on Vibe Coding with Cursor.
+                    80% of organizations are adopting AI this 5-week cohort shows designers how to apply it and drive outcomes through structured resources and hands-on, live sessions.
                   </p>
                   <Button size="lg" className="bg-white text-black hover:bg-white/90 rounded-full px-8 h-12 text-base font-medium" asChild>
                     <a href="/" target="_blank" rel="noopener noreferrer">
-                      Enroll in Vibe Coding Course
+                      Enroll in the Cohort
                     </a>
                   </Button>
                 </div>
@@ -260,11 +260,11 @@ const BlogPost = () => {
                 <div className="bg-white/5 border border-white/10 rounded-lg p-8 my-8 text-center not-prose">
                   <h3 className="text-xl font-medium text-white mb-3 tracking-tight">Start Your Journey Today</h3>
                   <p className="mb-6 text-white/70 text-base max-w-lg mx-auto">
-                    Want to fast-track these steps? Join our Vibe Coding course to learn the tools, strategy, and build real projects.
+                    80% of organizations are adopting AI this 5-week cohort shows designers how to apply it and drive outcomes through structured resources and hands-on, live sessions.
                   </p>
                   <Button size="lg" className="bg-white text-black hover:bg-white/90 rounded-full px-8 h-12 text-base font-medium" asChild>
                     <a href="/" target="_blank" rel="noopener noreferrer">
-                      Enroll in Vibe Coding Course
+                      Enroll in the Cohort
                     </a>
                   </Button>
                 </div>
