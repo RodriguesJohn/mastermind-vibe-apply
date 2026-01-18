@@ -7,21 +7,21 @@ import { SparklesIcon } from "@/components/SparklesIcon";
 
 const stats = [
   {
-    number: "11",
-    title: "Completed Design Projects",
-    subcontent: "Real projects built by cohort members showcasing AI design skills",
+    number: "10",
+    title: "Reviews",
+    subcontent: "Positive feedback and transformation stories from cohort members sharing their success and growth",
     icon: "CircleCheckBig",
   },
   {
-    number: "3",
+    number: "4",
     title: "Cohorts Ran",
     subcontent: "Successful cohorts completed with engaged designers and product leaders",
     icon: "Sparkles",
   },
   {
-    number: "22",
-    title: "Community Members",
-    subcontent: "Active designers and product leaders learning and growing together",
+    number: "7+",
+    title: "Tracks",
+    subcontent: "Dedicated tracks focused on helping you level up your AI skills",
     icon: "UsersRound",
   },
   {

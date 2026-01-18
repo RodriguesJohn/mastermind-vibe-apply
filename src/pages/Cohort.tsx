@@ -12,7 +12,7 @@ import CohortCompanyLogos from "@/components/CohortCompanyLogos";
 const Cohort = () => {
   return <>
       <Helmet>
-        <title>AI Mastery for Designers & Product Leaders 5-Week Cohort</title>
+        <title>AI Mastery for Designers & Product Leaders 3-Week Cohort</title>
         <meta name="description" content="Join our coding cohort and learn with a community of developers." />
       </Helmet>
 

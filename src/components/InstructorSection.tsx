@@ -33,7 +33,7 @@ export const InstructorSection = () => {
               <div>
                 <h3 className="text-3xl sm:text-4xl md:text-5xl font-medium text-white tracking-tight mb-2">John Rodrigues</h3>
                 <p className="text-lg text-white/60 font-medium leading-relaxed">
-                  Sr. Product Design & Design Engineer
+                  Senior Product Designer focused on AI Native Products
                 </p>
               </div>
               

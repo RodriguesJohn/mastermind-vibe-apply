@@ -7,39 +7,33 @@ import { useLocation } from "react-router-dom";
 const aiCohortModules = [{
   number: "1",
   week: "Week 1",
-  title: "Master AI Foundation",
-  description: "Deep dive into AI fundamentals, understand core concepts, build your vocabulary, and learn to design intelligent systems with clarity and confidence.",
+  title: "Onboarding and AI Foundation",
+  description: "Get started with comprehensive onboarding to set you up for success. Deep dive into AI fundamentals, understand core concepts, build your vocabulary, and learn to design intelligent systems with clarity and confidence.",
   colors: ["#FF6B6B", "#FFD93D", "#FF8E53", "#FF6B9D"]
 }, {
   number: "2",
   week: "Week 2",
-  title: "AI Product Design Strategy",
-  description: "Identify AI use cases and design human-centered solutions that drive business impact and value.",
+  title: "AI Strategy and AI Agents Track",
+  description: "Identify AI use cases and design human-centered solutions that drive business impact and value. Learn how to design AI agent systems and workflows from a UX perspective with step-by-step frameworks and processes to create and prototype your own agents using tools like n8n.",
   colors: ["#4ECDC4", "#87CEEB", "#DA70D6", "#BA55D3"]
 }, {
   number: "3",
   week: "Week 3",
-  title: "Build AI Agents",
-  description: "Learn how to design AI agent systems and workflows from a UX perspective. Get step-by-step frameworks and processes to create and prototype your own agents, and use tools like n8n to build AI agents that actually work.",
+  title: "Vibe Coding and Prototyping Track",
+  description: "Learn vibe coding fundamentals and how to create functional prototypes with Lovable and Cursor to effectively communicate your vision. Master efficient vibe-coding workflows and build AI apps using modern AI coding tools.",
   colors: ["#95E1D3", "#F38181", "#FCE38A", "#AAE3F0"]
 }, {
   number: "4",
-  week: "Week 4",
-  title: "Learn vibe coding and Prototyping with AI",
-  description: "Learn how to create functional prototypes with Lovable and Cursor to effectively communicate your vision. Master efficient vibe-coding workflows and build AI apps using modern AI coding tools.",
+  week: "Bonus",
+  title: "1 Month Exclusive Access to Membership Portal",
+  description: "Get exclusive access to the membership portal with in-depth courses, continuous learning resources, and extended materials to continue your growth journey.",
   colors: ["#FF6B6B", "#FF8E53", "#FFD93D", "#FFA07A"]
   }, {
     number: "5",
     week: "Bonus",
-    title: "Get 1:1 Coaching and Consulting",
-    description: "Get one-on-one coaching with John to overcome challenges, personalize your learning goals, ask any questions, and get clear guidance to unlock your next step.",
+    title: "Direct Access to Instructor",
+    description: "Get direct access to the instructor for personalized guidance, support, and mentorship to overcome challenges and unlock your next steps.",
     colors: ["#C44569", "#D68FD6", "#E3A0D3", "#FF8CC8"]
-  }, {
-    number: "6",
-    week: "Bonus",
-    title: "Get Access to Bonus Courses",
-    description: "Unlock additional bonus courses and resources to deepen your AI design expertise. Access exclusive content, advanced tutorials, and extended learning materials to continue your growth beyond the core curriculum.",
-    colors: ["#4F4F8C", "#5F7AAB", "#7FA8D5", "#87CEEB"]
   }];
 
 // Vibe Coding Course modules
