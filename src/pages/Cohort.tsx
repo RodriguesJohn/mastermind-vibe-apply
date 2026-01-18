@@ -21,7 +21,7 @@ const Cohort = () => {
         <div className="bg-primary/10 border-b border-primary/20 py-2 px-4">
           <div className="max-w-[1200px] mx-auto text-center">
             <p className="text-sm md:text-base text-foreground font-medium">
-              The next cohort starts on Jan 9, 2026
+              The next cohort starts on February 7th, 2026
             </p>
           </div>
         </div>
