@@ -7,14 +7,14 @@ import { useLocation } from "react-router-dom";
 const aiCohortModules = [{
   number: "1",
   week: "Week 1",
-  title: "Break the Fear Barrier Ship a Live AI Web App",
-  description: "Ship a live AI web app to production using Cursor and Vercel. Build confidence with vibe coding, turning ideas into working products. In a live Workshop, build a vibe-coded AI web app together from setup to deployment.",
+  title: "Break Through the Fear and Build Strong Vibe Coding Foundations",
+  description: "Build strong vibe coding foundations using Cursor. Overcome fear and build confidence as you create a web app from scratch. In a live workshop, build a vibe-coded AI web app together using Cursor.",
   colors: ["#FF6B6B", "#FFD93D", "#FF8E53", "#FF6B9D"]
 }, {
   number: "2",
   week: "Week 2",
-  title: "Advanced native AI Product Building with Vibe Coding",
-  description: "Prototype mobile AI experiences using Cursor + Claude Code. Set up Supabase and build a mobile app prototype together in a live workshop.",
+  title: "Learn advanced vibe coding techniques and launch your app",
+  description: "Connect APIs and Supabase. Work with Cursor + Claude Code to build advanced features and launch your app in Vercel.",
   colors: ["#4ECDC4", "#87CEEB", "#DA70D6", "#BA55D3"]
 }, {
   number: "3",
