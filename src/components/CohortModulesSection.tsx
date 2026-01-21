@@ -25,7 +25,7 @@ const aiCohortModules = [{
 }, {
   number: "4",
   week: "Bonus",
-  title: "1-Month Access to the AI Mastery Membership",
+  title: "Unlock 2 weeks access to AI Mastery membership 🚀",
   description: "Includes AI Fluency, AI Strategy, and AI Agents-focused learning tracks. Case Studies & Community Support. Continuously learn and stay updated with new AI tools.",
   colors: ["#FF6B6B", "#FF8E53", "#FFD93D", "#FFA07A"]
   }, {
