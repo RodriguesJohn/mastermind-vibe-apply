@@ -122,12 +122,12 @@ const BlogPost = () => {
                 </p>
                 
                 <div className="bg-white/5 border border-white/10 rounded-lg p-6 my-8 not-prose">
-                  <h3 className="text-lg font-medium text-white mb-3 tracking-tight">AI Mastery for Designers</h3>
+                  <h3 className="text-lg font-medium text-white mb-3 tracking-tight">Master Vibe Coding in 2 Weeks</h3>
                   <p className="mb-4 text-white/70 text-base">
-                    80% of organizations are adopting AI this 3-week cohort shows designers how to apply it and drive outcomes through structured resources and hands-on, live sessions.
+                    From 0→1 turn static screens into functional AI products with live building, feedback, and real-world workflows.
                   </p>
                   <Button size="sm" className="bg-white text-black hover:bg-white/90 rounded-md px-4 h-9 text-sm font-medium" asChild>
-                    <a href="/" target="_blank" rel="noopener noreferrer">
+                    <a href="/">
                       Enroll in the Cohort
                     </a>
                   </Button>
@@ -210,12 +210,12 @@ const BlogPost = () => {
                 <hr className="border-white/10 my-12" />
                 
                 <div className="bg-white/5 border border-white/10 rounded-lg p-8 my-8 text-center not-prose">
-                  <h3 className="text-xl font-medium text-white mb-3 tracking-tight">AI Mastery for Designers</h3>
+                  <h3 className="text-xl font-medium text-white mb-3 tracking-tight">Master Vibe Coding in 2 Weeks</h3>
                   <p className="mb-6 text-white/70 text-base max-w-lg mx-auto">
-                    80% of organizations are adopting AI this 3-week cohort shows designers how to apply it and drive outcomes through structured resources and hands-on, live sessions.
+                    From 0→1 turn static screens into functional AI products with live building, feedback, and real-world workflows.
                   </p>
                   <Button size="lg" className="bg-white text-black hover:bg-white/90 rounded-full px-8 h-12 text-base font-medium" asChild>
-                    <a href="/" target="_blank" rel="noopener noreferrer">
+                    <a href="/">
                       Enroll in the Cohort
                     </a>
                   </Button>
@@ -258,12 +258,12 @@ const BlogPost = () => {
                 <hr className="border-white/10 my-12" />
                 
                 <div className="bg-white/5 border border-white/10 rounded-lg p-8 my-8 text-center not-prose">
-                  <h3 className="text-xl font-medium text-white mb-3 tracking-tight">Start Your Journey Today</h3>
+                  <h3 className="text-xl font-medium text-white mb-3 tracking-tight">Master Vibe Coding in 2 Weeks</h3>
                   <p className="mb-6 text-white/70 text-base max-w-lg mx-auto">
-                    80% of organizations are adopting AI this 3-week cohort shows designers how to apply it and drive outcomes through structured resources and hands-on, live sessions.
+                    From 0→1 turn static screens into functional AI products with live building, feedback, and real-world workflows.
                   </p>
                   <Button size="lg" className="bg-white text-black hover:bg-white/90 rounded-full px-8 h-12 text-base font-medium" asChild>
-                    <a href="/" target="_blank" rel="noopener noreferrer">
+                    <a href="/">
                       Enroll in the Cohort
                     </a>
                   </Button>

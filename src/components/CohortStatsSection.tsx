@@ -20,8 +20,8 @@ const stats = [
   },
   {
     number: "7+",
-    title: "Tracks",
-    subcontent: "Dedicated tracks focused on helping you level up your AI skills",
+    title: "Dedicated tracks",
+    subcontent: "7+ dedicated tracks and bonus 7+ learning tracks included with the cohort",
     icon: "UsersRound",
   },
   {

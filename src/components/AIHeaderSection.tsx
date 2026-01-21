@@ -191,16 +191,16 @@ export const AIHeaderSection = () => {
                 }
               }
               .ai-header-h1 {
-                line-height: 40px !important;
+                line-height: 32px !important;
               }
               @media (min-width: 640px) {
                 .ai-header-h1 {
-                  line-height: 28px !important;
+                  line-height: 32px !important;
                 }
               }
               @media (min-width: 768px) {
                 .ai-header-h1 {
-                  line-height: 54px !important;
+                  line-height: 44px !important;
                 }
               }
               @media (min-width: 1024px) {
@@ -247,14 +247,14 @@ export const AIHeaderSection = () => {
               </span>
             </div>
 
-            <h1 className="ai-header-h1 text-3xl sm:text-xl md:text-[54px] lg:text-[56px] font-medium mb-4 tracking-tight text-center pt-[1px] pb-[1px]">
-              AI Mastery for Designers
-              <span className="block">From Overwhelm to Confidence</span>
-              <span className="block">in 3 Weeks</span>
+            <h1 className="ai-header-h1 text-2xl sm:text-2xl md:text-4xl lg:text-5xl font-medium mb-4 tracking-tight text-center pt-[1px] pb-[1px]">
+              Master Vibe Coding in 2 Weeks
+              <span className="block">Go from Overwhelmed to Confident</span>
             </h1>
 
-            <p className="text-sm md:text-medium text-white/60 font-light mb-8 leading-relaxed max-w-3xl mx-auto">
-              80% of organizations are adopting AI this 3-week cohort shows designers how to apply it and drive outcomes through structured resources and hands-on, live sessions. Enroll in the cohort today.
+            <p className="text-base md:text-lg text-white/60 font-light mb-8 leading-relaxed max-w-3xl mx-auto">
+              From 0→1 turn static screens into functional AI products with live building, feedback,<br />
+              and real-world workflows.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 md:mb-16">

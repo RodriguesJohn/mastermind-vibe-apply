@@ -132,7 +132,7 @@ const galleryImages = [WorkshopImage1, WorkshopImage2, WorkshopImage3];
 const VibeCodingAndAIProductBuilderClub = () => {
   return <>
       <Helmet>
-        <title>AI Academy Membership</title>
+        <title>AI Mastery Membership</title>
         <meta name="description" content="Join AI Academy membership. Learn vibe coding, ship AI-powered products, and build alongside a community of creators and innovators." />
         <style>{`
           @keyframes blurEntrance {
@@ -192,7 +192,7 @@ const VibeCodingAndAIProductBuilderClub = () => {
                 </div>
                 
                 <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.1] mb-6 text-white">
-                  AI Academy<br />Membership
+                  AI Mastery<br />Membership!
                 </h1>
                 
                 <p className="text-xl sm:text-2xl md:text-3xl text-white/60 leading-relaxed font-light max-w-3xl mx-auto mb-8">

@@ -7,26 +7,26 @@ import { useLocation } from "react-router-dom";
 const aiCohortModules = [{
   number: "1",
   week: "Week 1",
-  title: "Onboarding and AI Foundation",
-  description: "Get started with comprehensive onboarding to set you up for success. Deep dive into AI fundamentals, understand core concepts, build your vocabulary, and learn to design intelligent systems with clarity and confidence.",
+  title: "Break the Fear Barrier Ship a Live AI Web App",
+  description: "Ship a live AI web app to production using Cursor and Vercel. Build confidence with vibe coding, turning ideas into working products. In a live Workshop, build a vibe-coded AI web app together from setup to deployment.",
   colors: ["#FF6B6B", "#FFD93D", "#FF8E53", "#FF6B9D"]
 }, {
   number: "2",
   week: "Week 2",
-  title: "AI Strategy and AI Agents Track",
-  description: "Identify AI use cases and design human-centered solutions that drive business impact and value. Learn how to design AI agent systems and workflows from a UX perspective with step-by-step frameworks and processes to create and prototype your own agents using tools like n8n.",
+  title: "Advanced native AI Product Building with Vibe Coding",
+  description: "Prototype mobile AI experiences using Cursor + Claude Code. Set up Supabase and build a mobile app prototype together in a live workshop.",
   colors: ["#4ECDC4", "#87CEEB", "#DA70D6", "#BA55D3"]
 }, {
   number: "3",
-  week: "Week 3",
-  title: "Vibe Coding and Prototyping Track",
-  description: "Learn vibe coding fundamentals and how to create functional prototypes with Lovable and Cursor to effectively communicate your vision. Master efficient vibe-coding workflows and build AI apps using modern AI coding tools.",
+  week: "Format",
+  title: "Live Workshop + Recorded Sessions",
+  description: "Join live workshops where you build together with hands-on practice. Get real-time feedback and collaborate with peers to create working AI products.",
   colors: ["#95E1D3", "#F38181", "#FCE38A", "#AAE3F0"]
 }, {
   number: "4",
   week: "Bonus",
-  title: "1 Month Exclusive Access to Membership Portal",
-  description: "Get exclusive access to the membership portal with in-depth courses, continuous learning resources, and extended materials to continue your growth journey.",
+  title: "1-Month Access to the AI Mastery Membership",
+  description: "Includes AI Fluency, AI Strategy, and AI Agents-focused learning tracks. Case Studies & Community Support. Continuously learn and stay updated with new AI tools.",
   colors: ["#FF6B6B", "#FF8E53", "#FFD93D", "#FFA07A"]
   }, {
     number: "5",
@@ -34,6 +34,12 @@ const aiCohortModules = [{
     title: "Direct Access to Instructor",
     description: "Get direct access to the instructor for personalized guidance, support, and mentorship to overcome challenges and unlock your next steps.",
     colors: ["#C44569", "#D68FD6", "#E3A0D3", "#FF8CC8"]
+  }, {
+    number: "6",
+    week: "Community",
+    title: "Join the community of AI designers and product builders",
+    description: "Connect with a community of AI designers, product builders, and leaders. Share experiences, get support, and grow together in your AI journey.",
+    colors: ["#667EEA", "#764BA2", "#F093FB", "#4FACFE"]
   }];
 
 // Vibe Coding Course modules

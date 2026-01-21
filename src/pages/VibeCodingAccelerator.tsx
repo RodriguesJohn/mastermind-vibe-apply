@@ -220,27 +220,14 @@ const VibeCodingAccelerator = () => {
 
             <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-10">
               <div className="space-y-4 sm:space-y-6 text-center relative">
-                {/* Bouncing Cursor Logo around title */}
-                <div className="absolute -top-12 sm:-top-16 md:-top-20 lg:-top-24 left-1/2 -translate-x-1/2 pointer-events-none flex items-center justify-center">
-                  <img src={CursorLogo} alt="Cursor" className="w-10 sm:w-12 md:w-16 opacity-80 object-contain flex-shrink-0" style={{
-                  animation: 'bounceAround 15s ease-in-out infinite',
-                  height: 'auto'
-                }} />
-                            </div>
                 <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight leading-[1.3] relative pt-8 sm:pt-0 blur-entrance">
-                  Master Vibe Coding &<br />Prototype AI Apps with<br />Cursor
-                  </h1>
+                  Update on the Vibe Coding Course.
+                </h1>
                 <p className="text-sm sm:text-base md:text-lg text-white/60 mx-auto max-w-2xl px-2 leading-relaxed font-medium blur-entrance-subtle-delayed">
-                  Beginner-Friendly Vibe Coding With Cursor.<br />Go from beginner to vibe coding expert.
+                  <span className="text-white font-semibold">Note:</span> Vibe Coding Course has now been moved under the Cohort.<br />
+                  If you've taken this course, you'll be given a seat in the cohort reach out to us at hello@theaidesignacademy.com.
                 </p>
-                <div className="flex flex-col gap-3 sm:flex-row justify-center max-w-md mx-auto px-4 sm:px-0">
-                  <Button variant="cta" size="lg" className="w-full sm:w-auto sm:min-w-[200px] blur-entrance-subtle" asChild>
-                    <a href="https://ai-design-academy-s-school.teachable.com/l/pdp/vibe-coding-101-course-build-your-first-ai-app-in-days" target="_blank" rel="noopener noreferrer">
-                      Login
-                      <ArrowRight className="h-5 w-5" />
-                    </a>
-                  </Button>
-                </div>
+                {/* Login button removed */}
                 </div>
                 {/* Note */}
                 <div className="mt-8 sm:mt-10 max-w-2xl mx-auto">
@@ -263,12 +250,7 @@ const VibeCodingAccelerator = () => {
                   <div className="bg-white/100 rounded-lg border border-white/20 p-4 sm:p-6">
                     <p className="text-sm sm:text-base text-gray-900 leading-relaxed">
                       <strong className="text-gray-900">Note:</strong> This course has now been moved to{" "}
-                      <a 
-                        href="/membership" 
-                        className="text-primary hover:text-primary/80 underline font-medium transition-colors"
-                      >
-                        AI Academy membership
-                      </a>
+                      AI Academy membership
                       . Join the membership to access this course and more. If you have already paid for the course, log in from{" "}
                       <a 
                         href="https://ai-design-academy-s-school.teachable.com/l/pdp/vibe-coding-101-course-build-your-first-ai-app-in-days" 

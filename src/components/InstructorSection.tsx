@@ -33,16 +33,16 @@ export const InstructorSection = () => {
               <div>
                 <h3 className="text-3xl sm:text-4xl md:text-5xl font-medium text-white tracking-tight mb-2">John Rodrigues</h3>
                 <p className="text-lg text-white/60 font-medium leading-relaxed">
-                  Senior Product Designer focused on AI Native Products
+                  Sr. Product Designer focused on 0→1, AI-native products.
                 </p>
               </div>
               
               <div className="space-y-4 text-white/60 text-base leading-relaxed">
                 <p>
-                  Author of <span className="text-white">The AI Design Playbook</span>, trusted by 1,500+ industry leaders. Founder of AI Design Academy.
+                  John is the author of The AI Design Playbook, read by 2,000+ industry leaders, and the founder of AI Design Academy.
                 </p>
                 <p>
-                  With over a decade of experience, John holds a Master's in Interaction Design and an AI certification from Stanford. He's recognized as one of the Top 10 mentors on ADPList and has built a community of over 10,000 followers on LinkedIn.
+                  With over a decade of experience as a product designer, he's won hackathons conducted by OpenAI, Lovable, and AGI Inc., including building products at events at AGI House using Vibe Coding. He's mentored 300+ designers and has worked with leading companies like JP Morgan Chase and Citibank.
                 </p>
               </div>
               
