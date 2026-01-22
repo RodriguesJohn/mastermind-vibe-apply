@@ -22,12 +22,12 @@ const aiCohortModules = [{
   title: "Live Workshop + Recorded Sessions",
   description: "Join live workshops where you build together with hands-on practice. Get real-time feedback and collaborate with peers to create working AI products.",
   colors: ["#95E1D3", "#F38181", "#FCE38A", "#AAE3F0"]
-}, {
-  number: "4",
-  week: "Bonus",
-  title: "Unlock 2 weeks access to AI Mastery membership 🚀",
-  description: "Includes AI Fluency, AI Strategy, and AI Agents-focused learning tracks. Case Studies & Community Support. Continuously learn and stay updated with new AI tools.",
-  colors: ["#FF6B6B", "#FF8E53", "#FFD93D", "#FFA07A"]
+},   {
+    number: "4",
+    week: "Bonus",
+    title: "Unlock 1 week's access to AI Mastery Hub",
+    description: "You will see AI Strategy and more, case studies and behind-the-scenes content, along with community support. Unlock this after completing the 2-week cohort.",
+    colors: ["#FF6B6B", "#FF8E53", "#FFD93D", "#FFA07A"]
   }, {
     number: "5",
     week: "Bonus",
