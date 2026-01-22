@@ -248,7 +248,7 @@ export const AIHeaderSection = () => {
               </span>
             </div>
 
-            <h1 className="ai-header-h1 text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-medium mb-5 md:mb-6 tracking-normal text-center leading-tight">
+            <h1 className="ai-header-h1 text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-medium mb-5 md:mb-6 tracking-normal text-center leading-tight">
               Master Vibe Coding in 2 Weeks Go from Overwhelmed to Confident
             </h1>
 
