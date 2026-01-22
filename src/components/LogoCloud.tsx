@@ -23,12 +23,12 @@ export default function LogoCloud() {
           <div className="flex flex-col items-center gap-8 md:gap-12">
             <h2 className="text-sm font-medium text-white/60 text-center">Learn Best AI Tools In The Industry</h2>
             
-            <div className="relative w-full flex justify-center overflow-x-auto">
-              <div className="flex gap-x-4 sm:gap-x-6 md:gap-x-8 gap-y-4 items-center flex-wrap justify-center px-2">
+            <div className="relative w-full flex justify-center">
+              <div className="flex gap-x-3 sm:gap-x-4 md:gap-x-6 lg:gap-x-8 gap-y-4 items-center flex-wrap justify-center w-full max-w-full px-2">
                 {logos.map((item, index) => (
                   <img
                     key={`img-${index}`}
-                    className="h-8 sm:h-10 md:h-12 w-fit flex-shrink-0"
+                    className="h-6 sm:h-8 md:h-10 lg:h-12 w-auto max-w-[80px] sm:max-w-[100px] md:max-w-none flex-shrink-0 object-contain"
                     src={item.src}
                     alt={item.alt}
                   />
