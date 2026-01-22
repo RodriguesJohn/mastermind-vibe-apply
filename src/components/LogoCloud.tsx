@@ -18,17 +18,47 @@ export default function LogoCloud() {
       {/* Black fade overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black pointer-events-none z-10" />
       
+      <style>{`
+        .logo-cloud-img {
+          height: auto !important;
+          width: auto !important;
+          max-width: none !important;
+          object-fit: contain !important;
+          flex-shrink: 0 !important;
+        }
+        @media (max-width: 640px) {
+          .logo-cloud-img {
+            height: 24px !important;
+          }
+        }
+        @media (min-width: 640px) {
+          .logo-cloud-img {
+            height: 32px !important;
+          }
+        }
+        @media (min-width: 768px) {
+          .logo-cloud-img {
+            height: 40px !important;
+          }
+        }
+        @media (min-width: 1024px) {
+          .logo-cloud-img {
+            height: 48px !important;
+          }
+        }
+      `}</style>
+      
       <div className="px-4 md:px-10 lg:px-[120px] relative z-20">
         <div className="max-w-[1200px] mx-auto">
           <div className="flex flex-col items-center gap-8 md:gap-12">
             <h2 className="text-sm font-medium text-white/60 text-center">Learn Best AI Tools In The Industry</h2>
             
-            <div className="relative w-full flex justify-center">
-              <div className="flex gap-x-3 sm:gap-x-4 md:gap-x-6 lg:gap-x-8 gap-y-4 items-center flex-wrap justify-center w-full max-w-full px-2">
+            <div className="relative w-full">
+              <div className="flex gap-x-2 sm:gap-x-3 md:gap-x-6 lg:gap-x-8 gap-y-4 items-center justify-center flex-wrap px-2">
                 {logos.map((item, index) => (
                   <img
                     key={`img-${index}`}
-                    className="h-6 sm:h-8 md:h-10 lg:h-12 w-auto max-w-[80px] sm:max-w-[100px] md:max-w-none flex-shrink-0 object-contain"
+                    className="logo-cloud-img"
                     src={item.src}
                     alt={item.alt}
                   />
