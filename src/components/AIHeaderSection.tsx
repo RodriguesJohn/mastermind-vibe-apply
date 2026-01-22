@@ -191,29 +191,30 @@ export const AIHeaderSection = () => {
                 }
               }
               .ai-header-h1 {
-                line-height: 32px !important;
+                line-height: 1.3 !important;
+                letter-spacing: -0.01em;
               }
               @media (min-width: 640px) {
                 .ai-header-h1 {
-                  line-height: 32px !important;
+                  line-height: 1.3 !important;
                 }
               }
               @media (min-width: 768px) {
                 .ai-header-h1 {
-                  line-height: 44px !important;
+                  line-height: 1.25 !important;
                 }
               }
               @media (min-width: 1024px) {
                 .ai-header-h1 {
-                  line-height: 56px !important;
+                  line-height: 1.2 !important;
                 }
               }
             `}
           </style>
 
           {/* Centered Content */}
-          <div className="text-center mb-6 md:mb-8">
-            <div className="flex items-center justify-center gap-2 mb-6">
+          <div className="text-center">
+            <div className="flex items-center justify-center gap-2 mb-8 md:mb-10">
               <span className="text-xs font-medium tracking-wider uppercase flex items-center gap-1">
                 {/* 4 full stars */}
                 {Array.from({ length: 4 }).map((_, i) => (
@@ -247,17 +248,15 @@ export const AIHeaderSection = () => {
               </span>
             </div>
 
-            <h1 className="ai-header-h1 text-2xl sm:text-2xl md:text-4xl lg:text-5xl font-medium mb-4 tracking-tight text-center pt-[1px] pb-[1px]">
-              Master Vibe Coding in 2 Weeks
-              <span className="block">Go from Overwhelmed to Confident</span>
+            <h1 className="ai-header-h1 text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-medium mb-5 md:mb-6 tracking-normal text-center leading-tight">
+              Master Vibe Coding in 2 Weeks Go from Overwhelmed to Confident
             </h1>
 
-            <p className="text-base md:text-lg text-white/60 font-light mb-8 leading-relaxed max-w-3xl mx-auto">
-              From 0→1 turn static screens into functional AI products with live building, feedback,<br />
-              and real-world workflows.
+            <p className="text-sm md:text-base text-white/60 font-light mb-8 md:mb-10 leading-relaxed max-w-2xl mx-auto px-4">
+              From 0→1 turn static screens into functional AI products with live building, feedback, and real-world workflows.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 md:mb-16">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 variant="cta" 
                 size="lg"
