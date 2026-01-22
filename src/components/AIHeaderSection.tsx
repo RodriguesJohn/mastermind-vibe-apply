@@ -249,7 +249,8 @@ export const AIHeaderSection = () => {
             </div>
 
             <h1 className="ai-header-h1 text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-medium mb-5 md:mb-6 tracking-normal text-center leading-tight">
-              Master Vibe Coding in 2 Weeks Go from Overwhelmed to Confident
+              <span className="block">Master Vibe Coding in 2 Weeks</span>
+              <span className="block mt-2 md:mt-3">Go from Overwhelmed to Being Confident</span>
             </h1>
 
             <p className="text-sm md:text-base text-white/60 font-light mb-8 md:mb-10 leading-relaxed max-w-2xl mx-auto px-4">

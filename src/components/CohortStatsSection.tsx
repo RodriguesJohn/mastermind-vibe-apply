@@ -19,9 +19,9 @@ const stats = [
     icon: "Sparkles",
   },
   {
-    number: "7+",
-    title: "Dedicated tracks",
-    subcontent: "7+ dedicated tracks and bonus 7+ learning tracks included with the cohort",
+    number: "5+",
+    title: "Behind-the-scenes project views",
+    subcontent: "Get exclusive access to real project walkthroughs and see how AI products are built",
     icon: "UsersRound",
   },
   {
