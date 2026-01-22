@@ -28,22 +28,22 @@ export default function LogoCloud() {
         }
         @media (max-width: 640px) {
           .logo-cloud-img {
-            height: 24px !important;
+            height: 40px !important;
           }
         }
         @media (min-width: 640px) {
           .logo-cloud-img {
-            height: 32px !important;
+            height: 48px !important;
           }
         }
         @media (min-width: 768px) {
           .logo-cloud-img {
-            height: 40px !important;
+            height: 56px !important;
           }
         }
         @media (min-width: 1024px) {
           .logo-cloud-img {
-            height: 48px !important;
+            height: 64px !important;
           }
         }
       `}</style>
