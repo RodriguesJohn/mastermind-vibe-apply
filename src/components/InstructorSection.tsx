@@ -22,6 +22,11 @@ export const InstructorSection = () => {
       }} aria-hidden="true" />
       <div className="relative z-10 max-w-5xl sm:px-6 lg:px-10 mx-auto px-[24px]">
         <div className="max-w-4xl mx-auto">
+          <div className="mb-8 md:mb-12">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium text-white text-left">
+              Meet Your Mentor.
+            </h2>
+          </div>
           <div className="grid gap-6 sm:gap-8 md:grid-cols-[300px_1fr] md:items-start">
             {/* Instructor Image */}
             <div>
@@ -31,7 +36,7 @@ export const InstructorSection = () => {
             </div>
             <div className="space-y-6">
               <div>
-                <h3 className="text-3xl sm:text-4xl md:text-5xl font-medium text-white tracking-tight mb-2">John Rodrigues</h3>
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-medium text-white tracking-tight mb-2">John Rodrigues</h3>
                 <p className="text-lg text-white/60 font-medium leading-relaxed">
                   Sr. Product Designer focused on 0→1, AI-native products.
                 </p>
@@ -39,10 +44,7 @@ export const InstructorSection = () => {
               
               <div className="space-y-4 text-white/60 text-base leading-relaxed">
                 <p>
-                  John is the author of The AI Design Playbook, read by 2,000+ industry leaders, and the founder of AI Design Academy.
-                </p>
-                <p>
-                  With over a decade of experience as a product designer, he's won hackathons conducted by OpenAI, Lovable, and AGI Inc., including building products at events at AGI House using Vibe Coding. He's mentored 300+ designers and has worked with leading companies like JP Morgan Chase and Citibank.
+                  John is the creator of The AI Design Playbook, read by 2,000+ industry leaders, and the founder of AI Design Academy. He's mentored 300+ designers and won hackathons at OpenAI, Lovable, and AGI Inc.
                 </p>
               </div>
               
@@ -117,6 +119,7 @@ export const InstructorSection = () => {
             </div>
           </div>
         </div>
+
       </div>
     </section>
   );

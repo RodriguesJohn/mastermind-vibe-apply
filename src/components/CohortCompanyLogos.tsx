@@ -13,13 +13,40 @@ export default function CohortCompanyLogos() {
           <h2 className="text-center text-sm font-medium text-white/30">
             Our Mentors, designers and community members come from
           </h2>
-          <div className="mt-16 grid grid-cols-3 md:flex md:flex-wrap items-center justify-center gap-x-4 gap-y-6 md:gap-x-12 md:gap-y-8 sm:gap-x-16 sm:gap-y-12">
-            <img className="h-12 md:h-16 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" src={metaLogo} alt="Meta Logo" height="64" width="auto" />
-            <img className="h-8 md:h-10 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" src={hubspotLogo} alt="HubSpot Logo" height="40" width="auto" />
-            <img className="h-8 md:h-10 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" src={intercomLogo} alt="Intercom Logo" height="40" width="auto" />
-            <img className="h-8 md:h-10 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" src={chaseLogo} alt="Chase Logo" height="40" width="auto" />
-            <img className="h-8 md:h-10 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" src={kingfisherLogo} alt="Kingfisher Logo" height="40" width="auto" />
-            <img className="h-8 md:h-10 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" src={amazonLogo} alt="Amazon Logo" height="40" width="auto" />
+          <div className="mt-16 overflow-hidden relative">
+            <style>{`
+              @keyframes scroll-logos-horizontal {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(calc(-100% - 2rem)); }
+              }
+              .logo-carousel-mobile {
+                display: flex;
+                gap: 2rem;
+                animation: scroll-logos-horizontal 20s linear infinite;
+                width: fit-content;
+              }
+              .logo-carousel-mobile:hover {
+                animation-play-state: paused;
+              }
+              @media (min-width: 768px) {
+                .logo-carousel-mobile {
+                  animation: none;
+                  display: flex;
+                  flex-wrap: wrap;
+                  justify-content: center;
+                  gap: 3rem 4rem;
+                }
+              }
+            `}</style>
+            <div className="logo-carousel-mobile">
+              {/* First set of logos */}
+              <img className="h-12 md:h-16 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity flex-shrink-0" src={metaLogo} alt="Meta Logo" height="64" width="auto" />
+              <img className="h-8 md:h-10 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity flex-shrink-0" src={hubspotLogo} alt="HubSpot Logo" height="40" width="auto" />
+              <img className="h-8 md:h-10 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity flex-shrink-0" src={intercomLogo} alt="Intercom Logo" height="40" width="auto" />
+              <img className="h-8 md:h-10 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity flex-shrink-0" src={chaseLogo} alt="Chase Logo" height="40" width="auto" />
+              <img className="h-8 md:h-10 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity flex-shrink-0" src={kingfisherLogo} alt="Kingfisher Logo" height="40" width="auto" />
+              <img className="h-8 md:h-10 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity flex-shrink-0" src={amazonLogo} alt="Amazon Logo" height="40" width="auto" />
+            </div>
           </div>
         </div>
       </div>

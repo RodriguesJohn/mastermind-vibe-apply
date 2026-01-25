@@ -13,7 +13,7 @@ const Consulting = () => {
       priceSubtext: "For active cohort members",
       features: [
         "Personalized AI strategy sessions",
-        "Direct access to instructor",
+        "Direct access to mentor",
         "Project feedback and guidance",
         "Career guidance and mentorship",
         "Priority support",
@@ -101,7 +101,7 @@ const Consulting = () => {
                         </li>
                         <li className="flex items-start gap-3">
                           <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                          <span className="text-muted-foreground">Direct access to instructor</span>
+                          <span className="text-muted-foreground">Direct access to mentor</span>
                         </li>
                         <li className="flex items-start gap-3">
                           <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />

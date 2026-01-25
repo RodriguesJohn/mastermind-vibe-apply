@@ -40,25 +40,13 @@ export const CohortOverviewSection = () => {
           </div>
           
           {/* Main Content */}
-          <div className="space-y-6">
-            <div 
-              className="max-w-3xl mx-auto font-medium text-white space-y-4"
-              style={{
-                letterSpacing: '0',
-                fontSize: '16px',
-                lineHeight: '1.6'
-              }}
-            >
-              <p>
-                The shift to AI-native product design is moving fast, and many designers lack the structure, guidance, and feedback needed to keep up. Most AI learning is either too theoretical or too fragmented to apply to real work. Understanding AI is one thing. Building real AI-powered products is another. That's where vibe coding bridges the gap between static screens and functional products.
-              </p>
-              <p>
-                Product managers and developers are already vibing. Designers need to catch up so you don't become the bottleneck and instead drive impact.
-              </p>
-              <p>
-                This 2-week focused cohort gives you a clear, end-to-end framework, live feedback, and hands-on practice to design and ship real AI products. In two weeks, you'll publish a web app, build a mobile app prototype, and gain a repeatable system for AI-native product design.
-              </p>
-            </div>
+          <div className="max-w-4xl mx-auto space-y-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium mb-6 text-white">
+              The world is splitting into designers who can build and designers who can't.
+            </h2>
+            <p className="text-2xl md:text-3xl font-semibold text-white">
+              Which one will you be?
+            </p>
           </div>
         </div>
       </div>

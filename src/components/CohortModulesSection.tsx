@@ -8,37 +8,37 @@ const aiCohortModules = [{
   number: "1",
   week: "Week 1",
   title: "Break Through the Fear and Build Strong Vibe Coding Foundations",
-  description: "Build strong vibe coding foundations using Cursor. Overcome fear and build confidence as you create a web app from scratch. In a live workshop, build a vibe-coded AI web app together using Cursor.",
+  description: "Build strong vibe coding foundations using Cursor. Create a web app from scratch in live workshops.",
   colors: ["#FF6B6B", "#FFD93D", "#FF8E53", "#FF6B9D"]
 }, {
   number: "2",
   week: "Week 2",
   title: "Learn advanced vibe coding techniques and launch your app",
-  description: "Connect APIs and Supabase. Work with Cursor + Claude Code to build advanced features and launch your app in Vercel.",
+  description: "Connect APIs and Supabase. Build advanced features with Cursor + Claude Code and launch on Vercel.",
   colors: ["#4ECDC4", "#87CEEB", "#DA70D6", "#BA55D3"]
 }, {
   number: "3",
   week: "Format",
   title: "Live Workshop + Recorded Sessions",
-  description: "Join live workshops where you build together with hands-on practice. Get real-time feedback and collaborate with peers to create working AI products.",
+  description: "Join live workshops with hands-on practice. Get real-time feedback and collaborate with peers.",
   colors: ["#95E1D3", "#F38181", "#FCE38A", "#AAE3F0"]
 },   {
     number: "4",
     week: "Bonus",
     title: "Unlock 1 week's access to AI Mastery Hub",
-    description: "You will see AI Strategy and more, case studies and behind-the-scenes content, along with community support. Unlock this after completing the 2-week cohort.",
+    description: "Access AI Strategy, case studies, and behind-the-scenes content with community support.",
     colors: ["#FF6B6B", "#FF8E53", "#FFD93D", "#FFA07A"]
   }, {
     number: "5",
     week: "Bonus",
-    title: "Direct Access to Instructor",
-    description: "Get direct access to the instructor for personalized guidance, support, and mentorship to overcome challenges and unlock your next steps.",
+    title: "Direct Access to Mentor",
+    description: "Get personalized guidance, support, and mentorship to overcome challenges.",
     colors: ["#C44569", "#D68FD6", "#E3A0D3", "#FF8CC8"]
   }, {
     number: "6",
     week: "Community",
     title: "Join the community of AI designers and product builders",
-    description: "Connect with a community of AI designers, product builders, and leaders. Share experiences, get support, and grow together in your AI journey.",
+    description: "Connect with AI designers, product builders, and leaders. Share experiences and grow together.",
     colors: ["#667EEA", "#764BA2", "#F093FB", "#4FACFE"]
   }];
 
