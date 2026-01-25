@@ -10,18 +10,29 @@ import CursorBlogImage from "@/assets/CursorBlog.png";
 
 // Blog post data (Duplicated for now to avoid circular dependencies/refactor issues in one go)
 const featuredPost = {
-  id: 1,
-  title: "Cursor 2.0: The Future of Vibe Coding is Here",
-  excerpt: "Cursor recently launched Cursor 2.0, introducing Composer 1, Agent Mode, and parallel workflows. These updates drastically improve efficiency and hint at where vibe-coding tools are heading.",
+  id: 4,
+  title: "Clawdbot: The AI Agent That Has Everyone Buying Mac Minis",
+  excerpt: "Why designers and creatives are rushing to set up always-on AI assistants — and how you can too. A deep dive into the open-source agent changing personal AI.",
   author: "John Rodrigues",
-  date: "2024-11-28",
-  readTime: "5 min read",
-  category: "Product Update",
-  image: CursorBlogImage,
-  slug: "cursor-2-0-update"
+  date: "2025-01-25",
+  readTime: "12 min read",
+  category: "Insights",
+  image: "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=2000&auto=format&fit=crop",
+  slug: "clawdbot-ai-agent-mac-mini"
 };
 
 const blogPosts = [
+  {
+    id: 1,
+    title: "Cursor 2.0: The Future of Vibe Coding is Here",
+    excerpt: "Cursor recently launched Cursor 2.0, introducing Composer 1, Agent Mode, and parallel workflows. These updates drastically improve efficiency and hint at where vibe-coding tools are heading.",
+    author: "John Rodrigues",
+    date: "2024-11-28",
+    readTime: "5 min read",
+    category: "Product Update",
+    image: CursorBlogImage,
+    slug: "cursor-2-0-update"
+  },
   {
     id: 2,
     title: "7 Observations on How AI is Reshaping Product Design",
@@ -265,6 +276,224 @@ const BlogPost = () => {
                   <Button size="lg" className="bg-white text-black hover:bg-white/90 rounded-full px-8 h-12 text-base font-medium" asChild>
                     <a href="/">
                       Enroll in the Cohort
+                    </a>
+                  </Button>
+                </div>
+              </div>
+            ) : post.slug === "clawdbot-ai-agent-mac-mini" ? (
+              <div className="space-y-6 text-[17px] leading-[1.6]">
+                <p className="text-xl md:text-2xl font-medium text-white leading-normal italic">
+                  Why designers and creatives are rushing to set up always-on AI assistants and how you can too
+                </p>
+                <p>
+                  If you've been on tech Twitter lately, you've probably seen people raving about a lobster emoji and suddenly buying Mac Minis. What's going on?
+                </p>
+                <p>
+                  The answer is <strong>Clawdbot</strong>, an open-source AI agent that's changing how we think about personal AI assistants. And as someone who's been deep in the AI tools for designers space, I had to dig into what all the hype is about.
+                </p>
+
+                <h2 className="text-2xl font-medium text-white mt-12 mb-4 tracking-tight">What Is Clawdbot, Really?</h2>
+                <p>
+                  Think of Clawdbot as having a personal AI employee that works 24/7, runs on your own hardware, and you control entirely from your phone through WhatsApp, Telegram, Discord, or iMessage.
+                </p>
+                <p>
+                  Unlike ChatGPT or Claude where you go to a website and type, Clawdbot lives inside the messaging apps you already use. It can browse the web, fill out forms, manage your email, control your calendar, run shell commands, and even write its own skills to get better at helping you.
+                </p>
+                <p>
+                  The creator, Peter Steinberger (known for high-quality macOS development), built it around his own AI assistant named Clawd, a playful space lobster character. What started as a personal project exploded into a community-driven phenomenon.
+                </p>
+
+                <h2 className="text-2xl font-medium text-white mt-12 mb-4 tracking-tight">Why Everyone's Talking About It</h2>
+                <p>Here's what makes Clawdbot different from every other AI assistant:</p>
+
+                <h3 className="text-xl font-medium text-white mt-8 mb-3 tracking-tight">Always Proactive, Not Reactive</h3>
+                <p>
+                  Previous AI agents were semi-active, you had to prompt them. Clawdbot runs in the background actively doing your tasks 24/7. Federico Viticci from MacStories burned through 180 million tokens in his first week and killed his Zapier subscriptions because Clawdbot automated his entire workflow.
+                </p>
+
+                <h3 className="text-xl font-medium text-white mt-8 mb-3 tracking-tight">True Multi-Platform Integration</h3>
+                <p>
+                  Clawdbot connects to virtually everything: WhatsApp, Telegram, Slack, Discord, Google Chat, Signal, iMessage, Microsoft Teams, and more. Your assistant's memory stays intact across all of them.
+                </p>
+
+                <h3 className="text-xl font-medium text-white mt-8 mb-3 tracking-tight">Local-First Privacy</h3>
+                <p>
+                  Your data stays on your device. Unlike cloud AI services, you own and control everything. Memory is stored as Markdown files in folders like an Obsidian vault, completely inspectable and editable.
+                </p>
+
+                <h3 className="text-xl font-medium text-white mt-8 mb-3 tracking-tight">Self-Improving Skills</h3>
+                <p>
+                  This is the part that blew my mind. Clawdbot can create skills of its own. Users report it automatically figured out API authentication, built workflows, and even edited its own prompts to get better results.
+                </p>
+
+                <h2 className="text-2xl font-medium text-white mt-12 mb-4 tracking-tight">The Mac Mini Phenomenon</h2>
+                <p>So why is everyone buying Mac Minis?</p>
+                <p>
+                  The Mac Mini M4 has become the go-to dedicated hub for running Clawdbot because:
+                </p>
+                <ul className="list-disc pl-6 space-y-2 text-white/80">
+                  <li><strong>Silent 24/7 operation</strong> that sips power with no noise</li>
+                  <li><strong>iMessage sync</strong> for native Apple ecosystem integration</li>
+                  <li><strong>Unified memory</strong> where the M4 Pro with 64GB handles complex AI workloads</li>
+                  <li><strong>Compact form factor</strong> so you can tuck it in a closet and forget about it</li>
+                </ul>
+                <p>
+                  Federico Viticci runs an M4 Mac Mini (~$600) and pays $200/month for Claude Max on top of that. But here's the thing: <strong>you don't need a Mac Mini</strong>.
+                </p>
+                <p>
+                  Clawdbot runs on any laptop (Mac, Windows via WSL2, Linux), Raspberry Pi (some users have it running great), a $5/month VPS, or that dusty 2018 laptop collecting cobwebs.
+                </p>
+                <p>
+                  The minimum requirements are surprisingly low: 1GB RAM, 500MB disk space. The AI model costs more than the hardware for most setups.
+                </p>
+
+                <h2 className="text-2xl font-medium text-white mt-12 mb-4 tracking-tight">Real-World Use Cases (This Is Where It Gets Wild)</h2>
+                <p>Here's what people are actually doing with Clawdbot:</p>
+
+                <h3 className="text-xl font-medium text-white mt-8 mb-3 tracking-tight">Inbox Management</h3>
+                <blockquote className="border-l-2 border-white/30 pl-6 italic text-white/70">
+                  "Cleared 10,000+ emails from my inbox (45% reduction!)" — @jdrhyne
+                </blockquote>
+
+                <h3 className="text-xl font-medium text-white mt-8 mb-3 tracking-tight">Autonomous Coding</h3>
+                <blockquote className="border-l-2 border-white/30 pl-6 italic text-white/70">
+                  "Autonomous Claude Code loops from my phone. 'fix tests' via Telegram. Runs the loop, sends progress every 5 iterations." — @php100
+                </blockquote>
+
+                <h3 className="text-xl font-medium text-white mt-8 mb-3 tracking-tight">Business Operations</h3>
+                <blockquote className="border-l-2 border-white/30 pl-6 italic text-white/70">
+                  "Less than 24 hours in: cleaned up Linear issues, wrote email follow-ups, opened 3 PRs, prospected new signups." — @avi_press
+                </blockquote>
+
+                <h3 className="text-xl font-medium text-white mt-8 mb-3 tracking-tight">Smart Home & Calendar</h3>
+                <p>
+                  Daily briefings at 9am with calendar events, task priorities, and anything needing attention, all sent to your messaging app of choice.
+                </p>
+
+                <h3 className="text-xl font-medium text-white mt-8 mb-3 tracking-tight">Insurance & Reimbursements</h3>
+                <blockquote className="border-l-2 border-white/30 pl-6 italic text-white/70">
+                  "My @clawdbot accidentally started a fight with Lemonade Insurance because of a wrong interpretation response. After this email, they started to reinvestigate the case instead of instantly rejecting it."
+                </blockquote>
+
+                <h2 className="text-2xl font-medium text-white mt-12 mb-4 tracking-tight">The Cost Breakdown</h2>
+                <p>Let's talk real numbers:</p>
+                <div className="overflow-x-auto my-6">
+                  <table className="w-full text-left text-white/80 text-sm">
+                    <thead>
+                      <tr className="border-b border-white/10">
+                        <th className="py-3 pr-4 font-medium text-white">Setup</th>
+                        <th className="py-3 pr-4 font-medium text-white">Hardware</th>
+                        <th className="py-3 font-medium text-white">Monthly Cost</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="border-b border-white/5">
+                        <td className="py-3 pr-4">Budget</td>
+                        <td className="py-3 pr-4">Old laptop / Raspberry Pi / $5 VPS</td>
+                        <td className="py-3">$0-20 (Claude Pro)</td>
+                      </tr>
+                      <tr className="border-b border-white/5">
+                        <td className="py-3 pr-4">Standard</td>
+                        <td className="py-3 pr-4">Mac Mini M4</td>
+                        <td className="py-3">$20-200 (Claude Pro/Max)</td>
+                      </tr>
+                      <tr>
+                        <td className="py-3 pr-4">Power User</td>
+                        <td className="py-3 pr-4">Mac Mini M4 Pro 64GB</td>
+                        <td className="py-3">$200 (Claude Max)</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p>
+                  You can also use OpenAI API or Codex subscriptions, local models through LM Studio (free but reduced capability), or MiniMax M2.1 for cheaper general chat with Claude escalation for complex tasks.
+                </p>
+
+                <h2 className="text-2xl font-medium text-white mt-12 mb-4 tracking-tight">What This Means for Designers and Creatives</h2>
+                <p>As someone building AI tools for designers, here's why I think Clawdbot matters for our community:</p>
+
+                <h3 className="text-xl font-medium text-white mt-8 mb-3 tracking-tight">Workflow Automation on Steroids</h3>
+                <p>
+                  Imagine telling your phone: "Research the latest UI trends, compile them into a mood board, add it to my Notion, and schedule a reminder to review it tomorrow." And it just... does it.
+                </p>
+
+                <h3 className="text-xl font-medium text-white mt-8 mb-3 tracking-tight">Client Communication</h3>
+                <p>
+                  Draft and send follow-up emails, schedule meetings, process invoices, all through a quick voice note on WhatsApp while you're sketching.
+                </p>
+
+                <h3 className="text-xl font-medium text-white mt-8 mb-3 tracking-tight">Content Pipeline</h3>
+                <p>
+                  Several users are turning YouTube videos into reusable agent skills, automating their content research, and even building entire websites from their phone.
+                </p>
+
+                <h3 className="text-xl font-medium text-white mt-8 mb-3 tracking-tight">Personal CRM</h3>
+                <p>
+                  The memory system means Clawdbot remembers every conversation, every preference, every decision. No more re-explaining context every time.
+                </p>
+
+                <h2 className="text-2xl font-medium text-white mt-12 mb-4 tracking-tight">Should You Try It?</h2>
+                <p>I'll be honest, I haven't set it up yet myself. But based on my research, here's my take:</p>
+
+                <p><strong>Try it if:</strong></p>
+                <ul className="list-disc pl-6 space-y-2 text-white/80">
+                  <li>You're comfortable with command line basics</li>
+                  <li>You already pay for Claude Pro or have API credits</li>
+                  <li>You want to automate repetitive tasks</li>
+                  <li>You're curious about where personal AI is heading</li>
+                </ul>
+
+                <p className="mt-6"><strong>Wait if:</strong></p>
+                <ul className="list-disc pl-6 space-y-2 text-white/80">
+                  <li>You want polished, plug-and-play software</li>
+                  <li>You need enterprise-grade reliability today</li>
+                  <li>You're not ready to troubleshoot occasional rough edges</li>
+                </ul>
+
+                <p>
+                  The community is incredibly active (two Clawdbot instances run in the Discord answering questions), and bugs get fixed within minutes of being reported.
+                </p>
+
+                <h2 className="text-2xl font-medium text-white mt-12 mb-4 tracking-tight">The Bottom Line</h2>
+                <p>
+                  Clawdbot represents something bigger than just another AI tool. It's a glimpse at what personal AI assistants should have been all along: proactive, private, integrated into the apps we already use, and actually capable of getting things done.
+                </p>
+                <p>
+                  As one user put it: "It will actually be the thing that nukes a ton of startups, not ChatGPT as people meme about. The fact that it's hackable (and more importantly, self-hackable) and hostable on-prem will make sure tech like this DOMINATES conventional SaaS."
+                </p>
+                <p>
+                  I'm planning to experiment with this and see if it holds up to the promise. If it does, building AI agents that work 24/7 seems to be closer than ever.
+                </p>
+
+                <p>Stay creative,<br /><strong>John</strong></p>
+
+                <p className="italic text-white/60">
+                  Have you tried Clawdbot? Drop your experience in the comments. I'd love to hear how designers are using it in their workflows.
+                </p>
+
+                <hr className="border-white/10 my-12" />
+
+                <div className="not-prose">
+                  <h3 className="text-lg font-medium text-white mb-4 tracking-tight">Related Resources</h3>
+                  <div className="flex flex-wrap gap-3 text-sm">
+                    <a href="https://clawd.bot" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white underline decoration-white/30 underline-offset-4 transition-colors">Clawdbot Official Site</a>
+                    <span className="text-white/20">|</span>
+                    <a href="https://docs.clawd.bot" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white underline decoration-white/30 underline-offset-4 transition-colors">Documentation</a>
+                    <span className="text-white/20">|</span>
+                    <a href="https://github.com/clawdbot/clawdbot" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white underline decoration-white/30 underline-offset-4 transition-colors">GitHub Repository</a>
+                    <span className="text-white/20">|</span>
+                    <a href="https://www.macstories.net/stories/clawdbot-showed-me-what-the-future-of-personal-ai-assistants-looks-like/" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white underline decoration-white/30 underline-offset-4 transition-colors">MacStories Coverage</a>
+                  </div>
+                </div>
+
+                <div className="bg-white/5 border border-white/10 rounded-lg p-8 my-8 text-center not-prose">
+                  <h3 className="text-xl font-medium text-white mb-3 tracking-tight">Get the Free Vibe Coding Guide</h3>
+                  <p className="mb-6 text-white/70 text-base max-w-lg mx-auto">
+                    Learn how to go from static designs to functional AI products with our step-by-step vibe coding guide.
+                  </p>
+                  <Button size="lg" className="bg-white text-black hover:bg-white/90 rounded-full px-8 h-12 text-base font-medium" asChild>
+                    <a href="/guide">
+                      Get the Free Guide
                     </a>
                   </Button>
                 </div>

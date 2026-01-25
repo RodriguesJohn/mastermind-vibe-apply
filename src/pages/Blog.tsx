@@ -7,18 +7,29 @@ import CursorBlogImage from "@/assets/CursorBlog.png";
 
 // Blog post data
 const featuredPost = {
-  id: 1,
-  title: "Cursor 2.0: The Future of Vibe Coding is Here",
-  excerpt: "Cursor recently launched Cursor 2.0, introducing Composer 1, Agent Mode, and parallel workflows. These updates drastically improve efficiency and hint at where vibe-coding tools are heading.",
+  id: 4,
+  title: "Clawdbot: The AI Agent That Has Everyone Buying Mac Minis",
+  excerpt: "Why designers and creatives are rushing to set up always-on AI assistants — and how you can too. A deep dive into the open-source agent changing personal AI.",
   author: "John Rodrigues",
-  date: "2024-11-28",
-  readTime: "5 min read",
-  category: "Product Update",
-  image: CursorBlogImage,
-  slug: "cursor-2-0-update"
+  date: "2025-01-25",
+  readTime: "12 min read",
+  category: "Insights",
+  image: "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=2000&auto=format&fit=crop",
+  slug: "clawdbot-ai-agent-mac-mini"
 };
 
 const blogPosts = [
+  {
+    id: 1,
+    title: "Cursor 2.0: The Future of Vibe Coding is Here",
+    excerpt: "Cursor recently launched Cursor 2.0, introducing Composer 1, Agent Mode, and parallel workflows. These updates drastically improve efficiency and hint at where vibe-coding tools are heading.",
+    author: "John Rodrigues",
+    date: "2024-11-28",
+    readTime: "5 min read",
+    category: "Product Update",
+    image: CursorBlogImage,
+    slug: "cursor-2-0-update"
+  },
   {
     id: 2,
     title: "7 Observations on How AI is Reshaping Product Design",
