@@ -191,22 +191,22 @@ export const AIHeaderSection = () => {
                 }
               }
               .ai-header-h1 {
-                line-height: 1.3 !important;
+                line-height: 1.2 !important;
                 letter-spacing: -0.01em;
               }
               @media (min-width: 640px) {
                 .ai-header-h1 {
-                  line-height: 1.3 !important;
+                  line-height: 1.2 !important;
                 }
               }
               @media (min-width: 768px) {
                 .ai-header-h1 {
-                  line-height: 1.25 !important;
+                  line-height: 1.15 !important;
                 }
               }
               @media (min-width: 1024px) {
                 .ai-header-h1 {
-                  line-height: 1.2 !important;
+                  line-height: 1.1 !important;
                 }
               }
             `}
@@ -248,7 +248,7 @@ export const AIHeaderSection = () => {
               </span>
             </div>
 
-            <h1 className="ai-header-h1 text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-medium mb-5 md:mb-6 tracking-normal text-center leading-tight">
+            <h1 className="ai-header-h1 text-3xl md:text-4xl lg:text-5xl font-medium mb-5 md:mb-6 tracking-normal text-center leading-tight">
               <span className="block">Master Vibe Coding in 2 Weeks</span>
               <span className="block mt-2 md:mt-3">Go from Overwhelmed to Confident</span>
             </h1>

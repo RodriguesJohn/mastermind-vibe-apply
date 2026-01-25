@@ -15,7 +15,6 @@ import { useLocation } from "react-router-dom";
 export const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
-  const isMasterclassPage = location.pathname === "/guide";
   
   return (
     <nav className="sticky top-0 left-0 right-0 z-50 border-b border-border/40 bg-background/98 backdrop-blur-xl">
@@ -30,6 +29,9 @@ export const Navigation = () => {
           <div className="hidden md:flex items-center gap-6">
             <a href="/" className="text-sm font-normal hover:text-primary transition-colors">
               Cohort
+            </a>
+            <a href="/guide" className="text-sm font-normal hover:text-primary transition-colors">
+              Guide
             </a>
             <DropdownMenu>
               <DropdownMenuTrigger className="text-sm font-normal hover:text-primary transition-colors flex items-center gap-1 outline-none">
@@ -71,6 +73,9 @@ export const Navigation = () => {
               <nav className="flex flex-col gap-4 mt-8">
                 <a href="/" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
                   Cohort
+                </a>
+                <a href="/guide" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
+                  Guide
                 </a>
                 <div className="flex flex-col gap-2">
                   <span className="text-base font-normal text-foreground/60 py-2">More</span>

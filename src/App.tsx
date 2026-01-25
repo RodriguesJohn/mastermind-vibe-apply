@@ -20,6 +20,7 @@ import VibeCodingWeekendWorkshop from "./pages/VibeCodingWeekendWorkshop";
 import AppLanding from "./pages/AppLanding";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
+import Guide from "./pages/Guide";
 import GetGuide from "./pages/GetGuide";
 import Workshop from "./pages/Workshop";
 import NotFound from "./pages/NotFound";
@@ -40,7 +41,7 @@ const App = () => (
           {/* Membership page hidden for now */}
           {/* <Route path="/index" element={<Index />} /> */}
           <Route path="/ai-crash-course" element={<AICrashCourse />} />
-          <Route path="/guide" element={<AIDesignMasterclass />} />
+          <Route path="/guide" element={<Guide />} />
           <Route path="/knowledge-hub" element={<KnowledgeHub />} />
           <Route path="/design-engineering" element={<DesignEngineering />} />
           <Route path="/weekend-workshop" element={<VibeCodingWeekendWorkshop />} />
