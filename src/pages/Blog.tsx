@@ -4,21 +4,33 @@ import { Helmet } from "react-helmet";
 import { ArrowRight } from "lucide-react";
 import { useEffect } from "react";
 import CursorBlogImage from "@/assets/CursorBlog.png";
+import FigmaAIThumbnail from "@/assets/FigmaAIThumbnail.svg";
 
 // Blog post data
 const featuredPost = {
-  id: 4,
-  title: "Clawdbot: The AI Agent That Has Everyone Buying Mac Minis",
-  excerpt: "Why designers and creatives are rushing to set up always-on AI assistants — and how you can too. A deep dive into the open-source agent changing personal AI.",
-  author: "John Rodrigues",
-  date: "2025-01-25",
-  readTime: "12 min read",
-  category: "Insights",
-  image: "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=2000&auto=format&fit=crop",
-  slug: "clawdbot-ai-agent-mac-mini"
+  id: 5,
+  title: "Complete Guide: Control Figma with Cursor + Claude",
+  excerpt: "Create Figma components directly from your code using AI. This guide walks you through the full Local Mode setup so Cursor (with Claude) can read AND write to your Figma files.",
+  author: "AI Design Academy",
+  date: "2025-01-28",
+  readTime: "10 min read",
+  category: "Guide",
+  image: FigmaAIThumbnail,
+  slug: "control-figma-with-cursor-claude"
 };
 
 const blogPosts = [
+  {
+    id: 4,
+    title: "Clawdbot: The AI Agent That Has Everyone Buying Mac Minis",
+    excerpt: "Why designers and creatives are rushing to set up always-on AI assistants — and how you can too. A deep dive into the open-source agent changing personal AI.",
+    author: "John Rodrigues",
+    date: "2025-01-25",
+    readTime: "12 min read",
+    category: "Insights",
+    image: "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=2000&auto=format&fit=crop",
+    slug: "clawdbot-ai-agent-mac-mini"
+  },
   {
     id: 1,
     title: "Cursor 2.0: The Future of Vibe Coding is Here",

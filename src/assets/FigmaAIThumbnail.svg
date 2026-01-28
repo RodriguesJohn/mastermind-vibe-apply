@@ -1,0 +1,77 @@
+<svg width="1200" height="750" viewBox="0 0 1200 750" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="50%" style="stop-color:#16213e"/>
+      <stop offset="100%" style="stop-color:#0f0f23"/>
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a259ff"/>
+      <stop offset="100%" style="stop-color:#1abcfe"/>
+    </linearGradient>
+    <linearGradient id="figmaOrange" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F24E1E"/>
+      <stop offset="100%" style="stop-color:#FF7262"/>
+    </linearGradient>
+    <linearGradient id="figmaPurple" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#A259FF"/>
+      <stop offset="100%" style="stop-color:#C77DFF"/>
+    </linearGradient>
+    <linearGradient id="figmaBlue" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1ABCFE"/>
+      <stop offset="100%" style="stop-color:#0ACF83"/>
+    </linearGradient>
+    <linearGradient id="figmaGreen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0ACF83"/>
+      <stop offset="100%" style="stop-color:#00D68F"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="750" fill="url(#bgGradient)"/>
+
+  <!-- Decorative grid pattern -->
+  <g opacity="0.05">
+    <line x1="0" y1="150" x2="1200" y2="150" stroke="white" stroke-width="1"/>
+    <line x1="0" y1="300" x2="1200" y2="300" stroke="white" stroke-width="1"/>
+    <line x1="0" y1="450" x2="1200" y2="450" stroke="white" stroke-width="1"/>
+    <line x1="0" y1="600" x2="1200" y2="600" stroke="white" stroke-width="1"/>
+    <line x1="300" y1="0" x2="300" y2="750" stroke="white" stroke-width="1"/>
+    <line x1="600" y1="0" x2="600" y2="750" stroke="white" stroke-width="1"/>
+    <line x1="900" y1="0" x2="900" y2="750" stroke="white" stroke-width="1"/>
+  </g>
+
+  <!-- Decorative glow circles -->
+  <circle cx="200" cy="200" r="300" fill="url(#figmaPurple)" opacity="0.08"/>
+  <circle cx="1000" cy="550" r="250" fill="url(#figmaBlue)" opacity="0.08"/>
+
+  <!-- Figma Logo (simplified) - Left side -->
+  <g transform="translate(280, 280)">
+    <!-- Top left - orange -->
+    <path d="M0 37.5C0 16.79 16.79 0 37.5 0H75V75H37.5C16.79 75 0 58.21 0 37.5Z" fill="url(#figmaOrange)"/>
+    <!-- Top right - purple -->
+    <path d="M75 0H112.5C133.21 0 150 16.79 150 37.5C150 58.21 133.21 75 112.5 75H75V0Z" fill="url(#figmaPurple)"/>
+    <!-- Middle left - purple -->
+    <path d="M0 112.5C0 91.79 16.79 75 37.5 75H75V150H37.5C16.79 150 0 133.21 0 112.5Z" fill="url(#figmaPurple)"/>
+    <!-- Middle right - blue circle -->
+    <circle cx="112.5" cy="112.5" r="37.5" fill="url(#figmaBlue)"/>
+    <!-- Bottom left - green -->
+    <path d="M0 187.5C0 166.79 16.79 150 37.5 150H75V187.5C75 208.21 58.21 225 37.5 225C16.79 225 0 208.21 0 187.5Z" fill="url(#figmaGreen)"/>
+  </g>
+
+  <!-- Plus sign -->
+  <g transform="translate(520, 340)">
+    <rect x="30" y="0" width="20" height="80" rx="4" fill="white" opacity="0.6"/>
+    <rect x="0" y="30" width="80" height="20" rx="4" fill="white" opacity="0.6"/>
+  </g>
+
+  <!-- AI Text with gradient -->
+  <text x="650" y="420" font-family="system-ui, -apple-system, sans-serif" font-size="140" font-weight="700" fill="url(#accentGradient)">AI</text>
+
+  <!-- Subtitle -->
+  <text x="600" y="520" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="500" fill="white" opacity="0.7">Control Figma with Code</text>
+
+  <!-- Bottom accent line -->
+  <rect x="100" y="700" width="1000" height="4" rx="2" fill="url(#accentGradient)" opacity="0.5"/>
+</svg>
