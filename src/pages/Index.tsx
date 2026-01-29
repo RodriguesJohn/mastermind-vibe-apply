@@ -13,7 +13,7 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>AI Academy membership </title>
+        <title>AI Design Academy Membership | Join Our Community</title>
         <meta 
           name="description" 
           content="Join an elite community of developers. Transform your coding skills through hands-on projects, expert mentorship, and exclusive networking opportunities." 
