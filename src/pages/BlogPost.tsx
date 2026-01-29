@@ -12,12 +12,12 @@ import FigmaAIThumbnail from "@/assets/FigmaAIThumbnail.svg";
 // Blog post data (Duplicated for now to avoid circular dependencies/refactor issues in one go)
 const featuredPost = {
   id: 5,
-  title: "Complete Guide: Control Figma with Cursor + Claude",
-  excerpt: "Create Figma components directly from your code using AI. This guide walks you through the full Local Mode setup so Cursor (with Claude) can read AND write to your Figma files.",
+  title: "AI-Powered Design: Bridging Figma, Code, and Design Systems",
+  excerpt: "Explore how AI tools like Claude Code and Cursor are revolutionizing design-to-code workflows. Learn what's possible when you connect your Figma design system directly to your codebase.",
   author: "AI Design Academy",
   date: "2025-01-28",
-  readTime: "10 min read",
-  category: "Guide",
+  readTime: "6 min read",
+  category: "Insights",
   image: FigmaAIThumbnail,
   slug: "control-figma-with-cursor-claude"
 };
@@ -513,297 +513,107 @@ const BlogPost = () => {
             ) : post.slug === "control-figma-with-cursor-claude" ? (
               <div className="space-y-6 text-[17px] leading-[1.6]">
                 <p className="text-xl md:text-2xl font-medium text-white leading-normal">
-                  Create Figma components directly from your code using AI
+                  The future of design-to-code and code-to-design is here
                 </p>
                 <p>
-                  This guide walks you through the full Local Mode setup so Cursor (with Claude) can read AND write to your Figma files — creating components, frames, and design tokens automatically.
+                  AI-powered design automation is transforming how designers and developers collaborate. With tools like Figma, Cursor, and Claude Code, it's now possible to bridge the gap between design systems and frontend development in ways that weren't possible before.
                 </p>
 
-                <h2 className="text-2xl font-medium text-white mt-12 mb-4 tracking-tight">What You'll Be Able To Do</h2>
-                <ul className="list-disc pl-6 space-y-2 text-white/80">
-                  <li>Generate Figma components from React code</li>
-                  <li>Create multi-variant component sets automatically</li>
-                  <li>Sync design tokens between code and Figma</li>
-                  <li>Extract variables, styles, and component data</li>
-                  <li>Have Claude build your entire design system</li>
-                </ul>
-
-                <h2 className="text-2xl font-medium text-white mt-12 mb-4 tracking-tight">Prerequisites</h2>
-                <p>Before starting, make sure you have:</p>
-                <ul className="list-disc pl-6 space-y-2 text-white/80">
-                  <li><strong>Figma Desktop app</strong> installed (not just browser)</li>
-                  <li><strong>Cursor</strong> installed</li>
-                  <li><strong>Node.js 18+</strong> installed (check with <code className="bg-white/10 px-2 py-0.5 rounded text-sm">node --version</code> in Terminal)</li>
-                  <li><strong>Git</strong> installed (check with <code className="bg-white/10 px-2 py-0.5 rounded text-sm">git --version</code> in Terminal)</li>
-                </ul>
-
-                <hr className="border-white/10 my-12" />
-
-                <h2 className="text-2xl font-medium text-white mt-12 mb-4 tracking-tight">Step 1: Generate a Figma Personal Access Token</h2>
-                <ol className="list-decimal pl-6 space-y-2 text-white/80">
-                  <li>Open Figma (app or browser)</li>
-                  <li>Click your profile icon (top-left corner)</li>
-                  <li>Click <strong>Settings</strong></li>
-                  <li>Scroll down to <strong>Personal access tokens</strong></li>
-                  <li>Click <strong>Generate new token</strong></li>
-                  <li>Name it: <code className="bg-white/10 px-2 py-0.5 rounded text-sm">Figma Console MCP</code></li>
-                  <li>Click <strong>Generate</strong></li>
-                  <li>Copy the token immediately (starts with <code className="bg-white/10 px-2 py-0.5 rounded text-sm">figd_</code>)</li>
-                </ol>
-                <p className="text-white/60 italic mt-4">
-                  Save it somewhere safe — you won't see it again!
+                <h2 className="text-2xl font-medium text-white mt-12 mb-4 tracking-tight">What's Now Possible</h2>
+                <p>
+                  The combination of AI coding assistants and design tools opens up powerful new workflows. Imagine being able to:
                 </p>
-
-                <h2 className="text-2xl font-medium text-white mt-12 mb-4 tracking-tight">Step 2: Clone and Build the MCP Server</h2>
-                <p>Open Terminal and run these commands one by one:</p>
-                <div className="bg-white/5 border border-white/10 rounded-lg p-4 my-4 font-mono text-sm overflow-x-auto">
-                  <pre className="text-white/80">{`git clone https://github.com/southleft/figma-console-mcp.git
-
-cd figma-console-mcp
-
-npm install
-
-npm run build:local`}</pre>
-                </div>
-                <p>Then get your path (you'll need this):</p>
-                <div className="bg-white/5 border border-white/10 rounded-lg p-4 my-4 font-mono text-sm">
-                  <code className="text-white/80">pwd</code>
-                </div>
-                <p>Copy the output — it will look something like:</p>
-                <div className="bg-white/5 border border-white/10 rounded-lg p-4 my-4 font-mono text-sm">
-                  <code className="text-white/80">/Users/yourname/figma-console-mcp</code>
-                </div>
-
-                <h2 className="text-2xl font-medium text-white mt-12 mb-4 tracking-tight">Step 3: Configure Cursor MCP Settings</h2>
-                <ol className="list-decimal pl-6 space-y-2 text-white/80">
-                  <li>Open Cursor</li>
-                  <li>Press <code className="bg-white/10 px-2 py-0.5 rounded text-sm">Cmd + ,</code> (Mac) or <code className="bg-white/10 px-2 py-0.5 rounded text-sm">Ctrl + ,</code> (Windows) to open Settings</li>
-                  <li>Click the <strong>MCP</strong> tab</li>
-                  <li>Click "Add new global MCP server" or "+ Add Custom MCP"</li>
-                  <li>Replace any existing config with this:</li>
-                </ol>
-                <div className="bg-white/5 border border-white/10 rounded-lg p-4 my-4 font-mono text-sm overflow-x-auto">
-                  <pre className="text-white/80">{`{
-  "mcpServers": {
-    "figma-console-local": {
-      "command": "node",
-      "args": ["/Users/yourname/figma-console-mcp/dist/local.js"],
-      "env": {
-        "FIGMA_ACCESS_TOKEN": "figd_your_token_here"
-      }
-    }
-  }
-}`}</pre>
-                </div>
-                <p><strong>Important — Replace these values:</strong></p>
-                <ul className="list-disc pl-6 space-y-2 text-white/80">
-                  <li>Change <code className="bg-white/10 px-2 py-0.5 rounded text-sm">/Users/yourname/figma-console-mcp</code> to your actual path from Step 2</li>
-                  <li>Change <code className="bg-white/10 px-2 py-0.5 rounded text-sm">figd_your_token_here</code> to your actual token from Step 1</li>
-                </ul>
-                <ol className="list-decimal pl-6 space-y-2 text-white/80 mt-4" start={6}>
-                  <li>Save the file</li>
-                  <li>Quit Cursor completely (<code className="bg-white/10 px-2 py-0.5 rounded text-sm">Cmd + Q</code>)</li>
-                </ol>
-
-                <h2 className="text-2xl font-medium text-white mt-12 mb-4 tracking-tight">Step 4: Launch Figma with Debug Mode</h2>
-                <p className="text-white/60 italic">This step is required every time you want to use this integration.</p>
-                <ol className="list-decimal pl-6 space-y-2 text-white/80 mt-4">
-                  <li>Quit Figma completely (<code className="bg-white/10 px-2 py-0.5 rounded text-sm">Cmd + Q</code>)</li>
-                  <li>Open Terminal</li>
-                  <li>Run this command:</li>
-                </ol>
-                <p className="mt-4"><strong>Mac:</strong></p>
-                <div className="bg-white/5 border border-white/10 rounded-lg p-4 my-4 font-mono text-sm">
-                  <code className="text-white/80">open -a "Figma" --args --remote-debugging-port=9222</code>
-                </div>
-                <p><strong>Windows:</strong></p>
-                <div className="bg-white/5 border border-white/10 rounded-lg p-4 my-4 font-mono text-sm">
-                  <code className="text-white/80">start figma://--remote-debugging-port=9222</code>
-                </div>
-                <p>Figma will open with remote debugging enabled.</p>
-
-                <h2 className="text-2xl font-medium text-white mt-12 mb-4 tracking-tight">Step 5: Import the Desktop Bridge Plugin</h2>
-                <p>This plugin enables full editing capabilities (create/modify elements).</p>
-                <ol className="list-decimal pl-6 space-y-2 text-white/80 mt-4">
-                  <li>In Figma, right-click anywhere on the canvas</li>
-                  <li>Go to <strong>Plugins → Development → Import plugin from manifest...</strong></li>
-                  <li>A file picker opens</li>
-                  <li>Press <code className="bg-white/10 px-2 py-0.5 rounded text-sm">Cmd + Shift + G</code> (Go to folder)</li>
-                  <li>Paste your path + <code className="bg-white/10 px-2 py-0.5 rounded text-sm">/figma-desktop-bridge</code>:</li>
-                </ol>
-                <div className="bg-white/5 border border-white/10 rounded-lg p-4 my-4 font-mono text-sm">
-                  <code className="text-white/80">/Users/yourname/figma-console-mcp/figma-desktop-bridge</code>
-                </div>
-                <ol className="list-decimal pl-6 space-y-2 text-white/80" start={6}>
-                  <li>Press Enter</li>
-                  <li>Select <strong>manifest.json</strong></li>
-                  <li>Click <strong>Open</strong></li>
-                </ol>
-                <p className="mt-4">The plugin is now imported.</p>
-
-                <h2 className="text-2xl font-medium text-white mt-12 mb-4 tracking-tight">Step 6: Run the Desktop Bridge Plugin</h2>
-                <ol className="list-decimal pl-6 space-y-2 text-white/80">
-                  <li>Open any Figma file you want to work with</li>
-                  <li>Right-click on the canvas</li>
-                  <li>Go to <strong>Plugins → Development → Figma Desktop Bridge</strong></li>
-                  <li>Click it to start the plugin</li>
-                </ol>
-                <p className="mt-4">A small plugin window will appear — keep it running.</p>
-
-                <h2 className="text-2xl font-medium text-white mt-12 mb-4 tracking-tight">Step 7: Verify Everything Works</h2>
-                <ol className="list-decimal pl-6 space-y-2 text-white/80">
-                  <li>Open Cursor</li>
-                  <li>Open a chat (<code className="bg-white/10 px-2 py-0.5 rounded text-sm">Cmd + L</code>)</li>
-                  <li>Type: "Check Figma status"</li>
-                </ol>
-                <p className="mt-4">You should see:</p>
-                <ul className="list-none pl-6 space-y-2 text-white/80 mt-4">
-                  <li className="text-green-400">Figma Desktop: Running</li>
-                  <li className="text-green-400">Desktop Bridge Plugin: Running</li>
-                  <li className="text-green-400">Console Monitoring: Active</li>
-                  <li className="text-green-400">Browser Connection: Connected</li>
-                </ul>
-                <p className="mt-4 font-medium text-white">If all four are green, you're ready to go!</p>
-
-                <hr className="border-white/10 my-12" />
-
-                <h2 className="text-2xl font-medium text-white mt-12 mb-4 tracking-tight">How to Use It</h2>
-
-                <h3 className="text-xl font-medium text-white mt-8 mb-3 tracking-tight">Basic Commands</h3>
-                <p><strong>Create a component:</strong></p>
-                <div className="bg-white/5 border border-white/10 rounded-lg p-4 my-4 font-mono text-sm">
-                  <code className="text-white/80">Create a button component with primary, secondary, and outline variants</code>
-                </div>
-                <p><strong>Generate from code:</strong></p>
-                <div className="bg-white/5 border border-white/10 rounded-lg p-4 my-4 font-mono text-sm">
-                  <code className="text-white/80">Look at my Button.tsx component and create a matching Figma component</code>
-                </div>
-                <p><strong>Extract design tokens:</strong></p>
-                <div className="bg-white/5 border border-white/10 rounded-lg p-4 my-4 font-mono text-sm">
-                  <code className="text-white/80">Get all design variables from my open Figma file</code>
-                </div>
-                <p><strong>Sync Tailwind to Figma:</strong></p>
-                <div className="bg-white/5 border border-white/10 rounded-lg p-4 my-4 font-mono text-sm">
-                  <code className="text-white/80">Read my tailwind.config.js and create matching color variables in Figma</code>
-                </div>
-
-                <h3 className="text-xl font-medium text-white mt-8 mb-3 tracking-tight">Pro Workflow</h3>
-                <ol className="list-decimal pl-6 space-y-2 text-white/80">
-                  <li>Open your React project in Cursor</li>
-                  <li>Open your Figma file with the Desktop Bridge plugin running</li>
-                  <li>Ask Claude to analyze your components and generate Figma equivalents</li>
-                  <li>Claude will create the components directly in your Figma file</li>
-                </ol>
-
-                <hr className="border-white/10 my-12" />
-
-                <h2 className="text-2xl font-medium text-white mt-12 mb-4 tracking-tight">Daily Usage Checklist</h2>
-                <p>Every time you want to use this integration:</p>
                 <ul className="list-disc pl-6 space-y-2 text-white/80 mt-4">
-                  <li>Launch Figma with debug mode: <code className="bg-white/10 px-2 py-0.5 rounded text-sm">open -a "Figma" --args --remote-debugging-port=9222</code></li>
-                  <li>Open your Figma file</li>
-                  <li>Run the Desktop Bridge plugin (Right-click → Plugins → Development → Figma Desktop Bridge)</li>
-                  <li>Open Cursor and start chatting</li>
+                  <li>Automatically generate Figma components from your React code</li>
+                  <li>Sync design tokens between your codebase and Figma design system</li>
+                  <li>Have AI analyze your UI components and create matching design assets</li>
+                  <li>Extract variables, styles, and component data bidirectionally</li>
+                  <li>Automate repetitive design-to-code translation tasks</li>
+                </ul>
+                <p className="mt-4">
+                  This isn't science fiction — it's happening now through MCP (Model Context Protocol) integrations that connect AI assistants directly to design tools.
+                </p>
+
+                <hr className="border-white/10 my-12" />
+
+                <h2 className="text-2xl font-medium text-white mt-12 mb-4 tracking-tight">The Design Engineering Revolution</h2>
+                <p>
+                  Design engineering is emerging as a critical discipline that sits at the intersection of design and frontend development. AI tools are accelerating this trend by making it easier to:
+                </p>
+                <ul className="list-disc pl-6 space-y-2 text-white/80 mt-4">
+                  <li><strong>Maintain design system consistency</strong> — Keep your Figma design system and code components in sync automatically</li>
+                  <li><strong>Speed up component creation</strong> — Generate multi-variant component sets from code or natural language descriptions</li>
+                  <li><strong>Reduce design-dev handoff friction</strong> — AI can read both your designs and your code, bridging the gap</li>
+                  <li><strong>Automate Tailwind CSS integration</strong> — Sync your Tailwind config with Figma variables and tokens</li>
                 </ul>
 
                 <hr className="border-white/10 my-12" />
 
-                <h2 className="text-2xl font-medium text-white mt-12 mb-4 tracking-tight">Troubleshooting</h2>
-
-                <h3 className="text-xl font-medium text-white mt-8 mb-3 tracking-tight">"Figma Desktop: Not running"</h3>
-                <ul className="list-disc pl-6 space-y-2 text-white/80">
-                  <li>Make sure you launched Figma with the debug command, not by clicking the icon</li>
-                  <li>Quit Figma completely and relaunch with the Terminal command</li>
-                </ul>
-
-                <h3 className="text-xl font-medium text-white mt-8 mb-3 tracking-tight">"Desktop Bridge Plugin: Not running"</h3>
-                <ul className="list-disc pl-6 space-y-2 text-white/80">
-                  <li>Open your Figma file</li>
-                  <li>Right-click → Plugins → Development → Figma Desktop Bridge</li>
-                  <li>Make sure the plugin window stays open</li>
-                </ul>
-
-                <h3 className="text-xl font-medium text-white mt-8 mb-3 tracking-tight">"Cannot connect to localhost:9222"</h3>
-                <ul className="list-disc pl-6 space-y-2 text-white/80">
-                  <li>Quit Figma completely (<code className="bg-white/10 px-2 py-0.5 rounded text-sm">Cmd + Q</code>)</li>
-                  <li>Wait 5 seconds</li>
-                  <li>Run the Terminal command again</li>
-                  <li>Check <code className="bg-white/10 px-2 py-0.5 rounded text-sm">localhost:9222</code> — you should see inspectable pages</li>
-                </ul>
-
-                <h3 className="text-xl font-medium text-white mt-8 mb-3 tracking-tight">MCP not showing in Cursor</h3>
-                <ul className="list-disc pl-6 space-y-2 text-white/80">
-                  <li>Check your JSON syntax in the MCP config (use a JSON validator)</li>
-                  <li>Make sure the path to <code className="bg-white/10 px-2 py-0.5 rounded text-sm">local.js</code> is correct</li>
-                  <li>Verify your Figma token is valid</li>
-                  <li>Restart Cursor completely</li>
-                </ul>
-
-                <h3 className="text-xl font-medium text-white mt-8 mb-3 tracking-tight">Token errors</h3>
-                <ul className="list-disc pl-6 space-y-2 text-white/80">
-                  <li>Generate a new token in Figma Settings → Personal access tokens</li>
-                  <li>Update the token in Cursor MCP config</li>
-                  <li>Restart Cursor</li>
+                <h2 className="text-2xl font-medium text-white mt-12 mb-4 tracking-tight">The Technology Stack</h2>
+                <p>
+                  This new wave of design automation relies on several key technologies working together:
+                </p>
+                <ul className="list-disc pl-6 space-y-2 text-white/80 mt-4">
+                  <li><strong>Figma</strong> — The industry-standard design tool with powerful plugin and API capabilities</li>
+                  <li><strong>Cursor</strong> — An AI-native code editor built for the age of AI pair programming</li>
+                  <li><strong>Claude Code</strong> — Anthropic's AI coding assistant with deep reasoning capabilities</li>
+                  <li><strong>MCP (Model Context Protocol)</strong> — The protocol that enables AI assistants to interact with external tools</li>
+                  <li><strong>Design tokens</strong> — The bridge between design decisions and code implementation</li>
                 </ul>
 
                 <hr className="border-white/10 my-12" />
 
-                <h2 className="text-2xl font-medium text-white mt-12 mb-4 tracking-tight">What Each Part Does</h2>
-                <div className="overflow-x-auto my-6">
-                  <table className="w-full text-left text-white/80 text-sm">
-                    <thead>
-                      <tr className="border-b border-white/10">
-                        <th className="py-3 pr-4 font-medium text-white">Component</th>
-                        <th className="py-3 font-medium text-white">Purpose</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr className="border-b border-white/5">
-                        <td className="py-3 pr-4">figma-console-mcp</td>
-                        <td className="py-3">The MCP server that connects Cursor to Figma</td>
-                      </tr>
-                      <tr className="border-b border-white/5">
-                        <td className="py-3 pr-4">Personal Access Token</td>
-                        <td className="py-3">Authenticates API requests to Figma</td>
-                      </tr>
-                      <tr className="border-b border-white/5">
-                        <td className="py-3 pr-4">Debug Port (9222)</td>
-                        <td className="py-3">Allows external tools to control Figma Desktop</td>
-                      </tr>
-                      <tr>
-                        <td className="py-3 pr-4">Desktop Bridge Plugin</td>
-                        <td className="py-3">Enables write access to create/modify designs</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+                <h2 className="text-2xl font-medium text-white mt-12 mb-4 tracking-tight">Real-World Applications</h2>
+                <p>
+                  Teams are already using AI-powered design workflows to:
+                </p>
+                <ul className="list-disc pl-6 space-y-2 text-white/80 mt-4">
+                  <li>Generate complete design systems from existing React component libraries</li>
+                  <li>Create Figma mockups directly from code descriptions</li>
+                  <li>Keep design tokens synchronized across platforms</li>
+                  <li>Automate the creation of component variants and states</li>
+                  <li>Accelerate prototyping with AI-assisted design generation</li>
+                </ul>
+                <p className="mt-4">
+                  Whether you're a designer learning to code or a developer who wants to improve your design workflow, these AI-powered tools are changing what's possible.
+                </p>
 
                 <hr className="border-white/10 my-12" />
 
-                <h2 className="text-2xl font-medium text-white mt-12 mb-4 tracking-tight">Quick Reference</h2>
-                <p><strong>Launch Figma with debug mode:</strong></p>
-                <div className="bg-white/5 border border-white/10 rounded-lg p-4 my-4 font-mono text-sm">
-                  <code className="text-white/80">open -a "Figma" --args --remote-debugging-port=9222</code>
-                </div>
-                <p><strong>Your MCP config location:</strong> Cursor Settings → MCP tab</p>
-                <p className="mt-4"><strong>Plugin location:</strong></p>
-                <div className="bg-white/5 border border-white/10 rounded-lg p-4 my-4 font-mono text-sm">
-                  <code className="text-white/80">/Users/yourname/figma-console-mcp/figma-desktop-bridge</code>
-                </div>
-                <p><strong>Run plugin:</strong> Right-click → Plugins → Development → Figma Desktop Bridge</p>
+                <h2 className="text-2xl font-medium text-white mt-12 mb-4 tracking-tight">Getting Started</h2>
+                <p>
+                  If you're interested in exploring AI-powered design automation, here are the key areas to focus on:
+                </p>
+                <ul className="list-disc pl-6 space-y-2 text-white/80 mt-4">
+                  <li>Learn how MCP servers work and how they connect AI assistants to external tools</li>
+                  <li>Explore Figma's plugin ecosystem and API capabilities</li>
+                  <li>Understand design tokens and how they bridge design and code</li>
+                  <li>Practice with AI coding assistants like Claude Code in Cursor</li>
+                  <li>Experiment with design-to-code and code-to-design workflows</li>
+                </ul>
+                <p className="mt-4">
+                  The learning curve is real, but the productivity gains are significant. Teams that master these workflows are shipping faster and maintaining better consistency between their designs and implementations.
+                </p>
 
                 <hr className="border-white/10 my-12" />
 
-                <div className="not-prose">
-                  <h3 className="text-lg font-medium text-white mb-4 tracking-tight">Resources</h3>
-                  <div className="flex flex-wrap gap-3 text-sm">
-                    <a href="https://github.com/southleft/figma-console-mcp" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white underline decoration-white/30 underline-offset-4 transition-colors">figma-console-mcp GitHub</a>
-                    <span className="text-white/20">|</span>
-                    <a href="https://modelcontextprotocol.io/" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white underline decoration-white/30 underline-offset-4 transition-colors">Model Context Protocol</a>
-                    <span className="text-white/20">|</span>
-                    <a href="https://www.figma.com/developers/api" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white underline decoration-white/30 underline-offset-4 transition-colors">Figma API Docs</a>
-                  </div>
-                </div>
+                <h2 className="text-2xl font-medium text-white mt-12 mb-4 tracking-tight">The Future of Design + Code</h2>
+                <p>
+                  We're at the beginning of a fundamental shift in how design and development work together. AI isn't replacing designers or developers — it's giving both superpowers they didn't have before.
+                </p>
+                <p className="mt-4">
+                  The designers who learn to leverage AI tools will be able to prototype faster, maintain more consistent design systems, and collaborate more effectively with developers. The developers who understand design workflows will build better user experiences with less friction.
+                </p>
+                <p className="mt-4">
+                  This is what design engineering looks like in the AI era — and it's just getting started.
+                </p>
+
+                <hr className="border-white/10 my-12" />
+
+                <h2 className="text-2xl font-medium text-white mt-12 mb-4 tracking-tight">Learn More</h2>
+                <p>
+                  Want to dive deeper into AI-powered design workflows and design engineering? Join our community to learn the hands-on skills that will define the next generation of design and development.
+                </p>
 
                 <div className="bg-white/5 border border-white/10 rounded-lg p-8 my-8 text-center not-prose">
                   <h3 className="text-xl font-medium text-white mb-3 tracking-tight">Get the Free Vibe Coding Guide</h3>

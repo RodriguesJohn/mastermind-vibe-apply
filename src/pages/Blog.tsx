@@ -9,12 +9,12 @@ import FigmaAIThumbnail from "@/assets/FigmaAIThumbnail.svg";
 // Blog post data
 const featuredPost = {
   id: 5,
-  title: "Complete Guide: Control Figma with Cursor + Claude",
-  excerpt: "Create Figma components directly from your code using AI. This guide walks you through the full Local Mode setup so Cursor (with Claude) can read AND write to your Figma files.",
+  title: "AI-Powered Design: Bridging Figma, Code, and Design Systems",
+  excerpt: "Explore how AI tools like Claude Code and Cursor are revolutionizing design-to-code workflows. Learn what's possible when you connect your Figma design system directly to your codebase.",
   author: "AI Design Academy",
   date: "2025-01-28",
-  readTime: "10 min read",
-  category: "Guide",
+  readTime: "6 min read",
+  category: "Insights",
   image: FigmaAIThumbnail,
   slug: "control-figma-with-cursor-claude"
 };
