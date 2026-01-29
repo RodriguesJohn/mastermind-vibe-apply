@@ -531,7 +531,7 @@ const BlogPost = () => {
                   <li>Automate repetitive design-to-code translation tasks</li>
                 </ul>
                 <p className="mt-4">
-                  This isn't science fiction — it's happening now through MCP (Model Context Protocol) integrations that connect AI assistants directly to design tools.
+                  This isn't science fiction. It's happening now through MCP (Model Context Protocol) integrations that connect AI assistants directly to design tools.
                 </p>
 
                 <hr className="border-white/10 my-12" />
@@ -541,10 +541,10 @@ const BlogPost = () => {
                   Design engineering is emerging as a critical discipline that sits at the intersection of design and frontend development. AI tools are accelerating this trend by making it easier to:
                 </p>
                 <ul className="list-disc pl-6 space-y-2 text-white/80 mt-4">
-                  <li><strong>Maintain design system consistency</strong> — Keep your Figma design system and code components in sync automatically</li>
-                  <li><strong>Speed up component creation</strong> — Generate multi-variant component sets from code or natural language descriptions</li>
-                  <li><strong>Reduce design-dev handoff friction</strong> — AI can read both your designs and your code, bridging the gap</li>
-                  <li><strong>Automate Tailwind CSS integration</strong> — Sync your Tailwind config with Figma variables and tokens</li>
+                  <li><strong>Maintain design system consistency:</strong> Keep your Figma design system and code components in sync automatically</li>
+                  <li><strong>Speed up component creation:</strong> Generate multi-variant component sets from code or natural language descriptions</li>
+                  <li><strong>Reduce design-dev handoff friction:</strong> AI can read both your designs and your code, bridging the gap</li>
+                  <li><strong>Automate Tailwind CSS integration:</strong> Sync your Tailwind config with Figma variables and tokens</li>
                 </ul>
 
                 <hr className="border-white/10 my-12" />
@@ -554,11 +554,11 @@ const BlogPost = () => {
                   This new wave of design automation relies on several key technologies working together:
                 </p>
                 <ul className="list-disc pl-6 space-y-2 text-white/80 mt-4">
-                  <li><strong>Figma</strong> — The industry-standard design tool with powerful plugin and API capabilities</li>
-                  <li><strong>Cursor</strong> — An AI-native code editor built for the age of AI pair programming</li>
-                  <li><strong>Claude Code</strong> — Anthropic's AI coding assistant with deep reasoning capabilities</li>
-                  <li><strong>MCP (Model Context Protocol)</strong> — The protocol that enables AI assistants to interact with external tools</li>
-                  <li><strong>Design tokens</strong> — The bridge between design decisions and code implementation</li>
+                  <li><strong>Figma:</strong> The industry-standard design tool with powerful plugin and API capabilities</li>
+                  <li><strong>Cursor:</strong> An AI-native code editor built for the age of AI pair programming</li>
+                  <li><strong>Claude Code:</strong> Anthropic's AI coding assistant with deep reasoning capabilities</li>
+                  <li><strong>MCP (Model Context Protocol):</strong> The protocol that enables AI assistants to interact with external tools</li>
+                  <li><strong>Design tokens:</strong> The bridge between design decisions and code implementation</li>
                 </ul>
 
                 <hr className="border-white/10 my-12" />
@@ -599,13 +599,13 @@ const BlogPost = () => {
 
                 <h2 className="text-2xl font-medium text-white mt-12 mb-4 tracking-tight">The Future of Design + Code</h2>
                 <p>
-                  We're at the beginning of a fundamental shift in how design and development work together. AI isn't replacing designers or developers — it's giving both superpowers they didn't have before.
+                  We're at the beginning of a fundamental shift in how design and development work together. AI isn't replacing designers or developers. It's giving both superpowers they didn't have before.
                 </p>
                 <p className="mt-4">
                   The designers who learn to leverage AI tools will be able to prototype faster, maintain more consistent design systems, and collaborate more effectively with developers. The developers who understand design workflows will build better user experiences with less friction.
                 </p>
                 <p className="mt-4">
-                  This is what design engineering looks like in the AI era — and it's just getting started.
+                  This is what design engineering looks like in the AI era, and it's just getting started.
                 </p>
 
                 <hr className="border-white/10 my-12" />
