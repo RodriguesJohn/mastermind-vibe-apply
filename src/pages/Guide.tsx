@@ -93,7 +93,7 @@ const Guide = () => {
             <div className="px-4 md:px-10 lg:px-[120px] relative z-10">
               <div className="max-w-4xl mx-auto text-center mb-8">
                 <p className="text-sm md:text-base text-white/60 uppercase tracking-wider mb-4">
-                  Free Guide
+                  Free Guide + 4 Day Email Course
                 </p>
                 <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium tracking-tight leading-tight mb-3">
                   Vibe Coding Guide
