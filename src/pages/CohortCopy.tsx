@@ -1,11 +1,11 @@
 import { Navigation } from "@/components/Navigation";
-import { AIHeaderSection } from "@/components/AIHeaderSection";
+import { AIHeaderSectionCopy } from "@/components/AIHeaderSectionCopy";
 import { CohortOverviewSection } from "@/components/CohortOverviewSection";
-import { CohortModulesSection } from "@/components/CohortModulesSection";
+import { CohortModulesSectionCopy } from "@/components/CohortModulesSectionCopy";
 import { CohortTestimonialsSection } from "@/components/CohortTestimonialsSection";
-import { CohortStatsSection } from "@/components/CohortStatsSection";
-import { InstructorSection } from "@/components/InstructorSection";
+import { CohortStatsSectionCopy } from "@/components/CohortStatsSectionCopy";
 import { PlaybookSection } from "@/components/PlaybookSection";
+import { MentorPricingSectionCopy } from "@/components/MentorPricingSectionCopy";
 import { Helmet } from "react-helmet";
 import LogoCloud from "@/components/LogoCloud";
 import CohortCompanyLogos from "@/components/CohortCompanyLogos";
@@ -13,7 +13,35 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { useState } from "react";
 import { MessageCircle, ArrowRight } from "lucide-react";
-const Cohort = () => {
+
+// Import all Tools logos
+import cursorLogo from "@/assets/Tools/cursor.png";
+import claudeLogo from "@/assets/Tools/Claude.png";
+import googleAILogo from "@/assets/Tools/GoogleAI.png";
+import loveableLogo from "@/assets/Tools/Loveable.png";
+import supabaseLogo from "@/assets/Tools/Superbase.png";
+import vercelLogo from "@/assets/Tools/Vercel.png";
+import image2 from "@/assets/Tools/image 2.png";
+import image4 from "@/assets/Tools/image 4.png";
+import image5 from "@/assets/Tools/image 5.png";
+import image7 from "@/assets/Tools/image 7.png";
+import image13 from "@/assets/Tools/image 13.png";
+
+const toolsLogos = [
+  { src: cursorLogo, alt: "Cursor" },
+  { src: claudeLogo, alt: "Claude" },
+  { src: googleAILogo, alt: "Google AI" },
+  { src: loveableLogo, alt: "Loveable" },
+  { src: supabaseLogo, alt: "Supabase" },
+  { src: vercelLogo, alt: "Vercel" },
+  { src: image2, alt: "Tool" },
+  { src: image4, alt: "Tool" },
+  { src: image5, alt: "Tool" },
+  { src: image7, alt: "Tool" },
+  { src: image13, alt: "Tool" },
+];
+
+const CohortCopy = () => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   return <>
@@ -23,26 +51,19 @@ const Cohort = () => {
       </Helmet>
 
       <div className="min-h-screen">
-        {/* Top Banner */}
-        <div className="bg-primary/10 border-b border-primary/20 py-2 px-4">
-          <div className="max-w-[1200px] mx-auto text-center">
-            <p className="text-sm md:text-base text-foreground font-medium">
-              The next cohort starts on February 6th, 2026
-            </p>
-          </div>
-        </div>
+        {/* Top Banner - Hidden */}
         <Navigation />
         <main>
-          <AIHeaderSection />
+          <AIHeaderSectionCopy />
           <CohortCompanyLogos />
-          <CohortTestimonialsSection />
+          <CohortTestimonialsSection title="Kind Words" />
 
-          <LogoCloud />
+          <LogoCloud logos={toolsLogos} />
 
           <CohortOverviewSection />
-          <CohortStatsSection />
-          <CohortModulesSection />
-          <InstructorSection />
+          <CohortStatsSectionCopy />
+          <CohortModulesSectionCopy />
+          <MentorPricingSectionCopy />
 
           <PlaybookSection />
           
@@ -75,4 +96,5 @@ const Cohort = () => {
       </div>
     </>;
 };
-export default Cohort;
+
+export default CohortCopy;

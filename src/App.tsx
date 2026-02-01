@@ -23,6 +23,7 @@ import BlogPost from "./pages/BlogPost";
 import Guide from "./pages/Guide";
 import GetGuide from "./pages/GetGuide";
 import Workshop from "./pages/Workshop";
+import CohortCopy from "./pages/CohortCopy";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,7 +35,8 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Cohort />} />
+          <Route path="/" element={<CohortCopy />} />
+          <Route path="/cohort" element={<Cohort />} />
           <Route path="/vibe-coding-course" element={<VibeCodingAccelerator />} />
           {/* <Route path="/coaching" element={<Consulting />} /> */}
           <Route path="/course" element={<Course />} />
@@ -50,6 +52,7 @@ const App = () => (
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/get-guide" element={<GetGuide />} />
           <Route path="/workshop" element={<Workshop />} />
+          {/* CohortCopy is now the home page at "/" */}
           <Route path="/projects" element={<Projects />} />
           {/* <Route path="/tools" element={<Tools />} /> */}
           {/* <Route path="/talent-pool" element={<TalentPool />} /> */}

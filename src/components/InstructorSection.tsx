@@ -8,7 +8,7 @@ import GoogleLogo from "@/assets/Google.svg.png";
 import AppleLogo from "@/assets/Apple.png";
 import AGILogo from "@/assets/AGI.png";
 const OpenAILogo = "/openai-logo.png";
-import LoveableLogoMain from "@/assets/Loveable.png";
+import LoveableLogoMain from "@/assets/Tools/Loveable.png";
 
 export const InstructorSection = () => {
   return (

@@ -1,7 +1,4 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
-import { useState, useEffect } from "react";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { StardustButton } from "@/components/ui/stardust-button";
 import SphereImageGrid, { ImageData } from "./SphereImageGrid";
 import headerCircleImages from "@/assets/HeaderCircle";
 
@@ -31,21 +28,6 @@ const headerImages: ImageData[] = [
 ];
 
 export const AIHeaderSection = () => {
-  const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
-
-  useEffect(() => {
-    if (isWaitlistOpen) {
-      // Load ConvertKit script when modal opens
-      const scriptId = 'ck-script-5';
-      if (!document.getElementById(scriptId)) {
-        const script = document.createElement('script');
-        script.id = scriptId;
-        script.src = 'https://f.convertkit.com/ckjs/ck.5.js';
-        document.body.appendChild(script);
-      }
-    }
-  }, [isWaitlistOpen]);
-
   return (
     <>
       <style dangerouslySetInnerHTML={{__html: `
@@ -258,110 +240,9 @@ export const AIHeaderSection = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                variant="cta" 
-                size="lg"
-                className="group"
-                asChild
-              >
-                <a 
-                  href="https://maven.com/productlearnio/aiproductdesignmasterycohort"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Enroll In The Cohort
-                  <ArrowRight className="group-hover:translate-x-1 transition-transform" />
-                </a>
-              </Button>
-              <Dialog open={isWaitlistOpen} onOpenChange={setIsWaitlistOpen}>
-                <DialogTrigger asChild>
-                  <Button 
-                    variant="outline" 
-                    size="lg"
-                    className="border-white/20 text-white hover:bg-white/10"
-                  >
-                    Join the waitlist
-                  </Button>
-                </DialogTrigger>
-                <DialogContent className="max-w-2xl w-[95vw] max-h-[90vh] overflow-y-auto bg-black border-white/20 rounded-lg p-0">
-                  <div className="p-6 sm:p-8">
-                    <form 
-                      action="https://app.kit.com/forms/8989807/subscriptions" 
-                      className="seva-form formkit-form" 
-                      method="post" 
-                      data-sv-form="8989807" 
-                      data-uid="7681611dac" 
-                      data-format="inline" 
-                      data-version="5" 
-                      data-options='{"settings":{"after_subscribe":{"action":"message","success_message":"Success! Now check your email to confirm your subscription.","redirect_url":""},"analytics":{"google":null,"fathom":null,"facebook":null,"segment":null,"pinterest":null,"sparkloop":null,"googletagmanager":null},"modal":{"trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"powered_by":{"show":true,"url":"https://kit.com/features/forms?utm_campaign=poweredby&utm_content=form&utm_medium=referral&utm_source=dynamic"},"recaptcha":{"enabled":false},"return_visitor":{"action":"show","custom_content":""},"slide_in":{"display_in":"bottom_right","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"sticky_bar":{"display_in":"top","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15}},"version":"5"}' 
-                      min-width="400 500 600 700 800" 
-                      style={{backgroundColor: 'rgb(0, 0, 0)', borderRadius: '4px'}}
-                    >
-                      <div className="formkit-background" style={{opacity: 0.2}}></div>
-                      <div data-style="minimal">
-                        <div className="formkit-header" data-element="header" style={{color: 'rgb(255, 255, 255)', fontSize: '27px', fontWeight: 700}}>
-                          <h2>Join the Cohort Waitlist</h2>
-                        </div>
-                        <div className="formkit-subheader" data-element="subheader" style={{color: 'rgb(104, 104, 104)', fontSize: '18px'}}>
-                          <p>We will notify you before the cohort starts</p>
-                        </div>
-                        <ul className="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
-                        <div data-element="fields" data-stacked="true" className="seva-fields formkit-fields">
-                          <div className="formkit-field">
-                            <input 
-                              className="formkit-input" 
-                              aria-label="First Name" 
-                              name="fields[first_name]" 
-                              placeholder="First Name" 
-                              type="text" 
-                              style={{color: 'rgb(0, 0, 0)', borderColor: 'rgb(162, 162, 162)', borderRadius: '4px', fontWeight: 400}}
-                            />
-                          </div>
-                          <div className="formkit-field">
-                            <input 
-                              className="formkit-input" 
-                              name="email_address" 
-                              aria-label="Email Address" 
-                              placeholder="Email Address" 
-                              required 
-                              type="email" 
-                              style={{color: 'rgb(0, 0, 0)', borderColor: 'rgb(162, 162, 162)', borderRadius: '4px', fontWeight: 400}}
-                            />
-                          </div>
-                          <button 
-                            data-element="submit" 
-                            className="formkit-submit formkit-submit" 
-                            type="submit"
-                            style={{color: 'rgb(255, 255, 255)', backgroundColor: 'rgb(1, 67, 242)', borderRadius: '4px', fontWeight: 400}}
-                          >
-                            <div className="formkit-spinner">
-                              <div></div>
-                              <div></div>
-                              <div></div>
-                            </div>
-                            <span className="">Join the Waitlist</span>
-                          </button>
-                        </div>
-                        <div className="formkit-guarantee" data-element="guarantee" style={{color: 'rgb(77, 77, 77)', fontSize: '13px', fontWeight: 400}}>
-                          We won't send you spam. Unsubscribe at any time.
-                        </div>
-                        <div className="formkit-powered-by-convertkit-container">
-                          <a 
-                            href="https://kit.com/features/forms?utm_campaign=poweredby&utm_content=form&utm_medium=referral&utm_source=dynamic" 
-                            data-element="powered-by" 
-                            className="formkit-powered-by-convertkit" 
-                            data-variant="light" 
-                            target="_blank" 
-                            rel="nofollow"
-                          >
-                            Built with Kit
-                          </a>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </DialogContent>
-              </Dialog>
+              <StardustButton href="https://maven.com/productlearnio/aiproductdesignmasterycohort">
+                Enroll
+              </StardustButton>
             </div>
           </div>
 
@@ -395,6 +276,7 @@ export const AIHeaderSection = () => {
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
