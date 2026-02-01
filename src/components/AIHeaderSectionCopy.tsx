@@ -162,7 +162,7 @@ export const AIHeaderSectionCopy = () => {
               </StardustButton>
             </div>
             <p className="text-xs text-white/50 mt-3 italic">
-              Limited membership spots available
+              Cancel anytime
             </p>
           </div>
 
