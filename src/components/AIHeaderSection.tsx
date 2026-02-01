@@ -230,7 +230,7 @@ export const AIHeaderSection = () => {
               </span>
             </div>
 
-            <h1 className="ai-header-h1 text-3xl md:text-4xl lg:text-5xl font-medium mb-5 md:mb-6 tracking-normal text-center leading-tight">
+            <h1 className="ai-header-h1 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium mb-5 md:mb-6 tracking-normal text-center leading-tight [text-wrap:balance]">
               <span className="block">Master Vibe Coding in 2 Weeks</span>
               <span className="block mt-2 md:mt-3">Go from Overwhelmed to Confident</span>
             </h1>

@@ -31,10 +31,8 @@ export const StardustButton = ({
   };
 
   const wrapStyle: React.CSSProperties = {
-    fontSize: '18px',
     fontWeight: 600,
     color: '#ffffff',
-    padding: '20px 60px',
     borderRadius: 'inherit',
     position: 'relative',
     overflow: 'hidden',
@@ -50,6 +48,18 @@ export const StardustButton = ({
   };
 
   const styles = `
+    .stardust-button .wrap {
+      font-size: 15px;
+      padding: 14px 36px;
+    }
+
+    @media (min-width: 640px) {
+      .stardust-button .wrap {
+        font-size: 18px;
+        padding: 20px 60px;
+      }
+    }
+
     .stardust-button .wrap::before,
     .stardust-button .wrap::after {
       content: "";

@@ -48,10 +48,10 @@ const Cohort = () => {
           
         </main>
 
-        {/* Floating Chat Button */}
+{/* Floating Chat Button - Hidden
         <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
           <DialogTrigger asChild>
-            <Button 
+            <Button
               className="fixed bottom-6 right-6 z-50 rounded-lg px-6 py-3 shadow-lg bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 flex items-center gap-2"
               size="lg"
               variant="ghost"
@@ -72,6 +72,7 @@ const Cohort = () => {
             </div>
           </DialogContent>
         </Dialog>
+        */}
       </div>
     </>;
 };

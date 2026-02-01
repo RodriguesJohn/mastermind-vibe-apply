@@ -112,7 +112,7 @@ export const AIHeaderSectionCopy = () => {
 
           {/* Centered Content */}
           <div className="text-center">
-            <div className="flex items-center justify-center gap-2 mb-8 md:mb-10">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 mb-8 md:mb-10">
               <span className="text-xs font-medium tracking-wider uppercase flex items-center gap-1">
                 {/* 4 full stars */}
                 {Array.from({ length: 4 }).map((_, i) => (
@@ -141,7 +141,9 @@ export const AIHeaderSectionCopy = () => {
                     ★
                   </span>
                 </span>
-                <span className="text-white/60 ml-1">Based on</span>
+              </span>
+              <span className="text-xs font-medium tracking-wider uppercase whitespace-nowrap">
+                <span className="text-white/60">Based on</span>
                 <span className="text-white ml-1 font-semibold">4.7/5</span>
                 <span className="text-white/60 ml-1">rated cohort on Maven</span>
               </span>
@@ -161,14 +163,14 @@ export const AIHeaderSectionCopy = () => {
                 Get Started Today
               </StardustButton>
             </div>
-            <p className="text-xs text-white/50 mt-3 italic">
+            <p className="text-xs text-white/50 mt-3 italic relative z-20">
               Cancel anytime
             </p>
           </div>
 
           {/* SphereImageGrid at bottom, top half visible */}
-          <div className="relative w-full flex justify-center overflow-hidden h-[300px] md:h-[400px]">
-            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 md:translate-y-[55%] translate-y-[30%]">
+          <div className="relative w-full flex justify-center overflow-hidden h-[250px] md:h-[400px]">
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 md:translate-y-[55%] translate-y-[45%]">
               <div className="absolute -inset-8 bg-[radial-gradient(circle,_rgba(46,114,255,0.18)_0%,_rgba(0,0,0,0)_70%)] blur-3xl" aria-hidden="true" />
               <div className="relative z-10">
                 <div className="hidden md:block">
