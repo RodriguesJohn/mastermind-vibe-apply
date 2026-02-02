@@ -731,7 +731,7 @@ const VibeCodingAndAIProductBuilderClub = () => {
                 <p>Need help? Get reimbursed by your company or save 20%+ with a team enrollment.</p>
                 <div className="flex flex-col gap-3 sm:flex-row">
                   <Button variant="cta" size="lg" asChild>
-                    <a href="https://maven.com/productlearnio/vibe-coding-workshop" target="_blank" rel="noopener noreferrer">
+                    <a href="https://maven.com/productlearnio/aiproductdesignmasterycohort" target="_blank" rel="noopener noreferrer">
                       Enroll
                     </a>
                   </Button>
