@@ -20,9 +20,11 @@ export const Navigation = () => {
             <a href="/" className="text-sm font-normal hover:text-primary transition-colors">
               Home
             </a>
+            {/* Workshop link hidden
             <a href="https://maven.com/productlearnio/aiproductdesignmasterycohort" target="_blank" rel="noopener noreferrer" className="text-sm font-normal hover:text-primary transition-colors">
               Workshop
             </a>
+            */}
             <a href="/guide" className="text-sm font-normal hover:text-primary transition-colors">
               Guide
             </a>
@@ -52,9 +54,11 @@ export const Navigation = () => {
                 <a href="/" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
                   Home
                 </a>
+                {/* Workshop link hidden
                 <a href="https://maven.com/productlearnio/aiproductdesignmasterycohort" target="_blank" rel="noopener noreferrer" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
                   Workshop
                 </a>
+                */}
                 <a href="/guide" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
                   Guide
                 </a>
