@@ -37,7 +37,7 @@ export const MentorPricingSectionCopy = () => {
                   I've seen too many talented designers feeling overwhelmed by AI, unsure where to start, which tools actually matter, or how to integrate them without losing their creative edge.
                 </p>
                 <p>
-                  That's why I created this mastery hub and community. As the creator of The AI Design Playbook (read by 2,000+ industry leaders) and founder of AI Design Academy, I've helped 300+ designers navigate this shift.
+                  That's why I created this mastery hub and community. As the creator of AI Design Academy, I've helped 300+ designers navigate this shift.
                 </p>
               </div>
 
@@ -114,7 +114,7 @@ export const MentorPricingSectionCopy = () => {
                     <svg className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span className="text-white/80">Live Q&A & vibe coding sessions (Top leaderboard members)</span>
+                    <span className="text-white/80">Async Q&A to unblock your next steps building with AI</span>
                   </li>
                 </ul>
 
