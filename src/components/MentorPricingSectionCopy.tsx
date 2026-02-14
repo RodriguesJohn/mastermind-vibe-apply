@@ -121,7 +121,7 @@ export const MentorPricingSectionCopy = () => {
                 {/* CTA */}
                 <div className="flex justify-center">
                   <StardustButton href="https://www.skool.com/ai-design-academy-6114">
-                    Get Access Now
+                    Join the Academy
                   </StardustButton>
                 </div>
               </div>

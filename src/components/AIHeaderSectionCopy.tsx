@@ -155,12 +155,12 @@ export const AIHeaderSectionCopy = () => {
             </h1>
 
             <p className="text-base md:text-lg text-white/60 font-light mb-8 md:mb-10 leading-relaxed max-w-2xl mx-auto px-4">
-              Go from overwhelmed to confident · Learn the latest tools and workflows · Get resources and structured guidance · Become an AI native designer
+              Go from overwhelmed to confident · Learn the latest tools and workflows · Get resources and structured guidance · Become an AI Native Designer
             </p>
 
             <div className="flex flex-col gap-3 justify-center items-center">
               <StardustButton href="#pricing">
-                Get Started Today
+                Join the Academy
               </StardustButton>
               <a
                 href="/newsletter"

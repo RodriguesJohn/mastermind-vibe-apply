@@ -6,7 +6,7 @@ interface StardustButtonProps extends React.ButtonHTMLAttributes<HTMLButtonEleme
 }
 
 export const StardustButton = ({
-  children = "Get Access",
+  children = "Join the Academy",
   onClick,
   className = "",
   href,

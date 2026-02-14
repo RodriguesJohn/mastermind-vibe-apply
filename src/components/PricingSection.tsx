@@ -68,7 +68,7 @@ export const PricingSection = () => {
               {/* CTA */}
               <div className="flex justify-center">
                 <StardustButton href="https://maven.com/productlearnio/aiproductdesignmasterycohort">
-                  Get Access Now
+                  Join the Academy
                 </StardustButton>
               </div>
             </div>
