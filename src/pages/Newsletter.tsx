@@ -138,8 +138,8 @@ const Newsletter = () => {
                   </div>
                   <div className="p-5 rounded-xl bg-white/5 border border-white/10 hover:border-white/20 transition-colors">
                     <Check className="w-5 h-5 text-primary mb-3" />
-                    <h3 className="text-white font-medium mb-1">No Fluff</h3>
-                    <p className="text-white/50 text-sm">Just signal, no noise. Curated for busy designers.</p>
+                    <h3 className="text-white font-medium mb-1">Curated with Care</h3>
+                    <p className="text-white/50 text-sm">AI news and trends curated by AI agents, carefully designed by John Rodrigues.</p>
                   </div>
                 </div>
               </div>
