@@ -15,6 +15,26 @@ const Newsletter = () => {
     }
   }, []);
 
+  const formHtml = `
+    <form action="https://app.kit.com/forms/9087462/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="9087462" data-uid="523a052d48" data-format="inline" data-version="5" data-options="{&quot;settings&quot;:{&quot;after_subscribe&quot;:{&quot;action&quot;:&quot;message&quot;,&quot;success_message&quot;:&quot;Success! Now check your email to confirm your subscription.\\nStay updated with AI&quot;,&quot;redirect_url&quot;:&quot;https://theaidesignacademy.com&quot;},&quot;analytics&quot;:{&quot;google&quot;:null,&quot;fathom&quot;:null,&quot;facebook&quot;:null,&quot;segment&quot;:null,&quot;pinterest&quot;:null,&quot;sparkloop&quot;:null,&quot;googletagmanager&quot;:null},&quot;modal&quot;:{&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;powered_by&quot;:{&quot;show&quot;:false,&quot;url&quot;:&quot;https://kit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic&quot;},&quot;recaptcha&quot;:{&quot;enabled&quot;:false},&quot;return_visitor&quot;:{&quot;action&quot;:&quot;show&quot;,&quot;custom_content&quot;:&quot;&quot;},&quot;slide_in&quot;:{&quot;display_in&quot;:&quot;bottom_right&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;sticky_bar&quot;:{&quot;display_in&quot;:&quot;top&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15}},&quot;version&quot;:&quot;5&quot;}" min-width="400 500 600 700 800">
+      <div data-style="clean">
+        <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
+        <div data-element="fields" data-stacked="false" class="seva-fields formkit-fields">
+          <div class="formkit-field">
+            <input class="formkit-input" aria-label="First Name" name="fields[first_name]" placeholder="First Name" type="text" style="color: rgb(255, 255, 255); background: rgba(0,0,0,0.5); border-color: rgba(255,255,255,0.2); border-radius: 12px; font-weight: 400; padding: 16px;">
+          </div>
+          <div class="formkit-field">
+            <input class="formkit-input" name="email_address" aria-label="Email Address" placeholder="Email Address" required="" type="email" style="color: rgb(255, 255, 255); background: rgba(0,0,0,0.5); border-color: rgba(255,255,255,0.2); border-radius: 12px; font-weight: 400; padding: 16px;">
+          </div>
+          <button data-element="submit" class="formkit-submit formkit-submit" style="color: rgb(255, 255, 255); background: linear-gradient(135deg, #4285ff 0%, #2e72ff 50%, #1a5fff 100%); border-radius: 9999px; font-weight: 600; box-shadow: inset 0 0.3rem 0.9rem rgba(255, 255, 255, 0.4), inset 0 -0.1rem 0.3rem rgba(0, 50, 150, 0.5), inset 0 -0.4rem 0.9rem rgba(100, 170, 255, 0.4), 0 0.5rem 2rem rgba(46, 114, 255, 0.5), 0 1rem 3rem rgba(46, 114, 255, 0.3);">
+            <div class="formkit-spinner"><div></div><div></div><div></div></div>
+            <span>✦ Subscribe Free</span>
+          </button>
+        </div>
+      </div>
+    </form>
+  `;
+
   return (
     <>
       <Helmet>
@@ -48,62 +68,7 @@ const Newsletter = () => {
 
               {/* Form Card */}
               <div className="bg-gradient-to-b from-white/10 to-white/5 border border-white/20 rounded-2xl p-6 md:p-8 max-w-lg mx-auto mb-12">
-                <form
-                  action="https://app.kit.com/forms/9087462/subscriptions"
-                  className="seva-form formkit-form"
-                  method="post"
-                  data-sv-form="9087462"
-                  data-uid="523a052d48"
-                  data-format="inline"
-                  data-version="5"
-                  data-options='{"settings":{"after_subscribe":{"action":"message","success_message":"Success! Now check your email to confirm your subscription.\nStay updated with AI","redirect_url":"https://theaidesignacademy.com"},"analytics":{"google":null,"fathom":null,"facebook":null,"segment":null,"pinterest":null,"sparkloop":null,"googletagmanager":null},"modal":{"trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"powered_by":{"show":false,"url":"https://kit.com/features/forms?utm_campaign=poweredby&utm_content=form&utm_medium=referral&utm_source=dynamic"},"recaptcha":{"enabled":false},"return_visitor":{"action":"show","custom_content":""},"slide_in":{"display_in":"bottom_right","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"sticky_bar":{"display_in":"top","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15}},"version":"5"}'
-                >
-                  <div data-style="clean">
-                    <ul className="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
-                    <div data-element="fields" data-stacked="true" className="seva-fields formkit-fields">
-                      <div className="formkit-field mb-3">
-                        <input
-                          className="formkit-input w-full px-4 py-4 rounded-xl bg-black/50 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all text-base"
-                          aria-label="First Name"
-                          name="fields[first_name]"
-                          placeholder="Your first name"
-                          type="text"
-                        />
-                      </div>
-                      <div className="formkit-field mb-3">
-                        <input
-                          className="formkit-input w-full px-4 py-4 rounded-xl bg-black/50 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all text-base"
-                          name="email_address"
-                          aria-label="Email Address"
-                          placeholder="Your email address"
-                          required
-                          type="email"
-                        />
-                      </div>
-                      <button
-                        data-element="submit"
-                        className="formkit-submit w-full py-4 px-8 rounded-full text-white font-semibold text-lg flex items-center justify-center gap-2 transition-all duration-200 hover:-translate-y-[3px] active:translate-y-[1px]"
-                        style={{
-                          background: 'linear-gradient(135deg, #4285ff 0%, #2e72ff 50%, #1a5fff 100%)',
-                          boxShadow: `
-                            inset 0 0.3rem 0.9rem rgba(255, 255, 255, 0.4),
-                            inset 0 -0.1rem 0.3rem rgba(0, 50, 150, 0.5),
-                            inset 0 -0.4rem 0.9rem rgba(100, 170, 255, 0.4),
-                            0 0.5rem 2rem rgba(46, 114, 255, 0.5),
-                            0 1rem 3rem rgba(46, 114, 255, 0.3)
-                          `,
-                        }}
-                      >
-                        <div className="formkit-spinner">
-                          <div></div>
-                          <div></div>
-                          <div></div>
-                        </div>
-                        <span>✦ Subscribe Free</span>
-                      </button>
-                    </div>
-                  </div>
-                </form>
+                <div dangerouslySetInnerHTML={{ __html: formHtml }} />
 
                 <div className="flex items-center justify-center mt-4 text-white/50 text-sm">
                   <span className="flex items-center gap-1">
