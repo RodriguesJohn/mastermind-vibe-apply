@@ -149,9 +149,9 @@ export const AIHeaderSectionCopy = () => {
               </span>
             </div>
 
-            <h1 className="ai-header-h1 text-3xl md:text-4xl lg:text-5xl font-medium mb-5 md:mb-6 tracking-normal text-center leading-tight">
+            <h1 className="ai-header-h1 text-[1.75rem] sm:text-3xl md:text-4xl lg:text-5xl font-medium mb-5 md:mb-6 tracking-tight text-center leading-snug">
               <span className="block">Master AI Tools, Workflows, Techniques</span>
-              <span className="block mt-2 md:mt-3">& Become an AI Native Designer</span>
+              <span className="block mt-1 sm:mt-2 md:mt-3">& Become an AI Native Designer</span>
             </h1>
 
             <p className="text-base md:text-lg text-white/60 font-light mb-8 md:mb-10 leading-relaxed max-w-2xl mx-auto px-4">
