@@ -73,9 +73,12 @@ const CohortCopy = () => {
         {/* Sticky Bottom Bar */}
         <div className="fixed bottom-0 left-0 right-0 z-50 py-3 px-4 sm:px-6 bg-black/80 backdrop-blur-xl border-t border-white/10">
           <div className="container mx-auto flex items-center justify-center sm:justify-between">
-            <p className="text-white/60 text-sm hidden sm:block">
-              Ready to master AI design workflows?
-            </p>
+            <div className="hidden sm:flex items-center gap-3">
+              <span className="inline-block w-2 h-2 bg-amber-400 rounded-full animate-pulse"></span>
+              <p className="text-white/70 text-sm">
+                Limited spots available
+              </p>
+            </div>
             <div className="scale-[0.65] sm:scale-75 origin-center sm:origin-right">
               <StardustButton href="https://www.skool.com/ai-design-academy-6114">
                 Join the Academy

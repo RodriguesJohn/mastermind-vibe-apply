@@ -159,7 +159,7 @@ export const AIHeaderSectionCopy = () => {
             </p>
 
             <div className="flex flex-col gap-3 justify-center items-center">
-              <StardustButton href="#pricing">
+              <StardustButton href="https://www.skool.com/ai-design-academy-6114">
                 Join the Academy
               </StardustButton>
               <a

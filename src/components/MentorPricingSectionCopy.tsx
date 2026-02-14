@@ -119,10 +119,14 @@ export const MentorPricingSectionCopy = () => {
                 </ul>
 
                 {/* CTA */}
-                <div className="flex justify-center">
+                <div className="flex flex-col items-center gap-3">
                   <StardustButton href="https://www.skool.com/ai-design-academy-6114">
                     Join the Academy
                   </StardustButton>
+                  <div className="flex items-center gap-2">
+                    <span className="inline-block w-2 h-2 bg-amber-400 rounded-full animate-pulse"></span>
+                    <p className="text-white/50 text-sm">Limited spots available</p>
+                  </div>
                 </div>
               </div>
             </div>
