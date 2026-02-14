@@ -49,8 +49,8 @@ export const StardustButton = ({
 
   const styles = `
     .stardust-button .wrap {
-      font-size: 15px;
-      padding: 14px 36px;
+      font-size: 16px;
+      padding: 16px 42px;
     }
 
     @media (min-width: 640px) {
