@@ -94,7 +94,7 @@ const Newsletter = () => {
                         Subscribe Free
                       </span>
                       <div
-                        className="absolute inset-0 rounded-full overflow-hidden"
+                        className="absolute inset-0 rounded-full overflow-hidden pointer-events-none"
                         style={{
                           background: 'linear-gradient(180deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(0, 0, 0, 0) 100%)',
                           top: '8%',
