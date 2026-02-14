@@ -1,8 +1,19 @@
 import { Navigation } from "@/components/Navigation";
 import { Helmet } from "react-helmet";
-import { Check, Clock, TrendingUp, Zap } from "lucide-react";
+import { useEffect } from "react";
+import { Clock, TrendingUp, Zap, Check } from "lucide-react";
 
 const Newsletter = () => {
+  useEffect(() => {
+    const scriptId = 'ck-script-newsletter';
+    if (!document.getElementById(scriptId)) {
+      const script = document.createElement('script');
+      script.id = scriptId;
+      script.src = "https://f.convertkit.com/ckjs/ck.5.js";
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  }, []);
 
   return (
     <>
@@ -13,23 +24,23 @@ const Newsletter = () => {
 
       <div className="min-h-screen bg-black">
         <Navigation />
-        
+
         <main className="py-12 md:py-20">
           <div className="px-4 md:px-10 lg:px-[120px]">
             <div className="max-w-[900px] mx-auto">
-              
+
               {/* Hero Section with Form */}
               <div className="text-center mb-6">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-6">
                   <Clock className="w-4 h-4" />
                   <span>2-minute daily read</span>
                 </div>
-                
+
                 <h1 className="text-4xl md:text-5xl lg:text-5xl font-semibold text-white mb-5 leading-tight">
                   Your daily AI briefing.<br />
                   <span className="text-white/60">Stay updated, not overwhelmed.</span>
                 </h1>
-                
+
                 <p className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-8">
                   Get the most important AI news, tool updates, and design trends in your inbox every morning. Takes 2 minutes to read.
                 </p>
@@ -39,51 +50,67 @@ const Newsletter = () => {
               <div className="bg-gradient-to-b from-white/10 to-white/5 border border-white/20 rounded-2xl p-6 md:p-8 max-w-lg mx-auto mb-12">
                 <form
                   action="https://app.kit.com/forms/9087462/subscriptions"
+                  className="seva-form formkit-form"
                   method="post"
+                  data-sv-form="9087462"
+                  data-uid="523a052d48"
+                  data-format="inline"
+                  data-version="5"
+                  data-options='{"settings":{"after_subscribe":{"action":"message","success_message":"Success! Now check your email to confirm your subscription.\nStay updated with AI","redirect_url":"https://theaidesignacademy.com"},"analytics":{"google":null,"fathom":null,"facebook":null,"segment":null,"pinterest":null,"sparkloop":null,"googletagmanager":null},"modal":{"trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"powered_by":{"show":false,"url":"https://kit.com/features/forms?utm_campaign=poweredby&utm_content=form&utm_medium=referral&utm_source=dynamic"},"recaptcha":{"enabled":false},"return_visitor":{"action":"show","custom_content":""},"slide_in":{"display_in":"bottom_right","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"sticky_bar":{"display_in":"top","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15}},"version":"5"}'
                 >
-                  <div className="space-y-3">
-                    <input 
-                      className="w-full px-4 py-4 rounded-xl bg-black/50 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all text-base" 
-                      aria-label="First Name" 
-                      name="fields[first_name]" 
-                      placeholder="Your first name" 
-                      type="text" 
-                    />
-                    <input 
-                      className="w-full px-4 py-4 rounded-xl bg-black/50 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all text-base" 
-                      name="email_address" 
-                      aria-label="Email Address" 
-                      placeholder="Your email address" 
-                      required 
-                      type="email" 
-                    />
-                    <button
-                      data-element="submit"
-                      type="submit"
-                      className="w-full py-4 px-8 rounded-full text-white font-semibold text-lg flex items-center justify-center gap-2 transition-all duration-200 hover:-translate-y-[3px] active:translate-y-[1px]"
-                      style={{
-                        background: 'linear-gradient(135deg, #4285ff 0%, #2e72ff 50%, #1a5fff 100%)',
-                        boxShadow: `
-                          inset 0 0.3rem 0.9rem rgba(255, 255, 255, 0.4),
-                          inset 0 -0.1rem 0.3rem rgba(0, 50, 150, 0.5),
-                          inset 0 -0.4rem 0.9rem rgba(100, 170, 255, 0.4),
-                          0 0.5rem 2rem rgba(46, 114, 255, 0.5),
-                          0 1rem 3rem rgba(46, 114, 255, 0.3)
-                        `,
-                      }}
-                    >
-                      <span>✦</span>
-                      Subscribe Free
-                    </button>
-                  </div>
-                  
-                  <div className="flex items-center justify-center mt-4 text-white/50 text-sm">
-                    <span className="flex items-center gap-1">
-                      <Check className="w-4 h-4 text-green-500" />
-                      Unsubscribe anytime
-                    </span>
+                  <div data-style="clean">
+                    <ul className="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
+                    <div data-element="fields" data-stacked="true" className="seva-fields formkit-fields">
+                      <div className="formkit-field mb-3">
+                        <input
+                          className="formkit-input w-full px-4 py-4 rounded-xl bg-black/50 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all text-base"
+                          aria-label="First Name"
+                          name="fields[first_name]"
+                          placeholder="Your first name"
+                          type="text"
+                        />
+                      </div>
+                      <div className="formkit-field mb-3">
+                        <input
+                          className="formkit-input w-full px-4 py-4 rounded-xl bg-black/50 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all text-base"
+                          name="email_address"
+                          aria-label="Email Address"
+                          placeholder="Your email address"
+                          required
+                          type="email"
+                        />
+                      </div>
+                      <button
+                        data-element="submit"
+                        className="formkit-submit w-full py-4 px-8 rounded-full text-white font-semibold text-lg flex items-center justify-center gap-2 transition-all duration-200 hover:-translate-y-[3px] active:translate-y-[1px]"
+                        style={{
+                          background: 'linear-gradient(135deg, #4285ff 0%, #2e72ff 50%, #1a5fff 100%)',
+                          boxShadow: `
+                            inset 0 0.3rem 0.9rem rgba(255, 255, 255, 0.4),
+                            inset 0 -0.1rem 0.3rem rgba(0, 50, 150, 0.5),
+                            inset 0 -0.4rem 0.9rem rgba(100, 170, 255, 0.4),
+                            0 0.5rem 2rem rgba(46, 114, 255, 0.5),
+                            0 1rem 3rem rgba(46, 114, 255, 0.3)
+                          `,
+                        }}
+                      >
+                        <div className="formkit-spinner">
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                        </div>
+                        <span>✦ Subscribe Free</span>
+                      </button>
+                    </div>
                   </div>
                 </form>
+
+                <div className="flex items-center justify-center mt-4 text-white/50 text-sm">
+                  <span className="flex items-center gap-1">
+                    <Check className="w-4 h-4 text-green-500" />
+                    Unsubscribe anytime
+                  </span>
+                </div>
               </div>
 
               {/* What's Inside */}
@@ -109,7 +136,6 @@ const Newsletter = () => {
                   </div>
                 </div>
               </div>
-
 
             </div>
           </div>
