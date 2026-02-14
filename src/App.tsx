@@ -24,6 +24,7 @@ import Guide from "./pages/Guide";
 import GetGuide from "./pages/GetGuide";
 import Workshop from "./pages/Workshop";
 import CohortCopy from "./pages/CohortCopy";
+import Newsletter from "./pages/Newsletter";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -52,6 +53,7 @@ const App = () => (
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/get-guide" element={<GetGuide />} />
           <Route path="/workshop" element={<Workshop />} />
+          <Route path="/newsletter" element={<Newsletter />} />
           {/* CohortCopy is now the home page at "/" */}
           <Route path="/projects" element={<Projects />} />
           {/* <Route path="/tools" element={<Tools />} /> */}

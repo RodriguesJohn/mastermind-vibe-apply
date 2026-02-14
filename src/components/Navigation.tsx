@@ -31,6 +31,9 @@ export const Navigation = () => {
             <a href="/blog" className="text-sm font-normal hover:text-primary transition-colors">
               Blog
             </a>
+            <a href="/newsletter" className="text-sm font-normal hover:text-primary transition-colors">
+              Newsletter
+            </a>
           </div>
           
           {/* Header CTA removed per request */}
@@ -64,6 +67,9 @@ export const Navigation = () => {
                 </a>
                 <a href="/blog" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
                   Blog
+                </a>
+                <a href="/newsletter" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
+                  Newsletter
                 </a>
                 {/* <a href="/knowledge-hub" className="text-base font-normal hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
                   Knowledge Hub
