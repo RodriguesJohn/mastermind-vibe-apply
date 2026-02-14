@@ -13,6 +13,7 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { useState } from "react";
 import { MessageCircle, ArrowRight } from "lucide-react";
+import { StardustButton } from "@/components/ui/stardust-button";
 
 // Import all Tools logos
 import cursorLogo from "@/assets/Tools/cursor.png";
@@ -57,17 +58,31 @@ const CohortCopy = () => {
           <AIHeaderSectionCopy />
           <CohortCompanyLogos />
           <CohortTestimonialsSection title="Kind Words" />
+          <MentorPricingSectionCopy />
 
           <LogoCloud logos={toolsLogos} />
 
           <CohortOverviewSection />
           <CohortStatsSectionCopy />
           <CohortModulesSectionCopy />
-          <MentorPricingSectionCopy />
 
           <PlaybookSection />
-          
+
         </main>
+
+        {/* Sticky Bottom Bar */}
+        <div className="fixed bottom-0 left-0 right-0 z-50 py-3 px-4 sm:px-6 bg-black/80 backdrop-blur-xl border-t border-white/10">
+          <div className="container mx-auto flex items-center justify-center sm:justify-between">
+            <p className="text-white/60 text-sm hidden sm:block">
+              Ready to master AI design workflows?
+            </p>
+            <div className="scale-[0.65] sm:scale-75 origin-center sm:origin-right">
+              <StardustButton href="https://www.skool.com/ai-design-academy-6114">
+                Join the Academy
+              </StardustButton>
+            </div>
+          </div>
+        </div>
 
 {/* Floating Chat Button - Hidden
         <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
