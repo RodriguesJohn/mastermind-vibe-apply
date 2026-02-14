@@ -42,7 +42,7 @@ export const Navigation = () => {
               className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
                 isOpen
                   ? "bg-white text-black"
-                  : "bg-white/15 border border-white/50 text-white/90 hover:bg-white/25 hover:border-white/60"
+                  : "bg-white/10 border border-white/25 text-white/90 hover:bg-white/20 hover:border-white/35"
               }`}
               aria-label="Toggle menu"
             >
