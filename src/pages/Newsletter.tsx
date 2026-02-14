@@ -1,19 +1,8 @@
 import { Navigation } from "@/components/Navigation";
 import { Helmet } from "react-helmet";
-import { useEffect } from "react";
 import { Check, Clock, TrendingUp, Zap } from "lucide-react";
 
 const Newsletter = () => {
-  useEffect(() => {
-    const scriptId = 'ck-script-newsletter';
-    if (!document.getElementById(scriptId)) {
-      const script = document.createElement('script');
-      script.id = scriptId;
-      script.src = "https://f.convertkit.com/ckjs/ck.5.js";
-      script.async = true;
-      document.body.appendChild(script);
-    }
-  }, []);
 
   return (
     <>
@@ -50,13 +39,7 @@ const Newsletter = () => {
               <div className="bg-gradient-to-b from-white/10 to-white/5 border border-white/20 rounded-2xl p-6 md:p-8 max-w-lg mx-auto mb-12">
                 <form
                   action="https://app.kit.com/forms/9087462/subscriptions"
-                  className="seva-form formkit-form"
                   method="post"
-                  data-sv-form="9087462"
-                  data-uid="523a052d48"
-                  data-format="inline"
-                  data-version="5"
-                  data-options='{"settings":{"after_subscribe":{"action":"redirect","success_message":"Success! Now check your email to confirm your subscription.","redirect_url":"https://theaidesignacademy.com"}}}'
                 >
                   <div className="space-y-3">
                     <input 
