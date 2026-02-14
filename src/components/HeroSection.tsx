@@ -46,6 +46,11 @@ export const HeroSection = () => {
                   <ArrowRight className="group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>
+              <Button variant="outline" size="xl" className="border-white/20 text-white hover:bg-white/10" asChild>
+                <a href="/newsletter">
+                  Get daily AI news
+                </a>
+              </Button>
             </div>
             
           </div>

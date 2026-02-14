@@ -1,7 +1,7 @@
 import { Navigation } from "@/components/Navigation";
 import { Helmet } from "react-helmet";
 import { useEffect } from "react";
-import { Check, Clock, TrendingUp, Zap, ArrowRight } from "lucide-react";
+import { Check, Clock, TrendingUp, Zap } from "lucide-react";
 
 const Newsletter = () => {
   useEffect(() => {
@@ -74,13 +74,36 @@ const Newsletter = () => {
                       required 
                       type="email" 
                     />
-                    <button 
-                      data-element="submit" 
+                    <button
+                      data-element="submit"
                       type="submit"
-                      className="w-full px-6 py-4 rounded-xl bg-primary text-white font-semibold text-lg hover:bg-primary/90 transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 group"
+                      className="stardust-btn w-full relative rounded-full text-white font-semibold text-lg flex items-center justify-center gap-2 transition-all duration-200 hover:-translate-y-[3px] active:translate-y-[1px]"
+                      style={{
+                        background: 'linear-gradient(135deg, #4285ff 0%, #2e72ff 50%, #1a5fff 100%)',
+                        boxShadow: `
+                          inset 0 0.3rem 0.9rem rgba(255, 255, 255, 0.4),
+                          inset 0 -0.1rem 0.3rem rgba(0, 50, 150, 0.5),
+                          inset 0 -0.4rem 0.9rem rgba(100, 170, 255, 0.4),
+                          0 0.5rem 2rem rgba(46, 114, 255, 0.5),
+                          0 1rem 3rem rgba(46, 114, 255, 0.3)
+                        `,
+                      }}
                     >
-                      Subscribe Free
-                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                      <span className="relative z-10 flex items-center justify-center gap-2 py-4 px-8">
+                        <span>✦</span>
+                        Subscribe Free
+                      </span>
+                      <div
+                        className="absolute inset-0 rounded-full overflow-hidden"
+                        style={{
+                          background: 'linear-gradient(180deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(0, 0, 0, 0) 100%)',
+                          top: '8%',
+                          bottom: '50%',
+                          left: '6%',
+                          right: '6%',
+                          borderRadius: '22px 22px 0 0',
+                        }}
+                      />
                     </button>
                   </div>
                   

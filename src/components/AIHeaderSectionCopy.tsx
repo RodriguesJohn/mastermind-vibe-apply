@@ -158,14 +158,17 @@ export const AIHeaderSectionCopy = () => {
               Go from overwhelmed to confident. Learn through structured courses, frameworks and resources with a curated community.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col gap-3 justify-center items-center">
               <StardustButton href="#pricing">
                 Get Started Today
               </StardustButton>
+              <a
+                href="/newsletter"
+                className="text-white/60 text-sm hover:text-white transition-colors duration-200 underline underline-offset-4"
+              >
+                Get daily AI briefings →
+              </a>
             </div>
-            <p className="text-xs text-white/50 mt-3 italic relative z-20">
-              Cancel anytime
-            </p>
           </div>
 
           {/* SphereImageGrid at bottom, top half visible */}
